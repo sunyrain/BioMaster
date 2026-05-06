@@ -1,0 +1,7 @@
+gene_name,disease_id,disease_name,disgenet_score
+TP53,C0006826,Malignant Neoplasm,0.95
+EGFR,C0006826,Malignant Neoplasm,0.82
+BCL2,C0006826,Malignant Neoplasm,0.74
+JAK1,C0006826,Malignant Neoplasm,0.35
+JAK1,C0021400,Inflammatory disease,0.79
+

@@ -1,0 +1,6 @@
+drug_name,approval_year,drugbank_id,pubchem_cid,source,notes
+Remdesivir,2020,DB14761,121304016,seed_demo,antiviral small molecule
+Nirmatrelvir,2021,DB16691,155903259,seed_demo,SARS-CoV-2 protease inhibitor
+Molnupiravir,2021,DB15661,145996610,seed_demo,antiviral small molecule
+Venetoclax,2016,DB11581,49846579,seed_demo,BCL2 inhibitor
+

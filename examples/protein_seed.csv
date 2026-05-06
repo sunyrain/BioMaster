@@ -1,0 +1,6 @@
+protein_id,gene_name,protein_name,source,notes
+P04637,TP53,Cellular tumor antigen p53,seed_demo,cancer-associated target
+P00533,EGFR,Epidermal growth factor receptor,seed_demo,receptor tyrosine kinase
+P10415,BCL2,Apoptosis regulator Bcl-2,seed_demo,apoptosis target
+P23458,JAK1,Tyrosine-protein kinase JAK1,seed_demo,kinase target
+

@@ -1,0 +1,6 @@
+protein1,protein2,string_score
+TP53,EGFR,960
+TP53,BCL2,920
+EGFR,JAK1,710
+BCL2,JAK1,580
+

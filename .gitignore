@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local environments
+.env
+.venv/
+venv/
+env/
+*.log
+
+# Large or licensed project data
+data/
+downloads/
+outputs/
+third_party/
+Rostlab/
+
+# Local source datasets and graph dumps
+FDA_approved_small_molecules_2005_2026_with_structures.xls
+FDA_approved_small_molecules_2005_2026_with_structures.xlsx
+UP000005640_9606_HUMAN_v6.tar
+TxGNNExplorer_v2.zip
+edges.csv
+kg.csv
+nodes.tab
+
+# Generated media and notebooks
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
