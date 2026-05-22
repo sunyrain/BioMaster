@@ -22,6 +22,8 @@
       <nav class="top-nav" aria-label="Primary">
         <a href="#workflow">流程</a>
         <a href="#evidence">证据</a>
+        <a href="#analytics">图表</a>
+        <a href="#structures">结构</a>
         <a href="#candidates">候选</a>
         <a href="#analysis">分析</a>
         <a class="nav-action" href="assets/biomaster-external-report.pdf">PDF</a>
@@ -87,22 +89,22 @@
         <div class="metric-grid" aria-label="Full structural extension audit">
           <article class="metric-card">
             <span>Score files</span>
-            <strong>995</strong>
+            <strong data-metric="fullScoreFiles">995</strong>
             <small>of 3653 chunks</small>
           </article>
           <article class="metric-card">
             <span>Scored pairs</span>
-            <strong>248750</strong>
+            <strong data-metric="fullRowsScored">248750</strong>
             <small>of 913170 DiffDock-ready pairs</small>
           </article>
           <article class="metric-card">
             <span>Coverage</span>
-            <strong>27.24%</strong>
+            <strong data-metric="fullRowProgressPct">27.24%</strong>
             <small>full structural extension</small>
           </article>
           <article class="metric-card">
             <span>Output rate</span>
-            <strong>78.59%</strong>
+            <strong data-metric="fullOutputRatePct">78.59%</strong>
             <small>among scored pairs</small>
           </article>
         </div>
@@ -192,6 +194,106 @@
         </div>
       </section>
 
+      <section id="analytics" class="section-band">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Visual analytics</p>
+            <h2>结果图表概览</h2>
+            <p>
+              图表将疾病证据覆盖、结构状态、TxGNN 映射和 Top1000 靶点分布放在同一视图中，便于快速判断候选集中证据来源是否集中或偏斜。
+            </p>
+          </div>
+          <div class="audit-chip">
+            <span>Structural extension</span>
+            <strong id="queueState">in progress</strong>
+          </div>
+        </div>
+        <div class="chart-grid">
+          <article class="chart-panel wide">
+            <div class="panel-title">
+              <h3>Top1000 target concentration</h3>
+              <span>candidate pairs</span>
+            </div>
+            <canvas id="targetChart" width="720" height="320" aria-label="Top target distribution"></canvas>
+          </article>
+          <article class="chart-panel">
+            <div class="panel-title">
+              <h3>Evidence coverage</h3>
+              <span>915000 pairs</span>
+            </div>
+            <canvas id="evidenceChart" width="360" height="320" aria-label="Disease evidence coverage"></canvas>
+          </article>
+          <article class="chart-panel">
+            <div class="panel-title">
+              <h3>Structural status</h3>
+              <span>Top1000</span>
+            </div>
+            <div id="statusBars" class="stacked-bars"></div>
+          </article>
+          <article class="chart-panel">
+            <div class="panel-title">
+              <h3>Evidence layers</h3>
+              <span>coverage summary</span>
+            </div>
+            <div id="layerBars" class="stacked-bars"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="structures" class="section-band alt">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Structure viewer</p>
+            <h2>代表性结构渲染</h2>
+            <p>
+              这里加载 Top 候选中的本地 receptor PDB 与 DiffDock rank-1 ligand SDF，用于快速查看候选结合姿态。结构视图用于解释和审阅，不替代实验验证。
+            </p>
+          </div>
+          <div class="structure-actions" role="group" aria-label="Structure controls">
+            <button type="button" id="toggleSpin">Spin</button>
+            <button type="button" id="resetView">Reset</button>
+          </div>
+        </div>
+        <div class="structure-layout">
+          <div class="structure-viewer-shell">
+            <div id="structureViewer" class="structure-viewer" aria-label="3D molecular viewer"></div>
+            <p id="viewerStatus" class="viewer-status">Loading structure viewer...</p>
+          </div>
+          <aside class="structure-side">
+            <div id="structureTabs" class="structure-tabs" role="tablist" aria-label="Structure samples"></div>
+            <div class="structure-meta">
+              <span id="structureRank"></span>
+              <h3 id="structureTitle"></h3>
+              <dl>
+                <div>
+                  <dt>Pair</dt>
+                  <dd id="structurePair"></dd>
+                </div>
+                <div>
+                  <dt>DiffDock confidence</dt>
+                  <dd id="structureConfidence"></dd>
+                </div>
+                <div>
+                  <dt>Consensus</dt>
+                  <dd id="structureConsensus"></dd>
+                </div>
+                <div>
+                  <dt>Receptor</dt>
+                  <dd id="structureReceptor"></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="ligand-panel">
+              <div class="panel-title">
+                <h3>Ligand sketch</h3>
+                <span>SDF projection</span>
+              </div>
+              <canvas id="ligandSketch" width="420" height="260" aria-label="Ligand 2D sketch"></canvas>
+            </div>
+          </aside>
+        </div>
+      </section>
+
       <section id="candidates" class="section-band">
         <div class="section-heading split">
           <div>
@@ -267,7 +369,7 @@
             <small>docs/assets/biomaster-external-report.pdf</small>
           </a>
           <a href="assets/biomaster-main-figure.png">
-            <span>GPT-image-2 主图</span>
+            <span>主流程图</span>
             <small>docs/assets/biomaster-main-figure.png</small>
           </a>
         </div>
@@ -279,6 +381,8 @@
       <span>Updated from local audit: 2026-05-22</span>
     </footer>
 
+    <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+    <script src="assets/dashboard-data.js"></script>
     <script src="assets/app.js"></script>
   </body>
 </html>

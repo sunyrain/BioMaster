@@ -96,5 +96,5 @@ Open Targets 证据是靶点-疾病关联证据。它不表示所有蛋白都有
 - 前端展示页面：`docs/index.html`
 - Markdown 结果摘要：`docs/BIOMASTER_RESULTS_REPORT_2026_05_11_ZH.md`
 - 正式英文 PDF：`docs/assets/biomaster-external-report.pdf`
-- GPT-image-2 主图：`docs/assets/biomaster-main-figure.png`
+- 主流程图：`docs/assets/biomaster-main-figure.png`
 - 最新审计 JSON：`outputs/report_scale/biomaster_status_audit_2026_05_22.json`

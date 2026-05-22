@@ -138,5 +138,5 @@ Open Targets 对所有输入蛋白都可以尝试查询疾病关联，但并不�
 
 - 前端展示页面：`docs/index.html`
 - 正式英文 PDF：`docs/assets/biomaster-external-report.pdf`
-- GPT-image-2 主图：`docs/assets/biomaster-main-figure.png`
+- 主流程图：`docs/assets/biomaster-main-figure.png`
 - 结构增强共识候选：`outputs/report_scale/stage6_top1000_consensus_candidates.csv`

@@ -232,7 +232,9 @@ h1 {
 .analysis-note,
 .table-wrap,
 .analysis-grid,
-.artifact-list {
+.artifact-list,
+.chart-grid,
+.structure-layout {
   width: min(1180px, 100%);
   margin-left: auto;
   margin-right: auto;
@@ -273,7 +275,11 @@ h1 {
 .coverage-panel,
 .analysis-note,
 .analysis-grid article,
-.artifact-list a {
+.artifact-list a,
+.chart-panel,
+.structure-viewer-shell,
+.structure-side,
+.ligand-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -508,6 +514,229 @@ tbody tr:hover {
   background: #fff1df;
 }
 
+.audit-chip {
+  min-width: 220px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.audit-chip span,
+.audit-chip strong {
+  display: block;
+}
+
+.audit-chip span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.audit-chip strong {
+  margin-top: 4px;
+  color: var(--green);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 16px;
+}
+
+.chart-panel {
+  min-height: 260px;
+  padding: 18px;
+}
+
+.chart-panel.wide {
+  grid-row: span 2;
+}
+
+.panel-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panel-title h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.panel-title span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.chart-panel canvas,
+.ligand-panel canvas {
+  width: 100%;
+  height: auto;
+}
+
+.stacked-bars {
+  display: grid;
+  gap: 12px;
+}
+
+.stack-row {
+  display: grid;
+  gap: 6px;
+}
+
+.stack-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #405069;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stack-track {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e7edf4;
+}
+
+.stack-track i {
+  display: block;
+  width: var(--w);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--c);
+}
+
+.structure-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.structure-actions button,
+.structure-tabs button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--blue);
+  background: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.structure-actions button {
+  padding: 8px 12px;
+}
+
+.structure-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.08fr) minmax(340px, 0.92fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.structure-viewer-shell {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.structure-viewer {
+  width: 100%;
+  height: 560px;
+  background: #f7fafc;
+}
+
+.viewer-status {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  margin: 0;
+  padding: 6px 9px;
+  border: 1px solid rgba(220, 229, 238, 0.86);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 12px;
+}
+
+.structure-side {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.structure-tabs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.structure-tabs button {
+  padding: 9px 10px;
+  text-align: left;
+}
+
+.structure-tabs button.active {
+  color: #fff;
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.structure-meta {
+  padding: 2px 0 4px;
+}
+
+.structure-meta > span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.structure-meta h3 {
+  margin: 4px 0 12px;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.structure-meta dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.structure-meta dl div {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  gap: 12px;
+}
+
+.structure-meta dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.structure-meta dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.ligand-panel {
+  padding: 14px;
+  background: #fbfdff;
+}
+
 .analysis-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -574,8 +803,19 @@ tbody tr:hover {
 
   .metric-grid,
   .analysis-grid,
-  .artifact-list {
+  .artifact-list,
+  .chart-grid,
+  .structure-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chart-panel.wide {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .structure-layout {
+    grid-template-columns: 1fr;
   }
 
   .section-heading.split {
@@ -607,7 +847,9 @@ tbody tr:hover {
   .metric-grid,
   .workflow-grid,
   .analysis-grid,
-  .artifact-list {
+  .artifact-list,
+  .chart-grid,
+  .structure-layout {
     grid-template-columns: 1fr;
   }
 
@@ -631,5 +873,16 @@ tbody tr:hover {
 
   .site-footer {
     flex-direction: column;
+  }
+
+  .structure-viewer-shell,
+  .structure-viewer {
+    min-height: 420px;
+    height: 420px;
+  }
+
+  .structure-meta dl div {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 }
