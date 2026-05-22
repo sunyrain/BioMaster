@@ -750,13 +750,13 @@ tbody tr:hover {
 
 .artifact-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
 .artifact-list a {
   display: block;
-  min-height: 110px;
+  min-height: 126px;
   padding: 18px;
 }
 
@@ -779,6 +779,216 @@ tbody tr:hover {
 .artifact-list small {
   margin-top: 8px;
   color: var(--muted);
+}
+
+.document-body {
+  background: var(--surface);
+}
+
+.document-hero {
+  padding: 58px 32px 34px;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(22, 33, 49, 0.94), rgba(21, 95, 168, 0.86)),
+    #162131;
+}
+
+.document-hero-inner,
+.document-layout,
+.media-stage,
+.pdf-stage {
+  width: min(1180px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.document-hero .eyebrow {
+  color: #8ee5df;
+}
+
+.document-hero h1 {
+  max-width: 920px;
+  font-size: clamp(34px, 4vw, 58px);
+}
+
+.document-hero p:not(.eyebrow) {
+  max-width: 820px;
+  margin: 16px 0 0;
+  color: #dce5ee;
+  font-size: 17px;
+}
+
+.document-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.document-actions .button.secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.document-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 28px;
+  padding: 42px 32px 72px;
+}
+
+.document-main {
+  min-width: 0;
+}
+
+.document-section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.document-section:first-child {
+  padding-top: 0;
+}
+
+.document-section:last-child {
+  border-bottom: 0;
+}
+
+.document-section h2 {
+  margin: 0 0 12px;
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.2;
+}
+
+.document-section h3 {
+  margin: 20px 0 8px;
+  font-size: 18px;
+}
+
+.document-section p {
+  margin: 10px 0;
+  color: #405069;
+}
+
+.document-section ul,
+.document-section ol {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  color: #405069;
+}
+
+.document-section li + li {
+  margin-top: 6px;
+}
+
+.document-formula {
+  margin-top: 16px;
+}
+
+.document-sidebar {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.document-sidebar h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.document-sidebar a {
+  display: block;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 8px;
+}
+
+.summary-strip div {
+  min-height: 96px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.summary-strip span,
+.summary-strip small {
+  display: block;
+  color: var(--muted);
+}
+
+.summary-strip strong {
+  display: block;
+  margin: 8px 0 4px;
+  color: var(--blue);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.report-table {
+  width: 100%;
+  overflow: auto;
+  margin: 16px 0 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.report-table table {
+  min-width: 720px;
+}
+
+.media-stage,
+.pdf-stage {
+  padding: 36px 32px 72px;
+}
+
+.figure-frame,
+.pdf-frame {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.figure-frame {
+  padding: 18px;
+}
+
+.figure-frame img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.figure-caption {
+  margin-top: 16px;
+  color: #405069;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: min(78vh, 920px);
+  overflow: hidden;
+}
+
+.pdf-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .site-footer {
@@ -816,6 +1026,19 @@ tbody tr:hover {
 
   .structure-layout {
     grid-template-columns: 1fr;
+  }
+
+  .document-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .document-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .summary-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section-heading.split {
@@ -884,5 +1107,21 @@ tbody tr:hover {
   .structure-meta dl div {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .document-hero,
+  .document-layout,
+  .media-stage,
+  .pdf-stage {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .summary-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-frame {
+    height: 70vh;
   }
 }

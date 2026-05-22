@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BioMaster 当前进度</title>
+    <meta name="description" content="BioMaster 当前计算进度、产物和结构扩展审计页面。" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body class="document-body">
+    <header class="site-header">
+      <a class="brand" href="index.html#overview" aria-label="BioMaster overview">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>BioMaster</strong>
+          <small>drug repositioning screen</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="index.html">展示首页</a>
+        <a href="results-report.html">结果汇报</a>
+        <a href="formal-report.html">PDF</a>
+        <a href="main-figure.html">主流程图</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="document-hero">
+        <div class="document-hero-inner">
+          <p class="eyebrow">Current status</p>
+          <h1>BioMaster 当前结果状态</h1>
+          <p>
+            BioMaster 已完成全组合 AI-DTI 主筛选和 cancer 方向疾病证据融合排序，高优先级结构增强候选已可用于审阅、机制分析和实验设计。
+          </p>
+          <div class="document-actions">
+            <a class="button primary" href="index.html#analytics">查看图表概览</a>
+            <a class="button secondary" href="index.html#artifacts">返回产物索引</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="document-layout">
+        <article class="document-main">
+          <section id="summary" class="document-section">
+            <h2>摘要</h2>
+            <p>
+              本阶段已完成 915 个 FDA 已批准小分子与 1000 个人类蛋白靶点的全组合 AI-DTI 主筛选，并完成 cancer 方向疾病证据融合排序。高优先级 1000 个 drug-target pair 已形成结构增强共识结果。
+            </p>
+            <p>
+              更大规模结构扩展正在作为补充证据继续推进。该扩展用于增加结构层面的解释信息，不改变主筛选和高优先级候选集已经形成的结论。
+            </p>
+          </section>
+
+          <section id="artifacts" class="document-section">
+            <h2>已形成产物</h2>
+            <div class="report-table">
+              <table>
+                <thead>
+                  <tr><th>模块</th><th>状态</th><th>主要产物</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>药物库</td><td>已完成</td><td>FDA 已批准小分子清单、标准化结构与标识映射</td></tr>
+                  <tr><td>蛋白靶点库</td><td>已完成</td><td>人类蛋白靶点清单、UniProt 标识、序列和可用结构信息</td></tr>
+                  <tr><td>AI-DTI 主筛选</td><td>已完成</td><td>915000 个 drug-target pair 的互作预测分数</td></tr>
+                  <tr><td>结构就绪清单</td><td>已完成</td><td>可进入 DiffDock 结构扩展的 drug-target pair 清单</td></tr>
+                  <tr><td>疾病证据排序</td><td>已完成</td><td>融合 Open Targets、STRING 与 TxGNN 的候选优先级结果</td></tr>
+                  <tr><td>高优先级结构增强</td><td>已完成</td><td>Top1000 候选的结构增强共识排序</td></tr>
+                  <tr><td>前端展示页面</td><td>已完成</td><td>可交互结果展示、图表概览和结构渲染页面</td></tr>
+                  <tr><td>正式英文 PDF</td><td>已完成</td><td>面向外部汇报的正式 PDF 文件</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="scale" class="document-section">
+            <h2>核心规模</h2>
+            <div class="summary-strip">
+              <div><span>药物</span><strong>915</strong><small>FDA 已批准小分子</small></div>
+              <div><span>靶点</span><strong>1000</strong><small>人类蛋白靶点</small></div>
+              <div><span>主筛选</span><strong>915000</strong><small>ConPLex pair</small></div>
+              <div><span>结构就绪</span><strong>913170</strong><small>DiffDock-ready pair</small></div>
+            </div>
+            <div class="report-table">
+              <table>
+                <thead>
+                  <tr><th>指标</th><th>数值</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>高优先级结构增强候选</td><td>1000</td></tr>
+                  <tr><td>结构增强候选覆盖唯一药物</td><td>337</td></tr>
+                  <tr><td>结构增强候选覆盖唯一蛋白</td><td>64</td></tr>
+                  <tr><td>结构增强 Top100 覆盖唯一药物</td><td>67</td></tr>
+                  <tr><td>结构增强 Top100 覆盖唯一蛋白</td><td>20</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="audit" class="document-section">
+            <h2>结构扩展审计</h2>
+            <p>截至 2026-05-22 本地审计，更大规模结构扩展已形成以下进度。</p>
+            <div class="report-table">
+              <table>
+                <thead>
+                  <tr><th>指标</th><th>数值</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>结构扩展总 chunk</td><td>3653</td></tr>
+                  <tr><td>已生成 score 文件</td><td>995</td></tr>
+                  <tr><td>chunk 覆盖率</td><td>27.24%</td></tr>
+                  <tr><td>DiffDock-ready pair 总数</td><td>913170</td></tr>
+                  <tr><td>已评分 pair</td><td>248750</td></tr>
+                  <tr><td>pair 覆盖率</td><td>27.24%</td></tr>
+                  <tr><td>已获得 DiffDock 输出</td><td>195497</td></tr>
+                  <tr><td>缺失或失败输出</td><td>53253</td></tr>
+                  <tr><td>已评分 pair 中输出率</td><td>78.59%</td></tr>
+                  <tr><td>0 completed chunk</td><td>77</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="interpretation" class="document-section">
+            <h2>证据模型解释</h2>
+            <p>
+              BioMaster 的排序对象是 drug-target pair，而不是唯一药物或唯一蛋白。Open Targets 证据是靶点-疾病关联证据，不表示所有蛋白都有 cancer-specific site，也不表示药物已经被证明对癌症有效。
+            </p>
+            <p>
+              当前 disease scope 是 pan-cancer；如果后续聚焦具体癌种、突变或分子亚型，应切换到更具体的 disease ID 或加入突变/亚型数据重新排序。
+            </p>
+          </section>
+
+          <section id="use" class="document-section">
+            <h2>结果使用方式</h2>
+            <p>
+              当前结果可用于候选筛选、文献审阅、机制假设生成和实验设计。进入实验前仍需结合具体癌种背景、药物可获得性、安全性、已知适应症、创新性和实验可操作性进行二次收敛。
+            </p>
+          </section>
+        </article>
+
+        <aside class="document-sidebar" aria-label="Status navigation">
+          <h2>页面目录</h2>
+          <a href="#summary">摘要</a>
+          <a href="#artifacts">已形成产物</a>
+          <a href="#scale">核心规模</a>
+          <a href="#audit">结构扩展审计</a>
+          <a href="#interpretation">证据模型解释</a>
+          <a href="#use">结果使用方式</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>BioMaster current status</span>
+      <span>Updated from local audit: 2026-05-22</span>
+    </footer>
+  </body>
+</html>
