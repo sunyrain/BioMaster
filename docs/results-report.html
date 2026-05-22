@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BioMaster 结果汇报</title>
-    <meta name="description" content="BioMaster 药物再定位计算筛选结果、流程和代表性候选汇报页面。" />
+    <title>BioMaster 正式结果汇报</title>
+    <meta name="description" content="BioMaster 药物再定位计算筛选的正式结果汇报页面。" />
     <link rel="stylesheet" href="assets/site.css" />
   </head>
   <body class="document-body">
@@ -18,7 +18,7 @@
       </a>
       <nav class="top-nav" aria-label="Primary">
         <a href="index.html">展示首页</a>
-        <a href="status-report.html">当前进度</a>
+        <a href="status-report.html">运行状态</a>
         <a href="formal-report.html">PDF</a>
         <a href="main-figure.html">主流程图</a>
       </nav>
@@ -27,13 +27,13 @@
     <main>
       <section class="document-hero">
         <div class="document-hero-inner">
-          <p class="eyebrow">Results report</p>
+          <p class="eyebrow">External results brief</p>
           <h1>BioMaster 药物再定位计算筛选结果汇报</h1>
           <p>
-            本页面汇总 FDA 已批准小分子与人类蛋白靶点的 cancer 方向计算筛选结果，重点说明已完成工作、排序逻辑、代表性候选与后续使用方式。
+            本页保留正式汇报所需的核心叙事：我们完成了什么、为什么采用该流程、结果应如何解释。交互图表、结构渲染和候选明细集中在展示首页。
           </p>
           <div class="document-actions">
-            <a class="button primary" href="index.html#candidates">查看候选表格</a>
+            <a class="button primary" href="index.html#analytics">进入交互展示</a>
             <a class="button secondary" href="formal-report.html">查看正式 PDF</a>
           </div>
         </div>
@@ -41,148 +41,89 @@
 
       <div class="document-layout">
         <article class="document-main">
-          <section id="objective" class="document-section">
-            <h2>项目目标</h2>
-            <p>
-              BioMaster 旨在建立可复现的药物再定位计算筛选流程，从已获批小分子药物中发现值得进一步机制分析和实验验证的药物-靶点组合。本阶段以 pan-cancer 为疾病方向，将药物-蛋白互作预测、靶点疾病证据、药物-疾病图谱信号和结构对接证据整合为候选优先级。
-            </p>
-            <p>
-              该流程输出的是计算候选优先级，不是药效或机制的实验证明。它的价值在于把 915000 个 drug-target pair 收敛为更适合文献审阅、机制推断和实验设计的候选集合。
-            </p>
-            <div class="summary-strip">
-              <div><span>药物库</span><strong>915</strong><small>FDA 已批准小分子</small></div>
-              <div><span>靶点库</span><strong>1000</strong><small>人类蛋白靶点</small></div>
-              <div><span>主筛选</span><strong>915000</strong><small>drug-target pairs</small></div>
-              <div><span>结构增强</span><strong>1000</strong><small>高优先级候选</small></div>
+          <section id="summary" class="document-section">
+            <h2>核心结论</h2>
+            <div class="brief-grid">
+              <article>
+                <span>Completed</span>
+                <h3>全组合 AI-DTI 主筛选</h3>
+                <p>完成 915 个 FDA 已批准小分子与 1000 个人类蛋白靶点的 915000 个 drug-target pair 预测。</p>
+              </article>
+              <article>
+                <span>Integrated</span>
+                <h3>cancer 方向疾病证据融合</h3>
+                <p>将 Open Targets、STRING 与 TxGNN 引入排序，使互作信号转化为疾病相关候选优先级。</p>
+              </article>
+              <article>
+                <span>Prioritized</span>
+                <h3>结构增强候选集合</h3>
+                <p>对高优先级候选进行 DiffDock 结构增强，形成可进入人工审阅和实验设计的候选集合。</p>
+              </article>
             </div>
           </section>
 
-          <section id="work" class="document-section">
-            <h2>已完成工作</h2>
-            <div class="report-table">
-              <table>
-                <thead>
-                  <tr><th>模块</th><th>阶段性结果</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>药物库构建</td><td>整理 915 个 FDA 已批准小分子，统一 ChEMBL/PubChem 标识、SMILES、InChIKey、分子式和结构文件。</td></tr>
-                  <tr><td>蛋白靶点库构建</td><td>构建 1000 个人类蛋白靶点库，保留 UniProt accession、gene symbol、蛋白名称、序列和可用 AlphaFold 结构信息。</td></tr>
-                  <tr><td>AI-DTI 主筛选</td><td>对 915 个药物和 1000 个蛋白进行全组合筛选，完成 915000 个 drug-target pair 的 ConPLex 预测。</td></tr>
-                  <tr><td>疾病证据融合</td><td>使用 Open Targets 和 STRING 引入靶点-疾病与蛋白网络证据，形成 cancer 方向靶点相关性优先级。</td></tr>
-                  <tr><td>药物-疾病证据补充</td><td>使用 TxGNN 补充药物-疾病图谱信号；未映射药物保留靶点侧证据，不作为负证据。</td></tr>
-                  <tr><td>结构增强</td><td>对高优先级候选进行 DiffDock 结构对接增强，形成结构增强共识排序。</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <section id="purpose" class="document-section">
+            <h2>项目目标</h2>
+            <p>
+              BioMaster 的目标是建立一个可复现的药物再定位计算筛选流程，从已批准小分子药物中发现值得进一步机制分析和实验验证的药物-靶点组合。
+            </p>
+            <p>
+              本阶段以 pan-cancer 为疾病方向，先进行广覆盖 AI-DTI 主筛选，再引入靶点疾病证据、药物疾病图谱信号和结构对接证据，最终形成候选优先级。该结果是计算假设，不是药效或机制的实验证明。
+            </p>
           </section>
 
           <section id="workflow" class="document-section">
-            <h2>流程设计思路</h2>
-            <p>本阶段采用“广覆盖初筛、疾病证据融合、结构增强收敛”的分层策略。</p>
-            <ol>
-              <li>先进行广覆盖 AI-DTI 筛选，避免过早依赖人工选择靶点。</li>
-              <li>再加入 cancer 方向疾病证据，将单纯互作可能性转化为疾病相关候选优先级。</li>
-              <li>对高优先级候选加入结构对接信息，使结果具备进一步机制解释和实验设计的基础。</li>
-            </ol>
-            <div class="report-table">
-              <table>
-                <thead>
-                  <tr><th>证据源</th><th>回答的问题</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>ConPLex</td><td>药物是否可能与某个蛋白发生相互作用。</td></tr>
-                  <tr><td>Open Targets</td><td>某个基因/蛋白是否与 cancer 疾病概念存在数据库关联。</td></tr>
-                  <tr><td>STRING</td><td>靶点是否位于疾病相关蛋白互作网络中。</td></tr>
-                  <tr><td>TxGNN</td><td>药物是否具有 cancer 方向的图谱推断信号。</td></tr>
-                  <tr><td>DiffDock</td><td>高优先级候选是否具备可解释的结构姿态线索。</td></tr>
-                </tbody>
-              </table>
+            <h2>流程思路</h2>
+            <div class="process-rail">
+              <div><strong>01</strong><span>药物库与靶点库标准化</span></div>
+              <div><strong>02</strong><span>915000 个 pair 的 AI-DTI 互作预测</span></div>
+              <div><strong>03</strong><span>Open Targets 与 STRING 靶点疾病证据融合</span></div>
+              <div><strong>04</strong><span>TxGNN 药物疾病图谱信号补充</span></div>
+              <div><strong>05</strong><span>Top 候选 DiffDock 结构增强与共识排序</span></div>
             </div>
+            <p>
+              这种分层设计的重点是先保证覆盖面，再用疾病证据和结构证据逐步收敛。不同证据源回答的问题不同，因此最终排序应理解为综合优先级，而不是单一模型输出。
+            </p>
           </section>
 
-          <section id="ranking" class="document-section">
-            <h2>排序方法</h2>
-            <p>疾病证据优先级的排序对象是 drug-target pair。Open Targets 与 STRING 融合分数为：</p>
-            <div class="formula-panel document-formula">
-              <code>OpenTargets_STRING_priority = 0.55 * normalized_combined_ai_score + 0.30 * OpenTargets_direct_score + 0.15 * STRING_network_score</code>
-              <p>TxGNN 映射成功时，最终疾病证据优先级进一步融合药物-疾病图谱信号。</p>
-              <code>final_priority_score = 0.80 * OpenTargets_STRING_priority + 0.20 * TxGNN_indication_score</code>
-              <p>结构增强共识排序在疾病证据优先级基础上加入标准化后的 DiffDock confidence。</p>
-              <code>Structure_enhanced_consensus = 0.85 * disease_priority_score + 0.15 * normalized_DiffDock_confidence</code>
-            </div>
-          </section>
-
-          <section id="results" class="document-section">
-            <h2>结果概览</h2>
-            <div class="report-table">
-              <table>
-                <thead>
-                  <tr><th>指标</th><th>数值</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>FDA 已批准小分子</td><td>915</td></tr>
-                  <tr><td>人类蛋白靶点</td><td>1000</td></tr>
-                  <tr><td>ConPLex 预测 pair</td><td>915000</td></tr>
-                  <tr><td>疾病证据排序 pair</td><td>915000</td></tr>
-                  <tr><td>结构增强候选 pair</td><td>1000</td></tr>
-                  <tr><td>结构增强候选覆盖唯一药物</td><td>337</td></tr>
-                  <tr><td>结构增强候选覆盖唯一蛋白</td><td>64</td></tr>
-                  <tr><td>结构增强 Top100 覆盖唯一药物</td><td>67</td></tr>
-                  <tr><td>结构增强 Top100 覆盖唯一蛋白</td><td>20</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section id="candidates" class="document-section">
-            <h2>代表性候选</h2>
-            <div class="report-table">
-              <table>
-                <thead>
-                  <tr><th>Rank</th><th>药物</th><th>靶点</th><th>疾病证据优先级</th><th>DiffDock confidence</th><th>结构增强共识</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>1</td><td>Afatinib Dimaleate</td><td>EGFR</td><td>0.926857684</td><td>-0.46</td><td>0.917978844</td></tr>
-                  <tr><td>2</td><td>Dacomitinib</td><td>EGFR</td><td>0.889965753</td><td>-1.12</td><td>0.874261152</td></tr>
-                  <tr><td>3</td><td>Cabozantinib S-Malate</td><td>KIT</td><td>0.864187850</td><td>NA</td><td>0.864187850</td></tr>
-                  <tr><td>4</td><td>Momelotinib Dihydrochloride</td><td>EGFR</td><td>0.861371239</td><td>-0.75</td><td>0.856884654</td></tr>
-                  <tr><td>5</td><td>Repotrectinib</td><td>JAK1</td><td>0.860247310</td><td>-1.02</td><td>0.850873135</td></tr>
-                  <tr><td>6</td><td>Pazopanib Hydrochloride</td><td>KIT</td><td>0.901545965</td><td>-3.00</td><td>0.848898340</td></tr>
-                  <tr><td>7</td><td>Osimertinib Mesylate</td><td>EGFR</td><td>0.867670073</td><td>-1.98</td><td>0.839204955</td></tr>
-                  <tr><td>8</td><td>Trilaciclib Dihydrochloride</td><td>JAK1</td><td>0.797277260</td><td>0.60</td><td>0.827685671</td></tr>
-                  <tr><td>9</td><td>Neratinib Maleate</td><td>EGFR</td><td>0.841781555</td><td>-2.44</td><td>0.808585483</td></tr>
-                  <tr><td>10</td><td>Tucatinib</td><td>EGFR</td><td>0.845577840</td><td>-2.70</td><td>0.806943411</td></tr>
-                </tbody>
-              </table>
+          <section id="evidence" class="document-section">
+            <h2>证据解释</h2>
+            <div class="evidence-cards">
+              <article><h3>ConPLex</h3><p>回答药物是否可能与某个蛋白发生相互作用。</p></article>
+              <article><h3>Open Targets</h3><p>回答某个基因/蛋白是否与 cancer 疾病概念存在数据库关联。</p></article>
+              <article><h3>STRING</h3><p>回答靶点是否位于疾病相关蛋白互作网络中。</p></article>
+              <article><h3>TxGNN</h3><p>回答药物是否具有 cancer 方向的图谱推断信号。</p></article>
+              <article><h3>DiffDock</h3><p>回答高优先级候选是否具备可解释的结构姿态线索。</p></article>
             </div>
           </section>
 
           <section id="interpretation" class="document-section">
-            <h2>Open Targets 结果解释</h2>
+            <h2>结果如何使用</h2>
             <p>
-              Open Targets 对所有输入蛋白都可以尝试查询疾病关联，但并不是所有蛋白都会获得同等强度的 cancer 证据。这里的 Open Targets 分数表示基因/蛋白与 cancer 疾病概念之间的数据库关联强度，是靶点层面的疾病证据。
+              当前结果可用于候选筛选、文献审阅、机制假设生成和实验设计。更适合的使用方式是从结构增强 Top100 中进一步筛选 20-50 个候选 pair，再结合药物可获得性、安全性、具体癌种背景和实验可操作性进入验证设计。
             </p>
-            <p>
-              这与“癌症突变位点”不是同一层概念。某些 cancer 位点只存在于特定蛋白、特定癌种或特定突变背景中；当前流程先在 pan-cancer 层面建立广覆盖候选池，后续若聚焦具体癌种、突变或分子亚型，应切换到更具体的 disease ID 或引入突变/亚型数据重新排序。
-            </p>
+            <div class="callout-panel">
+              <h3>Open Targets 口径</h3>
+              <p>
+                Open Targets 分数是靶点-疾病层面的关联证据，不表示所有蛋白都有 cancer-specific site，也不表示药物已被证明对癌症有效。若后续聚焦具体癌种、突变或分子亚型，应切换到更具体的 disease ID 或引入突变/亚型数据重新排序。
+              </p>
+            </div>
           </section>
         </article>
 
         <aside class="document-sidebar" aria-label="Report navigation">
           <h2>页面目录</h2>
-          <a href="#objective">项目目标</a>
-          <a href="#work">已完成工作</a>
-          <a href="#workflow">流程设计思路</a>
-          <a href="#ranking">排序方法</a>
-          <a href="#results">结果概览</a>
-          <a href="#candidates">代表性候选</a>
-          <a href="#interpretation">结果解释</a>
+          <a href="#summary">核心结论</a>
+          <a href="#purpose">项目目标</a>
+          <a href="#workflow">流程思路</a>
+          <a href="#evidence">证据解释</a>
+          <a href="#interpretation">结果使用</a>
         </aside>
       </div>
     </main>
 
     <footer class="site-footer">
-      <span>BioMaster results report</span>
+      <span>BioMaster results brief</span>
       <span>Updated from local audit: 2026-05-22</span>
     </footer>
   </body>
