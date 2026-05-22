@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BioMaster 药物再定位计算筛选</title>
+    <meta
+      name="description"
+      content="BioMaster FDA 已批准小分子与人类蛋白靶点的 cancer 方向药物再定位计算筛选结果展示。"
+    />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#overview" aria-label="BioMaster overview">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>BioMaster</strong>
+          <small>drug repositioning screen</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#workflow">流程</a>
+        <a href="#evidence">证据</a>
+        <a href="#candidates">候选</a>
+        <a href="#analysis">分析</a>
+        <a class="nav-action" href="assets/biomaster-external-report.pdf">PDF</a>
+      </nav>
+    </header>
+
+    <main id="overview">
+      <section class="hero-band">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">FDA-approved small molecules × human protein targets</p>
+            <h1>BioMaster 药物再定位计算筛选</h1>
+            <p class="lead">
+              本阶段完成 915 个 FDA 已批准小分子与 1000 个人类蛋白靶点的全组合
+              AI-DTI 主筛选，并结合 Open Targets、STRING、TxGNN 与 DiffDock 形成
+              cancer 方向候选优先级。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#candidates">查看候选结果</a>
+              <a class="button secondary" href="assets/biomaster-external-report.pdf">打开正式 PDF</a>
+            </div>
+          </div>
+          <figure class="hero-figure">
+            <img src="assets/biomaster-main-figure.png" alt="BioMaster screening workflow" />
+            <figcaption>AI-DTI 初筛、疾病证据融合与结构对接增强的总体流程图。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-band compact">
+        <div class="metric-grid" aria-label="Key metrics">
+          <article class="metric-card">
+            <span>药物库</span>
+            <strong>915</strong>
+            <small>FDA 已批准小分子</small>
+          </article>
+          <article class="metric-card">
+            <span>靶点库</span>
+            <strong>1000</strong>
+            <small>人类蛋白靶点</small>
+          </article>
+          <article class="metric-card">
+            <span>主筛选</span>
+            <strong>915000</strong>
+            <small>drug-target pairs</small>
+          </article>
+          <article class="metric-card">
+            <span>结构增强</span>
+            <strong>940/1000</strong>
+            <small>Top1000 DiffDock 输出</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band compact">
+        <div class="section-heading">
+          <p class="eyebrow">Latest local audit</p>
+          <h2>结构扩展计算审计</h2>
+          <p>
+            主筛选与高优先级结构增强结果已形成；更大规模结构扩展仍作为补充证据持续推进。以下为 2026-05-22 本地审计摘要。
+          </p>
+        </div>
+        <div class="metric-grid" aria-label="Full structural extension audit">
+          <article class="metric-card">
+            <span>Score files</span>
+            <strong>995</strong>
+            <small>of 3653 chunks</small>
+          </article>
+          <article class="metric-card">
+            <span>Scored pairs</span>
+            <strong>248750</strong>
+            <small>of 913170 DiffDock-ready pairs</small>
+          </article>
+          <article class="metric-card">
+            <span>Coverage</span>
+            <strong>27.24%</strong>
+            <small>full structural extension</small>
+          </article>
+          <article class="metric-card">
+            <span>Output rate</span>
+            <strong>78.59%</strong>
+            <small>among scored pairs</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="workflow" class="section-band">
+        <div class="section-heading">
+          <p class="eyebrow">Screening design</p>
+          <h2>我们做了什么</h2>
+          <p>
+            流程采用“广覆盖初筛、疾病证据融合、结构增强收敛”的分层策略，将百万级组合压缩为可进入人工审阅和实验设计的候选集合。
+          </p>
+        </div>
+        <div class="workflow-grid">
+          <article class="step-card">
+            <span class="step-index">01</span>
+            <h3>药物库标准化</h3>
+            <p>整理 FDA 已批准小分子，统一 ChEMBL/PubChem 标识、SMILES、InChIKey、分子式和 SDF 结构文件。</p>
+          </article>
+          <article class="step-card">
+            <span class="step-index">02</span>
+            <h3>蛋白靶点库构建</h3>
+            <p>构建 1000 个人类蛋白靶点库，保留 UniProt accession、gene symbol、序列和 AlphaFold 受体结构路径。</p>
+          </article>
+          <article class="step-card">
+            <span class="step-index">03</span>
+            <h3>AI-DTI 互作预测</h3>
+            <p>对 915000 个 drug-target pair 进行 AI-DTI 预测，得到药物-蛋白互作倾向分数。</p>
+          </article>
+          <article class="step-card">
+            <span class="step-index">04</span>
+            <h3>疾病证据融合</h3>
+            <p>将 Open Targets target-disease 证据、STRING 网络证据和 TxGNN 药物-疾病图谱信号纳入优先级排序。</p>
+          </article>
+          <article class="step-card">
+            <span class="step-index">05</span>
+            <h3>Top 候选结构增强</h3>
+            <p>对疾病证据优先级最高的 1000 个候选使用 DiffDock 生成结合姿态与结构置信度，并形成结构增强共识排序。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="evidence" class="section-band alt">
+        <div class="section-heading">
+          <p class="eyebrow">Evidence model</p>
+          <h2>证据如何进入排序</h2>
+          <p>
+            排序对象是 drug-target pair。Open Targets 和 STRING 是靶点-疾病层面证据，TxGNN 是药物-疾病层面证据，DiffDock 是 Top 候选结构层面证据。
+          </p>
+        </div>
+        <div class="evidence-layout">
+          <div class="formula-panel">
+            <h3>疾病证据融合分数</h3>
+            <code>0.55 × AI score + 0.30 × OpenTargets + 0.15 × STRING</code>
+            <p>TxGNN 映射成功时，最终优先级进一步融合药物-疾病图谱信号。</p>
+            <code>0.80 × OpenTargets_STRING + 0.20 × TxGNN</code>
+          </div>
+          <div class="coverage-panel">
+            <h3>证据覆盖</h3>
+            <div class="bar-row">
+              <span>direct + network</span>
+              <div class="bar-track"><i style="width:72.8%"></i></div>
+              <b>666120</b>
+            </div>
+            <div class="bar-row">
+              <span>direct only</span>
+              <div class="bar-track"><i style="width:25.6%"></i></div>
+              <b>234240</b>
+            </div>
+            <div class="bar-row">
+              <span>network only</span>
+              <div class="bar-track"><i style="width:0.1%"></i></div>
+              <b>915</b>
+            </div>
+            <div class="bar-row">
+              <span>none</span>
+              <div class="bar-track"><i style="width:1.5%"></i></div>
+              <b>13725</b>
+            </div>
+          </div>
+        </div>
+        <div class="analysis-note">
+          <h3>Open Targets 的解释口径</h3>
+          <p>
+            当前 disease scope 为 pan-cancer。Open Targets 分数表示某个基因/蛋白与 cancer 概念之间的数据库关联强度，不等同于某个药物对癌症有效，也不等同于特定癌种突变位点结论。若聚焦具体癌种，应切换对应 disease ID 后重新评分。
+          </p>
+        </div>
+      </section>
+
+      <section id="candidates" class="section-band">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Structure-enhanced consensus</p>
+            <h2>代表性候选结果</h2>
+            <p>
+              结构增强 Top1000 覆盖 337 个唯一药物和 64 个唯一蛋白。Top100 覆盖 67 个唯一药物和 20 个唯一蛋白。
+            </p>
+          </div>
+          <div class="candidate-controls" role="group" aria-label="Candidate filters">
+            <input id="candidateSearch" type="search" placeholder="搜索药物或靶点" />
+            <div class="segmented">
+              <button class="active" type="button" data-filter="all">全部</button>
+              <button type="button" data-filter="completed">结构完成</button>
+              <button type="button" data-filter="missing_output">缺失输出</button>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Drug</th>
+                <th>Target</th>
+                <th>Disease priority</th>
+                <th>Docking</th>
+                <th>Consensus</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="candidateRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="analysis" class="section-band alt">
+        <div class="section-heading">
+          <p class="eyebrow">Interpretation</p>
+          <h2>结果如何使用</h2>
+          <p>
+            输出结果是候选优先级，不是药效证明。它的价值在于把大规模组合收敛为可以进一步讨论、审阅和验证的药物-靶点集合。
+          </p>
+        </div>
+        <div class="analysis-grid">
+          <article>
+            <h3>可以支持的结论</h3>
+            <p>候选 pair 在 AI-DTI、靶点疾病相关性、药物-疾病图谱信号和结构姿态中具有综合优先级。</p>
+          </article>
+          <article>
+            <h3>仍需验证的内容</h3>
+            <p>具体癌种、细胞模型、剂量反应、靶点机制、安全性和适应症合理性仍需实验与文献审阅确认。</p>
+          </article>
+          <article>
+            <h3>下一阶段收敛</h3>
+            <p>可从结构增强 Top100 中筛选 20-50 个候选 pair，再结合可获得性和实验可操作性进入 5-20 个验证对象。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band">
+        <div class="section-heading">
+          <p class="eyebrow">Artifacts</p>
+          <h2>产物索引</h2>
+        </div>
+        <div class="artifact-list">
+          <a href="BIOMASTER_RESULTS_REPORT_2026_05_11_ZH.md">
+            <span>Markdown 结果汇报</span>
+            <small>docs/BIOMASTER_RESULTS_REPORT_2026_05_11_ZH.md</small>
+          </a>
+          <a href="assets/biomaster-external-report.pdf">
+            <span>正式 PDF 汇报</span>
+            <small>docs/assets/biomaster-external-report.pdf</small>
+          </a>
+          <a href="assets/biomaster-main-figure.png">
+            <span>GPT-image-2 主图</span>
+            <small>docs/assets/biomaster-main-figure.png</small>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>BioMaster report-scale screening dashboard</span>
+      <span>Updated from local audit: 2026-05-22</span>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

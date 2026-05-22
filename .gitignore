@@ -40,6 +40,11 @@ nodes.tab
 *.jpeg
 *.gif
 *.ipynb_checkpoints/
+!docs/assets/
+!docs/assets/*.png
+!docs/assets/*.jpg
+!docs/assets/*.jpeg
+!docs/assets/*.gif
 
 # OS/editor
 .DS_Store
