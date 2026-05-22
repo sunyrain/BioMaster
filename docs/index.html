@@ -20,6 +20,7 @@
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
+        <a href="#architecture">架构</a>
         <a href="#workflow">流程</a>
         <a href="#evidence">证据</a>
         <a href="#analytics">图表</a>
@@ -43,6 +44,7 @@
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#candidates">查看候选结果</a>
+              <a class="button secondary" href="#architecture">查看架构视图</a>
               <a class="button secondary" href="assets/biomaster-external-report.pdf">打开正式 PDF</a>
             </div>
           </div>
@@ -88,24 +90,186 @@
         </div>
         <div class="metric-grid" aria-label="Full structural extension audit">
           <article class="metric-card">
-            <span>Score files</span>
-            <strong data-metric="fullScoreFiles">995</strong>
-            <small>of 3653 chunks</small>
+            <span>Completed batches</span>
+            <strong data-metric="fullScoreFiles">1128</strong>
+            <small>of 3653 structural batches</small>
           </article>
           <article class="metric-card">
             <span>Scored pairs</span>
-            <strong data-metric="fullRowsScored">248750</strong>
+            <strong data-metric="fullRowsScored">282000</strong>
             <small>of 913170 DiffDock-ready pairs</small>
           </article>
           <article class="metric-card">
             <span>Coverage</span>
-            <strong data-metric="fullRowProgressPct">27.24%</strong>
-            <small>full structural extension</small>
+            <strong data-metric="fullRowProgressPct">30.88%</strong>
+            <small>large-scale structural extension</small>
           </article>
           <article class="metric-card">
             <span>Output rate</span>
-            <strong data-metric="fullOutputRatePct">78.59%</strong>
+            <strong data-metric="fullOutputRatePct">79.69%</strong>
             <small>among scored pairs</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="architecture" class="section-band alt">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Expert view</p>
+            <h2>系统架构与算法视图</h2>
+            <p>
+              BioMaster 将药物、蛋白、疾病证据和结构对接拆分为可审计的计算层。每一层保留独立产物，最终只在排序阶段融合，便于专家追溯候选来源和判断证据强度。
+            </p>
+          </div>
+          <div class="audit-chip">
+            <span>Primary matrix</span>
+            <strong>915000 pairs</strong>
+          </div>
+        </div>
+
+        <div class="architecture-map" aria-label="BioMaster system architecture">
+          <article class="arch-node input">
+            <span class="arch-index">01</span>
+            <p class="arch-label">Input layer</p>
+            <h3>药物与靶点标准化</h3>
+            <ul>
+              <li>FDA-approved small molecules</li>
+              <li>UniProt human proteins</li>
+              <li>SMILES, SDF, sequence, receptor paths</li>
+            </ul>
+          </article>
+          <article class="arch-node model">
+            <span class="arch-index">02</span>
+            <p class="arch-label">Prediction layer</p>
+            <h3>AI-DTI 主筛选</h3>
+            <ul>
+              <li>ConPLex 互作倾向预测</li>
+              <li>全组合 drug-target 矩阵</li>
+              <li>归一化互作分数</li>
+            </ul>
+          </article>
+          <article class="arch-node evidence">
+            <span class="arch-index">03</span>
+            <p class="arch-label">Evidence layer</p>
+            <h3>疾病与网络证据</h3>
+            <ul>
+              <li>Open Targets target-disease association</li>
+              <li>STRING network propagation</li>
+              <li>TxGNN drug-disease signal</li>
+            </ul>
+          </article>
+          <article class="arch-node structure">
+            <span class="arch-index">04</span>
+            <p class="arch-label">Structural layer</p>
+            <h3>DiffDock 结构增强</h3>
+            <ul>
+              <li>AlphaFold receptor preparation</li>
+              <li>Top 候选结合姿态</li>
+              <li>大规模结构扩展</li>
+            </ul>
+          </article>
+          <article class="arch-node output">
+            <span class="arch-index">05</span>
+            <p class="arch-label">Output layer</p>
+            <h3>候选与汇报产物</h3>
+            <ul>
+              <li>共识排序候选</li>
+              <li>结构浏览与图表分析</li>
+              <li>正式汇报与验证短名单</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="score-quality-grid">
+          <article class="score-panel">
+            <div class="panel-title">
+              <h3>排序算法逻辑</h3>
+              <span>weighted evidence fusion</span>
+            </div>
+            <div class="score-flow">
+              <div class="score-row">
+                <span class="score-badge">A</span>
+                <div>
+                  <strong>药物-靶点互作与靶点疾病证据融合</strong>
+                  <div class="weight-stack" aria-label="AI, Open Targets and STRING weights">
+                    <span style="--w:55; --c:#155fa8">AI-DTI 55%</span>
+                    <span style="--w:30; --c:#148f8b">Open Targets 30%</span>
+                    <span style="--w:15; --c:#5f9648">STRING 15%</span>
+                  </div>
+                  <code>0.55 × AI score + 0.30 × OpenTargets + 0.15 × STRING</code>
+                </div>
+              </div>
+              <div class="score-row">
+                <span class="score-badge">B</span>
+                <div>
+                  <strong>药物-疾病图谱信号校正</strong>
+                  <div class="weight-stack" aria-label="Target evidence and TxGNN weights">
+                    <span style="--w:80; --c:#155fa8">Target evidence 80%</span>
+                    <span style="--w:20; --c:#d87832">TxGNN 20%</span>
+                  </div>
+                  <code>0.80 × target-level priority + 0.20 × TxGNN drug-disease score</code>
+                </div>
+              </div>
+              <div class="score-row">
+                <span class="score-badge">C</span>
+                <div>
+                  <strong>结构增强共识排序</strong>
+                  <div class="weight-stack" aria-label="Disease priority and DiffDock weights">
+                    <span style="--w:85; --c:#155fa8">Disease priority 85%</span>
+                    <span style="--w:15; --c:#8a5a9e">DiffDock 15%</span>
+                  </div>
+                  <code>0.85 × disease priority + 0.15 × normalized DiffDock confidence</code>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="quality-panel">
+            <div class="panel-title">
+              <h3>质量控制与可追溯性</h3>
+              <span>audit gates</span>
+            </div>
+            <div class="quality-list">
+              <div>
+                <strong>Identifier consistency</strong>
+                <span>ChEMBL/PubChem、UniProt、gene symbol 在输入层统一映射。</span>
+              </div>
+              <div>
+                <strong>Evidence semantics</strong>
+                <span>Open Targets 表示靶点与 disease scope 的关联强度，不作为药效证明。</span>
+              </div>
+              <div>
+                <strong>Receptor readiness</strong>
+                <span>结构对接仅使用可获得或已裁剪的 AlphaFold receptor。</span>
+              </div>
+              <div>
+                <strong>Failure audit</strong>
+                <span>缺失输出、异常批次和补充计算对象单独审计。</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="lineage-grid" aria-label="Data lineage">
+          <article class="lineage-step">
+            <span>Data</span>
+            <h3>标准化输入表</h3>
+            <p>药物库、蛋白库和受体路径形成稳定输入，支撑后续每个计算模块复现。</p>
+          </article>
+          <article class="lineage-step">
+            <span>Scores</span>
+            <h3>中间评分矩阵</h3>
+            <p>AI-DTI、靶点疾病证据、网络证据和图谱信号分别保留，排序时按权重融合。</p>
+          </article>
+          <article class="lineage-step">
+            <span>Structures</span>
+            <h3>结构对接产物</h3>
+            <p>Top 候选优先产出 rank-1 ligand pose；结构扩展持续补充更大覆盖的对接证据。</p>
+          </article>
+          <article class="lineage-step">
+            <span>Reports</span>
+            <h3>专家审阅界面</h3>
+            <p>首页负责交互展示，结果汇报负责正式叙事，运行状态页负责计算监控。</p>
           </article>
         </div>
       </section>

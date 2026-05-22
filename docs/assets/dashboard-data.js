@@ -1,5 +1,5 @@
 window.BIOMASTER_DATA = {
-  "updated": "2026-05-22T16:43:16Z",
+  "updated": "2026-05-22T17:17:38Z",
   "metrics": {
     "drugs": 915,
     "targets": 1000,
@@ -7,14 +7,14 @@ window.BIOMASTER_DATA = {
     "structureCandidates": 1000,
     "top1000Completed": 940,
     "top1000Missing": 60,
-    "fullScoreFiles": 1122,
+    "fullScoreFiles": 1128,
     "fullJobsTotal": 3653,
-    "fullRowsScored": 280500,
+    "fullRowsScored": 282000,
     "fullRowsTotal": 913170,
-    "fullRowProgressPct": 30.72,
-    "fullCompletedOutputs": 223423,
-    "fullMissingOutputs": 57077,
-    "fullOutputRatePct": 79.65,
+    "fullRowProgressPct": 30.88,
+    "fullCompletedOutputs": 224720,
+    "fullMissingOutputs": 57280,
+    "fullOutputRatePct": 79.69,
     "zeroCompletedChunks": 77
   },
   "charts": {

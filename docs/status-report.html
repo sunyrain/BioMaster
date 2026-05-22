@@ -57,40 +57,40 @@
               <div>
                 <span>Active lanes</span>
                 <strong>2</strong>
-                <small>one chunk per GPU</small>
+                <small>one structural batch per GPU</small>
               </div>
             </div>
             <p>
-              当前队列按 chunk 逐批推进，每张 GPU 同时运行一个 DiffDock job。由于任务包含结构读取、图构建、ESM embedding 和失败样本处理，GPU 显存会持续占用，但 GPU-Util 会随阶段波动，并不等同于始终 100%。
+              当前队列按结构批次逐批推进，每张 GPU 同时运行一个 DiffDock job。由于任务包含结构读取、图构建、ESM embedding 和失败样本处理，GPU 显存会持续占用，但 GPU-Util 会随阶段波动，并不等同于始终 100%。
             </p>
           </section>
 
           <section id="audit" class="document-section">
             <h2>最新审计</h2>
             <div class="status-grid">
-              <article><span>Score files</span><strong>1122</strong><small>of 3653 chunks</small></article>
-              <article><span>Scored pairs</span><strong>280500</strong><small>of 913170 ready pairs</small></article>
-              <article><span>Coverage</span><strong>30.72%</strong><small>full structural extension</small></article>
-              <article><span>Output rate</span><strong>79.65%</strong><small>among scored pairs</small></article>
+              <article><span>Completed batches</span><strong>1128</strong><small>of 3653 structural batches</small></article>
+              <article><span>Scored pairs</span><strong>282000</strong><small>of 913170 ready pairs</small></article>
+              <article><span>Coverage</span><strong>30.88%</strong><small>large-scale structural extension</small></article>
+              <article><span>Output rate</span><strong>79.69%</strong><small>among scored pairs</small></article>
             </div>
             <div class="progress-meter" aria-label="Full structural extension progress">
-              <i style="width: 30.72%"></i>
+              <i style="width: 30.88%"></i>
             </div>
             <p>
-              审计指标来自 2026-05-23 本地结果快照。队列当前仍在后台运行，active jobs 为 1122 和 1123；后续应在更多 chunk 完成后重新运行审计脚本，并同步展示页的 dashboard 数据。
+              审计指标来自 2026-05-23 本地结果快照。队列当前仍在后台运行，两条 GPU lane 持续推进；后续应在更多结构批次完成后重新运行审计脚本，并同步展示页的 dashboard 数据。
             </p>
           </section>
 
           <section id="throughput" class="document-section">
             <h2>吞吐与预计时间</h2>
             <div class="status-grid">
-              <article><span>New chunks</span><strong>127</strong><small>since restart at job 995</small></article>
-              <article><span>Recent throughput</span><strong>8.7-9.1</strong><small>chunks per hour, two GPUs</small></article>
-              <article><span>Remaining</span><strong>2531</strong><small>chunks in current queue</small></article>
-              <article><span>ETA</span><strong>11.6-12.1d</strong><small>if current speed holds</small></article>
+              <article><span>New batches</span><strong>133</strong><small>since latest restart</small></article>
+              <article><span>Recent throughput</span><strong>9.16</strong><small>batches per hour, two GPUs</small></article>
+              <article><span>Remaining</span><strong>2525</strong><small>structural batches in current queue</small></article>
+              <article><span>ETA</span><strong>11.5d</strong><small>if current speed holds</small></article>
             </div>
             <p>
-              ETA 根据最近 20-50 个 chunk 的实际耗时估算。DiffDock 不同药物片段的结构复杂度和失败率不同，因此实际完成时间会波动。
+              ETA 根据最近 20-50 个结构批次的实际耗时估算。DiffDock 不同药物片段的结构复杂度和失败率不同，因此实际完成时间会波动。
             </p>
           </section>
 
@@ -107,8 +107,8 @@
           <section id="next" class="document-section">
             <h2>下一步</h2>
             <ol>
-              <li>保持全量结构扩展队列运行，定期检查磁盘余量、GPU 进程和失败 chunk。</li>
-              <li>每完成一批 chunk 后刷新审计 JSON，并重新生成 dashboard 数据。</li>
+              <li>保持大规模结构扩展队列运行，定期检查磁盘余量、GPU 进程和失败批次。</li>
+              <li>每完成一批结构计算后刷新审计 JSON，并重新生成 dashboard 数据。</li>
               <li>对输出率异常的药物片段进行失败原因归因，必要时设计参数补跑策略。</li>
               <li>在结构扩展结果稳定增加后，更新候选结构样本和展示页指标。</li>
             </ol>
