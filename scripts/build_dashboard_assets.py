@@ -10,7 +10,6 @@ from typing import Any
 
 
 STAGE6_CSV = Path("outputs/report_scale/stage6_top1000_consensus_candidates.csv")
-AUDIT_JSON = Path("outputs/report_scale/biomaster_status_audit_2026_05_22.json")
 RECEPTOR_AUDIT_CSV = Path("data/processed/diffdock_ready_receptor_paths.csv")
 DOCS_ASSET_DIR = Path("docs/assets")
 
@@ -29,6 +28,16 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def load_json(path: Path) -> dict[str, Any]:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
+
+
+def latest_audit_path(root: Path) -> Path:
+    dated = sorted((root / "outputs/report_scale").glob("biomaster_status_audit_20*.json"))
+    if dated:
+        return dated[-1]
+    fallback = root / "outputs/report_scale/biomaster_status_audit_latest.json"
+    if fallback.exists():
+        return fallback
+    raise FileNotFoundError("No BioMaster status audit JSON found.")
 
 
 def number(value: str | None) -> float | None:
@@ -112,7 +121,7 @@ def build_structure_samples(
 def build_payload(root: Path) -> dict[str, Any]:
     stage6_rows = read_csv(root / STAGE6_CSV)
     receptor_rows = read_csv(root / RECEPTOR_AUDIT_CSV)
-    audit = load_json(root / AUDIT_JSON)
+    audit = load_json(latest_audit_path(root))
 
     target_counts = Counter(row["gene_name"] for row in stage6_rows)
     status_counts = Counter(row["structural_status"] for row in stage6_rows)
