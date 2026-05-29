@@ -360,6 +360,14 @@
             mutation/variant 注释和癌种上下文后重新评分。
           </p>
         </div>
+        <div class="analysis-note">
+          <h3>UniProt accession 与结构代表</h3>
+          <p>
+            UniProt accession 是蛋白数据库记录编号，不是结合位点。不同药物面对同一蛋白时仍分别进入对接；
+            当前只在同一药物面对完全相同蛋白序列时合并重复 accession。Top10000 行因此收敛为 1872 个 drug + protein-sequence
+            代表任务，再将结构结果映射回对应的 UniProt 记录。
+          </p>
+        </div>
       </section>
 
       <section id="analytics" class="section-band">
@@ -469,14 +477,15 @@
             <p class="eyebrow">Structure-enhanced consensus</p>
             <h2>代表性候选结果</h2>
             <p>
-              候选表展示按亲和-结构共识排序的 drug + protein-sequence 代表项。每个代表项可映射回 Top10000 中具有相同药物和相同蛋白序列的 UniProt 记录。
+              候选表默认展示已获得 DiffDock rank-1 姿态的 drug + protein-sequence 代表项。
+              “缺失输出”是结构审计状态，不代表候选无效；每个代表项可映射回 Top10000 中具有相同药物和相同蛋白序列的 UniProt 记录。
             </p>
           </div>
           <div class="candidate-controls" role="group" aria-label="Candidate filters">
             <input id="candidateSearch" type="search" placeholder="搜索药物或靶点" />
             <div class="segmented">
-              <button class="active" type="button" data-filter="all">全部</button>
-              <button type="button" data-filter="completed">结构完成</button>
+              <button type="button" data-filter="all">全部</button>
+              <button class="active" type="button" data-filter="completed">结构完成</button>
               <button type="button" data-filter="missing_output">缺失输出</button>
             </div>
           </div>

@@ -68,6 +68,18 @@
             </div>
           </section>
 
+          <section class="document-section" id="accession">
+            <h2>Accession 与去重口径</h2>
+            <p>
+              UniProt accession 是数据库记录编号，不等同于结合位点或突变位点。ChEMBL 表中多个 accession
+              可能对应完全相同的氨基酸序列，因此它们对 ConPLex 和当前 wild-type receptor docking 来说是重复计算对象。
+            </p>
+            <p>
+              去重键是 <code>drug_id + protein sequence</code>。不同药物不会被合并，同一药物面对不同蛋白序列也不会被合并；
+              只在同一药物面对完全相同蛋白序列时选取一个结构代表执行 DiffDock，再把结果回填到对应的 UniProt accession 行。
+            </p>
+          </section>
+
           <section class="document-section" id="audit">
             <h2>结构审计</h2>
             <div class="status-grid">
@@ -78,7 +90,7 @@
             </div>
             <p>
               缺失或失败的 502 个结构代表保留为审计项，不作为负样本，也不从候选集合中静默删除。
-              后续可只对高价值 missing-output 候选设计小规模补跑。
+              这些记录通常表示 DiffDock 没有留下可用的 rank-1 confidence SDF；后续可只对高价值 missing-output 候选设计小规模补跑。
             </p>
           </section>
 
@@ -102,6 +114,7 @@
           <h2>页面目录</h2>
           <a href="#summary">总体口径</a>
           <a href="#stages">分层筛选</a>
+          <a href="#accession">Accession</a>
           <a href="#audit">结构审计</a>
           <a href="#website-data">网站数据</a>
         </aside>

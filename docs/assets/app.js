@@ -2,7 +2,7 @@ const data = window.BIOMASTER_DATA || {};
 const candidates = data.candidates || [];
 const palette = ["#155fa8", "#148f8b", "#5f9648", "#d87832", "#8a5a9e", "#52606d"];
 
-let activeFilter = "all";
+let activeFilter = "completed";
 let activeStructure = 0;
 let viewer = null;
 let viewerSpinning = false;

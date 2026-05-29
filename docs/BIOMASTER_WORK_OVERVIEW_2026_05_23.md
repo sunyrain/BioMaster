@@ -33,6 +33,8 @@ The new input file, `druggable_proteome_chembl(1).xlsx`, provides a curated drug
 
 The key optimization is sequence de-duplication. Many UniProt records share the same protein sequence or represent closely duplicated target records. ConPLex affinity only needs to be computed once per unique sequence, then expanded back to all represented protein records.
 
+UniProt accession is a database record identifier, not a binding site. The workflow does not merge different drugs against the same protein. It only merges the same drug against identical protein sequences, then maps the representative structural result back to the corresponding UniProt accessions.
+
 ## 3. What Each Model Does
 
 ### 3.1 ConPLex
