@@ -99,7 +99,7 @@ flowchart TD
 
 ## 6. Representative Early Affinity Results
 
-The current Top affinity set contains known pharmacological relationships and plausible rediscovery examples, which is a useful sanity check for the workflow. Representative high-scoring examples include:
+The current Top affinity set contains known pharmacological relationships and plausible rediscovery examples. These cases provide positive-control evidence that the workflow can recover biologically interpretable drug-target pairs. Representative high-scoring examples include:
 
 | Drug | Representative target | Interpretation |
 | --- | --- | --- |
@@ -109,6 +109,8 @@ The current Top affinity set contains known pharmacological relationships and pl
 | Gefitinib | EGFR | Kinase inhibitor-target relationship recovered by the screen. |
 
 These examples do not by themselves validate all novel predictions, but they show that the ranking is capable of recovering biologically interpretable drug-target pairs.
+
+The representative audit separates results into known pharmacology recovered, family-consistent extension candidates, and high-affinity rescue candidates with missing docking output. This makes the current output more useful for expert triage than a raw score table alone.
 
 ## 7. How to Interpret Open Targets in This Project
 

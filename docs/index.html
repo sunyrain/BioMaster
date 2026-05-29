@@ -24,6 +24,7 @@
         <a href="#workflow">流程</a>
         <a href="#evidence">解释</a>
         <a href="#analytics">图表</a>
+        <a href="#interpretability">Top 解释性</a>
         <a href="#structures">结构</a>
         <a href="#candidates">候选</a>
         <a href="#analysis">分析</a>
@@ -416,7 +417,174 @@
         </div>
       </section>
 
-      <section id="structures" class="section-band alt">
+      <section id="interpretability" class="section-band alt">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Interpretability audit</p>
+            <h2>Top 候选可解释性审计</h2>
+            <p>
+              对 Top 代表候选进行解释性审计后，可以看到多组已知药理关系被重新找回，也有一些同家族受体或
+              kinase 的合理扩展候选。该模块用于判断结果是否具有生物学解释基础，而不是只依赖模型分数排序。
+            </p>
+          </div>
+          <div class="audit-chip">
+            <span>Reviewed examples</span>
+            <strong>11 audit cases</strong>
+          </div>
+        </div>
+
+        <div class="interpret-grid">
+          <article class="interpret-card positive">
+            <span>Known pharmacology recovered</span>
+            <h3>强阳性关系</h3>
+            <p>Naltrexone/Naloxone - OPRK1、Dorzolamide - CA2、Gefitinib - EGFR、Cyclosporine - PPIA、Octreotide - SSTR2 等关系与已知药理学一致，可作为流程阳性对照和一致性证据。</p>
+          </article>
+          <article class="interpret-card family">
+            <span>Family-consistent extension</span>
+            <h3>可解释扩展</h3>
+            <p>部分结果落在 GPCR、opioid receptor、serotonin receptor、kinase 等相关家族内，适合进入文献审阅和二次结构验证，但不能直接视为已验证靶点。</p>
+          </article>
+          <article class="interpret-card audit">
+            <span>High affinity, no pose</span>
+            <h3>待补跑对象</h3>
+            <p>Doxazosin - ADRA1A、Afatinib - EGFR、Buprenorphine - OPRK1 等高亲和候选当前为 missing output，应优先做小规模 DiffDock 参数补跑或替代 docking 审计。</p>
+          </article>
+        </div>
+
+        <div class="interpret-summary">
+          <div>
+            <span>Result signal</span>
+            <strong>已知药理关系被 Top 排序重新找回</strong>
+            <p>这说明当前 affinity ranking 不是随机高分列表，而能在大规模 drug-target 组合中恢复具有明确药理背景的配对。</p>
+          </div>
+          <div>
+            <span>Structural evidence</span>
+            <strong>完成 DiffDock 的候选可进入结构审阅</strong>
+            <p>DiffDock 输出提供结合姿态线索，用于专家检查 pocket、配体构象和受体结构准备质量。</p>
+          </div>
+          <div>
+            <span>Rescue queue</span>
+            <strong>missing output 是补跑优先级，不是否定证据</strong>
+            <p>缺失输出通常来自 ligand/receptor 准备、图构建或采样失败，应与低分候选区分处理。</p>
+          </div>
+        </div>
+
+        <div class="table-wrap interpret-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Candidate</th>
+                <th>Rank</th>
+                <th>Affinity</th>
+                <th>Docking</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="evidence-tag known">known</span></td>
+                <td>Naltrexone - OPRK1</td>
+                <td>#9</td>
+                <td>0.958</td>
+                <td>-0.45</td>
+                <td>Opioid receptor relationship recovered with completed structure evidence.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag known">known</span></td>
+                <td>Naloxone Hydrochloride - OPRK1</td>
+                <td>#21</td>
+                <td>0.981</td>
+                <td>-2.98</td>
+                <td>High-affinity opioid receptor signal that supports recovery of known pharmacology.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag known">known</span></td>
+                <td>Dorzolamide Hydrochloride - CA2</td>
+                <td>#16</td>
+                <td>0.953</td>
+                <td>-0.36</td>
+                <td>Carbonic anhydrase inhibitor relationship recovered.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag known">known</span></td>
+                <td>Cyclosporine - PPIA</td>
+                <td>#28</td>
+                <td>0.972</td>
+                <td>-2.86</td>
+                <td>Known cyclophilin-binding biology recovered with completed docking output.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag known">known</span></td>
+                <td>Gefitinib - EGFR</td>
+                <td>#40</td>
+                <td>0.971</td>
+                <td>-3.30</td>
+                <td>Known EGFR kinase inhibitor-target relationship recovered.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag known">known</span></td>
+                <td>Octreotide Acetate - SSTR2</td>
+                <td>#38</td>
+                <td>0.965</td>
+                <td>-2.83</td>
+                <td>Somatostatin receptor relationship consistent with drug class context.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag family">family</span></td>
+                <td>Quizartinib Dihydrochloride - PDGFRA</td>
+                <td>#36</td>
+                <td>0.949</td>
+                <td>-1.65</td>
+                <td>Kinase-family extension candidate; needs selectivity and literature review.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag family">family</span></td>
+                <td>Palonosetron Hydrochloride - HTR3A</td>
+                <td>#50</td>
+                <td>0.929</td>
+                <td>-0.59</td>
+                <td>Serotonin receptor relationship consistent with drug class context.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag rescue">rescue</span></td>
+                <td>Doxazosin Mesylate - ADRA1A</td>
+                <td>#1</td>
+                <td>0.974</td>
+                <td>missing</td>
+                <td>Strong affinity and known receptor context, but missing DiffDock output; priority rescue case.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag rescue">rescue</span></td>
+                <td>Afatinib Dimaleate - EGFR</td>
+                <td>#4</td>
+                <td>0.965</td>
+                <td>missing</td>
+                <td>Known kinase-inhibitor context; structure output should be recovered with a targeted docking rerun.</td>
+              </tr>
+              <tr>
+                <td><span class="evidence-tag rescue">rescue</span></td>
+                <td>Buprenorphine - OPRK1</td>
+                <td>#5</td>
+                <td>0.960</td>
+                <td>missing</td>
+                <td>High-affinity opioid receptor candidate retained for targeted structural rescue.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="interpret-actions">
+          <h3>审计结论</h3>
+          <p>
+            当前 Top 结果已经具备可解释的药理学信号：已知关系用于证明流程能恢复合理配对；同家族扩展用于生成候选假设；
+            高亲和但缺失结构输出的对象进入补跑队列。下一步应从 completed 且解释性较强的候选中选出 20-50 个进行文献审阅，
+            同时对 Doxazosin - ADRA1A、Afatinib - EGFR、Buprenorphine - OPRK1 等 missing-output 高价值候选做定向补跑。
+          </p>
+        </div>
+      </section>
+
+      <section id="structures" class="section-band">
         <div class="section-heading split">
           <div>
             <p class="eyebrow">Structure viewer</p>

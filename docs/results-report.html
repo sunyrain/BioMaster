@@ -97,6 +97,18 @@
             </div>
           </section>
 
+          <section id="interpretable-results" class="document-section">
+            <h2>代表性结果解释性</h2>
+            <p>
+              结果中出现多组已知药理关系，例如 Naltrexone/Naloxone - OPRK1、Dorzolamide - CA2、Gefitinib - EGFR、
+              Cyclosporine - PPIA 和 Octreotide - SSTR2。这些关系可作为流程阳性对照和一致性证据，说明模型能够从大规模组合中找回可解释的药物-靶点信号。
+            </p>
+            <p>
+              也有部分同家族扩展候选，例如 kinase 或 GPCR 家族内的高分结果。它们适合作为文献审阅和二次 docking 的入口，
+              但不能直接视为已验证作用靶点。高亲和但 missing-output 的候选应作为补跑队列单独审计。
+            </p>
+          </section>
+
           <section id="interpretation" class="document-section">
             <h2>结果如何使用</h2>
             <p>
@@ -124,6 +136,7 @@
           <a href="#purpose">项目目标</a>
           <a href="#workflow">流程思路</a>
           <a href="#evidence">证据解释</a>
+          <a href="#interpretable-results">结果解释性</a>
           <a href="#interpretation">结果使用</a>
         </aside>
       </div>

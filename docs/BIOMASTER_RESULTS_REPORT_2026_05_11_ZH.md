@@ -59,7 +59,9 @@ BioMaster 当前阶段建立了一条面向药物相关蛋白空间的计算筛�
 | Top10000 中映射到完成结构的行 | 7216 |
 | Top10000 中映射到缺失结构的行 | 2784 |
 
-代表性已完成结构候选包括 Naltrexone--OPRK1、Dorzolamide--CA2、Naloxone--OPRK1、Cyclosporine--PPIA、Gefitinib--EGFR、Octreotide--SSTR2 等。这些结果包含已知药理关系和可解释的候选关系，可作为流程 sanity check 和后续候选筛选入口。
+代表性已完成结构候选包括 Naltrexone--OPRK1、Dorzolamide--CA2、Naloxone--OPRK1、Cyclosporine--PPIA、Gefitinib--EGFR、Octreotide--SSTR2 等。这些结果包含已知药理关系和可解释的候选关系，可作为流程阳性对照、一致性证据和后续候选筛选入口。
+
+这些可解释结果可以分成三类：第一类是已知药理关系回收，例如 opioid receptor、carbonic anhydrase、EGFR、cyclophilin A 和 somatostatin receptor；第二类是同家族扩展候选，例如 GPCR 或 kinase family 内的高分结果；第三类是高亲和但 missing-output 的补跑对象，例如 Doxazosin--ADRA1A、Afatinib--EGFR 和 Buprenorphine--OPRK1。
 
 ## 结果解释
 
