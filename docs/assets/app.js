@@ -21,7 +21,9 @@ function formatPct(value) {
 }
 
 function statusLabel(status) {
-  return status === "completed" ? "completed" : "missing output";
+  if (status === "completed") return "completed";
+  if (status === "not_yet_run") return "not yet run";
+  return "missing output";
 }
 
 function setMetricValues() {
@@ -33,7 +35,11 @@ function setMetricValues() {
     node.textContent = key.toLowerCase().includes("pct") ? formatPct(value) : formatInt(value);
   });
   const queueState = document.getElementById("queueState");
-  if (queueState) queueState.textContent = "in progress";
+  if (queueState) {
+    const done = Number(metrics.fullRowsScored || metrics.structureCompleted || metrics.top1000Completed || 0);
+    const total = Number(metrics.structureCandidates || metrics.fullRowsTotal || 0);
+    queueState.textContent = total && done >= total ? "complete" : "in progress";
+  }
 }
 
 function renderCandidates() {
@@ -48,19 +54,23 @@ function renderCandidates() {
     return matchesFilter && haystack.includes(search);
   });
 
+  const primaryScoreLabel = data.labels?.primaryScore || "Affinity";
   tbody.innerHTML = rows
     .map(
-      (candidate) => `
+      (candidate) => {
+        const primaryScore = candidate.affinityScore ?? candidate.diseasePriority;
+        return `
         <tr>
           <td><span class="rank">#${candidate.rank}</span></td>
           <td>${candidate.drug}<br><small>${candidate.drugId}</small></td>
-          <td><strong>${candidate.target}</strong><br><small>${candidate.protein}</small></td>
-          <td>${formatScore(candidate.diseasePriority)}</td>
+          <td><strong>${candidate.target}</strong><br><small>${candidate.protein} · ${candidate.representedPairCount || 1} represented</small></td>
+          <td><span class="score-label">${primaryScoreLabel}</span><br>${formatScore(primaryScore)}</td>
           <td>${formatScore(candidate.diffdock, 2)}</td>
           <td>${formatScore(candidate.consensus)}</td>
           <td><span class="status-pill ${candidate.status}">${statusLabel(candidate.status)}</span></td>
         </tr>
-      `,
+      `;
+      },
     )
     .join("");
 }
@@ -171,7 +181,7 @@ function renderCharts() {
   drawDonutChart(document.getElementById("evidenceChart"), charts.evidenceCoverage);
   renderStackedBars("statusBars", charts.structuralStatus);
   renderStackedBars("layerBars", [
-    ...(charts.txgnnStatus || []).map((row) => ({ label: `TxGNN ${row.label}`, value: row.value })),
+    ...(charts.txgnnStatus || []).map((row) => ({ label: row.label, value: row.value })),
     ...(charts.receptorStatus || []).map((row) => ({ label: row.label, value: row.value })),
   ]);
 }

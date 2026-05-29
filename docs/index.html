@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BioMaster 药物再定位计算筛选</title>
+    <title>BioMaster Druggable Proteome Screen</title>
     <meta
       name="description"
-      content="BioMaster FDA 已批准小分子与人类蛋白靶点的 cancer 方向药物再定位计算筛选结果展示。"
+      content="BioMaster druggable-proteome affinity screening and structure-prioritized drug-target candidate dashboard."
     />
     <link rel="stylesheet" href="assets/site.css" />
   </head>
@@ -16,13 +16,13 @@
         <span class="brand-mark">B</span>
         <span>
           <strong>BioMaster</strong>
-          <small>drug repositioning screen</small>
+          <small>druggable proteome screen</small>
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
         <a href="#architecture">架构</a>
         <a href="#workflow">流程</a>
-        <a href="#evidence">证据</a>
+        <a href="#evidence">解释</a>
         <a href="#analytics">图表</a>
         <a href="#structures">结构</a>
         <a href="#candidates">候选</a>
@@ -35,12 +35,12 @@
       <section class="hero-band">
         <div class="hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">FDA-approved small molecules × human protein targets</p>
-            <h1>BioMaster 药物再定位计算筛选</h1>
+            <p class="eyebrow">FDA-approved small molecules × ChEMBL druggable proteome</p>
+            <h1>BioMaster Druggable Proteome Screen</h1>
             <p class="lead">
-              本阶段完成 915 个 FDA 已批准小分子与 1000 个人类蛋白靶点的全组合
-              AI-DTI 主筛选，并结合 Open Targets、STRING、TxGNN 与 DiffDock 形成
-              cancer 方向候选优先级。
+              本阶段以 ChEMBL druggable target 表作为蛋白范围，完成 915 个 FDA 已批准小分子与
+              5306 个药物相关蛋白的全量 AI-DTI 亲和筛选，再对 Top 候选按唯一蛋白序列去重后
+              进入 AlphaFold/DiffDock 结构增强。
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#candidates">查看候选结果</a>
@@ -50,7 +50,7 @@
           </div>
           <figure class="hero-figure">
             <img src="assets/biomaster-main-figure.png" alt="BioMaster screening workflow" />
-            <figcaption>AI-DTI 初筛、疾病证据融合与结构对接增强的总体流程图。</figcaption>
+            <figcaption>AI-DTI 全量筛选、序列级去重与结构对接增强的总体流程图。</figcaption>
           </figure>
         </div>
       </section>
@@ -58,24 +58,24 @@
       <section class="section-band compact">
         <div class="metric-grid" aria-label="Key metrics">
           <article class="metric-card">
-            <span>药物库</span>
-            <strong>915</strong>
+            <span>Drug library</span>
+            <strong data-metric="drugs">915</strong>
             <small>FDA 已批准小分子</small>
           </article>
           <article class="metric-card">
-            <span>靶点库</span>
-            <strong>1000</strong>
-            <small>人类蛋白靶点</small>
+            <span>Protein library</span>
+            <strong data-metric="targets">5306</strong>
+            <small>ChEMBL druggable proteins</small>
           </article>
           <article class="metric-card">
-            <span>主筛选</span>
-            <strong>915000</strong>
+            <span>Affinity matrix</span>
+            <strong data-metric="pairs">4854990</strong>
             <small>drug-target pairs</small>
           </article>
           <article class="metric-card">
-            <span>结构增强</span>
-            <strong>940/1000</strong>
-            <small>Top1000 DiffDock 输出</small>
+            <span>Docking set</span>
+            <strong data-metric="structureCandidates">1872</strong>
+            <small>unique drug-sequence representatives</small>
           </article>
         </div>
       </section>
@@ -83,31 +83,32 @@
       <section class="section-band compact">
         <div class="section-heading">
           <p class="eyebrow">Latest local audit</p>
-          <h2>结构扩展计算审计</h2>
+          <h2>当前结构计算审计</h2>
           <p>
-            主筛选与高优先级结构增强结果已形成；更大规模结构扩展仍作为补充证据持续推进。以下为 2026-05-23 本地审计快照。
+            新路线先完成全量亲和筛选，再只把 Top10000 中按药物和蛋白序列去重后的代表复合物送入结构对接。
+            以下指标会随 DiffDock 队列完成自动更新。
           </p>
         </div>
         <div class="metric-grid" aria-label="Full structural extension audit">
           <article class="metric-card">
-            <span>Completed batches</span>
-            <strong data-metric="fullScoreFiles">1128</strong>
-            <small>of 3653 structural batches</small>
+            <span>Completed chunks</span>
+            <strong data-metric="fullScoreFiles">0</strong>
+            <small>of 8 DiffDock chunks</small>
           </article>
           <article class="metric-card">
-            <span>Scored pairs</span>
-            <strong data-metric="fullRowsScored">282000</strong>
-            <small>of 913170 DiffDock-ready pairs</small>
+            <span>Completed poses</span>
+            <strong data-metric="fullCompletedOutputs">0</strong>
+            <small>rank-1 ligand outputs</small>
           </article>
           <article class="metric-card">
             <span>Coverage</span>
-            <strong data-metric="fullRowProgressPct">30.88%</strong>
-            <small>large-scale structural extension</small>
+            <strong data-metric="fullRowProgressPct">0%</strong>
+            <small>representative docking set</small>
           </article>
           <article class="metric-card">
             <span>Output rate</span>
-            <strong data-metric="fullOutputRatePct">79.69%</strong>
-            <small>among scored pairs</small>
+            <strong data-metric="fullOutputRatePct">0%</strong>
+            <small>among representative pairs</small>
           </article>
         </div>
       </section>
@@ -118,12 +119,13 @@
             <p class="eyebrow">Expert view</p>
             <h2>系统架构与算法视图</h2>
             <p>
-              BioMaster 将药物、蛋白、疾病证据和结构对接拆分为可审计的计算层。每一层保留独立产物，最终只在排序阶段融合，便于专家追溯候选来源和判断证据强度。
+              BioMaster 将药物、蛋白序列、亲和预测和结构对接拆分为可审计的计算层。每一层保留独立产物，
+              使全量筛选、Top 收敛和结构解释可以分别复现。
             </p>
           </div>
           <div class="audit-chip">
             <span>Primary matrix</span>
-            <strong>915000 pairs</strong>
+            <strong>4854990 pairs</strong>
           </div>
         </div>
 
@@ -134,28 +136,28 @@
             <h3>药物与靶点标准化</h3>
             <ul>
               <li>FDA-approved small molecules</li>
-              <li>UniProt human proteins</li>
+              <li>ChEMBL druggable human proteins</li>
               <li>SMILES, SDF, sequence, receptor paths</li>
             </ul>
           </article>
           <article class="arch-node model">
             <span class="arch-index">02</span>
             <p class="arch-label">Prediction layer</p>
-            <h3>AI-DTI 主筛选</h3>
+            <h3>AI-DTI 亲和筛选</h3>
             <ul>
               <li>ConPLex 互作倾向预测</li>
-              <li>全组合 drug-target 矩阵</li>
-              <li>归一化互作分数</li>
+              <li>唯一蛋白序列复用预测</li>
+              <li>全量 drug-target 亲和分数</li>
             </ul>
           </article>
           <article class="arch-node evidence">
             <span class="arch-index">03</span>
-            <p class="arch-label">Evidence layer</p>
-            <h3>疾病与网络证据</h3>
+            <p class="arch-label">Reduction layer</p>
+            <h3>Top 候选收敛</h3>
             <ul>
-              <li>Open Targets target-disease association</li>
-              <li>STRING network propagation</li>
-              <li>TxGNN drug-disease signal</li>
+              <li>Top10000 affinity candidates</li>
+              <li>drug + sequence 去重</li>
+              <li>结构代表蛋白选择</li>
             </ul>
           </article>
           <article class="arch-node structure">
@@ -164,8 +166,8 @@
             <h3>DiffDock 结构增强</h3>
             <ul>
               <li>AlphaFold receptor preparation</li>
-              <li>Top 候选结合姿态</li>
-              <li>大规模结构扩展</li>
+              <li>Top 代表复合物结合姿态</li>
+              <li>DiffDock confidence audit</li>
             </ul>
           </article>
           <article class="arch-node output">
@@ -173,7 +175,7 @@
             <p class="arch-label">Output layer</p>
             <h3>候选与汇报产物</h3>
             <ul>
-              <li>共识排序候选</li>
+              <li>亲和-结构共识排序候选</li>
               <li>结构浏览与图表分析</li>
               <li>正式汇报与验证短名单</li>
             </ul>
@@ -184,41 +186,39 @@
           <article class="score-panel">
             <div class="panel-title">
               <h3>排序算法逻辑</h3>
-              <span>weighted evidence fusion</span>
+              <span>affinity and structure fusion</span>
             </div>
             <div class="score-flow">
               <div class="score-row">
                 <span class="score-badge">A</span>
                 <div>
-                  <strong>药物-靶点互作与靶点疾病证据融合</strong>
-                  <div class="weight-stack" aria-label="AI, Open Targets and STRING weights">
-                    <span style="--w:55; --c:#155fa8">AI-DTI 55%</span>
-                    <span style="--w:30; --c:#148f8b">Open Targets 30%</span>
-                    <span style="--w:15; --c:#5f9648">STRING 15%</span>
+                  <strong>全量药物-蛋白亲和筛选</strong>
+                  <div class="weight-stack" aria-label="ConPLex affinity screen">
+                    <span style="--w:100; --c:#155fa8">ConPLex affinity 100%</span>
                   </div>
-                  <code>0.55 × AI score + 0.30 × OpenTargets + 0.15 × STRING</code>
+                  <code>score(drug, protein sequence) → expanded to all represented UniProt records</code>
                 </div>
               </div>
               <div class="score-row">
                 <span class="score-badge">B</span>
                 <div>
-                  <strong>药物-疾病图谱信号校正</strong>
-                  <div class="weight-stack" aria-label="Target evidence and TxGNN weights">
-                    <span style="--w:80; --c:#155fa8">Target evidence 80%</span>
-                    <span style="--w:20; --c:#d87832">TxGNN 20%</span>
+                  <strong>结构代表去重</strong>
+                  <div class="weight-stack" aria-label="Representative selection">
+                    <span style="--w:60; --c:#148f8b">drug + sequence identity</span>
+                    <span style="--w:40; --c:#d87832">AlphaFold-ready representative</span>
                   </div>
-                  <code>0.80 × target-level priority + 0.20 × TxGNN drug-disease score</code>
+                  <code>Top10000 affinity rows → 1872 representative docking jobs</code>
                 </div>
               </div>
               <div class="score-row">
                 <span class="score-badge">C</span>
                 <div>
                   <strong>结构增强共识排序</strong>
-                  <div class="weight-stack" aria-label="Disease priority and DiffDock weights">
-                    <span style="--w:85; --c:#155fa8">Disease priority 85%</span>
+                  <div class="weight-stack" aria-label="Affinity and DiffDock weights">
+                    <span style="--w:85; --c:#155fa8">Affinity priority 85%</span>
                     <span style="--w:15; --c:#8a5a9e">DiffDock 15%</span>
                   </div>
-                  <code>0.85 × disease priority + 0.15 × normalized DiffDock confidence</code>
+                  <code>0.85 × affinity component + 0.15 × normalized DiffDock confidence</code>
                 </div>
               </div>
             </div>
@@ -235,8 +235,8 @@
                 <span>ChEMBL/PubChem、UniProt、gene symbol 在输入层统一映射。</span>
               </div>
               <div>
-                <strong>Evidence semantics</strong>
-                <span>Open Targets 表示靶点与 disease scope 的关联强度，不作为药效证明。</span>
+                <strong>Sequence-level de-duplication</strong>
+                <span>同一药物命中相同蛋白序列时只对一个结构代表执行 DiffDock，再回填到对应 UniProt 记录。</span>
               </div>
               <div>
                 <strong>Receptor readiness</strong>
@@ -254,17 +254,17 @@
           <article class="lineage-step">
             <span>Data</span>
             <h3>标准化输入表</h3>
-            <p>药物库、蛋白库和受体路径形成稳定输入，支撑后续每个计算模块复现。</p>
+            <p>药物库、ChEMBL druggable protein 表和 AlphaFold 受体路径形成稳定输入。</p>
           </article>
           <article class="lineage-step">
             <span>Scores</span>
             <h3>中间评分矩阵</h3>
-            <p>AI-DTI、靶点疾病证据、网络证据和图谱信号分别保留，排序时按权重融合。</p>
+            <p>唯一序列预测、全量亲和矩阵、Top10000 候选和结构分数分别保留。</p>
           </article>
           <article class="lineage-step">
             <span>Structures</span>
             <h3>结构对接产物</h3>
-            <p>Top 候选优先产出 rank-1 ligand pose；结构扩展持续补充更大覆盖的对接证据。</p>
+            <p>Top 结构代表优先产出 rank-1 ligand pose，并映射回完整候选表。</p>
           </article>
           <article class="lineage-step">
             <span>Reports</span>
@@ -279,7 +279,8 @@
           <p class="eyebrow">Screening design</p>
           <h2>我们做了什么</h2>
           <p>
-            流程采用“广覆盖初筛、疾病证据融合、结构增强收敛”的分层策略，将百万级组合压缩为可进入人工审阅和实验设计的候选集合。
+            流程采用“druggable proteome 全量亲和筛选、Top 候选收敛、结构增强解释”的分层策略，
+            将近 500 万个组合压缩为可进入人工审阅和实验设计的候选集合。
           </p>
         </div>
         <div class="workflow-grid">
@@ -291,69 +292,72 @@
           <article class="step-card">
             <span class="step-index">02</span>
             <h3>蛋白靶点库构建</h3>
-            <p>构建 1000 个人类蛋白靶点库，保留 UniProt accession、gene symbol、序列和 AlphaFold 受体结构路径。</p>
+            <p>读取 ChEMBL druggable target 表，保留 UniProt accession、gene symbol、序列和 AlphaFold 受体结构路径。</p>
           </article>
           <article class="step-card">
             <span class="step-index">03</span>
-            <h3>AI-DTI 互作预测</h3>
-            <p>对 915000 个 drug-target pair 进行 AI-DTI 预测，得到药物-蛋白互作倾向分数。</p>
+            <h3>AI-DTI 亲和预测</h3>
+            <p>对 4854990 个 drug-target pair 进行 ConPLex 预测，得到药物-蛋白亲和优先级分数。</p>
           </article>
           <article class="step-card">
             <span class="step-index">04</span>
-            <h3>疾病证据融合</h3>
-            <p>将 Open Targets target-disease 证据、STRING 网络证据和 TxGNN 药物-疾病图谱信号纳入优先级排序。</p>
+            <h3>Top 候选去重</h3>
+            <p>选取 Top10000 亲和候选，并按 drug + protein sequence 去重为 1872 个结构代表复合物。</p>
           </article>
           <article class="step-card">
             <span class="step-index">05</span>
             <h3>Top 候选结构增强</h3>
-            <p>对疾病证据优先级最高的 1000 个候选使用 DiffDock 生成结合姿态与结构置信度，并形成结构增强共识排序。</p>
+            <p>对结构代表候选使用 DiffDock 生成结合姿态与结构置信度，并形成亲和-结构共识排序。</p>
           </article>
         </div>
       </section>
 
       <section id="evidence" class="section-band alt">
         <div class="section-heading">
-          <p class="eyebrow">Evidence model</p>
-          <h2>证据如何进入排序</h2>
+          <p class="eyebrow">Interpretation model</p>
+          <h2>这个流程代表什么</h2>
           <p>
-            排序对象是 drug-target pair。Open Targets 和 STRING 是靶点-疾病层面证据，TxGNN 是药物-疾病层面证据，DiffDock 是 Top 候选结构层面证据。
+            排序对象是 drug-target pair。本轮主流程不把 Open Targets 当作必要前置过滤条件，而是先在药物相关蛋白范围内做全量亲和筛选，
+            再用结构对接为 Top 候选提供空间构象层面的补充证据。
           </p>
         </div>
         <div class="evidence-layout">
           <div class="formula-panel">
-            <h3>疾病证据融合分数</h3>
-            <code>0.55 × AI score + 0.30 × OpenTargets + 0.15 × STRING</code>
-            <p>TxGNN 映射成功时，最终优先级进一步融合药物-疾病图谱信号。</p>
-            <code>0.80 × OpenTargets_STRING + 0.20 × TxGNN</code>
+            <h3>结构增强共识分数</h3>
+            <code>0.85 × affinity component + 0.15 × normalized DiffDock confidence</code>
+            <p>亲和分数用于发现潜在药物-蛋白配对；DiffDock 分数用于辅助判断 Top 候选是否存在合理结合姿态。</p>
+            <code>Top10000 → drug + sequence representatives → DiffDock → mapped back to Top10000</code>
           </div>
           <div class="coverage-panel">
-            <h3>证据覆盖</h3>
+            <h3>计算规模</h3>
             <div class="bar-row">
-              <span>direct + network</span>
-              <div class="bar-track"><i style="width:72.8%"></i></div>
-              <b>666120</b>
+              <span>ConPLex screened</span>
+              <div class="bar-track"><i style="width:100%"></i></div>
+              <b>4854990</b>
             </div>
             <div class="bar-row">
-              <span>direct only</span>
-              <div class="bar-track"><i style="width:25.6%"></i></div>
-              <b>234240</b>
+              <span>Top affinity candidates</span>
+              <div class="bar-track"><i style="width:24%"></i></div>
+              <b>10000</b>
             </div>
             <div class="bar-row">
-              <span>network only</span>
-              <div class="bar-track"><i style="width:0.1%"></i></div>
-              <b>915</b>
+              <span>Docking representatives</span>
+              <div class="bar-track"><i style="width:18%"></i></div>
+              <b>1872</b>
             </div>
             <div class="bar-row">
-              <span>none</span>
-              <div class="bar-track"><i style="width:1.5%"></i></div>
-              <b>13725</b>
+              <span>Unique sequences</span>
+              <div class="bar-track"><i style="width:10%"></i></div>
+              <b>891</b>
             </div>
           </div>
         </div>
         <div class="analysis-note">
           <h3>Open Targets 的解释口径</h3>
           <p>
-            当前 disease scope 为 pan-cancer。Open Targets 分数表示某个基因/蛋白与 cancer 概念之间的数据库关联强度，不等同于某个药物对癌症有效，也不等同于特定癌种突变位点结论。若聚焦具体癌种，应切换对应 disease ID 后重新评分。
+            Open Targets 只在需要疾病方向排序时作为 target-disease association 证据使用；它不会“对所有蛋白都生效”。
+            本轮 druggable-proteome 路线先不把 cancer 位点作为主过滤条件，后续如果聚焦具体癌种或突变位点，应切换到对应 disease ID、
+            mutation/variant 注释和癌种上下文后重新评分。
           </p>
         </div>
       </section>
@@ -364,7 +368,7 @@
             <p class="eyebrow">Visual analytics</p>
             <h2>结果图表概览</h2>
             <p>
-              图表将疾病证据覆盖、结构状态、TxGNN 映射和 Top1000 靶点分布放在同一视图中，便于快速判断候选集中证据来源是否集中或偏斜。
+              图表将 Top 候选靶点分布、药物分布、结构状态和受体准备状态放在同一视图中，便于快速判断候选集中是否存在明显集中或偏斜。
             </p>
           </div>
           <div class="audit-chip">
@@ -375,29 +379,29 @@
         <div class="chart-grid">
           <article class="chart-panel wide">
             <div class="panel-title">
-              <h3>Top1000 target concentration</h3>
+              <h3>Top candidate target concentration</h3>
               <span>candidate pairs</span>
             </div>
             <canvas id="targetChart" width="720" height="320" aria-label="Top target distribution"></canvas>
           </article>
           <article class="chart-panel">
             <div class="panel-title">
-              <h3>Evidence coverage</h3>
-              <span>915000 pairs</span>
+              <h3>Workflow scale</h3>
+              <span>screening funnel</span>
             </div>
-            <canvas id="evidenceChart" width="360" height="320" aria-label="Disease evidence coverage"></canvas>
+            <canvas id="evidenceChart" width="360" height="320" aria-label="Workflow scale"></canvas>
           </article>
           <article class="chart-panel">
             <div class="panel-title">
               <h3>Structural status</h3>
-              <span>Top1000</span>
+              <span>representatives</span>
             </div>
             <div id="statusBars" class="stacked-bars"></div>
           </article>
           <article class="chart-panel">
             <div class="panel-title">
-              <h3>Evidence layers</h3>
-              <span>coverage summary</span>
+              <h3>Preparation layers</h3>
+              <span>selection and receptor status</span>
             </div>
             <div id="layerBars" class="stacked-bars"></div>
           </article>
@@ -410,7 +414,8 @@
             <p class="eyebrow">Structure viewer</p>
             <h2>代表性结构渲染</h2>
             <p>
-              这里加载 Top 候选中的本地 receptor PDB 与 DiffDock rank-1 ligand SDF，用于快速查看候选结合姿态。结构视图用于解释和审阅，不替代实验验证。
+              这里加载 Top 结构代表中的本地 receptor PDB 与 DiffDock rank-1 ligand SDF，用于快速查看候选结合姿态。
+              结构视图用于解释和审阅，不替代实验验证。
             </p>
           </div>
           <div class="structure-actions" role="group" aria-label="Structure controls">
@@ -464,7 +469,7 @@
             <p class="eyebrow">Structure-enhanced consensus</p>
             <h2>代表性候选结果</h2>
             <p>
-              结构增强 Top1000 覆盖 337 个唯一药物和 64 个唯一蛋白。Top100 覆盖 67 个唯一药物和 20 个唯一蛋白。
+              候选表展示按亲和-结构共识排序的 drug + protein-sequence 代表项。每个代表项可映射回 Top10000 中具有相同药物和相同蛋白序列的 UniProt 记录。
             </p>
           </div>
           <div class="candidate-controls" role="group" aria-label="Candidate filters">
@@ -483,7 +488,7 @@
                 <th>Rank</th>
                 <th>Drug</th>
                 <th>Target</th>
-                <th>Disease priority</th>
+                <th>Affinity</th>
                 <th>Docking</th>
                 <th>Consensus</th>
                 <th>Status</th>
@@ -499,17 +504,17 @@
           <p class="eyebrow">Interpretation</p>
           <h2>结果如何使用</h2>
           <p>
-            输出结果是候选优先级，不是药效证明。它的价值在于把大规模组合收敛为可以进一步讨论、审阅和验证的药物-靶点集合。
+            输出结果是计算候选优先级，不是药效证明。它的价值在于把大规模 drug-target 组合收敛为可以进一步讨论、审阅和验证的候选集合。
           </p>
         </div>
         <div class="analysis-grid">
           <article>
             <h3>可以支持的结论</h3>
-            <p>候选 pair 在 AI-DTI、靶点疾病相关性、药物-疾病图谱信号和结构姿态中具有综合优先级。</p>
+            <p>候选 pair 在 ConPLex 亲和预测中具有高优先级，并在结构层面获得可审阅的 DiffDock 姿态。</p>
           </article>
           <article>
             <h3>仍需验证的内容</h3>
-            <p>具体癌种、细胞模型、剂量反应、靶点机制、安全性和适应症合理性仍需实验与文献审阅确认。</p>
+            <p>具体疾病方向、细胞模型、剂量反应、靶点机制、安全性和适应症合理性仍需实验与文献审阅确认。</p>
           </article>
           <article>
             <h3>下一阶段收敛</h3>
@@ -532,6 +537,10 @@
             <span>运行状态页面</span>
             <small>结构扩展队列、审计指标和下一步工作</small>
           </a>
+          <a href="data-summary.html">
+            <span>数据口径页面</span>
+            <small>全量筛选规模、去重推理、Top 候选和结构审计口径</small>
+          </a>
           <a href="formal-report.html">
             <span>正式 PDF 汇报</span>
             <small>嵌入式 PDF 阅读页面</small>
@@ -545,8 +554,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>BioMaster report-scale screening dashboard</span>
-      <span>Updated from local audit: 2026-05-23</span>
+      <span>BioMaster druggable-proteome screening dashboard</span>
+      <span>Updated from local run artifacts</span>
     </footer>
 
     <script src="https://3Dmol.org/build/3Dmol-min.js"></script>

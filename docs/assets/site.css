@@ -307,6 +307,15 @@ h1 {
   line-height: 1;
 }
 
+.score-label {
+  display: inline-block;
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .architecture-map {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));

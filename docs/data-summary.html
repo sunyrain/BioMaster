@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BioMaster 数据口径</title>
+    <meta name="description" content="BioMaster druggable-proteome screening data scope and final audit counts." />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body class="document-body">
+    <header class="site-header">
+      <a class="brand" href="index.html#overview" aria-label="BioMaster overview">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>BioMaster</strong>
+          <small>druggable proteome screen</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="index.html">展示首页</a>
+        <a href="results-report.html">结果汇报</a>
+        <a href="status-report.html">状态审计</a>
+        <a href="formal-report.html">PDF</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="document-hero">
+        <div class="document-hero-inner">
+          <p class="eyebrow">Data scope</p>
+          <h1>筛选数据口径</h1>
+          <p>
+            本页固定当前 druggable-proteome 路线的最终统计口径，区分输入规模、实际模型推理次数、
+            全量扩展矩阵、Top 候选集合和结构对接代表集合。
+          </p>
+          <div class="document-actions">
+            <a class="button primary" href="index.html#candidates">查看候选表</a>
+            <a class="button secondary" href="formal-report.html">查看正式 PDF</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="document-layout">
+        <article class="document-main">
+          <section class="document-section" id="summary">
+            <h2>总体口径</h2>
+            <p>
+              本轮全量筛选规模为 915 个 FDA 已批准小分子乘以 5306 个有效 ChEMBL druggable protein 记录，
+              即 4854990 个 drug-target pair。由于多个 UniProt 记录可能共享相同蛋白序列，ConPLex 实际
+              推理在 891 条唯一蛋白序列上执行，再回填到完整蛋白记录。
+            </p>
+            <div class="status-grid">
+              <article><span>FDA-approved drugs</span><strong>915</strong><small>usable small molecules</small></article>
+              <article><span>Protein records</span><strong>5306</strong><small>valid ChEMBL druggable targets</small></article>
+              <article><span>Unique sequences</span><strong>891</strong><small>sequence-level inference units</small></article>
+              <article><span>Full matrix</span><strong>4854990</strong><small>expanded drug-target pairs</small></article>
+            </div>
+          </section>
+
+          <section class="document-section" id="stages">
+            <h2>分层筛选结果</h2>
+            <div class="process-rail">
+              <div><strong>01</strong><span>815265 actual ConPLex drug-sequence inferences</span></div>
+              <div><strong>02</strong><span>4854990 expanded drug-target affinity rows</span></div>
+              <div><strong>03</strong><span>10000 Top affinity-ranked candidates</span></div>
+              <div><strong>04</strong><span>1872 drug + protein-sequence docking representatives</span></div>
+              <div><strong>05</strong><span>1370 completed DiffDock rank-1 pose outputs</span></div>
+            </div>
+          </section>
+
+          <section class="document-section" id="audit">
+            <h2>结构审计</h2>
+            <div class="status-grid">
+              <article><span>DiffDock chunks</span><strong>8 / 8</strong><small>all score files generated</small></article>
+              <article><span>Processed representatives</span><strong>1872 / 1872</strong><small>100.00% queue progress</small></article>
+              <article><span>Completed outputs</span><strong>1370</strong><small>73.18% representative output rate</small></article>
+              <article><span>Mapped Top10000 rows</span><strong>7216</strong><small>rows with completed structure evidence</small></article>
+            </div>
+            <p>
+              缺失或失败的 502 个结构代表保留为审计项，不作为负样本，也不从候选集合中静默删除。
+              后续可只对高价值 missing-output 候选设计小规模补跑。
+            </p>
+          </section>
+
+          <section class="document-section" id="website-data">
+            <h2>网站数据组织</h2>
+            <p>
+              网站发布数据集中在 <code>docs/assets/dashboard-data.js</code>，包含最终指标、Top 候选展示行、
+              图表汇总和 4 个可渲染结构样例。完整 CSV、原始 Excel 和 DiffDock 全量输出保留在本地计算产物目录，
+              不随静态网站发布。
+            </p>
+            <div class="brief-grid compact">
+              <article><span>Dashboard</span><h3>交互指标与候选表</h3><p>用于首页指标、图表和 Top representative candidate table。</p></article>
+              <article><span>Structures</span><h3>PDB/SDF 样例</h3><p>用于 3Dmol 结构渲染和 ligand sketch 预览。</p></article>
+              <article><span>PDF</span><h3>正式英文汇报</h3><p>嵌入 PDF 阅读页，也可直接打开 PDF 文件。</p></article>
+              <article><span>Pages</span><h3>结果与状态页面</h3><p>面向专家阅读的流程、审计、解释和下一步说明。</p></article>
+            </div>
+          </section>
+        </article>
+
+        <aside class="document-sidebar" aria-label="Data summary navigation">
+          <h2>页面目录</h2>
+          <a href="#summary">总体口径</a>
+          <a href="#stages">分层筛选</a>
+          <a href="#audit">结构审计</a>
+          <a href="#website-data">网站数据</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>BioMaster data scope</span>
+      <span>Updated from local audit: 2026-05-25</span>
+    </footer>
+  </body>
+</html>

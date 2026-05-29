@@ -13,7 +13,7 @@
         <span class="brand-mark">B</span>
         <span>
           <strong>BioMaster</strong>
-          <small>drug repositioning screen</small>
+          <small>druggable proteome screen</small>
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
@@ -28,7 +28,7 @@
       <section class="document-hero">
         <div class="document-hero-inner">
           <p class="eyebrow">External results brief</p>
-          <h1>BioMaster 药物再定位计算筛选结果汇报</h1>
+          <h1>BioMaster Druggable Proteome 计算筛选结果汇报</h1>
           <p>
             本页保留正式汇报所需的核心叙事：我们完成了什么、为什么采用该流程、结果应如何解释。交互图表、结构渲染和候选明细集中在展示首页。
           </p>
@@ -46,18 +46,18 @@
             <div class="brief-grid">
               <article>
                 <span>Completed</span>
-                <h3>全组合 AI-DTI 主筛选</h3>
-                <p>完成 915 个 FDA 已批准小分子与 1000 个人类蛋白靶点的 915000 个 drug-target pair 预测。</p>
+                <h3>Druggable proteome 全量亲和筛选</h3>
+                <p>完成 915 个 FDA 已批准小分子与 5306 个 ChEMBL druggable protein 记录的 4854990 个 drug-target pair 预测。</p>
               </article>
               <article>
-                <span>Integrated</span>
-                <h3>cancer 方向疾病证据融合</h3>
-                <p>将 Open Targets、STRING 与 TxGNN 引入排序，使互作信号转化为疾病相关候选优先级。</p>
+                <span>Reduced</span>
+                <h3>序列级去重与 Top 候选收敛</h3>
+                <p>将 5306 个蛋白记录压缩为 891 条唯一蛋白序列，完成 815265 个唯一 drug-sequence 预测，并选出 Top10000 候选。</p>
               </article>
               <article>
                 <span>Prioritized</span>
                 <h3>结构增强候选集合</h3>
-                <p>对高优先级候选进行 DiffDock 结构增强，形成可进入人工审阅和实验设计的候选集合。</p>
+                <p>Top10000 候选进一步压缩为 1872 个 drug + protein-sequence 结构代表，其中 1370 个获得 DiffDock rank-1 姿态输出。</p>
               </article>
             </div>
           </section>
@@ -65,24 +65,24 @@
           <section id="purpose" class="document-section">
             <h2>项目目标</h2>
             <p>
-              BioMaster 的目标是建立一个可复现的药物再定位计算筛选流程，从已批准小分子药物中发现值得进一步机制分析和实验验证的药物-靶点组合。
+              BioMaster 的目标是建立一个可复现的药物-靶点计算筛选流程，从已批准小分子药物中发现值得进一步机制分析和实验验证的药物-蛋白组合。
             </p>
             <p>
-              本阶段以 pan-cancer 为疾病方向，先进行广覆盖 AI-DTI 主筛选，再引入靶点疾病证据、药物疾病图谱信号和结构对接证据，最终形成候选优先级。该结果是计算假设，不是药效或机制的实验证明。
+              本阶段采用 ChEMBL druggable target 表作为蛋白范围，先进行全量 AI-DTI 亲和预测，再对 Top 候选执行序列级去重和结构对接增强。该结果是计算优先级，不是药效或机制的实验证明。
             </p>
           </section>
 
           <section id="workflow" class="document-section">
             <h2>流程思路</h2>
             <div class="process-rail">
-              <div><strong>01</strong><span>药物库与靶点库标准化</span></div>
-              <div><strong>02</strong><span>915000 个 pair 的 AI-DTI 互作预测</span></div>
-              <div><strong>03</strong><span>Open Targets 与 STRING 靶点疾病证据融合</span></div>
-              <div><strong>04</strong><span>TxGNN 药物疾病图谱信号补充</span></div>
-              <div><strong>05</strong><span>Top 候选 DiffDock 结构增强与共识排序</span></div>
+              <div><strong>01</strong><span>FDA 已批准小分子与 ChEMBL druggable protein 标准化</span></div>
+              <div><strong>02</strong><span>按唯一蛋白序列执行 ConPLex 亲和预测</span></div>
+              <div><strong>03</strong><span>扩展回 4854990 个完整 drug-target pair</span></div>
+              <div><strong>04</strong><span>Top10000 候选按 drug + sequence 收敛为结构代表</span></div>
+              <div><strong>05</strong><span>AlphaFold receptor 准备、DiffDock 对接与共识排序</span></div>
             </div>
             <p>
-              这种分层设计的重点是先保证覆盖面，再用疾病证据和结构证据逐步收敛。不同证据源回答的问题不同，因此最终排序应理解为综合优先级，而不是单一模型输出。
+              这种分层设计的重点是先保证药物相关蛋白空间内的覆盖面，再通过序列去重和结构证据逐步收敛。不同模型回答的问题不同，因此最终排序应理解为综合优先级，而不是单一模型输出。
             </p>
           </section>
 
@@ -90,9 +90,9 @@
             <h2>证据解释</h2>
             <div class="evidence-cards">
               <article><h3>ConPLex</h3><p>回答药物是否可能与某个蛋白发生相互作用。</p></article>
-              <article><h3>Open Targets</h3><p>回答某个基因/蛋白是否与 cancer 疾病概念存在数据库关联。</p></article>
-              <article><h3>STRING</h3><p>回答靶点是否位于疾病相关蛋白互作网络中。</p></article>
-              <article><h3>TxGNN</h3><p>回答药物是否具有 cancer 方向的图谱推断信号。</p></article>
+              <article><h3>ChEMBL target set</h3><p>限定当前筛选空间为已有 druggability 背景的药物相关蛋白。</p></article>
+              <article><h3>Sequence de-duplication</h3><p>减少重复蛋白记录带来的冗余预测和冗余对接。</p></article>
+              <article><h3>AlphaFold</h3><p>为结构代表提供可输入 DiffDock 的 receptor 结构。</p></article>
               <article><h3>DiffDock</h3><p>回答高优先级候选是否具备可解释的结构姿态线索。</p></article>
             </div>
           </section>
@@ -100,12 +100,12 @@
           <section id="interpretation" class="document-section">
             <h2>结果如何使用</h2>
             <p>
-              当前结果可用于候选筛选、文献审阅、机制假设生成和实验设计。更适合的使用方式是从结构增强 Top100 中进一步筛选 20-50 个候选 pair，再结合药物可获得性、安全性、具体癌种背景和实验可操作性进入验证设计。
+              当前结果可用于候选筛选、文献审阅、机制假设生成和实验设计。更适合的使用方式是从结构增强 Top100 中进一步筛选 20-50 个候选 pair，再结合药物可获得性、安全性、疾病背景和实验可操作性进入验证设计。
             </p>
             <div class="callout-panel">
               <h3>Open Targets 口径</h3>
               <p>
-                Open Targets 分数是靶点-疾病层面的关联证据，不表示所有蛋白都有 cancer-specific site，也不表示药物已被证明对癌症有效。若后续聚焦具体癌种、突变或分子亚型，应切换到更具体的 disease ID 或引入突变/亚型数据重新排序。
+                Open Targets 是靶点-疾病层面的关联证据，不是当前 druggable-proteome 主筛选的必要前置条件。若后续聚焦具体癌种、突变或分子亚型，应切换到更具体的 disease ID 或引入突变/亚型数据重新排序。
               </p>
             </div>
           </section>
@@ -123,8 +123,8 @@
     </main>
 
     <footer class="site-footer">
-      <span>BioMaster results brief</span>
-      <span>Updated from local audit: 2026-05-22</span>
+      <span>BioMaster druggable-proteome results brief</span>
+      <span>Updated from local audit: 2026-05-25</span>
     </footer>
   </body>
 </html>
