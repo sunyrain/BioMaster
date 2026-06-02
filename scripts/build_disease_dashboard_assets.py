@@ -438,6 +438,7 @@ def write_integrated_outputs(
         "representedPairCount",
         "receptorStatus",
         "confidenceSdfPath",
+        "rank1SdfPath",
         "receptorPdbPath",
     ]
     summary_fields = [
@@ -463,6 +464,17 @@ def write_integrated_outputs(
 
 def counter_rows(counter: Counter[str], limit: int | None = None) -> list[dict[str, Any]]:
     return [{"label": label or "NA", "value": value} for label, value in counter.most_common(limit)]
+
+
+def publish_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
+    path_only_fields = {"confidenceSdfPath", "rank1SdfPath", "receptorPdbPath"}
+    return {key: value for key, value in candidate.items() if key not in path_only_fields}
+
+
+def publish_summary(summary: dict[str, Any]) -> dict[str, Any]:
+    published = dict(summary)
+    published["topCompleted"] = [publish_candidate(candidate) for candidate in summary.get("topCompleted", [])]
+    return published
 
 
 def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
@@ -586,7 +598,7 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             "zeroCompletedChunks": 0,
             "diseaseDirections": len(DIRECTIONS),
         },
-        "diseaseDirections": summaries,
+        "diseaseDirections": [publish_summary(summary) for summary in summaries],
         "charts": {
             "evidenceCoverage": [
                 {"label": "ConPLex screened", "value": int(expansion.get("expanded_affinity_rows_written") or 4854990)},
@@ -603,7 +615,7 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             "receptorStatus": [{"label": "disease directions", "value": len(DIRECTIONS)}, {"label": "DiffDock chunks", "value": total_chunks}],
             "txgnnStatus": counter_rows(category_status, 8),
         },
-        "candidates": display_candidates,
+        "candidates": [publish_candidate(candidate) for candidate in display_candidates],
     }
 
 

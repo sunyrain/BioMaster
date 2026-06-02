@@ -1,5 +1,5 @@
 window.BIOMASTER_DATA = {
-  "updated": "2026-06-02T13:42:04Z",
+  "updated": "2026-06-02T14:20:44Z",
   "mode": "disease_direction_druggable_proteome",
   "labels": {
     "primaryScore": "Disease score",
@@ -13,23 +13,23 @@ window.BIOMASTER_DATA = {
     "pairs": 4854990,
     "topCandidates": 50000,
     "structureCandidates": 23744,
-    "structureCompleted": 22484,
-    "structureMissing": 1260,
-    "top1000Completed": 22484,
-    "top1000Missing": 1260,
+    "structureCompleted": 22652,
+    "structureMissing": 1092,
+    "top1000Completed": 22652,
+    "top1000Missing": 1092,
     "fullScoreFiles": 97,
     "fullJobsTotal": 97,
     "fullRowsScored": 23744,
     "fullRowsTotal": 23744,
     "fullRowProgressPct": 100.0,
-    "fullCompletedOutputs": 22484,
-    "fullMissingOutputs": 1260,
-    "fullOutputRatePct": 94.69339622641509,
+    "fullCompletedOutputs": 22652,
+    "fullMissingOutputs": 1092,
+    "fullOutputRatePct": 95.40094339622641,
     "primaryCompletedOutputs": 21678,
     "primaryMissingOutputs": 2066,
-    "rerunRecoveredOutputs": 806,
-    "rerunScoreRows": 1088,
-    "rerunUniquePairs": 883,
+    "rerunRecoveredOutputs": 974,
+    "rerunScoreRows": 1376,
+    "rerunUniquePairs": 1080,
     "zeroCompletedChunks": 0,
     "diseaseDirections": 5
   },
@@ -43,12 +43,12 @@ window.BIOMASTER_DATA = {
       "chunks": 23,
       "scoreChunks": 23,
       "scoredRows": 5562,
-      "completed": 5327,
-      "missing": 235,
+      "completed": 5328,
+      "missing": 234,
       "primaryCompleted": 5080,
       "primaryMissing": 482,
-      "rerunRecovered": 247,
-      "successRatePct": 95.77490111470695,
+      "rerunRecovered": 248,
+      "successRatePct": 95.79288025889967,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -92,10 +92,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Oncology",
           "indication": "Carcinoma, Non-Small-Cell Lung; Multiple Myeloma",
           "receptorStatus": "curated_EGFR_kinase-domain_crop",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL2105712__P00533/rank1_confidence-0.45.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 2,
@@ -138,10 +135,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Oncology",
           "indication": "Neoplasms; Carcinoma, Renal Cell; Sarcoma",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL477772__P10721/rank1_confidence-4.42.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10721-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 3,
@@ -184,10 +178,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Oncology",
           "indication": "Carcinoma, Non-Small-Cell Lung; Neoplasms; Head and Neck Neoplasms",
           "receptorStatus": "curated_EGFR_kinase-domain_crop",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL939__P00533/rank1_confidence-0.96.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 4,
@@ -230,10 +221,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Oncology",
           "indication": "Carcinoma, Non-Small-Cell Lung; Neoplasms",
           "receptorStatus": "curated_EGFR_kinase-domain_crop",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL2105719__P00533/rank1_confidence-0.79.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 5,
@@ -276,10 +264,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Oncology",
           "indication": "Breast Neoplasms",
           "receptorStatus": "curated_EGFR_kinase-domain_crop",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL3989921__P00533/rank1_confidence-1.44.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         }
       ]
     },
@@ -292,12 +277,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4995,
-      "completed": 4783,
-      "missing": 212,
+      "completed": 4786,
+      "missing": 209,
       "primaryCompleted": 4559,
       "primaryMissing": 436,
-      "rerunRecovered": 224,
-      "successRatePct": 95.75575575575576,
+      "rerunRecovered": 227,
+      "successRatePct": 95.81581581581582,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -341,10 +326,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Infectious Disease",
           "indication": "HIV Infections; Virus Diseases",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q15761/rank1_confidence-4.16.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q15761-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 2,
@@ -387,10 +369,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Infectious Disease",
           "indication": "HIV Infections; Virus Diseases",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P61073/rank1_confidence-2.98.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P61073-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 3,
@@ -433,10 +412,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Infectious Disease",
           "indication": "HIV Infections; Virus Diseases",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P20309/rank1_confidence-2.47.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P20309-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 4,
@@ -479,10 +455,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Infectious Disease",
           "indication": "HIV Infections; Virus Diseases",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P24530/rank1_confidence-4.27.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 5,
@@ -525,10 +498,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Infectious Disease",
           "indication": "HIV Infections; Virus Diseases",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P30559/rank1_confidence-2.24.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         }
       ]
     },
@@ -541,12 +511,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4937,
-      "completed": 4724,
-      "missing": 213,
+      "completed": 4727,
+      "missing": 210,
       "primaryCompleted": 4518,
       "primaryMissing": 419,
-      "rerunRecovered": 206,
-      "successRatePct": 95.6856390520559,
+      "rerunRecovered": 209,
+      "successRatePct": 95.74640469921005,
       "medianDiffDock": -3.42,
       "topCompleted": [
         {
@@ -590,10 +560,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Cardiovascular",
           "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P35348/rank1_confidence-2.78.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35348-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 2,
@@ -636,10 +603,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Cardiovascular",
           "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P30874/rank1_confidence-3.03.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30874-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 3,
@@ -682,10 +646,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Cardiovascular",
           "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL269001__P00918/rank1_confidence0.50.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P00918-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 4,
@@ -728,10 +689,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Cardiovascular",
           "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00001/CHEMBL269001__Q16790/rank1_confidence-2.13.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q16790-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 5,
@@ -774,10 +732,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Cardiovascular",
           "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__Q13639/rank1_confidence-0.82.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         }
       ]
     },
@@ -790,12 +745,12 @@ window.BIOMASTER_DATA = {
       "chunks": 14,
       "scoreChunks": 14,
       "scoredRows": 3341,
-      "completed": 3093,
-      "missing": 248,
+      "completed": 3209,
+      "missing": 132,
       "primaryCompleted": 3020,
       "primaryMissing": 321,
-      "rerunRecovered": 73,
-      "successRatePct": 92.57707273271475,
+      "rerunRecovered": 189,
+      "successRatePct": 96.04908709967076,
       "medianDiffDock": -3.32,
       "topCompleted": [
         {
@@ -839,10 +794,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Neurology/Psychiatry",
           "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P41145/rank1_confidence-2.23.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 3,
@@ -885,10 +837,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Neurology/Psychiatry",
           "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P41145/rank1_confidence-0.38.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 4,
@@ -931,10 +880,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Neurology/Psychiatry",
           "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P08172/rank1_confidence-2.23.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 5,
@@ -977,10 +923,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Neurology/Psychiatry",
           "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P08908/rank1_confidence-2.33.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 6,
@@ -1023,10 +966,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Neurology/Psychiatry",
           "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P35462/rank1_confidence-3.25.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         }
       ]
     },
@@ -1039,13 +979,13 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4909,
-      "completed": 4557,
-      "missing": 352,
+      "completed": 4602,
+      "missing": 307,
       "primaryCompleted": 4501,
       "primaryMissing": 408,
-      "rerunRecovered": 56,
-      "successRatePct": 92.82949684253413,
-      "medianDiffDock": -3.35,
+      "rerunRecovered": 101,
+      "successRatePct": 93.7461804848238,
+      "medianDiffDock": -3.34,
       "topCompleted": [
         {
           "rank": 1,
@@ -1088,10 +1028,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Immunology/Inflammation",
           "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__Q9HBX9/rank1_confidence-4.40.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9HBX9-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 2,
@@ -1134,10 +1071,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Immunology/Inflammation",
           "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__Q9HBX9/rank1_confidence-2.73.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9HBX9-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 3,
@@ -1180,10 +1114,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Immunology/Inflammation",
           "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00003/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P23945/rank1_confidence-2.29.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 4,
@@ -1226,10 +1157,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Immunology/Inflammation",
           "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P23945/rank1_confidence-3.01.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         },
         {
           "rank": 5,
@@ -1272,10 +1200,7 @@ window.BIOMASTER_DATA = {
           "therapeuticArea": "Immunology/Inflammation",
           "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
           "receptorStatus": "full_length_ok",
-          "selectionReason": "original_in_alphafold_tar",
-          "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P21728/rank1_confidence-1.87.sdf",
-          "rank1SdfPath": "",
-          "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21728-F1-model_v6.pdb"
+          "selectionReason": "original_in_alphafold_tar"
         }
       ]
     }
@@ -1296,7 +1221,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "Completed docking outputs",
-        "value": 22484
+        "value": 22652
       }
     ],
     "topTargets": [
@@ -1386,11 +1311,11 @@ window.BIOMASTER_DATA = {
     "structuralStatus": [
       {
         "label": "completed",
-        "value": 22484
+        "value": 22652
       },
       {
         "label": "missing_output",
-        "value": 1260
+        "value": 1092
       }
     ],
     "scoreSources": [
@@ -1400,21 +1325,21 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "缺失输出优先补跑",
-        "value": 806
+        "value": 974
       }
     ],
     "credibilityTiers": [
       {
         "label": "D｜低优先级审阅",
-        "value": 16366
+        "value": 16497
       },
       {
         "label": "C｜探索性再定位",
-        "value": 5947
+        "value": 5984
       },
       {
         "label": "D｜结构补跑优先",
-        "value": 1260
+        "value": 1092
       },
       {
         "label": "B｜机制邻近优先",
@@ -1428,7 +1353,7 @@ window.BIOMASTER_DATA = {
     "validationPostures": [
       {
         "label": "具备模型信号但疾病证据仍需补强",
-        "value": 767
+        "value": 774
       },
       {
         "label": "疾病方向与药物-蛋白互作一致",
@@ -1436,7 +1361,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "高分但结构证据缺失",
-        "value": 37
+        "value": 30
       },
       {
         "label": "当前证据不足",
@@ -1464,7 +1389,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "蛋白疾病类别支持",
-        "value": 210
+        "value": 212
       },
       {
         "label": "多源疾病证据一致",
@@ -1472,7 +1397,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "高优先级结构审计",
-        "value": 4
+        "value": 2
       }
     ]
   },
@@ -1518,10 +1443,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P35348/rank1_confidence-2.78.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35348-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 2,
@@ -1564,10 +1486,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P30874/rank1_confidence-3.03.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30874-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 3,
@@ -1610,10 +1529,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL269001__P00918/rank1_confidence0.50.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P00918-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 4,
@@ -1656,10 +1572,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00001/CHEMBL269001__Q16790/rank1_confidence-2.13.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q16790-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 5,
@@ -1702,10 +1615,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__Q13639/rank1_confidence-0.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 6,
@@ -1748,10 +1658,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P25101/rank1_confidence-4.54.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 7,
@@ -1794,10 +1701,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P35408/rank1_confidence-4.41.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35408-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 8,
@@ -1840,10 +1744,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P35372/rank1_confidence-2.16.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 9,
@@ -1886,10 +1787,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P35372/rank1_confidence-1.24.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 10,
@@ -1932,10 +1830,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P28223/rank1_confidence-2.59.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 11,
@@ -1978,10 +1873,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P21918/rank1_confidence-4.51.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21918-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 12,
@@ -2024,10 +1916,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P24530/rank1_confidence-3.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 13,
@@ -2070,10 +1959,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P43115/rank1_confidence-3.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43115-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 14,
@@ -2116,10 +2002,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P21453/rank1_confidence-4.15.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21453-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 15,
@@ -2162,10 +2045,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__Q13639/rank1_confidence-3.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 16,
@@ -2208,10 +2088,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00001/CHEMBL1200561__P25100/rank1_confidence-4.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25100-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 17,
@@ -2254,10 +2131,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P21728/rank1_confidence-3.76.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21728-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 18,
@@ -2300,10 +2174,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__Q92633/rank1_confidence-3.81.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q92633-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 19,
@@ -2346,10 +2217,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL269001__P00915/rank1_confidence-0.24.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P00915-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 20,
@@ -2392,10 +2260,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00001/CHEMBL262746__P25025/rank1_confidence-3.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25025-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 21,
@@ -2438,10 +2303,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P07550/rank1_confidence-2.77.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07550-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 22,
@@ -2484,10 +2346,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__Q92847/rank1_confidence-3.20.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q92847-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 23,
@@ -2530,10 +2389,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P16473/rank1_confidence-3.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 24,
@@ -2576,10 +2432,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P25024/rank1_confidence-4.20.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25024-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 25,
@@ -2622,10 +2475,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P51681/rank1_confidence-4.04.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P51681-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 26,
@@ -2668,10 +2518,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P25101/rank1_confidence-2.23.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 27,
@@ -2714,10 +2561,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P32245/rank1_confidence-3.21.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32245-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 28,
@@ -2760,10 +2604,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P14416/rank1_confidence-0.88.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 29,
@@ -2806,10 +2647,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P30989/rank1_confidence-1.32.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30989-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 30,
@@ -2852,10 +2690,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P41143/rank1_confidence-5.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41143-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 31,
@@ -2898,10 +2733,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P18825/rank1_confidence-4.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P18825-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 32,
@@ -2944,10 +2776,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P30559/rank1_confidence-3.71.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 33,
@@ -2990,10 +2819,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00001/CHEMBL1200561__P22888/rank1_confidence-3.12.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P22888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 34,
@@ -3036,10 +2862,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P04201/rank1_confidence-3.32.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P04201-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 35,
@@ -3082,10 +2905,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P29275/rank1_confidence-0.78.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29275-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 36,
@@ -3128,10 +2948,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P28223/rank1_confidence-3.08.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 37,
@@ -3174,10 +2991,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P14416/rank1_confidence-3.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 38,
@@ -3220,10 +3034,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P43220/rank1_confidence-2.11.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43220-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 39,
@@ -3266,10 +3077,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P41597/rank1_confidence-3.83.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41597-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 40,
@@ -3312,10 +3120,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__Q9Y5Y4/rank1_confidence-2.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9Y5Y4-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 41,
@@ -3358,10 +3163,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__Q16602/rank1_confidence-4.60.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q16602-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 42,
@@ -3404,10 +3206,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P07550/rank1_confidence-3.07.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07550-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 43,
@@ -3450,10 +3249,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P28223/rank1_confidence-0.84.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 44,
@@ -3496,10 +3292,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P21554/rank1_confidence-3.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21554-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 45,
@@ -3542,10 +3335,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P25103/rank1_confidence-4.97.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 46,
@@ -3588,10 +3378,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P43220/rank1_confidence-5.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43220-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 47,
@@ -3634,10 +3421,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P25103/rank1_confidence-2.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 48,
@@ -3680,10 +3464,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__Q92633/rank1_confidence-1.30.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q92633-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 49,
@@ -3726,10 +3507,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P11229/rank1_confidence-3.65.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P11229-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 50,
@@ -3772,10 +3550,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P08172/rank1_confidence-2.08.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 51,
@@ -3818,10 +3593,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__Q9H244/rank1_confidence-3.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9H244-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 52,
@@ -3864,10 +3636,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P21728/rank1_confidence-2.14.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21728-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 53,
@@ -3910,10 +3679,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P35372/rank1_confidence-3.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 54,
@@ -3956,10 +3722,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P21918/rank1_confidence-3.23.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21918-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 55,
@@ -4002,10 +3765,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Hemangioma; Stroke",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1671__P25100/rank1_confidence-3.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25100-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 56,
@@ -4048,10 +3808,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__O95977/rank1_confidence-3.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O95977-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 57,
@@ -4094,10 +3851,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P14416/rank1_confidence-1.74.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 58,
@@ -4140,10 +3894,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P51679/rank1_confidence-3.83.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P51679-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 59,
@@ -4186,10 +3937,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P28335/rank1_confidence-1.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28335-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 60,
@@ -4232,10 +3980,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00001/CHEMBL262746__P51679/rank1_confidence-3.75.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P51679-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 61,
@@ -4278,10 +4023,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P25101/rank1_confidence-1.86.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 62,
@@ -4324,10 +4066,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__Q15722/rank1_confidence-2.00.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q15722-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 63,
@@ -4370,10 +4109,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P32245/rank1_confidence-3.35.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32245-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 64,
@@ -4416,10 +4152,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P41231/rank1_confidence-2.83.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 65,
@@ -4462,10 +4195,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P43115/rank1_confidence-2.11.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43115-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 66,
@@ -4508,10 +4238,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Hemangioma; Stroke",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1671__P07550/rank1_confidence-2.43.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07550-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 67,
@@ -4554,10 +4281,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P32246/rank1_confidence-3.65.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32246-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 68,
@@ -4600,10 +4324,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__Q13639/rank1_confidence-2.09.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 69,
@@ -4646,10 +4367,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL269001__P09211/rank1_confidence-1.15.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P09211-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 70,
@@ -4692,10 +4410,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P24530/rank1_confidence-2.95.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 71,
@@ -4738,10 +4453,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P0DMS8/rank1_confidence-3.56.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P0DMS8-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 72,
@@ -4784,10 +4496,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P32245/rank1_confidence-1.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32245-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 73,
@@ -4830,10 +4539,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P21728/rank1_confidence-1.22.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21728-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 74,
@@ -4876,10 +4582,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P41968/rank1_confidence-4.03.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 75,
@@ -4922,10 +4625,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL262746__P41143/rank1_confidence-4.10.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41143-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 76,
@@ -4968,10 +4668,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P35408/rank1_confidence-3.39.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35408-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 77,
@@ -5014,10 +4711,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P41597/rank1_confidence-3.00.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41597-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 78,
@@ -5060,10 +4754,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL502__P08173/rank1_confidence-2.54.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08173-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 79,
@@ -5085,31 +4776,28 @@ window.BIOMASTER_DATA = {
       "proteinDirectionScore": 1.0,
       "representedPairCount": 3,
       "representedProteins": "B2R9W3;P41231;Q96EM8",
-      "diffdock": null,
-      "status": "missing_output",
-      "scoreSource": "primary_full_run",
-      "scoreSourceLabel": "primary full DiffDock run",
-      "scoreSourceLabelZh": "原始全量 DiffDock",
-      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/scores/diffdock_full_chunk_00000.scores.csv",
+      "diffdock": -3.04,
+      "status": "completed",
+      "scoreSource": "priority_rerun",
+      "scoreSourceLabel": "missing-output priority rerun",
+      "scoreSourceLabelZh": "缺失输出优先补跑",
+      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/scores/diffdock_missing_priority_chunk_00072.scores.csv",
       "category": "therapeutic_area",
       "categoryZh": "治疗领域一致",
-      "credibilityScore": 51,
-      "credibilityTier": "D",
-      "credibilityTierZh": "D｜结构补跑优先",
-      "repurposingPostureZh": "高分但结构证据缺失",
-      "evidencePathZh": "Octreotide Acetate → P2RY2 → 心血管 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 缺失输出审计",
-      "nextStepZh": "优先检查受体结构、配体 SDF 和 DiffDock 图构建日志，完成定向补跑后再进入机制判断。",
-      "validationGatesZh": "结构缺失补跑；已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅",
+      "credibilityScore": 67,
+      "credibilityTier": "C",
+      "credibilityTierZh": "C｜探索性再定位",
+      "repurposingPostureZh": "具备模型信号但疾病证据仍需补强",
+      "evidencePathZh": "Octreotide Acetate → P2RY2 → 心血管 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 结构姿态",
+      "nextStepZh": "先引入 CMap/LINCS 转录组反转、ADMET/安全性和反证检索，再决定是否进入实验短名单。",
+      "validationGatesZh": "已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅；二次 docking / pocket 审计",
       "evidenceSummary": "FDA therapeutic area match; protein ICD-11 disease-class match",
       "evidenceSummaryZh": "FDA 药物治疗领域与该疾病方向一致；蛋白的 ICD-11 疾病类别与该方向相关",
-      "rationaleZh": "该候选来自心血管方向，疾病方向分数为 0.910，ConPLex 亲和预测为 0.856。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Octreotide Acetate - P2RY2 排在较高优先级。支持证据包括：FDA 药物治疗领域与该疾病方向一致；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Cardiovascular；1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re。本轮 DiffDock 未产出可解析的 rank-1 confidence SDF，属于结构计算缺失输出；这不是药效否定证据，应作为受体/配体准备或参数补跑的优先审计对象。该结构代表可回填到 3 条相同药物和相同蛋白序列的 UniProt 记录。",
+      "rationaleZh": "该候选来自心血管方向，疾病方向分数为 0.910，ConPLex 亲和预测为 0.856。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Octreotide Acetate - P2RY2 排在较高优先级。支持证据包括：FDA 药物治疗领域与该疾病方向一致；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Cardiovascular；1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re。DiffDock 已通过缺失输出优先补跑产生可审阅的 rank-1 结合姿态，confidence 为 -3.04；该值用于判断结构构象是否值得专家查看，不能直接等同于结合自由能或药效强度。该结构代表可回填到 3 条相同药物和相同蛋白序列的 UniProt 记录。",
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 80,
@@ -5152,10 +4840,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/cardiovascular/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P24530/rank1_confidence-1.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 1,
@@ -5198,10 +4883,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__Q9HBX9/rank1_confidence-4.40.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9HBX9-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 2,
@@ -5244,10 +4926,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__Q9HBX9/rank1_confidence-2.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9HBX9-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 3,
@@ -5290,10 +4969,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00003/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P23945/rank1_confidence-2.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 4,
@@ -5336,10 +5012,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P23945/rank1_confidence-3.01.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 5,
@@ -5382,10 +5055,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P21728/rank1_confidence-1.87.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21728-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 6,
@@ -5428,10 +5098,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Psoriasis; Acne Vulgaris",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200666__P11473/rank1_confidence-4.56.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P11473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 7,
@@ -5474,10 +5141,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P16473/rank1_confidence-4.69.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 8,
@@ -5520,10 +5184,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P16473/rank1_confidence-4.37.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 9,
@@ -5566,10 +5227,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P22888/rank1_confidence-4.18.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P22888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 10,
@@ -5612,10 +5270,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P22888/rank1_confidence-3.85.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P22888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 11,
@@ -5658,10 +5313,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P28222/rank1_confidence-0.40.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 12,
@@ -5704,10 +5356,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P24530/rank1_confidence-1.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 13,
@@ -5750,10 +5399,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__Q13639/rank1_confidence-1.66.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 14,
@@ -5796,10 +5442,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P14416/rank1_confidence-1.53.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 15,
@@ -5842,10 +5485,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P34969/rank1_confidence-4.15.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P34969-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 16,
@@ -5888,10 +5528,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P29371/rank1_confidence-5.62.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 17,
@@ -5934,10 +5571,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P28223/rank1_confidence-1.23.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 18,
@@ -5980,10 +5614,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P41145/rank1_confidence0.34.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 19,
@@ -6026,10 +5657,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P35462/rank1_confidence-2.66.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 20,
@@ -6072,10 +5700,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P14416/rank1_confidence-0.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 21,
@@ -6118,10 +5743,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P25101/rank1_confidence-3.43.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 22,
@@ -6164,10 +5786,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__O43614/rank1_confidence-3.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 23,
@@ -6210,10 +5829,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P25101/rank1_confidence-2.37.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 24,
@@ -6256,10 +5872,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P07550/rank1_confidence-4.21.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07550-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 25,
@@ -6302,10 +5915,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P07550/rank1_confidence-3.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07550-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 26,
@@ -6348,10 +5958,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P28223/rank1_confidence-6.19.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 27,
@@ -6394,10 +6001,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P28223/rank1_confidence-4.06.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 28,
@@ -6440,10 +6044,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__Q13639/rank1_confidence-3.53.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 29,
@@ -6465,31 +6066,28 @@ window.BIOMASTER_DATA = {
       "proteinDirectionScore": 1.0,
       "representedPairCount": 25,
       "representedProteins": "B0FXJ1;B2R9S7;B8Q1L7;B8Q1L8;B8Q1L9;E7EWZ3;G8XRH6;G8XRH8;P35372;Q12930;Q4VWM1;Q4VWM2;Q4VWM3;Q4VWM4;Q4VWM6;Q4VWX6;Q5TDA1;Q6UPP1;Q6UQ80;Q7Z2D8;Q86V80;Q8IWW3;Q8IWW4;Q9UCZ4;Q9UN57",
-      "diffdock": null,
-      "status": "missing_output",
-      "scoreSource": "primary_full_run",
-      "scoreSourceLabel": "primary full DiffDock run",
-      "scoreSourceLabelZh": "原始全量 DiffDock",
-      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/scores/diffdock_full_chunk_00000.scores.csv",
-      "category": "rescue",
-      "categoryZh": "高优先级结构审计",
-      "credibilityScore": 39,
-      "credibilityTier": "D",
-      "credibilityTierZh": "D｜结构补跑优先",
-      "repurposingPostureZh": "高分但结构证据缺失",
-      "evidencePathZh": "Oxycodone Hydrochloride → OPRM1 → 免疫/炎症 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 缺失输出审计",
-      "nextStepZh": "优先检查受体结构、配体 SDF 和 DiffDock 图构建日志，完成定向补跑后再进入机制判断。",
-      "validationGatesZh": "结构缺失补跑；已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅",
+      "diffdock": -0.98,
+      "status": "completed",
+      "scoreSource": "priority_rerun",
+      "scoreSourceLabel": "missing-output priority rerun",
+      "scoreSourceLabelZh": "缺失输出优先补跑",
+      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/scores/diffdock_missing_priority_chunk_00075.scores.csv",
+      "category": "protein_context",
+      "categoryZh": "蛋白疾病类别支持",
+      "credibilityScore": 55,
+      "credibilityTier": "C",
+      "credibilityTierZh": "C｜探索性再定位",
+      "repurposingPostureZh": "具备模型信号但疾病证据仍需补强",
+      "evidencePathZh": "Oxycodone Hydrochloride → OPRM1 → 免疫/炎症 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 结构姿态",
+      "nextStepZh": "先引入 CMap/LINCS 转录组反转、ADMET/安全性和反证检索，再决定是否进入实验短名单。",
+      "validationGatesZh": "已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅；二次 docking / pocket 审计",
       "evidenceSummary": "FDA indication/target text match; protein ICD-11 disease-class match",
       "evidenceSummaryZh": "FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关",
-      "rationaleZh": "该候选来自免疫/炎症方向，疾病方向分数为 0.893，ConPLex 亲和预测为 0.863。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Oxycodone Hydrochloride - OPRM1 排在较高优先级。支持证据包括：FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Neurology/Psychiatry；Pain; Osteoarthritis, Knee; Pruritus。本轮 DiffDock 未产出可解析的 rank-1 confidence SDF，属于结构计算缺失输出；这不是药效否定证据，应作为受体/配体准备或参数补跑的优先审计对象。该结构代表可回填到 25 条相同药物和相同蛋白序列的 UniProt 记录。",
+      "rationaleZh": "该候选来自免疫/炎症方向，疾病方向分数为 0.893，ConPLex 亲和预测为 0.863。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Oxycodone Hydrochloride - OPRM1 排在较高优先级。支持证据包括：FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Neurology/Psychiatry；Pain; Osteoarthritis, Knee; Pruritus。DiffDock 已通过缺失输出优先补跑产生可审阅的 rank-1 结合姿态，confidence 为 -0.98；该值用于判断结构构象是否值得专家查看，不能直接等同于结合自由能或药效强度。该结构代表可回填到 25 条相同药物和相同蛋白序列的 UniProt 记录。",
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 30,
@@ -6532,10 +6130,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P08908/rank1_confidence-4.53.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 31,
@@ -6578,10 +6173,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P11229/rank1_confidence-2.05.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P11229-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 32,
@@ -6624,10 +6216,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P08172/rank1_confidence-2.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 33,
@@ -6670,10 +6259,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P34969/rank1_confidence-2.68.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P34969-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 34,
@@ -6716,10 +6302,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__Q4U2R8/rank1_confidence-2.51.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q4U2R8-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 35,
@@ -6762,10 +6345,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__Q4U2R8/rank1_confidence-3.83.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q4U2R8-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 36,
@@ -6808,10 +6388,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__Q13639/rank1_confidence-3.46.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 37,
@@ -6854,10 +6431,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__Q13639/rank1_confidence-3.27.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q13639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 38,
@@ -6900,10 +6474,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P25116/rank1_confidence-4.76.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 39,
@@ -6946,10 +6517,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P30874/rank1_confidence-1.74.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30874-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 40,
@@ -6992,10 +6560,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P28223/rank1_confidence-1.71.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 41,
@@ -7038,10 +6603,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P21453/rank1_confidence-0.74.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21453-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 42,
@@ -7084,10 +6646,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P35462/rank1_confidence-2.52.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 43,
@@ -7130,10 +6689,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P41145/rank1_confidence-1.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 44,
@@ -7176,10 +6732,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P20309/rank1_confidence-4.94.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P20309-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 45,
@@ -7222,10 +6775,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P35372/rank1_confidence-1.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 46,
@@ -7247,31 +6797,28 @@ window.BIOMASTER_DATA = {
       "proteinDirectionScore": 1.0,
       "representedPairCount": 5,
       "representedProteins": "B4DIE9;P34998;Q13008;Q4QRJ1;Q9UK64",
-      "diffdock": null,
-      "status": "missing_output",
-      "scoreSource": "primary_full_run",
-      "scoreSourceLabel": "primary full DiffDock run",
-      "scoreSourceLabelZh": "原始全量 DiffDock",
-      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/scores/diffdock_full_chunk_00000.scores.csv",
-      "category": "rescue",
-      "categoryZh": "高优先级结构审计",
-      "credibilityScore": 37,
-      "credibilityTier": "D",
-      "credibilityTierZh": "D｜结构补跑优先",
-      "repurposingPostureZh": "高分但结构证据缺失",
-      "evidencePathZh": "Oxycodone Hydrochloride → CRHR1 → 免疫/炎症 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 缺失输出审计",
-      "nextStepZh": "优先检查受体结构、配体 SDF 和 DiffDock 图构建日志，完成定向补跑后再进入机制判断。",
-      "validationGatesZh": "结构缺失补跑；已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅",
+      "diffdock": -1.41,
+      "status": "completed",
+      "scoreSource": "priority_rerun",
+      "scoreSourceLabel": "missing-output priority rerun",
+      "scoreSourceLabelZh": "缺失输出优先补跑",
+      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/scores/diffdock_missing_priority_chunk_00075.scores.csv",
+      "category": "protein_context",
+      "categoryZh": "蛋白疾病类别支持",
+      "credibilityScore": 53,
+      "credibilityTier": "C",
+      "credibilityTierZh": "C｜探索性再定位",
+      "repurposingPostureZh": "具备模型信号但疾病证据仍需补强",
+      "evidencePathZh": "Oxycodone Hydrochloride → CRHR1 → 免疫/炎症 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 结构姿态",
+      "nextStepZh": "先引入 CMap/LINCS 转录组反转、ADMET/安全性和反证检索，再决定是否进入实验短名单。",
+      "validationGatesZh": "已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅；二次 docking / pocket 审计",
       "evidenceSummary": "FDA indication/target text match; protein ICD-11 disease-class match",
       "evidenceSummaryZh": "FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关",
-      "rationaleZh": "该候选来自免疫/炎症方向，疾病方向分数为 0.886，ConPLex 亲和预测为 0.853。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Oxycodone Hydrochloride - CRHR1 排在较高优先级。支持证据包括：FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Neurology/Psychiatry；Pain; Osteoarthritis, Knee; Pruritus。本轮 DiffDock 未产出可解析的 rank-1 confidence SDF，属于结构计算缺失输出；这不是药效否定证据，应作为受体/配体准备或参数补跑的优先审计对象。该结构代表可回填到 5 条相同药物和相同蛋白序列的 UniProt 记录。",
+      "rationaleZh": "该候选来自免疫/炎症方向，疾病方向分数为 0.886，ConPLex 亲和预测为 0.853。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Oxycodone Hydrochloride - CRHR1 排在较高优先级。支持证据包括：FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Neurology/Psychiatry；Pain; Osteoarthritis, Knee; Pruritus。DiffDock 已通过缺失输出优先补跑产生可审阅的 rank-1 结合姿态，confidence 为 -1.41；该值用于判断结构构象是否值得专家查看，不能直接等同于结合自由能或药效强度。该结构代表可回填到 5 条相同药物和相同蛋白序列的 UniProt 记录。",
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P34998-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 47,
@@ -7314,10 +6861,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__O43614/rank1_confidence-1.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 48,
@@ -7360,10 +6904,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P28221/rank1_confidence-1.78.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28221-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 49,
@@ -7406,10 +6947,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P23945/rank1_confidence-3.40.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 50,
@@ -7452,10 +6990,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P35348/rank1_confidence-4.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35348-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 51,
@@ -7498,10 +7033,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__Q16602/rank1_confidence-2.48.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q16602-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 52,
@@ -7544,10 +7076,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 53,
@@ -7590,10 +7119,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P21728/rank1_confidence-3.16.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21728-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 54,
@@ -7636,10 +7162,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P28222/rank1_confidence-2.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 55,
@@ -7682,10 +7205,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P25103/rank1_confidence-4.81.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 56,
@@ -7728,10 +7248,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__Q92633/rank1_confidence-2.40.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q92633-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 57,
@@ -7774,10 +7291,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__O43614/rank1_confidence-2.13.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 58,
@@ -7820,10 +7334,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__O43614/rank1_confidence-2.13.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 59,
@@ -7866,10 +7377,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P37288/rank1_confidence-3.36.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P37288-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 60,
@@ -7912,10 +7420,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P29371/rank1_confidence-3.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 61,
@@ -7958,10 +7463,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P43115/rank1_confidence-1.21.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43115-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 62,
@@ -8004,10 +7506,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P20309/rank1_confidence-2.42.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P20309-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 63,
@@ -8050,10 +7549,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P20309/rank1_confidence-2.47.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P20309-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 64,
@@ -8096,10 +7592,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P28221/rank1_confidence-2.02.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28221-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 65,
@@ -8142,10 +7635,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__Q16602/rank1_confidence-3.17.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q16602-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 66,
@@ -8188,10 +7678,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P30559/rank1_confidence-1.79.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 67,
@@ -8234,10 +7721,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P08908/rank1_confidence-2.31.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 68,
@@ -8280,10 +7764,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P34981/rank1_confidence-2.91.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P34981-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 69,
@@ -8326,10 +7807,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P25116/rank1_confidence-4.60.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 70,
@@ -8372,10 +7850,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00029/CHEMBL656__P28335/rank1_confidence-1.38.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28335-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 71,
@@ -8418,10 +7893,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P46098-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 72,
@@ -8464,10 +7936,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P32245/rank1_confidence-2.30.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32245-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 73,
@@ -8510,10 +7979,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P32245/rank1_confidence-2.25.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32245-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 74,
@@ -8556,10 +8022,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P21554/rank1_confidence-2.30.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P21554-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 75,
@@ -8602,10 +8065,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__P24530/rank1_confidence-2.19.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 76,
@@ -8648,10 +8108,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P16473/rank1_confidence-2.89.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 77,
@@ -8694,10 +8151,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL656__P43220/rank1_confidence-3.34.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43220-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 78,
@@ -8740,10 +8194,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__AZELASTINE_HYDROCHLORIDE__P35372/rank1_confidence-4.50.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 79,
@@ -8786,10 +8237,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Rhinitis, Allergic, Seasonal; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1200809__P35372/rank1_confidence-1.42.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 80,
@@ -8832,10 +8280,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Immunology/Inflammation",
       "indication": "Eye Manifestations; Nasal Obstruction; Conjunctivitis, Allergic",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/outputs/chunk_00000/CHEMBL1189432__Q92633/rank1_confidence-3.70.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q92633-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 1,
@@ -8878,10 +8323,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q15761/rank1_confidence-4.16.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q15761-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 2,
@@ -8924,10 +8366,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P61073/rank1_confidence-2.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P61073-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 3,
@@ -8970,10 +8409,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P20309/rank1_confidence-2.47.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P20309-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 4,
@@ -9016,10 +8452,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P24530/rank1_confidence-4.27.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 5,
@@ -9062,10 +8495,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P30559/rank1_confidence-2.24.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 6,
@@ -9108,10 +8538,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P47901/rank1_confidence-1.97.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47901-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 7,
@@ -9154,10 +8581,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P31639/rank1_confidence-3.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P31639-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 8,
@@ -9200,10 +8624,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P31645/rank1_confidence-3.06.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P31645-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 9,
@@ -9246,10 +8667,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P37288/rank1_confidence-4.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P37288-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 10,
@@ -9292,10 +8710,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P08172/rank1_confidence-4.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 11,
@@ -9338,10 +8753,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P32238/rank1_confidence-3.04.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32238-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 12,
@@ -9384,10 +8796,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P30989/rank1_confidence-3.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30989-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 13,
@@ -9430,10 +8839,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "Prostatic Hyperplasia; Acquired Immunodeficiency Syndrome; HIV Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1531__P10275/rank1_confidence-3.93.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10275-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 14,
@@ -9476,10 +8882,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q15077/rank1_confidence-3.62.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q15077-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 15,
@@ -9522,10 +8925,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__Q14332/rank1_confidence-4.46.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q14332-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 16,
@@ -9568,10 +8968,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__Q14332/rank1_confidence-2.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q14332-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 17,
@@ -9614,10 +9011,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P43116/rank1_confidence-3.88.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 18,
@@ -9660,10 +9054,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P43116/rank1_confidence-5.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 19,
@@ -9706,10 +9097,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__O75084/rank1_confidence-3.78.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O75084-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 20,
@@ -9752,10 +9140,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__O75084/rank1_confidence-4.17.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O75084-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 21,
@@ -9798,10 +9183,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P16473/rank1_confidence-4.39.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 22,
@@ -9844,10 +9226,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P30968/rank1_confidence-3.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 23,
@@ -9890,10 +9269,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P25103/rank1_confidence-4.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 24,
@@ -9936,10 +9312,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P43116/rank1_confidence-3.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 25,
@@ -9982,10 +9355,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q4U2R8/rank1_confidence-1.66.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q4U2R8-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 26,
@@ -10028,10 +9398,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P30989/rank1_confidence-4.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30989-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 27,
@@ -10074,10 +9441,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P30989/rank1_confidence-4.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30989-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 35,
@@ -10120,10 +9484,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P41145/rank1_confidence-4.48.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 36,
@@ -10166,10 +9527,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P41145/rank1_confidence-0.66.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 37,
@@ -10212,10 +9570,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P30559/rank1_confidence-4.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 38,
@@ -10258,10 +9613,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P30559/rank1_confidence-4.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 39,
@@ -10304,10 +9656,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P22888/rank1_confidence-3.86.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P22888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 40,
@@ -10350,10 +9699,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00018/CHEMBL256907__P23945/rank1_confidence-3.35.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 41,
@@ -10396,10 +9742,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__O43614/rank1_confidence-5.20.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 42,
@@ -10442,10 +9785,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P25105/rank1_confidence-2.50.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25105-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 43,
@@ -10488,10 +9828,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "Prostatic Hyperplasia; Acquired Immunodeficiency Syndrome; HIV Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1531__P04150/rank1_confidence-4.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P04150-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 44,
@@ -10534,10 +9871,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Hypertension; Prostatic Hyperplasia; Myocardial Infarction",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1200561__P35348/rank1_confidence-4.97.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35348-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 45,
@@ -10580,10 +9914,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P41146/rank1_confidence-5.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41146-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 46,
@@ -10626,10 +9957,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Ophthalmology",
       "indication": "1 INDICATIONS AND USAGE VEVYE indicated for the treatment of the signs and symptoms of dry eye disease.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P62937-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 47,
@@ -10672,10 +10000,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P30518/rank1_confidence-4.21.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30518-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 48,
@@ -10718,10 +10043,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P25101/rank1_confidence-4.38.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 49,
@@ -10764,10 +10086,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q02643/rank1_confidence-3.81.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q02643-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 50,
@@ -10810,10 +10129,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Carcinoma, Non-Small-Cell Lung; Neoplasms; Head and Neck Neoplasms",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL939__P00533/rank1_confidence-0.97.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 51,
@@ -10856,10 +10172,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL57__P43116/rank1_confidence-2.70.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 52,
@@ -10902,10 +10215,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL437672__P25105/rank1_confidence-4.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25105-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 53,
@@ -10948,10 +10258,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P29371/rank1_confidence-3.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 54,
@@ -10994,10 +10301,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P08908/rank1_confidence-3.60.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 55,
@@ -11040,10 +10344,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P30556/rank1_confidence-4.44.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30556-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 56,
@@ -11086,10 +10387,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL437672__P30968/rank1_confidence-3.93.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 57,
@@ -11132,10 +10430,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P28223/rank1_confidence-3.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 58,
@@ -11178,10 +10473,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Octreotide Acetate Injection is a somatostatin analogue indicated: Acromegaly : To reduce blood levels of growth hormone (GH) and insulin growth factor-1 (IGF-1; somatomedin C) in acromegaly patients who have had inadequate re",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL262746__P30874/rank1_confidence-2.88.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30874-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 59,
@@ -11224,10 +10516,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Carcinoma, Non-Small-Cell Lung; Multiple Myeloma",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2105712__P00533/rank1_confidence-0.93.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 60,
@@ -11270,10 +10559,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myeloid, Acute; Neoplasms; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00000/CHEMBL576982__P36888/rank1_confidence-2.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P36888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 61,
@@ -11316,10 +10602,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P25105/rank1_confidence-3.65.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25105-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 62,
@@ -11362,10 +10645,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P25105/rank1_confidence-4.19.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25105-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 63,
@@ -11408,10 +10688,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Opioid-Related Disorders; Substance-Related Disorders",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 64,
@@ -11454,10 +10731,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL270190__P41143/rank1_confidence-4.81.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41143-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 65,
@@ -11500,10 +10774,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P41145/rank1_confidence-3.84.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 66,
@@ -11546,10 +10817,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P47901/rank1_confidence-4.66.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47901-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 67,
@@ -11592,10 +10860,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P47901/rank1_confidence-4.00.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47901-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 68,
@@ -11638,10 +10903,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P08172/rank1_confidence-1.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 69,
@@ -11684,10 +10946,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00002/CHEMBL437672__P30559/rank1_confidence-4.17.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 70,
@@ -11730,10 +10989,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P46098/rank1_confidence-4.16.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P46098-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 71,
@@ -11776,10 +11032,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q16602/rank1_confidence-2.46.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q16602-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 72,
@@ -11822,10 +11075,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P37288/rank1_confidence-4.35.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P37288-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 73,
@@ -11868,10 +11118,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P37288/rank1_confidence-4.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P37288-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 74,
@@ -11914,10 +11161,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "1 INDICATIONS AND USAGE Dorzolamide Hydrochloride Ophthalmic Solution is indicated in the treatment of elevated intraocular pressure in patients with ocular hypertension or open-angle glaucoma.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL269001__P00918/rank1_confidence-0.10.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P00918-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 75,
@@ -11960,10 +11204,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00019/CHEMBL2095208__COBICISTAT__P32238/rank1_confidence-4.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32238-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 76,
@@ -12006,10 +11247,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__P32238/rank1_confidence-4.45.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32238-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 77,
@@ -12052,10 +11290,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__Q99835/rank1_confidence-3.62.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q99835-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 78,
@@ -12098,10 +11333,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__Q99835/rank1_confidence-4.04.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q99835-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 80,
@@ -12144,10 +11376,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P08908/rank1_confidence-2.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 81,
@@ -12190,10 +11419,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P28335/rank1_confidence-3.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28335-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 82,
@@ -12236,10 +11462,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P35462/rank1_confidence-5.32.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 83,
@@ -12282,10 +11505,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__Q53GD3/rank1_confidence-3.84.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q53GD3-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 84,
@@ -12328,10 +11548,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__Q53GD3/rank1_confidence-4.22.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q53GD3-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 85,
@@ -12374,10 +11591,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__P32246/rank1_confidence-2.17.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32246-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 86,
@@ -12420,10 +11634,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL437672__P37288/rank1_confidence-5.27.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P37288-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 87,
@@ -12466,10 +11677,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Virus Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL256907__Q9Y271/rank1_confidence-3.03.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9Y271-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 88,
@@ -12512,10 +11720,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Infectious Disease",
       "indication": "HIV Infections; Infections",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/infectious_disease/diffdock_run/outputs/chunk_00000/CHEMBL2095208__COBICISTAT__P24530/rank1_confidence-4.65.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 1,
@@ -12558,10 +11763,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P41145/rank1_confidence-2.23.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 2,
@@ -12604,10 +11806,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Opioid-Related Disorders; Substance-Related Disorders",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 3,
@@ -12650,10 +11849,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P41145/rank1_confidence-0.38.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 4,
@@ -12696,10 +11892,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P08172/rank1_confidence-2.23.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 5,
@@ -12742,10 +11935,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P08908/rank1_confidence-2.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 6,
@@ -12788,10 +11978,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P35462/rank1_confidence-3.25.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 7,
@@ -12834,10 +12021,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P25116/rank1_confidence-4.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 8,
@@ -12880,10 +12064,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P35462/rank1_confidence-1.31.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 9,
@@ -12926,10 +12107,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P30559/rank1_confidence-4.19.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 10,
@@ -12972,10 +12150,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P25116/rank1_confidence-5.18.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 11,
@@ -13018,10 +12193,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P24530/rank1_confidence-3.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 12,
@@ -13064,10 +12236,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__O43614/rank1_confidence-1.84.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 13,
@@ -13110,10 +12279,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__O43614/rank1_confidence-0.50.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 14,
@@ -13156,10 +12322,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P35372/rank1_confidence-0.18.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 15,
@@ -13202,10 +12365,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P24530/rank1_confidence-3.54.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 16,
@@ -13248,10 +12408,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P20309/rank1_confidence-3.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P20309-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 17,
@@ -13294,10 +12451,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P30559/rank1_confidence-2.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 18,
@@ -13340,10 +12494,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P30559/rank1_confidence-3.96.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 19,
@@ -13386,10 +12537,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P28222/rank1_confidence-4.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 20,
@@ -13432,10 +12580,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00002/CHEMBL1201149__P29371/rank1_confidence-4.36.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 21,
@@ -13478,10 +12623,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P41145/rank1_confidence-2.69.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 22,
@@ -13524,10 +12666,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P28222/rank1_confidence-1.86.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 23,
@@ -13570,10 +12709,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P25101/rank1_confidence-3.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 24,
@@ -13616,10 +12752,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P24530/rank1_confidence-4.35.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 25,
@@ -13662,10 +12795,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P08908/rank1_confidence-3.91.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 26,
@@ -13708,10 +12838,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__P35462/rank1_confidence-4.47.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 27,
@@ -13754,10 +12881,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P43116/rank1_confidence-4.01.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 28,
@@ -13800,10 +12924,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P28222/rank1_confidence-5.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 29,
@@ -13846,10 +12967,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P43116/rank1_confidence-4.71.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 30,
@@ -13892,10 +13010,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P25101/rank1_confidence-3.64.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 31,
@@ -13938,10 +13053,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P29371/rank1_confidence-2.13.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 32,
@@ -13984,10 +13096,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P29371/rank1_confidence-5.48.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 33,
@@ -14030,10 +13139,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P14416/rank1_confidence-1.93.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 34,
@@ -14076,10 +13182,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__P14416/rank1_confidence-4.48.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 35,
@@ -14122,10 +13225,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P35462/rank1_confidence-2.22.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 36,
@@ -14168,10 +13268,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P08172/rank1_confidence-0.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 37,
@@ -14214,10 +13311,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P25116/rank1_confidence-2.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 38,
@@ -14260,10 +13354,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P08172/rank1_confidence-3.43.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08172-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 39,
@@ -14306,10 +13397,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P41231/rank1_confidence-0.94.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 40,
@@ -14352,10 +13440,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__O43614/rank1_confidence-3.32.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 41,
@@ -14398,10 +13483,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P14416/rank1_confidence-3.09.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 42,
@@ -14444,10 +13526,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__O43614/rank1_confidence-3.45.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 43,
@@ -14490,10 +13569,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00004/CHEMBL502__P35462/rank1_confidence-1.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 44,
@@ -14536,10 +13612,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P61073/rank1_confidence-4.22.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P61073-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 45,
@@ -14582,10 +13655,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__P08908/rank1_confidence-2.17.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 46,
@@ -14628,10 +13698,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P47900/rank1_confidence-3.56.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47900-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 47,
@@ -14674,10 +13741,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P28223/rank1_confidence-1.66.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 48,
@@ -14720,10 +13784,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__P29371/rank1_confidence-3.61.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 49,
@@ -14766,10 +13827,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P41231/rank1_confidence-1.01.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 50,
@@ -14812,10 +13870,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "1 INDICATIONS & USAGE Atropine Sulfate Injection, USP, is indicated for temporary blockade of severe or life threatening muscarinic effects, e.g., as an antisialagogue, an antivagal agent, an antidote for organophosphorus or muscarinic mushroom poiso",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1396281__P25101/rank1_confidence-2.45.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 51,
@@ -14858,10 +13913,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P43115/rank1_confidence-2.88.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43115-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 52,
@@ -14904,10 +13956,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P14416/rank1_confidence-1.87.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 53,
@@ -14950,10 +13999,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__Q15077/rank1_confidence-3.77.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q15077-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 54,
@@ -14996,10 +14042,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P35462/rank1_confidence-5.55.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 55,
@@ -15042,10 +14085,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__P24530/rank1_confidence-4.39.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 56,
@@ -15088,10 +14128,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P28222/rank1_confidence-2.65.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 57,
@@ -15134,10 +14171,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P35372/rank1_confidence-1.27.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 58,
@@ -15180,10 +14214,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL502__P08908/rank1_confidence-4.35.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 59,
@@ -15226,10 +14257,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Acute Pain; Pain, Postoperative",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1200794__P41145/rank1_confidence-1.81.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 60,
@@ -15272,10 +14300,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__O43614/rank1_confidence-5.67.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 61,
@@ -15318,10 +14343,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P25101/rank1_confidence-3.78.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 62,
@@ -15364,10 +14386,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Acute Pain; Pain, Postoperative",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1200794__P35372/rank1_confidence0.27.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 63,
@@ -15410,10 +14429,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Constipation; Pancreatitis",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL2105755__P28222/rank1_confidence-2.79.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 64,
@@ -15456,10 +14472,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 65,
@@ -15502,10 +14515,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Opioid-Related Disorders; Substance-Related Disorders",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 66,
@@ -15548,10 +14558,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P34998/rank1_confidence-5.11.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P34998-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 67,
@@ -15594,10 +14601,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL502__P24530/rank1_confidence-4.22.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P24530-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 68,
@@ -15640,10 +14644,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Alcoholism; Substance-Related Disorders; Gambling",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL982__P41145/rank1_confidence-0.24.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 69,
@@ -15686,10 +14687,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL502__P29371/rank1_confidence-2.51.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 70,
@@ -15732,10 +14730,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P08908/rank1_confidence-1.85.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 71,
@@ -15778,10 +14773,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Cardiovascular",
       "indication": "Dementia; Stroke; Dementia, Vascular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL502__P28222/rank1_confidence-0.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28222-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 72,
@@ -15824,10 +14816,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P23945/rank1_confidence-4.48.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P23945-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 73,
@@ -15870,10 +14859,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P08908/rank1_confidence-3.20.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08908-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 74,
@@ -15916,10 +14902,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Chronic Pain; Charcot-Marie-Tooth Disease",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL1201149__P43116/rank1_confidence-3.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 75,
@@ -15962,10 +14945,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P29371/rank1_confidence-5.14.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 76,
@@ -16008,10 +14988,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P41231/rank1_confidence-1.39.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 77,
@@ -16054,10 +15031,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Opioid-Related Disorders; Substance-Related Disorders",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25101-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 78,
@@ -16100,10 +15074,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Opioid-Related Disorders; Substance-Related Disorders",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P14416-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 79,
@@ -16146,10 +15117,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pulmonary Disease, Chronic Obstructive; Lung Diseases, Obstructive; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3833319__P41231/rank1_confidence-4.31.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 80,
@@ -16192,10 +15160,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "INDICATIONS AND USAGE Pentazocine and Naloxone Tablets are indicated for the management of pain severe enough to require an opioid analgesic and for which alternative treatments are inadequate.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/neurology_psychiatry/diffdock_run/outputs/chunk_00000/CHEMBL3249799__P04201/rank1_confidence-1.58.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P04201-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 1,
@@ -16238,10 +15203,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Carcinoma, Non-Small-Cell Lung; Multiple Myeloma",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL2105712__P00533/rank1_confidence-0.45.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 2,
@@ -16284,10 +15246,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Neoplasms; Carcinoma, Renal Cell; Sarcoma",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL477772__P10721/rank1_confidence-4.42.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10721-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 3,
@@ -16330,10 +15289,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Carcinoma, Non-Small-Cell Lung; Neoplasms; Head and Neck Neoplasms",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL939__P00533/rank1_confidence-0.96.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 4,
@@ -16376,10 +15332,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Carcinoma, Non-Small-Cell Lung; Neoplasms",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL2105719__P00533/rank1_confidence-0.79.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 5,
@@ -16422,10 +15375,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Breast Neoplasms",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL3989921__P00533/rank1_confidence-1.44.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 6,
@@ -16468,10 +15418,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myeloid, Acute; Neoplasms; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00000/CHEMBL576982__P10721/rank1_confidence-3.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10721-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 7,
@@ -16514,10 +15461,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P30968/rank1_confidence-4.58.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 8,
@@ -16560,10 +15504,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P47871/rank1_confidence-2.31.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47871-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 9,
@@ -16606,10 +15547,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P46098/rank1_confidence-1.46.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P46098-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 10,
@@ -16652,10 +15590,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P42685/rank1_confidence-4.11.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P42685-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 11,
@@ -16698,10 +15633,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P25103/rank1_confidence-4.91.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 12,
@@ -16744,10 +15676,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P47871/rank1_confidence-3.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47871-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 13,
@@ -16790,10 +15719,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Scleroderma, Systemic; Idiopathic Pulmonary Fibrosis; Carcinoma, Non-Small-Cell Lung",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL3039504__P10721/rank1_confidence-3.25.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10721-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 14,
@@ -16836,10 +15762,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL941__P10721/rank1_confidence-4.95.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10721-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 15,
@@ -16882,10 +15805,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P35462/rank1_confidence-4.72.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 16,
@@ -16928,10 +15848,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Neoplasms; Carcinoma, Renal Cell; Carcinoma, Hepatocellular",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1289494__P10721/rank1_confidence-2.63.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P10721-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 17,
@@ -16974,10 +15891,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P30968/rank1_confidence-5.00.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 18,
@@ -17020,10 +15934,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P16473/rank1_confidence-4.42.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 19,
@@ -17066,10 +15977,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P29275/rank1_confidence-5.92.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29275-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 21,
@@ -17112,10 +16020,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P47871/rank1_confidence-2.00.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P47871-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 22,
@@ -17158,10 +16063,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Neoplasms; Carcinoma, Non-Small-Cell Lung",
       "receptorStatus": "curated_JAK1_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL4298138__P23458/rank1_confidence-1.01.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P23458-F1-model_v6_840_1154.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 23,
@@ -17204,10 +16106,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P35462/rank1_confidence-3.61.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 24,
@@ -17250,10 +16149,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P25105/rank1_confidence-3.52.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25105-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 26,
@@ -17296,10 +16192,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P41145/rank1_confidence-3.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 27,
@@ -17342,10 +16235,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myeloid, Acute; Neoplasms; Liver Diseases",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL576982__P36888/rank1_confidence-5.21.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P36888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 28,
@@ -17388,10 +16278,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P25103/rank1_confidence-3.34.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 29,
@@ -17434,10 +16321,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P41143/rank1_confidence-3.59.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41143-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 30,
@@ -17480,10 +16364,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Neoplasms; Carcinoma, Renal Cell; Sarcoma",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL477772__P36888/rank1_confidence-3.23.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P36888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 31,
@@ -17526,10 +16407,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P30559/rank1_confidence-5.08.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30559-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 32,
@@ -17572,10 +16450,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P43220/rank1_confidence-1.69.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43220-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 33,
@@ -17618,10 +16493,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P06241/rank1_confidence-4.96.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P06241-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 34,
@@ -17664,10 +16536,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1237080__P16473/rank1_confidence-5.06.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P16473-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 36,
@@ -17710,10 +16579,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P28335/rank1_confidence-2.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28335-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 38,
@@ -17756,10 +16622,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P41231/rank1_confidence-4.62.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 39,
@@ -17802,10 +16665,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Neoplasms; Carcinoma, Non-Small-Cell Lung",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL4298138__P36897/rank1_confidence-3.03.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P36897-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 40,
@@ -17848,10 +16708,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Breast Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL4594261__Q92731/rank1_confidence-2.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q92731-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 41,
@@ -17894,10 +16751,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P08631/rank1_confidence-2.86.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P08631-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 42,
@@ -17940,10 +16794,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00000/CHEMBL437672__P29275/rank1_confidence-4.35.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29275-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 43,
@@ -17986,10 +16837,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1237080__P46098/rank1_confidence-1.73.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P46098-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 44,
@@ -18032,10 +16880,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__Q9H244/rank1_confidence-4.33.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9H244-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 45,
@@ -18078,10 +16923,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Neoplasms; Carcinoma, Renal Cell; Sarcoma",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL477772__P07333/rank1_confidence-4.94.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07333-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 47,
@@ -18124,10 +16966,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P32239/rank1_confidence-4.14.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32239-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 48,
@@ -18170,10 +17009,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Breast Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL4594261__P03372/rank1_confidence-2.65.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P03372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 49,
@@ -18216,10 +17052,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__Q02643/rank1_confidence-3.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q02643-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 50,
@@ -18262,10 +17095,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P29317/rank1_confidence-2.17.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29317-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 51,
@@ -18308,10 +17138,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P29320/rank1_confidence-3.99.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29320-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 52,
@@ -18354,10 +17181,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P35346/rank1_confidence-2.46.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35346-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 53,
@@ -18400,10 +17224,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P32238/rank1_confidence-5.57.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32238-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 54,
@@ -18446,10 +17267,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Leukemia, Myeloid; Leukemia, Myeloid, Acute",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL2095206__P42685/rank1_confidence-3.40.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P42685-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 55,
@@ -18492,10 +17310,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P29371/rank1_confidence-4.80.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 57,
@@ -18538,10 +17353,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P12931/rank1_confidence-0.31.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P12931-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 58,
@@ -18584,10 +17396,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P41968/rank1_confidence-4.93.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 59,
@@ -18630,10 +17439,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P30968/rank1_confidence-4.55.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 60,
@@ -18676,10 +17482,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P28223/rank1_confidence-1.26.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28223-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 61,
@@ -18722,10 +17525,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P32246/rank1_confidence-4.27.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P32246-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 62,
@@ -18768,10 +17568,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P35462/rank1_confidence-1.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35462-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 63,
@@ -18814,10 +17611,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P41145/rank1_confidence-2.62.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41145-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 64,
@@ -18860,10 +17654,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00002/CHEMBL437672__P30989/rank1_confidence-4.08.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30989-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 65,
@@ -18906,10 +17697,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE TRELSTAR is indicated for the treatment of advanced prostate cancer [ see Clinical Studies (14) ].",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL4068871__P30968/rank1_confidence-3.93.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P30968-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 66,
@@ -18952,10 +17740,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00000/CHEMBL270190__O95977/rank1_confidence-4.38.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O95977-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 67,
@@ -18998,10 +17783,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1237080__P31645/rank1_confidence-2.25.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P31645-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 68,
@@ -19044,10 +17826,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Scleroderma, Systemic; Idiopathic Pulmonary Fibrosis; Carcinoma, Non-Small-Cell Lung",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL3039504__P36888/rank1_confidence-4.28.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P36888-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 69,
@@ -19090,10 +17869,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P07947/rank1_confidence-2.88.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P07947-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 70,
@@ -19136,10 +17912,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__Q9NQS5/rank1_confidence-3.63.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-Q9NQS5-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 71,
@@ -19182,10 +17955,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P25025/rank1_confidence-4.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25025-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 72,
@@ -19228,10 +17998,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P25103/rank1_confidence-1.54.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25103-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 73,
@@ -19274,10 +18041,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P25116/rank1_confidence-1.08.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P25116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 74,
@@ -19320,10 +18084,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00000/CHEMBL437672__P41143/rank1_confidence-5.55.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41143-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 75,
@@ -19366,10 +18127,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun/outputs/chunk_00004/CHEMBL437672__P29371/rank1_confidence-3.82.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P29371-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 76,
@@ -19412,10 +18170,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Breast Neoplasms; Breast Neoplasms, Male",
       "receptorStatus": "curated_EGFR_kinase-domain_crop",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1201179__P00533/rank1_confidence-1.77.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/outputs/full_test_rerun/receptors/diffdock_ready/AF-P00533-F1-model_v6_672_1022.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 77,
@@ -19458,10 +18213,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__P43220/rank1_confidence-4.06.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43220-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 78,
@@ -19504,10 +18256,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1189679__P35372/rank1_confidence-4.30.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35372-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 79,
@@ -19550,10 +18299,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__O43614/rank1_confidence-4.29.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 80,
@@ -19596,10 +18342,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00058/CHEMBL270190__P41231/rank1_confidence-3.96.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 81,
@@ -19642,10 +18385,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Nausea; Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00000/CHEMBL1189679__P31645/rank1_confidence-2.21.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P31645-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 82,
@@ -19688,10 +18428,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Leukemia, Myelogenous, Chronic, BCR-ABL Positive; Precursor Cell Lymphoblastic Leukemia-Lymphoma; Leukemia",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL1421__P54760/rank1_confidence-2.56.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P54760-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 83,
@@ -19734,10 +18471,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL270190__O43614/rank1_confidence-4.48.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O43614-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 84,
@@ -19780,10 +18514,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P35346/rank1_confidence-3.86.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P35346-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 85,
@@ -19826,10 +18557,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__O95977/rank1_confidence-3.90.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-O95977-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     },
     {
       "rank": 86,
@@ -19872,10 +18600,7 @@ window.BIOMASTER_DATA = {
       "therapeuticArea": "Oncology",
       "indication": "1 INDICATIONS AND USAGE FIRMAGON ® is indicated for treatment of patients with advanced prostate cancer.",
       "receptorStatus": "full_length_ok",
-      "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/oncology/diffdock_run/outputs/chunk_00000/CHEMBL437672__P43116/rank1_confidence-4.98.sdf",
-      "rank1SdfPath": "",
-      "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P43116-F1-model_v6.pdb"
+      "selectionReason": "original_in_alphafold_tar"
     }
   ]
 };
