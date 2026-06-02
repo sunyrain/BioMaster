@@ -13,7 +13,7 @@
         <span class="brand-mark">B</span>
         <span>
           <strong>BioMaster</strong>
-          <small>druggable proteome screen</small>
+          <small>disease-direction screen</small>
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
@@ -47,12 +47,12 @@
               <div>
                 <span>Snapshot status</span>
                 <strong>complete</strong>
-                <small>snapshot 2026-05-25 13:54 UTC</small>
+                <small>snapshot 2026-06-02 01:38 UTC</small>
               </div>
               <div>
                 <span>CUDA devices</span>
-                <strong>0, 1</strong>
-                <small>two RTX 4090 D GPUs used</small>
+                <strong>0, 1, 2, 3</strong>
+                <small>four RTX 4080 SUPER GPUs used</small>
               </div>
               <div>
                 <span>Active lanes</span>
@@ -61,23 +61,23 @@
               </div>
             </div>
             <p>
-              本轮队列已完成全部 8 个 DiffDock 分块。缺失输出来自单个复合物在图构建、采样或结构输出阶段失败，已保留在审计表中，不会从候选集合中静默删除。
+              本轮队列已完成五个疾病方向的全部 97 个 DiffDock 分块。缺失输出来自单个复合物在图构建、采样或结构输出阶段失败，已保留在审计表中，不会从候选集合中静默删除。
             </p>
           </section>
 
           <section id="audit" class="document-section">
             <h2>最新审计</h2>
             <div class="status-grid">
-              <article><span>Score chunks</span><strong>8</strong><small>of 8 DiffDock chunks</small></article>
-              <article><span>Representative pairs</span><strong>1872</strong><small>all processed</small></article>
-              <article><span>Completed poses</span><strong>1370</strong><small>rank-1 ligand outputs</small></article>
-              <article><span>Output rate</span><strong>73.18%</strong><small>among representatives</small></article>
+              <article><span>Score chunks</span><strong>97</strong><small>of 97 DiffDock chunks</small></article>
+              <article><span>Representative pairs</span><strong>23744</strong><small>all processed</small></article>
+              <article><span>Completed poses</span><strong>21678</strong><small>rank-1 ligand outputs</small></article>
+              <article><span>Output rate</span><strong>91.30%</strong><small>among representatives</small></article>
             </div>
             <div class="progress-meter" aria-label="Full structural extension progress">
               <i style="width: 100%"></i>
             </div>
             <p>
-              审计指标来自最终 Stage 6 合并结果。Top10000 候选中有 7216 行映射到已完成的代表结构，2784 行对应缺失输出或失败输出。
+              审计指标来自五个疾病方向的最终 DiffDock score 文件。23744 个实际对接代表中有 21678 个获得已完成结构输出，2066 个对应缺失输出或失败输出。
               缺失输出是 DiffDock 产物审计状态，不代表候选在生物学上无效。
             </p>
           </section>
@@ -85,9 +85,9 @@
           <section id="throughput" class="document-section">
             <h2>耗时与吞吐</h2>
             <div class="status-grid">
-              <article><span>DiffDock jobs</span><strong>8</strong><small>representative chunks</small></article>
-              <article><span>Typical chunk time</span><strong>11-13m</strong><small>250-row chunks</small></article>
-              <article><span>Final rows</span><strong>122</strong><small>last partial chunk</small></article>
+              <article><span>DiffDock jobs</span><strong>97</strong><small>representative chunks</small></article>
+              <article><span>Typical chunk time</span><strong>20-45m</strong><small>250-row chunks, variable by receptor/ligand</small></article>
+              <article><span>Final rows</span><strong>159</strong><small>last partial chunk</small></article>
               <article><span>Remaining</span><strong>0</strong><small>for this run</small></article>
             </div>
             <p>
@@ -100,8 +100,8 @@
             <div class="brief-grid compact">
               <article><span>Data</span><h3>药物库与靶点库</h3><p>915 个药物与 5306 个 ChEMBL druggable protein 记录已完成标准化。</p></article>
               <article><span>Screening</span><h3>AI-DTI 主筛选</h3><p>4854990 个 drug-target pair 已完成预测和排序。</p></article>
-              <article><span>Reduction</span><h3>结构代表选择</h3><p>Top10000 候选压缩为 1872 个 drug + protein-sequence 代表。</p></article>
-              <article><span>Structural</span><h3>DiffDock 结构增强</h3><p>1370 个代表获得 rank-1 ligand pose，结果已合并到候选表。</p></article>
+              <article><span>Reduction</span><h3>结构代表选择</h3><p>五个疾病方向 Top10000 候选形成 23744 个实际 DiffDock-ready 代表。</p></article>
+              <article><span>Structural</span><h3>DiffDock 结构增强</h3><p>21678 个代表获得 rank-1 ligand pose，结果已合并到候选表。</p></article>
             </div>
           </section>
 
@@ -129,7 +129,7 @@
 
     <footer class="site-footer">
       <span>BioMaster structural extension audit</span>
-      <span>Snapshot: 2026-05-25</span>
+      <span>Snapshot: 2026-06-02</span>
     </footer>
   </body>
 </html>

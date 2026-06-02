@@ -231,6 +231,7 @@ h1 {
 .architecture-map,
 .score-quality-grid,
 .lineage-grid,
+.direction-grid,
 .evidence-layout,
 .analysis-note,
 .table-wrap,
@@ -305,6 +306,78 @@ h1 {
   color: var(--blue);
   font-size: clamp(28px, 4vw, 42px);
   line-height: 1;
+}
+
+.direction-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.direction-card {
+  min-height: 260px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.direction-card-head {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.direction-card-head span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.direction-card-head h3 {
+  margin: 4px 0 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.direction-card-head strong {
+  color: var(--green);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.direction-card p {
+  min-height: 68px;
+  margin: 14px 0;
+  color: #52606d;
+  font-size: 14px;
+}
+
+.direction-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+
+.direction-card dt,
+.direction-card dd {
+  margin: 0;
+}
+
+.direction-card dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.direction-card dd {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .score-label {
@@ -805,6 +878,31 @@ h1 {
   outline: 3px solid rgba(21, 95, 168, 0.16);
 }
 
+.direction-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.direction-filters button {
+  min-height: 34px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.direction-filters button.active {
+  color: #fff;
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
 .segmented {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -887,6 +985,15 @@ tbody tr:hover {
 .status-pill.missing_output {
   color: #875012;
   background: #fff1df;
+}
+
+.rationale-cell {
+  min-width: 420px;
+  max-width: 620px;
+  color: #405069;
+  font-size: 13px;
+  line-height: 1.55;
+  vertical-align: top;
 }
 
 .audit-chip {
@@ -1110,6 +1217,24 @@ tbody tr:hover {
 .ligand-panel {
   padding: 14px;
   background: #fbfdff;
+}
+
+.structure-rationale {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdff;
+}
+
+.structure-rationale h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.structure-rationale p {
+  margin: 0;
+  color: #52606d;
+  font-size: 13px;
 }
 
 .analysis-grid {
@@ -1530,6 +1655,10 @@ tbody tr:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .direction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .arch-node::after {
     display: none;
   }
@@ -1606,6 +1735,7 @@ tbody tr:hover {
   .architecture-map,
   .score-quality-grid,
   .lineage-grid,
+  .direction-grid,
   .analysis-grid,
   .interpret-grid,
   .interpret-summary,
@@ -1631,6 +1761,10 @@ tbody tr:hover {
   }
 
   .segmented {
+    grid-template-columns: 1fr;
+  }
+
+  .direction-filters {
     grid-template-columns: 1fr;
   }
 

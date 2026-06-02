@@ -13,7 +13,7 @@
         <span class="brand-mark">B</span>
         <span>
           <strong>BioMaster</strong>
-          <small>druggable proteome screen</small>
+          <small>disease-direction screen</small>
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
@@ -28,7 +28,7 @@
       <section class="document-hero">
         <div class="document-hero-inner">
           <p class="eyebrow">External results brief</p>
-          <h1>BioMaster Druggable Proteome 计算筛选结果汇报</h1>
+          <h1>BioMaster 疾病方向计算筛选结果汇报</h1>
           <p>
             本页保留正式汇报所需的核心叙事：我们完成了什么、为什么采用该流程、结果应如何解释。交互图表、结构渲染和候选明细集中在展示首页。
           </p>
@@ -57,7 +57,7 @@
               <article>
                 <span>Prioritized</span>
                 <h3>结构增强候选集合</h3>
-                <p>Top10000 候选进一步压缩为 1872 个 drug + protein-sequence 结构代表，其中 1370 个获得 DiffDock rank-1 姿态输出。</p>
+                <p>五个疾病方向分别收敛 Top10000，形成 23744 个实际 DiffDock-ready 结构代表，其中 21678 个获得 DiffDock rank-1 姿态输出。</p>
               </article>
             </div>
           </section>
@@ -68,7 +68,7 @@
               BioMaster 的目标是建立一个可复现的药物-靶点计算筛选流程，从已批准小分子药物中发现值得进一步机制分析和实验验证的药物-蛋白组合。
             </p>
             <p>
-              本阶段采用 ChEMBL druggable target 表作为蛋白范围，先进行全量 AI-DTI 亲和预测，再对 Top 候选执行序列级去重和结构对接增强。该结果是计算优先级，不是药效或机制的实验证明。
+              本阶段采用 ChEMBL druggable target 表作为蛋白范围，先进行全量 AI-DTI 亲和预测，再按肿瘤、感染、心血管、神经/精神、免疫/炎症五个方向进行疾病证据收敛和结构对接增强。该结果是计算优先级，不是药效或机制的实验证明。
             </p>
           </section>
 
@@ -78,8 +78,8 @@
               <div><strong>01</strong><span>FDA 已批准小分子与 ChEMBL druggable protein 标准化</span></div>
               <div><strong>02</strong><span>按唯一蛋白序列执行 ConPLex 亲和预测</span></div>
               <div><strong>03</strong><span>扩展回 4854990 个完整 drug-target pair</span></div>
-              <div><strong>04</strong><span>Top10000 候选按 drug + sequence 收敛为结构代表</span></div>
-              <div><strong>05</strong><span>AlphaFold receptor 准备、DiffDock 对接与共识排序</span></div>
+              <div><strong>04</strong><span>五个疾病方向分别形成 Top10000 候选并按 drug + sequence 收敛为结构代表</span></div>
+              <div><strong>05</strong><span>AlphaFold receptor 准备、DiffDock 对接与中文候选合理性解释</span></div>
             </div>
             <p>
               这种分层设计的重点是先保证药物相关蛋白空间内的覆盖面，再通过序列去重和结构证据逐步收敛。不同模型回答的问题不同，因此最终排序应理解为综合优先级，而不是单一模型输出。
@@ -105,7 +105,7 @@
             </p>
             <p>
               也有部分同家族扩展候选，例如 kinase 或 GPCR 家族内的高分结果。它们适合作为文献审阅和二次 docking 的入口，
-              但不能直接视为已验证作用靶点。高亲和但 missing-output 的候选应作为补跑队列单独审计。
+              但不能直接视为已验证作用靶点。高亲和但 missing-output 的候选应作为结构准备和参数补跑队列单独审计。
             </p>
           </section>
 
@@ -144,7 +144,7 @@
 
     <footer class="site-footer">
       <span>BioMaster druggable-proteome results brief</span>
-      <span>Updated from local audit: 2026-05-25</span>
+      <span>Updated from local audit: 2026-06-02</span>
     </footer>
   </body>
 </html>

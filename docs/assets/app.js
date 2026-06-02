@@ -3,6 +3,7 @@ const candidates = data.candidates || [];
 const palette = ["#155fa8", "#148f8b", "#5f9648", "#d87832", "#8a5a9e", "#52606d"];
 
 let activeFilter = "completed";
+let activeDirection = "all";
 let activeStructure = 0;
 let viewer = null;
 let viewerSpinning = false;
@@ -26,6 +27,12 @@ function statusLabel(status) {
   return "missing output";
 }
 
+function statusLabelZh(status) {
+  if (status === "completed") return "结构完成";
+  if (status === "not_yet_run") return "尚未运行";
+  return "缺失输出";
+}
+
 function setMetricValues() {
   const metrics = data.metrics || {};
   document.querySelectorAll("[data-metric]").forEach((node) => {
@@ -42,6 +49,54 @@ function setMetricValues() {
   }
 }
 
+function renderDiseaseDirections() {
+  const container = document.getElementById("diseaseDirectionCards");
+  if (!container || !data.diseaseDirections?.length) return;
+  container.innerHTML = data.diseaseDirections
+    .map((direction) => {
+      const success = Number(direction.successRatePct || 0);
+      const median = direction.medianDiffDock === null || direction.medianDiffDock === undefined ? "NA" : formatScore(direction.medianDiffDock, 2);
+      return `
+        <article class="direction-card" data-direction-card="${direction.direction}">
+          <div class="direction-card-head">
+            <div>
+              <span>${direction.label}</span>
+              <h3>${direction.labelZh}</h3>
+            </div>
+            <strong>${success.toFixed(1)}%</strong>
+          </div>
+          <p>${direction.summaryZh || ""}</p>
+          <dl>
+            <div><dt>ready pairs</dt><dd>${formatInt(direction.preparedPairs)}</dd></div>
+            <div><dt>completed</dt><dd>${formatInt(direction.completed)}</dd></div>
+            <div><dt>missing</dt><dd>${formatInt(direction.missing)}</dd></div>
+            <div><dt>median confidence</dt><dd>${median}</dd></div>
+          </dl>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function setupDirectionControls() {
+  const container = document.getElementById("directionFilters");
+  if (!container || !data.diseaseDirections?.length) return;
+  container.innerHTML = [
+    `<button class="active" type="button" data-direction="all">全部方向</button>`,
+    ...data.diseaseDirections.map(
+      (direction) => `<button type="button" data-direction="${direction.direction}">${direction.labelZh}</button>`,
+    ),
+  ].join("");
+  container.querySelectorAll("[data-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeDirection = button.dataset.direction;
+      container.querySelectorAll("[data-direction]").forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      renderCandidates();
+    });
+  });
+}
+
 function renderCandidates() {
   const tbody = document.getElementById("candidateRows");
   const searchInput = document.getElementById("candidateSearch");
@@ -50,8 +105,9 @@ function renderCandidates() {
   const search = searchInput.value.trim().toLowerCase();
   const rows = candidates.filter((candidate) => {
     const matchesFilter = activeFilter === "all" || candidate.status === activeFilter;
-    const haystack = `${candidate.drug} ${candidate.target} ${candidate.protein} ${candidate.pairId}`.toLowerCase();
-    return matchesFilter && haystack.includes(search);
+    const matchesDirection = activeDirection === "all" || candidate.direction === activeDirection;
+    const haystack = `${candidate.drug} ${candidate.target} ${candidate.protein} ${candidate.pairId} ${candidate.directionLabelZh || ""}`.toLowerCase();
+    return matchesFilter && matchesDirection && haystack.includes(search);
   });
 
   const primaryScoreLabel = data.labels?.primaryScore || "Affinity";
@@ -61,13 +117,17 @@ function renderCandidates() {
         const primaryScore = candidate.affinityScore ?? candidate.diseasePriority;
         return `
         <tr>
-          <td><span class="rank">#${candidate.rank}</span></td>
+          <td><span class="rank">#${candidate.rank}</span><br><small>${candidate.directionLabelZh || candidate.directionLabel || ""}</small></td>
           <td>${candidate.drug}<br><small>${candidate.drugId}</small></td>
           <td><strong>${candidate.target}</strong><br><small>${candidate.protein} · ${candidate.representedPairCount || 1} represented</small></td>
-          <td><span class="score-label">${primaryScoreLabel}</span><br>${formatScore(primaryScore)}</td>
+          <td><span class="score-label">${primaryScoreLabel}</span><br>${formatScore(candidate.directionScore ?? primaryScore)}</td>
+          <td><span class="score-label">Affinity</span><br>${formatScore(candidate.affinityScore ?? primaryScore)}</td>
           <td>${formatScore(candidate.diffdock, 2)}</td>
-          <td>${formatScore(candidate.consensus)}</td>
-          <td><span class="status-pill ${candidate.status}">${statusLabel(candidate.status)}</span></td>
+          <td>
+            <span class="status-pill ${candidate.status}">${statusLabelZh(candidate.status)}</span>
+            <br><small>${candidate.categoryZh || ""}</small>
+          </td>
+          <td class="rationale-cell">${candidate.rationaleZh || candidate.evidenceSummaryZh || ""}</td>
         </tr>
       `;
       },
@@ -268,6 +328,10 @@ function setStructureMeta(sample) {
   document.getElementById("structureConfidence").textContent = formatScore(sample.confidence, 2);
   document.getElementById("structureConsensus").textContent = formatScore(sample.consensus);
   document.getElementById("structureReceptor").textContent = `${sample.protein} · ${sample.receptorStatus}`;
+  const directionNode = document.getElementById("structureDirection");
+  if (directionNode) directionNode.textContent = sample.directionLabelZh || sample.direction || "";
+  const rationaleNode = document.getElementById("structureRationale");
+  if (rationaleNode) rationaleNode.textContent = sample.rationaleZh || "";
 }
 
 async function loadStructure(index) {
@@ -311,7 +375,7 @@ function setupStructures() {
     .map(
       (sample, index) => `
         <button type="button" class="${index === 0 ? "active" : ""}" data-structure="${index}">
-          #${sample.rank} ${sample.drug}<br><small>${sample.target} · ${sample.protein}</small>
+          #${sample.rank} ${sample.drug}<br><small>${sample.directionLabelZh || ""} · ${sample.target} · ${sample.protein}</small>
         </button>
       `,
     )
@@ -335,6 +399,8 @@ function setupStructures() {
 }
 
 setMetricValues();
+renderDiseaseDirections();
+setupDirectionControls();
 setupCandidateControls();
 renderCandidates();
 renderCharts();

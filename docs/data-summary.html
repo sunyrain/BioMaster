@@ -13,7 +13,7 @@
         <span class="brand-mark">B</span>
         <span>
           <strong>BioMaster</strong>
-          <small>druggable proteome screen</small>
+          <small>disease-direction screen</small>
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
@@ -30,8 +30,8 @@
           <p class="eyebrow">Data scope</p>
           <h1>筛选数据口径</h1>
           <p>
-            本页固定当前 druggable-proteome 路线的最终统计口径，区分输入规模、实际模型推理次数、
-            全量扩展矩阵、Top 候选集合和结构对接代表集合。
+            本页固定当前 disease-direction 路线的最终统计口径，区分输入规模、实际模型推理次数、
+            全量扩展矩阵、五个疾病方向 Top 候选集合和结构对接代表集合。
           </p>
           <div class="document-actions">
             <a class="button primary" href="index.html#candidates">查看候选表</a>
@@ -62,9 +62,9 @@
             <div class="process-rail">
               <div><strong>01</strong><span>815265 actual ConPLex drug-sequence inferences</span></div>
               <div><strong>02</strong><span>4854990 expanded drug-target affinity rows</span></div>
-              <div><strong>03</strong><span>10000 Top affinity-ranked candidates</span></div>
-              <div><strong>04</strong><span>1872 drug + protein-sequence docking representatives</span></div>
-              <div><strong>05</strong><span>1370 completed DiffDock rank-1 pose outputs</span></div>
+              <div><strong>03</strong><span>5 disease directions × Top10000 candidates</span></div>
+              <div><strong>04</strong><span>23744 disease-direction DiffDock-ready representatives</span></div>
+              <div><strong>05</strong><span>21678 completed DiffDock rank-1 pose outputs</span></div>
             </div>
           </section>
 
@@ -83,13 +83,13 @@
           <section class="document-section" id="audit">
             <h2>结构审计</h2>
             <div class="status-grid">
-              <article><span>DiffDock chunks</span><strong>8 / 8</strong><small>all score files generated</small></article>
-              <article><span>Processed representatives</span><strong>1872 / 1872</strong><small>100.00% queue progress</small></article>
-              <article><span>Completed outputs</span><strong>1370</strong><small>73.18% representative output rate</small></article>
-              <article><span>Mapped Top10000 rows</span><strong>7216</strong><small>rows with completed structure evidence</small></article>
+              <article><span>DiffDock chunks</span><strong>97 / 97</strong><small>all score files generated</small></article>
+              <article><span>Processed representatives</span><strong>23744 / 23744</strong><small>100.00% queue progress</small></article>
+              <article><span>Completed outputs</span><strong>21678</strong><small>91.30% representative output rate</small></article>
+              <article><span>Disease directions</span><strong>5</strong><small>all direction sets completed</small></article>
             </div>
             <p>
-              缺失或失败的 502 个结构代表保留为审计项，不作为负样本，也不从候选集合中静默删除。
+              缺失或失败的 2066 个结构代表保留为审计项，不作为负样本，也不从候选集合中静默删除。
               这些记录通常表示 DiffDock 没有留下可用的 rank-1 confidence SDF；后续可只对高价值 missing-output 候选设计小规模补跑。
             </p>
           </section>
@@ -97,8 +97,8 @@
           <section class="document-section" id="website-data">
             <h2>网站数据组织</h2>
             <p>
-              网站发布数据集中在 <code>docs/assets/dashboard-data.js</code>，包含最终指标、Top 候选展示行、
-              图表汇总和 4 个可渲染结构样例。完整 CSV、原始 Excel 和 DiffDock 全量输出保留在本地计算产物目录，
+              网站发布数据集中在 <code>docs/assets/dashboard-data.js</code>，包含最终指标、分疾病方向候选展示行、
+              图表汇总和 10 个可渲染结构样例。完整 CSV、原始 Excel 和 DiffDock 全量输出保留在本地计算产物目录，
               不随静态网站发布。
             </p>
             <div class="brief-grid compact">
@@ -123,7 +123,7 @@
 
     <footer class="site-footer">
       <span>BioMaster data scope</span>
-      <span>Updated from local audit: 2026-05-25</span>
+      <span>Updated from local audit: 2026-06-02</span>
     </footer>
   </body>
 </html>
