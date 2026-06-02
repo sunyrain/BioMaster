@@ -1,5 +1,5 @@
 window.BIOMASTER_DATA = {
-  "updated": "2026-06-02T14:32:06Z",
+  "updated": "2026-06-02T14:37:28Z",
   "mode": "disease_direction_druggable_proteome",
   "labels": {
     "primaryScore": "Disease score",
@@ -13,23 +13,23 @@ window.BIOMASTER_DATA = {
     "pairs": 4854990,
     "topCandidates": 50000,
     "structureCandidates": 23744,
-    "structureCompleted": 22669,
-    "structureMissing": 1075,
-    "top1000Completed": 22669,
-    "top1000Missing": 1075,
+    "structureCompleted": 22679,
+    "structureMissing": 1065,
+    "top1000Completed": 22679,
+    "top1000Missing": 1065,
     "fullScoreFiles": 97,
     "fullJobsTotal": 97,
     "fullRowsScored": 23744,
     "fullRowsTotal": 23744,
     "fullRowProgressPct": 100.0,
-    "fullCompletedOutputs": 22669,
-    "fullMissingOutputs": 1075,
-    "fullOutputRatePct": 95.47254043126685,
+    "fullCompletedOutputs": 22679,
+    "fullMissingOutputs": 1065,
+    "fullOutputRatePct": 95.5146563342318,
     "primaryCompletedOutputs": 21678,
     "primaryMissingOutputs": 2066,
-    "rerunRecoveredOutputs": 991,
-    "rerunScoreRows": 1408,
-    "rerunUniquePairs": 1097,
+    "rerunRecoveredOutputs": 1001,
+    "rerunScoreRows": 1440,
+    "rerunUniquePairs": 1109,
     "zeroCompletedChunks": 0,
     "diseaseDirections": 5
   },
@@ -979,12 +979,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4909,
-      "completed": 4619,
-      "missing": 290,
+      "completed": 4629,
+      "missing": 280,
       "primaryCompleted": 4501,
       "primaryMissing": 408,
-      "rerunRecovered": 118,
-      "successRatePct": 94.09248319413322,
+      "rerunRecovered": 128,
+      "successRatePct": 94.2961906701976,
       "medianDiffDock": -3.34,
       "topCompleted": [
         {
@@ -1221,7 +1221,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "Completed docking outputs",
-        "value": 22669
+        "value": 22679
       }
     ],
     "topTargets": [
@@ -1311,11 +1311,11 @@ window.BIOMASTER_DATA = {
     "structuralStatus": [
       {
         "label": "completed",
-        "value": 22669
+        "value": 22679
       },
       {
         "label": "missing_output",
-        "value": 1075
+        "value": 1065
       }
     ],
     "scoreSources": [
@@ -1325,7 +1325,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "缺失输出优先补跑",
-        "value": 991
+        "value": 1001
       }
     ],
     "credibilityTiers": [
@@ -1335,11 +1335,11 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "C｜探索性再定位",
-        "value": 5992
+        "value": 6002
       },
       {
         "label": "D｜结构补跑优先",
-        "value": 1075
+        "value": 1065
       },
       {
         "label": "B｜机制邻近优先",
