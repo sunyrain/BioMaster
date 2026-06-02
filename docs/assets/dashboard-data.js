@@ -1,5 +1,5 @@
 window.BIOMASTER_DATA = {
-  "updated": "2026-06-02T15:15:35Z",
+  "updated": "2026-06-02T15:56:42Z",
   "mode": "disease_direction_druggable_proteome",
   "labels": {
     "primaryScore": "Disease score",
@@ -13,23 +13,23 @@ window.BIOMASTER_DATA = {
     "pairs": 4854990,
     "topCandidates": 50000,
     "structureCandidates": 23744,
-    "structureCompleted": 22829,
-    "structureMissing": 915,
-    "top1000Completed": 22829,
-    "top1000Missing": 915,
+    "structureCompleted": 23060,
+    "structureMissing": 684,
+    "top1000Completed": 23060,
+    "top1000Missing": 684,
     "fullScoreFiles": 97,
     "fullJobsTotal": 97,
     "fullRowsScored": 23744,
     "fullRowsTotal": 23744,
     "fullRowProgressPct": 100.0,
-    "fullCompletedOutputs": 22829,
-    "fullMissingOutputs": 915,
-    "fullOutputRatePct": 96.1463948787062,
+    "fullCompletedOutputs": 23060,
+    "fullMissingOutputs": 684,
+    "fullOutputRatePct": 97.11927223719677,
     "primaryCompletedOutputs": 21678,
     "primaryMissingOutputs": 2066,
-    "rerunRecoveredOutputs": 1151,
-    "rerunScoreRows": 1712,
-    "rerunUniquePairs": 1273,
+    "rerunRecoveredOutputs": 1382,
+    "rerunScoreRows": 2086,
+    "rerunUniquePairs": 1518,
     "zeroCompletedChunks": 0,
     "diseaseDirections": 5
   },
@@ -43,12 +43,12 @@ window.BIOMASTER_DATA = {
       "chunks": 23,
       "scoreChunks": 23,
       "scoredRows": 5562,
-      "completed": 5382,
-      "missing": 180,
+      "completed": 5407,
+      "missing": 155,
       "primaryCompleted": 5080,
       "primaryMissing": 482,
-      "rerunRecovered": 302,
-      "successRatePct": 96.76375404530745,
+      "rerunRecovered": 327,
+      "successRatePct": 97.21323265012586,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -277,12 +277,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4995,
-      "completed": 4789,
-      "missing": 206,
+      "completed": 4866,
+      "missing": 129,
       "primaryCompleted": 4559,
       "primaryMissing": 436,
-      "rerunRecovered": 230,
-      "successRatePct": 95.87587587587588,
+      "rerunRecovered": 307,
+      "successRatePct": 97.41741741741741,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -511,12 +511,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4937,
-      "completed": 4729,
-      "missing": 208,
+      "completed": 4797,
+      "missing": 140,
       "primaryCompleted": 4518,
       "primaryMissing": 419,
-      "rerunRecovered": 211,
-      "successRatePct": 95.78691513064615,
+      "rerunRecovered": 279,
+      "successRatePct": 97.16426979947337,
       "medianDiffDock": -3.42,
       "topCompleted": [
         {
@@ -745,12 +745,12 @@ window.BIOMASTER_DATA = {
       "chunks": 14,
       "scoreChunks": 14,
       "scoredRows": 3341,
-      "completed": 3209,
-      "missing": 132,
+      "completed": 3211,
+      "missing": 130,
       "primaryCompleted": 3020,
       "primaryMissing": 321,
-      "rerunRecovered": 189,
-      "successRatePct": 96.04908709967076,
+      "rerunRecovered": 191,
+      "successRatePct": 96.10894941634241,
       "medianDiffDock": -3.32,
       "topCompleted": [
         {
@@ -979,12 +979,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4909,
-      "completed": 4720,
-      "missing": 189,
+      "completed": 4779,
+      "missing": 130,
       "primaryCompleted": 4501,
       "primaryMissing": 408,
-      "rerunRecovered": 219,
-      "successRatePct": 96.14992870238338,
+      "rerunRecovered": 278,
+      "successRatePct": 97.35180281116317,
       "medianDiffDock": -3.34,
       "topCompleted": [
         {
@@ -1221,7 +1221,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "Completed docking outputs",
-        "value": 22829
+        "value": 23060
       }
     ],
     "topTargets": [
@@ -1311,11 +1311,11 @@ window.BIOMASTER_DATA = {
     "structuralStatus": [
       {
         "label": "completed",
-        "value": 22829
+        "value": 23060
       },
       {
         "label": "missing_output",
-        "value": 915
+        "value": 684
       }
     ],
     "scoreSources": [
@@ -1325,21 +1325,21 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "缺失输出优先补跑",
-        "value": 1151
+        "value": 1382
       }
     ],
     "credibilityTiers": [
       {
         "label": "D｜低优先级审阅",
-        "value": 16646
+        "value": 16862
       },
       {
         "label": "C｜探索性再定位",
-        "value": 6012
+        "value": 6027
       },
       {
         "label": "D｜结构补跑优先",
-        "value": 915
+        "value": 684
       },
       {
         "label": "B｜机制邻近优先",
