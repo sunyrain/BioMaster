@@ -237,7 +237,11 @@ h1 {
 .table-wrap,
 .analysis-grid,
 .artifact-list,
-.chart-grid {
+.chart-grid,
+.audit-metric-grid,
+.audit-layout,
+.audit-action-grid,
+.audit-panel-wide {
   width: min(1180px, 100%);
   margin-left: auto;
   margin-right: auto;
@@ -279,7 +283,10 @@ h1 {
 .analysis-note,
 .analysis-grid article,
 .artifact-list a,
-.chart-panel {
+.chart-panel,
+.audit-metric-card,
+.audit-panel,
+.audit-action-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface);
@@ -1318,6 +1325,136 @@ tbody tr:hover {
   line-height: 1.2;
 }
 
+.audit-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.audit-metric-card {
+  min-height: 128px;
+  padding: 18px;
+}
+
+.audit-metric-card span,
+.audit-metric-card small {
+  display: block;
+  color: var(--muted);
+}
+
+.audit-metric-card strong {
+  display: block;
+  margin: 8px 0 6px;
+  color: var(--blue);
+  font-size: clamp(26px, 3.4vw, 38px);
+  line-height: 1;
+}
+
+.audit-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.audit-panel {
+  padding: 18px;
+}
+
+.audit-panel-split {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.audit-panel-wide {
+  margin-top: 16px;
+}
+
+.audit-subpanel {
+  padding: 14px;
+  border: 1px solid #d8e6f1;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.audit-subpanel h4 {
+  margin: 0 0 12px;
+  color: #405069;
+  font-size: 14px;
+}
+
+.audit-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.audit-table {
+  min-width: 520px;
+}
+
+.audit-table-wide {
+  min-width: 860px;
+}
+
+.audit-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.audit-table td {
+  vertical-align: top;
+}
+
+.audit-table strong,
+.audit-table small,
+.audit-table span {
+  display: block;
+}
+
+.audit-table small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.audit-action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.audit-action-card {
+  min-height: 172px;
+  padding: 18px;
+}
+
+.audit-action-card span {
+  display: grid;
+  width: 42px;
+  height: 34px;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--blue);
+  background: #e9f3ff;
+  font-weight: 800;
+}
+
+.audit-action-card h3 {
+  margin: 14px 0 8px;
+  font-size: 18px;
+}
+
+.audit-action-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .chart-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
@@ -1827,6 +1964,9 @@ tbody tr:hover {
   .analysis-grid,
   .artifact-list,
   .chart-grid,
+  .audit-metric-grid,
+  .audit-layout,
+  .audit-action-grid,
   .candidate-browser,
   .score-quality-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1906,6 +2046,9 @@ tbody tr:hover {
   .analysis-grid,
   .artifact-list,
   .chart-grid,
+  .audit-metric-grid,
+  .audit-layout,
+  .audit-action-grid,
   .candidate-browser {
     grid-template-columns: 1fr;
   }

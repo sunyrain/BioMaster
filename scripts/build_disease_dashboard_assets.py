@@ -367,6 +367,7 @@ def build_candidate(
         "scoreSourceLabel": score_source_label(score.get("score_source")),
         "scoreSourceLabelZh": score_source_label_zh(score.get("score_source")),
         "scoreFile": score.get("score_file", ""),
+        "diffdockError": score.get("error", ""),
         "category": category,
         "categoryZh": category_zh,
         **credibility,
@@ -424,6 +425,7 @@ def write_integrated_outputs(
         "scoreSource",
         "scoreSourceLabelZh",
         "scoreFile",
+        "diffdockError",
         "categoryZh",
         "credibilityScore",
         "credibilityTierZh",
@@ -467,7 +469,7 @@ def counter_rows(counter: Counter[str], limit: int | None = None) -> list[dict[s
 
 
 def publish_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
-    path_only_fields = {"confidenceSdfPath", "rank1SdfPath", "receptorPdbPath"}
+    path_only_fields = {"confidenceSdfPath", "rank1SdfPath", "receptorPdbPath", "scoreFile"}
     return {key: value for key, value in candidate.items() if key not in path_only_fields}
 
 
@@ -475,6 +477,90 @@ def publish_summary(summary: dict[str, Any]) -> dict[str, Any]:
     published = dict(summary)
     published["topCompleted"] = [publish_candidate(candidate) for candidate in summary.get("topCompleted", [])]
     return published
+
+
+def pct(numerator: int | float, denominator: int | float) -> float:
+    return float(numerator) / float(denominator) * 100 if denominator else 0.0
+
+
+def build_quality_audit(
+    candidates: list[dict[str, Any]],
+    summaries: list[dict[str, Any]],
+    total_primary_missing: int,
+    total_rerun_recovered: int,
+) -> dict[str, Any]:
+    missing_candidates = [candidate for candidate in candidates if candidate.get("status") != "completed"]
+    total_candidates = len(candidates)
+    total_missing = len(missing_candidates)
+    total_completed = total_candidates - total_missing
+    failure_modes = Counter(candidate.get("diffdockError") or "missing_output" for candidate in missing_candidates)
+    receptor_statuses = Counter(candidate.get("receptorStatus") or "NA" for candidate in missing_candidates)
+    score_sources = Counter(candidate.get("scoreSourceLabelZh") or "原始全量 DiffDock" for candidate in missing_candidates)
+
+    missing_examples = sorted(
+        missing_candidates,
+        key=lambda item: (int(float(item.get("rank") or 999999)), item.get("directionLabelZh") or ""),
+    )[:12]
+
+    return {
+        "completed": total_completed,
+        "missing": total_missing,
+        "total": total_candidates,
+        "outputRatePct": pct(total_completed, total_candidates),
+        "primaryMissing": total_primary_missing,
+        "rerunRecovered": total_rerun_recovered,
+        "recoveryRatePct": pct(total_rerun_recovered, total_primary_missing),
+        "remainingMissingPct": pct(total_missing, total_candidates),
+        "interpretationZh": (
+            "剩余缺失输出指 DiffDock 任务已经进入结构计算流程，但未产生可解析的 rank-1 confidence SDF。"
+            "当前剩余对象的受体准备状态均为 full_length_ok，主要问题更接近配体/任务输出兼容性或 DiffDock 采样失败，"
+            "不能解释为药物-靶点关系被否定。它们应进入结构计算审计队列，而不是从疾病候选中直接删除。"
+        ),
+        "directionMissing": [
+            {
+                "direction": summary["direction"],
+                "label": summary["label"],
+                "labelZh": summary["labelZh"],
+                "completed": summary["completed"],
+                "missing": summary["missing"],
+                "total": summary["completed"] + summary["missing"],
+                "missingRatePct": pct(summary["missing"], summary["completed"] + summary["missing"]),
+            }
+            for summary in summaries
+        ],
+        "failureModes": counter_rows(failure_modes),
+        "receptorStatuses": counter_rows(receptor_statuses),
+        "missingScoreSources": counter_rows(score_sources),
+        "actions": [
+            {
+                "titleZh": "优先复核配体输入",
+                "bodyZh": "检查剩余缺失对象的 SDF/SMILES、质子化状态、盐型和分子大小，排除 RDKit 或图构建失败。"
+            },
+            {
+                "titleZh": "按高分候选定向补跑",
+                "bodyZh": "先处理疾病 rank 靠前、A/B 可信度较高或多源证据一致的缺失对象，避免平均消耗计算资源。"
+            },
+            {
+                "titleZh": "保留候选但降低结构证据等级",
+                "bodyZh": "缺失输出不作为阴性结论，只表示当前没有可审阅结合姿态；后续需补二次 docking 或替代结构方法。"
+            },
+        ],
+        "topMissingExamples": [
+            {
+                "rank": candidate.get("rank"),
+                "directionLabelZh": candidate.get("directionLabelZh"),
+                "drug": candidate.get("drug"),
+                "target": candidate.get("target"),
+                "protein": candidate.get("protein"),
+                "directionScore": candidate.get("directionScore"),
+                "affinityScore": candidate.get("affinityScore"),
+                "receptorStatus": candidate.get("receptorStatus") or "NA",
+                "diffdockError": candidate.get("diffdockError") or "missing_output",
+                "nextStepZh": candidate.get("nextStepZh"),
+            }
+            for candidate in missing_examples
+        ],
+    }
 
 
 def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
@@ -599,6 +685,12 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             "diseaseDirections": len(DIRECTIONS),
         },
         "diseaseDirections": [publish_summary(summary) for summary in summaries],
+        "qualityAudit": build_quality_audit(
+            all_candidates,
+            summaries,
+            total_primary_missing,
+            total_rerun_recovered,
+        ),
         "charts": {
             "evidenceCoverage": [
                 {"label": "ConPLex screened", "value": int(expansion.get("expanded_affinity_rows_written") or 4854990)},

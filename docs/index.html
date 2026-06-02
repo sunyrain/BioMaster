@@ -26,6 +26,7 @@
         <a href="#repurposing">可信度</a>
         <a href="#analytics">图表</a>
         <a href="#candidates">代表性候选结果</a>
+        <a href="#quality-audit">质量审计</a>
         <a href="#analysis">分析</a>
         <a class="nav-action" href="assets/biomaster-external-report.pdf">PDF</a>
       </nav>
@@ -552,7 +553,84 @@
         </div>
       </section>
 
-      <section id="analysis" class="section-band alt">
+      <section id="quality-audit" class="section-band alt">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Quality audit</p>
+            <h2>结构计算质量审计</h2>
+            <p id="qualityAuditNarrative">
+              剩余缺失输出表示结构计算未产生可解析 rank-1 pose，应作为计算审计对象处理。
+            </p>
+          </div>
+          <div class="audit-chip">
+            <span>Final output rate</span>
+            <strong data-metric="fullOutputRatePct">0%</strong>
+          </div>
+        </div>
+
+        <div id="qualityAuditMetrics" class="audit-metric-grid" aria-label="DiffDock quality audit metrics"></div>
+
+        <div class="audit-layout">
+          <article class="audit-panel">
+            <div class="panel-title">
+              <h3>各疾病方向剩余缺失</h3>
+              <span>remaining missing outputs</span>
+            </div>
+            <div class="audit-table-wrap">
+              <table class="audit-table">
+                <thead>
+                  <tr>
+                    <th>方向</th>
+                    <th>完成</th>
+                    <th>缺失</th>
+                    <th>缺失率</th>
+                  </tr>
+                </thead>
+                <tbody id="qualityDirectionRows"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="audit-panel audit-panel-split">
+            <div class="panel-title">
+              <h3>失败模式与受体状态</h3>
+              <span>failure mode audit</span>
+            </div>
+            <div class="audit-subpanel">
+              <h4>DiffDock 输出失败原因</h4>
+              <div id="qualityFailureModes" class="stacked-bars"></div>
+            </div>
+            <div class="audit-subpanel">
+              <h4>受体准备状态</h4>
+              <div id="qualityReceptorStatuses" class="stacked-bars"></div>
+            </div>
+          </article>
+        </div>
+
+        <div id="qualityActions" class="audit-action-grid" aria-label="Next audit actions"></div>
+
+        <article class="audit-panel audit-panel-wide">
+          <div class="panel-title">
+            <h3>高优先级缺失输出样例</h3>
+            <span>for targeted rerun review</span>
+          </div>
+          <div class="audit-table-wrap">
+            <table class="audit-table audit-table-wide">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Drug-target</th>
+                  <th>Scores</th>
+                  <th>Audit reason</th>
+                </tr>
+              </thead>
+              <tbody id="qualityMissingRows"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section id="analysis" class="section-band">
         <div class="section-heading">
           <p class="eyebrow">Interpretation</p>
           <h2>结果如何使用</h2>

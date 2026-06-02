@@ -384,6 +384,108 @@ function renderStackedBars(containerId, rows) {
     .join("");
 }
 
+function renderQualityAudit() {
+  const audit = data.qualityAudit || {};
+  const narrative = document.getElementById("qualityAuditNarrative");
+  if (narrative) narrative.textContent = audit.interpretationZh || "";
+
+  const metrics = document.getElementById("qualityAuditMetrics");
+  if (metrics) {
+    const cards = [
+      ["最终完成率", formatPct(audit.outputRatePct), `${formatInt(audit.completed)} / ${formatInt(audit.total)} representatives`],
+      ["补跑追回", formatInt(audit.rerunRecovered), `${formatPct(audit.recoveryRatePct)} of primary missing`],
+      ["剩余缺失", formatInt(audit.missing), `${formatPct(audit.remainingMissingPct)} of docking set`],
+      ["原始缺失", formatInt(audit.primaryMissing), "before priority reruns"],
+    ];
+    metrics.innerHTML = cards
+      .map(
+        ([label, value, note]) => `
+          <article class="audit-metric-card">
+            <span>${escapeHtml(label)}</span>
+            <strong>${escapeHtml(value)}</strong>
+            <small>${escapeHtml(note)}</small>
+          </article>
+        `,
+      )
+      .join("");
+  }
+
+  const directionRows = document.getElementById("qualityDirectionRows");
+  if (directionRows && audit.directionMissing?.length) {
+    directionRows.innerHTML = audit.directionMissing
+      .map(
+        (row) => `
+          <tr>
+            <td>${escapeHtml(row.labelZh || row.label)}</td>
+            <td>${formatInt(row.completed)}</td>
+            <td>${formatInt(row.missing)}</td>
+            <td>${formatPct(row.missingRatePct)}</td>
+          </tr>
+        `,
+      )
+      .join("");
+  }
+
+  const failureModes = document.getElementById("qualityFailureModes");
+  if (failureModes) {
+    renderStackedBars(
+      "qualityFailureModes",
+      (audit.failureModes || []).map((row) => ({ label: row.label, value: row.value })),
+    );
+  }
+
+  const receptorStatuses = document.getElementById("qualityReceptorStatuses");
+  if (receptorStatuses) {
+    renderStackedBars(
+      "qualityReceptorStatuses",
+      (audit.receptorStatuses || []).map((row) => ({ label: row.label, value: row.value })),
+    );
+  }
+
+  const actionList = document.getElementById("qualityActions");
+  if (actionList && audit.actions?.length) {
+    actionList.innerHTML = audit.actions
+      .map(
+        (action, index) => `
+          <article class="audit-action-card">
+            <span>${String(index + 1).padStart(2, "0")}</span>
+            <h3>${escapeHtml(action.titleZh)}</h3>
+            <p>${escapeHtml(action.bodyZh)}</p>
+          </article>
+        `,
+      )
+      .join("");
+  }
+
+  const missingRows = document.getElementById("qualityMissingRows");
+  if (missingRows && audit.topMissingExamples?.length) {
+    missingRows.innerHTML = audit.topMissingExamples
+      .map(
+        (candidate) => `
+          <tr>
+            <td>
+              <span class="rank">#${escapeHtml(candidate.rank)}</span>
+              <small>${escapeHtml(candidate.directionLabelZh || "")}</small>
+            </td>
+            <td>
+              <strong>${escapeHtml(candidate.drug)}</strong>
+              <small>${escapeHtml(candidate.target)} · ${escapeHtml(candidate.protein)}</small>
+            </td>
+            <td>
+              <span>${formatScore(candidate.directionScore, 3)}</span>
+              <small>Affinity ${formatScore(candidate.affinityScore, 3)}</small>
+            </td>
+            <td>
+              <span>${escapeHtml(candidate.diffdockError || "missing_output")}</span>
+              <small>${escapeHtml(candidate.receptorStatus || "NA")}</small>
+            </td>
+          </tr>
+        `,
+      )
+      .join("");
+  }
+}
+
 function renderCharts() {
   const charts = data.charts || {};
   drawBarChart(document.getElementById("targetChart"), charts.topTargets);
@@ -402,4 +504,5 @@ renderDiseaseDirections();
 setupDirectionControls();
 setupCandidateControls();
 renderCandidates();
+renderQualityAudit();
 renderCharts();
