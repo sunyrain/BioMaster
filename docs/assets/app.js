@@ -4,9 +4,19 @@ const palette = ["#155fa8", "#148f8b", "#5f9648", "#d87832", "#8a5a9e", "#52606d
 
 let activeFilter = "completed";
 let activeDirection = "all";
-let activeStructure = 0;
-let viewer = null;
-let viewerSpinning = false;
+let activeCandidateIndex = null;
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => (
+    {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    }[char]
+  ));
+}
 
 function formatScore(value, digits = 6) {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return "NA";
@@ -31,6 +41,32 @@ function statusLabelZh(status) {
   if (status === "completed") return "结构完成";
   if (status === "not_yet_run") return "尚未运行";
   return "缺失输出";
+}
+
+function tierClass(value) {
+  const tier = String(value || "").trim().charAt(0).toLowerCase();
+  return ["a", "b", "c", "d"].includes(tier) ? tier : "c";
+}
+
+function scoreSourceLabel(candidate) {
+  if (!candidate || candidate.status !== "completed") return "待结构补跑";
+  return candidate.scoreSourceLabelZh || candidate.scoreSourceLabel || "DiffDock 来源未标注";
+}
+
+function scoreSourceClass(candidate) {
+  if (!candidate || candidate.status !== "completed") return "pending";
+  return candidate.scoreSource === "priority_rerun" ? "recovered" : "primary";
+}
+
+function renderPath(pathText) {
+  if (!pathText) return "";
+  return String(pathText)
+    .split("→")
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .slice(0, 7)
+    .map((item) => `<span>${escapeHtml(item)}</span>`)
+    .join("");
 }
 
 function setMetricValues() {
@@ -103,36 +139,149 @@ function renderCandidates() {
   if (!tbody || !searchInput) return;
 
   const search = searchInput.value.trim().toLowerCase();
-  const rows = candidates.filter((candidate) => {
-    const matchesFilter = activeFilter === "all" || candidate.status === activeFilter;
-    const matchesDirection = activeDirection === "all" || candidate.direction === activeDirection;
-    const haystack = `${candidate.drug} ${candidate.target} ${candidate.protein} ${candidate.pairId} ${candidate.directionLabelZh || ""}`.toLowerCase();
-    return matchesFilter && matchesDirection && haystack.includes(search);
-  });
+  const rows = candidates
+    .map((candidate, index) => ({ candidate, index }))
+    .filter(({ candidate }) => {
+      const matchesFilter = activeFilter === "all" || candidate.status === activeFilter;
+      const matchesDirection = activeDirection === "all" || candidate.direction === activeDirection;
+      const haystack = (
+        `${candidate.drug} ${candidate.target} ${candidate.protein} ${candidate.pairId} ${candidate.directionLabelZh || ""} ` +
+        `${candidate.credibilityTierZh || ""} ${candidate.repurposingPostureZh || ""} ${candidate.evidencePathZh || ""} ` +
+        `${scoreSourceLabel(candidate)}`
+      ).toLowerCase();
+      return matchesFilter && matchesDirection && haystack.includes(search);
+    });
+
+  const countNode = document.getElementById("candidateCount");
+  if (countNode) countNode.textContent = `${formatInt(rows.length)} / ${formatInt(candidates.length)}`;
+
+  if (!rows.length) {
+    activeCandidateIndex = null;
+    tbody.innerHTML = `<tr><td class="candidate-empty" colspan="4">没有匹配当前筛选条件的候选。</td></tr>`;
+    renderCandidateDetail(null);
+    return;
+  }
+
+  if (activeCandidateIndex === null || !rows.some((row) => row.index === activeCandidateIndex)) {
+    activeCandidateIndex = rows[0].index;
+  }
 
   const primaryScoreLabel = data.labels?.primaryScore || "Affinity";
   tbody.innerHTML = rows
     .map(
-      (candidate) => {
+      ({ candidate, index }) => {
         const primaryScore = candidate.affinityScore ?? candidate.diseasePriority;
+        const directionScore = candidate.directionScore ?? primaryScore;
+        const selected = index === activeCandidateIndex ? "selected" : "";
         return `
-        <tr>
-          <td><span class="rank">#${candidate.rank}</span><br><small>${candidate.directionLabelZh || candidate.directionLabel || ""}</small></td>
-          <td>${candidate.drug}<br><small>${candidate.drugId}</small></td>
-          <td><strong>${candidate.target}</strong><br><small>${candidate.protein} · ${candidate.representedPairCount || 1} represented</small></td>
-          <td><span class="score-label">${primaryScoreLabel}</span><br>${formatScore(candidate.directionScore ?? primaryScore)}</td>
-          <td><span class="score-label">Affinity</span><br>${formatScore(candidate.affinityScore ?? primaryScore)}</td>
-          <td>${formatScore(candidate.diffdock, 2)}</td>
+        <tr class="${selected}" data-candidate-index="${index}" tabindex="0">
           <td>
-            <span class="status-pill ${candidate.status}">${statusLabelZh(candidate.status)}</span>
-            <br><small>${candidate.categoryZh || ""}</small>
+            <span class="rank">#${escapeHtml(candidate.rank)}</span>
+            <small>${escapeHtml(candidate.directionLabelZh || candidate.directionLabel || "")}</small>
           </td>
-          <td class="rationale-cell">${candidate.rationaleZh || candidate.evidenceSummaryZh || ""}</td>
+          <td class="candidate-identity">
+            <strong>${escapeHtml(candidate.drug)}</strong>
+            <small>${escapeHtml(candidate.target)} · ${escapeHtml(candidate.protein)}</small>
+            <small>${formatInt(candidate.representedPairCount || 1)} represented records</small>
+          </td>
+          <td>
+            <div class="score-stack">
+              <span><b>${escapeHtml(primaryScoreLabel)}</b>${formatScore(directionScore, 3)}</span>
+              <span><b>Affinity</b>${formatScore(candidate.affinityScore ?? primaryScore, 3)}</span>
+              <span><b>Docking</b>${formatScore(candidate.diffdock, 2)}</span>
+            </div>
+          </td>
+          <td class="candidate-evidence-compact">
+            <span class="tier-pill ${tierClass(candidate.credibilityTier)}">${escapeHtml(candidate.credibilityTierZh || "C｜待补证据")}</span>
+            <span class="status-pill ${escapeHtml(candidate.status)}">${escapeHtml(statusLabelZh(candidate.status))}</span>
+            <span class="source-pill ${scoreSourceClass(candidate)}">${escapeHtml(scoreSourceLabel(candidate))}</span>
+            <small>${escapeHtml(candidate.repurposingPostureZh || candidate.categoryZh || "")}</small>
+          </td>
         </tr>
       `;
       },
     )
     .join("");
+
+  tbody.querySelectorAll("[data-candidate-index]").forEach((row) => {
+    const activate = () => {
+      activateCandidate(Number(row.dataset.candidateIndex));
+    };
+    row.addEventListener("click", activate);
+    row.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activate();
+      }
+    });
+  });
+  renderCandidateDetail(candidates[activeCandidateIndex]);
+}
+
+function activateCandidate(index) {
+  activeCandidateIndex = index;
+  document.querySelectorAll("#candidateRows [data-candidate-index]").forEach((row) => {
+    row.classList.toggle("selected", Number(row.dataset.candidateIndex) === activeCandidateIndex);
+  });
+  renderCandidateDetail(candidates[activeCandidateIndex]);
+}
+
+function renderCandidateDetail(candidate) {
+  const container = document.getElementById("candidateDetail");
+  if (!container) return;
+  if (!candidate) {
+    container.innerHTML = `
+      <div class="candidate-detail-empty">
+        <h3>暂无候选</h3>
+        <p>调整疾病方向、结构状态或搜索关键词后查看详情。</p>
+      </div>
+    `;
+    return;
+  }
+
+  const primaryScoreLabel = data.labels?.primaryScore || "Affinity";
+  const primaryScore = candidate.affinityScore ?? candidate.diseasePriority;
+  const directionScore = candidate.directionScore ?? primaryScore;
+  container.innerHTML = `
+    <div class="candidate-detail-header">
+      <span class="rank">#${escapeHtml(candidate.rank)} · ${escapeHtml(candidate.directionLabelZh || candidate.directionLabel || "")}</span>
+      <h3>${escapeHtml(candidate.drug)}</h3>
+      <p>${escapeHtml(candidate.target)} · ${escapeHtml(candidate.proteinName || candidate.protein || "")}</p>
+      <div class="candidate-detail-tags">
+        <span class="tier-pill ${tierClass(candidate.credibilityTier)}">${escapeHtml(candidate.credibilityTierZh || "C｜待补证据")}</span>
+        <span class="status-pill ${escapeHtml(candidate.status)}">${escapeHtml(statusLabelZh(candidate.status))}</span>
+        <span class="source-pill ${scoreSourceClass(candidate)}">${escapeHtml(scoreSourceLabel(candidate))}</span>
+      </div>
+    </div>
+    <div class="detail-score-grid">
+      <div><span>${escapeHtml(primaryScoreLabel)}</span><strong>${formatScore(directionScore, 3)}</strong></div>
+      <div><span>Affinity</span><strong>${formatScore(candidate.affinityScore ?? primaryScore, 3)}</strong></div>
+      <div><span>DiffDock</span><strong>${formatScore(candidate.diffdock, 2)}</strong></div>
+      <div><span>Credibility</span><strong>${formatScore(candidate.credibilityScore, 1)}</strong></div>
+    </div>
+    <section class="candidate-detail-block">
+      <h4>证据路径</h4>
+      <div class="evidence-path">${renderPath(candidate.evidencePathZh)}</div>
+    </section>
+    <section class="candidate-detail-block">
+      <h4>中文候选合理性解释</h4>
+      <p>${escapeHtml(candidate.rationaleZh || candidate.evidenceSummaryZh || "")}</p>
+    </section>
+    <section class="candidate-detail-block">
+      <h4>下一步验证</h4>
+      <p>${escapeHtml(candidate.nextStepZh || "")}</p>
+      <p class="validation-gates">${escapeHtml(candidate.validationGatesZh || "")}</p>
+    </section>
+    <dl class="candidate-detail-meta">
+      <div><dt>Pair ID</dt><dd>${escapeHtml(candidate.pairId || "")}</dd></div>
+      <div><dt>Drug ID</dt><dd>${escapeHtml(candidate.drugId || "")}</dd></div>
+      <div><dt>Accession</dt><dd>${escapeHtml(candidate.protein || "")}</dd></div>
+      <div><dt>Therapeutic area</dt><dd>${escapeHtml(candidate.therapeuticArea || "NA")}</dd></div>
+      <div><dt>Indication</dt><dd>${escapeHtml(candidate.indication || "NA")}</dd></div>
+      <div><dt>Score source</dt><dd>${escapeHtml(scoreSourceLabel(candidate))}</dd></div>
+      <div><dt>Represented records</dt><dd>${formatInt(candidate.representedPairCount || 1)}</dd></div>
+    </dl>
+  `;
 }
 
 function setupCandidateControls() {
@@ -240,162 +389,12 @@ function renderCharts() {
   drawBarChart(document.getElementById("targetChart"), charts.topTargets);
   drawDonutChart(document.getElementById("evidenceChart"), charts.evidenceCoverage);
   renderStackedBars("statusBars", charts.structuralStatus);
+  renderStackedBars("credibilityBars", charts.credibilityTiers);
+  renderStackedBars("postureBars", charts.validationPostures);
   renderStackedBars("layerBars", [
     ...(charts.txgnnStatus || []).map((row) => ({ label: row.label, value: row.value })),
     ...(charts.receptorStatus || []).map((row) => ({ label: row.label, value: row.value })),
   ]);
-}
-
-function parseSdf2D(sdf) {
-  const lines = sdf.split(/\r?\n/);
-  const counts = lines[3] || "";
-  const atomCount = Number.parseInt(counts.slice(0, 3), 10);
-  const bondCount = Number.parseInt(counts.slice(3, 6), 10);
-  if (!atomCount || !bondCount) return null;
-  const atoms = lines.slice(4, 4 + atomCount).map((line) => ({
-    x: Number.parseFloat(line.slice(0, 10)),
-    y: Number.parseFloat(line.slice(10, 20)),
-    element: line.slice(31, 34).trim(),
-  }));
-  const bonds = lines.slice(4 + atomCount, 4 + atomCount + bondCount).map((line) => ({
-    a: Number.parseInt(line.slice(0, 3), 10) - 1,
-    b: Number.parseInt(line.slice(3, 6), 10) - 1,
-  }));
-  return { atoms, bonds };
-}
-
-function drawLigandSketch(sdf) {
-  const canvas = document.getElementById("ligandSketch");
-  if (!canvas) return;
-  const ctx = clearCanvas(canvas);
-  const parsed = parseSdf2D(sdf);
-  if (!parsed) {
-    ctx.fillStyle = "#657083";
-    ctx.fillText("Ligand sketch unavailable", 20, 30);
-    return;
-  }
-
-  const xs = parsed.atoms.map((atom) => atom.x);
-  const ys = parsed.atoms.map((atom) => atom.y);
-  const minX = Math.min(...xs);
-  const maxX = Math.max(...xs);
-  const minY = Math.min(...ys);
-  const maxY = Math.max(...ys);
-  const scale = Math.min(320 / Math.max(maxX - minX, 1), 200 / Math.max(maxY - minY, 1));
-  const tx = 50 - minX * scale + (320 - (maxX - minX) * scale) / 2;
-  const ty = 30 - minY * scale + (200 - (maxY - minY) * scale) / 2;
-
-  const project = (atom) => ({ x: atom.x * scale + tx, y: canvas.height - (atom.y * scale + ty) });
-  ctx.lineCap = "round";
-  ctx.strokeStyle = "#52606d";
-  ctx.lineWidth = 2;
-  parsed.bonds.forEach((bond) => {
-    const a = project(parsed.atoms[bond.a]);
-    const b = project(parsed.atoms[bond.b]);
-    ctx.beginPath();
-    ctx.moveTo(a.x, a.y);
-    ctx.lineTo(b.x, b.y);
-    ctx.stroke();
-  });
-
-  parsed.atoms.forEach((atom) => {
-    const p = project(atom);
-    const isCarbon = atom.element === "C";
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, isCarbon ? 3 : 5, 0, Math.PI * 2);
-    ctx.fillStyle = isCarbon ? "#148f8b" : "#d87832";
-    ctx.fill();
-    if (!isCarbon) {
-      ctx.fillStyle = "#162131";
-      ctx.font = "10px Inter, sans-serif";
-      ctx.textAlign = "center";
-      ctx.fillText(atom.element, p.x, p.y - 8);
-    }
-  });
-  ctx.textAlign = "left";
-}
-
-async function readText(url) {
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`Failed to load ${url}`);
-  return response.text();
-}
-
-function setStructureMeta(sample) {
-  document.getElementById("structureRank").textContent = `Rank #${sample.rank}`;
-  document.getElementById("structureTitle").textContent = `${sample.drug} · ${sample.target}`;
-  document.getElementById("structurePair").textContent = sample.pairId;
-  document.getElementById("structureConfidence").textContent = formatScore(sample.confidence, 2);
-  document.getElementById("structureConsensus").textContent = formatScore(sample.consensus);
-  document.getElementById("structureReceptor").textContent = `${sample.protein} · ${sample.receptorStatus}`;
-  const directionNode = document.getElementById("structureDirection");
-  if (directionNode) directionNode.textContent = sample.directionLabelZh || sample.direction || "";
-  const rationaleNode = document.getElementById("structureRationale");
-  if (rationaleNode) rationaleNode.textContent = sample.rationaleZh || "";
-}
-
-async function loadStructure(index) {
-  const sample = data.structureSamples?.[index];
-  const status = document.getElementById("viewerStatus");
-  if (!sample || !status) return;
-  activeStructure = index;
-  setStructureMeta(sample);
-  document.querySelectorAll("#structureTabs button").forEach((button, idx) => {
-    button.classList.toggle("active", idx === index);
-  });
-
-  status.textContent = "Loading local PDB/SDF assets...";
-  try {
-    const [receptorText, ligandText] = await Promise.all([readText(sample.receptorUrl), readText(sample.ligandUrl)]);
-    drawLigandSketch(ligandText);
-    if (!window.$3Dmol) {
-      status.textContent = "3Dmol is unavailable; showing ligand sketch only.";
-      return;
-    }
-    const element = document.getElementById("structureViewer");
-    element.innerHTML = "";
-    viewer = window.$3Dmol.createViewer(element, { backgroundColor: "#f7fafc" });
-    const receptor = viewer.addModel(receptorText, "pdb");
-    receptor.setStyle({}, { cartoon: { color: "spectrum", opacity: 0.72 } });
-    const ligand = viewer.addModel(ligandText, "sdf");
-    ligand.setStyle({}, { stick: { radius: 0.22, colorscheme: "greenCarbon" } });
-    viewer.zoomTo();
-    viewer.render();
-    viewer.spin(viewerSpinning);
-    status.textContent = "Loaded receptor cartoon and DiffDock rank-1 ligand.";
-  } catch (error) {
-    status.textContent = error.message;
-  }
-}
-
-function setupStructures() {
-  const tabs = document.getElementById("structureTabs");
-  if (!tabs || !data.structureSamples?.length) return;
-  tabs.innerHTML = data.structureSamples
-    .map(
-      (sample, index) => `
-        <button type="button" class="${index === 0 ? "active" : ""}" data-structure="${index}">
-          #${sample.rank} ${sample.drug}<br><small>${sample.directionLabelZh || ""} · ${sample.target} · ${sample.protein}</small>
-        </button>
-      `,
-    )
-    .join("");
-  tabs.querySelectorAll("[data-structure]").forEach((button) => {
-    button.addEventListener("click", () => loadStructure(Number(button.dataset.structure)));
-  });
-  document.getElementById("toggleSpin")?.addEventListener("click", () => {
-    viewerSpinning = !viewerSpinning;
-    if (viewer) viewer.spin(viewerSpinning);
-  });
-  document.getElementById("resetView")?.addEventListener("click", () => {
-    if (viewer) {
-      viewer.zoomTo();
-      viewer.render();
-    } else {
-      loadStructure(activeStructure);
-    }
-  });
-  loadStructure(0);
 }
 
 setMetricValues();
@@ -404,4 +403,3 @@ setupDirectionControls();
 setupCandidateControls();
 renderCandidates();
 renderCharts();
-setupStructures();

@@ -23,10 +23,9 @@
         <a href="#architecture">架构</a>
         <a href="#workflow">流程</a>
         <a href="#evidence">解释</a>
+        <a href="#repurposing">可信度</a>
         <a href="#analytics">图表</a>
-        <a href="#interpretability">Top 解释性</a>
-        <a href="#structures">结构</a>
-        <a href="#candidates">候选</a>
+        <a href="#candidates">代表性候选结果</a>
         <a href="#analysis">分析</a>
         <a class="nav-action" href="assets/biomaster-external-report.pdf">PDF</a>
       </nav>
@@ -91,24 +90,24 @@
         </div>
         <div class="metric-grid" aria-label="Full structural extension audit">
           <article class="metric-card">
-            <span>Completed chunks</span>
-            <strong data-metric="fullScoreFiles">0</strong>
-            <small>of 97 DiffDock chunks</small>
+            <span>Primary completed</span>
+            <strong data-metric="primaryCompletedOutputs">0</strong>
+            <small>original full DiffDock outputs</small>
           </article>
           <article class="metric-card">
-            <span>Completed poses</span>
-            <strong data-metric="fullCompletedOutputs">0</strong>
-            <small>rank-1 ligand outputs</small>
+            <span>Rerun recovered</span>
+            <strong data-metric="rerunRecoveredOutputs">0</strong>
+            <small>priority missing-output recoveries</small>
           </article>
           <article class="metric-card">
-            <span>Coverage</span>
-            <strong data-metric="fullRowProgressPct">0%</strong>
-            <small>representative docking set</small>
-          </article>
-          <article class="metric-card">
-            <span>Output rate</span>
+            <span>Final output rate</span>
             <strong data-metric="fullOutputRatePct">0%</strong>
-            <small>among representative pairs</small>
+            <small>primary plus recovered outputs</small>
+          </article>
+          <article class="metric-card">
+            <span>Still missing</span>
+            <strong data-metric="fullMissingOutputs">0</strong>
+            <small>remaining structure audit queue</small>
           </article>
         </div>
       </section>
@@ -194,7 +193,7 @@
             <h3>候选与汇报产物</h3>
             <ul>
               <li>亲和-结构共识排序候选</li>
-              <li>结构浏览与图表分析</li>
+              <li>结构评分与图表分析</li>
               <li>正式汇报与验证短名单</li>
             </ul>
           </article>
@@ -389,6 +388,63 @@
         </div>
       </section>
 
+      <section id="repurposing" class="section-band">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Drug repurposing evidence loop</p>
+            <h2>老药新用可信度闭环</h2>
+            <p>
+              国际老药新用流程通常不会只看亲和分数或 docking 分数，而是把药物-疾病、靶点-疾病、结构、安全性和临床证据分层审阅。
+              本页将每个候选标注为 A-D 可信度等级，并给出证据路径和下一步验证动作。
+            </p>
+          </div>
+          <div class="audit-chip">
+            <span>Evidence tiers</span>
+            <strong>A-D grading</strong>
+          </div>
+        </div>
+        <div class="repurposing-grid">
+          <article class="repurpose-card tier-a">
+            <span>A</span>
+            <h3>多源强证据</h3>
+            <p>疾病方向、ConPLex 亲和、Open Targets/TxGNN 或治疗领域证据一致，并已有结构姿态；优先区分已知召回和可转化新用途。</p>
+          </article>
+          <article class="repurpose-card tier-b">
+            <span>B</span>
+            <h3>机制邻近优先</h3>
+            <p>疾病和互作信号一致，但仍需补充通路、组织表达、疾病亚型和二次结构评分，适合进入专家审阅短名单。</p>
+          </article>
+          <article class="repurpose-card tier-c">
+            <span>C</span>
+            <h3>探索性再定位</h3>
+            <p>具备模型信号但疾病证据不足，应补 CMap/LINCS 转录组反转、ADMET、安全性和反证检索。</p>
+          </article>
+          <article class="repurpose-card tier-d">
+            <span>D</span>
+            <h3>结构补跑或低优先级</h3>
+            <p>高分但 DiffDock 缺失输出时进入结构补跑；证据不足时保留为背景候选，等待新证据增强。</p>
+          </article>
+        </div>
+        <div class="validation-grid">
+          <article>
+            <h3>已知适应症/靶点核查</h3>
+            <p>先判断候选是已知正控召回、同机制扩展，还是潜在新用途，避免把已知关系误报为新发现。</p>
+          </article>
+          <article>
+            <h3>疾病签名反转</h3>
+            <p>对重点候选补 CMap/LINCS 或公开转录组签名，检查药物扰动是否能反转疾病表达状态。</p>
+          </article>
+          <article>
+            <h3>安全性和可转化性</h3>
+            <p>针对不同疾病方向补 BBB、hERG、CYP/DDI、肝肾毒性、剂量窗口和禁忌证审阅。</p>
+          </article>
+          <article>
+            <h3>结构与口袋审计</h3>
+            <p>对 A/B 级候选做二次 docking、pocket 对齐、已知配体口袋比较和受体结构准备复核。</p>
+          </article>
+        </div>
+      </section>
+
       <section id="analytics" class="section-band">
         <div class="section-heading split">
           <div>
@@ -427,241 +483,25 @@
           </article>
           <article class="chart-panel">
             <div class="panel-title">
+              <h3>Repurposing credibility</h3>
+              <span>A-D evidence tiers</span>
+            </div>
+            <div id="credibilityBars" class="stacked-bars"></div>
+          </article>
+          <article class="chart-panel">
+            <div class="panel-title">
+              <h3>Validation posture</h3>
+              <span>next review action</span>
+            </div>
+            <div id="postureBars" class="stacked-bars"></div>
+          </article>
+          <article class="chart-panel">
+            <div class="panel-title">
               <h3>Preparation layers</h3>
               <span>selection and receptor status</span>
             </div>
             <div id="layerBars" class="stacked-bars"></div>
           </article>
-        </div>
-      </section>
-
-      <section id="interpretability" class="section-band alt">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Interpretability audit</p>
-            <h2>Top 候选可解释性审计</h2>
-            <p>
-              对 Top 代表候选进行解释性审计后，可以看到多组已知药理关系被重新找回，也有一些同家族受体或
-              kinase 的合理扩展候选。该模块用于判断结果是否具有生物学解释基础，而不是只依赖模型分数排序。
-            </p>
-          </div>
-          <div class="audit-chip">
-            <span>Reviewed examples</span>
-            <strong>11 audit cases</strong>
-          </div>
-        </div>
-
-        <div class="interpret-grid">
-          <article class="interpret-card positive">
-            <span>已知药理关系召回</span>
-            <h3>强阳性关系</h3>
-            <p>Naltrexone/Naloxone - OPRK1、Dorzolamide - CA2、Gefitinib - EGFR、Cyclosporine - PPIA、Octreotide - SSTR2 等关系与已知药理学一致，可作为流程阳性对照和一致性证据。</p>
-          </article>
-          <article class="interpret-card family">
-            <span>同家族机制扩展</span>
-            <h3>可解释扩展</h3>
-            <p>部分结果落在 GPCR、opioid receptor、serotonin receptor、kinase 等相关家族内，适合进入文献审阅和二次结构验证，但不能直接视为已验证靶点。</p>
-          </article>
-          <article class="interpret-card audit">
-            <span>高亲和但需结构审计</span>
-            <h3>缺失输出对象</h3>
-            <p>少数高分候选仍为 missing output，例如 Quizartinib - KIT、Dorzolamide - CA9、Buprenorphine - OPRK1，应作为结构准备或参数补跑审计对象。</p>
-          </article>
-        </div>
-
-        <div class="interpret-summary">
-          <div>
-            <span>Result signal</span>
-            <strong>已知药理关系被 Top 排序重新找回</strong>
-            <p>这说明当前 affinity ranking 不是随机高分列表，而能在大规模 drug-target 组合中恢复具有明确药理背景的配对。</p>
-          </div>
-          <div>
-            <span>Structural evidence</span>
-            <strong>完成 DiffDock 的候选可进入结构审阅</strong>
-            <p>DiffDock 输出提供结合姿态线索，用于专家检查 pocket、配体构象和受体结构准备质量。</p>
-          </div>
-          <div>
-            <span>Audit queue</span>
-            <strong>missing output 是结构审计项，不是否定证据</strong>
-            <p>缺失输出通常来自 ligand/receptor 准备、图构建或采样失败，应与低分候选区分处理。</p>
-          </div>
-        </div>
-
-        <div class="table-wrap interpret-table">
-          <table>
-            <thead>
-              <tr>
-                <th>类别</th>
-                <th>Candidate</th>
-                <th>Rank</th>
-                <th>Affinity</th>
-                <th>Docking</th>
-                <th>中文候选合理性解释</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="evidence-tag known">已知</span></td>
-                <td>Afatinib Dimaleate - EGFR</td>
-                <td>肿瘤 #1</td>
-                <td>0.965</td>
-                <td>-0.45</td>
-                <td>EGFR 靶向药与肿瘤方向证据、Open Targets/TxGNN 癌症信号一致，并已有可审阅结构姿态。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag known">已知</span></td>
-                <td>Gefitinib - EGFR</td>
-                <td>肿瘤 #3</td>
-                <td>0.971</td>
-                <td>-0.96</td>
-                <td>已知 EGFR 激酶抑制剂关系被召回，说明肿瘤方向可以恢复明确靶向治疗信号。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag known">已知</span></td>
-                <td>Naloxone Hydrochloride - OPRK1</td>
-                <td>神经/精神 #1</td>
-                <td>0.981</td>
-                <td>-2.23</td>
-                <td>高亲和预测与阿片受体药理背景一致，说明模型能在大规模候选中恢复已知受体关系。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag known">已知</span></td>
-                <td>Dorzolamide Hydrochloride - CA2</td>
-                <td>心血管 #3</td>
-                <td>0.953</td>
-                <td>0.50</td>
-                <td>碳酸酐酶抑制剂与 CA2 的关系被召回，疾病方向和靶点机制均较容易解释。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag known">已知</span></td>
-                <td>Maraviroc - CXCR4</td>
-                <td>感染 #2</td>
-                <td>0.886</td>
-                <td>-2.98</td>
-                <td>抗感染药物与免疫/趋化因子受体方向存在疾病类别支持，适合作为感染方向机制讨论案例。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag known">已知</span></td>
-                <td>Octreotide Acetate - SSTR2</td>
-                <td>心血管 #2</td>
-                <td>0.965</td>
-                <td>-3.03</td>
-                <td>生长抑素受体关系与药物类别一致，属于可解释的受体-药物匹配。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag family">扩展</span></td>
-                <td>Dasatinib - FRK</td>
-                <td>肿瘤 #10</td>
-                <td>0.929</td>
-                <td>-4.11</td>
-                <td>属于 kinase 家族内的可解释扩展候选，后续需要结合选择性、突变背景和文献证据审阅。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag family">扩展</span></td>
-                <td>Palonosetron Hydrochloride - HTR3A</td>
-                <td>肿瘤 #9</td>
-                <td>0.929</td>
-                <td>-1.46</td>
-                <td>5-HT 受体方向与药物类别一致，适合作为同家族受体机制扩展候选。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag rescue">审计</span></td>
-                <td>Quizartinib Dihydrochloride - KIT</td>
-                <td>肿瘤 #6</td>
-                <td>0.937</td>
-                <td>missing</td>
-                <td>肿瘤方向证据较强但本轮缺失结构输出，适合作为定向结构补跑和受体准备审计对象。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag rescue">审计</span></td>
-                <td>Dorzolamide Hydrochloride - CA9</td>
-                <td>心血管 #4</td>
-                <td>0.941</td>
-                <td>missing</td>
-                <td>疾病方向和亲和预测均较高，但结构输出缺失；应检查 CA9 受体结构、配体输入和图构建日志。</td>
-              </tr>
-              <tr>
-                <td><span class="evidence-tag rescue">审计</span></td>
-                <td>Buprenorphine - OPRK1</td>
-                <td>神经/精神 #2</td>
-                <td>0.960</td>
-                <td>missing</td>
-                <td>阿片受体候选亲和分数高，适合进入定向结构补跑和文献复核。</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="interpret-actions">
-          <h3>审计结论</h3>
-          <p>
-            当前 Top 结果已经具备可解释的药理学信号：已知关系用于证明流程能恢复合理配对；同家族扩展用于生成候选假设；
-            高亲和但缺失结构输出的对象进入结构审计队列。下一步应从 completed 且解释性较强的候选中选出 20-50 个进行文献审阅，
-            同时对 Quizartinib - KIT、Dorzolamide - CA9、Buprenorphine - OPRK1 等 missing-output 高价值候选做定向补跑。
-          </p>
-        </div>
-      </section>
-
-      <section id="structures" class="section-band">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Structure viewer</p>
-            <h2>代表性结构渲染</h2>
-            <p>
-              这里加载疾病方向候选中的本地 receptor PDB 与 DiffDock rank-1 ligand SDF，用于快速查看候选结合姿态。
-              结构视图用于解释和审阅，不替代实验验证。
-            </p>
-          </div>
-          <div class="structure-actions" role="group" aria-label="Structure controls">
-            <button type="button" id="toggleSpin">Spin</button>
-            <button type="button" id="resetView">Reset</button>
-          </div>
-        </div>
-        <div class="structure-layout">
-          <div class="structure-viewer-shell">
-            <div id="structureViewer" class="structure-viewer" aria-label="3D molecular viewer"></div>
-            <p id="viewerStatus" class="viewer-status">Loading structure viewer...</p>
-          </div>
-          <aside class="structure-side">
-            <div id="structureTabs" class="structure-tabs" role="tablist" aria-label="Structure samples"></div>
-            <div class="structure-meta">
-              <span id="structureRank"></span>
-              <h3 id="structureTitle"></h3>
-              <dl>
-                <div>
-                  <dt>Direction</dt>
-                  <dd id="structureDirection"></dd>
-                </div>
-                <div>
-                  <dt>Pair</dt>
-                  <dd id="structurePair"></dd>
-                </div>
-                <div>
-                  <dt>DiffDock confidence</dt>
-                  <dd id="structureConfidence"></dd>
-                </div>
-                <div>
-                  <dt>Consensus</dt>
-                  <dd id="structureConsensus"></dd>
-                </div>
-                <div>
-                  <dt>Receptor</dt>
-                  <dd id="structureReceptor"></dd>
-                </div>
-              </dl>
-            </div>
-            <div class="ligand-panel">
-              <div class="panel-title">
-                <h3>Ligand sketch</h3>
-                <span>SDF projection</span>
-              </div>
-              <canvas id="ligandSketch" width="420" height="260" aria-label="Ligand 2D sketch"></canvas>
-            </div>
-            <div class="structure-rationale">
-              <h3>中文候选解释</h3>
-              <p id="structureRationale"></p>
-            </div>
-          </aside>
         </div>
       </section>
 
@@ -671,8 +511,8 @@
             <p class="eyebrow">Structure-enhanced consensus</p>
             <h2>代表性候选结果</h2>
             <p>
-              候选表默认展示已获得 DiffDock rank-1 姿态的疾病方向代表项，并附上中文合理性解释。
-              “缺失输出”是结构审计状态，不代表候选无效；它应进入结构准备或参数补跑审计。
+              这里是当前筛选结果的交互式数据工作台，默认展示已获得 DiffDock rank-1 姿态的疾病方向代表项，
+              并保留缺失输出对象的结构审计状态。右侧详情区汇总中文合理性解释、证据路径和下一步验证动作。
             </p>
           </div>
           <div class="candidate-controls" role="group" aria-label="Candidate filters">
@@ -685,22 +525,30 @@
             </div>
           </div>
         </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Drug</th>
-                <th>Target</th>
-                <th>Disease score</th>
-                <th>Affinity</th>
-                <th>Docking</th>
-                <th>Status</th>
-                <th>中文候选合理性解释</th>
-              </tr>
-            </thead>
-            <tbody id="candidateRows"></tbody>
-          </table>
+        <div class="candidate-browser">
+          <div class="candidate-list-panel">
+            <div class="candidate-list-head">
+              <div>
+                <span>Candidate shortlist</span>
+                <strong id="candidateCount">0 / 0</strong>
+              </div>
+              <small>ranked pairs</small>
+            </div>
+            <div class="candidate-table-wrap">
+              <table class="candidate-table">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Drug-target</th>
+                    <th>Scores</th>
+                    <th>Evidence</th>
+                  </tr>
+                </thead>
+                <tbody id="candidateRows"></tbody>
+              </table>
+            </div>
+          </div>
+          <aside id="candidateDetail" class="candidate-detail-panel" aria-live="polite"></aside>
         </div>
       </section>
 
@@ -763,7 +611,6 @@
       <span>Updated from local run artifacts</span>
     </footer>
 
-    <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
     <script src="assets/dashboard-data.js"></script>
     <script src="assets/app.js"></script>
   </body>

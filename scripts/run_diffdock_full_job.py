@@ -52,6 +52,57 @@ def output_count(path: Path) -> int:
         return max(sum(1 for _ in handle) - 1, 0)
 
 
+def process_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def acquire_job_lock(lock_path: Path, job_id: int) -> bool:
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    payload = json.dumps(
+        {
+            "pid": os.getpid(),
+            "job_id": job_id,
+            "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        },
+        ensure_ascii=False,
+    )
+    for _ in range(2):
+        try:
+            fd = os.open(lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        except FileExistsError:
+            try:
+                lock_data = json.loads(lock_path.read_text(encoding="utf-8"))
+                pid = int(lock_data.get("pid", 0))
+            except (OSError, ValueError, json.JSONDecodeError):
+                pid = 0
+            if pid and not process_alive(pid):
+                try:
+                    lock_path.unlink()
+                except FileNotFoundError:
+                    pass
+                continue
+            return False
+        try:
+            os.write(fd, (payload + "\n").encode("utf-8"))
+        finally:
+            os.close(fd)
+        return True
+    return False
+
+
+def release_job_lock(lock_path: Path) -> None:
+    try:
+        lock_path.unlink()
+    except FileNotFoundError:
+        pass
+
+
 def write_diffdock_config(
     default_config: Path,
     destination: Path,
@@ -174,6 +225,7 @@ def run_job(args: argparse.Namespace) -> int:
     log_file = resolve(root, job["log_file"])
     diffdock_dir = resolve(root, args.diffdock_dir)
     config_path = log_file.with_suffix(".config.yaml")
+    lock_path = score_csv.parent / f"{score_csv.name}.lock"
 
     expected_rows = int(job["row_count"])
     if not args.force and output_count(score_csv) >= expected_rows:
@@ -190,82 +242,112 @@ def run_job(args: argparse.Namespace) -> int:
         )
         return 0
 
-    free_gb = shutil.disk_usage(root).free / (1024**3)
-    if free_gb < args.min_free_gb:
+    if not acquire_job_lock(lock_path, args.job_id):
         print(
             json.dumps(
                 {
                     "job_id": args.job_id,
-                    "status": "blocked_low_disk",
-                    "free_gb": round(free_gb, 2),
-                    "min_free_gb": args.min_free_gb,
+                    "status": "already_running",
+                    "lock_file": str(lock_path),
                 },
                 ensure_ascii=False,
             )
         )
-        return 75
+        return 0
 
-    write_diffdock_config(
-        default_config=diffdock_dir / "default_inference_args.yaml",
-        destination=config_path,
-        samples_per_complex=args.samples_per_complex,
-        inference_steps=args.inference_steps,
-        actual_steps=args.actual_steps,
-        batch_size=args.batch_size,
-    )
+    try:
+        if not args.force and output_count(score_csv) >= expected_rows:
+            print(
+                json.dumps(
+                    {
+                        "job_id": args.job_id,
+                        "status": "already_scored",
+                        "score_csv": str(score_csv),
+                        "rows": expected_rows,
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 0
 
-    command = [
-        sys.executable,
-        "inference.py",
-        "--config",
-        str(config_path),
-        "--protein_ligand_csv",
-        str(chunk_csv),
-        "--out_dir",
-        str(out_dir),
-        "--loglevel",
-        args.loglevel,
-    ]
-    env = os.environ.copy()
-    env["CUDA_VISIBLE_DEVICES"] = str(args.cuda_device)
-    env["OMP_NUM_THREADS"] = str(args.omp_threads)
-    env.setdefault("MKL_NUM_THREADS", str(args.omp_threads))
-    env.setdefault("OPENBLAS_NUM_THREADS", str(args.omp_threads))
+        free_gb = shutil.disk_usage(root).free / (1024**3)
+        if free_gb < args.min_free_gb:
+            print(
+                json.dumps(
+                    {
+                        "job_id": args.job_id,
+                        "status": "blocked_low_disk",
+                        "free_gb": round(free_gb, 2),
+                        "min_free_gb": args.min_free_gb,
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 75
 
-    log_file.parent.mkdir(parents=True, exist_ok=True)
-    start = time.time()
-    with log_file.open("w", encoding="utf-8") as log_handle:
-        log_handle.write(" ".join(command) + "\n")
-        log_handle.flush()
-        process = subprocess.run(
-            command,
-            cwd=diffdock_dir,
-            env=env,
-            stdout=log_handle,
-            stderr=subprocess.STDOUT,
-            text=True,
-            check=False,
+        write_diffdock_config(
+            default_config=diffdock_dir / "default_inference_args.yaml",
+            destination=config_path,
+            samples_per_complex=args.samples_per_complex,
+            inference_steps=args.inference_steps,
+            actual_steps=args.actual_steps,
+            batch_size=args.batch_size,
         )
-    elapsed_seconds = round(time.time() - start, 2)
 
-    summary = collect_scores(
-        chunk_csv=chunk_csv,
-        out_dir=out_dir,
-        score_csv=score_csv,
-        source_chunk=str(chunk_csv),
-        sdf_retention=args.sdf_retention,
-    )
-    summary.update(
-        {
-            "job_id": args.job_id,
-            "returncode": process.returncode,
-            "elapsed_seconds": elapsed_seconds,
-            "log_file": str(log_file),
-            "cuda_device": str(args.cuda_device),
-        }
-    )
-    print(json.dumps(summary, ensure_ascii=False))
-    return process.returncode
+        command = [
+            sys.executable,
+            "inference.py",
+            "--config",
+            str(config_path),
+            "--protein_ligand_csv",
+            str(chunk_csv),
+            "--out_dir",
+            str(out_dir),
+            "--loglevel",
+            args.loglevel,
+        ]
+        env = os.environ.copy()
+        env["CUDA_VISIBLE_DEVICES"] = str(args.cuda_device)
+        env["OMP_NUM_THREADS"] = str(args.omp_threads)
+        env.setdefault("MKL_NUM_THREADS", str(args.omp_threads))
+        env.setdefault("OPENBLAS_NUM_THREADS", str(args.omp_threads))
+
+        log_file.parent.mkdir(parents=True, exist_ok=True)
+        start = time.time()
+        with log_file.open("w", encoding="utf-8") as log_handle:
+            log_handle.write(" ".join(command) + "\n")
+            log_handle.flush()
+            process = subprocess.run(
+                command,
+                cwd=diffdock_dir,
+                env=env,
+                stdout=log_handle,
+                stderr=subprocess.STDOUT,
+                text=True,
+                check=False,
+            )
+        elapsed_seconds = round(time.time() - start, 2)
+
+        summary = collect_scores(
+            chunk_csv=chunk_csv,
+            out_dir=out_dir,
+            score_csv=score_csv,
+            source_chunk=str(chunk_csv),
+            sdf_retention=args.sdf_retention,
+        )
+        summary.update(
+            {
+                "job_id": args.job_id,
+                "returncode": process.returncode,
+                "elapsed_seconds": elapsed_seconds,
+                "log_file": str(log_file),
+                "cuda_device": str(args.cuda_device),
+            }
+        )
+        print(json.dumps(summary, ensure_ascii=False))
+        return process.returncode
+    finally:
+        release_job_lock(lock_path)
 
 
 def main() -> int:
