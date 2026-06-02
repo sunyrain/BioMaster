@@ -1,5 +1,5 @@
 window.BIOMASTER_DATA = {
-  "updated": "2026-06-02T15:01:34Z",
+  "updated": "2026-06-02T15:15:35Z",
   "mode": "disease_direction_druggable_proteome",
   "labels": {
     "primaryScore": "Disease score",
@@ -13,23 +13,23 @@ window.BIOMASTER_DATA = {
     "pairs": 4854990,
     "topCandidates": 50000,
     "structureCandidates": 23744,
-    "structureCompleted": 22779,
-    "structureMissing": 965,
-    "top1000Completed": 22779,
-    "top1000Missing": 965,
+    "structureCompleted": 22829,
+    "structureMissing": 915,
+    "top1000Completed": 22829,
+    "top1000Missing": 915,
     "fullScoreFiles": 97,
     "fullJobsTotal": 97,
     "fullRowsScored": 23744,
     "fullRowsTotal": 23744,
     "fullRowProgressPct": 100.0,
-    "fullCompletedOutputs": 22779,
-    "fullMissingOutputs": 965,
-    "fullOutputRatePct": 95.9358153638814,
+    "fullCompletedOutputs": 22829,
+    "fullMissingOutputs": 915,
+    "fullOutputRatePct": 96.1463948787062,
     "primaryCompletedOutputs": 21678,
     "primaryMissingOutputs": 2066,
-    "rerunRecoveredOutputs": 1101,
-    "rerunScoreRows": 1632,
-    "rerunUniquePairs": 1224,
+    "rerunRecoveredOutputs": 1151,
+    "rerunScoreRows": 1712,
+    "rerunUniquePairs": 1273,
     "zeroCompletedChunks": 0,
     "diseaseDirections": 5
   },
@@ -43,12 +43,12 @@ window.BIOMASTER_DATA = {
       "chunks": 23,
       "scoreChunks": 23,
       "scoredRows": 5562,
-      "completed": 5352,
-      "missing": 210,
+      "completed": 5382,
+      "missing": 180,
       "primaryCompleted": 5080,
       "primaryMissing": 482,
-      "rerunRecovered": 272,
-      "successRatePct": 96.22437971952536,
+      "rerunRecovered": 302,
+      "successRatePct": 96.76375404530745,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -277,12 +277,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4995,
-      "completed": 4787,
-      "missing": 208,
+      "completed": 4789,
+      "missing": 206,
       "primaryCompleted": 4559,
       "primaryMissing": 436,
-      "rerunRecovered": 228,
-      "successRatePct": 95.83583583583584,
+      "rerunRecovered": 230,
+      "successRatePct": 95.87587587587588,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -511,12 +511,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4937,
-      "completed": 4728,
-      "missing": 209,
+      "completed": 4729,
+      "missing": 208,
       "primaryCompleted": 4518,
       "primaryMissing": 419,
-      "rerunRecovered": 210,
-      "successRatePct": 95.7666599149281,
+      "rerunRecovered": 211,
+      "successRatePct": 95.78691513064615,
       "medianDiffDock": -3.42,
       "topCompleted": [
         {
@@ -979,12 +979,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4909,
-      "completed": 4703,
-      "missing": 206,
+      "completed": 4720,
+      "missing": 189,
       "primaryCompleted": 4501,
       "primaryMissing": 408,
-      "rerunRecovered": 202,
-      "successRatePct": 95.80362599307395,
+      "rerunRecovered": 219,
+      "successRatePct": 96.14992870238338,
       "medianDiffDock": -3.34,
       "topCompleted": [
         {
@@ -1221,7 +1221,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "Completed docking outputs",
-        "value": 22779
+        "value": 22829
       }
     ],
     "topTargets": [
@@ -1311,11 +1311,11 @@ window.BIOMASTER_DATA = {
     "structuralStatus": [
       {
         "label": "completed",
-        "value": 22779
+        "value": 22829
       },
       {
         "label": "missing_output",
-        "value": 965
+        "value": 915
       }
     ],
     "scoreSources": [
@@ -1325,21 +1325,21 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "缺失输出优先补跑",
-        "value": 1101
+        "value": 1151
       }
     ],
     "credibilityTiers": [
       {
         "label": "D｜低优先级审阅",
-        "value": 16597
+        "value": 16646
       },
       {
         "label": "C｜探索性再定位",
-        "value": 6011
+        "value": 6012
       },
       {
         "label": "D｜结构补跑优先",
-        "value": 965
+        "value": 915
       },
       {
         "label": "B｜机制邻近优先",
