@@ -29,9 +29,18 @@ def output_count(path: Path) -> int:
         return max(sum(1 for _ in handle) - 1, 0)
 
 
+def lock_path_for_job(root: Path, job: dict[str, Any]) -> Path:
+    score_csv = resolve(root, str(job["score_csv"]))
+    return score_csv.parent / f"{score_csv.name}.lock"
+
+
 def is_done(root: Path, job: dict[str, str]) -> bool:
     score_csv = resolve(root, job["score_csv"])
     return output_count(score_csv) >= int(job["row_count"])
+
+
+def is_locked(root: Path, job: dict[str, Any]) -> bool:
+    return lock_path_for_job(root, job).exists()
 
 
 def gpu_memory_mb() -> dict[str, int]:
@@ -90,6 +99,7 @@ def load_pending_jobs(args: argparse.Namespace, root: Path) -> list[dict[str, An
                     "job_index": str(job_index),
                     "job_id": job_id,
                     "row_count": int(row["row_count"]),
+                    "score_csv": row["score_csv"],
                 }
             )
     pending.sort(key=lambda row: (row["queue_order"], row["job_id"]))
@@ -161,6 +171,7 @@ def run(args: argparse.Namespace) -> int:
     running: dict[subprocess.Popen[bytes], dict[str, Any]] = {}
     failures = 0
     completed = 0
+    skipped_locked = 0
     while pending or running:
         memory = gpu_memory_mb()
         for device in devices:
@@ -170,7 +181,20 @@ def run(args: argparse.Namespace) -> int:
                 continue
             if int(memory.get(device, 0)) > args.external_busy_memory_mb:
                 continue
-            job = pending.pop(0)
+            job = None
+            deferred_locked: list[dict[str, Any]] = []
+            while pending:
+                candidate = pending.pop(0)
+                if is_done(root, candidate):
+                    continue
+                if is_locked(root, candidate):
+                    deferred_locked.append(candidate)
+                    continue
+                job = candidate
+                break
+            pending.extend(deferred_locked)
+            if job is None:
+                continue
             command = launch_command(args, root, job, device)
             process = subprocess.Popen(command, cwd=root)
             running[process] = {**job, "device": device, "started": time.time()}
@@ -199,7 +223,9 @@ def run(args: argparse.Namespace) -> int:
                 continue
             elapsed = round(time.time() - meta["started"], 2)
             completed += 1
-            if returncode != 0:
+            if returncode == 76:
+                skipped_locked += 1
+            elif returncode != 0:
                 failures += 1
             print(
                 json.dumps(
@@ -217,7 +243,13 @@ def run(args: argparse.Namespace) -> int:
             )
             del running[process]
 
-    print(json.dumps({"completed_jobs": completed, "failed_jobs": failures}, ensure_ascii=False), flush=True)
+    print(
+        json.dumps(
+            {"completed_jobs": completed, "failed_jobs": failures, "skipped_locked_jobs": skipped_locked},
+            ensure_ascii=False,
+        ),
+        flush=True,
+    )
     return 1 if failures else 0
 
 

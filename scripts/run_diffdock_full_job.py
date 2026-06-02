@@ -253,7 +253,7 @@ def run_job(args: argparse.Namespace) -> int:
                 ensure_ascii=False,
             )
         )
-        return 0
+        return 76
 
     try:
         if not args.force and output_count(score_csv) >= expected_rows:

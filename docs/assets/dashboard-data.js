@@ -1,5 +1,5 @@
 window.BIOMASTER_DATA = {
-  "updated": "2026-06-02T11:31:53Z",
+  "updated": "2026-06-02T13:42:04Z",
   "mode": "disease_direction_druggable_proteome",
   "labels": {
     "primaryScore": "Disease score",
@@ -13,23 +13,23 @@ window.BIOMASTER_DATA = {
     "pairs": 4854990,
     "topCandidates": 50000,
     "structureCandidates": 23744,
-    "structureCompleted": 22105,
-    "structureMissing": 1639,
-    "top1000Completed": 22105,
-    "top1000Missing": 1639,
+    "structureCompleted": 22484,
+    "structureMissing": 1260,
+    "top1000Completed": 22484,
+    "top1000Missing": 1260,
     "fullScoreFiles": 97,
     "fullJobsTotal": 97,
     "fullRowsScored": 23744,
     "fullRowsTotal": 23744,
     "fullRowProgressPct": 100.0,
-    "fullCompletedOutputs": 22105,
-    "fullMissingOutputs": 1639,
-    "fullOutputRatePct": 93.09720350404312,
+    "fullCompletedOutputs": 22484,
+    "fullMissingOutputs": 1260,
+    "fullOutputRatePct": 94.69339622641509,
     "primaryCompletedOutputs": 21678,
     "primaryMissingOutputs": 2066,
-    "rerunRecoveredOutputs": 427,
-    "rerunScoreRows": 528,
-    "rerunUniquePairs": 477,
+    "rerunRecoveredOutputs": 806,
+    "rerunScoreRows": 1088,
+    "rerunUniquePairs": 883,
     "zeroCompletedChunks": 0,
     "diseaseDirections": 5
   },
@@ -43,12 +43,12 @@ window.BIOMASTER_DATA = {
       "chunks": 23,
       "scoreChunks": 23,
       "scoredRows": 5562,
-      "completed": 5316,
-      "missing": 246,
+      "completed": 5327,
+      "missing": 235,
       "primaryCompleted": 5080,
       "primaryMissing": 482,
-      "rerunRecovered": 236,
-      "successRatePct": 95.57713052858684,
+      "rerunRecovered": 247,
+      "successRatePct": 95.77490111470695,
       "medianDiffDock": -3.39,
       "topCompleted": [
         {
@@ -292,13 +292,13 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4995,
-      "completed": 4665,
-      "missing": 330,
+      "completed": 4783,
+      "missing": 212,
       "primaryCompleted": 4559,
       "primaryMissing": 436,
-      "rerunRecovered": 106,
-      "successRatePct": 93.3933933933934,
-      "medianDiffDock": -3.38,
+      "rerunRecovered": 224,
+      "successRatePct": 95.75575575575576,
+      "medianDiffDock": -3.39,
       "topCompleted": [
         {
           "rank": 1,
@@ -541,12 +541,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4937,
-      "completed": 4543,
-      "missing": 394,
+      "completed": 4724,
+      "missing": 213,
       "primaryCompleted": 4518,
       "primaryMissing": 419,
-      "rerunRecovered": 25,
-      "successRatePct": 92.01944500708933,
+      "rerunRecovered": 206,
+      "successRatePct": 95.6856390520559,
       "medianDiffDock": -3.42,
       "topCompleted": [
         {
@@ -790,12 +790,12 @@ window.BIOMASTER_DATA = {
       "chunks": 14,
       "scoreChunks": 14,
       "scoredRows": 3341,
-      "completed": 3046,
-      "missing": 295,
+      "completed": 3093,
+      "missing": 248,
       "primaryCompleted": 3020,
       "primaryMissing": 321,
-      "rerunRecovered": 26,
-      "successRatePct": 91.17030829093086,
+      "rerunRecovered": 73,
+      "successRatePct": 92.57707273271475,
       "medianDiffDock": -3.32,
       "topCompleted": [
         {
@@ -1039,12 +1039,12 @@ window.BIOMASTER_DATA = {
       "chunks": 20,
       "scoreChunks": 20,
       "scoredRows": 4909,
-      "completed": 4535,
-      "missing": 374,
+      "completed": 4557,
+      "missing": 352,
       "primaryCompleted": 4501,
       "primaryMissing": 408,
-      "rerunRecovered": 34,
-      "successRatePct": 92.3813403951925,
+      "rerunRecovered": 56,
+      "successRatePct": 92.82949684253413,
       "medianDiffDock": -3.35,
       "topCompleted": [
         {
@@ -1296,7 +1296,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "Completed docking outputs",
-        "value": 22105
+        "value": 22484
       }
     ],
     "topTargets": [
@@ -1386,11 +1386,11 @@ window.BIOMASTER_DATA = {
     "structuralStatus": [
       {
         "label": "completed",
-        "value": 22105
+        "value": 22484
       },
       {
         "label": "missing_output",
-        "value": 1639
+        "value": 1260
       }
     ],
     "scoreSources": [
@@ -1400,21 +1400,21 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "缺失输出优先补跑",
-        "value": 427
+        "value": 806
       }
     ],
     "credibilityTiers": [
       {
         "label": "D｜低优先级审阅",
-        "value": 16114
+        "value": 16366
       },
       {
         "label": "C｜探索性再定位",
-        "value": 5820
+        "value": 5947
       },
       {
         "label": "D｜结构补跑优先",
-        "value": 1639
+        "value": 1260
       },
       {
         "label": "B｜机制邻近优先",
@@ -1428,7 +1428,7 @@ window.BIOMASTER_DATA = {
     "validationPostures": [
       {
         "label": "具备模型信号但疾病证据仍需补强",
-        "value": 762
+        "value": 767
       },
       {
         "label": "疾病方向与药物-蛋白互作一致",
@@ -1436,7 +1436,7 @@ window.BIOMASTER_DATA = {
       },
       {
         "label": "高分但结构证据缺失",
-        "value": 42
+        "value": 37
       },
       {
         "label": "当前证据不足",
@@ -8351,29 +8351,29 @@ window.BIOMASTER_DATA = {
       "proteinDirectionScore": 1.0,
       "representedPairCount": 4,
       "representedProteins": "B1AMW4;P28335;Q5VUF8;Q9NP28",
-      "diffdock": null,
-      "status": "missing_output",
-      "scoreSource": "primary_full_run",
-      "scoreSourceLabel": "primary full DiffDock run",
-      "scoreSourceLabelZh": "原始全量 DiffDock",
-      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/immunology_inflammation/diffdock_run/scores/diffdock_full_chunk_00000.scores.csv",
+      "diffdock": -1.38,
+      "status": "completed",
+      "scoreSource": "priority_rerun",
+      "scoreSourceLabel": "missing-output priority rerun",
+      "scoreSourceLabelZh": "缺失输出优先补跑",
+      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/scores/diffdock_missing_priority_chunk_00029.scores.csv",
       "category": "protein_context",
       "categoryZh": "蛋白疾病类别支持",
-      "credibilityScore": 37,
-      "credibilityTier": "D",
-      "credibilityTierZh": "D｜结构补跑优先",
-      "repurposingPostureZh": "高分但结构证据缺失",
-      "evidencePathZh": "Oxycodone Hydrochloride → HTR2C → 免疫/炎症 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 缺失输出审计",
-      "nextStepZh": "优先检查受体结构、配体 SDF 和 DiffDock 图构建日志，完成定向补跑后再进入机制判断。",
-      "validationGatesZh": "结构缺失补跑；已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅",
+      "credibilityScore": 53,
+      "credibilityTier": "C",
+      "credibilityTierZh": "C｜探索性再定位",
+      "repurposingPostureZh": "具备模型信号但疾病证据仍需补强",
+      "evidencePathZh": "Oxycodone Hydrochloride → HTR2C → 免疫/炎症 → 药物治疗领域/适应症 → 蛋白疾病类别 → ConPLex 药物-蛋白亲和预测 → DiffDock 结构姿态",
+      "nextStepZh": "先引入 CMap/LINCS 转录组反转、ADMET/安全性和反证检索，再决定是否进入实验短名单。",
+      "validationGatesZh": "已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅；二次 docking / pocket 审计",
       "evidenceSummary": "FDA indication/target text match; protein ICD-11 disease-class match",
       "evidenceSummaryZh": "FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关",
-      "rationaleZh": "该候选来自免疫/炎症方向，疾病方向分数为 0.870，ConPLex 亲和预测为 0.831。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Oxycodone Hydrochloride - HTR2C 排在较高优先级。支持证据包括：FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Neurology/Psychiatry；Pain; Osteoarthritis, Knee; Pruritus。本轮 DiffDock 未产出可解析的 rank-1 confidence SDF，属于结构计算缺失输出；这不是药效否定证据，应作为受体/配体准备或参数补跑的优先审计对象。该结构代表可回填到 4 条相同药物和相同蛋白序列的 UniProt 记录。",
+      "rationaleZh": "该候选来自免疫/炎症方向，疾病方向分数为 0.870，ConPLex 亲和预测为 0.831。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Oxycodone Hydrochloride - HTR2C 排在较高优先级。支持证据包括：FDA 适应症或靶点文本与该疾病方向存在直接匹配；蛋白的 ICD-11 疾病类别与该方向相关。药物记录中的治疗领域/适应症信息为：Neurology/Psychiatry；Pain; Osteoarthritis, Knee; Pruritus。DiffDock 已通过缺失输出优先补跑产生可审阅的 rank-1 结合姿态，confidence 为 -1.38；该值用于判断结构构象是否值得专家查看，不能直接等同于结合自由能或药效强度。该结构代表可回填到 4 条相同药物和相同蛋白序列的 UniProt 记录。",
       "therapeuticArea": "Neurology/Psychiatry",
       "indication": "Pain; Osteoarthritis, Knee; Pruritus",
       "receptorStatus": "full_length_ok",
       "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "",
+      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00029/CHEMBL656__P28335/rank1_confidence-1.38.sdf",
       "rank1SdfPath": "",
       "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P28335-F1-model_v6.pdb"
     },
@@ -19575,12 +19575,12 @@ window.BIOMASTER_DATA = {
       "proteinDirectionScore": 1.0,
       "representedPairCount": 3,
       "representedProteins": "B2R9W3;P41231;Q96EM8",
-      "diffdock": -5.06,
+      "diffdock": -3.96,
       "status": "completed",
       "scoreSource": "priority_rerun",
       "scoreSourceLabel": "missing-output priority rerun",
       "scoreSourceLabelZh": "缺失输出优先补跑",
-      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/scores/diffdock_missing_priority_chunk_00000.scores.csv",
+      "scoreFile": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/scores/diffdock_missing_priority_chunk_00058.scores.csv",
       "category": "multi_source",
       "categoryZh": "多源疾病证据一致",
       "credibilityScore": 71,
@@ -19592,12 +19592,12 @@ window.BIOMASTER_DATA = {
       "validationGatesZh": "已知适应症/已知靶点核查；PubMed 与 ClinicalTrials 文献证据；CMap/LINCS 疾病签名反转；ADMET、禁忌证和药物相互作用审阅；二次 docking / pocket 审计",
       "evidenceSummary": "FDA therapeutic area match; protein ICD-11 disease-class match; TxGNN cancer drug-disease signal",
       "evidenceSummaryZh": "FDA 药物治疗领域与该疾病方向一致；蛋白的 ICD-11 疾病类别与该方向相关；TxGNN 药物-疾病图谱给出癌症方向信号",
-      "rationaleZh": "该候选来自肿瘤方向，疾病方向分数为 0.863，ConPLex 亲和预测为 0.921。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Alvimopan - P2RY2 排在较高优先级。支持证据包括：FDA 药物治疗领域与该疾病方向一致；蛋白的 ICD-11 疾病类别与该方向相关；TxGNN 药物-疾病图谱给出癌症方向信号。药物记录中的治疗领域/适应症信息为：Oncology；Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms。DiffDock 已通过缺失输出优先补跑产生可审阅的 rank-1 结合姿态，confidence 为 -5.06；该值用于判断结构构象是否值得专家查看，不能直接等同于结合自由能或药效强度。该结构代表可回填到 3 条相同药物和相同蛋白序列的 UniProt 记录。",
+      "rationaleZh": "该候选来自肿瘤方向，疾病方向分数为 0.863，ConPLex 亲和预测为 0.921。这表示模型在疾病证据和药物-蛋白相互作用两个层面都将 Alvimopan - P2RY2 排在较高优先级。支持证据包括：FDA 药物治疗领域与该疾病方向一致；蛋白的 ICD-11 疾病类别与该方向相关；TxGNN 药物-疾病图谱给出癌症方向信号。药物记录中的治疗领域/适应症信息为：Oncology；Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms。DiffDock 已通过缺失输出优先补跑产生可审阅的 rank-1 结合姿态，confidence 为 -3.96；该值用于判断结构构象是否值得专家查看，不能直接等同于结合自由能或药效强度。该结构代表可回填到 3 条相同药物和相同蛋白序列的 UniProt 记录。",
       "therapeuticArea": "Oncology",
       "indication": "Constipation; Urinary Bladder Neoplasms; Peritoneal Neoplasms",
       "receptorStatus": "full_length_ok",
       "selectionReason": "original_in_alphafold_tar",
-      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00000/CHEMBL270190__P41231/rank1_confidence-5.06.sdf",
+      "confidenceSdfPath": "/root/autodl-tmp/BioMaster/outputs/disease_directions/missing_output_priority_rerun_round2/outputs/chunk_00058/CHEMBL270190__P41231/rank1_confidence-3.96.sdf",
       "rank1SdfPath": "",
       "receptorPdbPath": "/root/autodl-tmp/BioMaster/data/processed/alphafold_receptors_v6/AF-P41231-F1-model_v6.pdb"
     },
