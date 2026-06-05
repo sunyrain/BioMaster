@@ -118,11 +118,23 @@ def base_drug_name(drug: str) -> str:
 
 
 def disease_query(direction: str) -> str:
-    if direction == "oncology":
-        return "cancer OR tumor OR tumour OR neoplasm OR oncology"
-    if direction == "cardiovascular":
-        return "cardiovascular OR vascular OR heart OR hypertension OR cardiology"
-    return "neurology OR psychiatric OR psychiatry OR depression OR anxiety OR Alzheimer OR nervous"
+    queries = {
+        "oncology": "cancer OR tumor OR tumour OR neoplasm OR oncology",
+        "infectious_disease": (
+            "infection OR infectious OR viral OR virus OR HIV OR hepatitis OR influenza "
+            "OR tuberculosis OR pneumonia OR bacterial OR fungal OR malaria OR pathogen "
+            "OR antimicrobial OR antiviral"
+        ),
+        "cardiovascular": "cardiovascular OR vascular OR heart OR hypertension OR cardiology",
+        "neurology_psychiatry": (
+            "neurology OR psychiatric OR psychiatry OR depression OR anxiety OR Alzheimer OR nervous"
+        ),
+        "immunology_inflammation": (
+            "immunology OR immune OR inflammation OR inflammatory OR autoimmune OR arthritis "
+            "OR cytokine OR allergy OR asthma"
+        ),
+    }
+    return queries.get(direction, "disease OR clinical OR therapy")
 
 
 def pubmed_term(row: pd.Series, include_disease: bool) -> str:
