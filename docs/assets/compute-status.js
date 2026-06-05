@@ -1,6 +1,6 @@
 window.BIOMASTER_COMPUTE_STATUS = {
-  "updatedUtc": "2026-06-05T10:55:25.937067Z",
-  "sourceUpdatedUtc": "2026-06-05T10:55:22Z",
+  "updatedUtc": "2026-06-05T11:03:01.499978Z",
+  "sourceUpdatedUtc": "2026-06-05T11:00:27Z",
   "summary": {
     "completedModuleCount": 58,
     "activeComputationCount": 6,
@@ -21,45 +21,27 @@ window.BIOMASTER_COMPUTE_STATUS = {
   "active": {
     "fullDiffdock": {
       "status": "running",
-      "completedJobs": 2499,
+      "completedJobs": 2501,
       "totalJobs": 3653,
-      "completedJobPct": 68.4095,
-      "scoredRows": 624750,
+      "completedJobPct": 68.4643,
+      "scoredRows": 625250,
       "totalRows": 913170,
-      "scoredRowPct": 68.4155,
-      "completedOutputs": 485183,
-      "missingOutputsInScoredJobs": 139567,
+      "scoredRowPct": 68.4703,
+      "completedOutputs": 485604,
+      "missingOutputsInScoredJobs": 139646,
       "activeLocks": [
-        2499,
-        2500,
         2501,
-        2502
+        2502,
+        2503,
+        2504
       ],
       "activeDetails": [
-        {
-          "jobId": 2499,
-          "expectedRows": 250,
-          "scoreRows": 0,
-          "completedOutputs": 0,
-          "inFlightRank1SdfCount": 202,
-          "scoreExists": false,
-          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02499.scores.csv.lock"
-        },
-        {
-          "jobId": 2500,
-          "expectedRows": 250,
-          "scoreRows": 0,
-          "completedOutputs": 0,
-          "inFlightRank1SdfCount": 199,
-          "scoreExists": false,
-          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02500.scores.csv.lock"
-        },
         {
           "jobId": 2501,
           "expectedRows": 250,
           "scoreRows": 0,
           "completedOutputs": 0,
-          "inFlightRank1SdfCount": 68,
+          "inFlightRank1SdfCount": 189,
           "scoreExists": false,
           "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02501.scores.csv.lock"
         },
@@ -68,55 +50,73 @@ window.BIOMASTER_COMPUTE_STATUS = {
           "expectedRows": 250,
           "scoreRows": 0,
           "completedOutputs": 0,
-          "inFlightRank1SdfCount": 65,
+          "inFlightRank1SdfCount": 198,
           "scoreExists": false,
           "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02502.scores.csv.lock"
+        },
+        {
+          "jobId": 2503,
+          "expectedRows": 250,
+          "scoreRows": 0,
+          "completedOutputs": 0,
+          "inFlightRank1SdfCount": 101,
+          "scoreExists": false,
+          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02503.scores.csv.lock"
+        },
+        {
+          "jobId": 2504,
+          "expectedRows": 250,
+          "scoreRows": 0,
+          "completedOutputs": 0,
+          "inFlightRank1SdfCount": 83,
+          "scoreExists": false,
+          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02504.scores.csv.lock"
         }
       ],
-      "etaHours": 63.7697,
-      "etaDays": 2.6571,
-      "estimatedFinishUtc": "2026-06-08T02:41:29Z",
+      "etaHours": 63.6592,
+      "etaDays": 2.6525,
+      "estimatedFinishUtc": "2026-06-08T02:41:58Z",
       "busyGpuCount": 4,
       "gpuCount": 4,
       "gpus": [
         {
           "index": 0,
           "busId": "00000000:1C:00.0",
-          "memoryUsedMb": 10833.0,
+          "memoryUsedMb": 11091.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 32.0,
+          "utilizationPct": 30.0,
           "temperatureC": 40.0,
-          "powerW": 140.11
+          "powerW": 59.43
         },
         {
           "index": 1,
           "busId": "00000000:1D:00.0",
           "memoryUsedMb": 10621.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 32.0,
-          "temperatureC": 44.0,
-          "powerW": 121.64
+          "utilizationPct": 75.0,
+          "temperatureC": 48.0,
+          "powerW": 194.13
         },
         {
           "index": 2,
           "busId": "00000000:1E:00.0",
-          "memoryUsedMb": 12067.0,
+          "memoryUsedMb": 11401.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 85.0,
-          "temperatureC": 48.0,
-          "powerW": 134.7
+          "utilizationPct": 39.0,
+          "temperatureC": 43.0,
+          "powerW": 139.88
         },
         {
           "index": 3,
           "busId": "00000000:DC:00.0",
-          "memoryUsedMb": 10615.0,
+          "memoryUsedMb": 10617.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 45.0,
-          "temperatureC": 47.0,
-          "powerW": 116.85
+          "utilizationPct": 32.0,
+          "temperatureC": 44.0,
+          "powerW": 128.06
         }
       ],
-      "createdUtc": "2026-06-05T10:55:19Z",
+      "createdUtc": "2026-06-05T11:02:25Z",
       "interpretationZh": "全量 DiffDock 正在覆盖 druggable-proteome 候选队列。已完成 chunk 中的 missing output 是技术性缺失，不应解释为生物学阴性。"
     },
     "standardPoseFull3921": {
@@ -266,7 +266,7 @@ window.BIOMASTER_COMPUTE_STATUS = {
         "finalizer_completed",
         "post_finalization_completed"
       ],
-      "createdUtc": "2026-06-05T10:55:09.064103Z",
+      "createdUtc": "2026-06-05T10:58:28.840624Z",
       "auditJson": "outputs/sota_validation/experiment_closure_audit/experiment_closure_audit.json",
       "auditMarkdown": "outputs/sota_validation/experiment_closure_audit/EXPERIMENT_CLOSURE_AUDIT.md",
       "interpretationZh": "全部 required checks 通过前，实验计算闭环不能标记完成。"
