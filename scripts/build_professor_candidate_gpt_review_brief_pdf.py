@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_professor_candidate_detailed_review_pdf import (  # noqa: E402
     build_literature_audit,
     is_truthy_number,
-    merge_expert_fields,
+    load_candidate_pool,
     num,
     select_direction_top10,
     target_plan,
@@ -439,8 +439,8 @@ def gpt_review(row: pd.Series, lit: pd.Series) -> dict[str, str]:
 
 
 def load_panel(root: Path, out_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
-    candidates = pd.read_csv(candidate_source(root))
-    panel = merge_expert_fields(root, select_direction_top10(candidates))
+    candidates = load_candidate_pool(root)
+    panel = select_direction_top10(candidates)
     lit_path = root / LITERATURE
     if lit_path.exists():
         literature = pd.read_csv(lit_path)

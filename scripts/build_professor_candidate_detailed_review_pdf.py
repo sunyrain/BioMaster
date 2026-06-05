@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = Path("outputs/sota_validation/professor_candidate_detailed_review")
 CANDIDATES = Path("outputs/disease_directions/disease_direction_integrated_candidates.csv")
 EXPERT_SCORED = Path("outputs/sota_validation/expert_review_panel/integrated_expert_review_scored_candidates.csv")
+FINAL_PRIORITY = Path("outputs/sota_validation/final_prioritization/final_candidate_priority_table.csv")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_wetlab_candidate_detailed_review_pdf import (  # noqa: E402
@@ -118,6 +119,71 @@ def is_truthy_number(value: Any) -> bool:
         return int(float(value)) == 1
     except Exception:
         return False
+
+
+def load_candidate_pool(root: Path) -> pd.DataFrame:
+    """Use final expert-prioritized rows when available, not raw direction Top10 rows."""
+    expert_path = root / EXPERT_SCORED
+    final_path = root / FINAL_PRIORITY
+    raw_path = root / CANDIDATES
+
+    if expert_path.exists():
+        candidates = pd.read_csv(expert_path)
+        if final_path.exists():
+            final = pd.read_csv(final_path)
+            final_cols = [
+                "direction",
+                "drugId",
+                "protein",
+                "rank",
+                "directionScore",
+                "status",
+                "credibilityScore",
+                "finalRankWithinDirection",
+                "finalPriorityTier",
+                "therapeuticArea",
+                "indication",
+                "targetDiseaseExamples",
+                "validationGatesZh",
+                "poseAuditReason",
+            ]
+            final_cols = [col for col in final_cols if col in final.columns]
+            candidates = candidates.merge(
+                final[final_cols],
+                on=["direction", "drugId", "protein"],
+                how="left",
+                suffixes=("", "_final"),
+            )
+    else:
+        candidates = pd.read_csv(raw_path)
+        candidates = merge_expert_fields(root, candidates)
+
+    if "directionLabelZh" not in candidates.columns and "directionLabelZhFinal" in candidates.columns:
+        candidates["directionLabelZh"] = candidates["directionLabelZhFinal"]
+    if "txgnnScore" not in candidates.columns and "integratedTxgnnScore" in candidates.columns:
+        candidates["txgnnScore"] = candidates["integratedTxgnnScore"]
+    if "rank" not in candidates.columns and "finalRankWithinDirection" in candidates.columns:
+        candidates["rank"] = candidates["finalRankWithinDirection"]
+    if "credibilityTierZh" not in candidates.columns:
+        tier = candidates.get("finalPriorityTier", pd.Series([""] * len(candidates)))
+        candidates["credibilityTierZh"] = tier.fillna("").map(
+            lambda value: f"{value}｜最终多证据优先级" if str(value) else "专家审阅候选"
+        )
+    if "rationaleZh" not in candidates.columns:
+        candidates["rationaleZh"] = candidates.get("expertRationaleZh", "")
+    elif "expertRationaleZh" in candidates.columns:
+        candidates["rationaleZh"] = candidates["rationaleZh"].fillna(candidates["expertRationaleZh"])
+    if "evidencePathZh" not in candidates.columns:
+        candidates["evidencePathZh"] = candidates.get("kgExplanationZh", "")
+    if "status" not in candidates.columns:
+        candidates["status"] = "completed"
+    if "directionScore" not in candidates.columns:
+        candidates["directionScore"] = candidates.get(
+            "finalPriorityScore",
+            candidates.get("expertReviewScore", pd.Series([0.0] * len(candidates))),
+        )
+
+    return candidates
 
 
 def _candidate_sort(block: pd.DataFrame) -> pd.DataFrame:
@@ -828,8 +894,8 @@ def main() -> None:
     out_dir = (root / args.out_dir).resolve() if not args.out_dir.is_absolute() else args.out_dir
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    candidates = pd.read_csv(root / CANDIDATES)
-    panel = merge_expert_fields(root, select_direction_top10(candidates))
+    candidates = load_candidate_pool(root)
+    panel = select_direction_top10(candidates)
     literature = build_literature_audit(panel, out_dir, refresh=args.refresh_literature)
 
     html_text = build_html(panel, literature, out_dir)
