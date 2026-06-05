@@ -8,7 +8,7 @@
       name="description"
       content="BioMaster disease-direction affinity screening and structure-prioritized drug-target candidate dashboard."
     />
-    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/site.css?v=20260604-layout-refined" />
   </head>
   <body>
     <header class="site-header">
@@ -20,668 +20,1014 @@
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
-        <a href="#architecture">架构</a>
+        <a href="#executive-summary">摘要</a>
+        <a href="#current-compute">进展</a>
         <a href="#workflow">流程</a>
-        <a href="#evidence">解释</a>
-        <a href="#repurposing">可信度</a>
+        <a href="#architecture">架构</a>
+        <a href="#disease-directions">结果</a>
+        <a href="#candidates">候选</a>
         <a href="#analytics">图表</a>
-        <a href="#candidates">代表性候选结果</a>
-        <a href="#quality-audit">质量审计</a>
-        <a href="#analysis">分析</a>
+        <a href="#quality-audit">审计</a>
+        <a href="#sota-overview">SOTA</a>
+        <a href="#validation-plan">验证</a>
+        <a href="#analysis">使用</a>
+        <a href="#artifacts">产物</a>
         <a class="nav-action" href="assets/biomaster-external-report.pdf">PDF</a>
       </nav>
     </header>
 
     <main id="overview">
-      <section class="hero-band">
-        <div class="hero-layout">
-          <div class="hero-copy">
-            <p class="eyebrow">FDA-approved small molecules × ChEMBL druggable proteome × disease directions</p>
-            <h1>BioMaster Disease-Direction Screen</h1>
-            <p class="lead">
-              本阶段以 ChEMBL druggable target 表作为蛋白范围，先完成 915 个 FDA 已批准小分子与
-              5306 个药物相关蛋白的全量 AI-DTI 亲和筛选，再按肿瘤、感染、心血管、神经/精神、
-              免疫/炎症五个疾病方向分别收敛 Top10000，并完成结构对接增强。
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#candidates">查看候选结果</a>
-              <a class="button secondary" href="#architecture">查看架构视图</a>
-              <a class="button secondary" href="assets/biomaster-external-report.pdf">打开正式 PDF</a>
-            </div>
-          </div>
-          <figure class="hero-figure">
-            <img src="assets/biomaster-main-figure.png" alt="BioMaster screening workflow" />
-            <figcaption>AI-DTI 全量筛选、序列级去重与结构对接增强的总体流程图。</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="section-band compact">
-        <div class="metric-grid" aria-label="Key metrics">
-          <article class="metric-card">
-            <span>Drug library</span>
-            <strong data-metric="drugs">915</strong>
-            <small>FDA 已批准小分子</small>
-          </article>
-          <article class="metric-card">
-            <span>Protein library</span>
-            <strong data-metric="targets">5306</strong>
-            <small>ChEMBL druggable proteins</small>
-          </article>
-          <article class="metric-card">
-            <span>Affinity matrix</span>
-            <strong data-metric="pairs">4854990</strong>
-            <small>drug-target pairs</small>
-          </article>
-          <article class="metric-card">
-            <span>Docking set</span>
-            <strong data-metric="structureCandidates">23744</strong>
-            <small>disease-direction representatives</small>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-band compact">
-        <div class="section-heading">
-          <p class="eyebrow">Latest local audit</p>
-          <h2>当前结构计算审计</h2>
-          <p>
-            五个疾病方向的 Top10000 候选已经全部完成 DiffDock-ready 代表任务对接。以下指标来自本地最新结构计算产物。
-          </p>
-        </div>
-        <div class="metric-grid" aria-label="Full structural extension audit">
-          <article class="metric-card">
-            <span>Primary completed</span>
-            <strong data-metric="primaryCompletedOutputs">0</strong>
-            <small>original full DiffDock outputs</small>
-          </article>
-          <article class="metric-card">
-            <span>Rerun recovered</span>
-            <strong data-metric="rerunRecoveredOutputs">0</strong>
-            <small>priority missing-output recoveries</small>
-          </article>
-          <article class="metric-card">
-            <span>Final output rate</span>
-            <strong data-metric="fullOutputRatePct">0%</strong>
-            <small>primary plus recovered outputs</small>
-          </article>
-          <article class="metric-card">
-            <span>Still missing</span>
-            <strong data-metric="fullMissingOutputs">0</strong>
-            <small>remaining structure audit queue</small>
-          </article>
-        </div>
-      </section>
-
-      <section id="disease-directions" class="section-band">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Disease-direction results</p>
-            <h2>五个疾病方向的结构增强结果</h2>
-            <p>
-              每个方向先取疾病相关 Top10000，再按 drug + protein sequence 生成 DiffDock-ready 代表任务。
-              表中完成率表示成功产生可审阅 rank-1 confidence SDF 的比例。
-            </p>
-          </div>
-          <div class="audit-chip">
-            <span>Disease directions</span>
-            <strong data-metric="diseaseDirections">5</strong>
-          </div>
-        </div>
-        <div id="diseaseDirectionCards" class="direction-grid" aria-label="Disease direction result cards"></div>
-      </section>
-
-      <section id="architecture" class="section-band alt">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Expert view</p>
-            <h2>系统架构与算法视图</h2>
-            <p>
-              BioMaster 将药物、蛋白序列、亲和预测和结构对接拆分为可审计的计算层。每一层保留独立产物，
-              使全量筛选、Top 收敛和结构解释可以分别复现。
-            </p>
-          </div>
-          <div class="audit-chip">
-            <span>Primary matrix</span>
-            <strong>4854990 pairs</strong>
-          </div>
-        </div>
-
-        <div class="architecture-map" aria-label="BioMaster system architecture">
-          <article class="arch-node input">
-            <span class="arch-index">01</span>
-            <p class="arch-label">Input layer</p>
-            <h3>药物与靶点标准化</h3>
-            <ul>
-              <li>FDA-approved small molecules</li>
-              <li>ChEMBL druggable human proteins</li>
-              <li>SMILES, SDF, sequence, receptor paths</li>
-            </ul>
-          </article>
-          <article class="arch-node model">
-            <span class="arch-index">02</span>
-            <p class="arch-label">Prediction layer</p>
-            <h3>AI-DTI 亲和筛选</h3>
-            <ul>
-              <li>ConPLex 互作倾向预测</li>
-              <li>唯一蛋白序列复用预测</li>
-              <li>全量 drug-target 亲和分数</li>
-            </ul>
-          </article>
-          <article class="arch-node evidence">
-            <span class="arch-index">03</span>
-            <p class="arch-label">Reduction layer</p>
-            <h3>Top 候选收敛</h3>
-            <ul>
-              <li>Per-direction Top10000 candidates</li>
-              <li>drug + sequence 去重</li>
-              <li>结构代表蛋白选择</li>
-            </ul>
-          </article>
-          <article class="arch-node structure">
-            <span class="arch-index">04</span>
-            <p class="arch-label">Structural layer</p>
-            <h3>DiffDock 结构增强</h3>
-            <ul>
-              <li>AlphaFold receptor preparation</li>
-              <li>Top 代表复合物结合姿态</li>
-              <li>DiffDock confidence audit</li>
-            </ul>
-          </article>
-          <article class="arch-node output">
-            <span class="arch-index">05</span>
-            <p class="arch-label">Output layer</p>
-            <h3>候选与汇报产物</h3>
-            <ul>
-              <li>亲和-结构共识排序候选</li>
-              <li>结构评分与图表分析</li>
-              <li>正式汇报与验证短名单</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="score-quality-grid">
-          <article class="score-panel">
-            <div class="panel-title">
-              <h3>排序算法逻辑</h3>
-              <span>affinity and structure fusion</span>
-            </div>
-            <div class="score-flow">
-              <div class="score-row">
-                <span class="score-badge">A</span>
-                <div>
-                  <strong>全量药物-蛋白亲和筛选</strong>
-                  <div class="weight-stack" aria-label="ConPLex affinity screen">
-                    <span style="--w:100; --c:#155fa8">ConPLex affinity 100%</span>
+            <section class="hero-band">
+              <div class="hero-layout">
+                <div class="hero-copy">
+                  <p class="eyebrow">FDA-approved small molecules × ChEMBL druggable proteome × disease directions</p>
+                  <h1>BioMaster Disease-Direction Screen</h1>
+                  <p class="lead">
+                    本阶段以 ChEMBL druggable target 表作为蛋白范围，先完成 915 个 FDA 已批准小分子与
+                    5306 个药物相关蛋白的全量 AI-DTI 亲和筛选，再按肿瘤、感染、心血管、神经/精神、
+                    免疫/炎症五个疾病方向分别收敛 Top10000，并完成疾病方向代表候选的结构对接增强。
+                  </p>
+                  <div class="hero-status-strip" aria-label="Project status">
+                    <div>
+                      <span>Primary matrix</span>
+                      <strong>complete</strong>
+                    </div>
+                    <div>
+                      <span>Disease docking</span>
+                      <strong>99.84%</strong>
+                    </div>
+                    <div>
+                      <span>Full extension</span>
+                      <strong id="heroFullRunState">running</strong>
+                    </div>
                   </div>
-                  <code>score(drug, protein sequence) → expanded to all represented UniProt records</code>
+                  <div class="hero-actions">
+                    <a class="button primary" href="#candidates">查看候选结果</a>
+                    <a class="button secondary" href="#architecture">查看架构视图</a>
+                    <a class="button secondary" href="assets/biomaster-external-report.pdf">打开正式 PDF</a>
+                  </div>
+                </div>
+                <figure class="hero-figure">
+                  <img src="assets/biomaster-main-figure.png" alt="BioMaster screening workflow" />
+                  <figcaption>AI-DTI 全量筛选、序列级去重与结构对接增强的总体流程图。</figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <section id="key-metrics" class="section-band compact">
+              <div class="metric-grid" aria-label="Key metrics">
+                <article class="metric-card">
+                  <span>Drug library</span>
+                  <strong data-metric="drugs">915</strong>
+                  <small>FDA 已批准小分子</small>
+                </article>
+                <article class="metric-card">
+                  <span>Protein library</span>
+                  <strong data-metric="targets">5306</strong>
+                  <small>ChEMBL druggable proteins</small>
+                </article>
+                <article class="metric-card">
+                  <span>Affinity matrix</span>
+                  <strong data-metric="pairs">4854990</strong>
+                  <small>drug-target pairs</small>
+                </article>
+                <article class="metric-card">
+                  <span>Docking set</span>
+                  <strong data-metric="structureCandidates">23744</strong>
+                  <small>disease-direction representatives</small>
+                </article>
+              </div>
+            </section>
+
+            <section id="executive-summary" class="section-band">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Executive snapshot</p>
+                  <h2>当前可以对外说明的核心状态</h2>
+                  <p>
+                    首页先给出项目层面的完成状态：基础亲和筛选、疾病方向收敛、结构增强和多证据验证已经形成完整候选体系；
+                    后台全量 DiffDock 扩展仍在继续，用于进一步扩大结构覆盖和后续补充审计。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Data snapshot</span>
+                  <strong id="snapshotUpdatedAt">local</strong>
                 </div>
               </div>
-              <div class="score-row">
-                <span class="score-badge">B</span>
-                <div>
-                  <strong>结构代表去重</strong>
-                  <div class="weight-stack" aria-label="Representative selection">
-                    <span style="--w:60; --c:#148f8b">drug + sequence identity</span>
-                    <span style="--w:40; --c:#d87832">AlphaFold-ready representative</span>
+              <div id="executiveCards" class="executive-grid" aria-label="Executive summary cards"></div>
+              <div class="runway-layout">
+                <article class="runway-panel">
+                  <div class="panel-title">
+                    <h3>计算闭环</h3>
+                    <span>from library to validation panel</span>
                   </div>
-                  <code>5 disease directions × Top10000 rows → 23744 DiffDock-ready representative jobs</code>
+                  <div id="pipelineRunway" class="pipeline-runway"></div>
+                </article>
+                <article class="decision-panel">
+                  <div class="panel-title">
+                    <h3>当前决策口径</h3>
+                    <span>what the results mean</span>
+                  </div>
+                  <div id="decisionCards" class="decision-card-list"></div>
+                </article>
+              </div>
+            </section>
+
+            <section id="current-compute" class="section-band alt">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Live compute status</p>
+                  <h2>当前全量计算进展</h2>
+                  <p>
+                    这里汇总后台正在运行的计算队列、GPU 占用、结构验证和技术救援队列。页面数据来自本机最新计算产物，
+                    用于判断当前是否可以继续扩容，或者应该等待现有任务完成。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>GPU occupancy</span>
+                  <strong id="gpuOccupancy">4 / 4</strong>
                 </div>
               </div>
-              <div class="score-row">
-                <span class="score-badge">C</span>
-                <div>
-                  <strong>结构增强共识排序</strong>
-                  <div class="weight-stack" aria-label="Affinity and DiffDock weights">
-                    <span style="--w:85; --c:#155fa8">Affinity priority 85%</span>
-                    <span style="--w:15; --c:#8a5a9e">DiffDock 15%</span>
+
+              <div id="computeSnapshotStrip" class="compute-snapshot-strip" aria-label="Current compute snapshot"></div>
+
+              <div class="compute-status-grid" aria-label="Current compute status">
+                <article class="compute-primary-panel">
+                  <div class="panel-title">
+                    <h3>Full DiffDock expansion</h3>
+                    <span id="diffdockUpdatedAt">latest local summary</span>
                   </div>
-                  <code>0.85 × affinity component + 0.15 × normalized DiffDock confidence</code>
+                  <div class="compute-progress">
+                    <div class="progress-meter"><i id="fullDiffdockProgressBar" style="width:0%"></i></div>
+                    <div class="compute-progress-meta">
+                      <strong id="fullDiffdockProgressText">0%</strong>
+                      <span id="fullDiffdockProgressRows">0 / 0 rows</span>
+                    </div>
+                  </div>
+                  <div id="activeChunkRail" class="active-chunk-rail"></div>
+                  <p id="fullDiffdockInterpretation" class="compute-note">
+                    全量 DiffDock 正在运行；missing output 表示技术性缺失，不代表生物学阴性。
+                  </p>
+                </article>
+
+                <article class="compute-side-panel">
+                  <div class="panel-title">
+                    <h3>Active jobs</h3>
+                    <span>queue state</span>
+                  </div>
+                  <div id="activeComputeCards" class="compute-mini-grid"></div>
+                </article>
+              </div>
+              <div id="gpuTelemetryGrid" class="gpu-telemetry-grid" aria-label="GPU telemetry"></div>
+            </section>
+
+            <section class="section-band presentation-strip">
+              <div class="section-heading presentation-heading">
+                <p class="eyebrow">Presentation storyline</p>
+                <h2>汇报阅读顺序</h2>
+                <p>
+                  页面先说明当前进展，再解释为什么这样设计流程，最后进入结果、候选和验证审计。
+                  这三个问题是专家讨论时最需要先建立共识的叙事框架。
+                </p>
+              </div>
+              <div class="presentation-grid" aria-label="Presentation storyline">
+                <article>
+                  <span>1</span>
+                  <h3>先覆盖药物相关蛋白空间</h3>
+                  <p>不再从 40000 个蛋白里盲筛，而是使用 ChEMBL druggable proteome 表作为可讨论的药物相关蛋白范围。</p>
+                </article>
+                <article>
+                  <span>2</span>
+                  <h3>再按疾病方向收敛问题</h3>
+                  <p>亲和筛选回答 drug-target 可能性；疾病方向证据回答该 pair 为什么值得放入肿瘤、感染等方向讨论。</p>
+                </article>
+                <article>
+                  <span>3</span>
+                  <h3>最后用结构和验证层审阅</h3>
+                  <p>DiffDock、Vina/smina/GNINA、ADMET、已知靶点召回和验证面板共同决定候选是否进入专家讨论。</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="workflow" class="section-band">
+              <div class="section-heading">
+                <p class="eyebrow">Screening design</p>
+                <h2>我们做了什么</h2>
+                  <p>
+                    流程采用“druggable proteome 全量亲和筛选、疾病方向 Top 候选收敛、结构增强解释”的分层策略，
+                    将近 500 万个基础组合转化为五个疾病方向下可进入人工审阅和实验设计的候选集合。
+                  </p>
+              </div>
+              <div class="workflow-grid">
+                <article class="step-card">
+                  <span class="step-index">01</span>
+                  <h3>药物库标准化</h3>
+                  <p>整理 FDA 已批准小分子，统一 ChEMBL/PubChem 标识、SMILES、InChIKey、分子式和 SDF 结构文件。</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-index">02</span>
+                  <h3>蛋白靶点库构建</h3>
+                  <p>读取 ChEMBL druggable target 表，保留 UniProt accession、gene symbol、序列和 AlphaFold 受体结构路径。</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-index">03</span>
+                  <h3>AI-DTI 亲和预测</h3>
+                  <p>对 4854990 个 drug-target pair 进行 ConPLex 预测，得到药物-蛋白亲和优先级分数。</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-index">04</span>
+                  <h3>Top 候选去重</h3>
+                  <p>围绕五个疾病方向分别选取 Top10000 候选，并按 drug + protein sequence 生成结构代表复合物。</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-index">05</span>
+                  <h3>疾病候选结构增强</h3>
+                  <p>对每个疾病方向的结构代表候选使用 DiffDock 生成结合姿态与结构置信度，并复用跨疾病方向已完成的同一 drug-target pair 输出，形成可解释短名单。</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="architecture" class="section-band alt">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Expert view</p>
+                  <h2>系统架构与算法视图</h2>
+                  <p>
+                    BioMaster 将药物、蛋白序列、亲和预测和结构对接拆分为可审计的计算层。每一层保留独立产物，
+                    使全量筛选、Top 收敛和结构解释可以分别复现。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Primary matrix</span>
+                  <strong>4854990 pairs</strong>
                 </div>
               </div>
-            </div>
-          </article>
 
-          <article class="quality-panel">
-            <div class="panel-title">
-              <h3>质量控制与可追溯性</h3>
-              <span>audit gates</span>
-            </div>
-            <div class="quality-list">
-              <div>
-                <strong>Identifier consistency</strong>
-                <span>ChEMBL/PubChem、UniProt、gene symbol 在输入层统一映射。</span>
+              <div class="architecture-map" aria-label="BioMaster system architecture">
+                <article class="arch-node input">
+                  <span class="arch-index">01</span>
+                  <p class="arch-label">Input layer</p>
+                  <h3>药物与靶点标准化</h3>
+                  <ul>
+                    <li>FDA-approved small molecules</li>
+                    <li>ChEMBL druggable human proteins</li>
+                    <li>SMILES, SDF, sequence, receptor paths</li>
+                  </ul>
+                </article>
+                <article class="arch-node model">
+                  <span class="arch-index">02</span>
+                  <p class="arch-label">Prediction layer</p>
+                  <h3>AI-DTI 亲和筛选</h3>
+                  <ul>
+                    <li>ConPLex 互作倾向预测</li>
+                    <li>唯一蛋白序列复用预测</li>
+                    <li>全量 drug-target 亲和分数</li>
+                  </ul>
+                </article>
+                <article class="arch-node evidence">
+                  <span class="arch-index">03</span>
+                  <p class="arch-label">Reduction layer</p>
+                  <h3>Top 候选收敛</h3>
+                  <ul>
+                    <li>Per-direction Top10000 candidates</li>
+                    <li>drug + sequence 去重</li>
+                    <li>结构代表蛋白选择</li>
+                  </ul>
+                </article>
+                <article class="arch-node structure">
+                  <span class="arch-index">04</span>
+                  <p class="arch-label">Structural layer</p>
+                  <h3>DiffDock 结构增强</h3>
+                  <ul>
+                    <li>AlphaFold receptor preparation</li>
+                    <li>Top 代表复合物结合姿态</li>
+                    <li>DiffDock confidence audit</li>
+                  </ul>
+                </article>
+                <article class="arch-node output">
+                  <span class="arch-index">05</span>
+                  <p class="arch-label">Output layer</p>
+                  <h3>候选与汇报产物</h3>
+                  <ul>
+                    <li>亲和-结构共识排序候选</li>
+                    <li>结构评分与图表分析</li>
+                    <li>正式汇报与验证短名单</li>
+                  </ul>
+                </article>
               </div>
-              <div>
-                <strong>Sequence-level de-duplication</strong>
-                  <span>同一疾病方向内，同一药物命中相同蛋白序列时只对一个结构代表执行 DiffDock，再回填到对应 UniProt 记录。</span>
+
+              <div class="score-quality-grid">
+                <article class="score-panel">
+                  <div class="panel-title">
+                    <h3>排序算法逻辑</h3>
+                    <span>affinity and structure fusion</span>
+                  </div>
+                  <div class="score-flow">
+                    <div class="score-row">
+                      <span class="score-badge">A</span>
+                      <div>
+                        <strong>全量药物-蛋白亲和筛选</strong>
+                        <div class="weight-stack" aria-label="ConPLex affinity screen">
+                          <span style="--w:100; --c:#155fa8">ConPLex affinity 100%</span>
+                        </div>
+                        <code>score(drug, protein sequence) → expanded to all represented UniProt records</code>
+                      </div>
+                    </div>
+                    <div class="score-row">
+                      <span class="score-badge">B</span>
+                      <div>
+                        <strong>结构代表去重</strong>
+                        <div class="weight-stack" aria-label="Representative selection">
+                          <span style="--w:60; --c:#148f8b">drug + sequence identity</span>
+                          <span style="--w:40; --c:#d87832">AlphaFold-ready representative</span>
+                        </div>
+                        <code>5 disease directions × Top10000 rows → 23744 DiffDock-ready representative jobs</code>
+                      </div>
+                    </div>
+                    <div class="score-row">
+                      <span class="score-badge">C</span>
+                      <div>
+                        <strong>结构增强共识排序</strong>
+                        <div class="weight-stack" aria-label="Affinity and DiffDock weights">
+                          <span style="--w:85; --c:#155fa8">Affinity priority 85%</span>
+                          <span style="--w:15; --c:#8a5a9e">DiffDock 15%</span>
+                        </div>
+                        <code>0.85 × affinity component + 0.15 × normalized DiffDock confidence</code>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="quality-panel">
+                  <div class="panel-title">
+                    <h3>质量控制与可追溯性</h3>
+                    <span>audit gates</span>
+                  </div>
+                  <div class="quality-list">
+                    <div>
+                      <strong>Identifier consistency</strong>
+                      <span>ChEMBL/PubChem、UniProt、gene symbol 在输入层统一映射。</span>
+                    </div>
+                    <div>
+                      <strong>Sequence-level de-duplication</strong>
+                        <span>同一疾病方向内，同一药物命中相同蛋白序列时只对一个结构代表执行 DiffDock，再回填到对应 UniProt 记录。</span>
+                    </div>
+                    <div>
+                      <strong>Receptor readiness</strong>
+                      <span>结构对接仅使用可获得或已裁剪的 AlphaFold receptor。</span>
+                    </div>
+                    <div>
+                      <strong>Failure audit</strong>
+                      <span>缺失输出、异常批次和补充计算对象单独审计。</span>
+                    </div>
+                  </div>
+                </article>
               </div>
-              <div>
-                <strong>Receptor readiness</strong>
-                <span>结构对接仅使用可获得或已裁剪的 AlphaFold receptor。</span>
+
+              <div class="model-evidence-matrix" aria-label="Model and evidence role matrix">
+                <article class="model-evidence-card">
+                  <span>ConPLex</span>
+                  <h3>药物-蛋白互作倾向</h3>
+                  <p>输入药物结构和蛋白序列，输出 drug-target affinity priority，用于从 4854990 个组合中识别高优先级 pair。</p>
+                  <dl>
+                    <div><dt>回答问题</dt><dd>这个药物是否可能作用于这个蛋白？</dd></div>
+                    <div><dt>主要限制</dt><dd>不直接给出疾病适应症，也不是实验亲和常数。</dd></div>
+                  </dl>
+                </article>
+                <article class="model-evidence-card">
+                  <span>Open Targets / TxGNN</span>
+                  <h3>疾病方向证据</h3>
+                  <p>把 target-disease、drug-disease 和知识图谱路径映射到肿瘤、感染、心血管、神经/精神、免疫/炎症五个方向。</p>
+                  <dl>
+                    <div><dt>回答问题</dt><dd>这个 pair 为什么值得放到某个疾病方向讨论？</dd></div>
+                    <div><dt>主要限制</dt><dd>Open Targets 不覆盖所有蛋白，也不等于特定位点证据。</dd></div>
+                  </dl>
+                </article>
+                <article class="model-evidence-card">
+                  <span>DiffDock</span>
+                  <h3>结构姿态增强</h3>
+                  <p>对 Top 候选代表生成 ligand pose 和 confidence，用于判断是否存在可审阅的空间结合姿态线索。</p>
+                  <dl>
+                    <div><dt>回答问题</dt><dd>这个候选有没有可视化、可审计的结构姿态？</dd></div>
+                    <div><dt>主要限制</dt><dd>confidence 不是结合自由能，负数不能单独排序药效。</dd></div>
+                  </dl>
+                </article>
+                <article class="model-evidence-card">
+                  <span>Vina / smina / GNINA / Boltz-2</span>
+                  <h3>正交结构压力测试</h3>
+                  <p>用经典 docking、CNN rescoring 和第二结构模型检查候选是否在不同结构假设下仍保留讨论价值。</p>
+                  <dl>
+                    <div><dt>回答问题</dt><dd>DiffDock 结果是否有独立结构方法支持或冲突？</dd></div>
+                    <div><dt>主要限制</dt><dd>不同模型分数尺度不同，应作为共识审计而非简单相加。</dd></div>
+                  </dl>
+                </article>
+                <article class="model-evidence-card">
+                  <span>ADMET / FDA label</span>
+                  <h3>转化与安全性审阅</h3>
+                  <p>结合 FDA label、已知靶点、规则 ADMET、ML ADMET 和实验面板，把候选分成正控、机制扩展、新用途和风险审阅轨道。</p>
+                  <dl>
+                    <div><dt>回答问题</dt><dd>这个候选能否进入专家审阅或实验设计？</dd></div>
+                    <div><dt>主要限制</dt><dd>CMap/LINCS 等表达签名仍依赖外部数据补充。</dd></div>
+                  </dl>
+                </article>
               </div>
-              <div>
-                <strong>Failure audit</strong>
-                <span>缺失输出、异常批次和补充计算对象单独审计。</span>
+
+              <div class="lineage-grid" aria-label="Data lineage">
+                <article class="lineage-step">
+                  <span>Data</span>
+                  <h3>标准化输入表</h3>
+                  <p>药物库、ChEMBL druggable protein 表和 AlphaFold 受体路径形成稳定输入。</p>
+                </article>
+                <article class="lineage-step">
+                  <span>Scores</span>
+                  <h3>中间评分矩阵</h3>
+                  <p>唯一序列预测、全量亲和矩阵、Top10000 候选和结构分数分别保留。</p>
+                </article>
+                <article class="lineage-step">
+                  <span>Structures</span>
+                  <h3>结构对接产物</h3>
+                  <p>Top 结构代表优先产出 rank-1 ligand pose，并映射回完整候选表。</p>
+                </article>
+                <article class="lineage-step">
+                  <span>Reports</span>
+                  <h3>专家审阅界面</h3>
+                  <p>首页负责交互展示，结果汇报负责正式叙事，运行状态页负责计算监控。</p>
+                </article>
               </div>
-            </div>
-          </article>
-        </div>
+            </section>
 
-        <div class="lineage-grid" aria-label="Data lineage">
-          <article class="lineage-step">
-            <span>Data</span>
-            <h3>标准化输入表</h3>
-            <p>药物库、ChEMBL druggable protein 表和 AlphaFold 受体路径形成稳定输入。</p>
-          </article>
-          <article class="lineage-step">
-            <span>Scores</span>
-            <h3>中间评分矩阵</h3>
-            <p>唯一序列预测、全量亲和矩阵、Top10000 候选和结构分数分别保留。</p>
-          </article>
-          <article class="lineage-step">
-            <span>Structures</span>
-            <h3>结构对接产物</h3>
-            <p>Top 结构代表优先产出 rank-1 ligand pose，并映射回完整候选表。</p>
-          </article>
-          <article class="lineage-step">
-            <span>Reports</span>
-            <h3>专家审阅界面</h3>
-            <p>首页负责交互展示，结果汇报负责正式叙事，运行状态页负责计算监控。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="workflow" class="section-band">
-        <div class="section-heading">
-          <p class="eyebrow">Screening design</p>
-          <h2>我们做了什么</h2>
-            <p>
-              流程采用“druggable proteome 全量亲和筛选、疾病方向 Top 候选收敛、结构增强解释”的分层策略，
-              将近 500 万个基础组合转化为五个疾病方向下可进入人工审阅和实验设计的候选集合。
-            </p>
-        </div>
-        <div class="workflow-grid">
-          <article class="step-card">
-            <span class="step-index">01</span>
-            <h3>药物库标准化</h3>
-            <p>整理 FDA 已批准小分子，统一 ChEMBL/PubChem 标识、SMILES、InChIKey、分子式和 SDF 结构文件。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-index">02</span>
-            <h3>蛋白靶点库构建</h3>
-            <p>读取 ChEMBL druggable target 表，保留 UniProt accession、gene symbol、序列和 AlphaFold 受体结构路径。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-index">03</span>
-            <h3>AI-DTI 亲和预测</h3>
-            <p>对 4854990 个 drug-target pair 进行 ConPLex 预测，得到药物-蛋白亲和优先级分数。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-index">04</span>
-            <h3>Top 候选去重</h3>
-            <p>围绕五个疾病方向分别选取 Top10000 候选，并按 drug + protein sequence 生成结构代表复合物。</p>
-          </article>
-          <article class="step-card">
-            <span class="step-index">05</span>
-            <h3>疾病候选结构增强</h3>
-            <p>对每个疾病方向的结构代表候选使用 DiffDock 生成结合姿态与结构置信度，形成可解释短名单。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="evidence" class="section-band alt">
-        <div class="section-heading">
-          <p class="eyebrow">Interpretation model</p>
-          <h2>这个流程代表什么</h2>
-          <p>
-            排序对象是 drug-target pair。本轮主流程不把 Open Targets 当作必要前置过滤条件，而是先在药物相关蛋白范围内做全量亲和筛选，
-            再按疾病方向引入 FDA 适应症、ICD-11 蛋白疾病类别、Open Targets 和 TxGNN 等证据，
-            并用结构对接为候选提供空间构象层面的补充信息。
-          </p>
-        </div>
-        <div class="evidence-layout">
-          <div class="formula-panel">
-            <h3>结构增强共识分数</h3>
-            <code>direction evidence + affinity prediction + DiffDock confidence</code>
-            <p>疾病证据用于解释“为什么属于该疾病方向”；亲和分数用于发现潜在药物-蛋白配对；DiffDock 用于辅助判断是否存在可审阅结合姿态。</p>
-            <code>per-direction Top10000 → drug + sequence representatives → DiffDock → Chinese rationale</code>
-          </div>
-          <div class="coverage-panel">
-            <h3>计算规模</h3>
-            <div class="bar-row">
-              <span>ConPLex screened</span>
-              <div class="bar-track"><i style="width:100%"></i></div>
-              <b>4854990</b>
-            </div>
-            <div class="bar-row">
-              <span>Disease Top10000 sets</span>
-              <div class="bar-track"><i style="width:24%"></i></div>
-              <b>50000</b>
-            </div>
-            <div class="bar-row">
-              <span>Docking representatives</span>
-              <div class="bar-track"><i style="width:18%"></i></div>
-              <b>23744</b>
-            </div>
-            <div class="bar-row">
-              <span>Disease directions</span>
-              <div class="bar-track"><i style="width:10%"></i></div>
-              <b>5</b>
-            </div>
-          </div>
-        </div>
-        <div class="analysis-note">
-          <h3>Open Targets 的解释口径</h3>
-          <p>
-            Open Targets 只在需要疾病方向排序时作为 target-disease association 证据使用；它不会“对所有蛋白都生效”。
-            本轮 druggable-proteome 路线先不把 cancer 位点作为主过滤条件，后续如果聚焦具体癌种或突变位点，应切换到对应 disease ID、
-            mutation/variant 注释和癌种上下文后重新评分。
-          </p>
-        </div>
-        <div class="analysis-note">
-          <h3>UniProt accession 与结构代表</h3>
-          <p>
-            UniProt accession 是蛋白数据库记录编号，不是结合位点。不同药物面对同一蛋白时仍分别进入对接；
-            当前只在同一疾病方向内、同一药物面对完全相同蛋白序列时合并重复 accession。五个方向的 Top10000
-            候选最终形成 23744 个实际 DiffDock-ready 代表任务，再将结构结果映射回对应的 UniProt 记录。
-          </p>
-        </div>
-      </section>
-
-      <section id="repurposing" class="section-band">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Drug repurposing evidence loop</p>
-            <h2>老药新用可信度闭环</h2>
-            <p>
-              国际老药新用流程通常不会只看亲和分数或 docking 分数，而是把药物-疾病、靶点-疾病、结构、安全性和临床证据分层审阅。
-              本页将每个候选标注为 A-D 可信度等级，并给出证据路径和下一步验证动作。
-            </p>
-          </div>
-          <div class="audit-chip">
-            <span>Evidence tiers</span>
-            <strong>A-D grading</strong>
-          </div>
-        </div>
-        <div class="repurposing-grid">
-          <article class="repurpose-card tier-a">
-            <span>A</span>
-            <h3>多源强证据</h3>
-            <p>疾病方向、ConPLex 亲和、Open Targets/TxGNN 或治疗领域证据一致，并已有结构姿态；优先区分已知召回和可转化新用途。</p>
-          </article>
-          <article class="repurpose-card tier-b">
-            <span>B</span>
-            <h3>机制邻近优先</h3>
-            <p>疾病和互作信号一致，但仍需补充通路、组织表达、疾病亚型和二次结构评分，适合进入专家审阅短名单。</p>
-          </article>
-          <article class="repurpose-card tier-c">
-            <span>C</span>
-            <h3>探索性再定位</h3>
-            <p>具备模型信号但疾病证据不足，应补 CMap/LINCS 转录组反转、ADMET、安全性和反证检索。</p>
-          </article>
-          <article class="repurpose-card tier-d">
-            <span>D</span>
-            <h3>结构补跑或低优先级</h3>
-            <p>高分但 DiffDock 缺失输出时进入结构补跑；证据不足时保留为背景候选，等待新证据增强。</p>
-          </article>
-        </div>
-        <div class="validation-grid">
-          <article>
-            <h3>已知适应症/靶点核查</h3>
-            <p>先判断候选是已知正控召回、同机制扩展，还是潜在新用途，避免把已知关系误报为新发现。</p>
-          </article>
-          <article>
-            <h3>疾病签名反转</h3>
-            <p>对重点候选补 CMap/LINCS 或公开转录组签名，检查药物扰动是否能反转疾病表达状态。</p>
-          </article>
-          <article>
-            <h3>安全性和可转化性</h3>
-            <p>针对不同疾病方向补 BBB、hERG、CYP/DDI、肝肾毒性、剂量窗口和禁忌证审阅。</p>
-          </article>
-          <article>
-            <h3>结构与口袋审计</h3>
-            <p>对 A/B 级候选做二次 docking、pocket 对齐、已知配体口袋比较和受体结构准备复核。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="analytics" class="section-band">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Visual analytics</p>
-            <h2>结果图表概览</h2>
-            <p>
-              图表将 Top 候选靶点分布、药物分布、结构状态和受体准备状态放在同一视图中，便于快速判断候选集中是否存在明显集中或偏斜。
-            </p>
-          </div>
-          <div class="audit-chip">
-            <span>Structural extension</span>
-            <strong id="queueState">complete</strong>
-          </div>
-        </div>
-        <div class="chart-grid">
-          <article class="chart-panel wide">
-            <div class="panel-title">
-              <h3>Top candidate target concentration</h3>
-              <span>candidate pairs</span>
-            </div>
-            <canvas id="targetChart" width="720" height="320" aria-label="Top target distribution"></canvas>
-          </article>
-          <article class="chart-panel">
-            <div class="panel-title">
-              <h3>Workflow scale</h3>
-              <span>screening funnel</span>
-            </div>
-            <canvas id="evidenceChart" width="360" height="320" aria-label="Workflow scale"></canvas>
-          </article>
-          <article class="chart-panel">
-            <div class="panel-title">
-              <h3>Structural status</h3>
-              <span>representatives</span>
-            </div>
-            <div id="statusBars" class="stacked-bars"></div>
-          </article>
-          <article class="chart-panel">
-            <div class="panel-title">
-              <h3>Repurposing credibility</h3>
-              <span>A-D evidence tiers</span>
-            </div>
-            <div id="credibilityBars" class="stacked-bars"></div>
-          </article>
-          <article class="chart-panel">
-            <div class="panel-title">
-              <h3>Validation posture</h3>
-              <span>next review action</span>
-            </div>
-            <div id="postureBars" class="stacked-bars"></div>
-          </article>
-          <article class="chart-panel">
-            <div class="panel-title">
-              <h3>Preparation layers</h3>
-              <span>selection and receptor status</span>
-            </div>
-            <div id="layerBars" class="stacked-bars"></div>
-          </article>
-        </div>
-      </section>
-
-      <section id="candidates" class="section-band">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Structure-enhanced consensus</p>
-            <h2>代表性候选结果</h2>
-            <p>
-              这里是当前筛选结果的交互式数据工作台，默认展示已获得 DiffDock rank-1 姿态的疾病方向代表项，
-              并保留缺失输出对象的结构审计状态。右侧详情区汇总中文合理性解释、证据路径和下一步验证动作。
-            </p>
-          </div>
-          <div class="candidate-controls" role="group" aria-label="Candidate filters">
-            <input id="candidateSearch" type="search" placeholder="搜索药物或靶点" />
-            <div id="directionFilters" class="direction-filters" aria-label="Disease direction filters"></div>
-            <div class="segmented">
-              <button type="button" data-filter="all">全部</button>
-              <button class="active" type="button" data-filter="completed">结构完成</button>
-              <button type="button" data-filter="missing_output">缺失输出</button>
-            </div>
-          </div>
-        </div>
-        <div class="candidate-browser">
-          <div class="candidate-list-panel">
-            <div class="candidate-list-head">
-              <div>
-                <span>Candidate shortlist</span>
-                <strong id="candidateCount">0 / 0</strong>
+            <section id="evidence" class="section-band alt">
+              <div class="section-heading">
+                <p class="eyebrow">Interpretation model</p>
+                <h2>这个流程代表什么</h2>
+                <p>
+                  排序对象是 drug-target pair。本轮主流程不把 Open Targets 当作必要前置过滤条件，而是先在药物相关蛋白范围内做全量亲和筛选，
+                  再按疾病方向引入 FDA 适应症、ICD-11 蛋白疾病类别、Open Targets 和 TxGNN 等证据，
+                  并用结构对接为候选提供空间构象层面的补充信息。
+                </p>
               </div>
-              <small>ranked pairs</small>
-            </div>
-            <div class="candidate-table-wrap">
-              <table class="candidate-table">
-                <thead>
-                  <tr>
-                    <th>Rank</th>
-                    <th>Drug-target</th>
-                    <th>Scores</th>
-                    <th>Evidence</th>
-                  </tr>
-                </thead>
-                <tbody id="candidateRows"></tbody>
-              </table>
-            </div>
-          </div>
-          <aside id="candidateDetail" class="candidate-detail-panel" aria-live="polite"></aside>
-        </div>
-      </section>
+              <div class="evidence-layout">
+                <div class="formula-panel">
+                  <h3>结构增强共识分数</h3>
+                  <code>direction evidence + affinity prediction + DiffDock confidence</code>
+                  <p>疾病证据用于解释“为什么属于该疾病方向”；亲和分数用于发现潜在药物-蛋白配对；DiffDock 用于辅助判断是否存在可审阅结合姿态。</p>
+                  <code>per-direction Top10000 → drug + sequence representatives → DiffDock → Chinese rationale</code>
+                </div>
+                <div class="coverage-panel">
+                  <h3>计算规模</h3>
+                  <div class="bar-row">
+                    <span>ConPLex screened</span>
+                    <div class="bar-track"><i style="width:100%"></i></div>
+                    <b>4854990</b>
+                  </div>
+                  <div class="bar-row">
+                    <span>Disease Top10000 sets</span>
+                    <div class="bar-track"><i style="width:24%"></i></div>
+                    <b>50000</b>
+                  </div>
+                  <div class="bar-row">
+                    <span>Docking representatives</span>
+                    <div class="bar-track"><i style="width:18%"></i></div>
+                    <b>23744</b>
+                  </div>
+                  <div class="bar-row">
+                    <span>Disease directions</span>
+                    <div class="bar-track"><i style="width:10%"></i></div>
+                    <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="interpretation-guide-grid" aria-label="Result interpretation guide">
+                <article>
+                  <span>Top10000</span>
+                  <h3>表示候选优先级集合</h3>
+                  <p>每个疾病方向的 Top10000 是用于后续结构增强和专家审阅的高优先级假设集，不是最终推荐药物列表。</p>
+                </article>
+                <article>
+                  <span>Known recall</span>
+                  <h3>表示流程找回正控</h3>
+                  <p>已知药物-靶点关系被排到前列，说明流程能找回药理上可解释的信号；它们也可作为阳性对照。</p>
+                </article>
+                <article>
+                  <span>Docking score</span>
+                  <h3>用于结构审阅，不等于药效</h3>
+                  <p>DiffDock confidence 可能出现负值。这里用它判断姿态是否值得看，而不是直接解释为结合自由能或 IC50。</p>
+                </article>
+                <article>
+                  <span>Missing output</span>
+                  <h3>表示技术缺失</h3>
+                  <p>missing output 通常来自输入结构、配体图、采样或批处理边界；它不代表该 pair 生物学上没有作用。</p>
+                </article>
+              </div>
+              <div class="analysis-note">
+                <h3>Open Targets 的解释口径</h3>
+                <p>
+                  Open Targets 只在需要疾病方向排序时作为 target-disease association 证据使用；它不会“对所有蛋白都生效”。
+                  本轮 druggable-proteome 路线先不把 cancer 位点作为主过滤条件，后续如果聚焦具体癌种或突变位点，应切换到对应 disease ID、
+                  mutation/variant 注释和癌种上下文后重新评分。
+                </p>
+              </div>
+              <div class="analysis-note">
+                <h3>UniProt accession 与结构代表</h3>
+                <p>
+                  UniProt accession 是蛋白数据库记录编号，不是结合位点。不同药物面对同一蛋白时仍分别进入对接；
+                  当前只在同一疾病方向内、同一药物面对完全相同蛋白序列时合并重复 accession。五个方向的 Top10000
+                  候选最终形成 23744 个实际 DiffDock-ready 代表任务，再将结构结果映射回对应的 UniProt 记录。
+                </p>
+              </div>
+            </section>
 
-      <section id="quality-audit" class="section-band alt">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Quality audit</p>
-            <h2>结构计算质量审计</h2>
-            <p id="qualityAuditNarrative">
-              剩余缺失输出表示结构计算未产生可解析 rank-1 pose，应作为计算审计对象处理。
-            </p>
-          </div>
-          <div class="audit-chip">
-            <span>Final output rate</span>
-            <strong data-metric="fullOutputRatePct">0%</strong>
-          </div>
-        </div>
+            <section id="disease-directions" class="section-band">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Disease-direction results</p>
+                  <h2>五个疾病方向的结构增强结果</h2>
+                  <p>
+                    每个方向先取疾病相关 Top10000，再按 drug + protein sequence 生成 DiffDock-ready 代表任务。
+                    表中完成率表示成功产生可审阅 rank-1 confidence SDF 的比例。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Disease directions</span>
+                  <strong data-metric="diseaseDirections">5</strong>
+                </div>
+              </div>
+              <div id="diseaseDirectionCards" class="direction-grid" aria-label="Disease direction result cards"></div>
+            </section>
 
-        <div id="qualityAuditMetrics" class="audit-metric-grid" aria-label="DiffDock quality audit metrics"></div>
+            <section id="candidates" class="section-band">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Structure-enhanced consensus</p>
+                  <h2>代表性候选结果</h2>
+                  <p>
+                    这里是当前筛选结果的交互式数据工作台，默认展示已获得 DiffDock rank-1 姿态的疾病方向代表项，
+                    并保留缺失输出对象的结构审计状态。右侧详情区汇总中文合理性解释、证据路径和下一步验证动作。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Workbench scope</span>
+                  <strong data-metric="structureCandidates">23744</strong>
+                </div>
+              </div>
+              <div class="candidate-toolbar" role="group" aria-label="Candidate filters">
+                <label>
+                  <span>搜索</span>
+                  <input id="candidateSearch" type="search" placeholder="输入药物、靶点、accession 或证据关键词" />
+                </label>
+                <div>
+                  <span>疾病方向</span>
+                  <div id="directionFilters" class="direction-filters" aria-label="Disease direction filters"></div>
+                </div>
+                <div>
+                  <span>结构状态</span>
+                  <div class="segmented">
+                    <button type="button" data-filter="all">全部</button>
+                    <button class="active" type="button" data-filter="completed">结构完成</button>
+                    <button type="button" data-filter="missing_output">缺失输出</button>
+                  </div>
+                </div>
+              </div>
+              <div class="candidate-browser">
+                <div class="candidate-list-panel">
+                  <div class="candidate-list-head">
+                    <div>
+                      <span>Candidate shortlist</span>
+                      <strong id="candidateCount">0 / 0</strong>
+                    </div>
+                    <small>ranked pairs</small>
+                  </div>
+                  <div class="candidate-table-wrap">
+                    <table class="candidate-table">
+                      <thead>
+                        <tr>
+                          <th>Rank</th>
+                          <th>Drug-target</th>
+                          <th>Scores</th>
+                          <th>Evidence</th>
+                        </tr>
+                      </thead>
+                      <tbody id="candidateRows"></tbody>
+                    </table>
+                  </div>
+                </div>
+                <aside id="candidateDetail" class="candidate-detail-panel" aria-live="polite"></aside>
+              </div>
+              <div class="candidate-context-dock" aria-label="Candidate interpretation summary">
+                <div class="panel-title">
+                  <h3>候选解释摘要</h3>
+                  <span>current filter and selected pair</span>
+                </div>
+                <div id="candidateReadingRail" class="candidate-reading-rail" aria-label="Candidate interpretation rail"></div>
+                <div class="candidate-summary-grid" aria-label="Candidate workbench summary">
+                  <article class="candidate-summary-card" id="candidateFilterSummary"></article>
+                  <article class="candidate-summary-card">
+                    <span>分数解释</span>
+                    <h3>DiffDock confidence 不是结合自由能</h3>
+                    <p>
+                      这里的 docking 数值用于判断生成姿态是否值得专家审阅；负数不等同于药效强弱，也不能单独决定候选优先级。
+                    </p>
+                  </article>
+                  <article class="candidate-summary-card" id="candidateEvidenceSummary"></article>
+                </div>
+              </div>
+            </section>
 
-        <div class="audit-layout">
-          <article class="audit-panel">
-            <div class="panel-title">
-              <h3>各疾病方向剩余缺失</h3>
-              <span>remaining missing outputs</span>
-            </div>
-            <div class="audit-table-wrap">
-              <table class="audit-table">
-                <thead>
-                  <tr>
-                    <th>方向</th>
-                    <th>完成</th>
-                    <th>缺失</th>
-                    <th>缺失率</th>
-                  </tr>
-                </thead>
-                <tbody id="qualityDirectionRows"></tbody>
-              </table>
-            </div>
-          </article>
+            <section id="analysis" class="section-band">
+              <div class="section-heading">
+                <p class="eyebrow">Interpretation</p>
+                <h2>结果如何使用</h2>
+                <p>
+                  输出结果是计算候选优先级，不是药效证明。它的价值在于把大规模 drug-target 组合收敛为可以进一步讨论、审阅和验证的候选集合。
+                </p>
+              </div>
+              <div class="analysis-grid">
+                <article>
+                  <h3>可以支持的结论</h3>
+                  <p>候选 pair 在 ConPLex 亲和预测中具有高优先级，并在结构层面获得可审阅的 DiffDock 姿态。</p>
+                </article>
+                <article>
+                  <h3>仍需验证的内容</h3>
+                  <p>具体疾病方向、细胞模型、剂量反应、靶点机制、安全性和适应症合理性仍需实验与文献审阅确认。</p>
+                </article>
+                <article>
+                  <h3>下一阶段收敛</h3>
+                  <p>可从结构增强 Top100 中筛选 20-50 个候选 pair，再结合可获得性和实验可操作性进入 5-20 个验证对象。</p>
+                </article>
+              </div>
+            </section>
 
-          <article class="audit-panel audit-panel-split">
-            <div class="panel-title">
-              <h3>失败模式与受体状态</h3>
-              <span>failure mode audit</span>
-            </div>
-            <div class="audit-subpanel">
-              <h4>DiffDock 输出失败原因</h4>
-              <div id="qualityFailureModes" class="stacked-bars"></div>
-            </div>
-            <div class="audit-subpanel">
-              <h4>受体准备状态</h4>
-              <div id="qualityReceptorStatuses" class="stacked-bars"></div>
-            </div>
-          </article>
-        </div>
+            <section id="repurposing" class="section-band alt">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Drug repurposing evidence loop</p>
+                  <h2>老药新用可信度闭环</h2>
+                  <p>
+                    国际老药新用流程通常不会只看亲和分数或 docking 分数，而是把药物-疾病、靶点-疾病、结构、安全性和临床证据分层审阅。
+                    本页将每个候选标注为 A-D 可信度等级，并给出证据路径和下一步验证动作。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Evidence tiers</span>
+                  <strong>A-D grading</strong>
+                </div>
+              </div>
+              <div class="repurposing-grid">
+                <article class="repurpose-card tier-a">
+                  <span>A</span>
+                  <h3>多源强证据</h3>
+                  <p>疾病方向、ConPLex 亲和、Open Targets/TxGNN 或治疗领域证据一致，并已有结构姿态；优先区分已知召回和可转化新用途。</p>
+                </article>
+                <article class="repurpose-card tier-b">
+                  <span>B</span>
+                  <h3>机制邻近优先</h3>
+                  <p>疾病和互作信号一致，但仍需补充通路、组织表达、疾病亚型和二次结构评分，适合进入专家审阅短名单。</p>
+                </article>
+                <article class="repurpose-card tier-c">
+                  <span>C</span>
+                  <h3>探索性再定位</h3>
+                  <p>具备模型信号但疾病证据不足，应补 CMap/LINCS 转录组反转、ADMET、安全性和反证检索。</p>
+                </article>
+                <article class="repurpose-card tier-d">
+                  <span>D</span>
+                  <h3>结构补跑或低优先级</h3>
+                  <p>高分但 DiffDock 缺失输出时进入结构补跑；证据不足时保留为背景候选，等待新证据增强。</p>
+                </article>
+              </div>
+              <div class="validation-grid">
+                <article>
+                  <h3>已知适应症/靶点核查</h3>
+                  <p>先判断候选是已知正控召回、同机制扩展，还是潜在新用途，避免把已知关系误报为新发现。</p>
+                </article>
+                <article>
+                  <h3>疾病签名反转</h3>
+                  <p>对重点候选补 CMap/LINCS 或公开转录组签名，检查药物扰动是否能反转疾病表达状态。</p>
+                </article>
+                <article>
+                  <h3>安全性和可转化性</h3>
+                  <p>针对不同疾病方向补 BBB、hERG、CYP/DDI、肝肾毒性、剂量窗口和禁忌证审阅。</p>
+                </article>
+                <article>
+                  <h3>结构与口袋审计</h3>
+                  <p>对 A/B 级候选做二次 docking、pocket 对齐、已知配体口袋比较和受体结构准备复核。</p>
+                </article>
+              </div>
+            </section>
 
-        <div id="qualityActions" class="audit-action-grid" aria-label="Next audit actions"></div>
+            <section id="analytics" class="section-band">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Visual analytics</p>
+                  <h2>结果图表概览</h2>
+                  <p>
+                    图表将 Top 候选靶点分布、药物分布、结构状态和受体准备状态放在同一视图中，便于快速判断候选集中是否存在明显集中或偏斜。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Structural extension</span>
+                  <strong id="queueState">complete</strong>
+                </div>
+              </div>
+              <div class="chart-grid">
+                <article class="chart-panel wide">
+                  <div class="panel-title">
+                    <h3>Top candidate target concentration</h3>
+                    <span>candidate pairs</span>
+                  </div>
+                  <canvas id="targetChart" width="720" height="320" aria-label="Top target distribution"></canvas>
+                </article>
+                <article class="chart-panel">
+                  <div class="panel-title">
+                    <h3>Workflow scale</h3>
+                    <span>screening funnel</span>
+                  </div>
+                  <canvas id="evidenceChart" width="360" height="320" aria-label="Workflow scale"></canvas>
+                </article>
+                <article class="chart-panel">
+                  <div class="panel-title">
+                    <h3>Structural status</h3>
+                    <span>representatives</span>
+                  </div>
+                  <div id="statusBars" class="stacked-bars"></div>
+                </article>
+                <article class="chart-panel">
+                  <div class="panel-title">
+                    <h3>Repurposing credibility</h3>
+                    <span>A-D evidence tiers</span>
+                  </div>
+                  <div id="credibilityBars" class="stacked-bars"></div>
+                </article>
+                <article class="chart-panel">
+                  <div class="panel-title">
+                    <h3>Validation posture</h3>
+                    <span>next review action</span>
+                  </div>
+                  <div id="postureBars" class="stacked-bars"></div>
+                </article>
+                <article class="chart-panel">
+                  <div class="panel-title">
+                    <h3>Preparation layers</h3>
+                    <span>selection and receptor status</span>
+                  </div>
+                  <div id="layerBars" class="stacked-bars"></div>
+                </article>
+              </div>
+            </section>
 
-        <article class="audit-panel audit-panel-wide">
-          <div class="panel-title">
-            <h3>高优先级缺失输出样例</h3>
-            <span>for targeted rerun review</span>
-          </div>
-          <div class="audit-table-wrap">
-            <table class="audit-table audit-table-wide">
-              <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Drug-target</th>
-                  <th>Scores</th>
-                  <th>Audit reason</th>
-                </tr>
-              </thead>
-              <tbody id="qualityMissingRows"></tbody>
-            </table>
-          </div>
-        </article>
-      </section>
+            <section id="structure-audit-snapshot" class="section-band compact">
+              <div class="section-heading">
+                <p class="eyebrow">Latest local audit</p>
+                <h2>当前结构计算审计</h2>
+                <p>
+                  五个疾病方向的 Top10000 候选已经全部完成 DiffDock-ready 代表任务对接。以下指标来自本地最新结构计算产物。
+                </p>
+              </div>
+              <div class="metric-grid" aria-label="Full structural extension audit">
+                <article class="metric-card">
+                  <span>Primary completed</span>
+                  <strong data-metric="primaryCompletedOutputs">0</strong>
+                  <small>original full DiffDock outputs</small>
+                </article>
+                <article class="metric-card">
+                  <span>Rescue / reuse</span>
+                  <strong data-metric="rerunRecoveredOutputs">0</strong>
+                  <small>rescued or cross-direction reused outputs</small>
+                </article>
+                <article class="metric-card">
+                  <span>Final output rate</span>
+                  <strong data-metric="fullOutputRatePct">0%</strong>
+                  <small>primary plus rescued/reused outputs</small>
+                </article>
+                <article class="metric-card">
+                  <span>Still missing</span>
+                  <strong data-metric="fullMissingOutputs">0</strong>
+                  <small>remaining structure audit queue</small>
+                </article>
+              </div>
+            </section>
 
-      <section id="analysis" class="section-band">
-        <div class="section-heading">
-          <p class="eyebrow">Interpretation</p>
-          <h2>结果如何使用</h2>
-          <p>
-            输出结果是计算候选优先级，不是药效证明。它的价值在于把大规模 drug-target 组合收敛为可以进一步讨论、审阅和验证的候选集合。
-          </p>
-        </div>
-        <div class="analysis-grid">
-          <article>
-            <h3>可以支持的结论</h3>
-            <p>候选 pair 在 ConPLex 亲和预测中具有高优先级，并在结构层面获得可审阅的 DiffDock 姿态。</p>
-          </article>
-          <article>
-            <h3>仍需验证的内容</h3>
-            <p>具体疾病方向、细胞模型、剂量反应、靶点机制、安全性和适应症合理性仍需实验与文献审阅确认。</p>
-          </article>
-          <article>
-            <h3>下一阶段收敛</h3>
-            <p>可从结构增强 Top100 中筛选 20-50 个候选 pair，再结合可获得性和实验可操作性进入 5-20 个验证对象。</p>
-          </article>
-        </div>
-      </section>
+            <section id="quality-audit" class="section-band alt">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Quality audit</p>
+                  <h2>结构计算质量审计</h2>
+                  <p id="qualityAuditNarrative">
+                    剩余缺失输出表示结构计算未产生可解析 rank-1 pose，应作为计算审计对象处理。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Final output rate</span>
+                  <strong data-metric="fullOutputRatePct">0%</strong>
+                </div>
+              </div>
 
-      <section id="artifacts" class="section-band">
-        <div class="section-heading">
-          <p class="eyebrow">Artifacts</p>
-          <h2>产物索引</h2>
-        </div>
-        <div class="artifact-list">
-          <a href="results-report.html">
-            <span>正式结果汇报</span>
-            <small>面向外部阅读的项目目标、证据逻辑与结论解释</small>
-          </a>
-          <a href="status-report.html">
-            <span>运行状态页面</span>
-            <small>结构扩展队列、审计指标和下一步工作</small>
-          </a>
-          <a href="data-summary.html">
-            <span>数据口径页面</span>
-            <small>全量筛选规模、去重推理、Top 候选和结构审计口径</small>
-          </a>
-          <a href="formal-report.html">
-            <span>正式 PDF 汇报</span>
-            <small>嵌入式 PDF 阅读页面</small>
-          </a>
-          <a href="main-figure.html">
-            <span>主流程图</span>
-            <small>工作流主图与图例说明</small>
-          </a>
-        </div>
-      </section>
+              <div id="qualityAuditMetrics" class="audit-metric-grid" aria-label="DiffDock quality audit metrics"></div>
+
+              <div class="audit-layout">
+                <article class="audit-panel">
+                  <div class="panel-title">
+                    <h3>各疾病方向剩余缺失</h3>
+                    <span>remaining missing outputs</span>
+                  </div>
+                  <div class="audit-table-wrap">
+                    <table class="audit-table">
+                      <thead>
+                        <tr>
+                          <th>方向</th>
+                          <th>完成</th>
+                          <th>缺失</th>
+                          <th>缺失率</th>
+                        </tr>
+                      </thead>
+                      <tbody id="qualityDirectionRows"></tbody>
+                    </table>
+                  </div>
+                </article>
+
+                <article class="audit-panel audit-panel-split">
+                  <div class="panel-title">
+                    <h3>失败模式与受体状态</h3>
+                    <span>failure mode audit</span>
+                  </div>
+                  <div class="audit-subpanel">
+                    <h4>DiffDock 输出失败原因</h4>
+                    <div id="qualityFailureModes" class="stacked-bars"></div>
+                  </div>
+                  <div class="audit-subpanel">
+                    <h4>受体准备状态</h4>
+                    <div id="qualityReceptorStatuses" class="stacked-bars"></div>
+                  </div>
+                </article>
+              </div>
+
+              <div id="qualityActions" class="audit-action-grid" aria-label="Next audit actions"></div>
+
+              <article class="audit-panel audit-panel-wide">
+                <div class="panel-title">
+                  <h3>高优先级缺失输出样例</h3>
+                  <span>for targeted rerun review</span>
+                </div>
+                <div class="audit-table-wrap">
+                  <table class="audit-table audit-table-wide">
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Drug-target</th>
+                        <th>Scores</th>
+                        <th>Audit reason</th>
+                      </tr>
+                    </thead>
+                    <tbody id="qualityMissingRows"></tbody>
+                  </table>
+                </div>
+              </article>
+            </section>
+
+            <section id="sota-overview" class="section-band alt">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">SOTA evidence integration</p>
+                  <h2>国际对标证据层总览</h2>
+                  <p>
+                    当前结果已经从单一亲和排序扩展为多证据候选优先级体系。下方把结构模型、知识图谱、组织上下文、
+                    ADMET、安全性和验证面板放在同一页面，便于专家快速判断结果成熟度。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Completed modules</span>
+                  <strong id="completedModuleCount">0</strong>
+                </div>
+              </div>
+
+              <div class="sota-dashboard-grid">
+                <article class="sota-panel">
+                  <div class="panel-title">
+                    <h3>Evidence layer coverage</h3>
+                    <span>candidate-level support</span>
+                  </div>
+                  <div id="evidenceLayerBars" class="evidence-layer-list"></div>
+                </article>
+                <article class="sota-panel">
+                  <div class="panel-title">
+                    <h3>Known-target benchmark</h3>
+                    <span>sanity check</span>
+                  </div>
+                  <div id="benchmarkMetrics" class="benchmark-grid"></div>
+                </article>
+                <article class="sota-panel">
+                  <div class="panel-title">
+                    <h3>SOTA-ready tiers</h3>
+                    <span>3921 final candidates</span>
+                  </div>
+                  <div id="sotaReadyTierBars" class="stacked-bars"></div>
+                </article>
+                <article class="sota-panel large">
+                  <div class="panel-title">
+                    <h3>Structural consensus models</h3>
+                    <span>orthogonal stress tests</span>
+                  </div>
+                  <div id="structuralModelRows" class="structural-model-list"></div>
+                </article>
+                <article class="sota-panel">
+                  <div class="panel-title">
+                    <h3>Final priority tiers</h3>
+                    <span>A-D candidate review</span>
+                  </div>
+                  <div id="finalPriorityBars" class="stacked-bars"></div>
+                </article>
+                <article class="sota-panel">
+                  <div class="panel-title">
+                    <h3>Review action mix</h3>
+                    <span>next decision tracks</span>
+                  </div>
+                  <div id="sotaActionBars" class="stacked-bars"></div>
+                </article>
+                <article class="sota-panel large">
+                  <div class="panel-title">
+                    <h3>Remaining dependency checklist</h3>
+                    <span>external evidence only</span>
+                  </div>
+                  <div id="dependencyChecklist" class="dependency-checklist"></div>
+                </article>
+              </div>
+            </section>
+
+            <section id="validation-plan" class="section-band">
+              <div class="section-heading split">
+                <div>
+                  <p class="eyebrow">Validation readiness</p>
+                  <h2>验证面板与剩余依赖</h2>
+                  <p>
+                    当前候选已经被转换为实验优先级、专家审阅队列、正控队列和多样性受控 wave-1 面板。
+                    仍缺的部分主要是外部表达签名、正式 pretrained DTI 模型和可选外部结构模型。
+                  </p>
+                </div>
+                <div class="audit-chip">
+                  <span>Wave-1 panel</span>
+                  <strong id="wave1Rows">0</strong>
+                </div>
+              </div>
+              <div class="validation-dashboard-grid">
+                <article class="validation-panel-card">
+                  <div class="panel-title">
+                    <h3>Experiment design</h3>
+                    <span>ready queues</span>
+                  </div>
+                  <div id="validationMetrics" class="validation-metric-list"></div>
+                </article>
+                <article class="validation-panel-card">
+                  <div class="panel-title">
+                    <h3>Assay modality mix</h3>
+                    <span>planned follow-up</span>
+                  </div>
+                  <div id="assayModalityBars" class="stacked-bars"></div>
+                </article>
+                <article class="validation-panel-card wide">
+                  <div class="panel-title">
+                    <h3>Remaining external dependencies</h3>
+                    <span>not local-compute blockers</span>
+                  </div>
+                  <div id="dependencyCards" class="dependency-grid"></div>
+                </article>
+              </div>
+            </section>
+
+            <section id="artifacts" class="section-band">
+              <div class="section-heading">
+                <p class="eyebrow">Artifacts</p>
+                <h2>产物索引</h2>
+              </div>
+              <div class="artifact-list">
+                <a href="results-report.html">
+                  <span>正式结果汇报</span>
+                  <small>面向外部阅读的项目目标、证据逻辑与结论解释</small>
+                </a>
+                <a href="status-report.html">
+                  <span>运行状态页面</span>
+                  <small>结构扩展队列、审计指标和下一步工作</small>
+                </a>
+                <a href="data-summary.html">
+                  <span>数据口径页面</span>
+                  <small>全量筛选规模、去重推理、Top 候选和结构审计口径</small>
+                </a>
+                <a href="formal-report.html">
+                  <span>正式 PDF 汇报</span>
+                  <small>嵌入式 PDF 阅读页面</small>
+                </a>
+                <a href="main-figure.html">
+                  <span>主流程图</span>
+                  <small>工作流主图与图例说明</small>
+                </a>
+                <a href="sota-readiness.html">
+                  <span>SOTA 对标计算审计</span>
+                  <small>国际药物再定位证据层差距、下一步计算队列和验证短名单</small>
+                </a>
+                <a href="artifacts.html">
+                  <span>完整产物索引</span>
+                  <small>把报告、状态页、数据口径、SOTA 审计和本地关键产物组织成独立页面</small>
+                </a>
+              </div>
+            </section>
     </main>
 
     <footer class="site-footer">
@@ -689,7 +1035,8 @@
       <span>Updated from local run artifacts</span>
     </footer>
 
-    <script src="assets/dashboard-data.js"></script>
-    <script src="assets/app.js"></script>
+    <script src="assets/dashboard-data.js?v=20260604-layout-refined"></script>
+    <script src="assets/compute-status.js?v=20260604-layout-refined"></script>
+    <script src="assets/app.js?v=20260604-layout-refined"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BioMaster 运行状态</title>
     <meta name="description" content="BioMaster 结构扩展运行状态和产物审计页面。" />
-    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/site.css?v=20260604-layout-refined" />
   </head>
   <body class="document-body">
     <header class="site-header">
@@ -17,10 +17,12 @@
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
-        <a href="index.html">展示首页</a>
+        <a href="index.html#executive-summary">首页</a>
         <a href="results-report.html">结果汇报</a>
-        <a href="formal-report.html">PDF</a>
-        <a href="main-figure.html">主流程图</a>
+        <a href="data-summary.html">数据口径</a>
+        <a href="sota-readiness.html">SOTA</a>
+        <a href="artifacts.html">产物索引</a>
+        <a class="nav-action" href="formal-report.html">PDF</a>
       </nav>
     </header>
 
@@ -33,7 +35,7 @@
             本页聚焦当前计算产物和结构扩展审计。科学流程、图表和候选结果集中在展示首页，正式叙事集中在结果汇报页。
           </p>
           <div class="document-actions">
-            <a class="button primary" href="index.html#analytics">查看展示首页</a>
+            <a class="button primary" href="index.html#current-compute">查看首页计算面板</a>
             <a class="button secondary" href="results-report.html">查看结果汇报</a>
           </div>
         </div>
@@ -43,25 +45,10 @@
         <article class="document-main">
           <section id="run" class="document-section">
             <h2>当前运行</h2>
-            <div class="run-panel">
-              <div>
-                <span>Snapshot status</span>
-                <strong>complete</strong>
-                <small>snapshot 2026-06-02 01:38 UTC</small>
-              </div>
-              <div>
-                <span>CUDA devices</span>
-                <strong>0, 1, 2, 3</strong>
-                <small>four RTX 4080 SUPER GPUs used</small>
-              </div>
-              <div>
-                <span>Active lanes</span>
-                <strong>0</strong>
-                <small>DiffDock queues finished</small>
-              </div>
-            </div>
+            <div id="statusRunPanel" class="run-panel"></div>
             <p>
-              本轮队列已完成五个疾病方向的全部 97 个 DiffDock 分块。缺失输出来自单个复合物在图构建、采样或结构输出阶段失败，已保留在审计表中，不会从候选集合中静默删除。
+              五个疾病方向的结构代表任务已经完成最终救援和跨方向复用审计；后台另有全量 DiffDock 扩展正在运行，覆盖更大的 druggable-proteome 候选队列。
+              已完成作业中的缺失输出是技术性缺失，不代表候选在生物学上无效。
             </p>
           </section>
 
@@ -70,28 +57,28 @@
             <div class="status-grid">
               <article><span>Score chunks</span><strong>97</strong><small>of 97 DiffDock chunks</small></article>
               <article><span>Representative pairs</span><strong>23744</strong><small>all processed</small></article>
-              <article><span>Completed poses</span><strong>21678</strong><small>rank-1 ligand outputs</small></article>
-              <article><span>Output rate</span><strong>91.30%</strong><small>among representatives</small></article>
+              <article><span>Completed poses</span><strong>23707</strong><small>rank-1 ligand outputs</small></article>
+              <article><span>Output rate</span><strong>99.84%</strong><small>among representatives</small></article>
             </div>
             <div class="progress-meter" aria-label="Full structural extension progress">
               <i style="width: 100%"></i>
             </div>
             <p>
-              审计指标来自五个疾病方向的最终 DiffDock score 文件。23744 个实际对接代表中有 21678 个获得已完成结构输出，2066 个对应缺失输出或失败输出。
-              缺失输出是 DiffDock 产物审计状态，不代表候选在生物学上无效。
+              审计指标来自五个疾病方向的最终 DiffDock score 文件、SDF/SMILES 救援轮次以及跨疾病方向同一 pair 的结构输出复用。
+              23744 个实际对接代表中有 23707 个获得可审阅结构输出，剩余 37 个为稳定技术缺失。
             </p>
           </section>
 
           <section id="throughput" class="document-section">
             <h2>耗时与吞吐</h2>
-            <div class="status-grid">
-              <article><span>DiffDock jobs</span><strong>97</strong><small>representative chunks</small></article>
-              <article><span>Typical chunk time</span><strong>20-45m</strong><small>250-row chunks, variable by receptor/ligand</small></article>
-              <article><span>Final rows</span><strong>159</strong><small>last partial chunk</small></article>
-              <article><span>Remaining</span><strong>0</strong><small>for this run</small></article>
+            <div id="statusThroughputGrid" class="status-grid"></div>
+            <div class="progress-meter" aria-label="Full DiffDock progress">
+              <i id="statusFullDiffdockProgressBar" style="width: 0%"></i>
             </div>
+            <div id="statusActiveChunks" class="active-chunk-rail"></div>
+            <div id="statusGpuGrid" class="gpu-telemetry-grid status-gpu-grid"></div>
             <p>
-              本轮计算已结束，不再有当前队列 ETA。后续若选择对高价值 missing-output 候选进行参数补跑，应单独建立小规模补跑队列并记录失败原因。
+              当前 GPU 主要用于全量 DiffDock 扩展。full3921 标准 PoseBusters/ProLIF 验证仍在后台运行，CHEMBL3039504 parent-ligand rescue 队列等待主队列释放真实 GPU 空槽后自动启动。
             </p>
           </section>
 
@@ -101,7 +88,7 @@
               <article><span>Data</span><h3>药物库与靶点库</h3><p>915 个药物与 5306 个 ChEMBL druggable protein 记录已完成标准化。</p></article>
               <article><span>Screening</span><h3>AI-DTI 主筛选</h3><p>4854990 个 drug-target pair 已完成预测和排序。</p></article>
               <article><span>Reduction</span><h3>结构代表选择</h3><p>五个疾病方向 Top10000 候选形成 23744 个实际 DiffDock-ready 代表。</p></article>
-              <article><span>Structural</span><h3>DiffDock 结构增强</h3><p>21678 个代表获得 rank-1 ligand pose，结果已合并到候选表。</p></article>
+              <article><span>Structural</span><h3>DiffDock 结构增强</h3><p>23707 个代表获得 rank-1 ligand pose，剩余 37 个保留为技术缺失审计项。</p></article>
             </div>
           </section>
 
@@ -129,7 +116,9 @@
 
     <footer class="site-footer">
       <span>BioMaster structural extension audit</span>
-      <span>Snapshot: 2026-06-02</span>
+      <span id="statusFooterSnapshot">Snapshot: 2026-06-04</span>
     </footer>
+    <script src="assets/compute-status.js?v=20260604-layout-refined"></script>
+    <script src="assets/app.js?v=20260604-layout-refined"></script>
   </body>
 </html>

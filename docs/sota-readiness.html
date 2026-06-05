@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BioMaster SOTA 对标计算审计</title>
+    <meta name="description" content="BioMaster 对标国际 SOTA 的计算差距与下一步任务队列。" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body class="document-body">
+    <header class="site-header">
+      <a class="brand" href="index.html#overview" aria-label="BioMaster overview">
+        <span class="brand-mark">B</span>
+        <span><strong>BioMaster</strong><small>SOTA readiness audit</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="index.html">展示首页</a>
+        <a href="results-report.html">正式汇报</a>
+        <a href="status-report.html">运行状态</a>
+      </nav>
+    </header>
+    <main>
+      <section class="document-hero">
+        <div class="document-hero-inner">
+          <p class="eyebrow">SOTA readiness</p>
+          <h1>对标国际 SOTA 的计算差距与任务队列</h1>
+          <p>本页把当前结果映射到知识图谱、结构共识、表达反转、安全性和外部验证等国际药物再定位常见证据层，形成可执行的下一步计算队列。</p>
+        </div>
+      </section>
+      <div class="document-layout">
+        <article class="document-main">
+          <section id="metrics" class="document-section">
+            <h2>当前基础</h2>
+            <div class="summary-strip">
+              <div><span>Affinity pairs</span><strong>4,854,990</strong><small>ConPLex 全量矩阵</small></div>
+              <div><span>Structure reps</span><strong>23,744</strong><small>DiffDock-ready</small></div>
+              <div><span>Completed</span><strong>23,707</strong><small>99.84% output rate</small></div>
+              <div><span>Pair Recall@100k</span><strong>16.48%</strong><small>8.00x random</small></div>
+            </div>
+          </section>
+          <section id="matrix" class="document-section">
+            <h2>SOTA readiness matrix</h2>
+            <div class="report-table"><table><thead><tr><th>维度</th><th>状态</th><th>优先级</th><th>说明</th></tr></thead><tbody><tr><td>AI-DTI affinity screen</td><td>已完成</td><td>done</td><td>ConPLex 全量 drug-target pair 亲和矩阵已完成。</td></tr>
+<tr><td>Disease-aware ranking</td><td>已完成/待校准</td><td>P0</td><td>五个疾病方向排序已完成，并补入 Open Targets 与多方向 TxGNN 外部证据。</td></tr>
+<tr><td>Structural docking</td><td>已完成/待共识重评分</td><td>P2</td><td>DiffDock 代表任务完成率已达 99.84%；pose sanity 可读率 99.96%，仍可补 GNINA/Vina 共识重评分。</td></tr>
+<tr><td>KG explainability</td><td>已完成</td><td>P1</td><td>候选级 TxGNN KG 浅层路径已完成，Top1000 层路径覆盖 97.17%。</td></tr>
+<tr><td>Known-positive validation</td><td>已完成/待外推增强</td><td>P0</td><td>已有 FDA known-target AUROC/AUPRC、Recall@K、随机富集和批准年份/治疗领域分层验证。</td></tr>
+<tr><td>Expression reversal</td><td>未完成</td><td>P1</td><td>缺少 LINCS/CMap disease signature reversal。</td></tr>
+<tr><td>ADMET/safety</td><td>已完成/待深度模型增强</td><td>P1</td><td>已完成 RDKit/PAINS/Brenk/route/text-flag 透明审计，覆盖 915 个药物。</td></tr>
+<tr><td>Tissue/disease context</td><td>未完成</td><td>P2</td><td>缺少 HPA/GTEx/DepMap 等上下文过滤。</td></tr>
+<tr><td>Second-model structure check</td><td>未完成</td><td>P2</td><td>缺少 AF3/Boltz/Chai-style 小样本结构对照。</td></tr></tbody></table></div>
+          </section>
+          <section id="coverage" class="document-section">
+            <h2>疾病方向证据覆盖</h2>
+            <div class="report-table"><table><thead><tr><th>方向</th><th>候选数</th><th>结构完成率</th><th>Open Targets</th><th>TxGNN</th><th>多源证据</th></tr></thead><tbody><tr><td>肿瘤</td><td>5562</td><td>99.73%</td><td>41.93%</td><td>93.04%</td><td>38.33%</td></tr>
+<tr><td>感染性疾病</td><td>4995</td><td>99.90%</td><td>14.73%</td><td>95.40%</td><td>14.01%</td></tr>
+<tr><td>心血管</td><td>4937</td><td>99.72%</td><td>40.79%</td><td>92.61%</td><td>37.61%</td></tr>
+<tr><td>神经/精神</td><td>3341</td><td>99.91%</td><td>43.25%</td><td>94.19%</td><td>40.38%</td></tr>
+<tr><td>免疫/炎症</td><td>4909</td><td>100.00%</td><td>39.19%</td><td>95.11%</td><td>36.81%</td></tr></tbody></table></div>
+          </section>
+          <section id="queue" class="document-section">
+            <h2>下一步计算队列</h2>
+            <div class="workflow-grid">
+          <article class="step-card">
+            <span class="step-index">P0</span>
+            <h3>疾病方向证据矩阵扩展审计（已完成）</h3>
+            <p>Open Targets 与多方向 TxGNN 已完成补强，并形成候选层面的外部证据覆盖审计。</p>
+            <p><strong>CPU / network-data</strong> · top1000 rows still missing at least one expanded evidence layer: 2421</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P0</span>
+            <h3>已知关系召回、负例基准与分层验证（已完成）</h3>
+            <p>已完成 known-target pair benchmark 和 record-level 分层验证；剩余可加强项是时间外推和去同源泄漏专门实验。</p>
+            <p><strong>CPU</strong> · current known target records in scope: 589</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P1</span>
+            <h3>TxGNN / KG evidence path expansion（已完成）</h3>
+            <p>已生成直接药物-靶点、药物-疾病、靶点-疾病、PPI 桥接和已知靶点-疾病桥接路径。</p>
+            <p><strong>CPU/GPU optional</strong> · top1000 candidate rows with KG path: 3810 / 3921</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P1</span>
+            <h3>ADMET / safety / repurposability filter（已完成）</h3>
+            <p>已完成透明规则审计；hERG、DILI、CYP 定量模型仍可作为后续深度 ADMET 加强项。</p>
+            <p><strong>CPU</strong> · 915 drugs; 3921 candidate rows</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P1</span>
+            <h3>LINCS/CMap disease signature reversal</h3>
+            <p>表达反转是国际老药新用常用验证层，可解释药物是否可能逆转疾病状态。</p>
+            <p><strong>CPU</strong> · start with 5 directions x top 100 drugs</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P2</span>
+            <h3>结构共识重评分与 pose sanity checks（轻量几何审计已完成）</h3>
+            <p>已完成 RDKit/PDB 可读性和基础接触几何审计；GNINA/Vina 仍因本地缺少二进制而未运行。</p>
+            <p><strong>GPU/CPU mixed</strong> · readable poses: 23051 / 23060</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P2</span>
+            <h3>AF3/Boltz/Chai-style complex prediction spot-check</h3>
+            <p>AlphaFold 3-era SOTA 要求至少用少量候选做更强结构模型对照，而不是只依赖一个 docking 模型。</p>
+            <p><strong>GPU</strong> · 50-100 complexes</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P2</span>
+            <h3>组织表达、DepMap 与疾病上下文过滤</h3>
+            <p>候选靶点需要在对应疾病组织或细胞上下文中有生物学可达性。</p>
+            <p><strong>CPU</strong> · unique target genes from candidate shortlist</p>
+          </article>
+        
+
+          <article class="step-card">
+            <span class="step-index">P3</span>
+            <h3>剩余 missing-output 定向补跑</h3>
+            <p>当前已完成 SDF 和 SMILES 救援，残留主要是 DiffDock 图构建/采样边界；继续全量补跑优先级低。</p>
+            <p><strong>GPU</strong> · 37 representatives after final rescue</p>
+          </article>
+        </div>
+          </section>
+        </article>
+        <aside class="document-sidebar" aria-label="SOTA audit navigation">
+          <h2>页面目录</h2>
+          <a href="#metrics">当前基础</a>
+          <a href="#matrix">SOTA matrix</a>
+          <a href="#coverage">证据覆盖</a>
+          <a href="#queue">计算队列</a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <span>BioMaster SOTA readiness audit</span>
+      <span>Updated from local artifacts: 2026-06-05T04:11:08Z</span>
+    </footer>
+  </body>
+</html>

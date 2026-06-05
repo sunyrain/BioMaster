@@ -5,6 +5,7 @@ import csv
 import json
 import math
 import time
+from collections import defaultdict
 from pathlib import Path
 
 import requests
@@ -58,9 +59,9 @@ OUTPUT_FIELDS = [
 ]
 
 
-def read_screening_targets(path: Path) -> tuple[set[str], dict[str, str]]:
+def read_screening_targets(path: Path) -> tuple[set[str], dict[str, list[str]]]:
     genes: set[str] = set()
-    gene_to_protein: dict[str, str] = {}
+    gene_to_proteins: dict[str, list[str]] = defaultdict(list)
     with path.open(newline="", encoding="utf-8") as handle:
         for row in csv.DictReader(handle):
             gene = (row.get("gene_name") or "").strip()
@@ -68,23 +69,47 @@ def read_screening_targets(path: Path) -> tuple[set[str], dict[str, str]]:
             if not gene:
                 continue
             genes.add(gene)
-            gene_to_protein.setdefault(gene, protein)
-    return genes, gene_to_protein
+            if protein and protein not in gene_to_proteins[gene]:
+                gene_to_proteins[gene].append(protein)
+    return genes, dict(gene_to_proteins)
 
 
-def post_graphql(query: str, variables: dict[str, object], timeout: int = 90) -> dict[str, object]:
-    response = requests.post(GRAPHQL_URL, json={"query": query, "variables": variables}, timeout=timeout)
-    response.raise_for_status()
-    payload = response.json()
-    if payload.get("errors"):
-        raise RuntimeError(json.dumps(payload["errors"], ensure_ascii=False))
-    return payload
+def post_graphql(
+    query: str,
+    variables: dict[str, object],
+    timeout: int = 30,
+    retries: int = 3,
+    retry_sleep: float = 2.0,
+) -> dict[str, object]:
+    last_error: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            response = requests.post(GRAPHQL_URL, json={"query": query, "variables": variables}, timeout=timeout)
+            response.raise_for_status()
+            payload = response.json()
+            if payload.get("errors"):
+                raise RuntimeError(json.dumps(payload["errors"], ensure_ascii=False))
+            return payload
+        except Exception as error:  # noqa: BLE001
+            last_error = error
+            if attempt < retries:
+                time.sleep(retry_sleep * attempt)
+    raise RuntimeError(f"Open Targets GraphQL request failed after {retries} attempts: {last_error}")
 
 
-def fetch_disease_targets(disease_id: str, page_size: int, sleep_seconds: float) -> tuple[dict[str, str], list[dict[str, object]]]:
+def fetch_disease_targets(
+    disease_id: str,
+    page_size: int,
+    sleep_seconds: float,
+    timeout: int,
+    retries: int,
+    max_pages: int,
+) -> tuple[dict[str, str], list[dict[str, object]]]:
     first = post_graphql(
         ASSOCIATED_TARGETS_QUERY,
         {"efoId": disease_id, "pageIndex": 0, "pageSize": page_size},
+        timeout=timeout,
+        retries=retries,
     )
     disease = ((first.get("data") or {}).get("disease") or {})
     if not disease:
@@ -93,6 +118,8 @@ def fetch_disease_targets(disease_id: str, page_size: int, sleep_seconds: float)
     count = int(associated["count"])
     rows = list(associated["rows"])
     pages = math.ceil(count / page_size)
+    if max_pages > 0:
+        pages = min(pages, max_pages)
 
     for page in range(1, pages):
         if sleep_seconds:
@@ -100,6 +127,8 @@ def fetch_disease_targets(disease_id: str, page_size: int, sleep_seconds: float)
         payload = post_graphql(
             ASSOCIATED_TARGETS_QUERY,
             {"efoId": disease_id, "pageIndex": page, "pageSize": page_size},
+            timeout=timeout,
+            retries=retries,
         )
         disease_payload = ((payload.get("data") or {}).get("disease") or {})
         rows.extend(disease_payload["associatedTargets"]["rows"])
@@ -126,13 +155,13 @@ def datatype_score_map(row: dict[str, object]) -> dict[str, float]:
 def output_row(
     row: dict[str, object],
     disease_meta: dict[str, str],
-    gene_to_protein: dict[str, str],
+    protein_id: str,
 ) -> dict[str, object]:
     target = row["target"]
     symbol = str(target.get("approvedSymbol") or "")
     scores = datatype_score_map(row)
     return {
-        "protein_id": gene_to_protein.get(symbol, ""),
+        "protein_id": protein_id,
         "gene_name": symbol,
         "ensembl_gene_id": target.get("id", ""),
         "approved_symbol": symbol,
@@ -173,10 +202,13 @@ def main() -> int:
     parser.add_argument("--metadata-out", default="data/processed/opentargets_target_disease_scores.metadata.json")
     parser.add_argument("--disease-ids", default="MONDO_0004992,EFO_0000616")
     parser.add_argument("--page-size", type=int, default=500)
+    parser.add_argument("--max-pages", type=int, default=0, help="0 downloads all pages.")
     parser.add_argument("--sleep", type=float, default=0.05)
+    parser.add_argument("--timeout", type=int, default=30)
+    parser.add_argument("--retries", type=int, default=3)
     args = parser.parse_args()
 
-    genes, gene_to_protein = read_screening_targets(Path(args.proteins))
+    genes, gene_to_proteins = read_screening_targets(Path(args.proteins))
     disease_ids = [item.strip() for item in args.disease_ids.split(",") if item.strip()]
     if not genes:
         raise ValueError("No gene names found in protein library")
@@ -187,13 +219,21 @@ def main() -> int:
     output: list[dict[str, object]] = []
     disease_stats: list[dict[str, object]] = []
     for disease_id in disease_ids:
-        disease_meta, rows = fetch_disease_targets(disease_id, args.page_size, args.sleep)
+        disease_meta, rows = fetch_disease_targets(
+            disease_id,
+            args.page_size,
+            args.sleep,
+            args.timeout,
+            args.retries,
+            args.max_pages,
+        )
         filtered_rows = []
         for row in rows:
             target = row.get("target") or {}
             symbol = str(target.get("approvedSymbol") or "")
             if symbol in genes:
-                filtered_rows.append(output_row(row, disease_meta, gene_to_protein))
+                for protein_id in gene_to_proteins.get(symbol, [""]):
+                    filtered_rows.append(output_row(row, disease_meta, protein_id))
         output.extend(filtered_rows)
         disease_stats.append(
             {
@@ -218,10 +258,11 @@ def main() -> int:
         "graphql_url": GRAPHQL_URL,
         "protein_library": args.proteins,
         "screening_gene_count": len(genes),
+        "screening_protein_accession_count": sum(len(values) for values in gene_to_proteins.values()),
         "disease_stats": disease_stats,
         "output_rows": len(output),
         "output_csv": args.out,
-        "notes": "Filtered to genes in the 1000-protein screening library. MONDO_0004992/cancer is the primary replacement for the previous C0006826 malignant neoplasm placeholder; EFO_0000616/neoplasm is retained as a broader comparison disease.",
+        "notes": "Filtered to genes in the screening library and expanded back to all UniProt accessions sharing each matched gene symbol. MONDO_0004992/cancer is the primary replacement for the previous C0006826 malignant neoplasm placeholder; EFO_0000616/neoplasm is retained as a broader comparison disease.",
     }
     write_metadata(Path(args.metadata_out), metadata)
     print(json.dumps(metadata, ensure_ascii=False, indent=2))

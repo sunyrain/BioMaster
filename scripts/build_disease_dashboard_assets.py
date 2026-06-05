@@ -134,6 +134,22 @@ def load_extra_score_layer(root: Path, score_dirs: list[str] | None) -> tuple[di
     }
 
 
+def prefer_completed_score(existing: dict[str, str] | None, score: dict[str, str]) -> dict[str, str]:
+    if not existing:
+        return dict(score)
+    if existing.get("status") != "completed" and score.get("status") == "completed":
+        return dict(score)
+    return existing
+
+
+def merge_score_maps_prefer_completed(score_maps: list[dict[str, dict[str, str]]]) -> dict[str, dict[str, str]]:
+    merged: dict[str, dict[str, str]] = {}
+    for scores in score_maps:
+        for pair_id, score in scores.items():
+            merged[pair_id] = prefer_completed_score(merged.get(pair_id), score)
+    return merged
+
+
 def merge_score_layers(
     primary_scores: dict[str, dict[str, str]],
     extra_scores: dict[str, dict[str, str]],
@@ -577,30 +593,54 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
     extra_scores, extra_metadata = load_extra_score_layer(root, args.extra_score_dir)
     total_primary_completed = 0
     total_primary_missing = 0
-    total_rerun_recovered = 0
+    total_rescue_or_reused = 0
 
+    direction_contexts: list[dict[str, Any]] = []
+    all_primary_score_maps: list[dict[str, dict[str, str]]] = []
     for config in DIRECTIONS:
         direction_root = root / "outputs/disease_directions" / config["key"]
-        ready_path = direction_root / "top10000_diffdock_ready.csv"
-        metadata = load_json(direction_root / "diffdock_run/diffdock_full_run.metadata.json")
         primary_scores = load_scores(direction_root / "diffdock_run/scores")
-        scores, recovered_pair_ids = merge_score_layers(primary_scores, extra_scores)
+        all_primary_score_maps.append(primary_scores)
+        direction_contexts.append(
+            {
+                "config": config,
+                "direction_root": direction_root,
+                "ready_path": direction_root / "top10000_diffdock_ready.csv",
+                "metadata": load_json(direction_root / "diffdock_run/diffdock_full_run.metadata.json"),
+                "primary_scores": primary_scores,
+            }
+        )
+
+    global_primary_scores = merge_score_maps_prefer_completed(all_primary_score_maps)
+    global_scores, global_recovered_pair_ids = merge_score_layers(global_primary_scores, extra_scores)
+
+    for context in direction_contexts:
+        config = context["config"]
+        direction_root = context["direction_root"]
+        ready_path = context["ready_path"]
+        metadata = context["metadata"]
+        primary_scores = context["primary_scores"]
         ready_rows = read_csv(ready_path)
         scored_pair_ids = set(primary_scores)
         scored_ready_rows = [row for row in ready_rows if row.get("pair_id") in scored_pair_ids]
         candidates = [
-            build_candidate(row, scores.get(row["pair_id"], {}), config["key"], config["label"], config["label_zh"])
+            build_candidate(row, global_scores.get(row["pair_id"], {}), config["key"], config["label"], config["label_zh"])
             for row in scored_ready_rows
         ]
         primary_completed = sum(1 for pair_id in scored_pair_ids if primary_scores.get(pair_id, {}).get("status") == "completed")
         primary_missing = len(scored_pair_ids) - primary_completed
-        rerun_recovered = sum(1 for row in scored_ready_rows if row.get("pair_id") in recovered_pair_ids)
+        rescue_or_reused = sum(
+            1
+            for candidate in candidates
+            if candidate["status"] == "completed"
+            and primary_scores.get(candidate["pairId"], {}).get("status") != "completed"
+        )
         confidences = [candidate["diffdock"] for candidate in candidates if candidate["status"] == "completed" and candidate["diffdock"] is not None]
         completed = sum(1 for candidate in candidates if candidate["status"] == "completed")
         missing = sum(1 for candidate in candidates if candidate["status"] != "completed")
         total_primary_completed += primary_completed
         total_primary_missing += primary_missing
-        total_rerun_recovered += rerun_recovered
+        total_rescue_or_reused += rescue_or_reused
         summary = {
             "direction": config["key"],
             "label": config["label"],
@@ -614,7 +654,7 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             "missing": missing,
             "primaryCompleted": primary_completed,
             "primaryMissing": primary_missing,
-            "rerunRecovered": rerun_recovered,
+            "rerunRecovered": rescue_or_reused,
             "successRatePct": completed / len(candidates) * 100 if candidates else 0.0,
             "medianDiffDock": statistics.median(confidences) if confidences else None,
             "topCompleted": sorted([c for c in candidates if c["status"] == "completed"], key=lambda c: c["rank"])[:5],
@@ -645,7 +685,8 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
         "display_candidates": len(display_candidates),
         "directions": len(DIRECTIONS),
         "extra_score_layer": extra_metadata,
-        "rerun_recovered": total_rerun_recovered,
+        "rescue_or_reused": total_rescue_or_reused,
+        "global_recovered_pair_ids": len(global_recovered_pair_ids),
     }
     write_integrated_outputs(root, all_candidates, summaries, metadata)
 
@@ -678,7 +719,7 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             "fullOutputRatePct": total_completed / total_prepared * 100 if total_prepared else 0.0,
             "primaryCompletedOutputs": total_primary_completed,
             "primaryMissingOutputs": total_primary_missing,
-            "rerunRecoveredOutputs": total_rerun_recovered,
+            "rerunRecoveredOutputs": total_rescue_or_reused,
             "rerunScoreRows": int(extra_metadata.get("raw_rows") or 0),
             "rerunUniquePairs": int(extra_metadata.get("unique_pairs") or 0),
             "zeroCompletedChunks": 0,
@@ -689,7 +730,7 @@ def build_payload(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             all_candidates,
             summaries,
             total_primary_missing,
-            total_rerun_recovered,
+            total_rescue_or_reused,
         ),
         "charts": {
             "evidenceCoverage": [
@@ -719,10 +760,12 @@ def main() -> int:
     parser.add_argument(
         "--extra-score-dir",
         action="append",
-        default=[
-            "outputs/disease_directions/missing_output_priority_rerun/scores",
-            "outputs/disease_directions/missing_output_priority_rerun_round2/scores",
-        ],
+            default=[
+                "outputs/disease_directions/missing_output_priority_rerun/scores",
+                "outputs/disease_directions/missing_output_priority_rerun_round2/scores",
+                "outputs/disease_directions/missing_output_sdf_rescue_round3/scores",
+                "outputs/disease_directions/missing_output_smiles_rescue_round4/scores",
+            ],
         help="Additional DiffDock score directory. Completed rows here recover primary-run missing outputs.",
     )
     args = parser.parse_args()

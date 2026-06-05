@@ -143,6 +143,8 @@ def run_txgnn_predictions(
     model_dir: Path,
     crosswalk: list[dict[str, Any]],
     disease_mondo_numeric_id: str,
+    disease_id: str,
+    disease_name: str,
     device: str,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     from txgnn import TxData, TxGNN
@@ -191,8 +193,8 @@ def run_txgnn_predictions(
                 "drug_name": item["drug_name"],
                 "txgnn_drugbank_id": item["txgnn_drugbank_id"],
                 "txgnn_drug_name": item["txgnn_drug_name"],
-                "disease_id": "MONDO_0004992",
-                "disease_name": "cancer",
+                "disease_id": disease_id,
+                "disease_name": disease_name,
                 "txgnn_disease_numeric_id": disease_mondo_numeric_id,
                 "txgnn_disease_idx": int(disease_idx),
                 "relation": "indication",
@@ -206,8 +208,8 @@ def run_txgnn_predictions(
 
     metadata = {
         "txgnn_split": "full_graph",
-        "disease_id": "MONDO_0004992",
-        "disease_name": "cancer",
+        "disease_id": disease_id,
+        "disease_name": disease_name,
         "txgnn_disease_numeric_id": disease_mondo_numeric_id,
         "txgnn_disease_idx": int(disease_idx),
         "mapped_drugs_in_crosswalk": len([row for row in crosswalk if row.get("txgnn_drugbank_id")]),
@@ -220,7 +222,7 @@ def run_txgnn_predictions(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run TxGNN indication inference for MONDO cancer and BioMaster mapped drugs.")
+    parser = argparse.ArgumentParser(description="Run TxGNN indication inference for a selected disease and BioMaster mapped drugs.")
     parser.add_argument("--drugs", default="data/processed/drug_library_pubchem_chembl_mapped.csv")
     parser.add_argument("--txgnn-data-dir", default="data/raw/txgnn")
     parser.add_argument("--model-dir", default="data/raw/txgnn/TxGNNExplorer")
@@ -228,6 +230,8 @@ def main() -> int:
     parser.add_argument("--out", default="data/processed/txgnn_drug_disease_scores.csv")
     parser.add_argument("--metadata-out", default="data/processed/txgnn_drug_disease_scores.metadata.json")
     parser.add_argument("--disease-mondo-numeric-id", default="4992")
+    parser.add_argument("--disease-id", default="MONDO_0004992")
+    parser.add_argument("--disease-name", default="cancer")
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--crosswalk-only", action="store_true")
     args = parser.parse_args()
@@ -254,6 +258,8 @@ def main() -> int:
             model_dir=Path(args.model_dir),
             crosswalk=crosswalk,
             disease_mondo_numeric_id=args.disease_mondo_numeric_id,
+            disease_id=args.disease_id,
+            disease_name=args.disease_name,
             device=args.device,
         )
         fields = [

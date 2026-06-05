@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BioMaster 数据口径</title>
     <meta name="description" content="BioMaster druggable-proteome screening data scope and final audit counts." />
-    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/site.css?v=20260604-layout-refined" />
   </head>
   <body class="document-body">
     <header class="site-header">
@@ -17,10 +17,13 @@
         </span>
       </a>
       <nav class="top-nav" aria-label="Primary">
-        <a href="index.html">展示首页</a>
+        <a href="index.html#executive-summary">首页</a>
         <a href="results-report.html">结果汇报</a>
-        <a href="status-report.html">状态审计</a>
-        <a href="formal-report.html">PDF</a>
+        <a href="index.html#candidates">候选</a>
+        <a href="status-report.html">运行状态</a>
+        <a href="sota-readiness.html">SOTA</a>
+        <a href="artifacts.html">产物</a>
+        <a class="nav-action" href="formal-report.html">PDF</a>
       </nav>
     </header>
 
@@ -64,7 +67,7 @@
               <div><strong>02</strong><span>4854990 expanded drug-target affinity rows</span></div>
               <div><strong>03</strong><span>5 disease directions × Top10000 candidates</span></div>
               <div><strong>04</strong><span>23744 disease-direction DiffDock-ready representatives</span></div>
-              <div><strong>05</strong><span>21678 completed DiffDock rank-1 pose outputs</span></div>
+              <div><strong>05</strong><span>23707 completed DiffDock rank-1 pose outputs after rescue/reuse</span></div>
             </div>
           </section>
 
@@ -85,12 +88,12 @@
             <div class="status-grid">
               <article><span>DiffDock chunks</span><strong>97 / 97</strong><small>all score files generated</small></article>
               <article><span>Processed representatives</span><strong>23744 / 23744</strong><small>100.00% queue progress</small></article>
-              <article><span>Completed outputs</span><strong>21678</strong><small>91.30% representative output rate</small></article>
+              <article><span>Completed outputs</span><strong>23707</strong><small>99.84% representative output rate</small></article>
               <article><span>Disease directions</span><strong>5</strong><small>all direction sets completed</small></article>
             </div>
             <p>
-              缺失或失败的 2066 个结构代表保留为审计项，不作为负样本，也不从候选集合中静默删除。
-              这些记录通常表示 DiffDock 没有留下可用的 rank-1 confidence SDF；后续可只对高价值 missing-output 候选设计小规模补跑。
+              原始主跑中 21678 个结构代表获得输出，2066 个为技术缺失。经过 SDF/SMILES 救援和跨疾病方向同一 pair 的结构输出复用后，
+              最终完成 23707 个结构代表，剩余 37 个稳定缺失项保留为审计对象，不作为负样本，也不从候选集合中静默删除。
             </p>
           </section>
 
@@ -123,7 +126,7 @@
 
     <footer class="site-footer">
       <span>BioMaster data scope</span>
-      <span>Updated from local audit: 2026-06-02</span>
+      <span>Updated from local audit: 2026-06-04</span>
     </footer>
   </body>
 </html>

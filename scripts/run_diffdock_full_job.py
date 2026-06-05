@@ -96,6 +96,41 @@ def acquire_job_lock(lock_path: Path, job_id: int) -> bool:
     return False
 
 
+def acquire_device_lock(lock_path: Path, job_id: int, cuda_device: str) -> bool:
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    payload = json.dumps(
+        {
+            "pid": os.getpid(),
+            "job_id": job_id,
+            "cuda_device": cuda_device,
+            "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        },
+        ensure_ascii=False,
+    )
+    for _ in range(2):
+        try:
+            fd = os.open(lock_path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+        except FileExistsError:
+            try:
+                lock_data = json.loads(lock_path.read_text(encoding="utf-8"))
+                pid = int(lock_data.get("pid", 0))
+            except (OSError, ValueError, json.JSONDecodeError):
+                pid = 0
+            if pid and not process_alive(pid):
+                try:
+                    lock_path.unlink()
+                except FileNotFoundError:
+                    pass
+                continue
+            return False
+        try:
+            os.write(fd, (payload + "\n").encode("utf-8"))
+        finally:
+            os.close(fd)
+        return True
+    return False
+
+
 def release_job_lock(lock_path: Path) -> None:
     try:
         lock_path.unlink()
@@ -226,6 +261,9 @@ def run_job(args: argparse.Namespace) -> int:
     diffdock_dir = resolve(root, args.diffdock_dir)
     config_path = log_file.with_suffix(".config.yaml")
     lock_path = score_csv.parent / f"{score_csv.name}.lock"
+    device_token_source = args.device_lock_token or args.cuda_device
+    device_token = str(device_token_source).replace("/", "_").replace(":", "_").replace(",", "_")
+    device_lock_path = score_csv.parent / f"cuda_device_{device_token}.lock"
 
     expected_rows = int(job["row_count"])
     if not args.force and output_count(score_csv) >= expected_rows:
@@ -255,7 +293,24 @@ def run_job(args: argparse.Namespace) -> int:
         )
         return 76
 
+    device_lock_acquired = False
     try:
+        if not acquire_device_lock(device_lock_path, args.job_id, str(args.cuda_device)):
+            print(
+                json.dumps(
+                    {
+                        "job_id": args.job_id,
+                        "status": "device_already_running",
+                        "cuda_device": str(args.cuda_device),
+                        "device_lock_token": str(device_token_source),
+                        "device_lock_file": str(device_lock_path),
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 77
+        device_lock_acquired = True
+
         if not args.force and output_count(score_csv) >= expected_rows:
             print(
                 json.dumps(
@@ -342,11 +397,14 @@ def run_job(args: argparse.Namespace) -> int:
                 "elapsed_seconds": elapsed_seconds,
                 "log_file": str(log_file),
                 "cuda_device": str(args.cuda_device),
+                "device_lock_token": str(device_token_source),
             }
         )
         print(json.dumps(summary, ensure_ascii=False))
         return process.returncode
     finally:
+        if device_lock_acquired:
+            release_job_lock(device_lock_path)
         release_job_lock(lock_path)
 
 
@@ -357,6 +415,11 @@ def main() -> int:
     parser.add_argument("--root", default=".")
     parser.add_argument("--diffdock-dir", default="third_party/DiffDock")
     parser.add_argument("--cuda-device", default="0")
+    parser.add_argument(
+        "--device-lock-token",
+        default="",
+        help="Optional lock token for running multiple independent slots on the same physical CUDA device.",
+    )
     parser.add_argument("--samples-per-complex", type=int, default=1)
     parser.add_argument("--inference-steps", type=int, default=20)
     parser.add_argument("--actual-steps", type=int, default=19)

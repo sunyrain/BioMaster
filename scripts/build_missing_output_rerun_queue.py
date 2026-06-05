@@ -103,8 +103,26 @@ def select_candidates(rows: list[dict[str, str]], limit: int, per_direction_min:
     return selected[:limit]
 
 
+def absolute_if_path(root: Path, value: str) -> str:
+    path = Path(value)
+    if path.is_absolute():
+        return str(path)
+    return str((root / path).resolve())
+
+
+def ligand_description_for_row(root: Path, ready_row: dict[str, str], ligand_source: str) -> str:
+    sdf_path = ready_row.get("ligand_sdf_path") or ""
+    smiles = ready_row.get("ligand_smiles") or ""
+    if ligand_source == "sdf":
+        return absolute_if_path(root, sdf_path) if sdf_path else ""
+    if ligand_source == "smiles":
+        return smiles
+    return smiles or sdf_path
+
+
 def build_queue(root: Path, args: argparse.Namespace) -> dict[str, Any]:
-    integrated = read_csv(root / "outputs/disease_directions/disease_direction_integrated_candidates.csv")
+    candidates_path = root / args.candidates
+    integrated = read_csv(candidates_path)
     ready = load_ready_rows(root)
     selected = select_candidates(integrated, args.limit, args.per_direction_min)
 
@@ -124,11 +142,11 @@ def build_queue(root: Path, args: argparse.Namespace) -> dict[str, Any]:
             skipped.append({**row, "skip_reason": "ready_row_missing"})
             continue
         protein_path = ready_row.get("diffdock_receptor_pdb_path") or ready_row.get("receptor_pdb_path")
-        ligand_description = ready_row.get("ligand_smiles") or ready_row.get("ligand_sdf_path")
+        ligand_description = ligand_description_for_row(root, ready_row, args.ligand_source)
         if not protein_path or not Path(protein_path).exists():
             skipped.append({**row, "skip_reason": "protein_path_missing"})
             continue
-        if not ligand_description:
+        if not ligand_description or (args.ligand_source == "sdf" and not Path(ligand_description).exists()):
             skipped.append({**row, "skip_reason": "ligand_description_missing"})
             continue
         input_rows.append(
@@ -215,6 +233,8 @@ def build_queue(root: Path, args: argparse.Namespace) -> dict[str, Any]:
         "chunk_size": args.chunk_size,
         "limit": args.limit,
         "per_direction_min": args.per_direction_min,
+        "candidates": str(candidates_path),
+        "ligand_source": args.ligand_source,
         "job_index": rel(root, job_index),
     }
     (out_dir / "missing_priority_metadata.json").write_text(
@@ -228,6 +248,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Build a small rerun queue for high-priority missing DiffDock outputs.")
     parser.add_argument("--root", default=".")
     parser.add_argument("--out-dir", default="outputs/disease_directions/missing_output_priority_rerun")
+    parser.add_argument("--candidates", default="outputs/disease_directions/disease_direction_integrated_candidates.csv")
+    parser.add_argument("--ligand-source", choices=["auto", "smiles", "sdf"], default="auto")
     parser.add_argument("--limit", type=int, default=128)
     parser.add_argument("--per-direction-min", type=int, default=12)
     parser.add_argument("--chunk-size", type=int, default=16)
