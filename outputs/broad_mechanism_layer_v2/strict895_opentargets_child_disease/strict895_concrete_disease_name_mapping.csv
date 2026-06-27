@@ -1,0 +1,262 @@
+candidate_disease_original,query,mapped_id,mapped_name,mapping_status
+acne,acne,MONDO_0011438,acne,mapped
+actinic keratosis,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+Acute arthritis,Acute arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+acute myeloid leukemia,acute myeloid leukemia,MONDO_0018874,acute myeloid leukemia,mapped
+acute myocardial infarction,acute myocardial infarction,MONDO_0004781,acute myocardial infarction,mapped
+acute myocarditis,acute myocarditis,MONDO_0002815,acute myocarditis,mapped
+acute T cell leukemia,acute T cell leukemia,MONDO_0004963,T-cell acute lymphoblastic leukemia,mapped
+adenosquamous cell lung carcinoma,adenosquamous cell lung carcinoma,MONDO_0004973,adenosquamous lung carcinoma,mapped
+allergic asthma,allergic asthma,MONDO_0004784,allergic asthma,mapped
+allergic contact dermatitis,allergic contact dermatitis,MONDO_0006525,allergic contact dermatitis,mapped
+Alzheimer's disease,Alzheimer's disease,EFO_0006514,Alzheimer's disease biomarker measurement,mapped
+AML,acute myeloid leukemia,MONDO_0018874,acute myeloid leukemia,mapped
+AML/ALL,acute myeloid leukemia,MONDO_0018874,acute myeloid leukemia,mapped
+AML/JMML,acute myeloid leukemia,MONDO_0018874,acute myeloid leukemia,mapped
+AML/克隆性造血,acute myeloid leukemia,MONDO_0018874,acute myeloid leukemia,mapped
+AML/淋巴瘤/血小板或造血异常待定,acute myeloid leukemia,MONDO_0018874,acute myeloid leukemia,mapped
+amyotrophic lateral sclerosis,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+anaplastic thyroid carcinoma,anaplastic thyroid carcinoma,MONDO_0006468,thyroid gland undifferentiated (anaplastic) carcinoma,mapped
+anemia,anemia,MONDO_0002280,anemia,mapped
+aplastic anemia,aplastic anemia,MONDO_0015909,aplastic anemia,mapped
+AR阳性乳腺癌,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+asthma,asthma,MONDO_0004979,asthma,mapped
+atherosclerosis,atherosclerosis,MONDO_0005311,atherosclerosis,mapped
+atopic dermatitis,atopic dermatitis,MONDO_0004980,atopic eczema,mapped
+autoimmune thrombocytopenic purpura,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+BCL2依赖淋巴瘤,lymphoma,MONDO_0005062,lymphoma,mapped
+bipolar disorder,bipolar disorder,MONDO_0004985,bipolar disorder,mapped
+BRAF突变黑色素瘤,melanoma,MONDO_0005105,melanoma,mapped
+breast adenocarcinoma,breast adenocarcinoma,MONDO_0004988,breast adenocarcinoma,mapped
+breast cancer,breast cancer,MONDO_0007254,breast cancer,mapped
+B细胞自身免疫疾病,autoimmune disease,MONDO_0007179,autoimmune disease,mapped
+Carcinoma in situ of large intestine,Carcinoma in situ of large intestine,MONDO_0004698,intestine carcinoma in situ,mapped
+Cardiomyopathy,Cardiomyopathy,MONDO_0004994,cardiomyopathy,mapped
+CCND1扩增乳腺癌,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+cervical cancer,cervical cancer,MONDO_0002974,cervical cancer,mapped
+cervix carcinoma,cervix carcinoma,MONDO_0042487,uterine cervix carcinoma in situ,mapped
+chronic lymphocytic leukemia,chronic lymphocytic leukemia,MONDO_0004948,B-cell chronic lymphocytic leukemia,mapped
+Chronic Lymphocytic Leukemia (Chronic B-lymphocytic leukemia),Chronic Lymphocytic Leukemia,MONDO_0004948,B-cell chronic lymphocytic leukemia,mapped
+chronic myeloid leukemia,chronic myeloid leukemia,MONDO_0004653,"atypical chronic myeloid leukemia, BCR-ABL1 negative",mapped
+CKD/肾纤维化/肾小球损伤待定,chronic kidney disease,MONDO_0005300,chronic kidney disease,mapped
+CLL,chronic lymphocytic leukemia,MONDO_0004948,B-cell chronic lymphocytic leukemia,mapped
+colitis,colitis,MONDO_0005292,colitis,mapped
+colon cancer,colon cancer,MONDO_0002238,ascending colon cancer,mapped
+colon carcinoma,colon carcinoma,MONDO_0002032,colon carcinoma,mapped
+colorectal adenocarcinoma,colorectal adenocarcinoma,MONDO_0005008,colorectal adenocarcinoma,mapped
+colorectal cancer,colorectal cancer,MONDO_0005575,colorectal cancer,mapped
+Diabetic Nephropathy,Diabetic Nephropathy,MONDO_0005016,diabetic kidney disease,mapped
+Diamond-Blackfan anemia,Diamond-Blackfan anemia,MONDO_0015253,Diamond-Blackfan anemia,mapped
+diffuse large B-cell lymphoma,diffuse large B-cell lymphoma,MONDO_0018905,diffuse large B-cell lymphoma,mapped
+dilated cardiomyopathy,dilated cardiomyopathy,MONDO_0005021,dilated cardiomyopathy,mapped
+DNA损伤/凋亡模型,,,,skipped_no_specific_query
+Duchenne muscular dystrophy,Duchenne muscular dystrophy,MONDO_0010679,Duchenne muscular dystrophy,mapped
+ductal carcinoma in situ,ductal carcinoma in situ,MONDO_0005023,ductal breast carcinoma in situ,mapped
+duodenum cancer,duodenum cancer,MONDO_0000920,duodenum cancer,mapped
+EGFR突变NSCLC,non-small cell lung carcinoma,MONDO_0005233,non-small cell lung carcinoma,mapped
+EMT/转移性肿瘤,,,,skipped_no_specific_query
+endogenous depression,endogenous depression,Orphanet_397725,COASY protein-associated neurodegeneration,mapped
+endometrial cancer,endometrial cancer,MONDO_0011962,endometrial cancer,mapped
+epilepsy syndrome,epilepsy syndrome,MONDO_0015650,epilepsy syndrome,mapped
+Erectile dysfunction associated with type 2 diabetes mellitus,Erectile dysfunction associated with type 2 diabetes mellitus,,,not_mapped
+ER阳性乳腺癌,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+esophagus adenocarcinoma,esophagus adenocarcinoma,MONDO_0005028,esophageal adenocarcinoma,mapped
+esophagus squamous cell carcinoma,esophagus squamous cell carcinoma,MONDO_0005580,esophageal squamous cell carcinoma,mapped
+facioscapulohumeral muscular dystrophy,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+familial combined hyperlipidemia,familial combined hyperlipidemia,Orphanet_79211,Combined hyperlipidemia,mapped
+GABA通路异常,,,,skipped_no_specific_query
+gastrointestinal stromal tumor,gastrointestinal stromal tumor,MONDO_0011719,gastrointestinal stromal tumor,mapped
+Generalized seizures,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+glioblastoma multiforme,glioblastoma multiforme,MONDO_0002501,brain glioblastoma,mapped
+glomerulosclerosis,glomerulosclerosis,MONDO_0000490,glomerulosclerosis,mapped
+HCC,hepatocellular carcinoma,MONDO_0007256,hepatocellular carcinoma,mapped
+HCC/肺癌,hepatocellular carcinoma,MONDO_0007256,hepatocellular carcinoma,mapped
+HCC/髓系白血病模型,hepatocellular carcinoma,MONDO_0007256,hepatocellular carcinoma,mapped
+head and neck squamous cell carcinoma,head and neck squamous cell carcinoma,MONDO_0010150,head and neck squamous cell carcinoma,mapped
+hepatocellular carcinoma,hepatocellular carcinoma,MONDO_0007256,hepatocellular carcinoma,mapped
+HER2突变肺癌,non-small cell lung carcinoma,MONDO_0005233,non-small cell lung carcinoma,mapped
+HER2阳性乳腺癌,HER2-positive breast carcinoma,,,not_mapped
+HER2阳性胃癌,stomach carcinoma,MONDO_0018504,undifferentiated carcinoma of stomach,mapped
+hERG心脏安全性,,,,skipped_no_specific_query
+host-directed infection model待定,,,,skipped_no_specific_query
+HR阳性乳腺癌,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+Huntington's disease,Huntington's disease,MONDO_0007739,Huntington disease,mapped
+hypertension,hypertension,MONDO_0005044,hypertensive disorder,mapped
+"Hypertrophy, Left Ventricular","Hypertrophy, Left Ventricular",MONDO_0013840,encephalopathy-hypertrophic cardiomyopathy-renal tubular disease syndrome,mapped
+IBD/自身免疫炎症,inflammatory bowel disease,MONDO_0005265,inflammatory bowel disease,mapped
+idiopathic interstitial pneumonia,idiopathic interstitial pneumonia,MONDO_0002429,idiopathic interstitial pneumonia,mapped
+IGF1R-PI3K/MAPK依赖实体瘤,,,,skipped_no_specific_query
+in situ carcinoma,in situ carcinoma,MONDO_0004647,in situ carcinoma,mapped
+Infantile neuronal ceroid lipofuscinosis,Infantile neuronal ceroid lipofuscinosis,MONDO_0019261,infantile neuronal ceroid lipofuscinosis,mapped
+invasive ductal carcinoma,invasive ductal carcinoma,MONDO_0004953,invasive ductal breast carcinoma,mapped
+JAK-STAT炎症疾病,,,,skipped_no_specific_query
+JRA - Juvenile rheumatoid arthritis,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+KEAP1/Nrf2异常肺癌,,,,skipped_no_specific_query
+Kidney disorder associated with type 2 diabetes mellitus,Kidney disorder associated with type 2 diabetes mellitus,,,not_mapped
+KRAS突变NSCLC,non-small cell lung carcinoma,MONDO_0005233,non-small cell lung carcinoma,mapped
+large cell neuroendocrine carcinoma,large cell neuroendocrine carcinoma,MONDO_0005057,large cell neuroendocrine carcinoma,mapped
+leukemia,leukemia,MONDO_0005059,leukemia,mapped
+"Leukemia, Chronic T-Cell","Leukemia, Chronic T-Cell",,,not_mapped
+Lewy body dementia,Lewy body dementia,MONDO_0007488,Lewy body dementia,mapped
+LGLL - Large granular lymphocytic leukemia,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+liver cirrhosis,liver cirrhosis,MONDO_0005155,cirrhosis of liver,mapped
+lung adenocarcinoma,lung adenocarcinoma,MONDO_0005061,lung adenocarcinoma,mapped
+lung cancer,lung cancer,MONDO_0008903,lung cancer,mapped
+lung large cell carcinoma,lung large cell carcinoma,MONDO_0003050,lung large cell carcinoma,mapped
+lung small cell carcinoma,lung small cell carcinoma,MONDO_0008433,small cell lung carcinoma,mapped
+lung squamous cell carcinoma,lung squamous cell carcinoma,MONDO_0005097,squamous cell lung carcinoma,mapped
+MAPK通路依赖肿瘤,,,,skipped_no_specific_query
+megakaryocytic leukemia,megakaryocytic leukemia,MONDO_0018872,acute megakaryoblastic leukemia,mapped
+melanoma,melanoma,MONDO_0005105,melanoma,mapped
+melanoma in situ,melanoma in situ,MONDO_0004641,skin carcinoma in situ,mapped
+menin依赖白血病,,,,skipped_no_specific_query
+morbid obesity,morbid obesity,MONDO_0005139,morbid obesity,mapped
+multiple myeloma,multiple myeloma,MONDO_0009693,plasma cell myeloma,mapped
+multiple sclerosis,multiple sclerosis,MONDO_0005301,multiple sclerosis,mapped
+muscular atrophy,muscular atrophy,MONDO_0004323,muscular atrophy,mapped
+muscular dystrophy,muscular dystrophy,MONDO_0020121,muscular dystrophy,mapped
+myelodysplastic syndrome,myelodysplastic syndrome,MONDO_0018881,myelodysplastic syndrome,mapped
+myocardial infarction,myocardial infarction,MONDO_0005068,myocardial infarction,mapped
+NASH/肝损伤,nonalcoholic steatohepatitis,MONDO_0007027,metabolic dysfunction-associated steatohepatitis,mapped
+NASH/肝炎症/肝纤维化待定,nonalcoholic steatohepatitis,MONDO_0007027,metabolic dysfunction-associated steatohepatitis,mapped
+nasopharynx carcinoma,nasopharynx carcinoma,MONDO_0021537,undifferentiated carcinoma of nasopharynx,mapped
+nemaline myopathy,nemaline myopathy,MONDO_0018958,nemaline myopathy,mapped
+nephroblastoma,nephroblastoma,Orphanet_654,Nephroblastoma,mapped
+Nephrolithiasis,Nephrolithiasis,MONDO_0008171,nephrolithiasis,mapped
+nephrosclerosis,nephrosclerosis,MONDO_0006044,nephrosclerosis,mapped
+neurofibromatosis,neurofibromatosis,MONDO_0021061,neurofibromatosis,mapped
+Neurological pain disorder,Neurological pain disorder,MONDO_0700057,neurological pain disorder,mapped
+nonspecific interstitial pneumonia,nonspecific interstitial pneumonia,MONDO_0030608,interstitial lung disease 1,mapped
+NSCLC,non-small cell lung carcinoma,MONDO_0005233,non-small cell lung carcinoma,mapped
+obesity,obesity,MONDO_0011122,obesity disorder,mapped
+oligodendroglioma,oligodendroglioma,MONDO_0016695,oligodendroglioma,mapped
+ovarian cancer,ovarian cancer,MONDO_0008170,ovarian cancer,mapped
+ovarian serous carcinoma,ovarian serous carcinoma,EFO_1001516,ovarian serous carcinoma,mapped
+pancreatic cancer,pancreatic cancer,MONDO_0013685,"pancreatic cancer, susceptibility to, 4",mapped
+pancreatic ductal adenocarcinoma,pancreatic ductal adenocarcinoma,MONDO_0005184,pancreatic ductal adenocarcinoma,mapped
+papillary thyroid carcinoma,papillary thyroid carcinoma,MONDO_0005075,thyroid gland papillary carcinoma,mapped
+Parkinson's disease,Parkinson's disease,MONDO_0005180,Parkinson disease,mapped
+PDGFRA突变GIST,gastrointestinal stromal tumor,MONDO_0011719,gastrointestinal stromal tumor,mapped
+PDGFRB依赖白血病/肉瘤,,,,skipped_no_specific_query
+peripartum cardiomyopathy,peripartum cardiomyopathy,MONDO_0018920,peripartum cardiomyopathy,mapped
+precursor B lymphoblastic lymphoma/leukemia,precursor B lymphoblastic lymphoma/leukemia,MONDO_0004947,B-cell acute lymphoblastic leukemia,mapped
+prostate cancer,prostate cancer,MONDO_0008315,prostate cancer,mapped
+psoriasis,psoriasis,MONDO_0005083,psoriasis,mapped
+Psoriasis vulgaris,Psoriasis vulgaris,EFO_1001494,psoriasis vulgaris,mapped
+pulmonary fibrosis,pulmonary fibrosis,MONDO_0002771,pulmonary fibrosis,mapped
+pulmonary sarcoidosis,pulmonary sarcoidosis,MONDO_0001708,pulmonary sarcoidosis,mapped
+renal cell carcinoma,renal cell carcinoma,MONDO_0005086,renal cell carcinoma,mapped
+retinoblastoma,retinoblastoma,MONDO_0008380,retinoblastoma,mapped
+RET融合NSCLC,non-small cell lung carcinoma,MONDO_0005233,non-small cell lung carcinoma,mapped
+rheumatoid arthritis,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+Schizophrenia,Schizophrenia,MONDO_0005090,schizophrenia,mapped
+schizophrenia,schizophrenia,MONDO_0005090,schizophrenia,mapped
+serous cystadenocarcinoma,serous cystadenocarcinoma,MONDO_0024621,serous cystadenocarcinoma,mapped
+SHP2依赖RTK/RAS通路肿瘤,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+smoldering myeloma,smoldering myeloma,MONDO_0005235,smoldering plasma cell myeloma,mapped
+Spinal Cord Injury,Spinal Cord Injury,MONDO_0043797,spinal cord injury,mapped
+sporadic breast cancer,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+Squamous cell carcinoma of mouth,Squamous cell carcinoma of mouth,MONDO_0004958,oral cavity squamous cell carcinoma,mapped
+status epilepticus,status epilepticus,EFO_0008526,status epilepticus,mapped
+stomach cancer,stomach cancer,MONDO_0001056,gastric cancer,mapped
+systemic lupus erythematosus,systemic lupus erythematosus,MONDO_0007915,systemic lupus erythematosus,mapped
+Tachycardia,Tachycardia,EFO_0009493,paroxysmal tachycardia,mapped
+testicular cancer,testicular cancer,MONDO_0005447,testicular cancer,mapped
+testis seminoma,testis seminoma,MONDO_0003669,testicular seminoma,mapped
+thymic carcinoma,thymic carcinoma,MONDO_0006451,thymic carcinoma,mapped
+TP53通路异常肿瘤,,,,skipped_no_specific_query
+Transplanted Heart Complication,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+type 1 diabetes mellitus,type 1 diabetes mellitus,MONDO_0005147,type 1 diabetes mellitus,mapped
+type 2 diabetes mellitus,type 2 diabetes mellitus,MONDO_0005148,type 2 diabetes mellitus,mapped
+ulcerative colitis,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+Urothelial carcinoma in situ,Urothelial carcinoma in situ,MONDO_0004703,bladder carcinoma in situ,mapped
+uterine fibroid,uterine fibroid,MONDO_0007886,uterine corpus leiomyoma,mapped
+Ventricular hypertrophy,Ventricular hypertrophy,EFO_0003896,left ventricular hypertrophy,mapped
+Viral cardiomyopathy,rheumatoid arthritis,MONDO_0008383,rheumatoid arthritis,mapped
+不优先作为疗效新适应症,,,,skipped_no_specific_query
+乳腺/前列腺内分泌相关肿瘤,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+乳腺癌,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+代谢应激疾病,,,,skipped_no_specific_query
+优先按神经递质或突触 readout 具体化,,,,skipped_no_specific_query
+优先按细胞类型选择T/B/髓系或上皮炎症模型,dermatitis,MONDO_0002406,dermatitis,mapped
+优先按靶点选择乳腺癌/肺癌/白血病/结直肠癌等模型,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+优先按靶点选择电生理或血管细胞模型,,,,skipped_no_specific_query
+优先按靶点选择神经元兴奋性或突触功能模型,,,,skipped_no_specific_query
+优先验证宿主因子或炎症/复制辅助 readout,,,,skipped_no_specific_query
+免疫抑制肿瘤微环境,,,,skipped_no_specific_query
+具体肿瘤亚型待定,,,,skipped_no_specific_query
+内分泌肿瘤,,,,skipped_no_specific_query
+前列腺/乳腺/子宫内膜/生殖轴疾病待定,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+前列腺癌,prostate carcinoma,MONDO_0005159,prostate carcinoma,mapped
+动脉粥样硬化,atherosclerosis,MONDO_0005311,atherosclerosis,mapped
+右心室肥厚/心衰,heart failure,MONDO_0005252,heart failure,mapped
+周期性麻痹,periodic paralysis,MONDO_0016122,periodic paralysis,mapped
+头颈鳞癌,head and neck squamous cell carcinoma,MONDO_0010150,head and neck squamous cell carcinoma,mapped
+套细胞淋巴瘤,mantle cell lymphoma,MONDO_0018876,mantle cell lymphoma,mapped
+子宫内膜癌,endometrial carcinoma,MONDO_0002447,endometrial carcinoma,mapped
+子宫肌瘤/内膜异位症,,,,skipped_no_specific_query
+子痫前期/血管病变,,,,skipped_no_specific_query
+尿酸性肾病,hyperuricemic nephropathy,MONDO_0000608,familial juvenile hyperuricemic nephropathy,mapped
+帕金森病/单胺储存,Parkinson disease,MONDO_0005180,Parkinson disease,mapped
+心律失常,cardiac arrhythmia,EFO_0004269,cardiac arrhythmia,mapped
+心律失常/心衰/血管重塑待定,cardiac arrhythmia,EFO_0004269,cardiac arrhythmia,mapped
+心肌纤维化,cardiac fibrosis,MONDO_0006746,endomyocardial fibrosis,mapped
+心脏传导异常,cardiac conduction disease,MONDO_0000992,heart conduction disease,mapped
+心衰复极异常,heart failure,MONDO_0005252,heart failure,mapped
+扩张型心肌病,dilated cardiomyopathy,MONDO_0005021,dilated cardiomyopathy,mapped
+抑郁/焦虑/精神分裂症待定,depression,MONDO_0005929,postpartum depression,mapped
+核苷转运/抗病毒敏感性,,,,skipped_no_specific_query
+氧化应激/Nrf2相关疾病,,,,skipped_no_specific_query
+氧化应激炎症模型,,,,skipped_no_specific_query
+淋巴瘤,lymphoma,MONDO_0005062,lymphoma,mapped
+焦虑/睡眠相关GABA模型,anxiety disorder,MONDO_0005618,anxiety disorder,mapped
+特应性皮炎,atopic dermatitis,MONDO_0004980,atopic eczema,mapped
+甲状腺癌,thyroid carcinoma,MONDO_0015075,thyroid gland carcinoma,mapped
+痛风/肾结石,gout,MONDO_0005393,gout,mapped
+癫痫,epilepsy,MONDO_0005027,epilepsy,mapped
+癫痫/兴奋性毒性,epilepsy,MONDO_0005027,epilepsy,mapped
+癫痫/神经退行/神经炎症待定,epilepsy,MONDO_0005027,epilepsy,mapped
+神经元兴奋性异常,,,,skipped_no_specific_query
+神经兴奋性异常,,,,skipped_no_specific_query
+神经兴奋性模型,,,,skipped_no_specific_query
+神经内分泌肿瘤,,,,skipped_no_specific_query
+神经发育障碍,,,,skipped_no_specific_query
+神经损伤模型,,,,skipped_no_specific_query
+神经病理性疼痛/炎症性疼痛待定,,,,skipped_no_specific_query
+神经精神疾病,,,,skipped_no_specific_query
+糖尿病/NASH/脂代谢异常待定,nonalcoholic steatohepatitis,MONDO_0007027,metabolic dysfunction-associated steatohepatitis,mapped
+纤维化,,,,skipped_no_specific_query
+结直肠癌,colorectal carcinoma,MONDO_0024331,colorectal carcinoma,mapped
+结直肠癌表观遗传模型,colorectal carcinoma,MONDO_0024331,colorectal carcinoma,mapped
+肉瘤,,,,skipped_no_specific_query
+肌强直,myotonia,MONDO_0020481,myotonia fluctuans,mapped
+肺动脉高压,pulmonary arterial hypertension,MONDO_0015924,pulmonary arterial hypertension,mapped
+肺癌耐药,,,,skipped_no_specific_query
+肾小球内皮损伤/蛋白尿性CKD,chronic kidney disease,MONDO_0005300,chronic kidney disease,mapped
+肾纤维化,chronic kidney disease,MONDO_0005300,chronic kidney disease,mapped
+肾纤维化/CKD,chronic kidney disease,MONDO_0005300,chronic kidney disease,mapped
+肿瘤化疗敏感性,,,,skipped_no_specific_query
+肿瘤血管生成,,,,skipped_no_specific_query
+胰腺癌,pancreatic carcinoma,MONDO_0005192,exocrine pancreatic carcinoma,mapped
+胰腺癌/乳腺癌EMT模型,breast carcinoma,MONDO_0004989,breast carcinoma,mapped
+胶质瘤/肉瘤,,,,skipped_no_specific_query
+自身免疫/炎症疾病待定,autoimmune disease,MONDO_0007179,autoimmune disease,mapped
+药物安全性模型,,,,skipped_no_specific_query
+血管重塑/心血管纤维化,,,,skipped_no_specific_query
+血管重塑疾病,,,,skipped_no_specific_query
+贫血/造血异常,,,,skipped_no_specific_query
+银屑病,psoriasis,MONDO_0005083,psoriasis,mapped
+银屑病/特应性皮炎/角化异常待定,psoriasis,MONDO_0005083,psoriasis,mapped
+长QT风险模型,,,,skipped_no_specific_query
+阿尔茨海默病,Alzheimer disease,MONDO_0004975,Alzheimer disease,mapped
+雄激素相关皮肤/生殖疾病,,,,skipped_no_specific_query
+需避免直接结合过度解释,,,,skipped_no_specific_query
+骨质疏松,osteoporosis,MONDO_0005298,osteoporosis,mapped
+骨质疏松/绝经相关疾病,osteoporosis,MONDO_0005298,osteoporosis,mapped
+骨质疏松/肌病/关节炎待定,osteoporosis,MONDO_0005298,osteoporosis,mapped
+骨重塑疾病,,,,skipped_no_specific_query
+骨骼肌兴奋性异常,,,,skipped_no_specific_query
+骨髓增殖性肿瘤,myeloproliferative neoplasm,MONDO_0020076,myeloproliferative neoplasm,mapped
+髓系肿瘤,,,,skipped_no_specific_query
+高尿酸血症,hyperuricemia,EFO_0009104,hyperuricemia,mapped
+黑色素瘤,melanoma,MONDO_0005105,melanoma,mapped

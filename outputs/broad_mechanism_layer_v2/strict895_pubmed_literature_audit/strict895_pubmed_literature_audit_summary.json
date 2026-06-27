@@ -1,0 +1,17 @@
+{
+  "source": "/root/autodl-tmp/BioMaster/outputs/broad_mechanism_layer_v2/strict895_agent_review/strict_top_ready_895_source_rows.csv",
+  "strict895_source_rows": 895,
+  "unique_drug_target_pairs": 865,
+  "seeded_cache_entries_from_previous_comprehensive_run": 0,
+  "audited_rows": 865,
+  "in_previous_12696_literature_audit": 258,
+  "new_pairs_not_in_previous_12696": 607,
+  "status_counts": {
+    "unreported_in_pubmed_pair_audit": 622,
+    "reported_post_approval_old_drug_new_target": 225,
+    "known_pharmacology_or_control_not_new": 9,
+    "reported_only_before_or_without_approval_window": 9
+  },
+  "pubmed_pair_count_gt0": 242,
+  "post_approval_pair_count_gt0": 233
+}

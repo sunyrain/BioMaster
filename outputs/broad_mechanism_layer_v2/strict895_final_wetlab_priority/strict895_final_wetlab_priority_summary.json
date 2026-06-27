@@ -1,0 +1,86 @@
+{
+  "all_rows": 895,
+  "unique_hypotheses": 873,
+  "agent_reviewed_rows": 895,
+  "missing_agent_review_rows": 0,
+  "agent_decision_counts": {
+    "review_low": 326,
+    "keep_medium": 267,
+    "deprioritize": 129,
+    "keep_high": 87,
+    "control_only": 86
+  },
+  "recommended_track_counts_all": {
+    "secondary_review": 307,
+    "first_wave_or_backup": 260,
+    "deprioritized": 155,
+    "first_wave_priority": 87,
+    "control_or_rediscovery": 86
+  },
+  "recommended_track_counts_unique": {
+    "secondary_review": 296,
+    "first_wave_or_backup": 254,
+    "deprioritized": 153,
+    "first_wave_priority": 85,
+    "control_or_rediscovery": 85
+  },
+  "child_ot_match_rows": 869,
+  "child_ot_score_ge_0_5_rows": 362,
+  "top96_track_counts": {
+    "first_wave_priority": 85,
+    "first_wave_or_backup": 11
+  },
+  "top96_disease_area_counts": {
+    "实体瘤": 47,
+    "血液肿瘤/血液病": 22,
+    "心血管": 12,
+    "皮肤/免疫": 5,
+    "肾脏": 5,
+    "免疫/炎症": 4,
+    "神经/精神": 1
+  },
+  "repurposing_type_counts_unique": {
+    "跨大领域老药新用": 369,
+    "同领域同靶点家族扩展": 185,
+    "同领域新靶点/新病种探索": 125,
+    "跨领域但同靶点家族扩展": 109,
+    "文献再发现/阳性对照": 50,
+    "再发现/流程对照": 26,
+    "已知药理/阳性对照": 9
+  },
+  "top96_repurposing_type_counts": {
+    "跨大领域老药新用": 54,
+    "同领域同靶点家族扩展": 26,
+    "跨领域但同靶点家族扩展": 11,
+    "同领域新靶点/新病种探索": 5
+  },
+  "top96_direction_counts": {
+    "oncology": 62,
+    "cardiovascular": 14,
+    "renal": 6,
+    "immune": 5,
+    "dermatology": 4,
+    "nervous_system": 2,
+    "hepatic": 2,
+    "hematology": 1
+  },
+  "top96_assay_lane_counts": {
+    "enzyme_or_epigenetic_biochemical": 40,
+    "kinase_biochemical_cellular": 34,
+    "ion_channel_functional": 11,
+    "transporter_uptake_efflux": 8,
+    "nuclear_receptor_or_tf_reporter": 3
+  },
+  "literature_status_counts_unique": {
+    "unreported_in_pubmed_pair_audit": 626,
+    "reported_post_approval_old_drug_new_target": 229,
+    "reported_only_before_or_without_approval_window": 9,
+    "known_pharmacology_or_control_not_new": 9
+  },
+  "top96_literature_status_counts": {
+    "unreported_in_pubmed_pair_audit": 78,
+    "reported_post_approval_old_drug_new_target": 18
+  },
+  "strict895_pubmed_audit_rows_matched_all": 895,
+  "first_wave_strict_novelty_rows": 34
+}

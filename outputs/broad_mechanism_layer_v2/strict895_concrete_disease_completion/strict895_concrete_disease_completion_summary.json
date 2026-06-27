@@ -1,0 +1,36 @@
+{
+  "rows": 895,
+  "unique_drugs": 134,
+  "unique_targets": 190,
+  "directions": 15,
+  "evidence_level_counts": {
+    "A_CREEDS_and_target_prior": 373,
+    "B_CREEDS_specific": 326,
+    "C_broad_direction_only": 107,
+    "B_target_prior_specific": 89
+  },
+  "confidence_counts": {
+    "中高": 415,
+    "高": 277,
+    "低": 107,
+    "中": 96
+  },
+  "direction_counts": {
+    "oncology": 570,
+    "cardiovascular": 119,
+    "dermatology": 99,
+    "nervous_system": 36,
+    "renal": 16,
+    "musculoskeletal": 13,
+    "pain": 9,
+    "immune": 7,
+    "metabolic": 7,
+    "psychiatry": 6,
+    "hepatic": 5,
+    "hematology": 3,
+    "reproductive": 3,
+    "respiratory": 1,
+    "infectious": 1
+  },
+  "output": "/root/autodl-tmp/BioMaster/outputs/broad_mechanism_layer_v2/strict895_concrete_disease_completion/strict895_concrete_disease_annotations.csv"
+}

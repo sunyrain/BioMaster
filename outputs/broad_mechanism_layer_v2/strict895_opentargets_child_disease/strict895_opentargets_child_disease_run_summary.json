@@ -1,0 +1,21 @@
+{
+  "rows": 895,
+  "unique_targets": 190,
+  "targets_with_ensembl": 190,
+  "candidate_disease_names": 261,
+  "mapped_candidate_disease_names": 207,
+  "child_ot_status_counts": {
+    "child_ot_match": 869,
+    "mapped_but_not_in_fetched_target_diseases": 19,
+    "no_specific_disease_mapped": 7
+  },
+  "rows_with_child_ot_match": 869,
+  "rows_with_child_ot_score_ge_0_2": 670,
+  "rows_with_child_ot_score_ge_0_5": 362,
+  "outputs": {
+    "summary": "/root/autodl-tmp/BioMaster/outputs/broad_mechanism_layer_v2/strict895_opentargets_child_disease/strict895_opentargets_child_disease_summary.csv",
+    "long": "/root/autodl-tmp/BioMaster/outputs/broad_mechanism_layer_v2/strict895_opentargets_child_disease/strict895_opentargets_child_disease_long.csv",
+    "mapping": "/root/autodl-tmp/BioMaster/outputs/broad_mechanism_layer_v2/strict895_opentargets_child_disease/strict895_concrete_disease_name_mapping.csv"
+  },
+  "note": "Associated diseases fetched through target.associatedDiseases, first 4000 diseases per target by Open Targets score."
+}

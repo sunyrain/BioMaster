@@ -1,0 +1,13 @@
+{
+  "rows":895,
+  "unique_drugs":134,
+  "unique_targets":190,
+  "directions":15,
+  "chunks":10,
+  "definition":"strict_top_ready_exact == True and conplex_score >= 0.20",
+  "outputs":{
+    "first_pass":"\/root\/autodl-tmp\/BioMaster\/outputs\/broad_mechanism_layer_v2\/strict895_agent_review\/strict_top_ready_895_first_pass_analysis.csv",
+    "source_rows":"\/root\/autodl-tmp\/BioMaster\/outputs\/broad_mechanism_layer_v2\/strict895_agent_review\/strict_top_ready_895_source_rows.csv",
+    "chunks":"\/root\/autodl-tmp\/BioMaster\/outputs\/broad_mechanism_layer_v2\/strict895_agent_review\/agent_chunks"
+  }
+}

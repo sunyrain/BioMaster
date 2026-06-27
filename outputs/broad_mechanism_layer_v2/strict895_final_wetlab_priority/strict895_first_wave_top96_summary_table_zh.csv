@@ -1,0 +1,97 @@
+排名,推荐层级,老药新用类型,药物,原适应症领域,原领域英文,候选靶点,拟新用细分病种,拟新用病种英文,拟新用病种大类,优先级分数,ConPLEx分数,药物内靶点排名,OpenTargets病种分数,实验类型,风险等级,文献状态,PubMed总窗计数,上市后PubMed计数,是否同原适应症领域,是否同已知靶点家族
+1,第一轮优先,跨大领域老药新用,Lubiprostone,胃肠/消化,Gastroenterology,TYK2,类风湿关节炎,rheumatoid arthritis,免疫/炎症,91.05800129063823,0.4590447,23,0.75418882773207,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+2,第一轮优先,跨大领域老药新用,Emtricitabine,感染性疾病,Infectious Disease,CDK4,乳腺癌,breast cancer,实体瘤,90.19123738405045,0.5462819,4,0.6307216615133534,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+3,第一轮优先,跨大领域老药新用,Lubiprostone,胃肠/消化,Gastroenterology,DNMT3A,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,90.0,0.51115733,3,0.8577261614555013,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+4,第一轮优先,跨大领域老药新用,Emtricitabine,感染性疾病,Infectious Disease,CDK6,乳腺癌,breast carcinoma,实体瘤,89.73219757559252,0.5462819,5,0.6103198922485568,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+5,第一轮优先,跨大领域老药新用,Lubiprostone,胃肠/消化,Gastroenterology,JAK1,类风湿关节炎,rheumatoid arthritis,免疫/炎症,89.42054989950462,0.44509453,34,0.7103468962742798,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+6,第一轮优先,跨大领域老药新用,Emtricitabine,感染性疾病,Infectious Disease,DNMT3A,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,89.08695639999999,0.48043478,52,0.8577261614555013,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,否,否
+7,第一轮优先,跨大领域老药新用,Doravirine,未知,,ESR1,乳腺癌,breast cancer,实体瘤,86.55242103915302,0.53315145,7,0.7356631572956897,核受体/转录因子 reporter,low,PubMed pair审计未见明确报道,0,0,否,否
+8,第一轮优先,跨大领域老药新用,Emtricitabine,感染性疾病,Infectious Disease,PTPN11,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,86.4770094714397,0.5015137,38,0.6434226431750978,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+9,第一轮优先,跨领域但同靶点家族扩展,Infigratinib Phosphate,肿瘤,Oncology,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,86.0,0.64790773,3,0.8245011238749937,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,是
+10,第一轮优先,跨大领域老药新用,Lubiprostone,胃肠/消化,Gastroenterology,PRKCD,系统性红斑狼疮,systemic lupus erythematosus,免疫/炎症,84.69712297485918,0.5122682,2,0.3865387988826302,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+11,第一轮优先,跨领域但同靶点家族扩展,Palbociclib,肿瘤,Oncology,TYK2,银屑病,psoriasis,皮肤/免疫,84.36840680984075,0.4810829,37,0.7222757693262555,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,否,是
+12,第一轮优先,同领域同靶点家族扩展,Afatinib Dimaleate,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,84.0,0.63125384,4,0.8354100756215777,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,是,是
+13,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,LYN,乳腺癌,breast cancer,实体瘤,83.80990680775645,0.45665708,6,0.4370033959002865,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+14,第一轮优先,同领域同靶点家族扩展,Tucatinib,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,82.57495493333333,0.46946332,4,0.8354100756215777,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,是,是
+15,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,PTK6,食管鳞癌,esophageal squamous cell carcinoma,实体瘤,82.29863784914879,0.49339902,1,0.2936303814436496,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+16,第一轮优先,同领域同靶点家族扩展,Selpercatinib,肿瘤,Oncology,CHEK2,乳腺癌,breast carcinoma,实体瘤,81.95354136071074,0.5460861,32,0.7090462826982556,激酶生化/细胞,中,PubMed pair审计未见明确报道,0,0,是,是
+17,第一轮优先,跨大领域老药新用,Emtricitabine,感染性疾病,Infectious Disease,BMPR1A,乳腺癌,breast carcinoma,实体瘤,81.56088906991121,0.5462819,2,0.2915950697738313,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,否,否
+18,第一轮优先,跨大领域老药新用,Maraviroc,感染性疾病,Infectious Disease,SLC34A2,肺鳞癌,squamous cell lung carcinoma,实体瘤,81.32386227713619,0.50970215,47,0.3699494345393864,转运体摄取/外排,low,PubMed pair审计未见明确报道,0,0,否,否
+19,第一轮优先,跨大领域老药新用,Avibactam Sodium,感染性疾病,Infectious Disease,SLC5A2,慢性肾病,chronic kidney disease,肾脏,81.15657203712217,0.43705928,3,0.6263913616498742,转运体摄取/外排,medium,PubMed pair审计未见明确报道,0,0,否,否
+20,第一轮优先,同领域同靶点家族扩展,Cabozantinib S-Malate,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,81.0,0.6794778,4,0.8354100756215777,激酶生化/细胞,low,上市后文献有新靶点线索,30,29,是,是
+21,第一轮优先,同领域同靶点家族扩展,Pazopanib Hydrochloride,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,81.0,0.9139769,4,0.8354100756215777,激酶生化/细胞,low,上市后文献有新靶点线索,7,6,是,是
+22,第一轮优先,同领域同靶点家族扩展,Infigratinib Phosphate,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,81.0,0.62431186,6,0.8354100756215777,激酶生化/细胞,low,上市后文献有新靶点线索,3,1,是,是
+23,第一轮优先,同领域同靶点家族扩展,Selpercatinib,肿瘤,Oncology,BRAF,黑色素瘤,melanoma,实体瘤,81.0,0.55524075,30,0.819548256089721,激酶生化/细胞,low,上市后文献有新靶点线索,37,36,是,是
+24,第一轮优先,同领域同靶点家族扩展,Dacomitinib,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,81.0,0.54986876,4,0.8354100756215777,激酶生化/细胞,low,上市后文献有新靶点线索,2,1,是,是
+25,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,FGFR3,头颈鳞癌,head and neck squamous cell carcinoma,实体瘤,80.74593357802763,0.45653036,7,0.3455340790234503,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,否,否
+26,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,BTK,肺鳞癌,squamous cell lung carcinoma,实体瘤,80.62874464780435,0.46554467,4,0.2771848910135263,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+27,第一轮优先,跨大领域老药新用,Abiraterone Acetate,肿瘤,Oncology,KCND3,心律失常,cardiac arrhythmia,心血管,80.42538807299101,0.5248671,51,0.5522394699107118,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+28,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,SYK,弥漫大B细胞淋巴瘤,diffuse large B-cell lymphoma,血液肿瘤/血液病,80.36864805149142,0.44111168,10,0.3163008733996184,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+29,第一轮优先,同领域同靶点家族扩展,Regorafenib,肿瘤,Oncology,FLT3,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,79.452832,0.4668464,1,0.8354100756215777,激酶生化/细胞,low,上市后文献有新靶点线索,8,8,是,是
+30,第一轮优先,跨大领域老药新用,Emtricitabine,感染性疾病,Infectious Disease,MAP2K2,乳腺癌,breast carcinoma,实体瘤,79.41077191136566,0.5275529,21,0.284923196060696,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,否,否
+31,第一轮优先,跨大领域老药新用,Naloxegol Oxalate,神经/精神,Neurology/Psychiatry,KCNK3,肺动脉高压,pulmonary arterial hypertension,心血管,79.26503418496569,0.611532,32,0.5006681859984753,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+32,第一轮优先,跨大领域老药新用,Maraviroc,感染性疾病,Infectious Disease,KCNK3,肺动脉高压,pulmonary arterial hypertension,心血管,79.26503418496569,0.59478486,31,0.5006681859984753,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+33,第一轮优先,跨大领域老药新用,Abiraterone Acetate,肿瘤,Oncology,KCNK3,肺动脉高压,pulmonary arterial hypertension,心血管,79.26503418496569,0.55425024,36,0.5006681859984753,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+34,第一轮优先,跨大领域老药新用,Tecovirimat,感染性疾病,Infectious Disease,PTPN11,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,78.35483140477304,0.36881047,58,0.6434226431750978,酶/表观遗传生化,低,PubMed pair审计未见明确报道,0,0,否,否
+35,第一轮优先,同领域同靶点家族扩展,Larotrectinib Sulfate,肿瘤,Oncology,TYK2,银屑病,psoriasis,皮肤/免疫,78.20983020984075,0.47768483,42,0.7222757693262555,激酶生化/细胞,中高,PubMed pair审计未见明确报道,0,0,是,是
+36,第一轮优先,同领域同靶点家族扩展,Neratinib Maleate,肿瘤,Oncology,EGFR,非小细胞肺癌,non-small cell lung carcinoma,实体瘤,78.0,0.9149978,1,0.8525670184292347,激酶生化/细胞,medium,上市后文献有新靶点线索,281,221,是,是
+37,第一轮优先,同领域同靶点家族扩展,Tucatinib,肿瘤,Oncology,EGFR,非小细胞肺癌,non-small cell lung carcinoma,实体瘤,78.0,0.73007804,1,0.8525670184292347,激酶生化/细胞,medium,上市后文献有新靶点线索,116,115,是,是
+38,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,AXL,乳腺癌,breast cancer,实体瘤,77.8434065130005,0.47338057,3,0.1371398479852076,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+39,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,JAK1,浆细胞骨髓瘤,plasma cell myeloma,血液肿瘤/血液病,77.38448731065525,0.3813838,27,0.3075515545476405,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+40,第一轮优先,跨大领域老药新用,Dasabuvir Sodium,感染性疾病,Infectious Disease,DDR2,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,77.24219808324096,0.3523357,1,0.4059199444403396,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,否,否
+41,第一轮优先,跨大领域老药新用,Atazanavir Sulfate,感染性疾病,Infectious Disease,MMP14,前列腺癌,prostate cancer,实体瘤,77.22790866187418,0.46698534,5,0.3008263464536673,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+42,第一轮优先,跨大领域老药新用,Avibactam Sodium,感染性疾病,Infectious Disease,SLC22A12,痛风,gout,肾脏,77.13934347764062,0.31498727,51,0.7899231501173613,转运体摄取/外排,低,PubMed pair审计未见明确报道,0,0,否,否
+43,第一轮优先,跨大领域老药新用,Doravirine,未知,,EZH2,乳腺癌,breast cancer,实体瘤,77.12117383375575,0.46058482,16,0.1760243955743292,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,否,否
+44,第一轮优先,跨大领域老药新用,Doravirine And Islatravir,感染性疾病,Infectious Disease,MALT1,乳腺癌,breast carcinoma,实体瘤,77.08499554356675,0.40451086,29,0.2907180182325965,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,否,否
+45,第一轮优先,同领域同靶点家族扩展,Pazopanib Hydrochloride,肿瘤,Oncology,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,77.0,0.9183604,3,0.8245011238749937,酶/表观遗传生化,medium,上市后文献有新靶点线索,18,16,是,是
+46,第一轮优先,同领域同靶点家族扩展,Cabozantinib S-Malate,肿瘤,Oncology,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,77.0,0.71761274,1,0.8245011238749937,酶/表观遗传生化,medium,上市后文献有新靶点线索,7,7,是,是
+47,第一轮优先,同领域同靶点家族扩展,Afatinib Dimaleate,肿瘤,Oncology,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,77.0,0.5916499,5,0.8245011238749937,酶/表观遗传生化,medium,上市后文献有新靶点线索,1,1,是,是
+48,第一轮优先,跨大领域老药新用,Nevirapine,感染性疾病,Infectious Disease,KCNN4,乳腺癌,breast cancer,实体瘤,76.90269837636052,0.64107674,3,0.2623421500604675,离子通道功能,low,PubMed pair审计未见明确报道,0,0,否,否
+49,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,ITK,前列腺癌,prostate cancer,实体瘤,76.67696979766215,0.463059,5,0.106705916933133,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+50,第一轮优先,同领域同靶点家族扩展,Selpercatinib,肿瘤,Oncology,PTPN11,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,76.4770094714397,0.56070846,26,0.6434226431750978,酶/表观遗传生化,low,上市后文献有新靶点线索,1,1,是,是
+51,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,JAK2,骨髓增殖性肿瘤,myeloproliferative neoplasm,实体瘤,76.30351678053488,0.36753774,40,0.2882261739496983,激酶生化/细胞,low,PubMed pair审计未见明确报道,0,0,否,否
+52,第一轮优先,跨大领域老药新用,Palonosetron Hydrochloride,肿瘤,Oncology,SLC6A1,精神分裂症,schizophrenia,神经/精神,76.29476397441098,0.8031629,12,0.2797672877515993,转运体摄取/外排,medium,PubMed pair审计未见明确报道,0,0,否,否
+53,第一轮优先,同领域同靶点家族扩展,Pazopanib Hydrochloride,肿瘤,Oncology,RET,非小细胞肺癌,non-small cell lung carcinoma,实体瘤,75.8755057242704,0.8601657,8,0.7055780321897952,激酶生化/细胞,medium,上市后文献有新靶点线索,9,9,是,是
+54,第一轮优先,同领域新靶点/新病种探索,Selpercatinib,肿瘤,Oncology,MEN1,乳腺癌,breast carcinoma,实体瘤,75.79125206402318,0.6118933,7,0.3018334250676967,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,是,否
+55,第一轮优先,跨领域但同靶点家族扩展,Infigratinib Phosphate,肿瘤,Oncology,CSF1R,肾细胞癌,renal cell carcinoma,实体瘤,75.54849099261283,0.699764,1,0.6021551552272368,酶/表观遗传生化,medium,上市后文献有新靶点线索,4,1,否,是
+56,第一轮优先,跨领域但同靶点家族扩展,Palonosetron Hydrochloride,肿瘤,Oncology,KCNK3,肺动脉高压,pulmonary arterial hypertension,心血管,75.26503418496569,0.7315058,27,0.5006681859984753,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,是
+57,第一轮优先,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,LCK,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,75.11160462872733,0.36284697,55,0.3783146383138076,激酶生化/细胞,中,PubMed pair审计未见明确报道,0,0,否,否
+58,第一轮优先,跨领域但同靶点家族扩展,Palonosetron Hydrochloride,肿瘤,Oncology,SCN5A,心律失常,cardiac arrhythmia,心血管,74.69259161909332,0.60582685,60,0.7863374052930366,离子通道功能,中高,PubMed pair审计未见明确报道,0,0,否,是
+59,第一轮优先,跨大领域老药新用,Ombitasvir,感染性疾病,Infectious Disease,IDH2,浆细胞骨髓瘤,plasma cell myeloma,血液肿瘤/血液病,73.28174055653224,0.32210785,1,0.2925944099199518,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,否,否
+60,第一轮优先,跨大领域老药新用,Raltegravir Potassium,感染性疾病,Infectious Disease,SLC34A2,肺鳞癌,squamous cell lung carcinoma,实体瘤,72.73919974380286,0.38032866,7,0.3699494345393864,转运体摄取/外排,medium,PubMed pair审计未见明确报道,0,0,否,否
+61,第一轮优先,跨大领域老药新用,Siponimod,神经/精神,Neurology/Psychiatry,NOX4,动脉粥样硬化,atherosclerosis,心血管,72.67940616495132,0.46716738,4,0.0982931154793176,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+62,第一轮优先,同领域同靶点家族扩展,Neratinib Maleate,肿瘤,Oncology,KDR,肝细胞癌,hepatocellular carcinoma,实体瘤,72.49571732357533,0.26954842,12,0.6777833062329777,酶/表观遗传生化,low,PubMed pair审计未见明确报道,0,0,是,是
+63,第一轮优先,同领域同靶点家族扩展,Selpercatinib,肿瘤,Oncology,KRAS,非小细胞肺癌,non-small cell lung carcinoma,实体瘤,72.0,0.64690065,2,0.803548887170282,酶/表观遗传生化,medium,上市后文献有新靶点线索,18,18,是,是
+64,第一轮优先,跨大领域老药新用,Etravirine,感染性疾病,Infectious Disease,LCK,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,71.065406295394,0.27614272,13,0.3783146383138076,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,否,否
+65,第一轮优先,同领域同靶点家族扩展,Pazopanib Hydrochloride,肿瘤,Oncology,KIT,黑色素瘤,melanoma,实体瘤,70.72632779550207,0.92742383,2,0.4767256798000925,激酶生化/细胞,medium,上市后文献有新靶点线索,96,91,是,是
+66,第一轮优先,跨领域但同靶点家族扩展,Abiraterone Acetate,肿瘤,Oncology,NOX4,动脉粥样硬化,atherosclerosis,心血管,70.21159509828465,0.646334,8,0.0982931154793176,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,否,是
+67,第一轮优先,跨大领域老药新用,Palonosetron Hydrochloride,肿瘤,Oncology,SLC29A1,,,实体瘤,70.0,0.7837953,15,0.0,转运体摄取/外排,medium,PubMed pair审计未见明确报道,0,0,否,否
+68,第一轮优先,跨大领域老药新用,Abiraterone Acetate,肿瘤,Oncology,SLC29A1,,,实体瘤,70.0,0.5966999,18,0.0,转运体摄取/外排,medium,PubMed pair审计未见明确报道,0,0,否,否
+69,第一轮优先,同领域同靶点家族扩展,Bosutinib Monohydrate,肿瘤,Oncology,EPHA3,肝细胞癌,hepatocellular carcinoma,实体瘤,69.81503089327799,0.8254985,7,0.2140013730345777,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,是,是
+70,第一轮优先,跨领域但同靶点家族扩展,Larotrectinib Sulfate,肿瘤,Oncology,ACVRL1,动脉粥样硬化,atherosclerosis,心血管,69.23814239285582,0.5180267,15,0.0550285507935923,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,是
+71,第一轮优先,跨大领域老药新用,Ribociclib Succinate,肿瘤,Oncology,KCND3,心律失常,cardiac arrhythmia,心血管,69.13743773965768,0.25811535,58,0.5522394699107118,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+72,第一轮优先,跨领域但同靶点家族扩展,Infigratinib Phosphate,肿瘤,Oncology,FLT1,慢性肾病,chronic kidney disease,肾脏,68.85234446805461,0.57920015,8,0.0378819763579827,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,是
+73,第一轮优先,跨领域但同靶点家族扩展,Infigratinib Phosphate,肿瘤,Oncology,PDGFRB,慢性肾病,chronic kidney disease,肾脏,68.73320638540244,0.6456682,5,0.032586950462331,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,是
+74,第一轮优先,同领域同靶点家族扩展,Pazopanib Hydrochloride,肿瘤,Oncology,PDGFRB,乳腺癌,breast cancer,实体瘤,68.63089713024608,0.9373275,1,0.4280398724553814,酶/表观遗传生化,medium,上市后文献有新靶点线索,9,8,是,是
+75,第一轮优先,跨大领域老药新用,Mifepristone,内分泌/代谢,Endocrinology/Metabolic,TRPV3,银屑病,psoriasis,皮肤/免疫,68.43822266930911,0.47951007,27,0.0619741956729978,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+76,第一轮优先,同领域同靶点家族扩展,Bosutinib Monohydrate,肿瘤,Oncology,ITK,前列腺癌,prostate cancer,实体瘤,68.4008831309955,0.5597129,19,0.106705916933133,激酶生化/细胞,中,PubMed pair审计未见明确报道,0,0,是,是
+77,第一轮优先,同领域同靶点家族扩展,Bosutinib Monohydrate,肿瘤,Oncology,EPHA2,乳腺癌,breast cancer,实体瘤,68.31318155239705,0.8254985,5,0.1472525134398691,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,是,是
+78,第一轮优先,跨大领域老药新用,Ulipristal Acetate,内分泌/代谢,Endocrinology/Metabolic,KCNA5,心律失常,cardiac arrhythmia,心血管,67.59473717937458,0.25003633,64,0.5004314864907219,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+79,第一轮优先,同领域同靶点家族扩展,Trifarotene,肿瘤,Oncology,ESR2,乳腺癌,breast carcinoma,实体瘤,67.4215235219576,0.48625293,2,0.4916912646795965,核受体/转录因子 reporter,中高,PubMed pair审计未见明确报道,0,0,是,是
+80,第一轮优先,跨大领域老药新用,Givinostat Hydrochloride,肿瘤,Oncology,PDGFRB,慢性肾病,chronic kidney disease,肾脏,66.46764171873579,0.3657379,6,0.032586950462331,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+81,第一轮优先,跨领域但同靶点家族扩展,Palbociclib,肿瘤,Oncology,ATP2A2,银屑病,psoriasis,皮肤/免疫,66.19889733474713,0.4590822,50,0.0048175408035761,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,是
+82,第一轮优先,跨大领域老药新用,Mifepristone,内分泌/代谢,Endocrinology/Metabolic,EZH2,乳腺癌,breast cancer,实体瘤,65.50540963375575,0.40453273,63,0.1760243955743292,酶/表观遗传生化,中,上市后文献有新靶点线索,1,1,否,否
+83,第一轮优先,跨大领域老药新用,Ribociclib Succinate,肿瘤,Oncology,KCNK3,肺动脉高压,pulmonary arterial hypertension,心血管,65.35698805163236,0.20197044,90,0.5006681859984753,离子通道功能,medium,PubMed pair审计未见明确报道,0,0,否,否
+84,第一轮优先,同领域新靶点/新病种探索,Cyclobenzaprine Hydrochloride,神经/精神,Neurology/Psychiatry,SV2A,脊髓损伤,spinal cord injury,免疫/炎症,64.5660198807393,0.3581714,27,0.2748750169217469,转运体摄取/外排,低,PubMed pair审计未见明确报道,0,0,是,否
+85,第一轮优先,跨大领域老药新用,Dasabuvir Sodium,感染性疾病,Infectious Disease,IGF1R,肝细胞癌,hepatocellular carcinoma,实体瘤,64.07840827213725,0.23142639,5,0.2049708180209151,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,否,否
+86,第一轮候补,跨大领域老药新用,Etonogestrel,感染性疾病,Infectious Disease,BRAF,黑色素瘤,melanoma,实体瘤,75.85153466666667,0.4968186,29,0.819548256089721,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,否,否
+87,第一轮候补,同领域新靶点/新病种探索,Palbociclib,肿瘤,Oncology,DNMT3A,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,70.07855926666667,0.45882627,51,0.8577261614555013,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,是,否
+88,第一轮候补,跨大领域老药新用,Doravirine,未知,,AR,前列腺癌,prostate cancer,实体瘤,70.0,0.52607393,8,0.8026045909519542,核受体/转录因子 reporter,medium,PubMed pair审计未见明确报道,0,0,否,否
+89,第一轮候补,同领域新靶点/新病种探索,Larotrectinib Sulfate,肿瘤,Oncology,DNMT3A,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,69.92731866666666,0.4555854,58,0.8577261614555013,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,是,否
+90,第一轮候补,跨大领域老药新用,Givinostat Hydrochloride,肿瘤,Oncology,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,69.52306373333333,0.38263708,2,0.8245011238749937,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+91,第一轮候补,跨大领域老药新用,Doravirine And Islatravir,感染性疾病,Infectious Disease,DNMT3A,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,69.20060173333333,0.37572718,38,0.8577261614555013,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+92,第一轮候补,跨大领域老药新用,Rilpivirine Hydrochloride,感染性疾病,Infectious Disease,TYK2,银屑病,psoriasis,皮肤/免疫,69.03082880984074,0.3881348,18,0.7222757693262555,激酶生化/细胞,medium,PubMed pair审计未见明确报道,0,0,否,否
+93,第一轮候补,跨大领域老药新用,Lubiprostone,胃肠/消化,Gastroenterology,PTPN11,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,68.7411784714397,0.44137505,37,0.6434226431750978,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,否,否
+94,第一轮候补,跨领域但同靶点家族扩展,Fedratinib Hydrochloride,免疫/炎症,Immunology/Inflammation,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,68.70682053333333,0.45086044,3,0.8245011238749937,酶/表观遗传生化,中,PubMed pair审计未见明确报道,0,0,否,是
+95,第一轮候补,同领域新靶点/新病种探索,Bicalutamide,肿瘤,Oncology,PTPN11,急性髓系白血病,acute myeloid leukemia,血液肿瘤/血液病,68.4770094714397,0.5830379,5,0.6434226431750978,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,是,否
+96,第一轮候补,同领域同靶点家族扩展,Dacomitinib,肿瘤,Oncology,PDGFRA,胃肠道间质瘤,gastrointestinal stromal tumor,实体瘤,68.0,0.5190028,5,0.8245011238749937,酶/表观遗传生化,medium,PubMed pair审计未见明确报道,0,0,是,是
