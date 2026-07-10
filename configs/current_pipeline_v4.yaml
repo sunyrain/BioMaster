@@ -1,0 +1,95 @@
+version: 4
+name: chembl_moa_full_universe_physics_first
+
+inputs:
+  all_direct_pairs: outputs/recovered_recall_sources/direct_action_target_engagement_pairs.csv
+  discovery_pairs: outputs/recovered_recall_sources/direct_action_discovery_pairs.csv
+  known_controls: outputs/recovered_recall_sources/direct_action_known_target_controls.csv
+  anchor_table: outputs/chembl_moa_enhanced_information_package_v1/chembl_moa_anchor_gene_table_v2.csv
+  enhanced_discovery_pool: outputs/chembl_moa_enhanced_information_package_v1/candidate_pool_106k_enhanced_scored.csv
+  full_conplex_predictions: outputs/full_conplex_active_moiety_v4/conplex_predictions_druggable_unique_sequences.tsv
+  protein_sequence_representatives: outputs/full_conplex_active_moiety_v4/protein_sequence_representatives.csv
+  chembl37_mechanisms: outputs/target_catalog_quality_audit_v1/chembl37_mechanisms_with_human_target_map.csv
+  drug_library: data/processed/drug_library_active_moiety_v4.csv
+  target_scope_extension: configs/target_scope_extension_v4.csv
+  project_drug_manifest: configs/project_drugs_v4.csv
+  project_target_manifest: configs/project_targets_v4.csv
+  project_target_integrity_manifest: configs/project_targets_v4_integrity.csv
+  hot_target_annotation: configs/aacr_asco_2026_hot_targets.csv
+  refined_top3000: outputs/chembl_moa_enhanced_information_package_v1/boltz_refined_3000_final_package/boltz_refined_3000_merged_enriched.csv
+  current_final1000: outputs/chembl_moa_enhanced_information_package_v1/boltz_refined_3000_final_package/refined_final_1000_candidates.csv
+  current_final384: outputs/chembl_moa_enhanced_information_package_v1/final384_wetlab_plate_package_v1/final384_balanced_candidate_pairs_full.csv
+
+outputs:
+  directory: outputs/current_production_package_v2
+
+scope:
+  disable_boltz_reuse: true
+  project_drug_manifest_sha256: 6cadd584283c4377fa1c311b94c63f58442436ee7523236e0c2c40ae914f4f61
+  project_target_manifest_sha256: 842b17458cd36ca4b4aea5ec40d68da5af8dd853ce040c0a3861691b3fc54d2e
+  project_target_integrity_manifest_sha256: 223d1091c7a0bceb01efd2bc570a74d071950f64d3e8e36725a624290896f109
+  protein_sequence_representatives_sha256: 98c6623c845a9cb73d59fda40e179fc630ac99a2d3e05187506c3f779de22827
+  extra_direct_action_drug_ids:
+    - CHEMBL4802249  # Lenacapavir Sodium
+    - CHEMBL3304485  # Tenapanor Hydrochloride
+    - CHEMBL2364617  # Macimorelin Acetate
+    - CHEMBL1908360  # Everolimus
+    - CHEMBL1201182  # Temsirolimus
+
+selection:
+  review_pool:
+    size: 512
+    drug_cap: 5
+    target_cap: 10
+    scaffold_cap: 12
+    family_caps:
+      enzyme: 310
+      kinase: 140
+      transporter: 160
+      nuclear_epigenetic: 110
+      other_assayable: 30
+  final1000:
+    size: 1000
+    drug_cap: 6
+    target_cap: 14
+    scaffold_cap: 20
+    family_caps:
+      enzyme: 550
+      kinase: 260
+      transporter: 260
+      nuclear_epigenetic: 190
+      ion_channel: 90
+      other_assayable: 50
+  final384:
+    size: 384
+    drug_cap: 4
+    target_cap: 8
+    scaffold_cap: 10
+    family_caps:
+      enzyme: 230
+      kinase: 100
+      transporter: 120
+      nuclear_epigenetic: 80
+      other_assayable: 20
+  post_review:
+    validated_control_cap: 96
+
+contracts:
+  full_conplex_rows: 815265
+  project_cartesian_rows: 347250
+  project_physical_pair_rows: 334749
+  refined_top3000_rows: 3000
+  final1000_rows: 1000
+  final384_rows: 384
+  review_pool_rows: 512
+
+boltz_contract:
+  model: boltz2
+  recycling_steps: 3
+  sampling_steps: 50
+  diffusion_samples: 2
+  sampling_steps_affinity: 50
+  diffusion_samples_affinity: 2
+  no_kernels: true
+  seed_base: 20260710
+  seed_scheme: batch_index_offset

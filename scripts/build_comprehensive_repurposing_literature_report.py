@@ -14,6 +14,7 @@ does not prove direct binding or therapeutic efficacy.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -38,7 +39,7 @@ DEFAULT_OUT_DIR = ROOT / "outputs/comprehensive_repurposing_literature"
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 DEFAULT_START_DATE = "2000/01/01"
-DEFAULT_END_DATE = "2026/06/24"
+DEFAULT_END_DATE = datetime.now(timezone.utc).strftime("%Y/%m/%d")
 
 DRUG_SALT_WORDS = (
     "hydrochloride|hydrochrloride|phosphate|bromide|succinate|mesylate|maleate|"
@@ -174,7 +175,11 @@ def unique_terms(terms: list[str], max_terms: int) -> list[str]:
 
 
 def terms_for_drug(drug: str) -> list[str]:
-    return unique_terms([drug, base_drug_name(drug)], 2)
+    names = [part.strip() for part in re.split(r"[;|]+", clean(drug)) if part.strip()]
+    terms: list[str] = []
+    for name in names or [clean(drug)]:
+        terms.extend([name, base_drug_name(name)])
+    return unique_terms(terms, 8)
 
 
 def terms_for_target(gene: str, protein_name: str = "") -> list[str]:
@@ -458,6 +463,7 @@ def run_pair_literature_audit(
     cache: dict[str, Any] = {}
     if cache_path.exists() and not refresh:
         cache = json.loads(cache_path.read_text(encoding="utf-8"))
+    cache["__meta__"] = {"schema": "pubmed_pair_query_v2"}
 
     work = pairs.copy()
     work = work.sort_values(
@@ -467,10 +473,9 @@ def run_pair_literature_audit(
     if max_pairs is not None:
         work = work.head(max_pairs).copy()
 
-    def query_item(item: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+    def query_spec(item: dict[str, Any]) -> tuple[str, str, str, str]:
         drug_id = clean(item.get("drug_chembl_id"))
         gene = clean(item.get("candidate_anchor_gene"))
-        cache_key = f"{drug_id}__{gene}"
         approval_year = item.get("first_approval_year")
         try:
             approval_year_int = int(approval_year) if not pd.isna(approval_year) else 2000
@@ -478,8 +483,6 @@ def run_pair_literature_audit(
             approval_year_int = 2000
         post_start = f"{max(2000, approval_year_int):04d}/01/01"
 
-        session = requests.Session()
-        session.headers.update({"User-Agent": "BioMaster-comprehensive-repurposing-literature/1.0"})
         pair_query = build_pair_query(
             clean(item.get("generic_name")),
             gene,
@@ -494,9 +497,30 @@ def run_pair_literature_audit(
             start_date=post_start,
             end_date=end_date,
         )
+        query_signature = hashlib.sha256(
+            json.dumps(
+                {
+                    "schema": "pubmed_pair_query_v2",
+                    "pair_query": pair_query,
+                    "post_query": post_query,
+                    "start_date": start_date,
+                    "end_date": end_date,
+                },
+                sort_keys=True,
+                separators=(",", ":"),
+            ).encode("utf-8")
+        ).hexdigest()
+        return f"{drug_id}__{gene}__{query_signature}", pair_query, post_query, post_start
+
+    def query_item(item: dict[str, Any]) -> tuple[str, dict[str, Any]]:
+        cache_key, pair_query, post_query, post_start = query_spec(item)
+        session = requests.Session()
+        session.headers.update({"User-Agent": "BioMaster-comprehensive-repurposing-literature/2.0"})
         pair = eutils_esearch(session, pair_query, delay_s=delay_s, retmax=3)
         post = eutils_esearch(session, post_query, delay_s=delay_s, retmax=3)
         return cache_key, {
+            "query_schema": "pubmed_pair_query_v2",
+            "query_sha256": cache_key.rsplit("__", 1)[-1],
             "pair_query": pair_query,
             "post_approval_query": post_query,
             "post_approval_start_date": post_start,
@@ -512,7 +536,13 @@ def run_pair_literature_audit(
             {
                 "literature_window": f"{start_date}..{end_date}",
                 "post_approval_window_start": result.get("post_approval_start_date", ""),
+                "pubmed_query_schema": result.get("query_schema", ""),
+                "pubmed_query_sha256": result.get("query_sha256", ""),
                 "lit_ok": bool(result.get("pair", {}).get("ok")) and bool(result.get("post_approval", {}).get("ok")),
+                "pair_pubmed_query_error": clean(result.get("pair", {}).get("error")),
+                "post_approval_pubmed_query_error": clean(
+                    result.get("post_approval", {}).get("error")
+                ),
                 "pair_pubmed_count_2000_2026": pair_count,
                 "pair_pubmed_pmids_2000_2026": ";".join(result.get("pair", {}).get("pmids", [])),
                 "pair_pubmed_url_2000_2026": result.get("pair", {}).get("url", ""),
@@ -530,12 +560,11 @@ def run_pair_literature_audit(
     items = work.to_dict(orient="records")
     rows: list[dict[str, Any]] = []
     pending: list[dict[str, Any]] = []
-    item_by_key: dict[str, dict[str, Any]] = {}
-
     for item in items:
-        cache_key = f"{clean(item.get('drug_chembl_id'))}__{clean(item.get('candidate_anchor_gene'))}"
-        item_by_key[cache_key] = item
-        if cache_key in cache:
+        cache_key, _, _, _ = query_spec(item)
+        cached = cache.get(cache_key)
+        cache_ok = bool(cached and cached.get("pair", {}).get("ok") and cached.get("post_approval", {}).get("ok"))
+        if cache_ok:
             rows.append(row_from_result(item, cache[cache_key]))
         else:
             pending.append(item)

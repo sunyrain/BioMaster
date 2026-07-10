@@ -54,12 +54,17 @@ PAIR_FIELDS = ["protein_id", "drug_id", "protein_sequence", "ligand_smiles"]
 AA_RE = re.compile(r"^[A-Z*]+$")
 
 
-def read_drugs(path: Path) -> list[dict[str, str]]:
+def read_drugs(path: Path, smiles_column: str | None = None) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
     usable = []
     for row in rows:
-        smiles = row.get("canonical_smiles") or row.get("isomeric_smiles") or row.get("smiles")
+        smiles = (
+            (row.get(smiles_column) if smiles_column else "")
+            or row.get("canonical_smiles")
+            or row.get("isomeric_smiles")
+            or row.get("smiles")
+        )
         if row.get("drug_id") and smiles:
             row["_screening_smiles"] = smiles
             usable.append(row)
@@ -225,6 +230,7 @@ def main() -> int:
     parser.add_argument("--workbook", default="druggable_proteome_chembl(1).xlsx")
     parser.add_argument("--sheet", default="ChEMBL_Targets")
     parser.add_argument("--drugs", default="data/processed/drug_library_pubchem_chembl_mapped.csv")
+    parser.add_argument("--smiles-column", default=None)
     parser.add_argument("--out-dir", default="outputs/druggable_proteome")
     parser.add_argument("--model-path", default="third_party/ConPLex/models/BindingDB_ExperimentalValidModel.pt")
     parser.add_argument("--device", default="0")
@@ -235,7 +241,7 @@ def main() -> int:
     drugs_path = Path(args.drugs)
     out_dir = Path(args.out_dir)
     proteins = []
-    drugs = read_drugs(drugs_path)
+    drugs = read_drugs(drugs_path, args.smiles_column)
     proteins, invalid_rows = read_proteins(workbook, args.sheet)
     sequence_rows = build_sequence_rows(proteins)
 
@@ -244,6 +250,7 @@ def main() -> int:
     pairs_tsv = out_dir / "conplex_pairs_druggable_unique_sequences.tsv"
     predictions_tsv = out_dir / "conplex_predictions_druggable_unique_sequences.tsv"
     cache_dir = out_dir / "conplex_cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
     run_script = out_dir / "run_conplex_druggable_unique_sequences.sh"
     metadata_json = out_dir / "druggable_proteome_conplex_prep.metadata.json"
 
@@ -266,6 +273,7 @@ def main() -> int:
         "workbook": str(workbook),
         "sheet": args.sheet,
         "drugs": str(drugs_path),
+        "smiles_column": args.smiles_column or "canonical_smiles fallback chain",
         "out_dir": str(out_dir),
         "protein_rows_input_valid": len(proteins),
         "protein_rows_invalid_or_skipped": len(invalid_rows),

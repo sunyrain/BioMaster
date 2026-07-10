@@ -4,9 +4,24 @@ version = "0.1.0"
 description = "Drug-repositioning screening workflow for FDA-approved molecules, human targets, disease evidence, and docking follow-up."
 requires-python = ">=3.10"
 dependencies = [
+    "pandas>=2.0",
     "requests>=2.31",
     "openpyxl>=3.1",
     "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+production = [
+    "biopython>=1.85",
+    "numpy>=1.24",
+    "reportlab>=4.0",
+    "rdkit>=2023.9",
+    "weasyprint>=68.0",
+    "pymupdf>=1.24",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.9",
 ]
 
 [project.scripts]

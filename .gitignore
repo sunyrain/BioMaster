@@ -18,7 +18,9 @@ venv/
 env/
 .conda_envs/
 .conda_pkgs/
+.local_deps/
 .pip_cache/
+.tmp/
 *.log
 logs/
 oracle/
@@ -28,7 +30,10 @@ archives/
 data/
 downloads/
 third_party/
+external/
+tools/
 Rostlab/
+residues/
 
 # Local source datasets and graph dumps
 FDA_approved_small_molecules_2005_2026_with_structures.xls
@@ -94,6 +99,42 @@ outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/*
 
 # New exploratory scripts are ignored until explicitly promoted.
 scripts/*.py
+!scripts/build_current_production_package_v2.py
+!scripts/build_106k_reselection_v2.py
+!scripts/finalize_106k_reselection_v2.py
+!scripts/prepare_druggable_proteome_conplex.py
+!scripts/build_full_project_universe_v3.py
+!scripts/build_full_project_universe_v4.py
+!scripts/finalize_full_universe_v3.py
+!scripts/finalize_full_universe_v4.py
+!scripts/build_universe_scope_audit_v4.py
+!scripts/build_active_moiety_drug_library_v4.py
+!scripts/freeze_project_scope_v4.py
+!scripts/build_known_control_boltz_calibration_v4.py
+!scripts/annotate_sequence_homology_risk.py
+!scripts/annotate_compound_assay_liability.py
+!scripts/audit_boltz_pose_stability.py
+!scripts/audit_boltz_known_positive_calibration_v4.py
+!scripts/finalize_known_control_boltz96_v4.py
+!scripts/audit_final_candidates_chembl_activity.py
+!scripts/audit_final_candidates_pubmed.py
+!scripts/prepare_final384_agent_review_batches.py
+!scripts/merge_final384_agent_reviews.py
+!scripts/select_reviewed_final384_v4.py
+!scripts/build_final_v4_delivery_package.py
+!scripts/audit_final_delivery_v4.py
+!scripts/audit_project_target_sequence_integrity_v4.py
+!scripts/audit_active_collapsed_rank_sensitivity_v4.py
+!scripts/run_boltz2_batched_queue.py
+!scripts/rebuild_boltz_output_provenance_v4.py
+!scripts/build_106k_to_1000_physics_funnel.py
+!scripts/build_chembl_moa_enhanced_information_package.py
+!scripts/build_boltz2_complex_input_package.py
+!scripts/build_boltz2_complex_validation_audit.py
+!scripts/finalize_boltz_refined_3000_package.py
+!scripts/fetch_final1000_opentargets_full_diseases.py
+!scripts/build_final1000_official_teacher_table_zh.py
+!scripts/generate_teacher_workflow_pdf_zh_concise.py
 !scripts/audit_strict895_pubmed_literature.py
 !scripts/build_comprehensive_repurposing_literature_report.py
 !scripts/build_strict895_agent_review_package.py
@@ -102,6 +143,11 @@ scripts/*.py
 !scripts/build_strict895_final_wetlab_priority.py
 !scripts/fetch_strict895_opentargets_child_diseases.py
 !scripts/merge_strict895_agent_reviews.py
+
+# Formal v2 configuration and compact audit outputs are intentionally tracked.
+!configs/
+!configs/current_pipeline_v2.yaml
+!configs/current_pipeline_v4.yaml
 
 # Generated media and notebooks
 *.png
