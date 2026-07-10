@@ -8,6 +8,7 @@ import hashlib
 import html
 import json
 import re
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -905,8 +906,24 @@ def main() -> None:
         Path("scripts/build_final_v4_delivery_package.py"),
         Path("scripts/audit_final_delivery_v4.py"),
     ]
+    tracked_code_paths = [str(path) for path in code_paths if path.exists()]
+    dirty_formal = subprocess.run(
+        ["git", "diff", "--quiet", "HEAD", "--", *tracked_code_paths],
+        check=False,
+    ).returncode
+    if dirty_formal != 0:
+        raise RuntimeError("Formal delivery source files differ from the current Git commit")
+    git_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+    git_tags = subprocess.check_output(
+        ["git", "tag", "--points-at", "HEAD"], text=True
+    ).splitlines()
     manifest["code_files"] = {
         str(path): sha256(path) for path in code_paths if path.exists()
+    }
+    manifest["source_control"] = {
+        "git_commit": git_commit,
+        "git_tags_at_commit": sorted(git_tags),
+        "formal_source_files_clean_against_head": True,
     }
     (out_dir / "FINAL_DELIVERY_MANIFEST_V4.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
