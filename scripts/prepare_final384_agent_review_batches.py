@@ -220,6 +220,7 @@ def main() -> None:
                 "agent_disease_evidence": "",
                 "agent_mechanism_rationale": "",
                 "agent_exposure_feasibility": "",
+                "agent_active_species_status": "",
                 "agent_assay_plan": "",
                 "agent_key_risks": "",
                 "agent_database_query_resolution": "",
@@ -253,6 +254,7 @@ def main() -> None:
 - `agent_disease_evidence`: 区分靶点-疾病证据、药物-疾病证据和推断。
 - `agent_mechanism_rationale`: 明确作用方向未知，不能仅凭结合模型声称激动/抑制。
 - `agent_exposure_feasibility`: 评估已知人体暴露或可实现体外浓度，不知道时明确写未知。
+- `agent_active_species_status`: `parent_drug_relevant` / `salt_normalization_adequate` / `active_species_uncertain` / `prodrug_active_metabolite_requires_rerun`。若上市药主要以活性代谢物起效且母体暴露不足，必须写最后一类，不能沿用母体 Boltz 结果。
 - `agent_assay_plan`: 给出 primary assay、正对照、已知靶点反筛、细胞毒性/膜干扰门。
 - `agent_key_risks`: 至少写一个主要风险。
 - `agent_database_query_resolution`: `not_needed` / `resolved_manually` / `unresolved`。若 ChEMBL 或 PubMed 自动查询失败，只有给出可核实来源并人工补查后才可写 `resolved_manually`。

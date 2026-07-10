@@ -147,6 +147,7 @@ def main() -> None:
         "agent_disease_evidence",
         "agent_mechanism_rationale",
         "agent_exposure_feasibility",
+        "agent_active_species_status",
         "agent_assay_plan",
         "agent_key_risks",
         "agent_database_query_resolution",
@@ -159,6 +160,10 @@ def main() -> None:
     }
     if missing_agent:
         raise RuntimeError(f"Final384 agent fields are incomplete: {missing_agent}")
+    if final384["agent_active_species_status"].eq(
+        "prodrug_active_metabolite_requires_rerun"
+    ).any():
+        raise RuntimeError("Final384 contains a prodrug requiring active-metabolite rerun")
     maxima = assert_caps(final384, config)
     block_sizes = plate.groupby("nomination_block").size().to_dict()
     if block_sizes != {f"Block_{index}": 96 for index in range(1, 5)}:

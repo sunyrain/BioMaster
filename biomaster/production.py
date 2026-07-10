@@ -565,6 +565,7 @@ def select_reviewed_final384(
             "agent_literature_class",
             "agent_confidence",
             "agent_database_query_resolution",
+            "agent_active_species_status",
             "priority_score_v2",
         ],
         "reviewed pool",
@@ -574,9 +575,21 @@ def select_reviewed_final384(
     literature = data["agent_literature_class"].astype(str).str.strip()
     confidence = data["agent_confidence"].astype(str).str.strip()
     query_resolution = data["agent_database_query_resolution"].astype(str).str.strip()
+    active_species = data["agent_active_species_status"].astype(str).str.strip()
     invalid_grade = sorted(set(grade) - {"A", "B", "C", "D"})
     if invalid_grade:
         raise ValueError(f"Invalid agent grades in reviewed pool: {invalid_grade}")
+    invalid_active_species = sorted(
+        set(active_species)
+        - {
+            "parent_drug_relevant",
+            "salt_normalization_adequate",
+            "active_species_uncertain",
+            "prodrug_active_metabolite_requires_rerun",
+        }
+    )
+    if invalid_active_species:
+        raise ValueError(f"Invalid active-species status in reviewed pool: {invalid_active_species}")
 
     exact_chembl = data.get(
         "chembl_exact_activity_status", pd.Series("", index=data.index)
@@ -587,6 +600,7 @@ def select_reviewed_final384(
     pubmed_query_ok = bool_series(data, "lit_ok")
     automated_query_failed = ~chembl_query_ok | ~pubmed_query_ok
     unresolved_query = automated_query_failed & query_resolution.ne("resolved_manually")
+    active_species_rerun = active_species.eq("prodrug_active_metabolite_requires_rerun")
     data["review_candidate_class_v4"] = "novel_hypothesis"
     data.loc[exact_chembl | exact_literature, "review_candidate_class_v4"] = (
         "validated_control_or_rediscovery"
@@ -599,7 +613,12 @@ def select_reviewed_final384(
         .replace("agent_grade_D", "agent_grade_D;contradictory_evidence")
     )
     data.loc[unresolved_query, "review_exclusion_reason_v4"] = "unresolved_database_query_failure"
-    eligible = data[grade.ne("D") & ~contradictory & ~unresolved_query].copy()
+    data.loc[active_species_rerun, "review_exclusion_reason_v4"] = (
+        "prodrug_active_metabolite_requires_rerun"
+    )
+    eligible = data[
+        grade.ne("D") & ~contradictory & ~unresolved_query & ~active_species_rerun
+    ].copy()
     grade_bonus = grade.map({"A": 4.0, "B": 2.0, "C": 0.0, "D": -100.0})
     confidence_bonus = confidence.map({"high": 1.0, "medium": 0.5, "low": 0.0}).fillna(0.0)
     eligible["review_selection_score_v4"] = (

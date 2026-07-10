@@ -148,6 +148,7 @@ def chinese_table(df: pd.DataFrame) -> pd.DataFrame:
         "agent_disease_evidence": "疾病证据说明",
         "agent_mechanism_rationale": "机制解释",
         "agent_exposure_feasibility": "暴露可行性",
+        "agent_active_species_status": "活性物种状态",
         "agent_assay_plan": "建议实验",
         "agent_key_risks": "主要风险",
         "agent_database_query_resolution": "数据库失败补查状态",
@@ -556,6 +557,7 @@ def build_detailed_cards_pdf(output: Path, final384: pd.DataFrame) -> None:
                     <dt>疾病证据</dt><dd>{esc(row.get('agent_disease_evidence'))}</dd>
                     <dt>机制假说</dt><dd>{esc(row.get('agent_mechanism_rationale'))}</dd>
                     <dt>暴露可行性</dt><dd>{esc(row.get('agent_exposure_feasibility'))}</dd>
+                    <dt>活性物种</dt><dd>{esc(row.get('agent_active_species_status'))}</dd>
                     <dt>建议实验</dt><dd>{esc(row.get('agent_assay_plan'))}</dd>
                     <dt>主要风险</dt><dd>{esc(row.get('agent_key_risks'))}</dd>
                     <dt>来源</dt><dd class="sources">{sources}</dd>

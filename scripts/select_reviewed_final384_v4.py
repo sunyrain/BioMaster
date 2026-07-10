@@ -145,6 +145,12 @@ def main() -> None:
         | ~bool_series(audit, "lit_ok")
     ) & audit["agent_database_query_resolution"].astype(str).ne("resolved_manually")
     audit.loc[query_failed, "post_review_disposition_v4"] = "excluded_unresolved_database_query"
+    active_species_rerun = audit["agent_active_species_status"].astype(str).eq(
+        "prodrug_active_metabolite_requires_rerun"
+    )
+    audit.loc[active_species_rerun, "post_review_disposition_v4"] = (
+        "excluded_active_metabolite_rerun_required"
+    )
     audit.loc[audit["selected_final384_v4"], "post_review_disposition_v4"] = "selected_final384"
     audit = audit.sort_values(
         ["selected_final384_v4", "review_pool_rank"],
@@ -174,6 +180,7 @@ def main() -> None:
             merged["agent_literature_class"].astype(str).eq("contradictory").sum()
         ),
         "excluded_unresolved_database_query_rows": int(query_failed.sum()),
+        "excluded_active_metabolite_rerun_rows": int(active_species_rerun.sum()),
         "source_sha256": {
             "config": file_sha256(config_path),
             "review_pool": file_sha256(pool_path),

@@ -163,7 +163,7 @@ python scripts/select_reviewed_final384_v4.py \
   --output "$FORMAL/final384_reviewed_selected_v4_complete.csv"
 ```
 
-合同：512/512 覆盖；pair_id 无重复；所有结论、文献类别、疾病、暴露、机制、实验、风险、数据库失败补查状态、置信度和来源非空。D、contradictory 或未解决数据库查询失败条目不得进入最终 384；回填不能放宽药物/靶点/骨架/family 硬上限。
+合同：512/512 覆盖；pair_id 无重复；所有结论、文献类别、疾病、暴露、活性物种、机制、实验、风险、数据库失败补查状态、置信度和来源非空。D、contradictory、未解决数据库查询失败或需要活性代谢物重跑的条目不得进入最终 384；回填不能放宽药物/靶点/骨架/family 硬上限。
 
 ## 10. 最终交付
 

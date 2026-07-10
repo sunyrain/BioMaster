@@ -21,6 +21,7 @@ REVIEW_COLUMNS = [
     "agent_disease_evidence",
     "agent_mechanism_rationale",
     "agent_exposure_feasibility",
+    "agent_active_species_status",
     "agent_assay_plan",
     "agent_key_risks",
     "agent_database_query_resolution",
@@ -92,6 +93,17 @@ def main() -> None:
     )
     if invalid_repurposing:
         raise ValueError(f"Invalid repurposing status values: {invalid_repurposing}")
+    invalid_active_species = sorted(
+        set(review["agent_active_species_status"])
+        - {
+            "parent_drug_relevant",
+            "salt_normalization_adequate",
+            "active_species_uncertain",
+            "prodrug_active_metabolite_requires_rerun",
+        }
+    )
+    if invalid_active_species:
+        raise ValueError(f"Invalid active-species status values: {invalid_active_species}")
     allowed_literature = {
         "exact_pair_validated",
         "functional_only",
