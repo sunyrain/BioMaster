@@ -29,6 +29,13 @@ def esc(value: Any) -> str:
     return html.escape(clean(value))
 
 
+def clipped_esc(value: Any, max_chars: int) -> str:
+    text = clean(value)
+    if len(text) > max_chars:
+        text = text[: max_chars - 1].rstrip() + "…"
+    return html.escape(text)
+
+
 def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -544,23 +551,23 @@ def build_detailed_cards_pdf(output: Path, final384: pd.DataFrame) -> None:
     for start in range(0, len(ordered), 4):
         cards = []
         for _, row in ordered.iloc[start : start + 4].iterrows():
-            sources = esc(row.get("agent_sources"))
+            sources = clipped_esc(row.get("agent_sources"), 180)
             cards.append(
                 f"""
                 <article class="card">
                   <header><b>#{int(row['review_adjusted_rank'])} {esc(row.get('drug_names'))} → {esc(row.get('primary_gene'))}</b><span>{esc(row.get('review_queue'))} · {esc(row.get('agent_feasibility_grade'))}</span></header>
-                  <div class="meta"><b>原适应症</b> {esc(row.get('fda_indication')) or '未记录'}<br><b>原 FDA 靶点</b> {esc(row.get('fda_target_names')) or '未记录'}<br><b>候选蛋白</b> {esc(row.get('protein_names'))}<br><b>物理分</b> {esc(round(float(row.get('priority_score_v2') or 0), 2))}；ConPLEx {esc(round(float(row.get('conplex_score') or 0), 4))}；Boltz affinity {esc(round(float(row.get('boltz_affinity_probability_refined') or 0), 4))}<br><b>口袋/姿势</b> {esc(row.get('structure_bin'))}；{esc(row.get('pose_stability_tier'))}</div>
+                  <div class="meta"><b>原适应症</b> {clipped_esc(row.get('fda_indication'), 100) or '未记录'}<br><b>原 FDA 靶点</b> {clipped_esc(row.get('fda_target_names'), 80) or '未记录'}<br><b>候选蛋白</b> {clipped_esc(row.get('protein_names'), 70)}<br><b>物理分</b> {esc(round(float(row.get('priority_score_v2') or 0), 2))}；ConPLEx {esc(round(float(row.get('conplex_score') or 0), 4))}；Boltz affinity {esc(round(float(row.get('boltz_affinity_probability_refined') or 0), 4))}<br><b>口袋/姿势</b> {esc(row.get('structure_bin'))}；{esc(row.get('pose_stability_tier'))}</div>
                   <dl>
-                    <dt>逐条结论</dt><dd>{esc(row.get('agent_verdict'))}</dd>
+                    <dt>逐条结论</dt><dd>{clipped_esc(row.get('agent_verdict'), 180)}</dd>
                     <dt>文献核实</dt><dd>{esc(row.get('agent_literature_class'))}；ChEMBL：{esc(row.get('chembl_exact_activity_status')) or '无记录'}</dd>
-                    <dt>优先病种</dt><dd>{esc(row.get('agent_primary_disease'))}</dd>
+                    <dt>优先病种</dt><dd>{clipped_esc(row.get('agent_primary_disease'), 70)}</dd>
                     <dt>老药新用类别</dt><dd>{esc(row.get('agent_repurposing_status'))}</dd>
-                    <dt>疾病证据</dt><dd>{esc(row.get('agent_disease_evidence'))}</dd>
-                    <dt>机制假说</dt><dd>{esc(row.get('agent_mechanism_rationale'))}</dd>
-                    <dt>暴露可行性</dt><dd>{esc(row.get('agent_exposure_feasibility'))}</dd>
+                    <dt>疾病证据</dt><dd>{clipped_esc(row.get('agent_disease_evidence'), 180)}</dd>
+                    <dt>机制假说</dt><dd>{clipped_esc(row.get('agent_mechanism_rationale'), 180)}</dd>
+                    <dt>暴露可行性</dt><dd>{clipped_esc(row.get('agent_exposure_feasibility'), 150)}</dd>
                     <dt>活性物种</dt><dd>{esc(row.get('agent_active_species_status'))}</dd>
-                    <dt>建议实验</dt><dd>{esc(row.get('agent_assay_plan'))}</dd>
-                    <dt>主要风险</dt><dd>{esc(row.get('agent_key_risks'))}</dd>
+                    <dt>建议实验</dt><dd>{clipped_esc(row.get('agent_assay_plan'), 180)}</dd>
+                    <dt>主要风险</dt><dd>{clipped_esc(row.get('agent_key_risks'), 130)}</dd>
                     <dt>来源</dt><dd class="sources">{sources}</dd>
                   </dl>
                 </article>
@@ -572,17 +579,17 @@ def build_detailed_cards_pdf(output: Path, final384: pd.DataFrame) -> None:
     @font-face { font-family: NotoCJK; src: url(file:///usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc); font-weight: 700; }
     @page { size: A4 landscape; margin: 8mm; @bottom-center { content: counter(page); font: 7pt NotoCJK; color: #667; } }
     * { box-sizing: border-box; }
-    body { margin: 0; color: #1c2730; font: 7.2pt/1.35 NotoCJK, sans-serif; }
-    .page { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4mm; height: 194mm; page-break-after: always; }
+    body { margin: 0; color: #1c2730; font: 5.2pt/1.16 NotoCJK, sans-serif; }
+    .page { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 92mm 92mm; gap: 2mm; height: 186mm; page-break-after: always; overflow: hidden; }
     .page:last-child { page-break-after: auto; }
-    .card { border: .6px solid #aebdc0; padding: 3mm; overflow: hidden; }
-    header { display: flex; justify-content: space-between; gap: 3mm; border-bottom: 2px solid #2a827a; padding-bottom: 1.5mm; margin-bottom: 1.5mm; color: #153945; }
-    header b { font-size: 9pt; } header span { font-size: 6.5pt; text-align: right; }
-    .meta { background: #f3f7f6; padding: 1.5mm; margin-bottom: 1.5mm; }
-    dl { display: grid; grid-template-columns: 16mm 1fr; margin: 0; }
-    dt { font-weight: 700; color: #1f5e65; padding: .7mm 1mm .7mm 0; border-bottom: .3px solid #dce3e4; }
-    dd { margin: 0; padding: .7mm 0; border-bottom: .3px solid #dce3e4; overflow-wrap: anywhere; }
-    .sources { font-size: 6.2pt; }
+    .card { border: .5px solid #aebdc0; padding: 1.5mm; height: 92mm; overflow: hidden; break-inside: avoid; }
+    header { display: flex; justify-content: space-between; gap: 2mm; border-bottom: 1.2px solid #2a827a; padding-bottom: .6mm; margin-bottom: .6mm; color: #153945; }
+    header b { font-size: 7pt; } header span { font-size: 5pt; text-align: right; }
+    .meta { background: #f3f7f6; padding: .7mm; margin-bottom: .6mm; }
+    dl { display: grid; grid-template-columns: 13mm 1fr; margin: 0; }
+    dt { font-weight: 700; color: #1f5e65; padding: .25mm .6mm .25mm 0; border-bottom: .2px solid #dce3e4; }
+    dd { margin: 0; padding: .25mm 0; border-bottom: .2px solid #dce3e4; overflow-wrap: anywhere; }
+    .sources { font-size: 4.5pt; }
     """
     document = "<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><style>" + css + "</style></head><body>" + "".join(pages) + "</body></html>"
     output.parent.mkdir(parents=True, exist_ok=True)
