@@ -170,13 +170,23 @@ python scripts/merge_final384_agent_reviews.py \
   --reviews-dir "$FORMAL/agent_review" \
   --output "$FORMAL/agent_review_pool_reviewed.csv"
 
+python scripts/prepare_agent_grade_recalibration_v4.py \
+  --reviewed "$FORMAL/agent_review_pool_reviewed.csv" \
+  --out-dir "$FORMAL/agent_grade_recalibration" --batches 10
+
+# 完成统一量表二次裁决后：
+python scripts/merge_agent_grade_recalibration_v4.py \
+  --reviewed "$FORMAL/agent_review_pool_reviewed.csv" \
+  --recal-dir "$FORMAL/agent_grade_recalibration" \
+  --output "$FORMAL/agent_review_pool_reviewed_calibrated.csv"
+
 python scripts/select_reviewed_final384_v4.py \
   --review-pool "$FORMAL/agent_review_pool_v4_complete.csv" \
-  --reviewed "$FORMAL/agent_review_pool_reviewed.csv" \
+  --reviewed "$FORMAL/agent_review_pool_reviewed_calibrated.csv" \
   --output "$FORMAL/final384_reviewed_selected_v4_complete.csv"
 ```
 
-合同：512/512 覆盖；pair_id 无重复；所有结论、文献类别、疾病、暴露、活性物种、机制、实验、风险、数据库失败补查状态、置信度和来源非空。D、contradictory、未解决数据库查询失败或需要活性代谢物重跑的条目不得进入最终 384；回填不能放宽药物/靶点/骨架/family 硬上限。
+合同：512/512 覆盖；pair_id 无重复；所有结论、文献类别、疾病、暴露、活性物种、机制、实验、风险、数据库失败补查状态、置信度和来源非空。原始批次 grade 保留；所有原始 D 采用统一量表二次裁决，`无精确文献`不能单独作为 D。校准后 D、contradictory、未解决数据库查询失败或需要活性代谢物重跑的条目不得进入最终 384。最终多样性上限为每药 5、每靶点 8、每骨架 10、enzyme 245；这是审阅后一次性冻结的显式上限，不在选择失败后继续放宽。
 
 ## 10. 最终交付
 

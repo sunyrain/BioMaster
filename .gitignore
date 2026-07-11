@@ -118,6 +118,8 @@ scripts/*.py
 !scripts/audit_final_candidates_pubmed.py
 !scripts/prepare_final384_agent_review_batches.py
 !scripts/merge_final384_agent_reviews.py
+!scripts/prepare_agent_grade_recalibration_v4.py
+!scripts/merge_agent_grade_recalibration_v4.py
 !scripts/select_reviewed_final384_v4.py
 !scripts/build_final_v4_delivery_package.py
 !scripts/audit_final_delivery_v4.py

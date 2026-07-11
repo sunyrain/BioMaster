@@ -903,6 +903,8 @@ def main() -> None:
         Path("scripts/build_comprehensive_repurposing_literature_report.py"),
         Path("scripts/prepare_final384_agent_review_batches.py"),
         Path("scripts/merge_final384_agent_reviews.py"),
+        Path("scripts/prepare_agent_grade_recalibration_v4.py"),
+        Path("scripts/merge_agent_grade_recalibration_v4.py"),
         Path("scripts/select_reviewed_final384_v4.py"),
         Path("scripts/build_final_v4_delivery_package.py"),
         Path("scripts/audit_final_delivery_v4.py"),

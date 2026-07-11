@@ -62,17 +62,18 @@ selection:
       other_assayable: 50
   final384:
     size: 384
-    drug_cap: 4
+    drug_cap: 5
     target_cap: 8
     scaffold_cap: 10
     family_caps:
-      enzyme: 230
+      enzyme: 245
       kinase: 100
       transporter: 120
       nuclear_epigenetic: 80
       other_assayable: 20
   post_review:
     validated_control_cap: 96
+    grade_recalibration_required: true
 
 contracts:
   full_conplex_rows: 815265
