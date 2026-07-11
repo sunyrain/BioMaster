@@ -58,6 +58,19 @@ python scripts/run_boltz2_batched_queue.py \
 
 合同：600 个 batch 全部 `success`；provenance 3,000/3,000；confidence 与 affinity 文件逐项齐全；运行参数、seed、checkpoint 和输入签名一致。
 
+若批运行因显存峰值留下缺失条目，先按原批次 seed 单条恢复。该步骤不降低模型参数，也不把计算失败解释为阴性：
+
+```bash
+python scripts/recover_boltz2_missing_rows_v4.py \
+  --manifest outputs/current_production_package_v2/full_untruncated_universe_v4/boltz_full_input_package_v4_signed/boltz2_input_manifest.csv \
+  --run-dir outputs/current_production_package_v2/full_untruncated_universe_v4/boltz_full_run_v4_seeded \
+  --gpus 0,1 --recycling-steps 3 --sampling-steps 50 --diffusion-samples 2 \
+  --sampling-steps-affinity 50 --diffusion-samples-affinity 2 \
+  --num-workers 0 --tmp-dir .tmp/bv4
+```
+
+恢复后仍须满足 600/600 batch `success`、3,000/3,000 provenance 完整；恢复记录保存在 `recovery_rows.csv` 和 `recovery_summary.json`。
+
 ```bash
 python scripts/rebuild_boltz_output_provenance_v4.py \
   --manifest outputs/current_production_package_v2/full_untruncated_universe_v4/boltz_full_input_package_v4_signed/boltz2_input_manifest.csv \

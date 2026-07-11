@@ -124,6 +124,7 @@ scripts/*.py
 !scripts/audit_project_target_sequence_integrity_v4.py
 !scripts/audit_active_collapsed_rank_sensitivity_v4.py
 !scripts/run_boltz2_batched_queue.py
+!scripts/recover_boltz2_missing_rows_v4.py
 !scripts/rebuild_boltz_output_provenance_v4.py
 !scripts/build_boltz2_complex_input_package.py
 !scripts/build_boltz2_complex_validation_audit.py

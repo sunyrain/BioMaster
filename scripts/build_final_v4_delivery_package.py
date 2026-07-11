@@ -890,6 +890,7 @@ def main() -> None:
         Path("scripts/build_full_project_universe_v4.py"),
         Path("scripts/build_boltz2_complex_input_package.py"),
         Path("scripts/run_boltz2_batched_queue.py"),
+        Path("scripts/recover_boltz2_missing_rows_v4.py"),
         Path("scripts/rebuild_boltz_output_provenance_v4.py"),
         Path("scripts/finalize_boltz_refined_3000_package.py"),
         Path("scripts/audit_boltz_pose_stability.py"),
