@@ -1,6 +1,6 @@
 # BioMaster 正式流程状态
 
-更新时间：2026-07-10 UTC
+更新时间：2026-07-11 UTC
 
 ## 当前主线
 
@@ -14,12 +14,14 @@
 | 750 × 463 项目空间构建 | 完成 | `outputs/current_production_package_v2/full_untruncated_universe_v4/` |
 | 无 Top300 门槛的 Top3000 预选 | 完成 | `pre_boltz_top3000_v4_fully_audited.csv` |
 | Top3000 靶点 Open Targets 全疾病补全 | 完成 | Open Targets 数据 26.06 / API 26.6.3；`opentargets_top3000_target_completion_v4/`（215/215 靶点，231,148 条关联） |
-| Top3000 Boltz-2 模板精修 | 运行中 | `boltz_full_run_v4_seeded/run_status_summary.json` |
-| 双样本条件姿势审计 | 等待 Boltz 完成 | 由 `audit_boltz_pose_stability.py` 生成 |
-| 正式 final1000 / review512 / final384 | 未生成 | 所有 3000 条和姿势审计完成后先生成1000/512；384在逐条审阅后回填 |
-| ChEMBL activity / PubMed 精确 pair 审计 | 未开始 | 对 review512 全量运行 |
-| 子智能体逐条可行性审阅 | 未开始 | review512 文献审计后分批执行 |
-| 最终中文 PDF / Excel / CSV | 未生成 | 最终审阅合并后生成 |
+| Top3000 Boltz-2 模板精修 | 完成 | 3,000/3,000；600/600 batch success；`boltz_full_run_v4_seeded/` |
+| 双样本条件姿势审计 | 完成 | A 1,923、B 673、C 404；3,000/3,000 有效 |
+| 正式 final1000 / review512 | 完成 | final1000=1,000；review512=512 |
+| ChEMBL activity / PubMed 精确 pair 审计 | 完成 | ChEMBL 512/512；PubMed 512/512 查询成功 |
+| 子智能体逐条可行性审阅 | 完成 | 512/512 初审；305 条原始 D 已完成统一量表二次裁决 |
+| 审阅后 final384 | 完成 | 384 条、169 个药物、116 个靶点、152 个骨架 |
+| Boltz 已知阳性校准 | 完成 | 96/96 结构、亲和和姿势输出完整 |
+| 最终中文 PDF / Excel / CSV | 生成中 | 由 `build_final_v4_delivery_package.py` 统一生成并审计 |
 
 ## 冻结口径
 
@@ -39,8 +41,27 @@
 | Top3000 靶点 | 215 |
 | Top3000 active-moiety × target 重复 | 0 |
 | Top3000 位于旧 106k 之外 | 20 |
+| Top3000 Boltz 完整输出 | 3,000 / 3,000 |
+| Top3000 条件姿势 A/B | 2,596 / 3,000 |
+| final1000 Boltz A/B | 574 / 1,000 |
+| review512 完整人工审阅 | 512 / 512 |
+| 二次裁决后硬淘汰 D | 101 / 512 |
+| 审阅后 final384 | 384 |
+| final384 唯一药物 / 靶点 / 骨架 | 169 / 116 / 152 |
 
 Top3000 的描述性分布：ConPLEx 中位数 0.3021（范围 0.0836–0.8910），药物内 rank 中位数 19，靶点内 rank 中位数 28；口袋共识 A/B 为 2,999/1；Open Targets 可做性为已上市小分子先例 2,511、临床先例 474、高质量配体或口袋 15。这些是连续排序后的结果分布，不是额外硬阈值。
+
+## 审阅后 final384
+
+- assay family：enzyme 233、transporter 78、nuclear/epigenetic 38、kinase 35；不含 GPCR 和 ion channel。
+- 统一可行性等级：A 1、B 31、C 352；最终包不含 D。
+- 文献类别：具体 pair 直接验证 10、功能证据 13、间接/家族证据 28、未找到精确 pair 报道 333。
+- 候选角色：validated control / rediscovery 10、novel hypothesis 374。
+- 老药新用定位：新疾病领域 215、同领域新适应症 45、仅新靶点暂不宣称疾病 116、原领域/非老药新用 8。
+- 活性物种：盐型归一化充分 186、母体药物适用 168、活性物种仍不确定 30；需要活性代谢物重算的条目已全部退出。
+- 条件姿势：A 331、B 53；每药最多 5 条、每靶点最多 8 条、每骨架最多 10 条。
+
+`未找到精确 pair 报道`表示在本轮 ChEMBL、PubMed 和逐条人工复核中未发现直接验证，不等于已经证明不存在，也不等于真实结合。final384 是湿实验优先级假说包，不是 384 条已证实相互作用。
 
 ## 召回口径
 
@@ -57,6 +78,7 @@ v4 不以 Top300 或绝对 ConPLEx 分数作硬门槛。结构与直接小分子
 - 正式完成要求 confidence、affinity、model0 CIF、model1 CIF 均存在，关键数值有限且位于合法范围；四类输出逐文件计算 SHA-256。
 - 正式 complete 要求 3000/3000 Boltz 与 3000/3000 双样本姿势审计完成。
 - partial 只能输出 `checkpoint_not_formal`，不能生成正式 384。
-- review512 必须是 final1000 子集；D、contradictory、未解决数据库失败项退出后再按硬多样性上限回填 final384，且每条条件姿势稳定性为 A/B。
+- review512 必须是 final1000 子集；原始 D 先用统一量表复核，校准后 D、contradictory、未解决数据库失败和活性代谢物重算项退出；final384 每条条件姿势稳定性为 A/B。
+- 审阅后冻结的多样性上限为每药 5、每靶点 8、每骨架 10、enzyme 245；实际 final384 为每药 5、每靶点 8、每骨架 10、enzyme 233。
 
 详细方法见 `docs/PRODUCTION_PIPELINE_V4_ZH.md`。
