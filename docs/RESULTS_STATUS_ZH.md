@@ -53,7 +53,7 @@ Top3000 的描述性分布：ConPLEx 中位数 0.3021（范围 0.0836–0.8910�
 
 ## 审阅后 final384
 
-- assay family：enzyme 233、transporter 78、nuclear/epigenetic 38、kinase 35；不含 GPCR 和 ion channel。
+- assay family（校正后的 `target_assay_family_v2`）：enzyme 245、transporter 78、nuclear/epigenetic 38、kinase 23；不含 GPCR 和 ion channel。
 - 统一可行性等级：A 1、B 31、C 352；最终包不含 D。
 - 文献类别：具体 pair 直接验证 10、功能证据 13、间接/家族证据 28、未找到精确 pair 报道 333。
 - 候选角色：validated control / rediscovery 10、novel hypothesis 374。
@@ -79,6 +79,6 @@ v4 不以 Top300 或绝对 ConPLEx 分数作硬门槛。结构与直接小分子
 - 正式 complete 要求 3000/3000 Boltz 与 3000/3000 双样本姿势审计完成。
 - partial 只能输出 `checkpoint_not_formal`，不能生成正式 384。
 - review512 必须是 final1000 子集；原始 D 先用统一量表复核，校准后 D、contradictory、未解决数据库失败和活性代谢物重算项退出；final384 每条条件姿势稳定性为 A/B。
-- 审阅后冻结的多样性上限为每药 5、每靶点 8、每骨架 10、enzyme 245；实际 final384 为每药 5、每靶点 8、每骨架 10、enzyme 233。
+- 审阅后冻结的多样性上限为每药 5、每靶点 8、每骨架 10、enzyme 245；实际 final384 最大值为每药 5、每靶点 8、每骨架 10，enzyme 为 245。
 
 详细方法见 `docs/PRODUCTION_PIPELINE_V4_ZH.md`。
