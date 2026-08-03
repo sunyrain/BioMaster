@@ -1,0 +1,68 @@
+version: 8
+name: target_calibrated_remote_affinity_package
+
+inputs:
+  physical_universe: outputs/affinity_first_remote_discovery_v1/PHYSICAL_PAIR_UNIVERSE_334749_HOMOLOGY_AUDITED_V1.csv.gz
+  stage2_queue: outputs/affinity_first_remote_discovery_v1/stage2_docking_queue_v1/GNINA_DISCOVERY_QUEUE_30000_V1.csv.gz
+  gnina_control_scores: outputs/affinity_first_remote_discovery_v1/gnina_target_calibration_v2/GNINA_TARGET_CALIBRATION_LIGAND_SCORES_V2.csv.gz
+  gnina_legacy_metrics: outputs/affinity_first_remote_discovery_v1/gnina_target_calibration_v2/GNINA_TARGET_CALIBRATION_METRICS_V2.csv
+  gnina_controls: outputs/affinity_first_remote_discovery_v1/target_docking_calibration_v2/GNINA_TARGET_CALIBRATION_CONTROLS_V2.csv.gz
+  receptors: outputs/affinity_first_remote_discovery_v1/experimental_holo_validation_v2/TARGET_DOCKING_RECEPTOR_SELECTION_463_V2.csv
+  current1000: outputs/current_production_package_v2/final500_full_deep_review_v7/FINAL1000_FULL_DEEP_REVIEWED_V7.csv
+
+calibration:
+  minimum_positive: 8
+  minimum_negative: 8
+  auroc_minimum: 0.65
+  average_precision_lift_minimum: 0.10
+  bootstrap_repeats: 2000
+  bootstrap_strong_lower_bound: 0.50
+  primary_channels:
+    - cnn_affinity
+    - vina_affinity
+
+discovery_docking:
+  include_admission_tiers:
+    - T1_dual_strong
+    - T2_dual_pass
+    - T3_single_strong
+    - T4_single_pass
+  exhaustiveness: 8
+  num_modes: 5
+  gpus:
+    - 0
+    - 1
+  jobs_per_gpu: 4
+  cpus_per_job: 6
+  prepare_workers: 8
+
+pair_evidence:
+  strong_negative_percentile: 0.90
+  exceptional_negative_percentile: 0.95
+  noncontradictory_negative_percentile: 0.50
+  positive_distribution_floor: 0.25
+  size_adjusted_negative_percentile_floor: 0.50
+
+portfolio:
+  discovery_candidates: 1000
+  target_pair_cap: 14
+  ligand_pair_cap: 3
+  scaffold_pair_cap: 12
+  scaffold_per_target_cap: 1
+  family_caps:
+    enzyme: 520
+    kinase: 220
+    nuclear_epigenetic: 130
+    transporter: 80
+    ion_channel: 50
+    other_assayable: 20
+
+policy:
+  similarity_role: hard_veto_and_risk_annotation_only
+  disease_role: post_binding_annotation_only
+  cross_target_raw_score_comparison: forbidden
+  arbitrary_cross_model_weighted_sum: forbidden
+  current1000_role: reusable_evidence_only
+
+outputs:
+  directory: outputs/affinity_experiment_package_v8

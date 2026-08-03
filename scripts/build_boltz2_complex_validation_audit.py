@@ -105,6 +105,22 @@ def enrich_records(root: Path, args: argparse.Namespace) -> pd.DataFrame:
     input_manifest = pd.read_csv(root / args.input_manifest).fillna("")
     external_queue_path = root / args.external_queue
     external_queue = pd.read_csv(external_queue_path).fillna("") if external_queue_path.exists() else pd.DataFrame()
+    if not external_queue.empty and "pairId" not in external_queue.columns:
+        if "pair_id" in external_queue.columns:
+            external_queue["pairId"] = external_queue["pair_id"]
+        elif {"drug_chembl_id", "sequence_key"}.issubset(external_queue.columns):
+            gene = external_queue.get("gene_names", pd.Series(["TARGET"] * len(external_queue))).astype(str).str.replace(
+                r"[^A-Za-z0-9]+",
+                "_",
+                regex=True,
+            )
+            external_queue["pairId"] = (
+                external_queue["drug_chembl_id"].astype(str)
+                + "_"
+                + gene
+                + "_"
+                + external_queue["sequence_key"].astype(str)
+            )
     repair_path = root / args.repair_manifest
     repair = pd.read_csv(repair_path).fillna("") if repair_path.exists() else pd.DataFrame()
 
@@ -182,10 +198,10 @@ def enrich_records(root: Path, args: argparse.Namespace) -> pd.DataFrame:
             "boltzAffinityProbabilityBinary1": affinity.get("affinity_probability_binary1"),
             "boltzAffinityProbabilityBinary2": affinity.get("affinity_probability_binary2"),
             "boltzMsaMode": "empty_single_sequence",
-            "boltzSamplingSteps": 10,
-            "boltzAffinitySamplingSteps": 10,
-            "boltzRecyclingSteps": 1,
-            "boltzDiffusionSamples": 1,
+            "boltzSamplingSteps": args.boltz_sampling_steps,
+            "boltzAffinitySamplingSteps": args.boltz_affinity_sampling_steps,
+            "boltzRecyclingSteps": args.boltz_recycling_steps,
+            "boltzDiffusionSamples": args.boltz_diffusion_samples,
         }
         tier, reason, score = support_tier(record)
         record["boltzSupportTier"] = tier
@@ -195,13 +211,13 @@ def enrich_records(root: Path, args: argparse.Namespace) -> pd.DataFrame:
     return pd.DataFrame(records).fillna("")
 
 
-def summarize(df: pd.DataFrame) -> dict[str, Any]:
+def summarize(df: pd.DataFrame, args: argparse.Namespace) -> dict[str, Any]:
     completed = df[df["boltzCompleted"].astype(bool)].copy()
     top = completed.sort_values("boltzCompositeScore", ascending=False).head(15)
     known_completed = int(completed["knownDrugTargetPair"].astype(str).str.lower().isin(["1", "1.0", "true"]).sum())
     summary = {
         "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "scope": "Boltz-2 Top50 second-model protein-ligand complex validation audit.",
+        "scope": args.scope,
         "candidateRows": int(len(df)),
         "completedRows": int(len(completed)),
         "completedPct": pct(int(len(completed)), int(len(df))),
@@ -236,7 +252,14 @@ def summarize(df: pd.DataFrame) -> dict[str, Any]:
                 "boltzLigandInputMode",
             ]
         ].to_dict(orient="records"),
-        "methodNote": "Boltz-2 was run locally as a fast second-model spot-check with empty MSA, one recycling step, 10 structure sampling steps, and 10 affinity sampling steps. Salt/solvate/counter-ion ligands that failed parsing were rerun as largest organic parent fragments and are explicitly flagged.",
+        "methodNote": (
+            f"Boltz-2 was run locally as {args.boltz_run_label} with empty MSA, "
+            f"{args.boltz_recycling_steps} recycling step(s), "
+            f"{args.boltz_sampling_steps} structure sampling steps, "
+            f"{args.boltz_affinity_sampling_steps} affinity sampling steps, and "
+            f"{args.boltz_diffusion_samples} diffusion sample(s). "
+            "Salt/solvate/counter-ion ligands that failed parsing were rerun as largest organic parent fragments and are explicitly flagged when present."
+        ),
     }
     return summary
 
@@ -280,9 +303,9 @@ def markdown(summary: dict[str, Any], df: pd.DataFrame) -> str:
             "",
             "## Interpretation",
             "",
-            "- This is an orthogonal structure-generation and affinity-probability layer over the selected Top50 candidate set, not a rerun of DiffDock.",
+            "- This is an orthogonal structure-generation and affinity-probability layer over the selected candidate set, not a rerun of DiffDock.",
             "- Rows using parent-fragment repair should be discussed as parent-ligand checks because salts, solvates, and counter-ions were removed before the repaired Boltz-2 run.",
-            "- The run used empty MSA and low sampling settings for throughput; high-confidence finalists can be rerun later with fuller MSA/sampling if needed.",
+            "- The run used empty MSA for throughput; high-confidence finalists can be rerun later with fuller MSA/sampling if needed.",
             "",
             "## Method Note",
             "",
@@ -297,7 +320,7 @@ def build(root: Path, args: argparse.Namespace) -> dict[str, Any]:
     out_dir = root / args.out_dir
     out_dir.mkdir(parents=True, exist_ok=True)
     df = enrich_records(root, args)
-    summary = summarize(df)
+    summary = summarize(df, args)
 
     candidate_path = out_dir / "boltz2_complex_validation_candidate_audit.csv"
     direction_path = out_dir / "boltz2_complex_validation_direction_summary.csv"
@@ -338,6 +361,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--initial-run-dir", default="outputs/sota_validation/boltz2_complex_validation/runs_top50")
     parser.add_argument("--repaired-run-dir", default="outputs/sota_validation/boltz2_complex_validation/runs_repaired_failed")
     parser.add_argument("--out-dir", default="outputs/sota_validation/boltz2_complex_validation")
+    parser.add_argument("--scope", default="Boltz-2 second-model protein-ligand complex validation audit.")
+    parser.add_argument("--boltz-run-label", default="a second-model spot-check")
+    parser.add_argument("--boltz-recycling-steps", type=int, default=1)
+    parser.add_argument("--boltz-sampling-steps", type=int, default=10)
+    parser.add_argument("--boltz-affinity-sampling-steps", type=int, default=10)
+    parser.add_argument("--boltz-diffusion-samples", type=int, default=1)
     return parser.parse_args()
 
 

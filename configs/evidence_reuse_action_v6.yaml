@@ -1,0 +1,51 @@
+version: evidence_reuse_action_v6
+objective: Reuse all existing project evidence without converting heterogeneous outputs into a universal binding score.
+
+evidence_roles:
+  chembl_positive_negative: target_level_model_admission
+  target_specific_qsar: in_domain_exploitation_only
+  ligand_similarity: validated_known_chemistry_exploitation_only
+  conplex: remote_candidate_retrieval_only
+  boltz_affinity_binary: target_specific_binding_discrimination_after_recalibration_only
+  boltz_pose_and_confidence: conditional_pose_quality_only
+  alphafold_and_pockets: target_routing_and_input_quality_only
+  literature_and_exact_pair_activity: novelty_and_rediscovery_audit
+  exposure_active_species_assay: experimental_readiness
+  open_targets_and_disease_methods: post_binding_disease_context
+
+boltz_recalibration:
+  wave1_targets: [MAPK14, MAP2K1, PDE4D, BACE1, ESR2]
+  wave2_targets: [MAPK11, RAF1, CDK4, NR3C1, THRB, PPARG, ESR1, AKR1B1, BCHE, DHODH]
+  allowed_assay_families: [enzyme, kinase, nuclear_epigenetic]
+  target_data_tiers: [T1_target_calibrated, T2_target_calibrated_limited]
+  positive_definition:
+    minimum_pchembl: 7.0
+    require_consistent_measurements: true
+  negative_definition:
+    maximum_pchembl: 4.5
+    allow_explicit_inactive: true
+    require_no_positive_conflict: true
+  per_target:
+    positives: 20
+    negatives: 20
+  matching: [same_assay_or_document, molecular_weight, clogp, formal_charge, tpsa, ligand_similarity]
+  protocol_arms:
+    - sequence_msa_native
+    - experimental_holo_template_and_known_pocket
+    - current_alphafold_template_and_predicted_pocket
+  metrics: [roc_auc, pr_auc, ef_5pct, paired_win_rate, bootstrap_ci, ligand_similarity_delta]
+  admission_rule:
+    minimum_roc_auc: 0.65
+    require_bootstrap_lower_above_random: true
+    require_increment_over_ligand_similarity: true
+
+candidate_lanes:
+  P1:
+    meaning: target_specific_qsar_supported_in_known_ligand_domain
+    next_action: exact_pair_novelty_exposure_active_species_and_assay_audit
+  P2:
+    meaning: validated_ligand_similarity_expansion
+    next_action: conservative_side_target_or_rediscovery_audit
+  P3:
+    meaning: remote_uncalibrated_physics_exploration
+    next_action: wait_for_target_specific_physics_model_admission

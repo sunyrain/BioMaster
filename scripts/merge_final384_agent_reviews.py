@@ -124,7 +124,9 @@ def main() -> None:
     manually_resolved = review["agent_database_query_resolution"].eq("resolved_manually")
     if (manually_resolved & ~source_ok).any():
         raise ValueError("A manually resolved database failure lacks a resolvable source")
-    reviewed_time = pd.to_datetime(review["agent_reviewed_utc"], utc=True, errors="coerce")
+    reviewed_time = pd.to_datetime(
+        review["agent_reviewed_utc"], utc=True, errors="coerce", format="mixed"
+    )
     if reviewed_time.isna().any():
         raise ValueError(f"Invalid agent_reviewed_utc values: {int(reviewed_time.isna().sum())}")
 

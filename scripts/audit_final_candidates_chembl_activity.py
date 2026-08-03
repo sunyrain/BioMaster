@@ -356,6 +356,12 @@ def main() -> None:
         annotation["chembl_assay_metadata_query_ok"] = not assay_errors
         annotations.append(annotation)
     annotation_df = pd.DataFrame(annotations, index=candidates.index)
+    # Candidate packages may already contain a partial audit from an earlier
+    # review pool. Replace those columns so the output has one uniform audit
+    # value per pair instead of duplicate column names with mixed coverage.
+    candidates = candidates.drop(
+        columns=[column for column in annotation_df.columns if column in candidates.columns]
+    )
     result = pd.concat([candidates, annotation_df], axis=1)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)

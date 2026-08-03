@@ -1,0 +1,11 @@
+wave,priority,pair_id,drug,target,system_class,preparation_status,required_context,role
+A,1,CHEMBL4303288_MGLL_SEQ000771,Abacavir Sulfate,MGLL,serine_hydrolase,experimental_holo_rebuild_required,catalytic construct and conserved catalytic triad,discovery
+A,2,CHEMBL3545185_MME_SEQ000273,Selinexor,MME,zinc_metalloprotease,experimental_holo_rebuild_required,soluble catalytic ectodomain and catalytic zinc,discovery
+A,3,CHEMBL4650226_THRB_SEQ000417,Acoramidis Hydrochloride,THRB,nuclear_receptor,experimental_holo_rebuild_required,ligand binding domain and relevant protonation state,discovery
+A,4,CHEMBL3348923_ENPP2_SEQ000501,Tovorafenib,ENPP2,secreted_lysophospholipase,experimental_holo_rebuild_required,catalytic ions and validated catalytic construct,discovery
+A,5,CHEMBL1399_HPSE_SEQ000527,Anastrozole,HPSE,lysosomal_endoglycosidase,mature_enzyme_rebuild_required,processed active heterodimer and acidic assay state,discovery
+B,6,CHEMBL4250860_ODC1_SEQ000297,Danicopan,ODC1,plp_enzyme,cofactor_multimer_rebuild_required,biological homodimer and PLP,discovery
+B,7,CHEMBL473417_TPH1_SEQ000849,Vismodegib,TPH1,aromatic_amino_acid_hydroxylase,cofactor_multimer_rebuild_required,biological oligomer iron and BH4 context,discovery
+B,8,CHEMBL3989691_HSD11B1_SEQ000723,Eltrombopag Olamine,HSD11B1,er_oxidoreductase,cofactor_domain_rebuild_required,catalytic domain and NADPH,discovery
+C,9,CHEMBL1201139_UGCG_SEQ000443,Megestrol Acetate,UGCG,er_membrane_enzyme,membrane_rebuild_required,oriented lipid bilayer and validated catalytic state,discovery
+C,10,CHEMBL1256818_SOAT1_SEQ000397,Dextromethorphan Hydrobromide,SOAT1,mboat_membrane_enzyme,membrane_oligomer_rebuild_required,ER-like bilayer biological oligomer and catalytic chamber,discovery

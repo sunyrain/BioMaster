@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>FDA老药新靶点：当前1000候选的真实完整漏斗</title>
+  <style>
+    @page { size: A3 landscape; margin: 8mm 10mm 7mm 10mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #182320;
+      background: #fff;
+      font-family: "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+      font-size: 8.1pt;
+      line-height: 1.27;
+    }
+    h1, h2, h3, p { margin: 0; }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      padding-bottom: 2.4mm;
+      border-bottom: 1.8mm solid #087a73;
+      margin-bottom: 2.2mm;
+    }
+    h1 { font-size: 20pt; line-height: 1.05; font-weight: 800; }
+    .subtitle { margin-top: 0.8mm; color: #50605d; font-size: 9pt; }
+    .date { text-align: right; color: #5c6966; font-size: 7.8pt; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 2.5mm;
+      margin: 1.9mm 0 1.2mm;
+      font-size: 9.5pt;
+      font-weight: 800;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 0.3mm;
+      background: #a9bab6;
+    }
+    .sources {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3mm;
+    }
+    .source {
+      border: 0.35mm solid #8da09c;
+      border-top: 1.2mm solid #087a73;
+      background: #f7faf9;
+      padding: 1.9mm 2.8mm;
+      min-height: 22mm;
+    }
+    .source h2 { font-size: 8.8pt; color: #076c66; margin-bottom: 0.6mm; }
+    .source-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5mm; }
+    .big { font-size: 14pt; line-height: 1; font-weight: 800; margin-right: 1mm; }
+    .small { color: #596764; font-size: 7pt; }
+    .warning { color: #8d510d; font-weight: 600; }
+    .derivation {
+      display: grid;
+      grid-template-columns: 1.15fr 1.15fr 0.8fr;
+      gap: 3mm;
+    }
+    .axis, .spaces {
+      border: 0.35mm solid #8da09c;
+      padding: 1.7mm 2.4mm;
+      min-height: 46mm;
+    }
+    .axis { background: #fbfcfc; }
+    .spaces { background: #fffaf3; border-color: #b99b75; border-top: 1.2mm solid #d17a17; }
+    .axis h2, .spaces h2 { font-size: 9.4pt; margin-bottom: 1mm; color: #086e68; }
+    .spaces h2 { color: #8d510d; }
+    .chain {
+      display: grid;
+      grid-template-columns: 21mm 1fr;
+      gap: 1.5mm;
+      padding: 0.9mm 0;
+      border-bottom: 0.2mm solid #d7dfdd;
+    }
+    .chain:last-child { border-bottom: 0; }
+    .chain-count { font-size: 10.4pt; font-weight: 800; font-variant-numeric: tabular-nums; }
+    .chain-text b { color: #076c66; }
+    .detail { margin-top: 0.35mm; font-size: 6.7pt; color: #596663; }
+    .space-step { padding: 1.25mm 0; border-bottom: 0.25mm solid #d8c8b2; }
+    .space-step:last-child { border-bottom: 0; }
+    .space-label { color: #8d510d; font-weight: 700; }
+    .space-number { font-size: 13pt; line-height: 1.02; font-weight: 800; font-variant-numeric: tabular-nums; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th {
+      padding: 1.35mm 1.8mm;
+      color: #fff;
+      background: #173f3b;
+      text-align: left;
+      font-size: 7.4pt;
+      border-right: 0.2mm solid #698b86;
+    }
+    td {
+      padding: 1.25mm 1.8mm;
+      vertical-align: top;
+      border-bottom: 0.25mm solid #c8d3d0;
+      font-size: 7.05pt;
+    }
+    tbody tr:nth-child(even) td { background: #f6f8f7; }
+    .stage { font-weight: 800; color: #08736c; }
+    .count { font-size: 9.2pt; font-weight: 800; font-variant-numeric: tabular-nums; }
+    .branch { color: #9b590f; font-weight: 700; }
+    .tag {
+      display: inline-block;
+      padding: 0.2mm 0.9mm;
+      border: 0.25mm solid #087a73;
+      color: #076c66;
+      font-weight: 800;
+      font-size: 6.4pt;
+    }
+    .output {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 3mm;
+      margin-top: 2mm;
+    }
+    .final {
+      border: 0.45mm solid #087a73;
+      border-left: 2mm solid #087a73;
+      padding: 2mm 3mm;
+      background: #f5faf8;
+    }
+    .final-grid { display: grid; grid-template-columns: 24mm 1fr; gap: 3mm; align-items: center; }
+    .final-number { font-size: 20pt; font-weight: 800; color: #076c66; }
+    .final h2 { font-size: 10pt; margin-bottom: 0.7mm; }
+    .audit-branch {
+      border: 0.4mm dashed #9b7b53;
+      border-left: 1.5mm solid #d17a17;
+      padding: 2mm 3mm;
+      background: #fffaf3;
+    }
+    .audit-branch h2 { color: #8d510d; font-size: 9.4pt; margin-bottom: 0.7mm; }
+    footer {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 4mm;
+      margin-top: 1.8mm;
+      padding-top: 1.5mm;
+      border-top: 0.35mm solid #9dafab;
+      font-size: 6.5pt;
+      color: #52605d;
+    }
+    .bottom-line { color: #172522; font-weight: 700; }
+    .hash { font-family: "Noto Sans Mono CJK SC", monospace; font-size: 6pt; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>FDA 老药新靶点：当前1000候选的真实完整漏斗</h1>
+      <p class="subtitle">已有1000由 ConPLEx/结构可做性/Boltz-2/V5硬合同产生；GNINA是后来新增的审计分支，不参与这批1000的生成</p>
+    </div>
+    <div class="date">血缘纠正版 V3<br>2026-07-29</div>
+  </header>
+
+  <div class="section-title">一、原始输入与边界</div>
+  <section class="sources">
+    <div class="source">
+      <h2>药物输入：FDA_approved_small_molecules_2005_2026_with_structures.xlsx</h2>
+      <div class="source-grid">
+        <p><span class="big">915</span>个药物ID；主表23列，含名称、上市年份、途径、原适应症、原标签靶点、action type、MoA、SMILES、ChEMBL ID和物化性质。</p>
+        <p class="small"><b>作用：</b>定义本项目2005–2026 FDA起始药物清单。<br><span class="warning">边界：</span>不等同于FDA全历史全部小分子。</p>
+      </div>
+    </div>
+    <div class="source">
+      <h2>靶点输入：druggable_proteome_chembl(1).xlsx</h2>
+      <div class="source-grid">
+        <p><span class="big">5,307</span>条accession记录；含UniProt、gene、序列、target class、模态和临床阶段；折叠为 <b>892 genes / 891条可用唯一序列</b>。</p>
+        <p class="small"><b>作用：</b>定义ChEMBL-MoA人源成药锚点边界；后续以ChEMBL 37和Open Targets 26.06补充审计。<br><span class="warning">边界：</span>不是全部人类蛋白。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-title">二、实体级筛选：如何得到334,749个正式物理pair</div>
+  <section class="derivation">
+    <div class="axis">
+      <h2>药物轴：915 ID → 750项目ID → 723计算结构</h2>
+      <div class="chain">
+        <div class="chain-count">915 → 779</div>
+        <div class="chain-text"><b>只保留明确直接作用action type。</b>
+          <div class="detail">移出136：空标签118；releasing 5；sequestering 3；chelating 2；binding 2；substrate 2；reducing 2；cross-linking 1；disrupting 1。原因：不能定义标准人源蛋白直接亲和或主要为间接/物理/化学作用。</div>
+        </div>
+      </div>
+      <div class="chain">
+        <div class="chain-count">779 → 750</div>
+        <div class="chain-text"><b>排除29条不适合当前直接target-engagement的药物。</b>
+          <div class="detail">含广谱DNA/reactive、病原体/非人主机制、超大/肽样天然产物等；详细逐药审计单保留。5个边界药物经人工复核恢复。</div>
+        </div>
+      </div>
+      <div class="chain">
+        <div class="chain-count">750 → 723</div>
+        <div class="chain-text"><b>同一计算结构折叠27个重复表示。</b>
+          <div class="detail">RDKit canonicalization + largest fragment + Uncharger；这是盐/对离子计算标准化，不等同药代active metabolite判定。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="axis">
+      <h2>靶点轴：5,307记录 → 892 genes → 463序列</h2>
+      <div class="chain">
+        <div class="chain-count">5,307 → 892</div>
+        <div class="chain-text"><b>按gene/canonical target折叠accession。</b>
+          <div class="detail">IFNA1缺序列，因此最初序列计算使用891条唯一序列。</div>
+        </div>
+      </div>
+      <div class="chain">
+        <div class="chain-count">892 → 462</div>
+        <div class="chain-text"><b>限定非GPCR、可做直接小分子target-engagement。</b>
+          <div class="detail">移出430：GPCR/膜受体205；分泌/表面/黏附/结构类127；unclassified、缺标准assay或直接小分子/结构支持不足98。GPCR单列未来队列，不是认为其不可成药。</div>
+        </div>
+      </div>
+      <div class="chain">
+        <div class="chain-count">462 → 463</div>
+        <div class="chain-text"><b>口袋共识后恢复BCL2L10。</b>
+          <div class="detail">最终：enzyme234、kinase105、ion channel53、nuclear/epigenetic41、transporter27、other3；冻结sequence key、UniProt和assay family。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spaces">
+      <h2>三个不同的空间</h2>
+      <div class="space-step">
+        <div class="space-label">原始序列计算空间</div>
+        <div class="space-number">815,265</div>
+        <p><b>915×891</b>；最初全空间ConPLEx与召回审计。</p>
+      </div>
+      <div class="space-step">
+        <div class="space-label">冻结ID审计空间</div>
+        <div class="space-number">347,250</div>
+        <p><b>750×463</b>；保留FDA/ChEMBL ID用于标签和文献追溯。</p>
+      </div>
+      <div class="space-step">
+        <div class="space-label">正式物理设计空间</div>
+        <div class="space-number">334,749</div>
+        <p><b>723×463</b>；重复盐型/结构不重复计算，现有1000漏斗的正式科学起点。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-title">三、已完成主漏斗：334,749 → 3,000 → 1,000</div>
+  <table>
+    <colgroup>
+      <col style="width: 8%">
+      <col style="width: 16%">
+      <col style="width: 34%">
+      <col style="width: 33%">
+      <col style="width: 9%">
+    </colgroup>
+    <thead>
+      <tr><th>步骤</th><th>输入 → 输出</th><th>实际采用的筛选规则</th><th>这样筛的原因与严格解释</th><th>状态</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="stage">1. 物理准入硬门</td>
+        <td><span class="count">334,749 → 254,694</span><br>唯一物理pair<br><span class="small">对应ID行：347,250→264,352</span></td>
+        <td>结构必须为A/B/C；靶点满足direct-SM标准；排除exact known pair和保守family/rediscovery风险。该阶段没有使用ConPLEx Top100或绝对分数硬删除。</td>
+        <td>先保证药物、靶点、结构和新颖性边界正确。移出的80,055个物理pair进入known/control、family review或结构不可判定空间，不代表“不结合”。</td>
+        <td><span class="tag">完成</span></td>
+      </tr>
+      <tr>
+        <td class="stage">2. ConPLEx排名审计</td>
+        <td><span class="count">334,749 → 71,861</span><br>药物内Top100<br><span class="count">∩硬门 = 48,972</span></td>
+        <td>对每个模型配体在463个靶点中计算ConPLEx排名；Top100约占物理空间21.5%。与物理准入硬门交集为48,972。该数字用于定义优先区域和审计覆盖。</td>
+        <td>ConPLEx适合低成本大空间富集，但不是亲和常数。严格说，原V4 Top3000代码没有把Top100写成硬门；事后审计显示3,000中2,994条位于Top100，6条边界项未进入V5最终1000。</td>
+        <td><span class="tag">完成</span><br>召回/预算</td>
+      </tr>
+      <tr>
+        <td class="stage">3. pre-Boltz 3,000</td>
+        <td><span class="count">264,352 ID eligible → 3,000</span><br>436 drugs / 215 targets</td>
+        <td>预分数由ConPLEx、口袋先验、Open Targets tractability、药物/实验可行性和新颖性组成；再限制每药≤12、每靶点≤32、每骨架≤50及靶点家族上限。</td>
+        <td>无法对25万级候选全部运行高成本复合物模型；因此用低成本证据分配Boltz预算，并防止少数药物、靶点或骨架垄断。3,000是计算预算，不是自然质量阈值。</td>
+        <td><span class="tag">完成</span></td>
+      </tr>
+      <tr>
+        <td class="stage">4. Boltz-2与pose审计</td>
+        <td><span class="count">3,000 → 3,000完成</span><br>pose A 1,923 / B 673 / C 404</td>
+        <td>3,000条全部使用签名输入完成Boltz-2结构与affinity输出；比较两个条件结构样本的配体RMSD、质心和界面残基；同步审计序列、模板、化合物责任和同源风险。</td>
+        <td>增加pair级三维与条件pose信息。此处Boltz A/B/C和affinity仍是计算优先级，不是实验binder概率；后续发现140条模板/序列错配，必须硬排除。</td>
+        <td><span class="tag">完成</span></td>
+      </tr>
+      <tr>
+        <td class="stage">5. V5统一硬合同</td>
+        <td><span class="count">3,000 → 2,860 → 2,750 → 2,561 → 2,201 → 1,308</span></td>
+        <td>
+          依次要求：序列/模板一致（去140）；既有审阅无矛盾、D级、数据库失败或exact nonbinding（去110）；
+          药物/模型配体无前药活性物种待重跑（再去189）；pose为A/B（再去360）；Boltz affinity达到Known96同实验家族阳性q10下限（剩1,308）。
+        </td>
+        <td>这些条件不可由其他高分补偿，因此采用fail-closed硬门。Known96只有阳性、没有可靠阴性；q10只表示“不低于阳性参照下限”，不能估计precision、FDR或真实结合概率。</td>
+        <td><span class="tag">完成</span><br>主候选池</td>
+      </tr>
+      <tr>
+        <td class="stage">6. 物理排序与多样性</td>
+        <td><span class="count">1,308 → 1,000</span><br>321 ligands / 163 targets / 281 scaffolds</td>
+        <td>V5 pair physics score = 70% Boltz校正轴 + 30% ConPLEx复合轴；按分数排序后限制每药≤6、每靶点≤14、每骨架≤20及家族集中度。结果审计：1,000/1,000均在ConPLEx药物内Top100。</td>
+        <td>从达到统一底线的候选中保留较强pair信号，同时保证广谱发现覆盖。固定1,000是实验/审阅容量目标，不是模型产生的自然真假边界。</td>
+        <td><span class="tag">完成</span><br>正式1000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section class="output">
+    <div class="final">
+      <div class="final-grid">
+        <div class="final-number">1,000</div>
+        <div>
+          <h2>当前完成的计算储备包</h2>
+          <p><b>生成文件：</b>FINAL1000_STRENGTHENED_V5.csv；相对V4保留735条、替换265条。强度分层为A 500、B 292、C 208，含义分别为达到Known96阳性的median、q25和q10；不是结合概率。</p>
+          <p><b>完整审阅表：</b>FINAL1000_FULL_DEEP_REVIEWED_V7.csv；pair集合与V5完全一致，增加文献、活性物种、暴露、assay和疾病注释，不改变1000条的生成血缘。</p>
+        </div>
+      </div>
+    </div>
+    <div class="audit-branch">
+      <h2>GNINA应放在这里：后来新增的后验审计/下一版重建分支</h2>
+      <p>现有1000形成后，为补足“Known96只有阳性、无法评价特异性”的缺口，另建9,199条同靶点正负对照：417个靶点完成GNINA，349个可评估，157个预注册通过、95个强通过，并形成7,370条强校准未来计算队列。</p>
+      <p class="warning">GNINA没有参与上述V5 1000的筛选或排序；7,370也不是这1000的上游。它只用于审计旧方法并重建下一版候选。</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <span class="bottom-line">汇报主句：</span>
+      当前1000的真实路线是“来源与实体冻结 → 物理准入 → ConPLEx/结构/可做性预选 → 3,000条Boltz精修 →
+      V5序列/审阅/活性物种/pose/阳性下限硬合同 → 1,308 → 多样性收敛到1,000”；GNINA是后续审计，不属于该血缘。
+    </div>
+    <div class="hash">
+      关键血缘：TOP100_SCOPE_INTERSECTION_AUDIT.json；
+      formal_completion_summary_v4_complete.json；
+      STRENGTHENED_V5_SUMMARY.json；
+      FINAL1000_STRENGTHENED_V5.csv SHA-256 4f22a26702d6d3e3…
+    </div>
+  </footer>
+</body>
+</html>

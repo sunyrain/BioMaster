@@ -1,0 +1,96 @@
+version: calibrated_pipeline_v5
+objective: Prioritize direct FDA active-moiety to human target binding hypotheses without treating correlated model outputs as independent evidence.
+
+principles:
+  - Entity correctness and severe chemistry liabilities are hard gates, not positive evidence.
+  - Target tractability and pocketability route a target into an assay/model lane; they do not score a specific drug-target pair.
+  - Pair-level model outputs enter ranking only after target- or family-level positive/negative calibration.
+  - Correlated outputs from one model or one source are represented by one evidence-family value.
+  - Disease, pathway, tissue, literature density, and popularity remain post-binding annotations.
+  - Uncalibrated hypotheses are retained as exploratory queues and are never reported as binding probabilities.
+
+chembl_calibration:
+  target_type: SINGLE PROTEIN
+  organism: Homo sapiens
+  minimum_assay_confidence: 9
+  assay_types: [B]
+  numeric_standard_types: [Ki, Kd, IC50]
+  require_standard_relation_equal: true
+  allowed_data_validity_comments: ["", Manually validated]
+  positive_pchembl_min: 6.0
+  negative_pchembl_max: 5.0
+  grey_zone: [5.0, 6.0]
+  explicit_inactive_patterns: [inactive, not active, no activity]
+  target_tiers:
+    T1_target_calibrated:
+      min_positive_compounds: 50
+      min_negative_compounds: 50
+      min_documents: 3
+    T2_target_calibrated_limited:
+      min_positive_compounds: 20
+      min_negative_compounds: 20
+      min_documents: 2
+    T3_positive_only:
+      min_positive_compounds: 20
+      min_negative_compounds: 0
+    T4_sparse: {}
+
+evaluation:
+  required_splits: [active_moiety, murcko_scaffold, document_time]
+  required_metrics: [pr_auc, ef_1pct, ef_5pct, bedroc, recall_at_budget, brier, expected_calibration_error]
+  mandatory_baselines: [ligand_similarity, stratified_random]
+  model_acceptance:
+    require_out_of_fold_predictions: true
+    require_better_than_ligand_similarity: true
+    require_better_than_stratified_random: true
+    prohibit_known_label_boost: true
+
+evidence_groups:
+  entity_integrity:
+    role: hard_gate
+    methods: [active_moiety, rdkit_standardization, sequence_mapping, provenance]
+  target_eligibility:
+    role: route_or_gate
+    methods: [chembl_moa, open_targets_tractability, alphafold, holo_structure, pocket_consensus]
+  fast_pair_retrieval:
+    role: high_recall_retrieval
+    methods: [conplex]
+  calibrated_ligand_exploitation:
+    role: target_specific_in_domain_pair_ranking
+    methods: [target_specific_morgan_qsar, ligand_similarity]
+    requirements: [positive_negative_labels, murcko_scaffold_holdout, document_time_audit, applicability_domain]
+  pair_structure:
+    role: calibrated_pair_evidence
+    methods: [boltz2_affinity, target_validated_docking]
+  pose_quality:
+    role: conditional_quality_veto
+    methods: [posebusters, prolif, repeated_pose, short_md]
+  chemistry_experiment:
+    role: veto_or_readiness
+    methods: [pains_brenk_nih, exposure, assay_mapping, counterscreens]
+  novelty:
+    role: queue_label
+    methods: [fda_label, chembl_exact_pair, pubmed_exact_pair, family_leakage]
+  disease_context:
+    role: post_binding_annotation
+    methods: [open_targets_disease, txgnn, string_huri, reactome_go_kegg, lincs_creeds, gtex_hpa, depmap]
+
+selection:
+  prohibit_single_universal_score_before_calibration: true
+  calibrated_model: regularized_logistic_or_hierarchical_bayesian_stacking
+  output_axes:
+    - calibration_tier
+    - calibrated_pair_probability_or_rank
+    - model_disagreement
+    - applicability_domain
+    - chemistry_veto
+    - assay_readiness
+    - novelty_class
+    - disease_context
+  queues:
+    - calibrated_consensus
+    - family_calibrated
+    - model_disagreement
+    - exploratory_uncalibrated
+    - positive_control
+    - negative_control

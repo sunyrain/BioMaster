@@ -1,0 +1,32 @@
+version: 1
+name: affinity_first_remote_discovery
+
+inputs:
+  full_project_universe: outputs/current_production_package_v2/full_untruncated_universe_v4/full_project_universe_347250_scored_v4.csv
+  target_metadata_pool: outputs/chembl_moa_enhanced_information_package_v1/candidate_pool_106k_enhanced_scored.csv
+  project_drugs: configs/project_drugs_v4.csv
+  project_targets: configs/project_targets_v4.csv
+  target_integrity: configs/project_targets_v4_integrity.csv
+  protein_sequences: outputs/full_conplex_active_moiety_v4/protein_sequence_representatives.csv
+  known_controls: outputs/current_production_package_v2/full_untruncated_universe_v4/known_control_union_v4.csv
+  chembl37_mechanisms: outputs/target_catalog_quality_audit_v1/chembl37_mechanisms_with_human_target_map.csv
+  target_qsar_predictions: outputs/current_production_package_v2/target_qsar_calibration_v5/PROJECT_DRUG_TARGET_QSAR_PREDICTIONS_V5.csv.gz
+
+outputs:
+  directory: outputs/affinity_first_remote_discovery_v1
+
+contracts:
+  source_rows: 347250
+  physical_pair_rows: 334749
+  model_ligands: 723
+  targets: 463
+
+gates:
+  remote_active_similarity_max: 0.40
+  strict_structure_bins:
+    - A_strict_overlapping_pocket
+    - B_strict_supported_overlap
+  review_structure_bins:
+    - A_strict_overlapping_pocket
+    - B_strict_supported_overlap
+    - C_manual_review_structure

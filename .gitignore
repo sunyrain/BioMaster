@@ -14,17 +14,36 @@ dist/
 # Local environments
 .env
 .venv/
+.venvs/
 venv/
 env/
+.cache/
+.external/
 .conda_envs/
 .conda_pkgs/
 .local_deps/
 .pip_cache/
 .tmp/
 *.log
+*.orig
 logs/
 oracle/
+archive/
 archives/
+
+# Molecular-dynamics runtime artifacts
+md_runs/
+*.chk
+*.cpt
+*.dcd
+*.xtc
+*.trr
+*.edr
+*.tpr
+*.prmtop
+*.inpcrd
+*.rst7
+*.nc
 
 # Large or licensed project data
 data/
@@ -82,8 +101,6 @@ outputs/broad_mechanism_layer_v2/strict895_pubmed_literature_audit/*
 
 !outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/
 outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/*
-!outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/STRICT895_FINAL_WETLAB_PRIORITY_FULL_REPORT_ZH.md
-!outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/STRICT895_FINAL_WETLAB_PRIORITY_FULL_REPORT_ZH.pdf
 !outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/strict895_all_895_summary_table_zh.csv
 !outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/strict895_all_895_summary_table_zh.xlsx
 !outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/strict895_final_wetlab_priority_all_rows.csv
@@ -100,6 +117,20 @@ outputs/broad_mechanism_layer_v2/strict895_final_wetlab_priority/*
 # New exploratory scripts are ignored until explicitly promoted.
 scripts/*.py
 !scripts/build_current_production_package_v2.py
+!scripts/audit_method_governance_v5.py
+!scripts/extract_chembl37_target_calibration_v5.py
+!scripts/fetch_chembl37_calibration_api_v5.py
+!scripts/prepare_conplex_calibration_v5.py
+!scripts/evaluate_conplex_target_calibration_v5.py
+!scripts/audit_existing_models_against_chembl37_v5.py
+!scripts/prepare_boltz_target_calibration_panel_v5.py
+!scripts/train_target_qsar_calibration_v5.py
+!scripts/evaluate_boltz_calibration_smoke_v5.py
+!scripts/build_calibrated_portfolio_v5.py
+!scripts/audit_calibrated_portfolio_v5.py
+!scripts/build_method_combination_report_v5.py
+!scripts/build_evidence_reuse_action_package_v6.py
+!scripts/audit_v5_known_pair_novelty_v6.py
 !scripts/finalize_106k_reselection_v2.py
 !scripts/prepare_druggable_proteome_conplex.py
 !scripts/build_full_project_universe_v3.py
@@ -140,6 +171,40 @@ scripts/*.py
 !scripts/build_strict895_final_wetlab_priority.py
 !scripts/fetch_strict895_opentargets_child_diseases.py
 !scripts/merge_strict895_agent_reviews.py
+!scripts/enrich_pubmed_pair_abstracts_v6.py
+!scripts/build_reviewed_top500_v6.py
+!scripts/prepare_v6_deep_review_queue.py
+!scripts/merge_v6_full_deep_reviews.py
+!scripts/audit_v6_deep_review_batch.py
+!scripts/prepare_v6_critical_adjudication.py
+!scripts/audit_v6_adjudication_batch.py
+!scripts/apply_v6_critical_adjudication.py
+!scripts/audit_full_deep_top500_v7.py
+!scripts/build_final500_full_deep_report_pdf_v7.py
+!scripts/build_final1000_feasibility_grading_report.py
+!scripts/run_gnina_target_calibration_v2.py
+!scripts/run_gnina_remote_discovery_v8.py
+!scripts/run_nesso_control_benchmark_v8.py
+!scripts/build_method_decision_matrix_v8.py
+!scripts/build_affinity_experiment_package_v8.py
+!scripts/build_affinity_frontier_report_pdf_v8.py
+!scripts/build_gnina_channel_calibration_v8.py
+!scripts/build_gnina_discovery_queue_v8.py
+!scripts/audit_project_candidate_utility_v8.py
+!scripts/audit_scope_dti_overlap_v8.py
+!scripts/run_cordial_control_benchmark_v8.py
+!scripts/build_target_docking_calibration_manifest_v1.py
+!scripts/validate_experimental_holo_structures_v2.py
+!scripts/download_drugclip_sixfold_weights_v1.py
+!scripts/prepare_drugclip_project_inputs_v1.py
+!scripts/merge_drugclip_project_scores_v1.py
+!scripts/audit_remote_target_homology_v1.py
+!scripts/build_affinity_first_remote_universe_v1.py
+!scripts/build_experimental_structure_atlas_v1.py
+!scripts/build_stage2_docking_queue_v1.py
+!scripts/run_gnina_calibration_pilot_v1.py
+!scripts/build_project_route_contradictions_pdf_zh.py
+!scripts/build_target_calibrated_affinity_discovery_detailed_appendix_zh.py
 
 # Formal v2 configuration and compact audit outputs are intentionally tracked.
 !configs/

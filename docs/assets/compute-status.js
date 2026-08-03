@@ -1,15 +1,15 @@
 window.BIOMASTER_COMPUTE_STATUS = {
-  "updatedUtc": "2026-06-05T11:20:01.298044Z",
-  "sourceUpdatedUtc": "2026-06-05T11:19:39Z",
+  "updatedUtc": "2026-06-09T07:09:41.049181Z",
+  "sourceUpdatedUtc": "2026-06-09T07:09:33Z",
   "summary": {
     "completedModuleCount": 58,
-    "activeComputationCount": 6,
+    "activeComputationCount": 4,
     "experimentClosureStatus": "not_complete",
-    "experimentClosurePassedRequiredChecks": 1,
+    "experimentClosurePassedRequiredChecks": 7,
     "experimentClosureTotalRequiredChecks": 8,
-    "artifactManifestCount": 15377,
-    "artifactManifestTotalSizeBytes": 1767642357,
-    "sourceScriptCount": 57,
+    "artifactManifestCount": 19202,
+    "artifactManifestTotalSizeBytes": 2566440188,
+    "sourceScriptCount": 58,
     "candidateRows": 3921,
     "sotaReadyA": 112,
     "sotaReadyB": 783,
@@ -21,102 +21,60 @@ window.BIOMASTER_COMPUTE_STATUS = {
   "active": {
     "fullDiffdock": {
       "status": "running",
-      "completedJobs": 2507,
+      "completedJobs": 3653,
       "totalJobs": 3653,
-      "completedJobPct": 68.6285,
-      "scoredRows": 626750,
+      "completedJobPct": 100.0,
+      "scoredRows": 913170,
       "totalRows": 913170,
-      "scoredRowPct": 68.6345,
-      "completedOutputs": 486978,
-      "missingOutputsInScoredJobs": 139772,
-      "activeLocks": [
-        2507,
-        2508,
-        2509,
-        2510
-      ],
-      "activeDetails": [
-        {
-          "jobId": 2507,
-          "expectedRows": 250,
-          "scoreRows": 0,
-          "completedOutputs": 0,
-          "inFlightRank1SdfCount": 155,
-          "scoreExists": false,
-          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02507.scores.csv.lock"
-        },
-        {
-          "jobId": 2508,
-          "expectedRows": 250,
-          "scoreRows": 0,
-          "completedOutputs": 0,
-          "inFlightRank1SdfCount": 161,
-          "scoreExists": false,
-          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02508.scores.csv.lock"
-        },
-        {
-          "jobId": 2509,
-          "expectedRows": 250,
-          "scoreRows": 0,
-          "completedOutputs": 0,
-          "inFlightRank1SdfCount": 10,
-          "scoreExists": false,
-          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02509.scores.csv.lock"
-        },
-        {
-          "jobId": 2510,
-          "expectedRows": 250,
-          "scoreRows": 0,
-          "completedOutputs": 0,
-          "inFlightRank1SdfCount": 11,
-          "scoreExists": false,
-          "lockPath": "outputs/report_scale/diffdock_full_run/scores/diffdock_full_chunk_02510.scores.csv.lock"
-        }
-      ],
-      "etaHours": 63.3276,
-      "etaDays": 2.6387,
-      "estimatedFinishUtc": "2026-06-08T02:39:40Z",
-      "busyGpuCount": 4,
+      "scoredRowPct": 100.0,
+      "completedOutputs": 708935,
+      "missingOutputsInScoredJobs": 204235,
+      "activeLocks": [],
+      "activeDetails": [],
+      "etaHours": 0.0,
+      "etaDays": 0.0,
+      "estimatedFinishUtc": "2026-06-08T21:57:44Z",
+      "busyGpuCount": 0,
       "gpuCount": 4,
       "gpus": [
         {
           "index": 0,
           "busId": "00000000:1C:00.0",
-          "memoryUsedMb": 11315.0,
+          "memoryUsedMb": 0.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 22.0,
-          "temperatureC": 37.0,
-          "powerW": 101.25
+          "utilizationPct": 0.0,
+          "temperatureC": 27.0,
+          "powerW": 17.56
         },
         {
           "index": 1,
           "busId": "00000000:1D:00.0",
-          "memoryUsedMb": 9769.0,
+          "memoryUsedMb": 0.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 39.0,
-          "temperatureC": 42.0,
-          "powerW": 126.82
+          "utilizationPct": 0.0,
+          "temperatureC": 29.0,
+          "powerW": 7.7
         },
         {
           "index": 2,
           "busId": "00000000:1E:00.0",
-          "memoryUsedMb": 12265.0,
+          "memoryUsedMb": 0.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 26.0,
-          "temperatureC": 39.0,
-          "powerW": 86.42
+          "utilizationPct": 0.0,
+          "temperatureC": 28.0,
+          "powerW": 12.07
         },
         {
           "index": 3,
           "busId": "00000000:DC:00.0",
-          "memoryUsedMb": 9825.0,
+          "memoryUsedMb": 0.0,
           "memoryTotalMb": 32760.0,
-          "utilizationPct": 22.0,
-          "temperatureC": 39.0,
-          "powerW": 86.19
+          "utilizationPct": 0.0,
+          "temperatureC": 29.0,
+          "powerW": 21.81
         }
       ],
-      "createdUtc": "2026-06-05T11:20:01Z",
+      "createdUtc": "2026-06-08T21:57:44Z",
       "interpretationZh": "全量 DiffDock 正在覆盖 druggable-proteome 候选队列。已完成 chunk 中的 missing output 是技术性缺失，不应解释为生物学阴性。"
     },
     "standardPoseFull3921": {
@@ -255,47 +213,41 @@ window.BIOMASTER_COMPUTE_STATUS = {
     },
     "experimentClosure": {
       "overallStatus": "not_complete",
-      "passedRequiredChecks": 1,
+      "passedRequiredChecks": 7,
       "totalRequiredChecks": 8,
       "failedRequiredChecks": [
-        "main_diffdock_complete",
-        "single_ligand_rescue_complete_or_documented",
-        "multi_ligand_rescue_complete",
-        "final_merge_outputs_exist",
-        "final_merged_rows_sufficient",
-        "finalizer_completed",
         "post_finalization_completed"
       ],
-      "createdUtc": "2026-06-05T11:19:39.649078Z",
+      "createdUtc": "2026-06-09T07:09:12.315734Z",
       "auditJson": "outputs/sota_validation/experiment_closure_audit/experiment_closure_audit.json",
       "auditMarkdown": "outputs/sota_validation/experiment_closure_audit/EXPERIMENT_CLOSURE_AUDIT.md",
       "interpretationZh": "全部 required checks 通过前，实验计算闭环不能标记完成。"
     },
     "ligandRescue": {
-      "status": "queued_for_auto_start_after_main_queue",
+      "status": "prepared_not_started_gpu_busy",
       "ligandId": "CHEMBL3039504",
       "queuedRows": 998,
       "jobs": 16,
-      "watcherReady": false,
+      "watcherReady": null,
       "watcherLog": "logs/diffdock_ligand_rescue_after_full.log",
-      "interpretationZh": "CHEMBL3039504 triggered clustered DiffDock technical failures with the original multi-fragment/salt SDF. A largest-organic-parent rescue queue has been prepared and should be run only after a real GPU slot is free. A background watcher is active and will start this rescue queue after the main full DiffDock queue completes and GPUs are confirmed idle."
+      "interpretationZh": "CHEMBL3039504 triggered clustered DiffDock technical failures with the original multi-fragment/salt SDF. A largest-organic-parent rescue queue has been prepared and should be run only after a real GPU slot is free."
     },
     "multiLigandRescue": {
       "status": "queued_for_auto_start_after_single_ligand_rescue",
-      "candidateLigands": 48,
-      "queuedLigands": 48,
-      "queuedRows": 47871,
-      "jobs": 768,
-      "watcherReady": false,
+      "candidateLigands": 88,
+      "queuedLigands": 88,
+      "queuedRows": 89787,
+      "jobs": 1440,
+      "watcherReady": null,
       "watcherLog": "logs/diffdock_multi_ligand_rescue_after_single.log",
-      "latestAuditScoredLigands": 594,
-      "latestAuditScoredRows": 601500,
-      "latestAuditMissingRows": 135843,
-      "latestAuditMissingPct": 22.584,
-      "latestAuditRescueRecommendedLigands": 64,
-      "latestAuditRescueRecommendedRows": 64837,
-      "latestAuditZeroCompletedChunks": 205,
-      "latestAuditMaskRotateZeroCompletedChunks": 205,
+      "latestAuditScoredLigands": 895,
+      "latestAuditScoredRows": 913170,
+      "latestAuditMissingRows": 204235,
+      "latestAuditMissingPct": 22.3655,
+      "latestAuditRescueRecommendedLigands": 89,
+      "latestAuditRescueRecommendedRows": 90785,
+      "latestAuditZeroCompletedChunks": 284,
+      "latestAuditMaskRotateZeroCompletedChunks": 284,
       "interpretationZh": "预构建 multi-ligand rescue 队列是当前可运行快照；最终 watcher 会在主队列和单 ligand rescue 完成后重跑 failure audit，再按最新技术缺失结果重建 rescue 队列。"
     }
   },

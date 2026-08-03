@@ -1,0 +1,338 @@
+#!/usr/bin/env python3
+"""Build the auditable V8 international-frontier method decision matrix."""
+
+from __future__ import annotations
+
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+import pandas as pd
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "outputs/affinity_experiment_package_v8/report"
+
+
+ROWS = [
+    {
+        "方法": "ChEMBL 37 同靶点阳性/阴性控制",
+        "类别": "部署域校准",
+        "主要输入": "严格人源 single-protein binding 记录；Ki/Kd/IC50；结构",
+        "主要输出": "阳性、阴性/不活跃、灰区与逐靶点控制分布",
+        "物理接近度": "实验历史标签，但 assay 条件异质",
+        "适用规模": "全部项目靶点",
+        "主要失效模式": "inactive 不等于统一热力学真阴性；标签与条件噪声",
+        "本地使用与结果": "509,172 严格 pair；扩展控制 8,119 条覆盖 171 靶点",
+        "正式决策": "主校准基准",
+        "证据阶段": "Target gate / Pair percentile",
+        "主要来源": "https://www.ebi.ac.uk/chembl/",
+    },
+    {
+        "方法": "Ligand similarity / target-specific QSAR",
+        "类别": "配体知识近邻",
+        "主要输入": "同靶点已知配体、分子指纹或描述符",
+        "主要输出": "相似度、适用域和同靶点活性预测",
+        "物理接近度": "间接；依赖已知化学系列",
+        "适用规模": "同靶点局部化学空间",
+        "主要失效模式": "新骨架外推弱；高分常是已有知识再发现",
+        "本地使用与结果": "历史 PR-AUC 0.915，高于 ConPLEx；用于 leakage 风险识别",
+        "正式决策": "否决/阳性对照，不作远程发现加分",
+        "证据阶段": "Hard novelty gate",
+        "主要来源": "https://doi.org/10.1021/jm300434a",
+    },
+    {
+        "方法": "ConPLEx",
+        "类别": "序列 DTI 检索",
+        "主要输入": "SMILES 表征与蛋白序列语言表征",
+        "主要输出": "drug-protein 相容性排序分数",
+        "物理接近度": "低；没有显式复合物结构",
+        "适用规模": "十万至百万 pair",
+        "主要失效模式": "跨靶点尺度不统一；知识分布和配体近邻偏差",
+        "本地使用与结果": "中位 PR-AUC 0.605，未稳定超过 ligand similarity",
+        "正式决策": "低成本召回/预算分配",
+        "证据阶段": "Retrieval only",
+        "主要来源": "https://pubmed.ncbi.nlm.nih.gov/37289807/",
+    },
+    {
+        "方法": "DrugCLIP",
+        "类别": "口袋-配体 dense retrieval",
+        "主要输入": "三维口袋与分子表征",
+        "主要输出": "共同嵌入空间 cosine 与双向 rank",
+        "物理接近度": "中低；口袋感知但不是能量或 Kd",
+        "适用规模": "十万至百万 pair",
+        "主要失效模式": "retrieval score 被误读为亲和；训练口袋域偏移",
+        "本地使用与结果": "已覆盖 201,634 个严格远程 pair，用于 30,000 队列",
+        "正式决策": "结构计算预算分配",
+        "证据阶段": "Retrieval only",
+        "主要来源": "https://proceedings.nips.cc/paper_files/paper/2023/file/8bd31288ad8e9a31d519fdeede7ee47d-Paper-Conference.pdf",
+    },
+    {
+        "方法": "实验 holo 结构",
+        "类别": "受体与口袋定义",
+        "主要输入": "PDB 蛋白-配体复合物、链、参考配体",
+        "主要输出": "受体构象、结合位点、docking box",
+        "物理接近度": "高的 target-level 结构证据",
+        "适用规模": "有合适结构的靶点",
+        "主要失效模式": "链/构象/辅因子/突变不匹配；参考配体口袋不代表所有药物",
+        "本地使用与结果": "当前 discovery 队列 13,529 pair 使用核验实验 holo",
+        "正式决策": "优先受体来源",
+        "证据阶段": "Structure gate",
+        "主要来源": "https://www.wwpdb.org/",
+    },
+    {
+        "方法": "AlphaFold2 + P2Rank/PUResNet",
+        "类别": "预测受体与口袋",
+        "主要输入": "蛋白序列或 AlphaFold 单体结构",
+        "主要输出": "蛋白骨架、候选口袋中心和可做性",
+        "物理接近度": "target-level；不区分具体药物",
+        "适用规模": "无合适 holo 的靶点",
+        "主要失效模式": "apo/holo 差异、诱导契合、辅因子、膜环境和多聚体缺失",
+        "本地使用与结果": "3,466 个 discovery pair 使用预测结构回退",
+        "正式决策": "回退结构来源，证据降级",
+        "证据阶段": "Structure gate",
+        "主要来源": "https://www.nature.com/articles/s41586-021-03819-2",
+    },
+    {
+        "方法": "GNINA CNNaffinity + Vina",
+        "类别": "结构 docking 与评分",
+        "主要输入": "固定受体、box、小分子三维构象",
+        "主要输出": "pose、CNNaffinity、CNNscore、Vina affinity",
+        "物理接近度": "中高的条件结构假说",
+        "适用规模": "万级至十万级结构精筛",
+        "主要失效模式": "受体构象、质子化、大小偏差、跨靶点不可比和 decoy shortcut",
+        "本地使用与结果": "349 靶点可评估；原校准 234 靶点至少一通道通过",
+        "正式决策": "仅对通过同靶点控制的通道作为主 pair 证据",
+        "证据阶段": "Target gate / Pair gate",
+        "主要来源": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8191141/",
+    },
+    {
+        "方法": "Target-centered size adjustment",
+        "类别": "评分偏差校正",
+        "主要输入": "阴性控制 GNINA 分数、重原子数、可旋转键、形式电荷",
+        "主要输出": "去大小趋势后的残差与同靶点阴性分位数",
+        "物理接近度": "统计校正，不新增结合事实",
+        "适用规模": "全部 GNINA 控制与候选",
+        "主要失效模式": "可能同时削弱真实的接触面积贡献；不能替代 ligand efficiency 实验",
+        "本地使用与结果": "重原子数相关中位数：CNN 0.657、Vina 0.389；已设 0.50 分位硬门",
+        "正式决策": "主 pair 证据的必要反偏门",
+        "证据阶段": "Pair gate",
+        "主要来源": "项目 V8 控制审计",
+    },
+    {
+        "方法": "Boltz-2",
+        "类别": "共折叠与 affinity 基础模型",
+        "主要输入": "蛋白序列、小分子、可选模板/MSA",
+        "主要输出": "复合物结构、置信度与 affinity 相关输出",
+        "物理接近度": "中高，但仍为学习模型条件预测",
+        "适用规模": "千级正交复核",
+        "主要失效模式": "训练先验、target swap/突变不敏感、原始概率跨靶点误用",
+        "本地使用与结果": "旧 3,000 已完成约 2,988；因缺负校准不接管主排序",
+        "正式决策": "GNINA 后结构复核与否决",
+        "证据阶段": "Orthogonal review",
+        "主要来源": "https://www.biorxiv.org/content/10.1101/2025.06.14.659707v1",
+    },
+    {
+        "方法": "Nesso-1",
+        "类别": "快速共折叠 affinity 基础模型",
+        "主要输入": "蛋白序列与配体 SMILES/SDF；当前版本不接受指定口袋或结构模板",
+        "主要输出": "binder probability、log10(IC50/uM) 与界面不确定性",
+        "物理接近度": "中；内部形成粗粒度复合物表征，但没有项目受体/口袋约束",
+        "适用规模": "千级至十万级快速正交筛选",
+        "主要失效模式": "公共训练数据重叠、分子量捷径、未知口袋定位和跨 assay 尺度差异",
+        "本地使用与结果": "官方代码/权重已部署；同 CORDIAL 的 20 靶点/474 控制基准运行中",
+        "正式决策": "等待本地正负校准；不得直接并入总分",
+        "证据阶段": "Candidate model under local benchmark",
+        "主要来源": "https://github.com/recursionpharma/nesso",
+    },
+    {
+        "方法": "CORDIAL",
+        "类别": "去同源结构亲和模型",
+        "主要输入": "蛋白-配体复合物相互作用距离图",
+        "主要输出": "八个 pChEMBL 阈值概率",
+        "物理接近度": "中高的学习型结构评分",
+        "适用规模": "已生成 pose 的 pair",
+        "主要失效模式": "训练构象与 docking pose 部署域偏移；模型输出不等于 binder probability",
+        "本地使用与结果": "20 靶点/474 控制中位 AUROC 0.528；未在任何靶点同时超过 GNINA 双通道",
+        "正式决策": "不进入主排序；保留负结果与个别靶点研究",
+        "证据阶段": "Rejected after local benchmark",
+        "主要来源": "https://pubmed.ncbi.nlm.nih.gov/41100673/",
+    },
+    {
+        "方法": "EviDTI / DTIAM",
+        "类别": "不确定性感知与多任务 DTI",
+        "主要输入": "分子图/三维特征、蛋白序列及已知 DTI 标签",
+        "主要输出": "interaction、affinity、MoA 或 epistemic uncertainty",
+        "物理接近度": "低至中；无显式项目复合物约束",
+        "适用规模": "大规模序列级召回",
+        "主要失效模式": "随机负样本、cold-start CV 与真实稀疏远程部署域不一致",
+        "本地使用与结果": "尚未纳入；其不确定性思想由 bootstrap 和 target-wise permission 实现",
+        "正式决策": "前沿对照，不直接加分",
+        "证据阶段": "Retrieval / uncertainty reference",
+        "主要来源": "https://www.nature.com/articles/s41467-025-62235-6",
+    },
+    {
+        "方法": "SCOPE-DTI",
+        "类别": "半归纳 drug-to-target fishing",
+        "主要输入": "药物二维/三维结构、AlphaFold 蛋白结构和多源已知 DTI",
+        "主要输出": "给定药物对固定蛋白词表的 interaction probability 与 target rank",
+        "物理接近度": "低至中；结构编码与已知交互监督混合",
+        "适用规模": "新药物对已知靶点词表的全靶点预测",
+        "主要失效模式": "靶点非 cold-start；表现随已知交互数量上升；与公共数据库重叠",
+        "本地使用与结果": "前瞻参考：论文 5 个未表征 pair 中 CETSA/BLI 确认 4 个；未作主门控",
+        "正式决策": "可作已知空间对照，不作远程物理发现硬证据",
+        "证据阶段": "Retrieval / literature comparator",
+        "主要来源": "https://www.nature.com/articles/s41467-025-66311-9",
+    },
+    {
+        "方法": "AlphaFold3 / Protenix / FlowDock",
+        "类别": "复合物共折叠与柔性 docking",
+        "主要输入": "蛋白序列、配体与可选模板/MSA",
+        "主要输出": "复合物 pose 与结构置信度，部分含 affinity",
+        "物理接近度": "中高的结构生成",
+        "适用规模": "少量疑难 pair 或无 holo 靶点",
+        "主要失效模式": "pose 成功不等于 affinity；训练结构泄漏与部署域差异",
+        "本地使用与结果": "未作为 334k 主筛；计算成本和许可/部署条件不适合全量",
+        "正式决策": "少量争议 pair 复核",
+        "证据阶段": "Orthogonal review",
+        "主要来源": "https://www.nature.com/articles/s41586-024-07487-w",
+    },
+    {
+        "方法": "PoseBusters + ProLIF",
+        "类别": "几何与相互作用审计",
+        "主要输入": "候选复合物 pose",
+        "主要输出": "碰撞/几何失败、关键残基相互作用指纹",
+        "物理接近度": "结构合理性否决",
+        "适用规模": "千级至万级 pose",
+        "主要失效模式": "通过几何检查不代表有利自由能",
+        "本地使用与结果": "计划用于最终 1,000–2,000 pose 正交复核",
+        "正式决策": "否决器，不作亲和加分",
+        "证据阶段": "Pose veto",
+        "主要来源": "https://arxiv.org/abs/2308.05777",
+    },
+    {
+        "方法": "短程 MD",
+        "类别": "动力学压力测试",
+        "主要输入": "可靠 pose、蛋白/配体参数、显式溶剂体系",
+        "主要输出": "pose 稳定性、关键接触和快速崩塌信号",
+        "物理接近度": "较高但时间尺度有限",
+        "适用规模": "最终几十条",
+        "主要失效模式": "短程稳定不等于结合自由能；参数和初始 pose 敏感",
+        "本地使用与结果": "已试跑少量体系；不用于 1000 条第一轮召回",
+        "正式决策": "末端否决/解释",
+        "证据阶段": "Late orthogonal review",
+        "主要来源": "项目 MD 审计",
+    },
+    {
+        "方法": "FEP / ABFE",
+        "类别": "物理自由能",
+        "主要输入": "明确靶点、可靠 pose、严格体系准备和采样",
+        "主要输出": "相对或绝对结合自由能估计",
+        "物理接近度": "高",
+        "适用规模": "同系列或最终少量 pair",
+        "主要失效模式": "初始 pose、质子化、力场和采样收敛；计算昂贵",
+        "本地使用与结果": "不适合 334,749 个 target-fishing 空间",
+        "正式决策": "命中后少量精修",
+        "证据阶段": "Post-hit",
+        "主要来源": "https://www.nature.com/articles/s42004-023-01019-9",
+    },
+    {
+        "方法": "Open Targets / STRING / TxGNN / 表达签名",
+        "类别": "疾病与机制知识",
+        "主要输入": "遗传、组学、临床、网络、表达与知识图谱",
+        "主要输出": "target-disease、drug-disease 和组织机制解释",
+        "物理接近度": "疾病层；不证明直接结合",
+        "适用规模": "命中后全部 pair",
+        "主要失效模式": "知识密度偏差、热门靶点偏差和方向性不明确",
+        "本地使用与结果": "Open Targets 已补全；不进入第一阶段亲和主排序",
+        "正式决策": "实验 hit 后适应症收敛",
+        "证据阶段": "Post-binding mechanism",
+        "主要来源": "https://platform.opentargets.org/",
+    },
+    {
+        "方法": "Bento / CACHE / LIT-PCBA / PLINDER / CleanSplit / NTAB",
+        "类别": "无偏与前瞻评价设计",
+        "主要输入": "确认阴性、时间切分、蛋白/口袋去同源、ligand novelty tiers",
+        "主要输出": "更接近部署域的 AUROC/AUPR、富集与前瞻 hit rate",
+        "物理接近度": "评价框架",
+        "适用规模": "所有模型和最终实验",
+        "主要失效模式": "公开基准仍可能与项目靶点、化学域和实验平台不同",
+        "本地使用与结果": "采用同靶点控制、相似度<0.40、同源门控和含对照 Assay1000；Bento 支持保留 GNINA 基线",
+        "正式决策": "项目验证标准",
+        "证据阶段": "Benchmark / prospective validation",
+        "主要来源": "https://openreview.net/forum?id=kIxAQxUZHq",
+    },
+    {
+        "方法": "TPP/CETSA/PISA",
+        "类别": "无标记细胞或裂解液 target engagement",
+        "主要输入": "药物处理、温度/浓度梯度、蛋白质组质谱或靶向抗体",
+        "主要输出": "蛋白热稳定性/溶解度变化与剂量依赖 target engagement",
+        "物理接近度": "高的实验接近度，但稳定性变化可含间接效应",
+        "适用规模": "少量药物的全蛋白组找靶或大量 pair 的靶向验证",
+        "主要失效模式": "无热位移不等于不结合；膜蛋白覆盖、细胞表达和间接复合物效应",
+        "本地使用与结果": "尚未实施；适合作为首批计算候选后的正交 target-deconvolution",
+        "正式决策": "建议纳入前瞻实验验证路线",
+        "证据阶段": "Prospective experiment",
+        "主要来源": "https://www.nature.com/articles/s41467-025-66311-9",
+    },
+    {
+        "方法": "LiP-MS / affinity chemoproteomics / ABPP",
+        "类别": "蛋白组级直接结合与位点发现",
+        "主要输入": "药物或竞争探针、天然蛋白组、有限蛋白水解或反应性位点质谱",
+        "主要输出": "候选蛋白、受影响肽段/残基和竞争剂量响应",
+        "物理接近度": "高；可在复杂蛋白组中接近直接作用位点",
+        "适用规模": "少量重点药物的全蛋白组 target deconvolution",
+        "主要失效模式": "覆盖和定量缺失；探针偏差；共价/可修饰位点偏好；成本较高",
+        "本地使用与结果": "未用于计算排序；作为广谱 target-fishing 的实验替代/补充路线",
+        "正式决策": "对优先药物子集具有高价值",
+        "证据阶段": "Prospective experiment",
+        "主要来源": "https://pubmed.ncbi.nlm.nih.gov/38662832/",
+    },
+    {
+        "方法": "SPR/BLI/MST/ITC/酶活或通道功能",
+        "类别": "逐 pair 正交验证",
+        "主要输入": "纯化蛋白、候选药物、浓度梯度与 assay-specific controls",
+        "主要输出": "Kd/kon/koff、热力学参数、功能 IC50/EC50 或直接 engagement",
+        "物理接近度": "最高的项目决策证据",
+        "适用规模": "百至千条初筛及 hit 复核",
+        "主要失效模式": "固定化伪影、溶解/聚集、蛋白状态、功能效应与直接结合混淆",
+        "本地使用与结果": "Assay1000 设计包含逐靶点阳性、阴性和技术重复",
+        "正式决策": "定义真实前瞻命中率",
+        "证据阶段": "Prospective experiment / final arbiter",
+        "主要来源": "https://www.nature.com/articles/s41467-025-66311-9",
+    },
+]
+
+
+def main() -> None:
+    OUT.mkdir(parents=True, exist_ok=True)
+    frame = pd.DataFrame(ROWS)
+    csv_path = OUT / "INTERNATIONAL_FRONTIER_METHOD_DECISION_MATRIX_V8.csv"
+    xlsx_path = OUT / "INTERNATIONAL_FRONTIER_METHOD_DECISION_MATRIX_V8.xlsx"
+    json_path = OUT / "INTERNATIONAL_FRONTIER_METHOD_DECISION_MATRIX_V8_SUMMARY.json"
+    frame.to_csv(csv_path, index=False)
+    with pd.ExcelWriter(xlsx_path, engine="openpyxl") as writer:
+        frame.to_excel(writer, sheet_name="方法决策矩阵", index=False)
+        sheet = writer.sheets["方法决策矩阵"]
+        sheet.freeze_panes = "A2"
+        sheet.auto_filter.ref = sheet.dimensions
+        widths = [31, 22, 42, 42, 28, 25, 48, 48, 34, 29, 58]
+        for index, width in enumerate(widths, start=1):
+            sheet.column_dimensions[chr(64 + index)].width = width
+    summary = {
+        "status": "passed",
+        "created_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "method_rows": int(len(frame)),
+        "decision_counts": frame["正式决策"].value_counts().to_dict(),
+        "csv": str(csv_path.relative_to(ROOT)),
+        "xlsx": str(xlsx_path.relative_to(ROOT)),
+    }
+    json_path.write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()
