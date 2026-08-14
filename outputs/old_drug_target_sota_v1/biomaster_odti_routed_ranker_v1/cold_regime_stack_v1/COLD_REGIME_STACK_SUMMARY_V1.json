@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-08-13T10:25:13.432624+00:00",
+  "status": "PASS",
+  "processed_runs": 65,
+  "checks": {
+    "at_least_all_16_existing_runs_processed": true,
+    "exact_three_fixed_stacks_per_run": true,
+    "all_metrics_finite": true,
+    "all_stack_test_predictions_bounded": true
+  },
+  "fit_rule": "Fixed C=0.1 balanced logistic stack fit on frozen validation predictions only; no test-label model selection",
+  "metrics_sha256": "7d2d71da224cb7bc6c30991ea74ec90fd5d1987a410a99c814ec0db9c23da226",
+  "aggregate_sha256": "4cd5ffb2fa9f8ef7cdb9e37a34a8685dada01fd4fdd13140db298275f6e03e0c",
+  "claim_status": "INTERNAL_VALIDATION_STACK; MULTI_SEED_AND_EXTERNAL_PUBLIC_COMPARATORS_REQUIRED"
+}

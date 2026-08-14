@@ -1,0 +1,249 @@
+{
+  "created_utc": "2026-08-13T20:56:43.684517+00:00",
+  "status": "PASS",
+  "claim_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED",
+  "core_candidate_claim": "Conditional on label-independent experimental-structure qualification, fit a bounded adapter over a frozen cross-fitted DTI base, constrain upper-tail base-relative ranking regret in both target and old-drug query groups, and require exact base invariance outside evidence eligibility.",
+  "rows": [
+    {
+      "concept": "drug_centric_listwise_ranking",
+      "prior_work": "BRDTI; NeuRank",
+      "year": "2017;2021",
+      "primary_source": "https://doi.org/10.1016/j.cmpb.2017.09.003; https://pmc.ncbi.nlm.nih.gov/articles/PMC8620576/",
+      "direct_collision": "Direct collision with claiming listwise target ranking as new",
+      "not_claimed": "Drug-centric or listwise ranking is not new and is only an auxiliary loss.",
+      "eqir_specific_difference": "The candidate estimand is the incremental value of qualified structure evidence after a frozen cross-fitted nonstructural offset, under both query directions.",
+      "required_falsification": "FULL_EQIR_WITHOUT_DRUG_QUERY_LOSS and FULL_EQIR_WITHOUT_TARGET_QUERY_LOSS; both grouped directional bootstraps and within-drug permutation gate.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "confidence_aware_multimodal_fusion",
+      "prior_work": "DrugCMF",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1609/aaai.v40i32.39972",
+      "direct_collision": "Direct collision with generic reliability gating",
+      "not_claimed": "Confidence-aware 1D/3D fusion is not claimed.",
+      "eqir_specific_difference": "Qualification is a deterministic label-independent receptor/QC predicate; the optional branch may only fit cross-fitted residuals and cannot relearn the full label.",
+      "required_falsification": "Compare full EQIR with no qualification and with no residualization under identical frozen base predictions.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "structure_confidence_fusion",
+      "prior_work": "ConfDTI",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1021/acs.jcim.6c01036",
+      "direct_collision": "Collision with confidence-weighted predicted-structure branch",
+      "not_claimed": "Structure-quality weighting or pLDDT-guided fusion is not claimed.",
+      "eqir_specific_difference": "Experimental evidence availability controls whether a residual increment is legally defined; quality does not supply a generic learned fusion weight.",
+      "required_falsification": "Qualification-independence audit plus target-QC-feature ablation and exact fallback equality test.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "target_prior_causal_debiasing",
+      "prior_work": "TAPB",
+      "year": "2025",
+      "primary_source": "https://doi.org/10.1038/s41467-025-66915-1",
+      "direct_collision": "Direct collision with generic target-prior debiasing",
+      "not_claimed": "Generic target-prior or causal debiasing is not claimed.",
+      "eqir_specific_difference": "EQIR does not estimate a causal target-prior intervention; it asks whether target-local structural evidence explains held-out residual interaction signal beyond a frozen base.",
+      "required_falsification": "Within-target and within-drug score-permutation nulls, macro-directional paired bootstrap, and no-residualization ablation.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "mutual_molecule_protein_retrieval_and_optimal_transport",
+      "prior_work": "KGOT",
+      "year": "2026",
+      "primary_source": "https://openreview.net/forum?id=UoYdZQIZWj",
+      "direct_collision": "Collision with Sinkhorn or OT bidirectional retrieval as standalone novelty",
+      "not_claimed": "Mutual retrieval and optimal transport are not claimed; EQIR uses no OT pseudo-labeling.",
+      "eqir_specific_difference": "The two query directions constrain the incremental residual value rather than define a new retrieval architecture.",
+      "required_falsification": "Remove each query loss separately; require structure increment to retain both directional gains versus the nonnovel blend.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "cold_start_relational_sequence_alignment",
+      "prior_work": "CrossLinker",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1021/acs.jcim.5c03216",
+      "direct_collision": "Collision with generic cold-start multimodal alignment",
+      "not_claimed": "Cold-start alignment is not claimed as a new mechanism.",
+      "eqir_specific_difference": "Scaffold and homology cold axes are identification and stress-test axes for the qualified residual, not the source of novelty.",
+      "required_falsification": "Both target-homology-cluster and drug-scaffold bootstrap lower bounds must exceed zero.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "structure_as_privileged_training_information",
+      "prior_work": "LUPI protein binding affinity",
+      "year": "2018",
+      "primary_source": "https://pubmed.ncbi.nlm.nih.gov/30442086/",
+      "direct_collision": "Collision with claiming optional structure assistance and sequence fallback as new",
+      "not_claimed": "Optional structure with sequence fallback is not claimed by itself.",
+      "eqir_specific_difference": "When qualification is zero, the final logit is definitionally and bitwise the frozen base; when one, structure can only explain a cross-fitted pseudo-residual.",
+      "required_falsification": "Bitwise exact fallback audit and BASE_PLUS_RESIDUAL_WITHOUT_EXACT_FALLBACK_CONSTRAINT ablation.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "pocket_detection_and_structure_fusion",
+      "prior_work": "EMPDTA; PocketDTA; PHGDTI",
+      "year": "2024;2024;2026",
+      "primary_source": "https://doi.org/10.3390/molecules29122912; https://doi.org/10.1093/bioinformatics/btae594; https://doi.org/10.1177/15578666261469586",
+      "direct_collision": "Direct collision with a generic pocket branch or structure graph encoder",
+      "not_claimed": "Pocket detection, pocket encoding, or atom-residue fusion is not claimed.",
+      "eqir_specific_difference": "The method consumes a frozen strict experimental-pocket protocol and studies incremental evidence value; it does not propose a pocket encoder.",
+      "required_falsification": "Receptor/hash/redocking qualification audit; pocket/QC inputs cannot read current-fold interaction labels.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "missing_not_at_random_dti_labels",
+      "prior_work": "FNML",
+      "year": "2019",
+      "primary_source": "https://doi.org/10.1109/TNB.2019.2909293",
+      "direct_collision": "Collision with generic MNAR wording",
+      "not_claimed": "MNAR interaction-label learning is not claimed.",
+      "eqir_specific_difference": "The missing object is structural evidence observation, not an unobserved DTI label; missing evidence forces an exact base estimand rather than an imputed negative.",
+      "required_falsification": "Verify all missing or failed structure routes have a(t)=0 and zero logit delta; never encode absence as y=0.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "nonhomologous_pocket_target_fishing",
+      "prior_work": "Pocket Hopping",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1021/acs.jmedchem.6c01050",
+      "direct_collision": "Collision with claiming nonhomologous new-target discovery as a method novelty",
+      "not_claimed": "Nonhomologous pocket hopping is an application, not the algorithm claim.",
+      "eqir_specific_difference": "Any novel-target case is supported only if the same frozen qualified-residual mechanism generalizes under homology-cold evaluation.",
+      "required_falsification": "Homology-cluster bootstrap, locked S3 confirmation, and separate new-target application audit.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "arbitrary_missing_modality_fusion",
+      "prior_work": "FMIN",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1016/j.neucom.2026.133351",
+      "direct_collision": "Direct collision with generic optional-branch or skip-missing novelty",
+      "not_claimed": "Dynamic skipping or arbitrary missing-modality fusion is not claimed.",
+      "eqir_specific_difference": "EQIR uses a frozen nonstructural offset, deterministic eligibility, residual-only supervision, and an exact functional invariant rather than a flexible modality fusion network.",
+      "required_falsification": "No-qualification, no-residualization, and no-exact-fallback ablations must each be inferior to full EQIR.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "dynamic_sequence_graph_domain_adversarial_fusion",
+      "prior_work": "MMTF-DTI",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1016/j.jbi.2026.105069",
+      "direct_collision": "Collision with generic dynamic fusion or DANN as a core claim",
+      "not_claimed": "Dynamic sequence/graph fusion and domain-adversarial alignment are not claimed or used as the core.",
+      "eqir_specific_difference": "The candidate contribution is evidence-qualified incremental residual estimation with directional value constraints, not a new encoder or domain discriminator.",
+      "required_falsification": "Beat same-data DTIAM, BioMaster V1, and the frozen nonnovel blend with identical cold axes and five-seed evidence.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "orthogonal_sequential_multimodal_fusion",
+      "prior_work": "Orthogonal Sequential Fusion",
+      "year": "2023-2024",
+      "primary_source": "https://openreview.net/forum?id=XuNkuoihgG",
+      "direct_collision": "Direct collision with claiming orthogonal multimodal fusion as new",
+      "not_claimed": "Orthogonal representations or orthogonal sequential fusion are not claimed; the term is removed from the candidate claim.",
+      "eqir_specific_difference": "The structure branch is constrained by label-independent legal eligibility, a frozen cross-fitted offset, exact no-evidence invariance, and two directional incremental-value gates rather than an orthogonality loss.",
+      "required_falsification": "Qualification, no-residualization, no-exact-fallback, and both query-loss ablations plus dual-axis grouped bootstrap.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "generic_residual_multimodal_fusion",
+      "prior_work": "RRF-Net; RDFNet",
+      "year": "2017",
+      "primary_source": "https://openaccess.thecvf.com/content_iccv_2017/html/Liu_Learning_a_Recurrent_ICCV_2017_paper.html; https://openaccess.thecvf.com/content_ICCV_2017/html/Park_RDFNet_RGB-D_Multi-Level_ICCV_2017_paper.html",
+      "direct_collision": "Direct collision with claiming residual fusion as a standalone innovation",
+      "not_claimed": "Residual multimodal feature fusion is not claimed; residual networks and residual fusion long predate EQIR.",
+      "eqir_specific_difference": "Residual learning is restricted to an induced probability increment over a frozen strongest nonstructural offset and is zero by construction outside a label-independent eligible set.",
+      "required_falsification": "Full mechanism must beat direct fusion and no-residualization controls while satisfying bitwise fallback and both directional gates.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "fine_grained_atom_residue_gated_residual_fusion",
+      "prior_work": "GADFDTI; GATv2-TransDTI",
+      "year": "2026;2026",
+      "primary_source": "https://doi.org/10.3390/molecules31030498; https://doi.org/10.1016/j.ab.2026.116122",
+      "direct_collision": "Direct collision with claiming fine-grained drug-protein interaction maps; gated bidirectional fusion; graph-sequence cross-attention; or residual fusion as EQIR novelty",
+      "not_claimed": "Fine-grained atom-residue maps; graph-sequence cross-attention; bidirectional gating; and residual fusion are not claimed.",
+      "eqir_specific_difference": "GADFDTI and GATv2-TransDTI learn complete warm-start interaction predictors; EQIR conditionally permits only a probability-scale increment over a frozen cold-protocol base and must equal that base when evidence is ineligible.",
+      "required_falsification": "Compare full EQIR with direct structure fusion and no-residualization variants under S3; require both cold-axis bootstrap lower bounds and both directional value gates.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "baseline_relative_group_risk_safe_adaptation",
+      "prior_work": "Batch Spectral Shrinkage; Fair Classifiers that Abstain without Harm; Calibrated Regression Against An Adversary Without Regret",
+      "year": "2019;2024;2025",
+      "primary_source": "https://proceedings.neurips.cc/paper/2019/hash/c6bff625bdb0393992c9d4db0c6bbe45-Abstract.html; https://openreview.net/forum?id=jvveGAbkVx; https://proceedings.mlr.press/v286/deshpande25a.html",
+      "direct_collision": "Direct collision with claiming safe adaptation, no-harm learning, baseline-relative regret or CVaR-style risk control as standalone EQIR novelty",
+      "not_claimed": "Safe transfer, no-harm learning, baseline regret, CVaR and group-risk constraints are not claimed as new.",
+      "eqir_specific_difference": "The candidate restricts a structure adapter by a label-independent experimental-evidence predicate, freezes the cross-fitted DTI base, measures relative ranking regret separately over target and old-drug query groups, controls both upper tails, and is bitwise identical to the base outside eligibility.",
+      "required_falsification": "Compare full safe-dual-query EQIR with the ordinary dual-query objective, target-only and drug-only risk constraints, no-qualification and no-exact-fallback variants, all TCP-inspired controls and both TAPB-inspired controls; require five-seed, dual-cold-axis and both directional gates.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "multisource_decoupling_cross_property_attention_dynamic_multibranch_loss",
+      "prior_work": "MFDR-DTI",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1021/acsomega.5c13460",
+      "direct_collision": "Direct collision with claiming multisource feature decoupling, ordinary multiview fusion, cross-property attention or dynamic auxiliary branch weights as standalone BioMaster novelty",
+      "not_claimed": "Multisource feature decoupling, homogeneous feature preservation, shared cross-property attention and dynamic multibranch loss weighting are not claimed as new.",
+      "eqir_specific_difference": "EQIR does not depend on a new fusion backbone: it conditionally adapts a frozen cross-fitted DTI base only where experimental evidence is label-independently eligible, is exactly identical to the base otherwise, and controls base-relative ranking-regret upper tails separately for target and old-drug queries.",
+      "required_falsification": "Compare full EQIR with frozen-base, capacity-matched direct multiview fusion and multibranch auxiliary-supervision controls under identical leak-free S1-S3 folds and five seeds; require both cold-axis confidence intervals, target-macro noninferiority, drug-macro improvement and both directional permutation gates.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    },
+    {
+      "concept": "asymmetric_dynamic_gating_latent_signal_coordination_bidirectional_alignment",
+      "prior_work": "AD-LSF",
+      "year": "2026",
+      "primary_source": "https://doi.org/10.1021/acsomega.6c02700",
+      "direct_collision": "Direct collision with claiming asymmetric multimodal gating, dynamic frequency decomposition, latent-space signal disentanglement or bidirectional cross-view alignment as standalone BioMaster novelty",
+      "not_claimed": "Asymmetric dynamic gating, anisotropic/dynamic decomposition, latent signal coordination and bidirectional interactive alignment are not claimed as new.",
+      "eqir_specific_difference": "EQIR leaves the fusion backbone deliberately small and instead defines where structure may change a frozen cross-fitted base, requires exact identity outside label-independent eligibility and constrains the upper tail of base-relative ranking regret in both target and old-drug query groups.",
+      "required_falsification": "Compare full EQIR with corrected capacity-matched asymmetric-gated and bidirectional-alignment controls on the same S1-S3 folds and five seeds; require dual cold-axis confidence intervals, target-macro noninferiority, drug-macro improvement, both query permutation gates and exact fallback.",
+      "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+    }
+  ],
+  "checks": {
+    "one_collision_added": true,
+    "collision_and_differential_concepts_match": true,
+    "every_collision_has_differential": true,
+    "every_differential_has_falsification": true,
+    "no_row_claims_validated_novelty": true,
+    "adlsf_boundary_present": true,
+    "adlsf_release_not_executable": true,
+    "adlsf_headline_not_cold_sota_evidence": true,
+    "adlsf_control_frozen_before_formal_join": true,
+    "adlsf_controls_conditional_on_stage0": true
+  },
+  "new_v5_boundary": {
+    "paper": "AD-LSF",
+    "standalone_claims_removed": [
+      "asymmetric dynamic gated modulation",
+      "anisotropic convolution and dynamic decomposition",
+      "latent signal coordination or disentanglement",
+      "bidirectional cross-view alignment"
+    ],
+    "release_audit_result": "The paper's warm random-split concepts remain prior art even though the release lacks exact headline splits and a required module, duplicates positives and applies positional encoding by batch slot.",
+    "new_required_controls": [
+      "ADLSF_INSPIRED_ASYMMETRIC_GATED_FUSION",
+      "ADLSF_INSPIRED_BIDIRECTIONAL_ALIGNMENT_FUSION"
+    ],
+    "evidence_status": "CANDIDATE_DIFFERENTIAL_FROZEN_NOT_VALIDATED"
+  },
+  "artifacts": {
+    "parent_collision_matrix": "outputs/old_drug_target_sota_v1/SOTA_ALGORITHM_NOVELTY_COLLISION_MATRIX_V4.csv",
+    "parent_collision_matrix_sha256": "1d276dfa4076f1190cf58bc70d63195749bd6af719e0e81c84ae23269b155106",
+    "collision_matrix_v5": "outputs/old_drug_target_sota_v1/SOTA_ALGORITHM_NOVELTY_COLLISION_MATRIX_V5.csv",
+    "collision_matrix_v5_sha256": "39fdd33a16ad96be9cf8c322db1ee7ca9520be5b30b89019cd3fafafc89a8f22",
+    "parent_differential_v4": "outputs/old_drug_target_sota_v1/EQIR_V3_PRIOR_ART_DIFFERENTIAL_CLAIMS_V4_20260814.json",
+    "parent_differential_v4_sha256": "cc986965342f717b5c55d716524d6b3db2d053b15a9564e041c2e497251ef5f4",
+    "ad_lsf_release_audit": "outputs/old_drug_target_sota_v1/AD_LSF_RELEASED_CODE_DATA_SPLIT_AUDIT_V1.json",
+    "ad_lsf_release_audit_sha256": "e1f04efafef15cab66f1d9cc555d226600d9f6c086e980fdbf13fce2c72056cf",
+    "ad_lsf_control_freeze": "configs/biomaster_eqir_v3_adlsf_control_freeze_20260814.json",
+    "ad_lsf_control_freeze_sha256": "5d7ec56a78e506732081abadf2e51913536160a9a5a1f4c652b86030079b72ab",
+    "primary_paper_matrix_v12": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V12.csv",
+    "primary_paper_matrix_v12_sha256": "b01c1ceb63b53002affc35f3dab387b81118f43bc20b9feed1efee500e7a7df5",
+    "differential_csv": "outputs/old_drug_target_sota_v1/EQIR_V3_PRIOR_ART_DIFFERENTIAL_CLAIMS_V5_20260814.csv",
+    "differential_csv_sha256": "4ffb4b303619560da40220fcf9ba25b21c5039f9bea217393e8ba9f644dae0fd"
+  }
+}

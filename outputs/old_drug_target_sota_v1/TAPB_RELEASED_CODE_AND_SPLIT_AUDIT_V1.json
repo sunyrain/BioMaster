@@ -1,0 +1,498 @@
+{
+  "created_utc": "2026-08-13T20:12:40.386867+00:00",
+  "status": "PASS",
+  "source": {
+    "official_repository": "https://github.com/GaomingL1n/TAPB",
+    "local_root": "third_party/sota_dti_2026/TAPB",
+    "commit": "ac846b1463ecf4a031b84bd6caacb57b25d50d4f",
+    "license_present": true,
+    "released_csv_count": 20,
+    "released_weights_or_precomputed_feature_store_count": 0
+  },
+  "interpretation": "TAPB is direct prior art for target-prior intervention and is a mandatory conceptual control, but its released cluster execution reuses target_test for validation/checkpoint selection and final testing; Davis and smaller BioSNAP/Human releases also contain exact pair overlap, so published headline values are not directly comparable with frozen BioMaster S1-S5",
+  "verified_code_semantics": {
+    "drug_representation": "MolFormer tokenizer feeding a trainable three-layer Transformer encoder",
+    "target_representation": "pre-extracted ESM-2 residue embeddings",
+    "confounder_dictionary": "KMeans centers and priors built from df_train target embeddings",
+    "intervention": "confounder alignment followed by prior-weighted backdoor aggregation",
+    "training_augmentations": "target residue deletion, target feature mutation, and drug masked-language modeling",
+    "checkpoint_selection": "maximum validation AUROC",
+    "cluster_evaluation": "the same target_test_with_id.csv is assigned to validation and test"
+  },
+  "protocols": {
+    "bindingdb_random": {
+      "splits": {
+        "train": {
+          "rows": 34439,
+          "positives": 14583,
+          "negatives": 19856,
+          "unique_drugs": 13887,
+          "unique_targets": 2347,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "val": {
+          "rows": 4920,
+          "positives": 2017,
+          "negatives": 2903,
+          "unique_drugs": 4050,
+          "unique_targets": 1083,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "test": {
+          "rows": 9840,
+          "positives": 4074,
+          "negatives": 5766,
+          "unique_drugs": 6951,
+          "unique_targets": 1441,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        }
+      },
+      "comparisons": {
+        "train_val": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 3609,
+          "target_overlap_count": 980,
+          "right_drugs_seen_in_left_fraction": 0.8911111111111111,
+          "right_targets_seen_in_left_fraction": 0.9048938134810711
+        },
+        "train_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 6281,
+          "target_overlap_count": 1245,
+          "right_drugs_seen_in_left_fraction": 0.9036109912242842,
+          "right_targets_seen_in_left_fraction": 0.8639833448993754
+        },
+        "val_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 1820,
+          "target_overlap_count": 808,
+          "right_drugs_seen_in_left_fraction": 0.2618328298086606,
+          "right_targets_seen_in_left_fraction": 0.5607217210270645
+        }
+      }
+    },
+    "bindingdb_cluster": {
+      "splits": {
+        "source_train": {
+          "rows": 14928,
+          "positives": 5640,
+          "negatives": 9288,
+          "unique_drugs": 7476,
+          "unique_targets": 1231,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "target_train": {
+          "rows": 7114,
+          "positives": 3388,
+          "negatives": 3726,
+          "unique_drugs": 4156,
+          "unique_targets": 654,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "target_test": {
+          "rows": 1779,
+          "positives": 826,
+          "negatives": 953,
+          "unique_drugs": 1493,
+          "unique_targets": 356,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        }
+      },
+      "comparisons": {
+        "source_train_target_train": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 0,
+          "target_overlap_count": 0,
+          "right_drugs_seen_in_left_fraction": 0.0,
+          "right_targets_seen_in_left_fraction": 0.0
+        },
+        "source_train_target_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 0,
+          "target_overlap_count": 0,
+          "right_drugs_seen_in_left_fraction": 0.0,
+          "right_targets_seen_in_left_fraction": 0.0
+        },
+        "target_train_target_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 958,
+          "target_overlap_count": 315,
+          "right_drugs_seen_in_left_fraction": 0.6416610850636303,
+          "right_targets_seen_in_left_fraction": 0.8848314606741573
+        }
+      }
+    },
+    "biosnap_random": {
+      "splits": {
+        "train": {
+          "rows": 19224,
+          "positives": 9684,
+          "negatives": 9540,
+          "unique_drugs": 4406,
+          "unique_targets": 2173,
+          "duplicate_rows_within_split": 3,
+          "duplicate_pairs_within_split": 3
+        },
+        "val": {
+          "rows": 2747,
+          "positives": 1398,
+          "negatives": 1349,
+          "unique_drugs": 1911,
+          "unique_targets": 1308,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "test": {
+          "rows": 5493,
+          "positives": 2748,
+          "negatives": 2745,
+          "unique_drugs": 2913,
+          "unique_targets": 1822,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        }
+      },
+      "comparisons": {
+        "train_val": {
+          "exact_pair_overlap": 1,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 1861,
+          "target_overlap_count": 1301,
+          "right_drugs_seen_in_left_fraction": 0.9738356881214024,
+          "right_targets_seen_in_left_fraction": 0.9946483180428135
+        },
+        "train_test": {
+          "exact_pair_overlap": 3,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 2833,
+          "target_overlap_count": 1815,
+          "right_drugs_seen_in_left_fraction": 0.9725369035358736,
+          "right_targets_seen_in_left_fraction": 0.9961580680570802
+        },
+        "val_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 1276,
+          "target_overlap_count": 1094,
+          "right_drugs_seen_in_left_fraction": 0.43803638860281496,
+          "right_targets_seen_in_left_fraction": 0.6004390779363337
+        }
+      }
+    },
+    "biosnap_cluster": {
+      "splits": {
+        "source_train": {
+          "rows": 9766,
+          "positives": 5001,
+          "negatives": 4765,
+          "unique_drugs": 2541,
+          "unique_targets": 1279,
+          "duplicate_rows_within_split": 1,
+          "duplicate_pairs_within_split": 1
+        },
+        "target_train": {
+          "rows": 3628,
+          "positives": 1789,
+          "negatives": 1839,
+          "unique_drugs": 1503,
+          "unique_targets": 848,
+          "duplicate_rows_within_split": 2,
+          "duplicate_pairs_within_split": 2
+        },
+        "target_test": {
+          "rows": 907,
+          "positives": 455,
+          "negatives": 452,
+          "unique_drugs": 678,
+          "unique_targets": 472,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        }
+      },
+      "comparisons": {
+        "source_train_target_train": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 0,
+          "target_overlap_count": 0,
+          "right_drugs_seen_in_left_fraction": 0.0,
+          "right_targets_seen_in_left_fraction": 0.0
+        },
+        "source_train_target_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 0,
+          "target_overlap_count": 0,
+          "right_drugs_seen_in_left_fraction": 0.0,
+          "right_targets_seen_in_left_fraction": 0.0
+        },
+        "target_train_target_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 560,
+          "target_overlap_count": 449,
+          "right_drugs_seen_in_left_fraction": 0.8259587020648967,
+          "right_targets_seen_in_left_fraction": 0.951271186440678
+        }
+      }
+    },
+    "davis_random": {
+      "splits": {
+        "train": {
+          "rows": 2086,
+          "positives": 1043,
+          "negatives": 1043,
+          "unique_drugs": 68,
+          "unique_targets": 372,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 324
+        },
+        "val": {
+          "rows": 3006,
+          "positives": 160,
+          "negatives": 2846,
+          "unique_drugs": 68,
+          "unique_targets": 378,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 134
+        },
+        "test": {
+          "rows": 6011,
+          "positives": 303,
+          "negatives": 5708,
+          "unique_drugs": 68,
+          "unique_targets": 379,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 480
+        }
+      },
+      "comparisons": {
+        "train_val": {
+          "exact_pair_overlap": 126,
+          "label_set_conflicts": 24,
+          "drug_overlap_count": 68,
+          "target_overlap_count": 371,
+          "right_drugs_seen_in_left_fraction": 1.0,
+          "right_targets_seen_in_left_fraction": 0.9814814814814815
+        },
+        "train_test": {
+          "exact_pair_overlap": 177,
+          "label_set_conflicts": 46,
+          "drug_overlap_count": 68,
+          "target_overlap_count": 372,
+          "right_drugs_seen_in_left_fraction": 1.0,
+          "right_targets_seen_in_left_fraction": 0.9815303430079155
+        },
+        "val_test": {
+          "exact_pair_overlap": 246,
+          "label_set_conflicts": 28,
+          "drug_overlap_count": 68,
+          "target_overlap_count": 378,
+          "right_drugs_seen_in_left_fraction": 1.0,
+          "right_targets_seen_in_left_fraction": 0.9973614775725593
+        }
+      }
+    },
+    "human_cold": {
+      "splits": {
+        "train": {
+          "rows": 3453,
+          "positives": 1815,
+          "negatives": 1638,
+          "unique_drugs": 1494,
+          "unique_targets": 1233,
+          "duplicate_rows_within_split": 394,
+          "duplicate_pairs_within_split": 394
+        },
+        "val": {
+          "rows": 155,
+          "positives": 59,
+          "negatives": 96,
+          "unique_drugs": 128,
+          "unique_targets": 123,
+          "duplicate_rows_within_split": 5,
+          "duplicate_pairs_within_split": 5
+        },
+        "test": {
+          "rows": 311,
+          "positives": 121,
+          "negatives": 190,
+          "unique_drugs": 238,
+          "unique_targets": 207,
+          "duplicate_rows_within_split": 7,
+          "duplicate_pairs_within_split": 7
+        }
+      },
+      "comparisons": {
+        "train_val": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 0,
+          "target_overlap_count": 0,
+          "right_drugs_seen_in_left_fraction": 0.0,
+          "right_targets_seen_in_left_fraction": 0.0
+        },
+        "train_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 0,
+          "target_overlap_count": 0,
+          "right_drugs_seen_in_left_fraction": 0.0,
+          "right_targets_seen_in_left_fraction": 0.0
+        },
+        "val_test": {
+          "exact_pair_overlap": 12,
+          "label_set_conflicts": 0,
+          "drug_overlap_count": 47,
+          "target_overlap_count": 60,
+          "right_drugs_seen_in_left_fraction": 0.19747899159663865,
+          "right_targets_seen_in_left_fraction": 0.2898550724637681
+        }
+      }
+    }
+  },
+  "auxiliary_bias_control_files": {
+    "0.5tendency_train.csv": {
+      "rows": 2270,
+      "positives": 1135,
+      "negatives": 1135,
+      "unique_drugs": 1135,
+      "unique_targets": 1135,
+      "duplicate_rows_within_split": 0,
+      "duplicate_pairs_within_split": 2
+    },
+    "drug_high_train.csv": {
+      "rows": 2270,
+      "positives": 1135,
+      "negatives": 1135,
+      "unique_drugs": 2201,
+      "unique_targets": 1135,
+      "duplicate_rows_within_split": 0,
+      "duplicate_pairs_within_split": 0
+    }
+  },
+  "checks": {
+    "repository_commit_matches": true,
+    "twenty_released_csvs_audited": true,
+    "bindingdb_random_rows_34439_4920_9840": true,
+    "biosnap_random_rows_19224_2747_5493": true,
+    "davis_random_rows_2086_3006_6011": true,
+    "human_cold_rows_3453_155_311": true,
+    "bindingdb_cluster_rows_14928_7114_1779": true,
+    "biosnap_cluster_rows_9766_3628_907": true,
+    "bindingdb_random_has_no_cross_split_pair_overlap": true,
+    "biosnap_random_train_val_test_overlap_1_3": true,
+    "davis_pair_overlap_126_177_246": true,
+    "davis_label_conflicts_24_46_28": true,
+    "human_cold_train_val_test_entity_disjoint": true,
+    "human_cold_val_test_pair_overlap_12": true,
+    "cluster_source_target_test_entity_disjoint": true,
+    "cluster_validation_and_test_are_same_file": true,
+    "trainer_selects_best_model_by_validation_auroc": true,
+    "confounder_dictionary_is_built_from_training_frame": true,
+    "released_training_uses_target_deletion_mutation_and_drug_mlm": true,
+    "released_model_uses_backdoor_weighted_probabilities": true,
+    "no_released_weights_or_precomputed_feature_stores": true,
+    "license_present": true
+  },
+  "code_locations": {
+    "cluster_validation_path_line": 45,
+    "cluster_test_path_line": 46,
+    "checkpoint_validation_line": 56,
+    "checkpoint_selection_line": 61,
+    "confounder_dictionary_line": 63,
+    "target_deletion_line": 110,
+    "backdoor_weighting_line": 118
+  },
+  "source_sha256": {
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/cluster/source_train_with_id.csv": "feffc19d64ef4064f10582053e93914e26c7aa8f27ca37e6cfcd7fc0f12a5c47",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/cluster/target_test_with_id.csv": "7fe797fbe01d5cfe4e26b12bcd3bdc88e3c6f6890e3556047a414176b47b9db1",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/cluster/target_train_with_id.csv": "715b7f573227f5d49c55fc5009f01845a19f42546c904f4b9cbf221e618a3941",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/random/0.5tendency_train.csv": "656c8578c6030a0f2de81ab57c04cddbd6191d59e52f0e0653644d1b8211aa4f",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/random/drug_high_train.csv": "2f34a37c04c7fbbce55552dc62456bd9d37752e6836f0ac7cf9996078808bb0c",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/random/test_with_id.csv": "906c50011f0749871fb0d52da1fbb515492290a457ba11314c2ffa6e2ef4afc9",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/random/train_with_id.csv": "885a36b0a8044c5a6acaa99b1ed58916aa21fa2c97df012e4af62ffa489c6c07",
+    "third_party/sota_dti_2026/TAPB/datasets/bindingdb/random/val_with_id.csv": "eec9518dc1139f9a76c9a778ea822e6c691e00c6282ef6942a9ebe66af5b12e3",
+    "third_party/sota_dti_2026/TAPB/datasets/biosnap/cluster/source_train_with_id.csv": "df0cbe19c52814420a8d2dd71fc6bfc75356d137a33cd35d74b69795d28e00c0",
+    "third_party/sota_dti_2026/TAPB/datasets/biosnap/cluster/target_test_with_id.csv": "a1fe50c0b5af044b7c342a1d0b06191bcbd44ef2f9da2482180dc3b80443aef0",
+    "third_party/sota_dti_2026/TAPB/datasets/biosnap/cluster/target_train_with_id.csv": "c8c8a59adf8fdfd060874826d71cd9e05b1101ddea532169d4ac2240a41f3222",
+    "third_party/sota_dti_2026/TAPB/datasets/biosnap/random/test_with_id.csv": "65a5b631fe369fc6c52a1d6ea936dde119489cddbc39fee086e32dc78bfd3678",
+    "third_party/sota_dti_2026/TAPB/datasets/biosnap/random/train_with_id.csv": "8da412b9a9e251445d854e9a3b9b75ff548119cef9d51236e717b84d21b82dc1",
+    "third_party/sota_dti_2026/TAPB/datasets/biosnap/random/val_with_id.csv": "b670694a79cabbc819e95fa57364c0661117a7153c05a0be2deea508d0656e60",
+    "third_party/sota_dti_2026/TAPB/datasets/davis/random/test_with_id.csv": "ce4b7848dd66c27973248c11ce0dd3a76fea94a913e36aff2b401a8aa6be096d",
+    "third_party/sota_dti_2026/TAPB/datasets/davis/random/train_with_id.csv": "158b0e3df24de9a68fa913bf24811a20e4c985ff8400383212d6184520006d79",
+    "third_party/sota_dti_2026/TAPB/datasets/davis/random/val_with_id.csv": "d5ff5e5fda49bd2649d6c167d48381e73b5acc45d1678267d0479eddde97735c",
+    "third_party/sota_dti_2026/TAPB/datasets/human/cold/test_with_id.csv": "06c06f1d1d57a56812428e362f5db2b3010a237b818b99033b2ddc9d37199fe4",
+    "third_party/sota_dti_2026/TAPB/datasets/human/cold/train_with_id.csv": "4f9bf3dad976136eef3bfb5ed3182fb4b4538359803423bdc98f3a163a6bd3bb",
+    "third_party/sota_dti_2026/TAPB/datasets/human/cold/val_with_id.csv": "a736d398a3954d8f7d52a2f7bce198fd27120120013f51479b05c82dbd2d9407",
+    "third_party/sota_dti_2026/TAPB/main.py": "236697d4924a2047ca20656896802188192065ddaa600fb940a4e32ac7de36f1",
+    "third_party/sota_dti_2026/TAPB/trainer.py": "538a42e3cdd13946dbad77863c3e2e74613d24b53ac61cc25ee8bfb95ff43d9f",
+    "third_party/sota_dti_2026/TAPB/preparation.py": "3901fdfca0bdc5280876e1d38d83adf4e2d759558a6594d3694d216331753f59",
+    "third_party/sota_dti_2026/TAPB/models/tapb.py": "61d0b46f755abadf974e401a622cc0fb357654472af8569e722e324c2e179e1a",
+    "third_party/sota_dti_2026/TAPB/dataloader/dataloader.py": "af3a77c21cf76391682e88a5f86af3e1bfb6999abe2bdd9cffe53ebb57efde7a",
+    "third_party/sota_dti_2026/TAPB/README.md": "16136ce45a6bebb1fb01c6f5d1472a8e80d42655448d9efaee7bec591e9fcba2",
+    "third_party/sota_dti_2026/TAPB/LICENSE": "cd5361c315fc9ccf8b5a418fac61975f977b7cea1606b4228cacab9b5abe05b8"
+  },
+  "summary_csv": "outputs/old_drug_target_sota_v1/TAPB_RELEASED_SPLIT_SUMMARY_V1.csv",
+  "matrix_update": {
+    "input_v8": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V8.csv",
+    "input_v8_sha256": "0683950731fe361a229324284d76d6353e5d7b781808db3b4d2fca265cdafc41",
+    "output_v9": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V9.csv",
+    "output_v9_sha256": "51d3619b6b58e234a92506059f9c68374d5e5071d3f7776f1ba833e4e3564b0a",
+    "v8_preserved": true,
+    "changes": [
+      {
+        "field": "local_commit",
+        "from": "NOT_CLONED",
+        "to": "third_party/sota_dti_2026/TAPB@ac846b1463ecf4a031b84bd6caacb57b25d50d4f"
+      },
+      {
+        "field": "reported_scale",
+        "from": "paper uses public DrugBAN-style datasets; exact entity/pair counts are in supplementary data rather than the main article",
+        "to": "released main splits: BindingDB random 34,439/4,920/9,840 and cluster 14,928 source/7,114 target-train/1,779 target-test; BioSNAP random 19,224/2,747/5,493 and cluster 9,766/3,628/907; Davis random 2,086/3,006/6,011; Human cold 3,453/155/311 train/val/test rows"
+      },
+      {
+        "field": "split_protocol",
+        "from": "BindingDB/BioSNAP in-domain random 7:1:2 and DrugBAN CVS4 cross-domain; Davis in-domain; Human cold; five independent seeds",
+        "to": "BindingDB/BioSNAP random are entity-warm; cluster source and target-test are entity-disjoint, but the official main.py assigns target_test to both validation and test and Trainer selects the checkpoint by validation AUROC; Human cold is train-disjoint on both entity axes but val-test overlaps 12 exact pairs"
+      },
+      {
+        "field": "critical_limit_for_our_claim",
+        "from": "target-prior debiasing is prior art; several headline settings are random or dataset-domain transfer rather than strict homology-cluster cold start; BioSNAP cross-domain was used for hyperparameter tuning and excluded from comparative conclusions",
+        "to": "target-prior intervention is direct prior art; released cluster code selects on the final test file; Davis has 126 train-val, 177 train-test and 246 val-test exact pair overlaps with 24/46/28 label-set conflicts; the released random/domain-transfer headlines are not frozen scaffold/homology double-cold"
+      },
+      {
+        "field": "reported_result_status",
+        "from": "exact main-article deltas and absolute BindingDB cross-domain AUROC; not all absolute table values extracted",
+        "to": "primary-paper headline deltas plus exact audit of all 20 released CSVs and official execution semantics"
+      },
+      {
+        "field": "same_data_directly_comparable",
+        "from": "NO",
+        "to": "NO"
+      },
+      {
+        "field": "reproduction_status",
+        "from": "official code and Zenodo record available; same-data port not yet executed",
+        "to": "official code, all released CSVs and license cloned and audited at the frozen commit; pretrained MolFormer/ESM-2 weights, generated ESM-2 features/confounder stores and trained checkpoints are not released locally, and no corrected BioMaster-split port has been executed"
+      },
+      {
+        "field": "required_action",
+        "from": "add target-label shortcut probes and a TAPB-style randomized-target control on frozen S2/S3 development splits before any causal novelty wording",
+        "to": "retain TAPB as a mandatory shortcut/debiasing prior-art control; any numerical port must use frozen BioMaster TRAIN/VALID/TEST boundaries, deduplicated pairs, distinct validation/test, training-only confounder construction and the same S2/S3 directional metrics; never compare the released headline directly with S1-S5"
+      }
+    ]
+  }
+}

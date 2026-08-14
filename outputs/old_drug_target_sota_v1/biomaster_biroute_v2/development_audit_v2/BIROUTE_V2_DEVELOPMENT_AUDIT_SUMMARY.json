@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-08-13T14:17:19.552700+00:00",
+  "status": "PASS",
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "rows": 10531,
+  "primary_model": "FULL_BIROUTE",
+  "scores": [
+    {
+      "model": "biomaster_stack_score",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.6555050112797188,
+      "micro_auroc": 0.6550314656977663
+    },
+    {
+      "model": "dtiam_probability",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.6485601341855043,
+      "micro_auroc": 0.6510639956631548
+    },
+    {
+      "model": "NO_ROUTE_CONDITIONING",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.6419245861944866,
+      "micro_auroc": 0.6352804354250634
+    },
+    {
+      "model": "SYMMETRIC_RETRIEVAL_HEAD",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.641469974575179,
+      "micro_auroc": 0.6277990147818976
+    },
+    {
+      "model": "FULL_BIROUTE",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.6409349051578701,
+      "micro_auroc": 0.6343424475979642
+    },
+    {
+      "model": "NO_DIRECTIONAL_RANK_LOSSES",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.6203022441694204,
+      "micro_auroc": 0.6157760904210474
+    },
+    {
+      "model": "CONPLEX_FROZEN_EXTERNAL",
+      "folds": "0;1;2",
+      "rows": 10531,
+      "micro_auprc": 0.6137525427581368,
+      "micro_auroc": 0.5823979381854508
+    }
+  ],
+  "predeclared_ablation_support": {
+    "NO_DIRECTIONAL_RANK_LOSSES": {
+      "full_biroute_better_on_both_cluster_axes": true,
+      "minimum_observed_difference": 0.020632660988449736
+    },
+    "NO_ROUTE_CONDITIONING": {
+      "full_biroute_better_on_both_cluster_axes": false,
+      "minimum_observed_difference": -0.0009896810366164521
+    },
+    "SYMMETRIC_RETRIEVAL_HEAD": {
+      "full_biroute_better_on_both_cluster_axes": false,
+      "minimum_observed_difference": -0.0005350694173088533
+    }
+  },
+  "checks": {
+    "only_predeclared_development_folds": true,
+    "all_four_predeclared_models_aligned": true,
+    "pair_ids_unique": true,
+    "all_bootstraps_complete": true,
+    "all_scores_finite": true
+  },
+  "decision_boundary": "Retrospective development evidence only. Confirmatory folds 3-4 remain untouched; no architecture or hyperparameter may be changed after promotion.",
+  "claim_status": "NO_CONFIRMATORY_OR_SOTA_CLAIM",
+  "hashes": {
+    "method_freeze": "5aa9c0bc9f5678d7148493dc5b058ac53b0b855c5b06277100a762fc3d31c8ca",
+    "scores": "2ea2d0c8a8a9420920ca5a3cd4c728b8f3a18a67fec258b24ffe5660b10a82ff",
+    "bootstrap": "aea658025cc66e4516f45a904cf9c9d6a6d35a92f59008b381b7775ec2c4d78f",
+    "aligned_predictions": "2fdc970f536b978989f6813831306ed07eabc6f344b187ed9d24423916ea3724"
+  }
+}

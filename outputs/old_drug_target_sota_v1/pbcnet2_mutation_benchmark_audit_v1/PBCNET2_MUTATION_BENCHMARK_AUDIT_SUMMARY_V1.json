@@ -1,0 +1,65 @@
+{
+  "antisymmetry": {
+    "hard_constraint_satisfied": false,
+    "max_abs_forward_plus_reverse": 0.32977384328842163,
+    "mean_abs_forward_plus_reverse": 0.09404042225617629
+  },
+  "architecture_audit": {
+    "evidence": {
+      "difference": "LayerNorm(emb1 - emb2) is applied only after global pooling",
+      "readout": "ligand atom embeddings are summed independently for each complex",
+      "reverse": "the same FNN is evaluated on emb2 - emb1; no algebraic negation is imposed"
+    },
+    "explicit_cross_complex_atom_or_residue_correspondence": false,
+    "global_pool_before_difference": true,
+    "ligand_mask_before_pooling": true,
+    "reverse_branch_is_learned_not_hard_negative": true,
+    "separate_complex_encoding": true
+  },
+  "dataset": {
+    "all_ordered_ligand_atom_identities_match": false,
+    "examples": 65,
+    "median_ligand_kabsch_rmsd_angstrom": 1.1877707242965698,
+    "median_protein_residue_id_jaccard": 0.9487179487179487,
+    "multiple_mutation_examples": 13,
+    "single_mutation_examples": 52,
+    "targets": 8
+  },
+  "environment": {
+    "device": "cpu",
+    "dgl": "1.0.2",
+    "python": "3.10.12",
+    "torch": "2.0.1+cpu"
+  },
+  "evaluation_role": "LOCKED_EXTERNAL_TEST_ONLY",
+  "files": {
+    "per_target_metrics_csv": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/pbcnet2_mutation_benchmark_audit_v1/PBCNET2_MUTATION_PER_TARGET_METRICS_V1.csv",
+    "predictions_csv": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/pbcnet2_mutation_benchmark_audit_v1/PBCNET2_MUTATION_REPRODUCED_PREDICTIONS_V1.csv"
+  },
+  "innovation_gap_supported_by_code": "PBCNet2.0 does not compare aligned ligand-protein interaction edges before pooling; its complex-level difference is post-pooling and its reverse branch is not exactly antisymmetric.",
+  "metrics": {
+    "macro_target_pearson": 0.5450085628922587,
+    "macro_target_spearman": 0.5296807359307361,
+    "pooled_mae": 1.3402444328115537,
+    "pooled_pearson": 0.02260452389361847,
+    "pooled_rmse": 1.8176683484649063,
+    "pooled_spearman": 0.07661713286713287
+  },
+  "repository": {
+    "commit": "3d46e6e594531c5692376e242b606641979e8550",
+    "commit_date": "2026-01-19T20:32:59+08:00",
+    "graph_builder_sha256": "f0ca13306279f7b0be032aa28b9e053813d5b1631d53d4a1d2c2df6f9aac3631",
+    "model_sha256": "05089dc242057a2be88721a0a2c5e963292d4f9776abb3b934d736473da5330f",
+    "path": "/root/autodl-tmp/BioMaster/.external/pbcnet2",
+    "readout_source_sha256": "7b8ead906e88da761eb871e0b496aac815966aaf0d7520f451f175cc1b14a1ef"
+  },
+  "reproduction": {
+    "max_absolute_prediction_error": 2.3841857910433806e-06,
+    "mean_absolute_prediction_error": 4.008412361170907e-07,
+    "tolerance": 1e-05,
+    "within_tolerance": true
+  },
+  "schema_version": "PBCNET2_MUTATION_BENCHMARK_AUDIT_V1",
+  "status": "PASS",
+  "training_use_prohibited": true
+}

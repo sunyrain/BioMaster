@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-08-13T14:46:14.060724+00:00",
+  "status": "PASS",
+  "folds": [
+    0,
+    1,
+    2
+  ],
+  "seeds": [
+    20260813,
+    20260814,
+    20260815,
+    20260816,
+    20260817
+  ],
+  "rows": 10531,
+  "per_seed": [
+    {
+      "seed": 20260813,
+      "FULL_BIROUTE": 0.6409349051578701,
+      "NO_DIRECTIONAL_RANK_LOSSES": 0.6203022441694204,
+      "full_minus_no_rank": 0.020632660988449736
+    },
+    {
+      "seed": 20260814,
+      "FULL_BIROUTE": 0.6271769927503318,
+      "NO_DIRECTIONAL_RANK_LOSSES": 0.6246431338647659,
+      "full_minus_no_rank": 0.0025338588855658983
+    },
+    {
+      "seed": 20260815,
+      "FULL_BIROUTE": 0.6314778407817465,
+      "NO_DIRECTIONAL_RANK_LOSSES": 0.6313220658333241,
+      "full_minus_no_rank": 0.0001557749484224491
+    },
+    {
+      "seed": 20260816,
+      "FULL_BIROUTE": 0.6169715727405872,
+      "NO_DIRECTIONAL_RANK_LOSSES": 0.6380915443852918,
+      "full_minus_no_rank": -0.021119971644704583
+    },
+    {
+      "seed": 20260817,
+      "FULL_BIROUTE": 0.6255664628763984,
+      "NO_DIRECTIONAL_RANK_LOSSES": 0.6274773911282919,
+      "full_minus_no_rank": -0.00191092825189354
+    }
+  ],
+  "five_seed_ensemble_auprc": {
+    "FULL_BIROUTE": 0.6407361176438461,
+    "NO_DIRECTIONAL_RANK_LOSSES": 0.6372090547767923
+  },
+  "directional_ranking_component_supported_in_development": false,
+  "full_v2_promotion_to_confirmatory": false,
+  "decision": "DO_NOT_ADVANCE_FULL_V2; DIRECTIONAL_RANKING_COMPONENT_NOT_STABLE",
+  "checks": {
+    "exact_five_seeds": true,
+    "exact_two_variants_each_seed": true,
+    "exact_development_oof_population": true,
+    "all_scores_finite": true,
+    "all_six_bootstraps_complete": true
+  },
+  "claim_status": "DEVELOPMENT_COMPONENT_EVIDENCE_ONLY; CONFIRMATORY_FOLDS_UNTOUCHED",
+  "hashes": {
+    "method_freeze": "5aa9c0bc9f5678d7148493dc5b058ac53b0b855c5b06277100a762fc3d31c8ca",
+    "scores": "bd7fa145b33fcb5d45f5626663622e7ed2326e07c7edf5f16b7a03b869457ba3",
+    "bootstrap": "190a2864178ab31da40bcd1fb1f64d07389e70fa6f8901bc5f99f16bed33c8ea",
+    "aligned_predictions": "8f5d4d1e8f505eb19a6ec38fc1c7731546b0eb30f6622958d6f9e7652de242b6"
+  }
+}

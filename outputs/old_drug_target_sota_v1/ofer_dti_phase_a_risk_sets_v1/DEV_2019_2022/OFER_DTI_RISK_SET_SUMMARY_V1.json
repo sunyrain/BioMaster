@@ -1,0 +1,37 @@
+{
+  "window": "DEV_2019_2022",
+  "cutoff": 2018,
+  "development_years": [
+    2019,
+    2022
+  ],
+  "counts": {
+    "training_events": 263240,
+    "training_active_events": 207820,
+    "training_risk_rows": 2455264,
+    "exact_event_rows": 263240,
+    "exact_pre_event_survival_rows": 86149,
+    "same_drug_sampled_target_rows": 1052915,
+    "same_target_sampled_drug_rows": 1052960,
+    "eligible_old_drugs_at_cutoff": 286,
+    "eligible_targets_at_cutoff": 416,
+    "development_evaluation_rows": 113675,
+    "development_active_events": 67,
+    "development_observation_events": 144,
+    "development_old_drugs_with_active_event": 38
+  },
+  "integrity": {
+    "no_training_calendar_year_after_cutoff": true,
+    "only_observed_rows_have_active_labels": true,
+    "exactly_one_training_event_row_per_historical_event": true,
+    "training_observed_pairs_disjoint_from_development_first_event_pairs": true,
+    "all_sample_weights_finite_positive": true,
+    "evaluation_contains_only_at_risk_pairs_at_cutoff": true,
+    "future_event_type_isolated_from_training": true,
+    "unobserved_pairs_never_used_as_inactive_labels": true
+  },
+  "artifacts": {
+    "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2019_2022/OFER_DTI_TRAIN_RISK_SAMPLES_V1.npz": "23de4ee9bb1935b7c8e4d425dbaf24e90c3c88647c4485d10e0bdd10a87b8a1b",
+    "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2019_2022/OFER_DTI_OLD_DRUG_TARGET_DEVELOPMENT_EVALUATION_V1.csv.gz": "001c9ba34b0d24148146eef48568e99c7b793ddcdb1c140c80500fa41abc4580"
+  }
+}

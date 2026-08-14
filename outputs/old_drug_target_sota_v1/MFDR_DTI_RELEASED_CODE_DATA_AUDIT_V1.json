@@ -1,0 +1,358 @@
+{
+  "created_utc": "2026-08-13T20:39:47.994037+00:00",
+  "status": "PASS",
+  "verdict": {
+    "executable_as_released": false,
+    "paper_fivefold_claim_matches_released_code": false,
+    "entity_cold_or_double_cold_evaluation": false,
+    "same_data_directly_comparable_to_biomaster": false,
+    "usable_as_algorithm_prior_art": true,
+    "use_official_headline_as_sota_evidence_for_biomaster": false,
+    "reason": "The release has a syntax error and unshipped hard-coded BERT resources; its code uses a fixed warm random 20% test reused across five inner folds, omits the last shuffled row, drops remainder samples, globally scales descriptors, and does not realize the advertised query-dependent attention or dynamically optimized loss weights."
+  },
+  "repository": {
+    "official_code": "https://github.com/HA2001-10/MFDR_DTI",
+    "local_path": "third_party/sota_dti_2026/MFDR_DTI",
+    "commit": "616ba8b3503c6cecd95e75d32c23b4842d037781",
+    "released_files_excluding_git_and_pycache": [
+      "DataSets/DrugBank.txt",
+      "DataSets/DrugBank_all_features.csv",
+      "DataSets/Enzyme.txt",
+      "DataSets/Enzyme_all_features.csv",
+      "DataSets/GPCRs.txt",
+      "DataSets/GPCRs_all_features.csv",
+      "LossFunction.py",
+      "RunModel.py",
+      "config.py",
+      "main.py",
+      "model.py",
+      "utils/DataPrepare.py",
+      "utils/DataSetsFunction.py",
+      "utils/EarlyStoping.py",
+      "utils/ShowResult.py",
+      "utils/TestModel.py",
+      "utils/__init__.py"
+    ],
+    "release_blocking_syntax_error": {
+      "message": "unterminated string literal (detected at line 38)",
+      "line": 38,
+      "offset": 53,
+      "text": "assert DATASET in [\"DrugBank\", \"Enzyme\", \"GPCRs\"\"]"
+    },
+    "hardcoded_absolute_resource_lines": [
+      "csv_file_path = f'/public/home/xiedan/MFMC_DTI/DataSets/{dataset_name}_all_features.csv'",
+      "prot_model_path = \"/public/home/xiedan/MFMC_DTI/huggingface/prot_bert_bfd\"",
+      "chem_model_path = \"/public/home/xiedan/MFMC_DTI/huggingface/PubChem10M_SMILES_BPE_450k\""
+    ],
+    "kiba_data_or_code_path_released": false,
+    "trained_weights_or_metric_logs_released": true
+  },
+  "paper_report": {
+    "primary_source": "https://doi.org/10.1021/acsomega.5c13460",
+    "paper_protocol_claim": "5-fold cross-validation on all datasets; early stopping stated",
+    "dataset_table": {
+      "DrugBank": {
+        "proteins": 4254,
+        "drugs": 6645,
+        "rows": 35022,
+        "positive": 17511,
+        "negative": 17511
+      },
+      "KIBA": {
+        "proteins": 225,
+        "drugs": 2068,
+        "rows": 116950,
+        "positive": 22154,
+        "negative": 94196
+      },
+      "Enzyme": {
+        "proteins": 660,
+        "drugs": 444,
+        "rows": 5940,
+        "positive": 2920,
+        "negative": 2920
+      },
+      "GPCRs": {
+        "proteins": 296,
+        "drugs": 567,
+        "rows": 6197,
+        "positive": 3098,
+        "negative": 3099
+      }
+    },
+    "headline": {
+      "DrugBank_AUC": 0.9314,
+      "Enzyme_accuracy": 0.8413,
+      "GPCR_recall": 0.8177,
+      "KIBA_accuracy": 0.9108,
+      "KIBA_AUC": 0.9415,
+      "KIBA_AUPR": 0.8371
+    }
+  },
+  "released_data": {
+    "DrugBank": {
+      "rows": 35022,
+      "positive": 17511,
+      "negative": 17511,
+      "unique_drug_ids": 6647,
+      "unique_target_ids": 4294,
+      "unique_smiles": 6645,
+      "unique_sequences": 4254,
+      "duplicate_full_row_excess": 227,
+      "duplicate_id_pair_excess": 234,
+      "duplicate_content_pair_excess": 274,
+      "id_pair_label_conflict_keys": 7,
+      "content_pair_label_conflict_keys": 7,
+      "released_trainval_rows": 28018,
+      "released_fixed_test_rows_before_drop_last": 7003,
+      "released_fixed_test_rows_evaluated": 6992,
+      "released_fixed_test_rows_dropped": 11,
+      "released_omitted_last_row": {
+        "row_number": 25335,
+        "drug_id": "DB01050",
+        "target_id": "P33260",
+        "label": 0
+      },
+      "fixed_test_unique_drugs_seen_in_trainval_fraction": 0.9738379476758954,
+      "fixed_test_unique_targets_seen_in_trainval_fraction": 0.9926984126984127,
+      "fixed_test_unique_smiles_seen_in_trainval_fraction": 0.9738379476758954,
+      "fixed_test_unique_sequences_seen_in_trainval_fraction": 0.9932928776748643,
+      "trainval_test_id_pair": {
+        "overlap_unique_keys": 87,
+        "label_set_conflicts": 3,
+        "opposite_label_collision_keys": 3
+      },
+      "trainval_test_content_pair": {
+        "overlap_unique_keys": 100,
+        "label_set_conflicts": 3,
+        "opposite_label_collision_keys": 3
+      },
+      "same_fixed_test_reused_by_all_five_models": true
+    },
+    "Enzyme": {
+      "rows": 5840,
+      "positive": 2920,
+      "negative": 2920,
+      "unique_drug_ids": 444,
+      "unique_target_ids": 660,
+      "unique_smiles": 444,
+      "unique_sequences": 660,
+      "duplicate_full_row_excess": 0,
+      "duplicate_id_pair_excess": 286,
+      "duplicate_content_pair_excess": 286,
+      "id_pair_label_conflict_keys": 286,
+      "content_pair_label_conflict_keys": 286,
+      "released_trainval_rows": 4672,
+      "released_fixed_test_rows_before_drop_last": 1167,
+      "released_fixed_test_rows_evaluated": 1152,
+      "released_fixed_test_rows_dropped": 15,
+      "released_omitted_last_row": {
+        "row_number": 1235,
+        "drug_id": "PubChem7848767",
+        "target_id": "Q9NP56",
+        "label": 1
+      },
+      "fixed_test_unique_drugs_seen_in_trainval_fraction": 0.9299610894941635,
+      "fixed_test_unique_targets_seen_in_trainval_fraction": 0.9493670886075949,
+      "fixed_test_unique_smiles_seen_in_trainval_fraction": 0.9299610894941635,
+      "fixed_test_unique_sequences_seen_in_trainval_fraction": 0.9493670886075949,
+      "trainval_test_id_pair": {
+        "overlap_unique_keys": 92,
+        "label_set_conflicts": 92,
+        "opposite_label_collision_keys": 92
+      },
+      "trainval_test_content_pair": {
+        "overlap_unique_keys": 92,
+        "label_set_conflicts": 92,
+        "opposite_label_collision_keys": 92
+      },
+      "same_fixed_test_reused_by_all_five_models": true
+    },
+    "GPCRs": {
+      "rows": 6197,
+      "positive": 3098,
+      "negative": 3099,
+      "unique_drug_ids": 567,
+      "unique_target_ids": 296,
+      "unique_smiles": 567,
+      "unique_sequences": 296,
+      "duplicate_full_row_excess": 78,
+      "duplicate_id_pair_excess": 889,
+      "duplicate_content_pair_excess": 889,
+      "id_pair_label_conflict_keys": 811,
+      "content_pair_label_conflict_keys": 811,
+      "released_trainval_rows": 4958,
+      "released_fixed_test_rows_before_drop_last": 1238,
+      "released_fixed_test_rows_evaluated": 1232,
+      "released_fixed_test_rows_dropped": 6,
+      "released_omitted_last_row": {
+        "row_number": 1235,
+        "drug_id": "CHEMBL1254682",
+        "target_id": "P33535",
+        "label": 1
+      },
+      "fixed_test_unique_drugs_seen_in_trainval_fraction": 0.9400544959128065,
+      "fixed_test_unique_targets_seen_in_trainval_fraction": 0.9455445544554455,
+      "fixed_test_unique_smiles_seen_in_trainval_fraction": 0.9400544959128065,
+      "fixed_test_unique_sequences_seen_in_trainval_fraction": 0.9455445544554455,
+      "trainval_test_id_pair": {
+        "overlap_unique_keys": 270,
+        "label_set_conflicts": 258,
+        "opposite_label_collision_keys": 258
+      },
+      "trainval_test_content_pair": {
+        "overlap_unique_keys": 270,
+        "label_set_conflicts": 258,
+        "opposite_label_collision_keys": 258
+      },
+      "same_fixed_test_reused_by_all_five_models": true
+    }
+  },
+  "released_features": {
+    "DrugBank": {
+      "path": "third_party/sota_dti_2026/MFDR_DTI/DataSets/DrugBank_all_features.csv",
+      "rows": 34965,
+      "columns": 165,
+      "feature_columns": 164,
+      "unique_feature_keys": 34731,
+      "duplicate_feature_key_excess": 234,
+      "duplicate_keys_with_inconsistent_feature_vectors": 0,
+      "raw_unique_keys": 34788,
+      "raw_unique_keys_missing_feature_row": 57,
+      "raw_rows_using_missing_key_mean_fallback": 57,
+      "feature_keys_not_present_in_raw": 0,
+      "target_ids_with_multiple_feature_vectors": 0,
+      "sequences_with_multiple_feature_vectors": 0,
+      "interpretation": "CSV rows are indexed by drug_target pair keys, but the 164 values are target descriptors: within a target/sequence they should be invariant. The released loader fits StandardScaler on this entire file before splitting and silently substitutes the global scaled mean for absent keys."
+    },
+    "Enzyme": {
+      "path": "third_party/sota_dti_2026/MFDR_DTI/DataSets/Enzyme_all_features.csv",
+      "rows": 5840,
+      "columns": 165,
+      "feature_columns": 164,
+      "unique_feature_keys": 5554,
+      "duplicate_feature_key_excess": 286,
+      "duplicate_keys_with_inconsistent_feature_vectors": 0,
+      "raw_unique_keys": 5554,
+      "raw_unique_keys_missing_feature_row": 0,
+      "raw_rows_using_missing_key_mean_fallback": 0,
+      "feature_keys_not_present_in_raw": 0,
+      "target_ids_with_multiple_feature_vectors": 0,
+      "sequences_with_multiple_feature_vectors": 0,
+      "interpretation": "CSV rows are indexed by drug_target pair keys, but the 164 values are target descriptors: within a target/sequence they should be invariant. The released loader fits StandardScaler on this entire file before splitting and silently substitutes the global scaled mean for absent keys."
+    },
+    "GPCRs": {
+      "path": "third_party/sota_dti_2026/MFDR_DTI/DataSets/GPCRs_all_features.csv",
+      "rows": 6197,
+      "columns": 165,
+      "feature_columns": 164,
+      "unique_feature_keys": 5308,
+      "duplicate_feature_key_excess": 889,
+      "duplicate_keys_with_inconsistent_feature_vectors": 0,
+      "raw_unique_keys": 5308,
+      "raw_unique_keys_missing_feature_row": 0,
+      "raw_rows_using_missing_key_mean_fallback": 0,
+      "feature_keys_not_present_in_raw": 0,
+      "target_ids_with_multiple_feature_vectors": 0,
+      "sequences_with_multiple_feature_vectors": 0,
+      "interpretation": "CSV rows are indexed by drug_target pair keys, but the 164 values are target descriptors: within a target/sequence they should be invariant. The released loader fits StandardScaler on this entire file before splitting and silently substitutes the global scaled mean for absent keys."
+    }
+  },
+  "released_split_semantics": {
+    "seed": 114514,
+    "outer_operation": "shuffle all rows; use first 80% as train-validation, data[split_pos:-1] as a fixed test, and silently omit data[-1]",
+    "inner_operation": "five contiguous validation folds inside the 80% train-validation block; train five models and average their metrics on the same fixed test block",
+    "checkpoint_selection": "maximum validation accuracy over 200 epochs",
+    "early_stopping_in_released_execution": false,
+    "all_loaders_drop_last": true,
+    "detail_csv": "outputs/old_drug_target_sota_v1/MFDR_DTI_RELEASED_SPLIT_AUDIT_V1.csv"
+  },
+  "implementation_semantics": {
+    "global_descriptor_scaling": "StandardScaler is fit once on the complete dataset-specific feature CSV before train/test split",
+    "cross_attention_runtime_audit": {
+      "query_sequence_length": 1,
+      "attention_softmax_cardinality": 1,
+      "query_change_max_abs_output_difference": 0.0,
+      "gradients": {
+        "WQ_weight_max_abs_grad": 0.0,
+        "WK_weight_max_abs_grad": 0.0,
+        "WV_weight_max_abs_grad": 2.431889295578003,
+        "WO_weight_max_abs_grad": 1.638542890548706
+      },
+      "wq_zero_gradient": true,
+      "wk_zero_gradient": true,
+      "value_and_output_paths_trainable": true,
+      "interpretation": "Every input is unsqueezed to sequence length one, so softmax is over a 1x1 score and equals one. The advertised cross-attention output is query-independent; WQ and WK receive zero gradient."
+    },
+    "dynamic_loss_runtime_audit": {
+      "loss_parameters": [
+        "weight_bert",
+        "weight_combined",
+        "weight_fusion"
+      ],
+      "optimizer_loss_parameter_intersection": 0,
+      "loss_parameter_gradients": {
+        "weight_combined": 0.09653421491384506,
+        "weight_fusion": 0.26436948776245117,
+        "weight_bert": 0.3283613920211792
+      },
+      "loss_parameter_changes_after_model_optimizer_step": {
+        "weight_combined": 0.0,
+        "weight_fusion": 0.0,
+        "weight_bert": 0.0
+      },
+      "all_loss_weights_have_nonzero_gradient": true,
+      "all_loss_weights_unchanged": true,
+      "interpretation": "The loss weights are differentiable but DWLoss is instantiated after an optimizer containing only model.parameters(); optimizer.step therefore never updates the advertised dynamic weights."
+    }
+  },
+  "checks": {
+    "official_commit_matches": true,
+    "runmodel_has_release_blocking_syntax_error": true,
+    "three_released_raw_datasets_only": true,
+    "kiba_not_shipped_or_cli_selectable": true,
+    "drugbank_rows_and_labels_match_paper_table": true,
+    "enzyme_release_is_100_rows_below_paper_table": true,
+    "gpcr_rows_and_labels_match_paper_table": true,
+    "released_split_omits_one_row_per_dataset": true,
+    "same_fixed_test_is_reused": true,
+    "all_loaders_drop_last": true,
+    "checkpoint_selected_by_validation_accuracy": true,
+    "paper_claimed_early_stopping_not_called": true,
+    "global_feature_scaler_fit_before_split": true,
+    "three_hardcoded_absolute_resource_paths": true,
+    "all_feature_files_have_164_features": true,
+    "cross_attention_is_query_independent": true,
+    "cross_attention_qk_have_zero_gradient": true,
+    "dynamic_loss_weights_excluded_from_optimizer": true,
+    "split_rows_cover_three_datasets_five_folds": true
+  },
+  "source_sha256": {
+    "third_party/sota_dti_2026/MFDR_DTI/DataSets/DrugBank.txt": "2b25df2cd06d8a44c169b1151c2aeb0ad8b239743c63587d4634b22891cd8057",
+    "third_party/sota_dti_2026/MFDR_DTI/DataSets/DrugBank_all_features.csv": "4b9c9fd7369805754add90dd4b4eb1b029a5b5ea6ba2d184705021a36308478a",
+    "third_party/sota_dti_2026/MFDR_DTI/DataSets/Enzyme.txt": "4bd9fe16ebd018746defd508a0c0b20ee4420da8b1ae028e4f335709dcd60636",
+    "third_party/sota_dti_2026/MFDR_DTI/DataSets/Enzyme_all_features.csv": "a01853450c428b5cbf4b6de62c8b0c7b77d229d776edecf8d05979e2e0988c04",
+    "third_party/sota_dti_2026/MFDR_DTI/DataSets/GPCRs.txt": "79e2a29f73b3aef88bd2d4363e684af558f6d13bcafae68a613f3a79d49b5e93",
+    "third_party/sota_dti_2026/MFDR_DTI/DataSets/GPCRs_all_features.csv": "fc5d5d1bd35b52c9318fb211dae551be431ecabd7c3ce3376fd54980d0e9ec0f",
+    "third_party/sota_dti_2026/MFDR_DTI/LossFunction.py": "46f5dc0145797da0f4e54519357f1e56b05225174d1a55d2d7947ae98ddc7254",
+    "third_party/sota_dti_2026/MFDR_DTI/RunModel.py": "eedab69ec69b164a3d2e9bff1651c146223d388bc12dbcba732f19166b6747aa",
+    "third_party/sota_dti_2026/MFDR_DTI/config.py": "4678c802844bef575bd02d9e731278762b552e1b333c9fb749a07f07e8b9935b",
+    "third_party/sota_dti_2026/MFDR_DTI/main.py": "e58a7c456dbb307885df602bb68cf551c51f5ce90daeaa63039470d2d001b1c2",
+    "third_party/sota_dti_2026/MFDR_DTI/model.py": "b17e93e8acfb5eb5e2230b7dab1bad50280d5897085072ad586b6d55425a554a",
+    "third_party/sota_dti_2026/MFDR_DTI/utils/DataPrepare.py": "03387baaa604f1b18b3744b9726f292221993cd2455fbab068c9044b35b2b8bf",
+    "third_party/sota_dti_2026/MFDR_DTI/utils/DataSetsFunction.py": "39f8ee3db094f8ce2dda7b10f0e35babb1aa7e1087608383aa2ee358ccb6a306",
+    "third_party/sota_dti_2026/MFDR_DTI/utils/EarlyStoping.py": "d3d7296ff3738cea9ad59089fe0bc9e888f824b4d95eb6f3339ef7351c071b88",
+    "third_party/sota_dti_2026/MFDR_DTI/utils/ShowResult.py": "a6dc367c293b4237f6ceaec6f4479384453627b65608cd0e58a274f3c914156b",
+    "third_party/sota_dti_2026/MFDR_DTI/utils/TestModel.py": "bc7017d07a2c3cea1d2d2d2ee581218b6cf97d712f190650f4579c2c096ed4bd",
+    "third_party/sota_dti_2026/MFDR_DTI/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "matrix_update": {
+    "input_v10": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V10.csv",
+    "input_v10_sha256": "82e2f2eb5f5f51fd034e4f9029390ef976fe138c1af2f825228bd2e702e964f5",
+    "output_v11": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V11.csv",
+    "output_v11_sha256": "fe97d8666b93e21cd05077d63d76e356e5ca615edc1180089ebde65cf0056a61",
+    "v10_rows": 17,
+    "v11_rows": 18,
+    "only_added_model": "MFDR-DTI"
+  }
+}

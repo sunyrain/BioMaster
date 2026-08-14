@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-08-13T20:02:36.481625+00:00",
+  "status": "PASS",
+  "repository_commit": "85100c59b3da6f4e5d3da624dea842f81321c74b",
+  "verified_findings": {
+    "confidence_parameterization": "unbounded raw linear scalar; no sigmoid/clamp/softmax before feature multiplication",
+    "confidence_target": "modality classifier probability assigned to the true class",
+    "gradient_clipping": "called after optimizer.step and therefore does not alter the update already applied",
+    "threshold_comparison": "executes through NumPy reflected comparison; not an error",
+    "threshold_metric_names": "released sensitivity computes TNR; released specificity computes TPR",
+    "ranking_metric_scope": "threshold metric naming does not affect raw-probability AUROC/AUPRC"
+  },
+  "checks": {
+    "confidence_definition_has_final_linear": true,
+    "confidence_definition_has_no_sigmoid": true,
+    "raw_confidence_multiplies_feature": true,
+    "raw_confidence_mse_against_probability": true,
+    "optimizer_step_precedes_gradient_clip": true,
+    "list_numpy_threshold_comparison_executes": true,
+    "released_sensitivity_is_true_negative_rate": true,
+    "released_specificity_is_true_positive_rate": true,
+    "implementation_amendment_hash_matches": true
+  },
+  "code_locations": {
+    "confidence_head_line": 55,
+    "confidence_multiplication_line": 100,
+    "optimizer_step_line": 47,
+    "gradient_clip_line": 48,
+    "threshold_comparison_line": 93,
+    "sensitivity_line": 96,
+    "specificity_line": 97
+  },
+  "source_sha256": {
+    "third_party/sota_dti_2026/DrugCMF/model.py": "be4dc2aac9bc74b05f81823580819cf45ee27a722f4c3014d32eaab80c497e29",
+    "third_party/sota_dti_2026/DrugCMF/train_util.py": "8f1d4ac1976c2928cbdd5ae5600440f0feb4a8e61c03c9b84a874efa1a823bbc",
+    "configs/biomaster_eqir_v3_nearest_method_implementation_amendment_20260814.json": "66d07ebb62718341bcdfae6a2c61a27d1fe2a0988b519dca4c0c04ae8804b342"
+  },
+  "matrix_update": {
+    "input_v7": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V7.csv",
+    "input_v7_sha256": "02bf96ead26be5af581a764860268be5930a488d8a97c8718eafe1d9d1f8ba58",
+    "output_v8": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V8.csv",
+    "output_v8_sha256": "0683950731fe361a229324284d76d6353e5d7b781808db3b4d2fca265cdafc41",
+    "v7_preserved": true,
+    "changes": [
+      {
+        "field": "reproduction_status",
+        "from": "official code and all 19 released CSVs downloaded and audited; four MolFormer/ProtT5/Uni-Mol/SaProt embedding stores and same-data training have not been executed; exact sequence plus canonical-SMILES source-overlap audit completed for every S1-S5 test scope",
+        "to": "official code and all 19 released CSVs downloaded and audited; four MolFormer/ProtT5/Uni-Mol/SaProt embedding stores and same-data training have not been executed; exact sequence plus canonical-SMILES source-overlap audit completed for every S1-S5 test scope; released TCP confidence is an unbounded linear scalar, released gradient clipping occurs after optimizer.step, and released threshold sensitivity/specificity labels are reversed"
+      },
+      {
+        "field": "required_action",
+        "from": "for public checkpoints, report pair-level source overlap and a source-disjoint sensitivity subset; for same-data comparison, retrain only on each frozen BioMaster TRAIN/VALID boundary and retain distinct TEST; never pool the released external labels into the frozen benchmark",
+        "to": "run both code-faithful raw-confidence and sigmoid-bounded sensitivity controls; use pre-step gradient clipping for the primary fair comparison, retain released step-then-clip only as a diagnostic, and use standard positive-class threshold metric names"
+      }
+    ]
+  }
+}

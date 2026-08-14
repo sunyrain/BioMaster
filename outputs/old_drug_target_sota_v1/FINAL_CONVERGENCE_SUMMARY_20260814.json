@@ -1,0 +1,88 @@
+{
+  "schema_version": "BIOMASTER_FINAL_CONVERGENCE_SUMMARY_V1",
+  "created_utc": "2026-08-14T00:20:00Z",
+  "status": "CONVERGED_WITH_NEGATIVE_CORE_INNOVATION_VERDICT",
+  "claim_status": "NO_FULL_SOTA_CLAIM",
+  "scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket": 338,
+    "recovered_only_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "training": {
+    "pairs": 86674,
+    "positive": 45983,
+    "negative_or_inactive": 40691,
+    "compounds": 62488,
+    "targets": 428,
+    "unknown_pairs_used_as_negative": false
+  },
+  "literature_audit": {
+    "primary_methods": 19,
+    "methods_from_2026": 10,
+    "matrix": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V12.csv"
+  },
+  "same_data_micro_auprc": {
+    "S1_SCAFFOLD_COLD_DRUG": {
+      "dtiam": 0.8828592902312902,
+      "biomaster_v1": 0.926716078387672,
+      "strong_non_novel_fusion": 0.93646
+    },
+    "S2_HOMOLOGY_COLD_TARGET": {
+      "dtiam": 0.8144691747760495,
+      "biomaster_v1": 0.789508540621471,
+      "strong_non_novel_fusion": 0.81632
+    },
+    "S3_STRICT_DOUBLE_COLD": {
+      "dtiam": 0.6516699519601021,
+      "biomaster_v1": 0.6623501051574967,
+      "development_query_balanced_blend": 0.66747
+    },
+    "S4_FIRST_SEEN_TEMPORAL_2023_2025": {
+      "dtiam": 0.7961965751695952,
+      "biomaster_v1": 0.7957299331955958,
+      "strong_non_novel_fusion": 0.81952
+    },
+    "S5_OLD_DRUG_ENTITY_COLD": {
+      "dtiam": 0.3988323542436851,
+      "biomaster_v1": 0.5623360663135735,
+      "strong_non_novel_fusion": 0.57895,
+      "scope_overlap_limited_reference": 0.64277
+    }
+  },
+  "mechanism_decisions": {
+    "biroute_v2": "REJECTED",
+    "eqir_v3": "NOT_AUTHORIZED; GNINA_STAGE0_INCOMPLETE",
+    "drug_conditioned_mutation_delta": "PHASE_A_MECHANISM_NOT_SUPPORTED",
+    "pic_dta": "PHASE_A_MECHANISM_NOT_SUPPORTED",
+    "trace_pl": "PHASE_A_MECHANISM_NOT_SUPPORTED; PBC65_NOT_OPENED",
+    "ofer_dti": "FEASIBILITY_AND_PREREGISTRATION_ONLY; NOT_TRAINED"
+  },
+  "pbcnet2_external_reference": {
+    "examples": 65,
+    "targets": 8,
+    "macro_target_pearson": 0.5450085628922587,
+    "macro_target_spearman": 0.5296807359307361,
+    "training_use_prohibited": true
+  },
+  "gnina_stage0": {
+    "ready_targets": 289,
+    "completed_targets": 92,
+    "completed_control_ligands": 4830,
+    "scientific_gate_evaluable": false,
+    "queue_stopped_for_convergence": true,
+    "completed_outputs_preserved": true,
+    "resumable": true
+  },
+  "final_verdict": {
+    "system_and_evaluation_innovation": true,
+    "verified_core_algorithm_innovation": false,
+    "verified_full_sota": false,
+    "deployment_scores_are_prospective_validation": false
+  },
+  "report": "outputs/old_drug_target_sota_v1/FINAL_CONVERGENCE_REPORT_20260814_ZH.md"
+}

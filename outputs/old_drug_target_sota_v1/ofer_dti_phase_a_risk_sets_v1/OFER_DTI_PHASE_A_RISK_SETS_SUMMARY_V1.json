@@ -1,0 +1,92 @@
+{
+  "schema_version": "OFER_DTI_PHASE_A_RISK_SETS_V1",
+  "created_utc": "2026-08-14T00:33:00.414203+00:00",
+  "status": "PASS",
+  "windows": [
+    {
+      "window": "DEV_2015_2018",
+      "cutoff": 2014,
+      "development_years": [
+        2015,
+        2018
+      ],
+      "counts": {
+        "training_events": 133150,
+        "training_active_events": 108663,
+        "training_risk_rows": 1205098,
+        "exact_event_rows": 133150,
+        "exact_pre_event_survival_rows": 6793,
+        "same_drug_sampled_target_rows": 532555,
+        "same_target_sampled_drug_rows": 532600,
+        "eligible_old_drugs_at_cutoff": 212,
+        "eligible_targets_at_cutoff": 393,
+        "development_evaluation_rows": 82487,
+        "development_active_events": 162,
+        "development_observation_events": 2838,
+        "development_old_drugs_with_active_event": 46
+      },
+      "integrity": {
+        "no_training_calendar_year_after_cutoff": true,
+        "only_observed_rows_have_active_labels": true,
+        "exactly_one_training_event_row_per_historical_event": true,
+        "training_observed_pairs_disjoint_from_development_first_event_pairs": true,
+        "all_sample_weights_finite_positive": true,
+        "evaluation_contains_only_at_risk_pairs_at_cutoff": true,
+        "future_event_type_isolated_from_training": true,
+        "unobserved_pairs_never_used_as_inactive_labels": true
+      },
+      "artifacts": {
+        "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2015_2018/OFER_DTI_TRAIN_RISK_SAMPLES_V1.npz": "d5c2f9e2e2031b0dbf5c46c3da8489afba343d3f752e21f59ffe1013003ec528",
+        "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2015_2018/OFER_DTI_OLD_DRUG_TARGET_DEVELOPMENT_EVALUATION_V1.csv.gz": "d130bd05c3306ffc238c022021e77f1a304cc8bf71ba780fa0c58d8dca12d2cb",
+        "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2015_2018/OFER_DTI_RISK_SET_SUMMARY_V1.json": "006e57b98a9779138c4e26474ec969328b16156c8c22b447aa6e0c839efb27cf"
+      }
+    },
+    {
+      "window": "DEV_2019_2022",
+      "cutoff": 2018,
+      "development_years": [
+        2019,
+        2022
+      ],
+      "counts": {
+        "training_events": 263240,
+        "training_active_events": 207820,
+        "training_risk_rows": 2455264,
+        "exact_event_rows": 263240,
+        "exact_pre_event_survival_rows": 86149,
+        "same_drug_sampled_target_rows": 1052915,
+        "same_target_sampled_drug_rows": 1052960,
+        "eligible_old_drugs_at_cutoff": 286,
+        "eligible_targets_at_cutoff": 416,
+        "development_evaluation_rows": 113675,
+        "development_active_events": 67,
+        "development_observation_events": 144,
+        "development_old_drugs_with_active_event": 38
+      },
+      "integrity": {
+        "no_training_calendar_year_after_cutoff": true,
+        "only_observed_rows_have_active_labels": true,
+        "exactly_one_training_event_row_per_historical_event": true,
+        "training_observed_pairs_disjoint_from_development_first_event_pairs": true,
+        "all_sample_weights_finite_positive": true,
+        "evaluation_contains_only_at_risk_pairs_at_cutoff": true,
+        "future_event_type_isolated_from_training": true,
+        "unobserved_pairs_never_used_as_inactive_labels": true
+      },
+      "artifacts": {
+        "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2019_2022/OFER_DTI_TRAIN_RISK_SAMPLES_V1.npz": "23de4ee9bb1935b7c8e4d425dbaf24e90c3c88647c4485d10e0bdd10a87b8a1b",
+        "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2019_2022/OFER_DTI_OLD_DRUG_TARGET_DEVELOPMENT_EVALUATION_V1.csv.gz": "001c9ba34b0d24148146eef48568e99c7b793ddcdb1c140c80500fa41abc4580",
+        "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/DEV_2019_2022/OFER_DTI_RISK_SET_SUMMARY_V1.json": "632bdb7bf3b15cf981ab76fffb74431298e918a168aabcdfef2b16142834c241"
+      }
+    }
+  ],
+  "integrity_all_pass": true,
+  "inputs": {
+    "configs/biomaster_first_event_dti_phase_a_freeze_20260814.json": "b11f437ebb20e285e4e3ccafb612dff297ffa86cbb5df900b7ea898b29a4dc13",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_FEATURE_STORE_SUMMARY_V1.json": "c4fe77b6cbbc036c422b5bd252b030e29dc065722d7274d0d1e5b8c364635051",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_FIRST_EVENT_MANIFEST_V1.csv.gz": "bb8c521eb3a16bdb305797a08adf333222c7a9f56500a0038383aad7f3c1e9c7",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_COMPOUND_FEATURE_INDEX_V1.csv.gz": "7dd5521083e7132fcfefbf1f45501b89f5d328b4a86d1f4c36a9f4cd83556b01",
+    "outputs/old_drug_target_sota_v1/feature_store_v1/TARGET_FEATURE_INDEX_V1.csv.gz": "2c959ef251a0775a6cb5df96d06c37eff25d80d671a82d7bb5f2e7b90ff1c628",
+    "outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/OLD_DRUG_FEATURE_INDEX_720_V1.csv.gz": "9790e0dbffe6cb30a7107b447c22ac0b34d6f88ef347959d4c71f5a86673d660"
+  }
+}

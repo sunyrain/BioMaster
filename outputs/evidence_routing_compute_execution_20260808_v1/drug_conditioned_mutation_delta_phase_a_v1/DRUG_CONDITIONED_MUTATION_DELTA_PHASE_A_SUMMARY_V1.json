@@ -1,0 +1,518 @@
+{
+  "schema_version": "BIOMASTER_DRUG_CONDITIONED_MUTATION_DELTA_PHASE_A_SUMMARY_V1",
+  "created_utc": "2026-08-13T22:04:58.277595+00:00",
+  "status": "PASS",
+  "scope": {
+    "phase": "A_SINGLE_SEED_MECHANISM_SCREEN",
+    "measurements": 19639,
+    "drugs": 76,
+    "genes": 35,
+    "variant_constructs": 299,
+    "esm2_reconstructable_constructs": 240,
+    "protocols": [
+      "DRUG_COLD",
+      "VARIANT_CONSTRUCT_COLD",
+      "GENE_COLD"
+    ],
+    "folds_per_protocol": 5,
+    "adapter_seed": 20260814,
+    "confirmatory_multiseed_authorized_at_freeze": false,
+    "independent_external_validation": false
+  },
+  "architecture": {
+    "name": "DRUG_CONDITIONED_COUNTERFACTUAL_MUTATION_DELTA_ADAPTER_V1",
+    "frozen_inputs": [
+      "V10 drug latent 64",
+      "V10 target latent 64",
+      "V10 explicit mutation-token latent 64",
+      "outer-train PCA WT local context 32",
+      "three outer-train PCA mutation-delta views 96"
+    ],
+    "effect_encoder": "[WT32, DELTA96, TARGET64, MUTATION64, availability1] -> 128 -> 64",
+    "drug_conditioning": "Hadamard product between effect64 and frozen V10 drug64",
+    "task_increments": [
+      "active logit increment",
+      "sensitization logit increment",
+      "residual-activity logit increment"
+    ],
+    "maximum_absolute_logit_increment": 1.0,
+    "exact_fallback": "torch.where(availability, sigmoid(base_logit + bounded_increment), base_probability)",
+    "trainable_base_parameters": 0
+  },
+  "variants": [
+    "TOKEN_BASE",
+    "WT_LOCAL_ONLY",
+    "SHUFFLED_DELTA_WITHIN_GENE",
+    "DELTA_NO_DRUG_CONDITIONING",
+    "FULL_DRUG_CONDITIONED_COUNTERFACTUAL_DELTA"
+  ],
+  "config": {
+    "path": "configs/biomaster_drug_conditioned_mutation_delta_phase_a_freeze_20260814.json",
+    "sha256": "73da8dbd7cf81c7048b958bbfd7738025ac138c05f27fe46791c5d2fde71c41a"
+  },
+  "script": {
+    "path": "scripts/run_drug_conditioned_mutation_delta_phase_a_v1.py",
+    "sha256": "24ab71eecb84f41cda7585867379953b4f0b7d073ade1ab3d89e526798cc65e5"
+  },
+  "observed_input_hashes": {
+    "v10_panel": "99e0515b0b6fd21d05588794f52dbcd6ad715556aa1b7f579b7fec6b87ff9f30",
+    "v10_summary": "382b0da9ba0502c1549e7fa06820ea0ac20b596c31b1542cc6288a22e592fe59",
+    "v10_training_implementation": "b7283a527fb87e915f5226895588d2368545c5a3e7cd09abf628b40346a40680",
+    "v10_prior": "abf6b201997ca0d0bf734a2f7d338ed0094c5bf124694c132808eec98fda66d4",
+    "pair_routing": "af957eff71ec8ad7e133986b54fa037c63be4711dac5674fe57404e1d5ec9430",
+    "target_routing": "1cd2c242da3fbfc12500a78611459f0ba47556ab15c18dd11504cd173fc8fcd2",
+    "target_sequences": "828c4fd97f6542d91c42fb1e97f1b30aac9e3453cfe0bfb58fabf87727052059",
+    "morgan_features": "83af8e322443c142ca92afa09789066556097044c4cad00c59afb43a6fe9b722",
+    "protbert_main": "a7fad0ed1d139165385160230a213a6ea16cbd5e259dcf061565c532c2e5c391",
+    "protbert_recovered": "8cf3c80563c607ad246bd519b0518168f8466abb6bec5c7b0645228f89f60f11",
+    "esm2_feature_summary": "68a33ba0146c9ea4c43f631cbce3b929a146451bcadba39e630026ec439fc6d0",
+    "construct_manifest": "50e7d81e2c0249f8502f67355c399a1475fde0570a83d20477328c353bbc8b0d",
+    "wt_center_mean": "33620e52cf262183656730ecdd1dbceadd0f42043964b93ad5535716fe65b3b7",
+    "center_delta_mean": "dc3336350b6b487f9640484dc0fc2beea9b4fa8aaf975ac7628f20017b69d92d",
+    "center_delta_signed_maxabs": "cbc675f2931e1aacab8104a481774ad2da3b3deb6602674ffc2a65e57d8e551e",
+    "window_mean_delta": "b1da40ed02b96b44d101bfea09abd7c4b6f8b98468d72678eb4785be838aae8f"
+  },
+  "integrity_gates": {
+    "all_input_hashes_match": true,
+    "all_three_protocols_have_five_complete_nonoverlapping_outer_folds": true,
+    "base_oof_reproduces_frozen_v10_within_absolute_tolerance": true,
+    "all_predictions_finite": true,
+    "all_unavailable_construct_predictions_exactly_equal_base": true,
+    "all_variants_use_identical_trainable_parameter_count_and_optimization": true,
+    "no_outer_test_labels_used_before_final_scoring": true
+  },
+  "signal_gates": {
+    "drug_cold_active_full_minus_base_auprc_point_gt_0": true,
+    "drug_cold_active_full_minus_base_drug_cluster_bootstrap_ci95_lower_gt_0": true,
+    "drug_cold_sensitization_full_minus_base_auprc_point_gt_0": true,
+    "drug_cold_sensitization_full_minus_base_drug_cluster_bootstrap_ci95_lower_gt_0": true,
+    "drug_cold_active_full_auprc_gt_each_wt_only_shuffled_and_no_drug_control": false,
+    "drug_cold_sensitization_full_auprc_gt_each_wt_only_shuffled_and_no_drug_control": true,
+    "drug_cold_active_full_minus_shuffled_bootstrap_ci95_lower_gt_0": false,
+    "cold_variant_active_full_minus_base_point_ge_minus_0_002": true,
+    "cold_gene_active_full_minus_base_point_ge_minus_0_002": true,
+    "available_subset_active_full_minus_base_point_gt_0": true
+  },
+  "gate_values": {
+    "drug_cold_active_auprc": {
+      "full": 0.6012108534173166,
+      "base": 0.5943739396937504,
+      "delta": 0.006836913723566207
+    },
+    "drug_cold_sensitization_auprc": {
+      "full": 0.038744105206827306,
+      "base": 0.03424383357305404,
+      "delta": 0.004500271633773263
+    },
+    "cold_variant_active_auprc": {
+      "full": 0.8612424711284541,
+      "base": 0.8585765980393313,
+      "delta": 0.0026658730891228055
+    },
+    "cold_gene_active_auprc": {
+      "full": 0.6288458263217418,
+      "base": 0.6246567162838098,
+      "delta": 0.004189110037931987
+    },
+    "drug_cold_available_active_auprc": {
+      "full": 0.5716759266439948,
+      "base": 0.5620901438953692,
+      "delta": 0.009585782748625649
+    },
+    "maximum_base_reproduction_absolute_error": 0.0,
+    "maximum_unavailable_fallback_absolute_error": 0.0,
+    "adapter_parameter_count": 41926
+  },
+  "paired_cluster_bootstrap": {
+    "DRUG_COLD": {
+      "ACTIVE": {
+        "TOKEN_BASE": {
+          "point_delta_auprc": 0.006836913723566207,
+          "bootstrap_mean_delta_auprc": 0.006846921118344495,
+          "ci95_lower": 0.004063214697644302,
+          "ci95_upper": 0.00997513911368347,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        },
+        "WT_LOCAL_ONLY": {
+          "point_delta_auprc": -0.00028485528121757753,
+          "bootstrap_mean_delta_auprc": -0.000290441922724271,
+          "ci95_lower": -0.0013797570651299773,
+          "ci95_upper": 0.0007799839801812257,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        },
+        "SHUFFLED_DELTA_WITHIN_GENE": {
+          "point_delta_auprc": 7.900047247377806e-06,
+          "bootstrap_mean_delta_auprc": 5.96699744776904e-05,
+          "ci95_lower": -0.0012019619864987341,
+          "ci95_upper": 0.0013097192825758522,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        },
+        "DELTA_NO_DRUG_CONDITIONING": {
+          "point_delta_auprc": 0.001965148867283717,
+          "bootstrap_mean_delta_auprc": 0.002006911458475199,
+          "ci95_lower": 0.00027700620702443557,
+          "ci95_upper": 0.004027228024743692,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        }
+      },
+      "STRICT_M2_SENSITIZATION": {
+        "TOKEN_BASE": {
+          "point_delta_auprc": 0.004500271633773263,
+          "bootstrap_mean_delta_auprc": 0.005686398610508125,
+          "ci95_lower": 0.0010266133661925745,
+          "ci95_upper": 0.01842930844677433,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        },
+        "WT_LOCAL_ONLY": {
+          "point_delta_auprc": 1.009057749186415e-05,
+          "bootstrap_mean_delta_auprc": 1.593407527560427e-05,
+          "ci95_lower": -0.0003540160345424904,
+          "ci95_upper": 0.0003654061350378591,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        },
+        "SHUFFLED_DELTA_WITHIN_GENE": {
+          "point_delta_auprc": 0.00011510308175875783,
+          "bootstrap_mean_delta_auprc": 0.00014392684724816264,
+          "ci95_lower": -0.00035316419793671747,
+          "ci95_upper": 0.0008399623593569927,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        },
+        "DELTA_NO_DRUG_CONDITIONING": {
+          "point_delta_auprc": 2.0572614018901647e-05,
+          "bootstrap_mean_delta_auprc": 0.00018216638779158055,
+          "ci95_lower": -0.0008804123061716098,
+          "ci95_upper": 0.0015015746171866977,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 76
+        }
+      }
+    },
+    "VARIANT_CONSTRUCT_COLD": {
+      "ACTIVE": {
+        "TOKEN_BASE": {
+          "point_delta_auprc": 0.0026658730891228055,
+          "bootstrap_mean_delta_auprc": 0.0026761986208210554,
+          "ci95_lower": -0.0007067274133670281,
+          "ci95_upper": 0.006454193249973066,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        },
+        "WT_LOCAL_ONLY": {
+          "point_delta_auprc": -0.004523695374837322,
+          "bootstrap_mean_delta_auprc": -0.004495795164286164,
+          "ci95_lower": -0.007504577274631388,
+          "ci95_upper": -0.001985489339056746,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        },
+        "SHUFFLED_DELTA_WITHIN_GENE": {
+          "point_delta_auprc": -0.0016625474813081187,
+          "bootstrap_mean_delta_auprc": -0.0016591977167034822,
+          "ci95_lower": -0.0064060681908633425,
+          "ci95_upper": 0.003310000741852897,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        },
+        "DELTA_NO_DRUG_CONDITIONING": {
+          "point_delta_auprc": 0.0047365671162600265,
+          "bootstrap_mean_delta_auprc": 0.004661142471226391,
+          "ci95_lower": 0.0017584680916997442,
+          "ci95_upper": 0.007633201330839372,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        }
+      },
+      "STRICT_M2_SENSITIZATION": {
+        "TOKEN_BASE": {
+          "point_delta_auprc": 0.022035971957316353,
+          "bootstrap_mean_delta_auprc": 0.019262210030459238,
+          "ci95_lower": -0.0061334884874082295,
+          "ci95_upper": 0.0477766015125938,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        },
+        "WT_LOCAL_ONLY": {
+          "point_delta_auprc": -0.003984806375048139,
+          "bootstrap_mean_delta_auprc": -0.004061819236726911,
+          "ci95_lower": -0.015431756759123762,
+          "ci95_upper": 0.0027334134507998723,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        },
+        "SHUFFLED_DELTA_WITHIN_GENE": {
+          "point_delta_auprc": 0.0012706703762041527,
+          "bootstrap_mean_delta_auprc": 0.001047565662109425,
+          "ci95_lower": -0.004412057012301772,
+          "ci95_upper": 0.006456023907573553,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        },
+        "DELTA_NO_DRUG_CONDITIONING": {
+          "point_delta_auprc": 0.0017777797364064707,
+          "bootstrap_mean_delta_auprc": 0.0018207817227829364,
+          "ci95_lower": -6.522938167081367e-05,
+          "ci95_upper": 0.004845027907583078,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 299
+        }
+      }
+    },
+    "GENE_COLD": {
+      "ACTIVE": {
+        "TOKEN_BASE": {
+          "point_delta_auprc": 0.004189110037931987,
+          "bootstrap_mean_delta_auprc": 0.0033498923206870864,
+          "ci95_lower": -0.005834089404623197,
+          "ci95_upper": 0.009853522870775424,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        },
+        "WT_LOCAL_ONLY": {
+          "point_delta_auprc": -2.829912688917524e-05,
+          "bootstrap_mean_delta_auprc": 0.00015528113082802707,
+          "ci95_lower": -0.003805601417539098,
+          "ci95_upper": 0.0037128448359876943,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        },
+        "SHUFFLED_DELTA_WITHIN_GENE": {
+          "point_delta_auprc": -4.402897395283656e-05,
+          "bootstrap_mean_delta_auprc": -0.00015257527150834137,
+          "ci95_lower": -0.00500053217623686,
+          "ci95_upper": 0.0034847674870975504,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        },
+        "DELTA_NO_DRUG_CONDITIONING": {
+          "point_delta_auprc": 0.001640933318802551,
+          "bootstrap_mean_delta_auprc": 0.001131160147289766,
+          "ci95_lower": -0.004513351248223085,
+          "ci95_upper": 0.005614267390597582,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        }
+      },
+      "STRICT_M2_SENSITIZATION": {
+        "TOKEN_BASE": {
+          "point_delta_auprc": 0.0003179657876201747,
+          "bootstrap_mean_delta_auprc": 0.00034208308068252075,
+          "ci95_lower": -0.0006091484061440062,
+          "ci95_upper": 0.0014614571566238768,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        },
+        "WT_LOCAL_ONLY": {
+          "point_delta_auprc": 4.452371576917167e-05,
+          "bootstrap_mean_delta_auprc": 7.192012698944965e-06,
+          "ci95_lower": -0.0005870312505699884,
+          "ci95_upper": 0.0004198593017963759,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        },
+        "SHUFFLED_DELTA_WITHIN_GENE": {
+          "point_delta_auprc": 7.900788706118825e-05,
+          "bootstrap_mean_delta_auprc": 6.447317450422993e-05,
+          "ci95_lower": -0.0003992486955126184,
+          "ci95_upper": 0.0004699640661132484,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        },
+        "DELTA_NO_DRUG_CONDITIONING": {
+          "point_delta_auprc": 0.00010640406066901847,
+          "bootstrap_mean_delta_auprc": 8.132726736135692e-05,
+          "ci95_lower": -0.0001073745302091711,
+          "ci95_upper": 0.0002320202142843239,
+          "replicates": 1000,
+          "attempts": 1000,
+          "clusters": 35
+        }
+      }
+    }
+  },
+  "split_audit": [
+    {
+      "protocol": "DRUG_COLD",
+      "fold": 1,
+      "train_rows": 15601,
+      "test_rows": 4038,
+      "train_groups": 60,
+      "test_groups": 16,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "DRUG_COLD",
+      "fold": 2,
+      "train_rows": 15726,
+      "test_rows": 3913,
+      "train_groups": 61,
+      "test_groups": 15,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "DRUG_COLD",
+      "fold": 3,
+      "train_rows": 15727,
+      "test_rows": 3912,
+      "train_groups": 61,
+      "test_groups": 15,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "DRUG_COLD",
+      "fold": 4,
+      "train_rows": 15727,
+      "test_rows": 3912,
+      "train_groups": 61,
+      "test_groups": 15,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "DRUG_COLD",
+      "fold": 5,
+      "train_rows": 15775,
+      "test_rows": 3864,
+      "train_groups": 61,
+      "test_groups": 15,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "VARIANT_CONSTRUCT_COLD",
+      "fold": 1,
+      "train_rows": 15721,
+      "test_rows": 3918,
+      "train_groups": 239,
+      "test_groups": 60,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "VARIANT_CONSTRUCT_COLD",
+      "fold": 2,
+      "train_rows": 15711,
+      "test_rows": 3928,
+      "train_groups": 238,
+      "test_groups": 61,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "VARIANT_CONSTRUCT_COLD",
+      "fold": 3,
+      "train_rows": 15712,
+      "test_rows": 3927,
+      "train_groups": 239,
+      "test_groups": 60,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "VARIANT_CONSTRUCT_COLD",
+      "fold": 4,
+      "train_rows": 15702,
+      "test_rows": 3937,
+      "train_groups": 240,
+      "test_groups": 59,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "VARIANT_CONSTRUCT_COLD",
+      "fold": 5,
+      "train_rows": 15710,
+      "test_rows": 3929,
+      "train_groups": 240,
+      "test_groups": 59,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "GENE_COLD",
+      "fold": 1,
+      "train_rows": 15608,
+      "test_rows": 4031,
+      "train_groups": 34,
+      "test_groups": 1,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "GENE_COLD",
+      "fold": 2,
+      "train_rows": 15734,
+      "test_rows": 3905,
+      "train_groups": 27,
+      "test_groups": 8,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "GENE_COLD",
+      "fold": 3,
+      "train_rows": 15734,
+      "test_rows": 3905,
+      "train_groups": 26,
+      "test_groups": 9,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "GENE_COLD",
+      "fold": 4,
+      "train_rows": 15735,
+      "test_rows": 3904,
+      "train_groups": 27,
+      "test_groups": 8,
+      "group_overlap": 0
+    },
+    {
+      "protocol": "GENE_COLD",
+      "fold": 5,
+      "train_rows": 15745,
+      "test_rows": 3894,
+      "train_groups": 26,
+      "test_groups": 9,
+      "group_overlap": 0
+    }
+  ],
+  "multiseed_confirmation_authorized": false,
+  "decision": "PHASE_A_MECHANISM_NOT_SUPPORTED; DO_NOT_OPEN_FIVE_SEED_CONFIRMATION",
+  "full_algorithm_innovation_claim": false,
+  "full_sota_claim": false,
+  "claim_boundary": "Phase A is an internal KiRHub mechanism screen. ESM2, WT-mutant differences, multitask learning, gating and drug-protein interaction features are prior art individually. Only the prespecified joint mechanism can become a candidate contribution, and only after successful Phase A, five-seed confirmation, same-data comparators and independent external validation.",
+  "software": {
+    "torch": "2.10.0+cu128",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "device": "cuda",
+    "base_seed": 20260813,
+    "adapter_seed": 20260814
+  },
+  "outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/drug_conditioned_mutation_delta_phase_a_v1/DRUG_CONDITIONED_MUTATION_DELTA_PHASE_A_OOF_V1.csv.gz": "031456d02e3da19f9e098913c07330b74af49452e986eab6b8410cd2604fd898",
+    "outputs/evidence_routing_compute_execution_20260808_v1/drug_conditioned_mutation_delta_phase_a_v1/DRUG_CONDITIONED_MUTATION_DELTA_PHASE_A_METRICS_V1.csv": "6c4f9bdec74f19b5938e73cddb7f2ae3925948312db9fe96bdff6e456d45da34",
+    "outputs/evidence_routing_compute_execution_20260808_v1/drug_conditioned_mutation_delta_phase_a_v1/DRUG_CONDITIONED_MUTATION_DELTA_PHASE_A_BOOTSTRAP_V1.csv": "685c602ae3b4c19e1c9cb2196f8f2090393f020227118bc03cef47d1c304a0d3",
+    "outputs/evidence_routing_compute_execution_20260808_v1/drug_conditioned_mutation_delta_phase_a_v1/DRUG_CONDITIONED_MUTATION_DELTA_PHASE_A_SPLIT_AUDIT_V1.csv": "f9a02f2545ad7dfdc5dad3405cf9474df0becb2f9be65641e84c7383fcaec02a"
+  }
+}

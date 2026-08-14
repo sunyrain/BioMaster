@@ -1,0 +1,61 @@
+{
+  "schema_version": "TRACE_PL_FAILURE_AUDIT_V1",
+  "created_utc": "2026-08-14T00:09:42.852176+00:00",
+  "status": "PASS",
+  "scope": "Platinum development OOF only; PBCNet2 external labels remain unopened",
+  "decision": "TRACE_PL_PHASE_A_REJECTED; DO_NOT_OPEN_PBC65",
+  "counts": {
+    "samples": 384,
+    "uniprot_ids": 88,
+    "homology_clusters": 84,
+    "ligands": 105,
+    "distance_le_8A": 301,
+    "distance_gt_8A": 83,
+    "singleton_homology_clusters": 18,
+    "singleton_proteins": 24,
+    "singleton_ligands": 36
+  },
+  "concentration": {
+    "largest_homology_cluster_fraction": 0.08333333333333333,
+    "largest_protein_fraction": 0.08333333333333333,
+    "largest_ligand_fraction": 0.078125
+  },
+  "primary_outcome": {
+    "trace_full_rmse": 1.5175257185354507,
+    "trace_full_pearson": 0.03793183363659966,
+    "direct_pair_rmse": 1.3605808217809674,
+    "direct_pair_pearson": 0.1836173090773262,
+    "bootstrap_trace_full_minus_direct_pair_rmse": {
+      "ci95_high": 0.2870993025765101,
+      "ci95_low": 0.03367670828289539,
+      "first": "trace_full",
+      "metric": "RMSE_first_minus_RMSE_second",
+      "point": 0.1569448956567503,
+      "replicates": 2000,
+      "second": "direct_pair"
+    }
+  },
+  "mechanism_diagnosis": {
+    "rotamer_ensemble_supported": false,
+    "atomic_contact_supported": false,
+    "true_ligand_contact_supported": false,
+    "shared_state_potential_supported": false,
+    "interpretation": "The canonical free-amino-acid conformer field is not an adequate proxy for a protein-conditioned mutant side-chain ensemble. Its imposed potential-difference structure loses predictive signal relative to the capacity-matched direct paired head."
+  },
+  "integrity": {
+    "external_test_opened": false,
+    "phase_a_integrity_passed": true,
+    "all_expected_models_present": true,
+    "one_prediction_per_sample_model": true
+  },
+  "inputs": {
+    "outputs/old_drug_target_sota_v1/trace_pl_platinum_features_v1/TRACE_PL_PLATINUM_FEATURE_INDEX_V1.csv": "758e72f795f4828617fd42ccee2eb657038aa242c6975be978947675ff45649d",
+    "outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/TRACE_PL_PHASE_A_OOF_PREDICTIONS_V1.csv": "99ed6465bf1ab57588d06c7624abfa62cbb24ff2932f6a290bc8179d066aefd2",
+    "outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/TRACE_PL_PHASE_A_SUMMARY_V1.json": "77f09e56ddd5afd02dbbf329b04824a179050094ca334faf0a081d7f8f4d4c0f"
+  },
+  "artifacts": {
+    "outputs/old_drug_target_sota_v1/trace_pl_failure_audit_v1/TRACE_PL_FAILURE_METRICS_BY_DISTANCE_V1.csv": "14a0f4e82b8b82e8e9a10c68f3aee941c251f6460036e14305c0f7c6c3c5902d",
+    "outputs/old_drug_target_sota_v1/trace_pl_failure_audit_v1/TRACE_PL_FAILURE_VARIANT_SENSITIVITY_V1.csv": "cb12dd54fe43b3b584f6cc7eeb7195bb36ce3f54c66b1357954f3a506eb3299d",
+    "outputs/old_drug_target_sota_v1/trace_pl_failure_audit_v1/TRACE_PL_FAILURE_FOLD_CONCENTRATION_V1.csv": "dbaef2388141b269502f7f6cc6dc3d81d5c9217423bf8b1ee62e4db64f84fbc3"
+  }
+}

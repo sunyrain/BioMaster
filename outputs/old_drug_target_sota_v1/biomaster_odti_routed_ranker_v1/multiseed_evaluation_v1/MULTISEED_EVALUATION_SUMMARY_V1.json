@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-08-13T10:29:38.572095+00:00",
+  "status": "PASS",
+  "model_seeds": [
+    20260813,
+    20260814,
+    20260815,
+    20260816,
+    20260817
+  ],
+  "core_model_runs": 55,
+  "ensemble_rule": "Arithmetic mean of five independently trained frozen-protocol seed predictions",
+  "stack_fit_boundary": "Each seed stack fit only on that seed's frozen validation predictions",
+  "primary_auprc_comparisons": {
+    "S2_HOMOLOGY_COLD_TARGET": {
+      "metric": "auprc",
+      "challenger": "BIOMASTER_STACK_FIVE_SEED_MEAN",
+      "reference": "CONPLEX_FROZEN_EXTERNAL",
+      "rows": 86673,
+      "clusters": 297,
+      "cluster_column": "target_homology_cluster",
+      "challenger_score": 0.789508540621471,
+      "reference_score": 0.6121961629101331,
+      "observed_difference": 0.1773123777113379,
+      "bootstrap_iterations_requested": 2000,
+      "bootstrap_iterations_valid": 2000,
+      "bootstrap_iterations_skipped": 0,
+      "difference_ci95_low": 0.15098864292022518,
+      "difference_ci95_high": 0.20294446931722487,
+      "probability_difference_gt_zero": 1.0,
+      "ci95_excludes_zero_in_favor_of_challenger": true,
+      "protocol": "S2_HOMOLOGY_COLD_TARGET"
+    },
+    "S3_STRICT_DOUBLE_COLD": {
+      "metric": "auprc",
+      "challenger": "BIOMASTER_STACK_FIVE_SEED_MEAN",
+      "reference": "CONPLEX_FROZEN_EXTERNAL",
+      "rows": 17732,
+      "clusters": 281,
+      "cluster_column": "target_homology_cluster",
+      "challenger_score": 0.6623501051574967,
+      "reference_score": 0.6216847460243867,
+      "observed_difference": 0.04066535913310998,
+      "bootstrap_iterations_requested": 2000,
+      "bootstrap_iterations_valid": 2000,
+      "bootstrap_iterations_skipped": 0,
+      "difference_ci95_low": 0.028260358053591374,
+      "difference_ci95_high": 0.054164049201975206,
+      "probability_difference_gt_zero": 1.0,
+      "ci95_excludes_zero_in_favor_of_challenger": true,
+      "protocol": "S3_STRICT_DOUBLE_COLD"
+    },
+    "S5_OLD_DRUG_ENTITY_COLD": {
+      "metric": "auprc",
+      "challenger": "BIOMASTER_STACK_FIVE_SEED_MEAN",
+      "reference": "scope_mean",
+      "rows": 2556,
+      "clusters": 302,
+      "cluster_column": "parent_standard_inchi_key",
+      "challenger_score": 0.5623360663135735,
+      "reference_score": 0.642773455210406,
+      "observed_difference": -0.0804373888968325,
+      "bootstrap_iterations_requested": 2000,
+      "bootstrap_iterations_valid": 2000,
+      "bootstrap_iterations_skipped": 0,
+      "difference_ci95_low": -0.17911386042005353,
+      "difference_ci95_high": 0.026034643536638043,
+      "probability_difference_gt_zero": 0.078,
+      "ci95_excludes_zero_in_favor_of_challenger": false,
+      "protocol": "S5_OLD_DRUG_ENTITY_COLD"
+    }
+  },
+  "checks": {
+    "exact_55_core_model_runs": true,
+    "five_seed_metrics_each_protocol_model": true,
+    "all_metric_values_finite": true,
+    "all_bootstraps_complete": true
+  },
+  "artifacts": {
+    "metrics_sha256": "af736f4b3a08b166d58e8a88f3a31c0eca53e18e0dee3ef3c5f598da7e8eaebc",
+    "variability_sha256": "4971ac64a27064338f44272818e5381551a9a4babccce2799db3730e68cf07e6",
+    "bootstrap_sha256": "95e7c3c9e2bbf022a03e230e3249344f1bad2e465290c7a8a62a4e40b979c841"
+  },
+  "claim_status": "MULTI_SEED_INTERNAL_EVIDENCE; SCOPE SOURCE_OVERLAP REMAINS UNRESOLVED"
+}

@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-08-13T09:26:26.021816+00:00",
+  "status": "PASS",
+  "bootstrap_unit": "target_homology_cluster; clusters sampled with replacement and all member rows retained",
+  "model_seed": 20260813,
+  "bootstrap_seed": 20260813,
+  "iterations": 500,
+  "checks": {
+    "all_fold_pair_sets_unique": true,
+    "expected_ten_folds_and_two_pooled_rows": true,
+    "all_bootstrap_results_complete": true,
+    "all_ci_bounds_finite": true,
+    "s2_pooled_auprc_ci_excludes_zero_vs_conplex": true
+  },
+  "primary_s2_pooled_vs_conplex_auprc": {
+    "metric": "auprc",
+    "challenger": "biomaster_probability_calibrated",
+    "reference": "CONPLEX_FROZEN_EXTERNAL",
+    "rows": 86673,
+    "clusters": 297,
+    "challenger_score": 0.7604862521433786,
+    "reference_score": 0.6121961629101331,
+    "observed_difference": 0.1482900892332455,
+    "bootstrap_iterations_requested": 500,
+    "bootstrap_iterations_valid": 500,
+    "bootstrap_iterations_skipped": 0,
+    "difference_ci95_low": 0.11677174632073471,
+    "difference_ci95_high": 0.17623079054922688,
+    "probability_difference_gt_zero": 1.0,
+    "ci95_excludes_zero_in_favor_of_challenger": true,
+    "protocol": "S2_HOMOLOGY_COLD_TARGET",
+    "evaluation": "POOLED_OOF",
+    "fold": -1
+  },
+  "primary_s3_pooled_vs_conplex_auprc": {
+    "metric": "auprc",
+    "challenger": "biomaster_probability_calibrated",
+    "reference": "CONPLEX_FROZEN_EXTERNAL",
+    "rows": 17732,
+    "clusters": 281,
+    "challenger_score": 0.600499103979051,
+    "reference_score": 0.6216847460243867,
+    "observed_difference": -0.021185642045335684,
+    "bootstrap_iterations_requested": 500,
+    "bootstrap_iterations_valid": 500,
+    "bootstrap_iterations_skipped": 0,
+    "difference_ci95_low": -0.046139134698069816,
+    "difference_ci95_high": 0.003161303393468596,
+    "probability_difference_gt_zero": 0.04,
+    "ci95_excludes_zero_in_favor_of_challenger": false,
+    "protocol": "S3_STRICT_DOUBLE_COLD",
+    "evaluation": "POOLED_OOF",
+    "fold": -1
+  },
+  "artifacts": {
+    "results_sha256": "da8d66e9acdd79a43bbc1424c5658c094c98a23f818595e042d34862088819c2",
+    "coverage_sha256": "aed328c8b55da7df1864c05b8a705256b31f1f5210c466f2e307433a3d517c49"
+  },
+  "claim_status": "PAIRED_INTERNAL_EVIDENCE_ONLY; PUBLIC_SAME_SPLIT_MODELS_AND_MULTIPLE_MODEL_SEEDS_STILL_REQUIRED"
+}

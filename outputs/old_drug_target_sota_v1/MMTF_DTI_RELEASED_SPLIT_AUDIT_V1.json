@@ -1,0 +1,307 @@
+{
+  "created_utc": "2026-08-13T19:37:47.883125+00:00",
+  "status": "PASS",
+  "source_repository": "third_party/sota_dti_2026/MMTF-DTI",
+  "source_commit": "0e8665238f1a739aa4fdf6a9180300a727972928",
+  "interpretation": "released BindingDB and Human artifacts have no exact pair overlap across split files, but are entity-warm; released C. elegans and DrugBank artifacts contain exact pair overlap across splits, including two DrugBank train-test label-set conflicts",
+  "datasets": {
+    "BindingDB": {
+      "splits": {
+        "train": {
+          "rows": 34439,
+          "positives": 14583,
+          "negatives": 19856,
+          "unique_drugs": 13887,
+          "unique_targets": 2347,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "val": {
+          "rows": 4920,
+          "positives": 2017,
+          "negatives": 2903,
+          "unique_drugs": 4050,
+          "unique_targets": 1083,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "test": {
+          "rows": 9840,
+          "positives": 4074,
+          "negatives": 5766,
+          "unique_drugs": 6951,
+          "unique_targets": 1441,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        }
+      },
+      "total": {
+        "rows": 49199,
+        "positives": 20674,
+        "negatives": 28525,
+        "unique_drugs": 14643,
+        "unique_targets": 2623
+      },
+      "cross_split_exact_pair_overlap": {
+        "train_val": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0
+        },
+        "train_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0
+        },
+        "val_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0
+        }
+      },
+      "entity_overlap": {
+        "val_drugs_seen_in_train_fraction": 0.8911111111111111,
+        "val_targets_seen_in_train_fraction": 0.9048938134810711,
+        "test_drugs_seen_in_train_fraction": 0.9036109912242842,
+        "test_targets_seen_in_train_fraction": 0.8639833448993754
+      }
+    },
+    "Celegans": {
+      "splits": {
+        "train": {
+          "rows": 6228,
+          "positives": 3114,
+          "negatives": 3114,
+          "unique_drugs": 1599,
+          "unique_targets": 1756,
+          "duplicate_rows_within_split": 887,
+          "duplicate_pairs_within_split": 887
+        },
+        "val": {
+          "rows": 779,
+          "positives": 390,
+          "negatives": 389,
+          "unique_drugs": 442,
+          "unique_targets": 502,
+          "duplicate_rows_within_split": 29,
+          "duplicate_pairs_within_split": 29
+        },
+        "test": {
+          "rows": 779,
+          "positives": 389,
+          "negatives": 390,
+          "unique_drugs": 457,
+          "unique_targets": 512,
+          "duplicate_rows_within_split": 28,
+          "duplicate_pairs_within_split": 28
+        }
+      },
+      "total": {
+        "rows": 7786,
+        "positives": 3893,
+        "negatives": 3893,
+        "unique_drugs": 1767,
+        "unique_targets": 1876
+      },
+      "cross_split_exact_pair_overlap": {
+        "train_val": {
+          "exact_pair_overlap": 141,
+          "label_set_conflicts": 0
+        },
+        "train_test": {
+          "exact_pair_overlap": 137,
+          "label_set_conflicts": 0
+        },
+        "val_test": {
+          "exact_pair_overlap": 38,
+          "label_set_conflicts": 0
+        }
+      },
+      "entity_overlap": {
+        "val_drugs_seen_in_train_fraction": 0.8167420814479638,
+        "val_targets_seen_in_train_fraction": 0.8784860557768924,
+        "test_drugs_seen_in_train_fraction": 0.7899343544857768,
+        "test_targets_seen_in_train_fraction": 0.86328125
+      }
+    },
+    "DrugBank": {
+      "splits": {
+        "train": {
+          "rows": 28016,
+          "positives": 14008,
+          "negatives": 14008,
+          "unique_drugs": 6532,
+          "unique_targets": 4237,
+          "duplicate_rows_within_split": 144,
+          "duplicate_pairs_within_split": 169
+        },
+        "val": {
+          "rows": 3503,
+          "positives": 1752,
+          "negatives": 1751,
+          "unique_drugs": 2500,
+          "unique_targets": 2102,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "test": {
+          "rows": 3503,
+          "positives": 1751,
+          "negatives": 1752,
+          "unique_drugs": 2490,
+          "unique_targets": 2084,
+          "duplicate_rows_within_split": 1,
+          "duplicate_pairs_within_split": 2
+        }
+      },
+      "total": {
+        "rows": 35022,
+        "positives": 17511,
+        "negatives": 17511,
+        "unique_drugs": 6645,
+        "unique_targets": 4256
+      },
+      "cross_split_exact_pair_overlap": {
+        "train_val": {
+          "exact_pair_overlap": 48,
+          "label_set_conflicts": 0
+        },
+        "train_test": {
+          "exact_pair_overlap": 47,
+          "label_set_conflicts": 2
+        },
+        "val_test": {
+          "exact_pair_overlap": 8,
+          "label_set_conflicts": 0
+        }
+      },
+      "entity_overlap": {
+        "val_drugs_seen_in_train_fraction": 0.972,
+        "val_targets_seen_in_train_fraction": 0.9952426260704091,
+        "test_drugs_seen_in_train_fraction": 0.9710843373493976,
+        "test_targets_seen_in_train_fraction": 0.9942418426103646
+      }
+    },
+    "Human": {
+      "splits": {
+        "train": {
+          "rows": 4197,
+          "positives": 1846,
+          "negatives": 2351,
+          "unique_drugs": 2152,
+          "unique_targets": 1719,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "val": {
+          "rows": 600,
+          "positives": 251,
+          "negatives": 349,
+          "unique_drugs": 465,
+          "unique_targets": 474,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        },
+        "test": {
+          "rows": 1200,
+          "positives": 536,
+          "negatives": 664,
+          "unique_drugs": 840,
+          "unique_targets": 777,
+          "duplicate_rows_within_split": 0,
+          "duplicate_pairs_within_split": 0
+        }
+      },
+      "total": {
+        "rows": 5997,
+        "positives": 2633,
+        "negatives": 3364,
+        "unique_drugs": 2726,
+        "unique_targets": 2001
+      },
+      "cross_split_exact_pair_overlap": {
+        "train_val": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0
+        },
+        "train_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0
+        },
+        "val_test": {
+          "exact_pair_overlap": 0,
+          "label_set_conflicts": 0
+        }
+      },
+      "entity_overlap": {
+        "val_drugs_seen_in_train_fraction": 0.5849462365591398,
+        "val_targets_seen_in_train_fraction": 0.7637130801687764,
+        "test_drugs_seen_in_train_fraction": 0.5166666666666667,
+        "test_targets_seen_in_train_fraction": 0.7477477477477478
+      }
+    }
+  },
+  "checks": {
+    "twelve_split_files_audited": true,
+    "released_totals_match": true,
+    "bindingdb_has_no_exact_cross_split_pair_overlap": true,
+    "human_has_no_exact_cross_split_pair_overlap": true,
+    "celegans_train_val_overlap_141": true,
+    "celegans_train_test_overlap_137": true,
+    "drugbank_train_val_overlap_48": true,
+    "drugbank_train_test_overlap_47": true,
+    "drugbank_train_test_has_two_label_set_conflicts": true,
+    "all_test_splits_have_seen_drugs_and_targets": true
+  },
+  "source_file_sha256": {
+    "third_party/sota_dti_2026/MMTF-DTI/data/BindingDB/data_split/train.csv": "086c75f1f08915c3386b33a506e014e484a254dc142965870f8cf9545159b91d",
+    "third_party/sota_dti_2026/MMTF-DTI/data/BindingDB/data_split/val.csv": "03a1ea71d3db5293f2af00c90860ae2e6c628b8503f6ea4fcd7807e00f1782f7",
+    "third_party/sota_dti_2026/MMTF-DTI/data/BindingDB/data_split/test.csv": "6c4b810ae1fb91b1f2f497fa898d336d9c775bab0671ebb0f42cf66c2ad8ad67",
+    "third_party/sota_dti_2026/MMTF-DTI/data/Celegans/data_split/train.csv": "b18f08d065ce434c72482614ad174dad9b7c743ffd28efe0b64617df6719bd14",
+    "third_party/sota_dti_2026/MMTF-DTI/data/Celegans/data_split/val.csv": "49f735aa06ff70a6634a72c63418021bd2398fbe88a39bbd69a83ac8bfff6634",
+    "third_party/sota_dti_2026/MMTF-DTI/data/Celegans/data_split/test.csv": "72144ba4fa390fdcee29c859fed13c48f0745d96edea8d3bdc2de44f2da64515",
+    "third_party/sota_dti_2026/MMTF-DTI/data/DrugBank/data_split/train.csv": "2092f97cf5fedc9c8cbfb61a95d68e81f1d5417702100fdc0a38b0a6cdcca016",
+    "third_party/sota_dti_2026/MMTF-DTI/data/DrugBank/data_split/val.csv": "62e1fdb1adfac982418b512b8aef2d93ce4cef693001fe769716596e9dbfaad9",
+    "third_party/sota_dti_2026/MMTF-DTI/data/DrugBank/data_split/test.csv": "17ff2db29bd8c2b80caf3417254c60e70cf638a75896ceebb2b33c152e3389dd",
+    "third_party/sota_dti_2026/MMTF-DTI/data/Human/data_split/train.csv": "51e78ef52bb872079d20b813aacea8649970efd32db0d853a2bdfc12913d300b",
+    "third_party/sota_dti_2026/MMTF-DTI/data/Human/data_split/val.csv": "652584cf3fda217c7d730a9b6e9fa1bb46c8441626b72c3d980f5561e8f17a5c",
+    "third_party/sota_dti_2026/MMTF-DTI/data/Human/data_split/test.csv": "b8d9664fc15e3bbc6abf6a82cc1e12ba512c33d31f06baf25b95786911d4f005"
+  },
+  "summary_csv": "outputs/old_drug_target_sota_v1/MMTF_DTI_RELEASED_SPLIT_SUMMARY_V1.csv",
+  "matrix_update": {
+    "input_v4": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V4.csv",
+    "input_v4_sha256": "9657fc299080c914cae7dc65a0e27053ed8963547d897abab8329c34eb076779",
+    "output_v5": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V5.csv",
+    "output_v5_sha256": "1f495877644d4215814f957c96baa9430886ee7b6264862d9d3d88be3f402873",
+    "v4_preserved": true,
+    "changes": [
+      {
+        "field": "reported_scale",
+        "from": "official repository contains processed 8:1:1 split files; exact row counts not asserted here",
+        "to": "released split files: BindingDB 49,199 rows (34,439/4,920/9,840 train/val/test; 14,643 drugs, 2,623 targets); DrugBank 35,022 (28,016/3,503/3,503; 6,645/4,256); C. elegans 7,786 (6,228/779/779; 1,767/1,876); Human 5,997 (4,197/600/1,200; 2,726/2,001)"
+      },
+      {
+        "field": "split_protocol",
+        "from": "single-domain stratified random 8:1:1 with fixed seed 2025; cross-domain adversarial experiments",
+        "to": "released files are interaction-level warm splits: test drug/target seen-in-train fractions are BindingDB .904/.864, DrugBank .971/.994, C. elegans .790/.863, Human .517/.748; training code then runs five-fold StratifiedKFold inside the released train file and does not use the released validation file for model selection"
+      },
+      {
+        "field": "critical_limit_for_our_claim",
+        "from": "random 8:1:1 headline results are not evidence for scaffold/homology double cold; dynamic fusion and domain adversarial alignment are prior art rather than BioMaster novelty",
+        "to": "not scaffold-, homology-, entity- or double-cold; released C. elegans has 141 train-val and 137 train-test exact pair overlaps, while DrugBank has 48/47 and two train-test label-set conflicts; modality tuple semantics are also swapped by released preprocessing/training code"
+      },
+      {
+        "field": "reported_result_status",
+        "from": "exact primary-abstract mean deltas; per-dataset numerical tables not extracted",
+        "to": "primary-abstract mean deltas plus exact audit of all 12 released split files; no same-data BioMaster result"
+      },
+      {
+        "field": "same_data_directly_comparable",
+        "from": "NO",
+        "to": "NO"
+      },
+      {
+        "field": "required_action",
+        "from": "retain as architecture prior art; request or identify an upstream semantic correction before claiming official reproduction; any repaired port must be labeled MMTF-inspired/corrected and evaluated under the frozen S1-S5 splits",
+        "to": "do not compare reported warm headline values with S1-S5; before any corrected port, deduplicate pairs, resolve label conflicts, correct modality semantics, and regenerate the frozen BioMaster cold splits"
+      }
+    ]
+  }
+}

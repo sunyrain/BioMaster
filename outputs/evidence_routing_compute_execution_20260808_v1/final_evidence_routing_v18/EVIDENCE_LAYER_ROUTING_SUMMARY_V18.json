@@ -1,0 +1,122 @@
+{
+  "package_name": "FULL30_IDENTITY_READINESS_AND_INTERNAL_ROBUSTNESS_AUDITED_ROUTING_V18",
+  "created_utc": "2026-08-13T04:35:37.065403+00:00",
+  "status": "PASS",
+  "checks": {
+    "upstream_v17_and_v18_audits_pass": true,
+    "immutable_pair_core_hash_preserved": true,
+    "universe_888_minus_480_minus_24_equals_384": true,
+    "pocket_partition_338_plus_only46_recovered": true,
+    "deployment_partition_185_plus199": true,
+    "all_v17_target_rows_preserved": true,
+    "all_v17_master_rows_preserved": true,
+    "master_still_63_layer_partition": true,
+    "review_exact_30_rank_order_and_wave_partition": true,
+    "review_exact_28_entities_16_targets": true,
+    "exact_one_entity_name_hold_rank21": true,
+    "risk_partition_8_17_5": true,
+    "robustness_high_discordance_exact16": true,
+    "physical_coverage_29_boltz_10_gnina": true,
+    "zero_external_exact_pair_validation": true,
+    "w2_and_veto_not_execution_authorized": true,
+    "v17_w1_real_data_state_still_zero": true,
+    "target_aggregate_sums_equal30_and_exact16_targets": true,
+    "master_exact30_candidate_rows_annotated": true
+  },
+  "universe": {
+    "official_targets_before_gates": 888,
+    "hard_gate_excluded": 480,
+    "strict_experimental_pocket_mainline": 338,
+    "recovered_only_for_no_experimental_pocket": 46,
+    "later_pocket_quality_excluded": 24,
+    "active_targets": 384,
+    "drugs": 720,
+    "pairs": 276480
+  },
+  "routing_unchanged": {
+    "pocket": {
+      "strict_experimental": 338,
+      "recovered_only_no_experimental_pocket": 46
+    },
+    "deployment": {
+      "seeded_known_graph": 185,
+      "unseeded_dta_exploratory": 199
+    },
+    "pair_rows": 276480,
+    "pair_core_sha256": "8e1c73a0b16122bee6e4d3d7ca5dd9dbc816759c63a2976ec57799cdf97b7a9a"
+  },
+  "validation_queue": {
+    "rows": 63,
+    "external_source_controls": 17,
+    "w1_target_matched_primary_controls": 16,
+    "prospective_candidates": 30,
+    "w1_candidates": 8,
+    "wave2_candidates": 21,
+    "veto": 1
+  },
+  "v17_result_ingestion": {
+    "protocol_frozen_before_real_results": true,
+    "procurement_input_rows": 8,
+    "blinded_primary_input_rows": 16,
+    "controlled_unblinding_key_rows": 16,
+    "active_species_input_rows": 3,
+    "orthogonal_input_rows": 8,
+    "decision_branch_audit_checks": 25,
+    "real_result_rows_received": 0,
+    "assay_released_candidates": 0,
+    "technically_corroborated_pairs": 0,
+    "data_state": "AWAITING_REAL_EXTERNAL_PROCUREMENT_AND_EXPERIMENTAL_DATA"
+  },
+  "v18_full_candidate_portfolio": {
+    "candidate_pairs": 30,
+    "unique_entities": 28,
+    "unique_targets": 16,
+    "w1": 8,
+    "w2": 21,
+    "veto": 1,
+    "seeded": 19,
+    "unseeded": 11,
+    "chembl_full_key_exact": 27,
+    "chembl_representation_mismatch": 1,
+    "entity_name_adjudication_holds": 1,
+    "chembl_prodrugs": 3,
+    "pubchem_exact_full_key": 28,
+    "risk_tier_r3": 8,
+    "risk_tier_r2": 17,
+    "risk_tier_r1": 5,
+    "bidirectional_rank_rows": 240,
+    "target_model_concordance_rows": 180,
+    "high_rank_discordance_pairs": 16,
+    "boltz_primary_completed": 29,
+    "gnina_primary_completed": 10,
+    "external_exact_pair_validations": 0,
+    "w2_assay_authorized": 0,
+    "veto_assay_authorized": 0
+  },
+  "critical_findings": [
+    "Rank 21 source label ketoconazole maps to frozen CHEMBL295698 and full InChIKey XMAYWYJOQHXEEK-ZEQKJWHPSA-N, the levoketoconazole stereochemical entity; it remains under entity-name adjudication hold and is not replaced by racemic ketoconazole.",
+    "Rank 21 has no completed main Boltz probability and no GNINA result; multiseed metadata is not used to impute a main physical result.",
+    "Romidepsin is a ChEMBL prodrug and receives a reduced-disulfide/dithiol-state handling route without inventing a separate ChEMBL entity.",
+    "Sixteen of 30 pairs have a directional model-percentile range >=0.50 and are routed to orthogonal discrimination without reranking."
+  ],
+  "claim_boundaries": [
+    "No hard-gate target was recovered; active universe remains 384 = 888 - 480 - 24.",
+    "Only the 46 targets removed solely for lacking experimental pockets remain recovered.",
+    "V18 preserves all frozen scores, candidate ranks, waves, active-species rules and V14 W1 plates.",
+    "The 30 pairs were selected using overlapping internal evidence; V18 is descriptive sensitivity analysis, not independent validation.",
+    "PubChem vendor-record indicators are not current stock, purity, lead time, jurisdictional availability or endorsement.",
+    "W2 and veto readiness artifacts do not authorize procurement, plate assignment or assay execution.",
+    "No exact-pair external validation was found for any of the 30 frozen pairs in the inherited frozen audits.",
+    "No computational score, identity match, rank or agreement establishes binding, mechanism, efficacy or repurposing.",
+    "No real W1 experimental result has been received; assay-released candidates remain zero."
+  ],
+  "inputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v17/EVIDENCE_LAYER_ROUTING_SUMMARY_V17.json": "5cb0187d3ff4fadb79c5cef044b51dab57228d266717ca5cffac71a235edb599",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v17/UNIFIED_V17_REPRODUCIBILITY_AUDIT.json": "f703ba9a874ee76124069202083479bbc7e380962adcafbc044273bc28b05947",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL_CANDIDATE_PORTFOLIO_PROTOCOL_FROZEN_V18.json": "5c3567461de0ce95184e2a7eafecb01c746402497513a18845c5d4b23550cdbf",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_COMPUTATIONAL_ROBUSTNESS_SUMMARY_V18.json": "949ba7382447d40cca856a4fdae019b3f742118d466e09da52652fd649e4e2e7",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_IDENTITY_CHEMISTRY_READINESS_SUMMARY_V18.json": "5f6aad90d34160d1e1ec9c7ea5d7c8197b29eac3c6d40b4f536361e0ed728eb6",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_PORTFOLIO_INDEPENDENT_AUDIT_V18.json": "07bf0f414ed4e7c470cbd6ddd0d96d8bb98dc17a5a520879ad886dbe37a06c7b",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v18/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V10.csv.gz": "8e1c73a0b16122bee6e4d3d7ca5dd9dbc816759c63a2976ec57799cdf97b7a9a"
+  }
+}

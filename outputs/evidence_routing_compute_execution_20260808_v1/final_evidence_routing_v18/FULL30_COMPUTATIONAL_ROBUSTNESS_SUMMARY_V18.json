@@ -1,0 +1,65 @@
+{
+  "created_utc": "2026-08-13T04:22:06.623652+00:00",
+  "status": "PASS",
+  "checks": {
+    "protocol_stamp_and_dependencies_verified": true,
+    "pair_core_exact_276480_720_by_384": true,
+    "exact_30_frozen_candidate_pairs_ranks_1_to_30": true,
+    "candidate_population_exact_28_entities_16_targets": true,
+    "wave_partition_exact_8_21_1": true,
+    "deployment_partition_exact_19_seeded_11_unseeded": true,
+    "bidirectional_rank_table_exact_30_by_2_by_4": true,
+    "all_target_centered_comparison_universes_exact_720": true,
+    "drug_centered_denominators_exact_384_382_and_branch_185_199": true,
+    "all_stored_ranks_and_percentiles_recomputed_match_declared_tie_rule": true,
+    "exact_3_historical_min_tie_rank_rows_transparently_identified": true,
+    "w1_rank_rows_reproduce_v16_common_fields_exact": true,
+    "candidate_summary_exact_30_no_new_order": true,
+    "target_model_concordance_exact_30_by_6": true,
+    "physical_table_exact_30_with_29_boltz_and_10_gnina": true,
+    "ketoconazole_labeled_rank21_missing_main_physical_not_imputed": true,
+    "w1_physical_rows_reproduce_v16_common_fields_exact": true,
+    "independence_table_exact_30_zero_external_exact_pair_validations": true,
+    "all_30_internal_selection_overlap_explicit": true,
+    "claim_boundaries_forbid_independent_binding_or_w2_authorization_overstatement": true
+  },
+  "counts": {
+    "candidate_pairs": 30,
+    "unique_entities": 28,
+    "unique_targets": 16,
+    "w1": 8,
+    "w2": 21,
+    "veto": 1,
+    "seeded": 19,
+    "unseeded": 11,
+    "bidirectional_rank_rows": 240,
+    "target_model_concordance_rows": 180,
+    "boltz_primary_completed": 29,
+    "gnina_primary_completed": 10,
+    "high_rank_discordance_candidates": 16,
+    "robust_mad_z_defined": 228,
+    "robust_mad_z_undefined_mad_zero": 12,
+    "external_exact_pair_validations": 0
+  },
+  "claim_boundaries": [
+    "All 30 pairs were selected using overlapping internal evidence; ranks and agreement are descriptive sensitivity analysis, not independent validation or calibrated p-values.",
+    "Target-lane retrospective support is calibration evidence and never exact-pair confirmation.",
+    "Physical subsets are selectively computed and are not random negative-control panels.",
+    "No computational score, identity match, vendor record, rank or agreement establishes binding, mechanism, efficacy or repurposing.",
+    "No hard-gate target may be recovered; scope remains the frozen 384 targets including only the 46 recovered solely for lacking experimental pockets.",
+    "W2 and veto audit artifacts do not authorize procurement, plate assignment or assay execution."
+  ],
+  "inputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL_CANDIDATE_PORTFOLIO_PROTOCOL_FROZEN_V18.json": "5c3567461de0ce95184e2a7eafecb01c746402497513a18845c5d4b23550cdbf",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v17/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V10.csv.gz": "8e1c73a0b16122bee6e4d3d7ca5dd9dbc816759c63a2976ec57799cdf97b7a9a",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v17/PROSPECTIVE_INTEGRATED_CASEBOOK_V10.csv": "a9db820cde8f0ae041d8ccd9c1c331fce7256f8f2cf1aa8ee51da6beca5a0d63",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v17/MASTER_VALIDATION_QUEUE_63_ROWS_V17.csv": "14aa88e78022f9cd26a71b593b4a487ea7229daefae23d8391488f61a6a3fecf"
+  },
+  "outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_BIDIRECTIONAL_MODEL_RANKS_240_V18.csv": "dca64c8e59c936807247b1452cce9b5594896ce289f365d74cf9d199f61d39f6",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_BIDIRECTIONAL_ROBUSTNESS_SUMMARY_30_V18.csv": "eda16b3d658ac48365d849bfa0868701f8d5e7886152e2ec10696abf8bdd9daf",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_TARGET_MODEL_CONCORDANCE_180_V18.csv": "79c6595dccdd8e53c73e84ebb77ba1bbe6e6a9520d9c99451c6b15baa55c205e",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_PHYSICAL_MODEL_COVERAGE_AND_RANKS_30_V18.csv": "18ef4c134568fed709f4d71b583698489fb83505fcf30c500b57a1337f375d21",
+    "outputs/evidence_routing_compute_execution_20260808_v1/full_candidate_portfolio_v18/FULL30_SELECTION_BIAS_AND_EVIDENCE_INDEPENDENCE_30_V18.csv": "16d3c968c50b96830effe46e534c3f0b08b0070f216e942812ed8c201e90925b"
+  }
+}

@@ -1,0 +1,964 @@
+{
+  "created_utc": "2026-08-13T20:54:08.774878+00:00",
+  "status": "PASS",
+  "verdict": {
+    "executable_as_released": false,
+    "published_random_split_exactly_reproducible": false,
+    "released_cold_splits_auditable": true,
+    "paper_headline_entity_cold": false,
+    "same_data_directly_comparable_to_biomaster": false,
+    "usable_as_algorithm_prior_art": true,
+    "use_paper_headline_as_sota_evidence_for_biomaster": false,
+    "reason": "The paper headline uses warm random pair splits, while those exact splits, embeddings and weights are absent and the split generator has no seed. The model imports an unshipped Fusion1 module, the released small datasets contain duplicated positive rows that cross validation/test in cold files, and positional encoding uses batch position rather than token position."
+  },
+  "repository": {
+    "official_code": "https://github.com/hatle/AD-LSF",
+    "local_path": "third_party/sota_dti_2026/AD-LSF",
+    "commit": "5bee039edaf6bf508eaae07f414f9074988a4ed8",
+    "readme": "The experimental details will be supplemented later.",
+    "missing_runtime_artifacts": {
+      "model_Fusion1_py": true,
+      "requirements_or_environment": true,
+      "smiles_index_files": true,
+      "protein_index_files": true,
+      "precomputed_embeddings": true,
+      "model_checkpoints": true,
+      "random_split_files": true
+    },
+    "train_type_choices_include_unreleased_generators": "random, cold, cluster, cold_drug, cold_target",
+    "split_generator_type_choices": "random, cold, cluster",
+    "standalone_test_type_choices": "random, cold, cluster"
+  },
+  "paper_report": {
+    "primary_source": "https://doi.org/10.1021/acsomega.6c02700",
+    "published_online": "2026-06-24",
+    "dataset_table": {
+      "bindingdb": {
+        "drugs": 14643,
+        "proteins": 2623,
+        "rows": 49199,
+        "positive": 20674,
+        "negative": 28525
+      },
+      "biosnap": {
+        "drugs": 4510,
+        "proteins": 2181,
+        "rows": 27464,
+        "positive": 13830,
+        "negative": 13634
+      },
+      "human": {
+        "drugs": 2726,
+        "proteins": 2001,
+        "rows": 5997,
+        "positive": 2633,
+        "negative": 3364
+      },
+      "celegans": {
+        "drugs": 1767,
+        "proteins": 1876,
+        "rows": 7785,
+        "positive": 3893,
+        "negative": 3892
+      }
+    },
+    "headline_protocol": "random pair split; 7:1:2 BindingDB/BioSNAP and 8:1:1 Human/C. elegans",
+    "repetitions": "paper states five independent repeats and reports mean plus/minus standard deviation",
+    "headline": {
+      "BindingDB_AUROC": "0.967 +/- 0.001",
+      "BindingDB_AUPRC": "0.959 +/- 0.001",
+      "BindingDB_accuracy": "0.919 +/- 0.001",
+      "scope": "paper random-split table, not a cold-start result"
+    },
+    "paper_learning_rate": 0.0005,
+    "released_config_learning_rates": {
+      "bindingdb": 0.0001,
+      "biosnap": 0.0001,
+      "human": 5e-05,
+      "celegans": 5e-05
+    }
+  },
+  "released_full_data": {
+    "bindingdb": {
+      "path": "third_party/sota_dti_2026/AD-LSF/data/bindingdb/fulldata.csv",
+      "rows": 49199,
+      "positive": 20674,
+      "negative": 28525,
+      "unique_drugs": 14643,
+      "unique_targets": 2623,
+      "unique_full_rows": 49199,
+      "duplicate_full_row_excess": 0,
+      "duplicate_excess_by_label": {
+        "0": 0,
+        "1": 0
+      },
+      "unique_pairs": 49199,
+      "pair_label_conflicts": 0,
+      "paper_table": {
+        "drugs": 14643,
+        "proteins": 2623,
+        "rows": 49199,
+        "positive": 20674,
+        "negative": 28525
+      },
+      "released_minus_paper_rows": 0,
+      "released_minus_paper_positive": 0,
+      "released_minus_paper_negative": 0
+    },
+    "biosnap": {
+      "path": "third_party/sota_dti_2026/AD-LSF/data/biosnap/fulldata.csv",
+      "rows": 27464,
+      "positive": 13830,
+      "negative": 13634,
+      "unique_drugs": 4505,
+      "unique_targets": 2181,
+      "unique_full_rows": 27457,
+      "duplicate_full_row_excess": 7,
+      "duplicate_excess_by_label": {
+        "0": 7,
+        "1": 0
+      },
+      "unique_pairs": 27457,
+      "pair_label_conflicts": 0,
+      "paper_table": {
+        "drugs": 4510,
+        "proteins": 2181,
+        "rows": 27464,
+        "positive": 13830,
+        "negative": 13634
+      },
+      "released_minus_paper_rows": 0,
+      "released_minus_paper_positive": 0,
+      "released_minus_paper_negative": 0
+    },
+    "human": {
+      "path": "third_party/sota_dti_2026/AD-LSF/data/human/fulldata.csv",
+      "rows": 6728,
+      "positive": 3364,
+      "negative": 3364,
+      "unique_drugs": 2726,
+      "unique_targets": 2001,
+      "unique_full_rows": 5997,
+      "duplicate_full_row_excess": 731,
+      "duplicate_excess_by_label": {
+        "0": 0,
+        "1": 731
+      },
+      "unique_pairs": 5997,
+      "pair_label_conflicts": 0,
+      "paper_table": {
+        "drugs": 2726,
+        "proteins": 2001,
+        "rows": 5997,
+        "positive": 2633,
+        "negative": 3364
+      },
+      "released_minus_paper_rows": 731,
+      "released_minus_paper_positive": 731,
+      "released_minus_paper_negative": 0
+    },
+    "celegans": {
+      "path": "third_party/sota_dti_2026/AD-LSF/data/celegans/fulldata.csv",
+      "rows": 7786,
+      "positive": 3893,
+      "negative": 3893,
+      "unique_drugs": 1767,
+      "unique_targets": 1876,
+      "unique_full_rows": 6552,
+      "duplicate_full_row_excess": 1234,
+      "duplicate_excess_by_label": {
+        "0": 0,
+        "1": 1234
+      },
+      "unique_pairs": 6552,
+      "pair_label_conflicts": 0,
+      "paper_table": {
+        "drugs": 1767,
+        "proteins": 1876,
+        "rows": 7785,
+        "positive": 3893,
+        "negative": 3892
+      },
+      "released_minus_paper_rows": 1,
+      "released_minus_paper_positive": 0,
+      "released_minus_paper_negative": 1
+    }
+  },
+  "released_random_split_replays_not_official": {
+    "bindingdb": {
+      "official_published_split_identifiable": false,
+      "reason": "the preprocessing script calls np.random.shuffle without a seed or saved random split files",
+      "representative_seed_42": {
+        "seed": 42,
+        "train_rows": 34439,
+        "valid_rows": 4920,
+        "test_rows": 9840,
+        "test_unique_drugs_seen_in_train_fraction": 0.9016813907096038,
+        "test_unique_targets_seen_in_train_fraction": 0.8615490061686086,
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        }
+      },
+      "representative_seed_43": {
+        "seed": 43,
+        "train_rows": 34439,
+        "valid_rows": 4920,
+        "test_rows": 9840,
+        "test_unique_drugs_seen_in_train_fraction": 0.8994244604316547,
+        "test_unique_targets_seen_in_train_fraction": 0.867595818815331,
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        }
+      },
+      "seed_42_vs_43_test_row_membership_jaccard": 0.10948246701995716
+    },
+    "biosnap": {
+      "official_published_split_identifiable": false,
+      "reason": "the preprocessing script calls np.random.shuffle without a seed or saved random split files",
+      "representative_seed_42": {
+        "seed": 42,
+        "train_rows": 19224,
+        "valid_rows": 2747,
+        "test_rows": 5493,
+        "test_unique_drugs_seen_in_train_fraction": 0.9697792869269949,
+        "test_unique_targets_seen_in_train_fraction": 0.9977888336097291,
+        "train_test": {
+          "pair_overlap": 2,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 2
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        }
+      },
+      "representative_seed_43": {
+        "seed": 43,
+        "train_rows": 19224,
+        "valid_rows": 2747,
+        "test_rows": 5493,
+        "test_unique_drugs_seen_in_train_fraction": 0.969583048530417,
+        "test_unique_targets_seen_in_train_fraction": 0.9967302452316076,
+        "train_test": {
+          "pair_overlap": 1,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 1
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        }
+      },
+      "seed_42_vs_43_test_row_membership_jaccard": 0.10768300060496068
+    },
+    "human": {
+      "official_published_split_identifiable": false,
+      "reason": "the preprocessing script calls np.random.shuffle without a seed or saved random split files",
+      "representative_seed_42": {
+        "seed": 42,
+        "train_rows": 5382,
+        "valid_rows": 673,
+        "test_rows": 673,
+        "test_unique_drugs_seen_in_train_fraction": 0.6509803921568628,
+        "test_unique_targets_seen_in_train_fraction": 0.7922912205567452,
+        "train_test": {
+          "pair_overlap": 87,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 87
+        },
+        "valid_test": {
+          "pair_overlap": 26,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 26
+        }
+      },
+      "representative_seed_43": {
+        "seed": 43,
+        "train_rows": 5382,
+        "valid_rows": 673,
+        "test_rows": 673,
+        "test_unique_drugs_seen_in_train_fraction": 0.6429980276134122,
+        "test_unique_targets_seen_in_train_fraction": 0.8029661016949152,
+        "train_test": {
+          "pair_overlap": 96,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 96
+        },
+        "valid_test": {
+          "pair_overlap": 35,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 35
+        }
+      },
+      "seed_42_vs_43_test_row_membership_jaccard": 0.05817610062893082
+    },
+    "celegans": {
+      "official_published_split_identifiable": false,
+      "reason": "the preprocessing script calls np.random.shuffle without a seed or saved random split files",
+      "representative_seed_42": {
+        "seed": 42,
+        "train_rows": 6228,
+        "valid_rows": 779,
+        "test_rows": 779,
+        "test_unique_drugs_seen_in_train_fraction": 0.8197802197802198,
+        "test_unique_targets_seen_in_train_fraction": 0.883629191321499,
+        "train_test": {
+          "pair_overlap": 153,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 153
+        },
+        "valid_test": {
+          "pair_overlap": 43,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 43
+        }
+      },
+      "representative_seed_43": {
+        "seed": 43,
+        "train_rows": 6228,
+        "valid_rows": 779,
+        "test_rows": 779,
+        "test_unique_drugs_seen_in_train_fraction": 0.7846153846153846,
+        "test_unique_targets_seen_in_train_fraction": 0.8487229862475442,
+        "train_test": {
+          "pair_overlap": 137,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 137
+        },
+        "valid_test": {
+          "pair_overlap": 34,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 34
+        }
+      },
+      "seed_42_vs_43_test_row_membership_jaccard": 0.05555555555555555
+    }
+  },
+  "released_cold_splits": {
+    "bindingdb": {
+      "cold_drug": {
+        "role_rows": {
+          "train": 34438,
+          "valid": 4428,
+          "test": 10333
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_valid_drug_overlap": 0,
+        "train_test_drug_overlap": 0,
+        "valid_test_drug_overlap": 2498,
+        "train_valid_target_overlap": 923,
+        "train_test_target_overlap": 1282,
+        "valid_test_target_overlap": 779,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 34438,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 4428,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 10333,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      },
+      "cold_target": {
+        "role_rows": {
+          "train": 35035,
+          "valid": 4249,
+          "test": 9915
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_valid_drug_overlap": 3362,
+        "train_test_drug_overlap": 6770,
+        "valid_test_drug_overlap": 1443,
+        "train_valid_target_overlap": 0,
+        "train_test_target_overlap": 0,
+        "valid_test_target_overlap": 431,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 35035,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 4249,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 9915,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      }
+    },
+    "biosnap": {
+      "cold_drug": {
+        "role_rows": {
+          "train": 19334,
+          "valid": 2439,
+          "test": 5691
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_valid_drug_overlap": 0,
+        "train_test_drug_overlap": 0,
+        "valid_test_drug_overlap": 995,
+        "train_valid_target_overlap": 1231,
+        "train_test_target_overlap": 1838,
+        "valid_test_target_overlap": 1064,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 19334,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 2439,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 5691,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      },
+      "cold_target": {
+        "role_rows": {
+          "train": 19390,
+          "valid": 2422,
+          "test": 5652
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 1,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 1
+        },
+        "train_valid_drug_overlap": 1670,
+        "train_test_drug_overlap": 2878,
+        "valid_test_drug_overlap": 1204,
+        "train_valid_target_overlap": 0,
+        "train_test_target_overlap": 0,
+        "valid_test_target_overlap": 605,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 19390,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 2422,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 5652,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      }
+    },
+    "human": {
+      "cold_drug": {
+        "role_rows": {
+          "train": 4688,
+          "valid": 612,
+          "test": 1428
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 60,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 60
+        },
+        "train_valid_drug_overlap": 0,
+        "train_test_drug_overlap": 0,
+        "valid_test_drug_overlap": 192,
+        "train_valid_target_overlap": 356,
+        "train_test_target_overlap": 637,
+        "valid_test_target_overlap": 208,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 4688,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 612,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 1428,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      },
+      "cold_target": {
+        "role_rows": {
+          "train": 4193,
+          "valid": 760,
+          "test": 1775
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 117,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 117
+        },
+        "train_valid_drug_overlap": 272,
+        "train_test_drug_overlap": 483,
+        "valid_test_drug_overlap": 242,
+        "train_valid_target_overlap": 0,
+        "train_test_target_overlap": 0,
+        "valid_test_target_overlap": 260,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 4193,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 760,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 1775,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      }
+    },
+    "celegans": {
+      "cold_drug": {
+        "role_rows": {
+          "train": 4888,
+          "valid": 869,
+          "test": 2029
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 140,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 140
+        },
+        "train_valid_drug_overlap": 0,
+        "train_test_drug_overlap": 0,
+        "valid_test_drug_overlap": 211,
+        "train_valid_target_overlap": 438,
+        "train_test_target_overlap": 764,
+        "valid_test_target_overlap": 320,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 4888,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 869,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 2029,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      },
+      "cold_target": {
+        "role_rows": {
+          "train": 5288,
+          "valid": 749,
+          "test": 1749
+        },
+        "all_full_rows_accounted_for_as_multiset": true,
+        "sample_indices_align_with_reconstructed_first_occurrence_maps": true,
+        "train_valid": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "train_test": {
+          "pair_overlap": 0,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 0
+        },
+        "valid_test": {
+          "pair_overlap": 109,
+          "label_set_conflicts": 0,
+          "opposite_label_collisions": 0,
+          "full_row_overlap": 109
+        },
+        "train_valid_drug_overlap": 294,
+        "train_test_drug_overlap": 458,
+        "valid_test_drug_overlap": 274,
+        "train_valid_target_overlap": 0,
+        "train_test_target_overlap": 0,
+        "valid_test_target_overlap": 259,
+        "cold_axis_train_disjoint_from_valid_and_test": true,
+        "alignments": {
+          "train": {
+            "rows": 5288,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "valid": {
+            "rows": 749,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          },
+          "test": {
+            "rows": 1749,
+            "row_count_matches": true,
+            "smiles_indices_match": true,
+            "protein_indices_match": true,
+            "labels_match": true
+          }
+        }
+      }
+    }
+  },
+  "implementation_semantics": {
+    "missing_model_module": "model/dti.py imports model.Fusion1, but model/Fusion1.py is absent",
+    "positional_encoding_runtime_audit": {
+      "stored_pe_shape": [
+        20,
+        1,
+        8
+      ],
+      "input_shape": [
+        4,
+        6,
+        8
+      ],
+      "within_sample_token_position_max_difference_for_zero_input": 0.0,
+      "between_batch_slot_max_difference_for_zero_input": 0.8414709568023682,
+      "batch_permutation_equivariance_max_error": 1.5302948951721191,
+      "uses_batch_axis_instead_of_sequence_axis": true,
+      "interpretation": "pe is stored as [max_len,1,d] and sliced with x.size(0), so the code adds a different vector by batch slot and the same vector to every token within a sample. This is not sequence positional encoding and makes outputs non-equivariant to batch permutation."
+    },
+    "gpu_argument": "train.py accepts --gpus but hard-codes devices=[0]",
+    "repeat_policy": "training fixes seed 42; no five-seed orchestration, logs, predictions or checkpoints are released"
+  },
+  "checks": {
+    "official_commit_matches": true,
+    "four_full_datasets_audited": true,
+    "bindingdb_release_matches_paper_table": true,
+    "biosnap_paper_drug_count_differs_from_release": true,
+    "human_release_duplicates_731_positive_rows": true,
+    "human_unique_rows_match_paper_interactions": true,
+    "celegans_release_rows_one_above_paper": true,
+    "celegans_release_duplicates_1234_positive_rows": true,
+    "all_released_cold_splits_cover_full_multisets": true,
+    "all_released_cold_splits_are_train_disjoint_on_named_axis": true,
+    "all_sample_index_files_align": true,
+    "duplicate_pair_leak_exists_between_valid_and_test": true,
+    "published_random_split_files_absent": true,
+    "random_generator_has_no_seed": true,
+    "released_cold_types_not_generatable_by_split_script": true,
+    "model_import_references_missing_fusion1": true,
+    "positional_encoding_uses_batch_axis": true,
+    "paper_learning_rate_differs_from_release_configs": true,
+    "paper_five_repeat_orchestration_not_released": true,
+    "detail_rows_cover_four_datasets_two_splits_three_roles": true
+  },
+  "detail_csv": "outputs/old_drug_target_sota_v1/AD_LSF_RELEASED_SPLIT_AUDIT_V1.csv",
+  "source_sha256": {
+    "third_party/sota_dti_2026/AD-LSF/README.md": "94eb227797d423b991ef6acc71428be1946398b70459be1417edc0ab92500493",
+    "third_party/sota_dti_2026/AD-LSF/config/bindingdb.yaml": "972288f6ec34ee8a1fc0fbaff14b2157fb1dea869f51e3651ada485a2281015d",
+    "third_party/sota_dti_2026/AD-LSF/config/biosnap.yaml": "972288f6ec34ee8a1fc0fbaff14b2157fb1dea869f51e3651ada485a2281015d",
+    "third_party/sota_dti_2026/AD-LSF/config/celegans.yaml": "338c975abd3a4db839c39a401436d2725577db81f62c219f2f2e6a7531ade9a3",
+    "third_party/sota_dti_2026/AD-LSF/config/config.yaml": "86202b3b5daf753327e1380e344a46f0e41975873941b06de02275f039b67016",
+    "third_party/sota_dti_2026/AD-LSF/config/human.yaml": "338c975abd3a4db839c39a401436d2725577db81f62c219f2f2e6a7531ade9a3",
+    "third_party/sota_dti_2026/AD-LSF/data/.DS_Store": "2247b1ebef44ff7541144260afce291c788fadf61bdea826e3e2fca282f31907",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_drug/test/samples.csv": "3ca025f485f1369ec73debd1b26b6d584462c367cb85f53eb3cbbe3ab407ef6b",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_drug/test/test.csv": "396fecc740a1969145c0cfb98e5fa09c5db0c9190ad15bbe0ff61558efb192eb",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_drug/train/samples.csv": "0e36fea316d62f06e24227c067c320c7421bc97e14d260be9747ad2e34d8fc6b",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_drug/train/train.csv": "3a1efa0302915c0aad827a0401c3e67b76ee58caa16d8b283e98a62149916a6f",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_drug/valid/samples.csv": "6c5d25961d49b3d86d5df0f6b99c4d0abcfb9de505b25904a1b056e95826e5e4",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_drug/valid/valid.csv": "f2834aeec77a2c41a65f0034f9c820a873ea2acf6ecb6cc6aed8d2fc8c11bb77",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_target/test/samples.csv": "ebff7a45122b0e1ccec083513d0b9c9ed34aa0d3339eeb871c16907b22a73dc3",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_target/test/test.csv": "c47e440833948a56a6836b59d86390a88ab088fb46d84f0305e162d559bc66b0",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_target/train/samples.csv": "f09ec728cf9bd787c1338496eaf0b51a0e166dce603f1d99f72d848415aaf1d6",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_target/train/train.csv": "435d7a58be6c8d2130175c905a825e89ff024dfc0960d5344238dff85b9739e2",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_target/valid/samples.csv": "f2e23637b2179a1c0345497773109f8cfef39c27bbe6c714377b9d9f777a6af2",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/cold_target/valid/valid.csv": "6185c811c35fd93853cba4a313d1c0a8ecb0f1c11b35ff73b938ccb756692a7d",
+    "third_party/sota_dti_2026/AD-LSF/data/bindingdb/fulldata.csv": "5968c567769f33884c23aeb97bdea2a432d2fa2368e4ec41499e60905a2f6ff0",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_drug/test/samples.csv": "b7c44f742014da7fdca7af6be7e872baf598c86ebe275bee78d423043fe3b091",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_drug/test/test.csv": "0ff0f6fb5ba1472bb931d2867bb42a041ff486080a3fff99b888694ef993aa9c",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_drug/train/samples.csv": "a4b6daceb244442beb743e32da6afc2a15df9ca20e6278af8314820d59194596",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_drug/train/train.csv": "07efa9eb7857b8b8dcb8068dd6c3c8c345b38ff234c4eb1b5433f602fa9271c3",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_drug/valid/samples.csv": "b0a04cf367decde05ef931b4643894a970edf467947bcb34863c3cf8ff5c6c3d",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_drug/valid/valid.csv": "1e9b472f5d018d652bee2397bbcabac965f64026bd310dd9bb4977b67d3c9da7",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_target/test/samples.csv": "1292f59fcafc150284f84a4483297678d771345f59fab66b7c3fc0370c4cd3ac",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_target/test/test.csv": "0e0b5c635ecdccd6a66d62122bfeaaf347acb7b746594d5e183908e514bb05dc",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_target/train/samples.csv": "702c99e984d8c8b39fff5b71c8cbefbea313961a37213251f4340bf4168da87d",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_target/train/train.csv": "dbf331b96aef73cfe07003495f26f894159f00d11a1b2794f3dd50e6fa380750",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_target/valid/samples.csv": "37f57646aed361b72aef7e7a03175ce4d0564cc194a1a6aa1047ea2c37ee6d4c",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/cold_target/valid/valid.csv": "f74ad12167630d24c39e31cab0e276316749817fdbc5d4476ade72f0f2cc8066",
+    "third_party/sota_dti_2026/AD-LSF/data/biosnap/fulldata.csv": "b0155eb273f0ceea2b883c2eb66108365e679c1d66c96cef413133257f991585",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_drug/test/samples.csv": "844b7fe90ec9acb93a0af89ff9bd16b2042da93bb0ef39b897a07fd12e7c4db5",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_drug/test/test.csv": "d5d88f93ce386d6109d8d9607f3caa1a689ffacd34b49cc768733633145d8321",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_drug/train/samples.csv": "c467875e8c900d48b8668a88e4223e93ed6e344c6f49f5c8f467aba3ca1b4f3a",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_drug/train/train.csv": "4b3ba682ca7090f630838b9ab298fd3961a5be1326459b5bbd52539fb3305ce0",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_drug/valid/samples.csv": "3dcc88ad3ea0ecd8325744a96fc62097de50f784ca2d2a358051945b82e28ba0",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_drug/valid/valid.csv": "0c6eb6aaafa21332417ea3636190c6da0d7b32f58bc77b1d8950e3f9e4f35df6",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_target/test/samples.csv": "e27a0fcf8f97f767e87adfc6cc8922169fd232fb43ea8f3fe7678d9fc548e25e",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_target/test/test.csv": "c3d156099a791a948757966b423aa3579f42d702f94d36aff977524492f80a19",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_target/train/samples.csv": "1a244909b2a9a3caaef5ecf2ae7a83501982293ab7487f28828622b5fc7b958e",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_target/train/train.csv": "8e7a3e61e6632d1908bde9d61deca85834391fba9cec7c24be0621513bc3f8cf",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_target/valid/samples.csv": "7eee63954e80fbc45f3cf2c3f7a25354a6582d2f436ee92c6517fbaea1592c7d",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/cold_target/valid/valid.csv": "535a90d467107b5310c3e1ae91252f9cd88333ad25fecea77c897a7bc5e44110",
+    "third_party/sota_dti_2026/AD-LSF/data/celegans/fulldata.csv": "5db1b743f2558f7eb6ecadcdec8903d9ead250f374a6b7112c7564ed9cb43075",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_drug/test/samples.csv": "90ff7604a584733fccd8167010c4deadf2452f7745865b68256d8806ed92b943",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_drug/test/test.csv": "b056e2d708f0efe543955eb52202c80fd4e997741c969e0c9e5b71965465f783",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_drug/train/samples.csv": "770646c4bd8beb71578fa8aaefd16d07e50529472cb9dc127ffa7a2d895173b6",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_drug/train/train.csv": "c3ba6ca87f7c9bc4cc4155c945146d0cc05ba0d7662364d0ce29427fac91e0e7",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_drug/valid/samples.csv": "452255e02f364ebc5c41617ebc1e67ff2541793fbc7d0a0d326142407da15c41",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_drug/valid/valid.csv": "da98d8ffff5f87cc96ec4ec4ac7e591811b5d83b49ddcc04e09397f0e9dfc175",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_target/test/samples.csv": "97b9e1920027705fbc91457b3e89e06841ab4db2006f92855a8871953f4c2b57",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_target/test/test.csv": "e6739a3441484ab1444bc99d27f56b10db86b961b9a7d8ba855cbf9f41c2dc93",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_target/train/samples.csv": "929107f9b9b3ddb894ae38e29b12c6796cdfff47b4fdd3cafe6e38eb972f70eb",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_target/train/train.csv": "c48f7a6d108842c41608dc8eee08d620009244905ca3811131a9332a3a491b72",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_target/valid/samples.csv": "9587dd366a89f643c783857fe331382a1de28345262caa3ecb98d19ea80e41c4",
+    "third_party/sota_dti_2026/AD-LSF/data/human/cold_target/valid/valid.csv": "8c2c359c477a675e1ec6fc478e92382040de5f2cecebb195ac1e9ee664b06589",
+    "third_party/sota_dti_2026/AD-LSF/data/human/fulldata.csv": "5427601a7b625a814dd21c195d2d23a6d911b20ea7dbd36133fc7e0315968291",
+    "third_party/sota_dti_2026/AD-LSF/dataset/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/sota_dti_2026/AD-LSF/dataset/dataset.py": "d98357ca393debb22ebe3ff6d38c5fe1a2d80b0a042b439db831338fe637d27a",
+    "third_party/sota_dti_2026/AD-LSF/model/.DS_Store": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+    "third_party/sota_dti_2026/AD-LSF/model/AFBlock.py": "f4bffec168ee971ecce2c83273046536274399fa8ae10424b7aa6d85a179fffe",
+    "third_party/sota_dti_2026/AD-LSF/model/Block.py": "8539aba81c668349e08b6bd1fd7d088fc8679d8da42f34bcdf707eaa9ed209e1",
+    "third_party/sota_dti_2026/AD-LSF/model/dti.py": "dd0a6b248a0a98644f1649934273507083dcd053e1e3d4740a343709dcb3bcd8",
+    "third_party/sota_dti_2026/AD-LSF/model/modules.py": "22044d2425090b8256886ddfe4a0e4e0b3cb1a9b4af42b4f040beea137a17e12",
+    "third_party/sota_dti_2026/AD-LSF/preprocess/chem_embedding.py": "3dd9464c7819d59fad4d66276f7986d3e099e1f26d93944d7a0f165e5d2e0f10",
+    "third_party/sota_dti_2026/AD-LSF/preprocess/esm_embedding.py": "12adcd7ab176645e7c2b7c36beb4e63cb5358e980f9e99b8eada70488917e511",
+    "third_party/sota_dti_2026/AD-LSF/preprocess/get_embeddings.py": "2bba02f9f13f6cd42ea0bfc4d89756748e5e98388517b579d23e95b3e4771d74",
+    "third_party/sota_dti_2026/AD-LSF/preprocess/split_dataset.py": "5384d388dd3e3b07478b4e0def82dc5dbde2ce16f72f18b868e7899bc5e60a64",
+    "third_party/sota_dti_2026/AD-LSF/test.py": "4317de6e241dd1e98e3396cd1f70510d166eb3b0d76da1f3424c9d16215ef6ec",
+    "third_party/sota_dti_2026/AD-LSF/train.py": "c65cfae2caa2e04b46bcf6bd68426b568a89a4595c1a6aba720375803b1e0fc0",
+    "third_party/sota_dti_2026/AD-LSF/utils.py": "d032179026924cc07ae9149f517941e10b8b9d68cfc0710703a92f162ed1cbe7"
+  },
+  "matrix_update": {
+    "input_v11": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V11.csv",
+    "input_v11_sha256": "fe97d8666b93e21cd05077d63d76e356e5ca615edc1180089ebde65cf0056a61",
+    "output_v12": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V12.csv",
+    "output_v12_sha256": "b01c1ceb63b53002affc35f3dab387b81118f43bc20b9feed1efee500e7a7df5",
+    "v11_rows": 18,
+    "v12_rows": 19,
+    "only_added_model": "AD-LSF"
+  }
+}

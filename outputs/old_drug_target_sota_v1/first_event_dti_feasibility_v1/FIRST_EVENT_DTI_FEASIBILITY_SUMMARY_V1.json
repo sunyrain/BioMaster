@@ -1,0 +1,67 @@
+{
+  "schema_version": "FIRST_EVENT_DTI_FEASIBILITY_V1",
+  "created_utc": "2026-08-14T00:13:10.692279+00:00",
+  "status": "PASS",
+  "scope": "Full uncapped ChEMBL37 strict-binding pair table restricted to the frozen 428 benchmark sequences",
+  "counts": {
+    "full_input_pairs": 509172,
+    "restricted_pairs": 509168,
+    "restricted_compounds": 336316,
+    "restricted_targets": 428,
+    "deployment_old_drugs_with_any_event": 281,
+    "eligible_event_pairs": 419642
+  },
+  "development_windows": {
+    "train_through_2014_develop_2015_2018": {
+      "period": "2015_2018",
+      "pairs": 130152,
+      "positive": 99164,
+      "negative_or_inactive": 30988,
+      "compounds": 87611,
+      "targets": 388,
+      "old_drug_pairs": 2722,
+      "old_drugs": 94
+    },
+    "train_through_2018_develop_2019_2022": {
+      "period": "2019_2022",
+      "pairs": 121180,
+      "positive": 94659,
+      "negative_or_inactive": 26521,
+      "compounds": 82514,
+      "targets": 392,
+      "old_drug_pairs": 157,
+      "old_drugs": 79
+    }
+  },
+  "reused_nonindependent_pressure_test": {
+    "period": "2023_2025",
+    "pairs": 35152,
+    "positive": 27733,
+    "negative_or_inactive": 7419,
+    "compounds": 24675,
+    "targets": 355,
+    "old_drug_pairs": 87,
+    "old_drugs": 42
+  },
+  "checks": {
+    "exactly_428_sequences": true,
+    "both_event_types_in_2015_2018": true,
+    "both_event_types_in_2019_2022": true,
+    "both_event_types_in_2023_2025": true,
+    "old_drug_future_events_exist": true
+  },
+  "claim_boundary": {
+    "unobserved_pairs_are_inactive_labels": false,
+    "2023_2025_is_independent_confirmatory_test": false,
+    "reason": "S4 labels and baseline results have already been inspected during earlier model development"
+  },
+  "inputs": {
+    "outputs/current_production_package_v2/chembl37_target_calibration_v5/PROJECT463_CHEMBL37_STRICT_BINDING_PAIR_CALIBRATION_V5.csv.gz": "2dd28252e62164fa8b4122a35b22d8a679ffd3db578a1b6aa334694d7ef4e125",
+    "outputs/old_drug_target_sota_v1/benchmark_splits_v1/CHEMBL37_86674_FROZEN_SPLIT_ASSIGNMENTS_V1.csv.gz": "12853d74817d1971a46af9dc40e31d41effc6e15a86ebba73b2534c41c82f688",
+    "configs/project_drugs_v4.csv": "6cadd584283c4377fa1c311b94c63f58442436ee7523236e0c2c40ae914f4f61"
+  },
+  "artifacts": {
+    "outputs/old_drug_target_sota_v1/first_event_dti_feasibility_v1/FIRST_EVENT_DTI_PERIOD_COUNTS_V1.csv": "274b17d05c1947a997406862ae3315fb04f43fa92cc59442d6828f2d29d48ec0",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feasibility_v1/FIRST_EVENT_DTI_YEAR_LABEL_COUNTS_V1.csv": "747fdfd8ffc83052a504e1a166214a25ef999b19df7e44cf8676779ae6ca71ae"
+  }
+}

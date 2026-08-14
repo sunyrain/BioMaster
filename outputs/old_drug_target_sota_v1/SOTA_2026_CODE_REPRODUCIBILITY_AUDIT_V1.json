@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-08-13T19:31:31.158612+00:00",
+  "status": "PASS",
+  "claim": "CODE_AVAILABILITY_CONFIRMED; EXACT_SAME_DATA_REPRODUCTION_NOT_YET_ESTABLISHED",
+  "input_v3": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V3.csv",
+  "output_v4": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V4.csv",
+  "v3_preserved": true,
+  "rows": 17,
+  "repository_heads": {
+    "DrugCMF": "85100c59b3da6f4e5d3da624dea842f81321c74b",
+    "MMTF-DTI": "0e8665238f1a739aa4fdf6a9180300a727972928"
+  },
+  "released_data_payload": {
+    "DrugCMF_non_readme_files": 0,
+    "MMTF_DTI_raw_split_csvs": 12,
+    "MMTF_DTI_processed_pickles": 0
+  },
+  "checks": {
+    "drugcmf_head_matches": true,
+    "drugcmf_official_dataset_payloads_absent": true,
+    "drugcmf_requires_all_four_embedding_folders": true,
+    "drugcmf_tcp_confidence_layer_present": true,
+    "drugcmf_no_explicit_missing_modality_fallback": true,
+    "drugcmf_noncommercial_license": true,
+    "mmtf_head_matches": true,
+    "mmtf_release_has_no_license": true,
+    "mmtf_release_has_no_requirements_file": true,
+    "mmtf_release_has_12_raw_split_csvs": true,
+    "mmtf_release_has_no_processed_pickle_or_features": true,
+    "mmtf_preprocessor_stores_protein_first": true,
+    "mmtf_trainer_consumes_compound_first": true,
+    "mmtf_model_compound_graph_expects_128": true,
+    "mmtf_model_protein_graph_expects_72": true,
+    "mmtf_external_val_loaded_but_inner_cv_uses_train_only": true
+  },
+  "code_locations": {
+    "drugcmf_four_embedding_paths": {
+      "path": "third_party/sota_dti_2026/DrugCMF/dataloader.py",
+      "first_line": 13
+    },
+    "drugcmf_tcp_layer": {
+      "path": "third_party/sota_dti_2026/DrugCMF/model.py",
+      "first_line": 55
+    },
+    "mmtf_stored_tuple": {
+      "path": "third_party/sota_dti_2026/MMTF-DTI/datapre.py",
+      "line": 271
+    },
+    "mmtf_consumed_tuple": {
+      "path": "third_party/sota_dti_2026/MMTF-DTI/main.py",
+      "line": 45
+    },
+    "mmtf_compound_graph_input_dim": {
+      "path": "third_party/sota_dti_2026/MMTF-DTI/model.py",
+      "line": 102
+    },
+    "mmtf_protein_graph_input_dim": {
+      "path": "third_party/sota_dti_2026/MMTF-DTI/model.py",
+      "line": 139
+    }
+  },
+  "key_file_sha256": {
+    "third_party/sota_dti_2026/DrugCMF/model.py": "be4dc2aac9bc74b05f81823580819cf45ee27a722f4c3014d32eaab80c497e29",
+    "third_party/sota_dti_2026/DrugCMF/dataloader.py": "4e573eea51028e834f31a1786a71cdff48fea5274a40e4503f981669775012bc",
+    "third_party/sota_dti_2026/DrugCMF/train_util.py": "8f1d4ac1976c2928cbdd5ae5600440f0feb4a8e61c03c9b84a874efa1a823bbc",
+    "third_party/sota_dti_2026/DrugCMF/LICENSE": "36e73e6b9de8421ca0d21628c9484211d6e13809e4c2ea5e8fb864c7514db187",
+    "third_party/sota_dti_2026/MMTF-DTI/datapre.py": "705c8ff395a696bf433d450ae404ced8ea1f00d7e97866b528793a720e6a4049",
+    "third_party/sota_dti_2026/MMTF-DTI/main.py": "e1801b2580e57314e21e96bbef7ebb849978b1401c8b96bd0762f51ac5367afc",
+    "third_party/sota_dti_2026/MMTF-DTI/model.py": "6f162979f21f5609ef9299b38ce502bc338b4fab6e1e56b605dfc099202a1601"
+  },
+  "matrix_changes": [
+    {
+      "model": "DrugCMF",
+      "field": "local_commit",
+      "from": "NOT_CLONED; remote HEAD 85100c59b3da6f4e5d3da624dea842f81321c74b",
+      "to": "third_party/sota_dti_2026/DrugCMF @ 85100c59b3da6f4e5d3da624dea842f81321c74b"
+    },
+    {
+      "model": "DrugCMF",
+      "field": "reproduction_status",
+      "from": "official repository available; same-data port not yet executed",
+      "to": "official code cloned and statically audited; repository ships no dataset CSV/PT payloads and requires four offline MolFormer/ProtT5/Uni-Mol/SaProt embedding stores; full same-data port not executed"
+    },
+    {
+      "model": "DrugCMF",
+      "field": "required_action",
+      "from": "port confidence estimator/fusion as an S3 development ablation only after auditing label and structure preprocessing; never compare random-split headline to BioMaster",
+      "to": "after the label-blind structure queue completes, run two preregistered controls: official-style confidence fusion on the structurally eligible subset and an explicitly adapted all-target missing-modality control; neither may be labeled an exact official reproduction"
+    },
+    {
+      "model": "MMTF-DTI",
+      "field": "local_commit",
+      "from": "remote HEAD 0e8665238f1a739aa4fdf6a9180300a727972928",
+      "to": "third_party/sota_dti_2026/MMTF-DTI @ 0e8665238f1a739aa4fdf6a9180300a727972928"
+    },
+    {
+      "model": "MMTF-DTI",
+      "field": "reproduction_status",
+      "from": "official repository is available, but same-data port is not executed",
+      "to": "official repository cloned and statically audited; it ships 12 raw split CSVs but no processed pickle/features, dependency lock or license; datapre stores protein/compound/protein-feature/chemical-feature while main consumes them in the opposite semantic order, so a faithful same-data reproduction is not currently auditable"
+    },
+    {
+      "model": "MMTF-DTI",
+      "field": "required_action",
+      "from": "use as a public benchmark reference or domain-adversarial ablation; never compare its random-split headline directly with S3",
+      "to": "retain as architecture prior art; request or identify an upstream semantic correction before claiming official reproduction; any repaired port must be labeled MMTF-inspired/corrected and evaluated under the frozen S1-S5 splits"
+    }
+  ],
+  "sha256": {
+    "input_v3": "0aaa42eed0674d31c8ddda97b0774ab593e534833361455e9cbaa6be77cd15e8",
+    "output_v4": "9657fc299080c914cae7dc65a0e27053ed8963547d897abab8329c34eb076779"
+  }
+}

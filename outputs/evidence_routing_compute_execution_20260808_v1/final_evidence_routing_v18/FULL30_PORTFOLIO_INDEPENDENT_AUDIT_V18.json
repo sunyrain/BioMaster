@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-08-13T04:33:38.269860+00:00",
+  "status": "PASS",
+  "checks": {
+    "protocol_stamp_and_dependencies_rehashed": true,
+    "both_builder_summaries_pass_20_of_20": true,
+    "summary_inputs_and_outputs_all_rehashed": true,
+    "inherited_v17_audit_pass_40_of_40": true,
+    "population_exact_30_pairs_28_entities_16_targets_8_21_1": true,
+    "direct_chembl_identity_exact_28": true,
+    "direct_chembl_mechanisms_exact_36": true,
+    "chembl_key_partition_27_exact_1_serdex": true,
+    "only_name_entity_mismatch_is_rank21_ketoconazole_label_levoketoconazole_entity": true,
+    "prodrug_partition_and_species_routes_exact": true,
+    "rdkit_numeric_descriptors_and_substructures_recomputed": true,
+    "rdkit_keys_alert_names_and_flags_recomputed": true,
+    "pubchem_raw_exact_1_bulk_28_vendor_no_retry": true,
+    "pubchem_bulk_full_key_cid_exact_28": true,
+    "pubchem_vendor_indicators_recomputed_28": true,
+    "risk_partition_exact_r3_8_r2_17_r1_5": true,
+    "routes_exact_30_and_w2_veto_not_authorized": true,
+    "all_240_rank_rows_independently_recomputed": true,
+    "historical_min_tie_cases_exact_ranks12_19_23": true,
+    "all_180_spearman_correlations_recomputed": true,
+    "physical_coverage_exact_29_boltz_10_gnina_and_rank21_missing_not_imputed": true,
+    "high_discordance_exact_16_and_no_rerank": true,
+    "independence_exact_30_zero_external_exact_pair_validation": true,
+    "claim_boundaries_preserve_384_only46_and_forbid_binding_w2_authorization": true
+  },
+  "checks_passed": 24,
+  "checks_total": 24,
+  "key_hashes": {
+    "protocol_sha256": "5c3567461de0ce95184e2a7eafecb01c746402497513a18845c5d4b23550cdbf",
+    "pair_core_sha256": "8e1c73a0b16122bee6e4d3d7ca5dd9dbc816759c63a2976ec57799cdf97b7a9a",
+    "robust_summary_sha256": "949ba7382447d40cca856a4fdae019b3f742118d466e09da52652fd649e4e2e7",
+    "identity_summary_sha256": "5f6aad90d34160d1e1ec9c7ea5d7c8197b29eac3c6d40b4f536361e0ed728eb6"
+  },
+  "independent_interpretation": "All 28 entities, 30 pairs, RDKit descriptors, PubChem raw identities, 240 bidirectional ranks and 180 target-lane correlations were independently checked. Rank 21 remains the modeled levoketoconazole full-key entity under a ketoconazole-label adjudication hold; W2/veto are not execution-authorized."
+}

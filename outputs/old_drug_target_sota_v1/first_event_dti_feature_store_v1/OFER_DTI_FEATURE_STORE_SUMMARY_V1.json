@@ -1,0 +1,48 @@
+{
+  "schema_version": "OFER_DTI_FEATURE_STORE_V1",
+  "created_utc": "2026-08-14T00:23:21.249255+00:00",
+  "status": "PASS",
+  "counts": {
+    "events": 419566,
+    "active_events": 330207,
+    "weak_or_inactive_events": 89359,
+    "compounds_total_indexed": 289203,
+    "compounds_with_valid_fingerprint": 289202,
+    "targets": 427,
+    "deployment_old_drugs_with_events": 218,
+    "duplicate_event_rows_excluded": 0,
+    "invalid_chemistry_event_rows_excluded": 1
+  },
+  "feature_shapes": {
+    "packed_morgan": [
+      289203,
+      256
+    ],
+    "unpacked_morgan_bits": 2048,
+    "target_protbert": [
+      428,
+      1024
+    ]
+  },
+  "integrity": {
+    "freeze_hash_matches": true,
+    "event_pair_ids_unique": true,
+    "feature_indices_in_range": true,
+    "both_event_types_present": true,
+    "unobserved_pairs_labeled_inactive": false,
+    "fold_specific_risk_sets_precomputed_globally": false
+  },
+  "inputs": {
+    "configs/biomaster_first_event_dti_phase_a_freeze_20260814.json": "b11f437ebb20e285e4e3ccafb612dff297ffa86cbb5df900b7ea898b29a4dc13",
+    "outputs/current_production_package_v2/chembl37_target_calibration_v5/PROJECT463_CHEMBL37_STRICT_BINDING_PAIR_CALIBRATION_V5.csv.gz": "2dd28252e62164fa8b4122a35b22d8a679ffd3db578a1b6aa334694d7ef4e125",
+    "outputs/old_drug_target_sota_v1/feature_store_v1/TARGET_FEATURE_INDEX_V1.csv.gz": "2c959ef251a0775a6cb5df96d06c37eff25d80d671a82d7bb5f2e7b90ff1c628",
+    "outputs/old_drug_target_sota_v1/feature_store_v1/PROTBERT1024_FLOAT32_V1.npy": "9ec6c1038c78c2eb3fe8b8c8d318308d787359869924d4e108c7484ece8825f5",
+    "configs/project_drugs_v4.csv": "6cadd584283c4377fa1c311b94c63f58442436ee7523236e0c2c40ae914f4f61"
+  },
+  "artifacts": {
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_FIRST_EVENT_MANIFEST_V1.csv.gz": "bb8c521eb3a16bdb305797a08adf333222c7a9f56500a0038383aad7f3c1e9c7",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_COMPOUND_FEATURE_INDEX_V1.csv.gz": "7dd5521083e7132fcfefbf1f45501b89f5d328b4a86d1f4c36a9f4cd83556b01",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_MORGAN2048_PACKED_UINT8_V1.npy": "f06d7937100d006bbdfbc697d783b40262076946805efc13c90facce9a6f5d5a",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feature_store_v1/OFER_DTI_EVENT_COUNTS_BY_YEAR_V1.csv": "e682c5df9fd0e6e4901859e9161f28240152a18805de1f8ced52ae95e66e6c94"
+  }
+}

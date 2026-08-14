@@ -1,0 +1,154 @@
+{
+  "algorithm_innovation_verified": false,
+  "bootstrap_comparisons": {
+    "trace_full_vs_direct_pair": {
+      "ci95_high": 0.2870993025765101,
+      "ci95_low": 0.03367670828289539,
+      "first": "trace_full",
+      "metric": "RMSE_first_minus_RMSE_second",
+      "point": 0.1569448956567503,
+      "replicates": 2000,
+      "second": "direct_pair"
+    },
+    "trace_full_vs_trace_shuffled_ligand_contact": {
+      "ci95_high": 0.1951835136421756,
+      "ci95_low": -0.04926008946917206,
+      "first": "trace_full",
+      "metric": "RMSE_first_minus_RMSE_second",
+      "point": 0.06331898538561154,
+      "replicates": 2000,
+      "second": "trace_shuffled_ligand_contact"
+    },
+    "trace_full_vs_trace_single_conformer": {
+      "ci95_high": 0.1593423274925949,
+      "ci95_low": -0.0502439084858858,
+      "first": "trace_full",
+      "metric": "RMSE_first_minus_RMSE_second",
+      "point": 0.04300385405872875,
+      "replicates": 2000,
+      "second": "trace_single_conformer"
+    }
+  },
+  "counts": {
+    "neural_fits": 50,
+    "oof_prediction_rows": 6912,
+    "protocols": 2,
+    "samples": 384
+  },
+  "decision": "PHASE_A_MECHANISM_NOT_SUPPORTED; DO_NOT_OPEN_EXTERNAL_TEST_OR_MULTISEED_CONFIRMATION",
+  "development_gates": {
+    "full_beats_direct_pair_rmse_ci": false,
+    "full_beats_shuffled_contacts_rmse_ci": false,
+    "full_beats_single_conformer_rmse_ci": false,
+    "integrity": true,
+    "primary_pearson_at_least_0_20": false
+  },
+  "feature_index_sha256": "758e72f795f4828617fd42ccee2eb657038aa242c6975be978947675ff45649d",
+  "files": {
+    "checkpoint_dir": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/checkpoints",
+    "metrics_csv": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/TRACE_PL_PHASE_A_METRICS_V1.csv",
+    "oof_predictions_csv": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/TRACE_PL_PHASE_A_OOF_PREDICTIONS_V1.csv",
+    "split_assignments_csv": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/TRACE_PL_PHASE_A_SPLIT_ASSIGNMENTS_V1.csv",
+    "training_log_csv": "/root/autodl-tmp/BioMaster/outputs/old_drug_target_sota_v1/trace_pl_phase_a_v1/TRACE_PL_PHASE_A_TRAINING_LOG_V1.csv"
+  },
+  "freeze_sha256": "736b87a2e0f1b619dbcbc5481dffcd93ef7b4d6036776776816757a0af5427ba",
+  "integrity_audit": {
+    "all_predictions_finite": true,
+    "all_splits_group_disjoint": true,
+    "external_test_opened": false,
+    "maximum_absolute_antisymmetry_error": 0.0,
+    "maximum_absolute_cycle_closure_error": 1.1920928955078125e-07
+  },
+  "parameter_audit": {
+    "direct_pair_parameters": 100555,
+    "relative_difference": 0.00047712294861982247,
+    "trace_parameters": 100603,
+    "within_10_percent": true
+  },
+  "primary_homology_cold_metrics": {
+    "direct_pair": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 0.9616556072311747,
+      "n": 384,
+      "pearson": 0.1836173090773262,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.3605808217809674,
+      "spearman": 0.17532697455655916
+    },
+    "extra_trees_nonatomic": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 0.9510260120756815,
+      "n": 384,
+      "pearson": 0.10266161030803829,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.3382355233546415,
+      "spearman": 0.12541934436575108
+    },
+    "ridge_nonatomic": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 1.247709793889116,
+      "n": 384,
+      "pearson": 0.13002340076934593,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.6246263015491924,
+      "spearman": 0.0805047761195273
+    },
+    "trace_full": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 1.0335752751075613,
+      "n": 384,
+      "pearson": 0.03793183363659965,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.5175257185354507,
+      "spearman": 0.1127267284530673
+    },
+    "trace_no_atomic_contact": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 0.9766248925319209,
+      "n": 384,
+      "pearson": 0.07581497323409671,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.437664138137743,
+      "spearman": 0.14514594677652745
+    },
+    "trace_shuffled_ligand_contact": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 1.0141791985295943,
+      "n": 384,
+      "pearson": 0.05132839037553009,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.4542067327051227,
+      "spearman": 0.07403863475024838
+    },
+    "trace_single_conformer": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 1.0261970236092945,
+      "n": 384,
+      "pearson": 0.05043204915760828,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.4745218639804079,
+      "spearman": 0.09782287172819916
+    },
+    "train_mean": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 0.9665129684962827,
+      "n": 384,
+      "pearson": -0.11674589516257702,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.3352775715565866,
+      "spearman": -0.09688272089682468
+    },
+    "zero_ddg": {
+      "fold": "OOF_AGGREGATE",
+      "mae": 1.038943145250548,
+      "n": 384,
+      "pearson": NaN,
+      "protocol": "homology_cluster_cold",
+      "rmse": 1.4995552287149234,
+      "spearman": NaN
+    }
+  },
+  "reason_innovation_not_yet_verified": "the preregistered development mechanism gates did not all pass",
+  "schema_version": "TRACE_PL_PHASE_A_V1",
+  "status": "PASS"
+}

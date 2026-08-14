@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-08-13T04:05:02.410292+00:00",
+  "status": "PASS_TEMPLATE_CONSTRUCTION",
+  "data_state": "AWAITING_REAL_EXTERNAL_PROCUREMENT_AND_EXPERIMENTAL_DATA",
+  "checks": {
+    "protocol_stamp_and_dependencies_verified": true,
+    "procurement_template_exact_8_ranked_candidates": true,
+    "primary_template_exact_16_two_runs_per_target": true,
+    "operator_primary_template_contains_no_drug_identity_or_inchikey": true,
+    "controlled_blind_key_exact_16_unique_plate_sample_rows": true,
+    "active_species_template_exact_3_predeclared_entities": true,
+    "orthogonal_template_exact_8_with_frozen_plans": true,
+    "all_template_statuses_pending_and_no_synthetic_pass": true,
+    "all_frozen_row_keys_unique_and_sha256_length": true,
+    "unblinding_locked_for_all_16_primary_rows": true
+  },
+  "counts": {
+    "procurement_rows": 8,
+    "primary_run_rows": 16,
+    "controlled_blind_key_rows": 16,
+    "active_species_rows": 3,
+    "orthogonal_rows": 8,
+    "synthetic_pass_rows": 0
+  },
+  "claim_boundary": "Template construction and schema validation are not experimental validation; no candidate is assay-released.",
+  "inputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/W1_RESULT_INGESTION_AND_DECISION_PROTOCOL_FROZEN_V17.json": "b34839d164a8f61199d083bfb6cbc35771cfd5953367e63cf21e36603fbfc49d",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v16/UNIFIED_V16_REPRODUCIBILITY_AUDIT.json": "c11b5d9ce1a879428ca33140cdf62d5f28a0daadeb19c4bfe5c75dd1111c7228",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v16/W1_COMPUTATIONAL_ROBUSTNESS_AND_RELEASE_CHECKLIST_8_V16.csv": "8a4c055eceab853a76139c884aaccbfffe63287d42e766d354b72a0fb4b8fba7",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v16/W1_BLINDED_RESULT_ACCEPTANCE_TEMPLATE_16_RUNS_V15.csv": "3f574f5ee7f5b76ef83bfa881758ef628748e7ae136db7760e3dabdf0378c94f",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v16/W1_ACTIVE_SPECIES_PARALLEL_TEST_ADDENDUM_3_V15.csv": "9945aeda704e43463928da203098eb200ab9667180ad9bd7f36ce8c8996b6f26",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v16/W1_PLATE_LAYOUT_OPERATOR_BLINDED_16X96_V14.csv": "0c5805f5b580ee42f9094935d1570f575e25ed3b0497563d5b8785c1b9b59cc1",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v16/W1_PLATE_LAYOUT_MASTER_UNBLINDED_16X96_V14.csv": "366dc43b0d69da4c09f2873f611dfec575a88bb08b1d1d1cc27f4462657b6551"
+  },
+  "outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/input_templates_v17/W1_PROCUREMENT_AND_RECEIVED_LOT_QC_INPUT_8_V17.csv": "9647c1676d4500bc87cf23403f136914a24da5309e585341c238a5e306d44648",
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/input_templates_v17/W1_BLINDED_PRIMARY_RUN_RESULT_INPUT_16_V17.csv": "3abdd6b74a6c47c9de078fde0146f31c98bf52e59c41ac4be105c9b0999142d3",
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/input_templates_v17/W1_CONTROLLED_UNBLINDING_KEY_16_V17.csv": "7594f3ecaf60e21931e4950cb55f462bb7b112a40bc4a7addd541e7b7b581c59",
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/input_templates_v17/W1_ACTIVE_SPECIES_RESULT_INPUT_3_V17.csv": "1cb180c2deb74785173b5011e553d456a8a5a8b639c3467fecc818e9e4474dc7",
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/input_templates_v17/W1_ORTHOGONAL_RESULT_INPUT_8_V17.csv": "99b59b552d91ff85a0e59c884980dd3fd78fb665df4fdba637e40752f7d9fa0f",
+    "outputs/evidence_routing_compute_execution_20260808_v1/w1_result_ingestion_v17/W1_RESULT_INPUT_SCHEMA_AND_CODEBOOK_V17.json": "211a3e27b5b8996bb2f0bcda4d491e78c0d63b584f20477060f1ec389a42417f"
+  }
+}
