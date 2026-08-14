@@ -148,28 +148,41 @@ def prepare_batches(
             yaml_files.append(dest.name)
 
         expected_stems = {Path(name).stem for name in yaml_files}
-        completed_outputs = completed_prediction_stems(batch_run_dir)
+        completed_outputs = completed_prediction_stems(
+            batch_run_dir,
+            required_models=max(1, int(args.diffusion_samples)),
+        )
         provenance_path = out_dir / "provenance" / f"{batch_name}.csv"
+        accepted_missing = (
+            set(str(value) for value in previous.get("missingStems", []))
+            if args.accept_partial and previous.get("status") == "partial_success"
+            else set()
+        )
         provenance_ok = False
         if provenance_path.exists():
             previous_provenance = pd.read_csv(provenance_path, low_memory=False).fillna("")
             provenance_required = {"pairId", "batchInputSignature", "resultCompletedVerified"}
             if provenance_required.issubset(previous_provenance.columns):
+                completed_flags = previous_provenance[
+                    "resultCompletedVerified"
+                ].astype(str).str.lower().isin({"true", "1", "1.0"})
+                provenance_stems = previous_provenance["yamlFile"].map(
+                    lambda value: Path(str(value)).stem
+                )
+                allowed_incomplete = provenance_stems.isin(accepted_missing)
                 provenance_ok = (
                     len(previous_provenance) == len(rows)
                     and set(previous_provenance["pairId"].astype(str))
                     == {str(row["pairId"]) for row in rows}
                     and previous_provenance["batchInputSignature"].astype(str).eq(batch_input_signature).all()
-                    and previous_provenance["resultCompletedVerified"]
-                    .astype(str)
-                    .str.lower()
-                    .isin({"true", "1", "1.0"})
-                    .all()
+                    and (completed_flags | allowed_incomplete).all()
                 )
         completed = (
-            previous.get("status") == "success"
+            previous.get("status") in (
+                {"success", "partial_success"} if args.accept_partial else {"success"}
+            )
             and previous_signature == batch_input_signature
-            and expected_stems.issubset(completed_outputs)
+            and (expected_stems - accepted_missing).issubset(completed_outputs)
             and provenance_ok
             and not args.force
         )
@@ -280,7 +293,10 @@ def worker(gpu_id: str, task_queue: Queue, root: str, args_dict: dict[str, Any])
 
         elapsed = time.time() - started
         expected_stems = {Path(name).stem for name in batch["yamlFiles"]}
-        completed_stems = completed_prediction_stems(Path(batch["runDir"]))
+        completed_stems = completed_prediction_stems(
+            Path(batch["runDir"]),
+            required_models=max(1, int(args.diffusion_samples)),
+        )
         missing_stems = sorted(expected_stems - completed_stems)
         if result.returncode != 0:
             batch_status = "failed"
@@ -371,7 +387,7 @@ def summarize_status(out_dir: Path) -> dict[str, Any]:
     return summary
 
 
-def completed_prediction_stems(run_dir: Path) -> set[str]:
+def completed_prediction_stems(run_dir: Path, required_models: int = 1) -> set[str]:
     confidence = {
         path.name.replace("confidence_", "").replace("_model_0.json", ""): path
         for path in run_dir.rglob("confidence_*_model_0.json")
@@ -380,14 +396,20 @@ def completed_prediction_stems(run_dir: Path) -> set[str]:
         path.name.replace("affinity_", "").replace(".json", ""): path
         for path in run_dir.rglob("affinity_*.json")
     }
-    model0 = {
-        path.name.replace("_model_0.cif", ""): path for path in run_dir.rglob("*_model_0.cif")
-    }
-    model1 = {
-        path.name.replace("_model_1.cif", ""): path for path in run_dir.rglob("*_model_1.cif")
-    }
+    model_paths: list[dict[str, Path]] = []
+    for model_index in range(required_models):
+        suffix = f"_model_{model_index}.cif"
+        model_paths.append(
+            {
+                path.name.removesuffix(suffix): path
+                for path in run_dir.rglob(f"*{suffix}")
+            }
+        )
     complete: set[str] = set()
-    for stem in set(confidence) & set(affinity) & set(model0) & set(model1):
+    candidate_stems = set(confidence) & set(affinity)
+    for paths in model_paths:
+        candidate_stems &= set(paths)
+    for stem in candidate_stems:
         confidence_json = read_json(confidence[stem])
         affinity_json = read_json(affinity[stem])
         values = [
@@ -400,7 +422,7 @@ def completed_prediction_stems(run_dir: Path) -> set[str]:
             valid = all(math.isfinite(float(value)) and 0.0 <= float(value) <= 1.0 for value in values)
         except (TypeError, ValueError):
             valid = False
-        if valid and model0[stem].stat().st_size > 0 and model1[stem].stat().st_size > 0:
+        if valid and all(paths[stem].stat().st_size > 0 for paths in model_paths):
             complete.add(stem)
     return complete
 
@@ -472,6 +494,14 @@ def main() -> int:
     parser.add_argument("--allow-kernels", dest="no_kernels", action="store_false")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--stop-on-failure", action="store_true")
+    parser.add_argument(
+        "--accept-partial",
+        action="store_true",
+        help=(
+            "On resume, accept a signed partial_success batch when every non-missing stem "
+            "is complete and each missing stem is explicitly recorded in provenance."
+        ),
+    )
     parser.add_argument("--plan-only", action="store_true")
     args = parser.parse_args()
 

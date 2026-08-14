@@ -1,0 +1,83 @@
+{
+  "freeze_id": "BIOMASTER_BIROUTE_V2_METHOD_FREEZE_20260813",
+  "status": "PRE_RESULT_METHOD_FREEZE",
+  "scope": {
+    "training_pairs": "CHEMBL37_86674_FROZEN_SPLIT_ASSIGNMENTS_V1",
+    "drug_representation": "DTIAM official BerMol pooled 768-dimensional embedding",
+    "target_representation": "DTIAM official ESM2-t33-650M mean 1280-dimensional embedding",
+    "primary_protocols": [
+      "S1_SCAFFOLD_COLD_DRUG",
+      "S2_HOMOLOGY_COLD_TARGET",
+      "S3_STRICT_DOUBLE_COLD",
+      "S4_FIRST_SEEN_TEMPORAL_2023_2025",
+      "S5_OLD_DRUG_ENTITY_COLD"
+    ],
+    "development_protocol": "S3_STRICT_DOUBLE_COLD",
+    "development_folds": [0, 1, 2],
+    "confirmatory_folds": [3, 4]
+  },
+  "model": {
+    "latent_dim": 256,
+    "hidden_dim": 384,
+    "route_experts": [
+      "PAIR_INTERACTION",
+      "TARGET_TO_DRUG_RETRIEVAL",
+      "DRUG_TO_TARGET_RETRIEVAL"
+    ],
+    "route_features": [
+      "drug_entity_cold",
+      "drug_scaffold_cold",
+      "target_entity_cold",
+      "target_homology_cold",
+      "is_deployment_old_drug"
+    ],
+    "pseudo_cold_training": "Use frozen scaffold and target-homology fold assignments as label-free episodic route masks; no entity-ID embeddings",
+    "dropout": 0.15
+  },
+  "objectives": {
+    "target_balanced_final_bce": 1.0,
+    "target_to_drug_bce": 0.2,
+    "drug_to_target_bce": 0.2,
+    "within_target_pairwise_rank": 0.12,
+    "within_drug_pairwise_rank": 0.12,
+    "pchembl_huber_auxiliary": 0.05,
+    "route_load_balance": 0.01
+  },
+  "training": {
+    "epochs": 50,
+    "patience": 8,
+    "min_delta": 0.0001,
+    "batch_size": 1024,
+    "inference_batch_size": 4096,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0,
+    "label_smoothing": 0.01,
+    "selection_metric": "mean(validation micro AUPRC, target-macro AUPRC, drug-macro AUPRC)",
+    "temperature_calibration": "validation-only"
+  },
+  "predeclared_ablations": [
+    "FULL_BIROUTE",
+    "NO_DIRECTIONAL_RANK_LOSSES",
+    "NO_ROUTE_CONDITIONING",
+    "SYMMETRIC_RETRIEVAL_HEAD"
+  ],
+  "claim_gates": {
+    "development_is_not_confirmation": true,
+    "no_test_label_hyperparameter_selection": true,
+    "component_innovation_requires_confirmatory_ablation_gain": true,
+    "sota_requires_cluster_bootstrap_ci_excluding_zero": true,
+    "external_source_overlap_must_be_reported": true,
+    "structure_teacher_student_is_separate_until_coverage_is_adequate": true
+  },
+  "target_scope_invariant": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recovered": 480,
+    "later_pocket_quality_excluded": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  }
+}

@@ -1,0 +1,28 @@
+check_code,description,observed,expected,status
+V5_SUMMARY_PASS,V5 summary status,PASS,PASS,PASS
+PAIR_ROWS,complete Cartesian pair rows,276480,276480,PASS
+PAIR_KEYS,unique ligand-target keys,276480,276480,PASS
+LIGANDS,unique ligand structures,720,720,PASS
+TARGETS,unique active targets,384,384,PASS
+TARGET_TABLE,target routing rows,384,384,PASS
+ACTIVE_SCOPE_IDS,V5 target IDs equal frozen 338+46 active scope,0,0,PASS
+ACTIVE_NO_GPCR,no active target is GPCR,0,0,PASS
+ACTIVE_SM_MOA,all active targets pass small-molecule MoA hard gate,384,384,PASS
+ACTIVE_SUPPORTED_CLASS,all active targets pass supported-class hard gate,384,384,PASS
+ACTIVE_BRANCHES,338 experimental-pocket plus exact 46 recovery,"{'STRICT_EXPERIMENTAL_POCKET_MAINLINE_338': 338, 'RECOVERED_NO_EXPERIMENTAL_POCKET_46': 46}","{'STRICT_EXPERIMENTAL_POCKET_MAINLINE_338': 338, 'RECOVERED_NO_EXPERIMENTAL_POCKET_46': 46}",PASS
+HARD_EXCLUDED,prior hard-gate exclusion partition remains closed,480,480,PASS
+RECOVERY_GAP,eligible recovered target-top10 compute gap,0,0,PASS
+INCREMENT_PAIRS,frozen remote N2/N3 incremental pairs,57,57,PASS
+INCREMENT_NOVELTY,increment contains N2/N3 only,"['N2_SCAFFOLD_HOP', 'N3_REMOTE']","['N2_SCAFFOLD_HOP', 'N3_REMOTE']",PASS
+INCREMENT_NO_KNOWN,no known control in discovery increment,0,0,PASS
+INCREMENT_NO_GPCR,increment targets remain non-GPCR,0,0,PASS
+PRIMARY_RUNS,planned and completed primary model runs,61,61,PASS
+INCREMENT_COMPLETE,all increment pairs complete required primary models,57,57,PASS
+REMOTE_MODELS_COMPLETE,all increment pairs cover every remote-qualified model,57,57,PASS
+GNINA_SUPPORT,GNINA primary support pairs,2,2,PASS
+GNINA_ENSEMBLE,all GNINA supports received state evaluation and were not reproduced,{'DOWNGRADE_PRIMARY_NOT_REPRODUCED': 2},{'DOWNGRADE_PRIMARY_NOT_REPRODUCED': 2},PASS
+BOLTZ_SUPPORT,Boltz primary A/B/C pairs,15,15,PASS
+BOLTZ_MULTI_SEED,all Boltz supports completed 3-seed stability,15,15,PASS
+BOLTZ_POSE_STABLE,all multi-seed pairs pass conditional pose stability,{'PASS_SCORE_AND_CONDITIONAL_POSE_STABILITY': 15},{'PASS_SCORE_AND_CONDITIONAL_POSE_STABILITY': 15},PASS
+INCREMENT_LAYERS,final increment evidence layers,"{'L4_HOLD_NOT_REPRODUCED_OR_UNQUALIFIED': 42, 'L2_BOLTZ_REPRODUCED': 15}","{'L4_HOLD_NOT_REPRODUCED_OR_UNQUALIFIED': 42, 'L2_BOLTZ_REPRODUCED': 15}",PASS
+MANIFEST_HASHES,V5 authoritative output hashes,True,True,PASS

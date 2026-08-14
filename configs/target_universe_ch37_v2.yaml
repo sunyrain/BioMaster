@@ -1,0 +1,46 @@
+package_name: ChEMBL37人源单蛋白靶点全集
+package_version: 2.0.0
+source_release:
+  chembl: 37
+  opentargets: 26.06
+
+authoritative_scope:
+  organism: Homo sapiens
+  target_type: SINGLE PROTEIN
+  require_drug_mechanism_record: true
+  expected_targets: 888
+  expected_genes: 888
+  expected_accessions: 888
+  expected_sequences: 888
+
+set_definitions:
+  all_official:
+    rule: all authoritative targets
+  small_molecule_moa_all:
+    rule: at least one ChEMBL 37 Small molecule mechanism record
+  small_molecule_moa_non_gpcr:
+    rule: small_molecule_moa_all and not GPCR
+  direct_sm_broad_non_gpcr:
+    rule: not GPCR and (ChEMBL Small molecule MoA or Open Targets project_standard_direct_sm)
+  structure_ready:
+    rule: exact-sequence AlphaFold model and project-defined P2Rank A/B pocket tier
+  structure_strict:
+    rule: exact-sequence AlphaFold model, project-defined P2Rank A tier, pocket mean pLDDT >= 70 and >=70% pocket residues pLDDT >= 70
+  calibration_8x8:
+    rule: at least 8 historical strict positives and 8 quantitative-low/explicit-inactive compounds
+
+calibration_tiers:
+  T1:
+    min_positive_compounds: 50
+    min_negative_compounds: 50
+    min_documents: 3
+  T2:
+    min_positive_compounds: 20
+    min_negative_compounds: 20
+    min_documents: 2
+  T3:
+    min_positive_compounds: 8
+    min_negative_compounds: 8
+    min_documents: 2
+  T4_positive_only:
+    min_positive_compounds: 8

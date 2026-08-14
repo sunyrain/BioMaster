@@ -1,0 +1,5 @@
+target_chembl_id,expected_candidates,observed_candidates,pose_rows,integrity_status
+CHEMBL2208,1,1,5,PASS
+CHEMBL2959,2,2,10,PASS
+CHEMBL331,1,1,5,PASS
+CHEMBL4128,2,2,10,PASS

@@ -1,0 +1,35 @@
+package_name: ChEMBL37人源单蛋白已知口袋图谱
+package_version: 1.0.0
+target_universe_size: 888
+
+experimental_pocket_rules:
+  minimum_binding_residues: 3
+  minimum_druglike_atoms: 8
+  preferred_xray_resolution_max: 3.0
+  preferred_cryoem_resolution_max: 3.5
+  usable_resolution_max: 4.0
+  exclude_pdbe_solvent: true
+
+p2rank_comparison:
+  minimum_jaccard: 0.10
+  minimum_known_residue_recall: 0.25
+  maximum_center_distance_angstrom: 8.0
+
+source_priority:
+  - PDBE_DRUG_MAPPED
+  - BIOLIP2_BIOLOGICAL
+  - SCPDB_DRUGGABLE_SITE
+  - KLIFS_CURATED_KINASE
+  - GPCRDB_CURATED_GPCR
+  - PDBE_DRUGLIKE
+  - PDBE_FUNCTIONAL_LIGAND
+  - P2RANK_PREDICTED
+
+source_releases:
+  pdbe_api: live_2026-08-04
+  biolip2: downloaded_2026-08-04
+  scpdb: release_2017
+  klifs: live_2026-08-04
+  gpcrdb: live_2026-08-04
+  opentargets_tractability: 26.06
+  p2rank: 2.6-alpha

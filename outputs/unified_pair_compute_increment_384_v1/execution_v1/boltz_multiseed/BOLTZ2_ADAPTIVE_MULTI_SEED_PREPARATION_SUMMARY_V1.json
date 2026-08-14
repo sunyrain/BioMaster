@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-08-09T15:32:39.127119+00:00",
+  "status": "PASS",
+  "pairs": 15,
+  "targets": 10,
+  "tier_counts": {
+    "BOLTZ_STRUCTURE_A": 8,
+    "BOLTZ_STRUCTURE_C": 5,
+    "BOLTZ_STRUCTURE_B": 2
+  },
+  "novelty_counts": {
+    "N3_REMOTE": 9,
+    "N2_SCAFFOLD_HOP": 6
+  },
+  "output_manifest": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_multiseed/BOLTZ2_ADAPTIVE_SUPPORTED_INPUT_MANIFEST_V1.csv",
+  "input_dir": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_multiseed/inputs"
+}

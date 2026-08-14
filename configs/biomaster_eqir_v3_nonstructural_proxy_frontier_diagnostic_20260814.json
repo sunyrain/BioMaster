@@ -1,0 +1,66 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_NONSTRUCTURAL_PROXY_FRONTIER_DIAGNOSTIC_V1",
+  "created_utc": "2026-08-13T21:16:00Z",
+  "status": "FROZEN_AFTER_V1_PROXY_REJECTION_AND_BEFORE_FRONTIER_EXECUTION; EXPLORATORY_ONLY",
+  "purpose": "separate candidate-direction failure from residual-magnitude failure by tracing the exact base-to-adapter logit interpolation frontier after the preregistered V1 proxy was rejected",
+  "posthoc_boundary": {
+    "v1_result_was_seen_before_this_diagnostic": true,
+    "may_select_or_promote_a_model": false,
+    "may_change_the_v1_decision": false,
+    "may_open_confirmatory_folds_3_4": false,
+    "permitted_use": "failure diagnosis and prospective V2 mechanism design only"
+  },
+  "source_summary": {
+    "path": "outputs/old_drug_target_sota_v1/s3_nonstructural_safe_dual_query_proxy_v1/S3_NONSTRUCTURAL_SAFE_DUAL_QUERY_PROXY_SUMMARY_V1.json",
+    "sha256": "ce24196f8e4424a206cecbca1aa9875ca2200cfcd654e38faf4bcca0a7782433",
+    "required_decision": "OBJECTIVE_PROXY_NOT_SUPPORTED; DO_NOT_TRANSFER_THIS_OBJECTIVE_TO_STAGE1"
+  },
+  "source_predictions": {
+    "path": "outputs/old_drug_target_sota_v1/s3_nonstructural_safe_dual_query_proxy_v1/S3_NONSTRUCTURAL_SAFE_DUAL_QUERY_PROXY_OOF_PREDICTIONS_V1.csv.gz",
+    "sha256": "a74b1cb6b4cba5a388fbc210fc8228b224fa491855bc7fb931b0333e4bc1fddd",
+    "required_folds_exactly": [0, 1, 2]
+  },
+  "candidate_columns": [
+    "UNCONSTRAINED_BCE_ADAPTER__ensemble",
+    "ORDINARY_DUAL_QUERY__ensemble",
+    "TARGET_CVAR_ONLY__ensemble",
+    "DRUG_CVAR_ONLY__ensemble",
+    "DUAL_CVAR__ensemble"
+  ],
+  "interpolation": {
+    "base_column": "BASE",
+    "formula": "logit_score(gamma)=logit(BASE)+gamma*(logit(CANDIDATE)-logit(BASE))",
+    "gamma_min": 0.0,
+    "gamma_max": 1.0,
+    "gamma_step": 0.005,
+    "probability_clipping_epsilon": 1e-6
+  },
+  "metrics": [
+    "micro_auprc",
+    "target_macro_auprc",
+    "drug_macro_auprc",
+    "equal_weight_three_metric_mean",
+    "target_empirical_cvar_0.8",
+    "drug_empirical_cvar_0.8"
+  ],
+  "risk": {
+    "group_regret": "mean softplus pairwise loss difference versus BASE within each query group",
+    "alpha": 0.8,
+    "delta_target": 0.01,
+    "delta_drug": 0.01,
+    "pair_enumeration": "all positive-negative pairs in pooled development folds 0-2"
+  },
+  "diagnostic_questions": [
+    "Does any gamma greater than zero satisfy both tail-risk constraints?",
+    "Does any jointly feasible gamma improve all three ranking metrics versus BASE?",
+    "Does a metric-improving gamma exist only by violating one or both risk constraints?",
+    "How rapidly do target and drug tail risks increase away from exact fallback?"
+  ],
+  "hard_stops": [
+    "abort on any source hash mismatch",
+    "abort on any fold outside 0-2",
+    "never write into or modify V1 proxy artifacts",
+    "never describe the best observed gamma as cross-fitted or confirmatory",
+    "never authorize Stage1 from this diagnostic"
+  ]
+}

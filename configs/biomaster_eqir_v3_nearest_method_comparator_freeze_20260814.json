@@ -1,0 +1,146 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_NEAREST_METHOD_COMPARATOR_FREEZE_V1",
+  "created_utc": "2026-08-13T19:33:00Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN; CONDITIONAL_ON_ALL_STAGE0_GATES_PASSING",
+  "purpose": "prevent EQIR from claiming algorithmic value by comparing only with weak or historically convenient baselines",
+  "parents": {
+    "stage1_method_freeze": {
+      "path": "configs/biomaster_eqir_v3_stage1_method_freeze_20260814.json",
+      "sha256": "ebb3255d0ea445d2c1220b61af1f3fabfce7af38ff4aa4b8740f669d2403cdd1"
+    },
+    "stage1_objective_amendment": {
+      "path": "configs/biomaster_eqir_v3_stage1_objective_amendment_20260814.json",
+      "sha256": "b2c82e995d00bf09991633824197889656b50d0a4eaa297de556b4237388bdc4"
+    },
+    "primary_paper_matrix_v4": {
+      "path": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V4.csv",
+      "sha256": "9657fc299080c914cae7dc65a0e27053ed8963547d897abab8329c34eb076779"
+    },
+    "official_code_reproducibility_audit": {
+      "path": "outputs/old_drug_target_sota_v1/SOTA_2026_CODE_REPRODUCIBILITY_AUDIT_V1.json",
+      "sha256": "25b836598475dd5ddf094515f50230f03645164352259f9c601373c53a471860"
+    },
+    "mathematical_novelty_audit": {
+      "path": "outputs/old_drug_target_sota_v1/EQIR_V3_MATHEMATICAL_NOVELTY_AUDIT_20260814.md",
+      "sha256": "388939a4a4c4668244d58de662360e6d6ec9866bbf30a43e0641eabbc361419f"
+    }
+  },
+  "freeze_timing_integrity": {
+    "formal_structure_evaluation_files_present": 0,
+    "formal_structure_scores_joined_to_labels": false,
+    "stage0_decision_available": false,
+    "confirmatory_s3_folds_3_4_read_for_this_freeze": false,
+    "official_repositories_inspected": [
+      "DrugCMF@85100c59b3da6f4e5d3da624dea842f81321c74b",
+      "MMTF-DTI@0e8665238f1a739aa4fdf6a9180300a727972928"
+    ]
+  },
+  "activation_rule": {
+    "required_stage0_decision": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "all_amended_stage0_gates_required": true,
+    "otherwise": "DO_NOT_IMPLEMENT_OR_TRAIN_ANY_STRUCTURE_FUSION_COMPARATOR"
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "comparators": [
+    {
+      "name": "FROZEN_QUERY_BALANCED_BASE_ONLY",
+      "classification": "STRONG_NONNOVEL_SAME_DATA_FLOOR",
+      "definition": "the already frozen fold-specific DTIAM-BioMaster query-balanced blend; no structure feature or learned refit"
+    },
+    {
+      "name": "TCP_INSPIRED_ELIGIBLE_SUBSET_CONFIDENCE_FUSION",
+      "classification": "DRUGCMF_INSPIRED_CONTROL_NOT_OFFICIAL_REPRODUCTION",
+      "evaluation_population": "only pairs with a(t)=1; the same eligible pair set must be used for EQIR and base comparisons",
+      "nonstructural_inputs": [
+        "frozen DTIAM logit",
+        "frozen BioMaster logit",
+        "frozen query-balanced base logit",
+        "absolute DTIAM-BioMaster probability disagreement"
+      ],
+      "structure_inputs": [
+        "primary_cnn_affinity_target_ecdf_minus_0_5",
+        "negative_primary_pose_vina_affinity_target_ecdf_minus_0_5",
+        "target_local_pose_score_spread_robust_quantile",
+        "log1p_valid_pose_count",
+        "frozen target QC features"
+      ],
+      "mechanism": "each modality has a learned binary logit head and a sigmoid confidence head; the confidence target is that modality head's probability assigned to the true class; normalized confidence-weighted logits feed a two-layer fusion MLP",
+      "objective": "fused binary cross entropy plus both modality binary cross entropies plus both TCP confidence MSE losses",
+      "important_difference_from_eqir": "may learn the complete eligible-subset label and has no residual-only restriction or exact no-evidence invariant"
+    },
+    {
+      "name": "TCP_INSPIRED_MASKED_ALL_TARGET_CONFIDENCE_FUSION",
+      "classification": "DRUGCMF_INSPIRED_MISSING_MODALITY_ADAPTATION_NOT_OFFICIAL_REPRODUCTION",
+      "evaluation_population": "all S3 development pairs, including the 46 targets recovered only because the experimental pocket is missing",
+      "inputs": "the same inputs as the eligible-subset control plus a(t) and a learned missing-structure token",
+      "mechanism": "mask structure TCP loss and structure confidence when a(t)=0; the nonstructural modality remains learned and may differ from the frozen base",
+      "important_difference_from_eqir": "generic missing-modality fusion; no bitwise base fallback and no residual-only restriction"
+    },
+    {
+      "name": "EQIR_FULL",
+      "classification": "PREREGISTERED_CANDIDATE",
+      "definition": "the parent Stage1 freeze as corrected by the probability-scale objective amendment"
+    }
+  ],
+  "shared_training_protocol": {
+    "protocol": "S3_STRICT_DOUBLE_COLD",
+    "development_folds": [0, 1, 2],
+    "confirmatory_folds_locked": [3, 4],
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817],
+    "inner_validation": "identical deterministic grouped inner folds jointly respecting target homology cluster and drug scaffold group",
+    "maximum_epochs": 100,
+    "early_stopping_patience": 12,
+    "optimizer": "AdamW",
+    "selection_objective": "equal-weight mean of inner-validation micro AUPRC, target-macro AUPRC and drug-macro AUPRC",
+    "selection_constraints": [
+      "drug-macro must not be below the frozen base",
+      "target-macro may be at most 0.002 below the frozen base",
+      "held TEST labels are never used for fitting, tuning, confidence calibration or checkpoint selection"
+    ],
+    "capacity_matching": "TCP-inspired modality and fusion MLP widths must be selected from parameter counts no smaller than 0.5x and no larger than 2x the full EQIR trainable parameter count; ties choose the smaller model"
+  },
+  "mandatory_reporting": {
+    "metrics": [
+      "micro AUPRC",
+      "target-macro AUPRC",
+      "drug-macro AUPRC",
+      "target-query within-group permutation",
+      "drug-query within-group permutation"
+    ],
+    "uncertainty": [
+      "target homology-cluster bootstrap",
+      "drug scaffold-cluster bootstrap",
+      "paired target-query bootstrap",
+      "paired drug-query bootstrap"
+    ],
+    "five_seed_rule": "at least 4/5 seed differences versus each comparator are positive",
+    "eligible_subset_and_all_target_results_both_required": true,
+    "official_name_policy": "never label either TCP-inspired control as an official DrugCMF reproduction"
+  },
+  "mmtf_dti_policy": {
+    "current_role": "ARCHITECTURE_PRIOR_ART_ONLY",
+    "reason": "the released preprocessing tuple order and training consumer order swap compound/protein graph and feature semantics; an exact faithful port is not currently auditable",
+    "allowed_future_action": "only after upstream clarification or an explicitly documented repair, evaluate a corrected MMTF-inspired port under the same S1-S5 splits",
+    "forbidden_claim": "do not report a repaired local implementation as the official MMTF-DTI reproduction"
+  },
+  "promotion_rule": {
+    "eqir_must_beat": [
+      "FROZEN_QUERY_BALANCED_BASE_ONLY",
+      "TCP_INSPIRED_ELIGIBLE_SUBSET_CONFIDENCE_FUSION on the identical eligible subset",
+      "TCP_INSPIRED_MASKED_ALL_TARGET_CONFIDENCE_FUSION on the full development population",
+      "every parent Stage1 ablation"
+    ],
+    "all_parent_directional_and_cluster_gates_remain_required": true,
+    "passing_does_not_itself_establish_full_sota": true,
+    "failure": "RETAIN_NO_FULL_SOTA_CLAIM_AND_DO_NOT_OPEN_CONFIRMATORY_FOLDS"
+  }
+}

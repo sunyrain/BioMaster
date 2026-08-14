@@ -1,0 +1,6 @@
+assay_lane,class_zh,compute,wetlab,controls
+KINASE_BIOCHEMICAL,激酶,预测ATP/变构口袋ensemble；历史正负对照校准GNINA；Boltz-2多seed；通过门控后短程MD,激酶生化活性/结合剂量反应 + NanoBRET或细胞磷酸化正交复核,参考抑制剂、无活性类似物、载体、近缘激酶选择性面板
+ENZYME_BIOCHEMICAL,非激酶酶,辅因子/金属感知预测口袋ensemble；历史正负对照GNINA；Boltz-2多seed；标准或专项MD,纯化酶活性剂量反应 + SPR/BLI/MST或DSF直接结合复核,已知底物/抑制剂、无酶空白、载体、结构相近阴性化合物
+ION_CHANNEL_FUNCTIONAL,离子通道,开放/关闭/失活状态和孔道口袋ensemble；Boltz-2；膜内离子通道MD,自动膜片钳多电压/多状态剂量反应 + 离子通量或位点突变复核,参考阻断剂/激动剂、未表达细胞、载体、电生理质量控制
+TRANSPORTER_MEMBRANE_FUNCTIONAL,转运体,内向/外向状态和底物通道口袋ensemble；历史对照校准；Boltz-2；膜环境MD,细胞/膜泡摄取或外排剂量反应 + 靶点占有率/竞争结合复核,已知底物/抑制剂、敲除细胞、载体、非相关转运体
+NUCLEAR_EPIGENETIC_DOMAIN,核内/表观遗传蛋白,结构域和辅因子状态预测口袋；历史对照GNINA；Boltz-2多seed；局部MD,TR-FRET/AlphaScreen/酶活或共调节因子招募 + NanoBRET/SPR/BLI复核,参考配体、突变结构域、载体、非相关核内蛋白

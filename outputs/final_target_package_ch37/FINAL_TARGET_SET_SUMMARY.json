@@ -1,0 +1,27 @@
+{
+  "definition": "ChEMBL small-molecule MoA AND non-GPCR AND supported target class AND preferred druglike holo experimental pocket",
+  "official_targets": 888,
+  "after_gpcr_exclusion": 745,
+  "after_chembl_small_molecule_moa": 450,
+  "after_supported_target_class": 408,
+  "after_any_experimental_pocket": 362,
+  "final_targets": 338,
+  "removed_for_no_experimental_pocket_at_last_step": 46,
+  "removed_for_nonpreferred_pocket_at_last_step": 21,
+  "removed_for_no_preferred_druglike_holo_pocket": 3,
+  "preferred_experimental_pocket_targets": 338,
+  "review_pocket_targets": 0,
+  "biochemical_or_nuclear_targets": 280,
+  "ion_channel_or_transporter_targets": 58,
+  "target_class_counts": {
+    "酶（非激酶）": 146,
+    "激酶": 102,
+    "离子通道": 40,
+    "核内/表观遗传蛋白": 32,
+    "转运体": 18
+  },
+  "pocket_evidence_counts": {
+    "专业口袋库确认的实验位点": 178,
+    "药物映射的高质量实验口袋": 160
+  }
+}

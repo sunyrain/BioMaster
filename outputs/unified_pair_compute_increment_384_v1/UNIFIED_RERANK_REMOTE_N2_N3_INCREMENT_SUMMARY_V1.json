@@ -1,0 +1,38 @@
+{
+  "package_name": "UNIFIED_RERANK_REMOTE_N2_N3_INCREMENT_V1",
+  "created_utc": "2026-08-09T15:25:49.412923+00:00",
+  "status": "PASS",
+  "selection": {
+    "bidirectional_unrecorded_pairs_in_e1_e2": 299,
+    "pairs_missing_remote_qualified_model_before_novelty": 98,
+    "eligible_n2_n3_pairs": 57,
+    "eligible_targets": 27,
+    "excluded_n1_local_analog": 41,
+    "excluded_novelty_not_evaluable": 0
+  },
+  "compute": {
+    "gnina_pairs": 6,
+    "boltz_pairs": 55,
+    "total_model_runs": 61,
+    "novelty_counts": {
+      "N3_REMOTE": 38,
+      "N2_SCAFFOLD_HOP": 19
+    },
+    "route_counts": {
+      "E2_SINGLE_MODEL_REMOTE_QUALIFIED": 53,
+      "E1_DUAL_REMOTE_QUALIFIED": 4
+    }
+  },
+  "recovered_46_compute_gap": 0,
+  "scope_boundary": "This queue closes only the newly created 384-rerank remote N2/N3 gap. It does not reopen GPCR, unsupported-class, no-small-molecule-MoA, E3-local, or failed target-gate branches.",
+  "outputs": {
+    "candidate_audit": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/UNIFIED_RERANK_REMOTE_INCREMENT_CANDIDATE_AUDIT_V1.csv",
+    "pair_queue": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/UNIFIED_RERANK_REMOTE_N2_N3_INCREMENTAL_PAIR_QUEUE_V1.csv",
+    "gnina_task": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/TASK_GNINA_REMOTE_INCREMENT_V1.csv",
+    "boltz_task": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/TASK_BOLTZ_REMOTE_INCREMENT_V1.csv"
+  },
+  "source_hashes": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V4.csv.gz": "19e6ec410c73cf7612e78ed239866ffb576772c9b44f88edef11a0faadf8b0a9",
+    "outputs/gnina_calibration_338_v1/CH37_PAIR_CONTROL_POOL_338_V1.csv.gz": "edf0e1fa242a08bdc146584e38b6fd84abfac4ac834446d32b90b19231fba84d"
+  }
+}

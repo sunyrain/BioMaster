@@ -1,0 +1,15 @@
+{
+  "final_target_anchors": 338,
+  "unique_genes": 338,
+  "unique_accessions": 338,
+  "unique_sequences": 338,
+  "chembl_direct_small_molecule_moa": 338,
+  "conventional_druglike_holo_ready": 338,
+  "special_cofactor_or_functional_site_ready": 0,
+  "blocked_or_manual_review": 0,
+  "new_coordinate_packages_still_required": 338,
+  "p2rank_top1_matches_experimental_pocket": 296,
+  "p2rank_top3_matches_experimental_pocket": 326,
+  "target_calibration_8x8": 286,
+  "special_protocol_targets": []
+}

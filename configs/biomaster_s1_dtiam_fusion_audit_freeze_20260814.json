@@ -1,0 +1,83 @@
+{
+  "schema_version": "BIOMASTER_S1_DTIAM_FUSION_AUDIT_FREEZE_V1",
+  "created_utc": "2026-08-13T18:29:00Z",
+  "protocol": "S1_SCAFFOLD_COLD_DRUG",
+  "scope": {
+    "folds": [0, 1, 2, 3, 4],
+    "rows": 86673,
+    "drug_scaffold_clusters_for_micro_bootstrap": 42991,
+    "same_frozen_supervised_pairs_and_splits": true,
+    "biomaster_evidence": "SINGLE_SEED_20260813",
+    "dtiam_evidence": "OFFICIAL_BERMOL_ESM2_AUTOGUON_1_4_COMPAT"
+  },
+  "single_model_metrics": {
+    "dtiam": {
+      "micro_auprc": 0.8828592902312902,
+      "target_macro_auprc": 0.8385977011609478,
+      "drug_macro_auprc": 0.8413058400680935
+    },
+    "biomaster_stack": {
+      "micro_auprc": 0.926716078387672,
+      "target_macro_auprc": 0.8739635408138495,
+      "drug_macro_auprc": 0.8451093121454898
+    },
+    "biomaster_minus_dtiam_micro_auprc": 0.04385678815638183,
+    "biomaster_minus_dtiam_scaffold_bootstrap_ci95": [
+      0.034312413621217876,
+      0.05441862013409816
+    ]
+  },
+  "validation_only_same_data_routed_fusion": {
+    "fit_boundary": "per-fold fixed validation-only fit; no test labels used",
+    "micro_auprc": 0.9364572521052876,
+    "target_macro_auprc": 0.884949043475048,
+    "drug_macro_auprc": 0.8619954746566632,
+    "micro_minus_biomaster": 0.0097411737176156,
+    "micro_minus_biomaster_scaffold_bootstrap_ci95": [
+      0.0085685056697901,
+      0.0109739626189474
+    ],
+    "micro_minus_dtiam": 0.0535979618739974,
+    "micro_minus_dtiam_scaffold_bootstrap_ci95": [
+      0.0448534549549974,
+      0.0635973622838856
+    ],
+    "target_macro_minus_biomaster": 0.0109855026611985,
+    "target_macro_minus_biomaster_ci95": [
+      0.0064645638819842,
+      0.0159191290117441
+    ],
+    "drug_macro_minus_biomaster": 0.0168861625111732,
+    "drug_macro_minus_biomaster_ci95": [
+      0.008829559911514,
+      0.025278507409118
+    ],
+    "target_query_pair_signal_supported": true,
+    "drug_query_pair_signal_supported": true,
+    "novelty_boundary": "strong nonnovel validation-only integration baseline; not a new algorithm"
+  },
+  "external_conplex_increment": {
+    "micro_auprc": 0.9365240200508829,
+    "minus_same_data_fusion": 0.0000667679455953,
+    "scaffold_bootstrap_ci95": [-0.0003101810006535, 0.0004183930139919],
+    "increment_supported": false,
+    "training_source_overlap_unresolved": true
+  },
+  "decision": "S1_SAME_DATA_ROUTED_FUSION_IS_STRONG_NONNOVEL_BASELINE; SINGLE_SEED_BOUNDARY; NO_UNIFIED_SOTA_OR_ALGORITHM_CLAIM",
+  "artifacts": {
+    "aligned_predictions": {
+      "path": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_same_data_comparison_v1/S1_SCAFFOLD_COLD_DRUG_ALIGNED_PREDICTIONS_V1.csv.gz",
+      "sha256": "2be0ca3b5de73f5007b3d8416107d1f99a30e2a122a7ad52335f3dd988cab59f"
+    },
+    "same_data_metrics_sha256": "3ab4581f24d94d4b3b17f12c13ac831131e1792b07adab82d286ca8a2c3858de",
+    "same_data_bootstrap_sha256": "4985332770b57e75c4722946ec1a63944f30e08b7a3133e00e165dc5cd5876ed",
+    "same_data_summary_sha256": "5d630cf4348bf0d8b3d73c5f0f418edd0c88f1942b0d0fdd1054d90175b81429",
+    "fusion_pooled_predictions_sha256": "6d22afe43f9ac594ac7d87bb1a350fe44600257d36ea93ce6a6e286c5c22c805",
+    "fusion_metrics_sha256": "28d47c4a4f50acdd5a2398aa2d56d6e15af30d64488929f67a9f2c50c65dd91e",
+    "fusion_bootstrap_sha256": "fce976116e5846eada039705e36ea08ea440163c9018b71ccba00fe558d22826",
+    "fusion_summary_sha256": "05534eeb2823af2a6d8c80ee1bfe220811d5565fd899b4fe5016b66b597a0216",
+    "directional_results_sha256": "26dd7dabd03f677ad175fa52cc28da5580af178c625aed11d56fae6dcc32aff6",
+    "directional_bootstrap_sha256": "410673c8796cea880a0a76b937501f4b89836c7ac95377ae0b4d7d2c74916294",
+    "directional_summary_sha256": "8e559c3c59be2710e0992d98036630df15476498559370233bd3821120edd5c6"
+  }
+}

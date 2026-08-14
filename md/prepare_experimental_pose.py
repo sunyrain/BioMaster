@@ -218,7 +218,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--alignment-residue-ids",
         default="",
-        help="Optional residue IDs used for local pocket alignment, e.g. '121,122,179'",
+        help=(
+            "Optional 1-based Boltz protein-sequence residue IDs used for local pocket "
+            "alignment, e.g. '121,122,179'"
+        ),
     )
     parser.add_argument(
         "--histidine-override",
@@ -248,7 +251,7 @@ def main() -> None:
         fit_pairs = [
             pair
             for pair in pairs
-            if int(exp_residues[pair[0]].id[1]) in requested_alignment_ids
+            if int(boltz_residues[pair[1]].id) in requested_alignment_ids
         ]
         if len(fit_pairs) < 3:
             raise ValueError(

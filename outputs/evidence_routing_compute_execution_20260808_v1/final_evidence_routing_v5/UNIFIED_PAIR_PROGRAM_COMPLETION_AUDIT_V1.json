@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-08-09T16:08:30.232118+00:00",
+  "status": "PASS",
+  "checks": 27,
+  "passed": 27,
+  "failed": 0,
+  "scope": "720 FDA drug structures x 384 active non-GPCR targets",
+  "increment": "57 remote-qualified N2/N3 pairs; 61 primary model runs; 30 added Boltz seeds; 3 alternate receptor protocols",
+  "checks_table": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/UNIFIED_PAIR_PROGRAM_COMPLETION_AUDIT_CHECKS_V1.csv"
+}

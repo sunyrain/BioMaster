@@ -1,0 +1,80 @@
+{
+  "package_name": "UNIFIED_EVIDENCE_LAYER_ROUTING_720_X_384_V5",
+  "created_utc": "2026-08-09T16:08:24.432676+00:00",
+  "status": "PASS",
+  "universe": {
+    "pairs": 276480,
+    "ligands": 720,
+    "targets": 384,
+    "mainline_targets": 338,
+    "recovered_targets": 46
+  },
+  "increment_execution": {
+    "frozen_pairs": 57,
+    "targets": 27,
+    "primary_model_runs_planned": 61,
+    "primary_model_runs_completed": 61,
+    "gnina_primary_pairs": 6,
+    "gnina_primary_supported": 2,
+    "boltz_primary_pairs": 55,
+    "boltz_primary_supported": 15,
+    "boltz_added_seed_runs": 30,
+    "boltz_3seed_score_supported": 15,
+    "boltz_multiseed_pose_stable": 15,
+    "gnina_alternate_protocols_run": 3,
+    "gnina_alternate_protocols_qualified": 3,
+    "gnina_state_stable_pairs": 0,
+    "gnina_primary_not_reproduced_pairs": 2,
+    "final_increment_layers": {
+      "L4_HOLD_NOT_REPRODUCED_OR_UNQUALIFIED": 42,
+      "L2_BOLTZ_REPRODUCED": 15
+    }
+  },
+  "pair_compute_coverage_v5": {
+    "conplex_pairs": 276480,
+    "drugclip_pairs": 275040,
+    "gnina_primary_pairs": 7544,
+    "boltz_primary_pairs": 14525,
+    "any_physical_pairs": 14560
+  },
+  "recovered_46_qualified_pair_compute_gap": 0,
+  "pair_evidence_layer_counts_v5": {
+    "L5_TARGET_GATE_HOLD": 144913,
+    "L5_DTA_ONLY_NOT_PHYSICALLY_TESTED": 115948,
+    "L4_COMPUTED_NO_PROMOTABLE_PHYSICAL_SUPPORT": 13729,
+    "C0_KNOWN_RELATIONSHIP_CONTROL": 807,
+    "L2_BOLTZ_REPRODUCED": 425,
+    "L4_HOLD_NOT_REPRODUCED_OR_UNQUALIFIED": 388,
+    "L2_GNINA_RECEPTOR_STATE_STABLE": 103,
+    "L3_STRUCTURE_OR_STATE_REVIEW": 68,
+    "L3_SINGLE_STATE_GNINA_ONLY": 52,
+    "L4_PREDICTED_POCKET_DIAGNOSTIC_OR_UNSUPPORTED": 25,
+    "L1_MULTI_METHOD_STATE_STABLE": 15,
+    "L2_BOLTZ_REPRODUCED_GNINA_PRIMARY": 5,
+    "L3_PREDICTED_POCKET_COMPUTATIONAL_TRIAGE": 2
+  },
+  "boundaries": [
+    "All 57 rerank-increment pairs completed every remote-qualified primary model required by the frozen route.",
+    "Boltz three-seed stability is correlated model evidence, not independent validation or measured affinity.",
+    "Both GNINA primary supports failed receptor-state reproduction and were downgraded.",
+    "No MD is automatically authorized; L2 Boltz-only pairs require pair-level structural and context audit first.",
+    "GPCR and all prior hard-gate exclusions remain outside this computation universe.",
+    "No cross-target total score or binder probability is produced."
+  ],
+  "outputs": {
+    "all_pairs": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V5.csv.gz",
+    "targets": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/TARGET_EVIDENCE_LAYER_ROUTING_384_V5.csv",
+    "increment_results": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/INCREMENTAL_REMOTE_N2_N3_PAIR_RESULTS_57_V1.csv",
+    "priority_review": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/PAIR_EVIDENCE_LAYER_PRIORITY_REVIEW_V5.csv.gz"
+  },
+  "source_hashes": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V4.csv.gz": "19e6ec410c73cf7612e78ed239866ffb576772c9b44f88edef11a0faadf8b0a9",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/TARGET_EVIDENCE_LAYER_ROUTING_384_V4.csv": "edb70bfb537943c8d3283c3e72c5bc92dae3f14389e9221a3558aa8b13943e79",
+    "outputs/unified_pair_compute_increment_384_v1/UNIFIED_RERANK_REMOTE_N2_N3_INCREMENTAL_PAIR_QUEUE_V1.csv": "625faf39b6657c9f306769c5ab7443b7abed27d7637e3739cba0e02a5074b80f",
+    "outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_evaluation/GNINA_REMOTE_INCREMENT_PAIR_EVIDENCE_V1.csv": "c9bc64f507b28bd882a9e41587ac24648b5098253033f1b65d7c17a33934cec6",
+    "outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_evaluation/BOLTZ2_CONDITIONAL_DISCOVERY_EVIDENCE_V1.csv.gz": "35eabe8d67ab63ef2ef91a2550fce6b175ef17c8d6e9c7cc08ab6249b5a31a30",
+    "outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_multiseed/stability_evaluation/UNIFIED_REMOTE_INCREMENT_BOLTZ_MULTI_SEED_STABILITY_V1.csv.gz": "5f385ba8dfbb5671ffa0d7f7d1a45486642a9d74d395d90634414b827877920b",
+    "outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/evaluation/UNIFIED_INCREMENT_GNINA_RECEPTOR_ENSEMBLE_PAIR_DECISIONS_V1.csv.gz": "142f7a1a99f3dd97cbbae9ebb0c6d2e6c0701e505019f54348a3250637065015",
+    "outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/evaluation/UNIFIED_INCREMENT_GNINA_RECEPTOR_ENSEMBLE_ALTERNATE_PROTOCOL_QUALIFICATION_V1.csv": "7d1fe80b3aede3657e95e56ee498ef2669e990fcc2de17b31a352934639c91a4"
+  }
+}

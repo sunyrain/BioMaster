@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-08-09T16:01:26.238258+00:00",
+  "status": "PASS",
+  "candidate_pairs": 2,
+  "candidate_pairs_with_alternate_run": 2,
+  "alternate_protocols_run": 3,
+  "alternate_protocols_qualified": 3,
+  "pair_decisions": {
+    "DOWNGRADE_PRIMARY_NOT_REPRODUCED": 2
+  },
+  "boundaries": [
+    "Each alternate receptor protocol is qualified on its own frozen control distribution.",
+    "Primary and alternate receptor scores are never compared as raw cross-protocol values.",
+    "Receptor-state agreement estimates structural robustness; it is not a binder probability."
+  ],
+  "outputs": {
+    "integrity": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/evaluation/UNIFIED_INCREMENT_GNINA_RECEPTOR_ENSEMBLE_RUN_INTEGRITY_V1.csv",
+    "protocol_qualification": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/evaluation/UNIFIED_INCREMENT_GNINA_RECEPTOR_ENSEMBLE_ALTERNATE_PROTOCOL_QUALIFICATION_V1.csv",
+    "state_evidence": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/evaluation/UNIFIED_INCREMENT_GNINA_RECEPTOR_ENSEMBLE_STATE_EVIDENCE_LONG_V1.csv.gz",
+    "pair_decisions": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/evaluation/UNIFIED_INCREMENT_GNINA_RECEPTOR_ENSEMBLE_PAIR_DECISIONS_V1.csv.gz"
+  }
+}

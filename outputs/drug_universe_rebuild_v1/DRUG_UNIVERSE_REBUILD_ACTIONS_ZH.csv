@@ -1,0 +1,8 @@
+顺序,模块,必须补充,当前问题
+1,FDA批准身份,application/NDA/BLA、批准日期、活性成分、官方标签来源,915行没有FDA主键或官方来源
+2,名称与ChEMBL映射,逐条确认generic ingredient与ChEMBL/parent ID,存在名称-ID冲突、复方被映成单一成分和ChEMBL37缺失ID
+3,实体层级,product→ingredient→parent→administered species→active species,旧active_moiety仅做最大片段和去电荷
+4,结构标准,立体化学、同位素、前药/代谢物、盐型和多组分结构,不能用一个SMILES同时代表产品和活性物
+5,范围排除,气体、诊断显像、聚合物/树脂、非治疗性和非直接target-engagement分子,旧915仍含明显范围外记录
+6,唯一计算实体,冻结compound_key和唯一模型结构，同时保留产品到实体映射,915记录仅有876结构；旧750仅有723结构
+7,pair空间,338×最终唯一实体，并单独标记exact-known和控制,药物实体未冻结，不能生成正式pair

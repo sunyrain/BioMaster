@@ -1,0 +1,20 @@
+{
+  "package_name": "UNIFIED_RERANK_INCREMENT_COMPUTE_PREPARATION_V1",
+  "created_utc": "2026-08-09T15:27:05.548601+00:00",
+  "status": "PASS",
+  "frozen_pairs": 57,
+  "gnina": {
+    "pairs": 6,
+    "targets": 4,
+    "ready_targets": 4,
+    "blocked_targets": 0,
+    "jobs": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_inputs/GNINA_UNIFIED_REMOTE_INCREMENT_JOBS_V1.csv"
+  },
+  "boltz": {
+    "pairs": 55,
+    "targets": 26,
+    "n2": 19,
+    "n3": 36,
+    "manifest": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_inputs/BOLTZ2_UNIFIED_REMOTE_INCREMENT_INPUT_MANIFEST_V1.csv"
+  }
+}

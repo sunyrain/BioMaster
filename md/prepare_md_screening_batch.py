@@ -22,6 +22,33 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MDP_FILES = ("em.mdp", "nvt.mdp.template", "npt.mdp", "production_5ns.mdp")
 
 
+def bounded_environment() -> dict[str, str]:
+    """Prevent nested Amber/RDKit BLAS jobs from oversubscribing the host."""
+    environment = os.environ.copy()
+    threads = environment.get("BIOMASTER_MD_PREP_THREADS", "2")
+    environment.update(
+        {
+            "OMP_NUM_THREADS": threads,
+            "MKL_NUM_THREADS": threads,
+            "OPENBLAS_NUM_THREADS": threads,
+            "NUMEXPR_MAX_THREADS": threads,
+        }
+    )
+    return environment
+
+
+def environment_executable(name: str) -> str:
+    candidate = Path(sys.executable).resolve().parent / name
+    if candidate.is_file():
+        return str(candidate)
+    resolved = shutil.which(name)
+    if resolved:
+        return resolved
+    raise FileNotFoundError(
+        f"Required executable is absent from the active environment: {name}"
+    )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", required=True, type=Path)
@@ -31,6 +58,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-system-atoms", type=int, default=200_000)
     parser.add_argument("--build-timeout-minutes", type=int, default=30)
     parser.add_argument("--keep-large-intermediates", action="store_true")
+    parser.add_argument(
+        "--rank", type=int, action="append", default=[],
+        help="Optionally prepare only one or more md_screen_rank values.",
+    )
     return parser.parse_args()
 
 
@@ -42,7 +73,7 @@ def run(command: list[str], log: Path, cwd: Path | None = None) -> None:
             stdout=handle,
             stderr=subprocess.STDOUT,
             check=False,
-            env=os.environ.copy(),
+            env=bounded_environment(),
         )
     if completed.returncode:
         raise RuntimeError(
@@ -55,11 +86,11 @@ def run_reduce(input_pdb: Path, output_pdb: Path, stderr_log: Path) -> None:
         "w", encoding="utf-8"
     ) as errors:
         completed = subprocess.run(
-            ["reduce", "-BUILD", str(input_pdb)],
+            [environment_executable("reduce"), "-BUILD", str(input_pdb)],
             stdout=output,
             stderr=errors,
             check=False,
-            env=os.environ.copy(),
+            env=bounded_environment(),
         )
     output_text = output_pdb.read_text(encoding="utf-8", errors="replace")
     if "ATOM" not in output_text or not output_text.rstrip().endswith("END"):
@@ -87,7 +118,15 @@ def prepare_one(
     item.mkdir(parents=True, exist_ok=True)
     if status_path.is_file():
         previous = json.loads(status_path.read_text(encoding="utf-8"))
-        if previous.get("status") == "READY" and (package / "complex.top").is_file():
+        package_ready = (package / "complex.top").is_file()
+        amber_ready = (system / "complex.prmtop").is_file() and (
+            system / "complex.inpcrd"
+        ).is_file()
+        if (
+            previous.get("status") == "READY"
+            and package_ready
+            and (not keep_large_intermediates or amber_ready)
+        ):
             return previous
 
     status: dict[str, object] = {
@@ -108,11 +147,13 @@ def prepare_one(
                 sys.executable,
                 str(PROJECT_ROOT / "md" / "prepare_experimental_pose.py"),
                 "--experimental-pdb", str(row["pdb_path"]),
-                "--experimental-chain", "A",
+                "--experimental-chain", str(row.get("experimental_chain", "A")),
                 "--boltz-cif", str(row["boltz_cif_path_refined"]),
                 "--ligand-smiles", str(row["active_moiety_smiles"]),
                 "--pair-id", pair_id,
-                "--alignment-residue-ids", str(row["top_pocket_residue_ids"]),
+                "--alignment-residue-ids", str(
+                    row.get("boltz_pocket_residue_ids", row.get("top_pocket_residue_ids", ""))
+                ),
                 "--output-dir", str(prep),
             ],
             item / "pose_preparation.log",
@@ -138,8 +179,10 @@ def prepare_one(
         )
         run(
             [
-                "pdb4amber", "-i", str(prep / "receptor_reduce_h.pdb"),
+                environment_executable("pdb4amber"),
+                "-i", str(prep / "receptor_reduce_h.pdb"),
                 "-o", str(prep / "receptor_amber.pdb"),
+                "--nohyd",
                 "-l", str(prep / "pdb4amber.log"),
             ],
             item / "pdb4amber.stdout.log",
@@ -235,7 +278,13 @@ def write_summary(results: list[dict[str, object]], output_root: Path) -> None:
 
 def main() -> None:
     args = parse_args()
+    args.manifest = args.manifest.resolve()
+    args.output_root = args.output_root.resolve()
     manifest = pd.read_csv(args.manifest)
+    if args.rank:
+        manifest = manifest[manifest["md_screen_rank"].isin(args.rank)].copy()
+        if manifest.empty:
+            raise ValueError(f"No requested md_screen_rank was found: {args.rank}")
     args.output_root.mkdir(parents=True, exist_ok=True)
     rows = manifest.to_dict(orient="records")
     results: list[dict[str, object]] = []

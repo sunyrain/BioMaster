@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-08-09T14:36:02Z",
+  "status": "PASS",
+  "targets": 3,
+  "candidate_pairs": 27,
+  "pose_rows": 135,
+  "formal_computational_triage_pass_pairs": 2,
+  "formal_pass_targets": 1,
+  "model_disagreement_orthogonal_rescue_pairs": 5,
+  "triage_status_counts": {
+    "MODEL_DISAGREEMENT_NO_ORTHOGONAL_SUPPORT": 15,
+    "NO_GNINA_CONTROL_CALIBRATED_SUPPORT": 5,
+    "ORTHOGONAL_RESCUE_SIGNAL_MODEL_DISAGREEMENT_REVIEW": 5,
+    "COMPUTATIONAL_TRIAGE_PASS_REQUIRES_EXPERIMENT": 2
+  },
+  "formal_pass_candidates": [
+    {
+      "target_chembl_id": "CHEMBL3714029",
+      "gene_symbol": "LOXL2",
+      "drug_names": "tecovirimat",
+      "ligand_inchikey": "CSKDFZIMJXRJGH-VWLPUNTISA-N"
+    },
+    {
+      "target_chembl_id": "CHEMBL3714029",
+      "gene_symbol": "LOXL2",
+      "drug_names": "tiotropium",
+      "ligand_inchikey": "LERNTVKEWCAPOY-DZZGSBJMSA-N"
+    }
+  ],
+  "interpretation": "A computational triage pass requires a strongly control-qualified predicted pocket, two-model DTA concordance, and candidate CNN-affinity plus Vina scores at or above the target positive-control medians and the 75th percentile of all controls. It is not binding evidence.",
+  "outputs": {
+    "poses": "/root/autodl-tmp/BioMaster/outputs/recovered_gnina_candidate_docking_v1/RECOVERED_GNINA_CANDIDATE_POSES_V1.csv.gz",
+    "candidate_evidence": "/root/autodl-tmp/BioMaster/outputs/recovered_gnina_candidate_docking_v1/RECOVERED_GNINA_CANDIDATE_EVIDENCE_V1.csv"
+  }
+}

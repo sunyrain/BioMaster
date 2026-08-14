@@ -1,0 +1,35 @@
+{
+  "legacy_rows": 915,
+  "legacy_unique_chembl_ids": 895,
+  "legacy_unique_model_structures": 876,
+  "chembl37_ids_present": 910,
+  "chembl37_ids_missing_rows": 5,
+  "identity_status_counts": {
+    "EXACT_NAME_SUPPORTED": 631,
+    "CORE_NAME_SUPPORTED": 169,
+    "NO_CHEMBL_NAME_EVIDENCE": 57,
+    "NAME_ID_MISMATCH_REVIEW": 48,
+    "COMBINATION_PRODUCT_SINGLE_STRUCTURE": 5,
+    "CHEMBL37_ID_MISSING": 5
+  },
+  "chembl_id_conflicting_name_rows": 26,
+  "chembl_id_conflicting_name_groups": 11,
+  "duplicate_model_structure_rows": 71,
+  "duplicate_model_structure_groups": 32,
+  "combination_product_rows": 5,
+  "likely_diagnostic_gas_or_nontherapeutic_rows": 29,
+  "chembl_prodrug_rows": 96,
+  "active_chembl_id_differs_rows": 362,
+  "model_differs_from_active_chembl_structure_rows": 119,
+  "legacy_project_rows": 750,
+  "legacy_project_unique_model_structures": 723,
+  "rebuild_status_counts": {
+    "PROVISIONAL_ENTITY_PASS": 450,
+    "HOLD_ACTIVE_SPECIES_REVIEW": 310,
+    "HOLD_IDENTITY_REVIEW": 116,
+    "EXCLUDE_NONTHERAPEUTIC_SCOPE": 29,
+    "HOLD_DUPLICATE_STRUCTURE_COLLAPSE": 10
+  },
+  "primary_fda_application_or_label_identifier_available": 0,
+  "conclusion": "The legacy 915/750/723 spaces are audit inputs, not a reusable frozen FDA active-entity universe."
+}

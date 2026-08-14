@@ -1,0 +1,76 @@
+{
+  "version": "BIOMASTER_EQIR_V3_CANDIDATE_PREREGISTRATION_20260813",
+  "status": "STAGE0_STRUCTURE_UTILITY_SCREEN_FROZEN; NOT_AN_ALGORITHM_CLAIM",
+  "candidate_name": "Evidence-Qualified Incremental Residual (EQIR)",
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded": 24,
+    "strict_experimental_pocket_mainline": 338,
+    "recovered_only_for_no_experimental_pocket": 46,
+    "active_targets": 384,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "development": {
+    "primary_protocol": "S3_STRICT_DOUBLE_COLD",
+    "development_folds": [0, 1, 2],
+    "confirmatory_folds_locked": [3, 4],
+    "seeds_if_stage0_passes": [20260813, 20260814, 20260815, 20260816, 20260817]
+  },
+  "stage0_label_blind_queue": {
+    "manifest": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/V3_LABEL_BLIND_GNINA_MANIFEST_V1.csv.gz",
+    "manifest_sha256": "4abd30ca871f0209a47ac13d8b1043c1a55c27d2e6704b9c25c656844fef755d",
+    "evaluation_ledger": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/V3_LABEL_BLIND_EVALUATION_LEDGER_V1.csv.gz",
+    "evaluation_ledger_sha256": "6f17e386672c612a84f7d22f0d5494ea3dad2e3e4c0e03b897a1306f43dbf7cd",
+    "pairs": 18230,
+    "targets": 290,
+    "selection": "SHA256(namespace|target_chembl_id|parent_molecule_chembl_id), max 64 per target, minimum 16",
+    "selection_reads_labels": false,
+    "target_eligibility": "STRICT_EXPERIMENTAL_POCKET_MAINLINE_338 and redock_status_final == PASS",
+    "target_eligibility_uses_gate_a_or_gate_b": false
+  },
+  "candidate_score_definition": {
+    "base": "cross-fitted universal sequence-chemistry score b(d,t)",
+    "structure_features": [
+      "target-local ECDF rank of primary_cnn_affinity",
+      "target-local ECDF rank of negative primary_pose_vina_affinity",
+      "target-local pose-score spread and pose count"
+    ],
+    "increment": "r(d,t) fitted only against cross-fitted residuals after the base is frozen",
+    "eligibility": "a(t) from label-independent receptor/pocket QC only",
+    "final_logit": "s(d,t) = b(d,t) + a(t) * r(d,t)",
+    "exact_fallback_invariant": "if qualified structure evidence is absent then a(t)=0 and s(d,t)=b(d,t) exactly"
+  },
+  "stage0_test": {
+    "purpose": "test whether label-blind target-local docking ranks contain any incremental signal before training EQIR",
+    "fit": "choose one nonnegative scalar increment weight on each validation role only",
+    "evaluate": "apply once to the matching held-out test role",
+    "stop_if": "pooled S3 development gain is nonpositive or either target-homology or scaffold grouped bootstrap CI includes zero",
+    "not_novel": "the scalar screen is a feasibility test and is not the proposed algorithm"
+  },
+  "prohibited_inputs": [
+    "global GNINA positive/negative control membership",
+    "Gate A/B qualification derived from labels in the evaluation fold",
+    "raw GNINA scores compared across targets",
+    "target ID embeddings",
+    "missing or gate-failed structure encoded as a negative interaction"
+  ],
+  "required_ablations_if_stage0_passes": [
+    "BASE_ONLY",
+    "BASE_PLUS_TARGET_LOCAL_STRUCTURE_WITHOUT_QUALIFICATION",
+    "BASE_PLUS_QUALIFICATION_WITHOUT_RESIDUALIZATION",
+    "BASE_PLUS_RESIDUAL_WITHOUT_EXACT_FALLBACK_CONSTRAINT",
+    "FULL_EQIR",
+    "FULL_EQIR_WITHOUT_DRUG_CENTRIC_RETRIEVAL_LOSS",
+    "FULL_EQIR_WITHOUT_TARGET_CENTRIC_RETRIEVAL_LOSS"
+  ],
+  "promotion_gates": {
+    "five_seed_directional_consistency": "at least 4 of 5 seeds positive",
+    "target_homology_cluster_bootstrap_ci95_low": "> 0",
+    "drug_scaffold_bootstrap_ci95_low": "> 0",
+    "must_exceed_same_data_dtiam": true,
+    "must_exceed_frozen_biomaster_v1": true,
+    "otherwise": "NO_FULL_SOTA_CLAIM"
+  }
+}

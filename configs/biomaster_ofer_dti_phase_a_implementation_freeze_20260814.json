@@ -1,0 +1,88 @@
+{
+  "schema_version": "BIOMASTER_OFER_DTI_PHASE_A_IMPLEMENTATION_FREEZE_V1",
+  "frozen_utc": "2026-08-14T00:35:00Z",
+  "status": "FROZEN_BEFORE_MODEL_TRAINING",
+  "parent_scientific_freeze": {
+    "path": "configs/biomaster_first_event_dti_phase_a_freeze_20260814.json",
+    "sha256": "b11f437ebb20e285e4e3ccafb612dff297ffa86cbb5df900b7ea898b29a4dc13"
+  },
+  "risk_set_summary": {
+    "path": "outputs/old_drug_target_sota_v1/ofer_dti_phase_a_risk_sets_v1/OFER_DTI_PHASE_A_RISK_SETS_SUMMARY_V1.json",
+    "sha256": "910d313789517ff47e5bc47b8b1a73d8b1737ec52d5d74a3f72deee826081d3a"
+  },
+  "representation": {
+    "drug": "Morgan-2048 binary vector",
+    "target": "frozen ProtBERT-1024 vector",
+    "drug_adapter": [2048, 256],
+    "target_adapter": [1024, 256],
+    "adapter_activation": "GELU",
+    "adapter_normalization": "LayerNorm",
+    "pair_features": [
+      "normalized drug embedding",
+      "normalized target embedding",
+      "elementwise product",
+      "absolute difference",
+      "rank-32 projected bilinear product"
+    ],
+    "head_hidden": 128,
+    "time_basis": [
+      "(calendar_year-2000)/25",
+      "squared normalized calendar year",
+      "log1p(pair_age)/4",
+      "squared normalized pair age"
+    ]
+  },
+  "variants": [
+    "TARGET_PRIOR",
+    "STATIC_OBSERVED_ONLY_BCE",
+    "STATIC_FNML_STYLE",
+    "DIRECT_ACTIVE_SURVIVAL_NO_OBSERVATION_HEAD",
+    "TIMESTAMP_SHUFFLED_OFER",
+    "OFER_FULL"
+  ],
+  "losses": {
+    "observation_hazard_weight": 1.0,
+    "active_given_observation_weight": 1.0,
+    "within_drug_listwise_pair_weight": 0.25,
+    "within_target_listwise_pair_weight": 0.1,
+    "inverse_sampling_weights": "untruncated Horvitz-Thompson weights normalized by their sum inside each likelihood term",
+    "static_fnml_excludes_exact_pre_event_survival_rows": true,
+    "static_observed_bce_uses_only_exact_observation_event_rows": true,
+    "direct_active_survival_target": "active observation event in the current year; weak/inactive observation and not-yet-observed states are non-active event states, not biochemical inactive labels"
+  },
+  "training": {
+    "seed": 20260814,
+    "source_events_per_batch": 1024,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 5.0,
+    "maximum_epochs": 40,
+    "early_stopping_patience": 6,
+    "early_stopping_minimum_delta": 0.0001,
+    "historical_internal_validation": "deterministic 10% split by source_event_index; all rows from one source event stay together",
+    "refit": "reinitialize and refit on all historical source events for the selected epoch count",
+    "precision": "bfloat16 autocast on CUDA; float32 parameters and loss accumulation"
+  },
+  "scoring": {
+    "ofer_full": "q_active(d,t) * [1-product_year(1-h_observation(year|d,t))]",
+    "static_fnml": "q_active(d,t) * h_observation(d,t)",
+    "static_bce": "q_active(d,t)",
+    "direct_active_survival": "1-product_year(1-h_active(year|d,t))",
+    "timestamp_shuffled": "same scoring as OFER_FULL using real development years after fitting with a fixed permutation of historical calendar-year inputs"
+  },
+  "metric_definitions": {
+    "drug_macro_auprc": "mean average precision over old-drug query groups containing at least one active event and at least one non-event candidate",
+    "drug_macro_recall_at_20": "mean fraction of active-event targets recovered in the top 20 over the same evaluable old-drug groups",
+    "target_macro_auprc": "mean average precision over target query groups containing at least one active event and at least one non-event candidate",
+    "primary_selection_metric": "equal-weight mean of drug-macro AUPRC and drug-macro Recall@20, averaged across both historical development windows",
+    "uncertainty": "2000 paired bootstrap replicates over Bemis-Murcko scaffold clusters of old-drug queries"
+  },
+  "phase_a_gate_interpretation": {
+    "full_exceeds_control_in_window": "OFER_FULL is greater on either drug-macro AUPRC or Recall@20 without selecting a different metric per bootstrap replicate",
+    "pooled_primary_gain": "difference in the frozen primary selection metric averaged across both windows",
+    "target_noninferiority_margin": -0.005,
+    "pressure_test_2023_2025_opened": false
+  },
+  "claim_boundary": "Passing Phase A would support this frozen joint mechanism for multiseed confirmation; it would not by itself establish full SOTA or literature novelty."
+}

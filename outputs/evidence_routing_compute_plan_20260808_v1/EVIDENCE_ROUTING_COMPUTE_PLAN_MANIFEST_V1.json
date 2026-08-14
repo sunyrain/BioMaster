@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN_COMPUTE_PLAN",
+  "created_utc": "2026-08-08T14:32:28.116082+00:00",
+  "authoritative_outputs": {
+    "outputs/evidence_routing_compute_plan_20260808_v1/COMPUTE_TASK_SUMMARY_V1.csv": "738485763620bdfd848f29bb4685b2a350e1d76345ff982ec21c48b331ddd042",
+    "outputs/evidence_routing_compute_plan_20260808_v1/EVIDENCE_ROUTING_COMPUTE_PLAN_AUDIT_V1.json": "931314319408045ab72fa091b5f9cb0f1c797b9a26e3259f617f376a545599d1",
+    "outputs/evidence_routing_compute_plan_20260808_v1/EVIDENCE_ROUTING_COMPUTE_PLAN_SUMMARY_V1.json": "e1f2606a67a36ded886b8c4250c00cfb34eebe80d73b2a267b845d4a37129e7d",
+    "outputs/evidence_routing_compute_plan_20260808_v1/FDA_OLD_DRUG_NEW_TARGET_EVIDENCE_ROUTING_COMPUTE_PLAN_ZH.html": "96aeaf47b4463c89bf964d0194f5e2acb149365837a0703c9d9ae2dbcf77510d",
+    "outputs/evidence_routing_compute_plan_20260808_v1/FDA_OLD_DRUG_NEW_TARGET_EVIDENCE_ROUTING_COMPUTE_PLAN_ZH.md": "6ec80e31ea5d7ae740783285ed9a8f704f62336c85579364792f5fb1b89d32db",
+    "outputs/evidence_routing_compute_plan_20260808_v1/FDA_OLD_DRUG_NEW_TARGET_EVIDENCE_ROUTING_COMPUTE_PLAN_ZH.pdf": "3606dfc68df4d6e087c3c7b345547a0a50707b6dad04d4654f2ebf3bc78c1c78",
+    "outputs/evidence_routing_compute_plan_20260808_v1/PAIR_PHYSICAL_EVIDENCE_UNION_639_V1.csv.gz": "303d821349bac6652e0bf438d58288b403adafdddd0e149979b467938636df8d",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TARGET_EVIDENCE_ROUTING_338_V1.csv": "cb53066ffa64f3f15be969b3aeb826bef0bd27c12a69d1cfed83ac30d3d0cbbc",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C0_CONTROL_ACQUISITION_54_TARGETS_V1.csv": "e922056256b68a3eeeebca6d151f063dd15911a85acb52a3b893370f66aac626",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C0_GATE_FAILURE_DIAGNOSTIC_100_TARGETS_V1.csv": "d4e8ae3df5a6803e66f7040151de8806c342ea9c63939eae54df8ab959a3c8ba",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C0_QUINIDINE_INPUT_REPAIR_20_PAIRS_V1.csv": "0a963ba476f25ef62e2fcfc09e3893b7be78ebfb154ba6e3329b7e92254c035d",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C0_RECEPTOR_PROTOCOL_REPAIR_22_TARGETS_V1.csv": "44b752fe42d8c9ca8eb21396962367471745d5f85e28e8909f13d9503c3d4ed6",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C1_BOLTZ_MULTI_SEED_549_PAIRS_V1.csv": "5dea941c084de14f405e89d44df3471f3226ec64ae0858bd5515b0bb6afd7002",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C2_GNINA_RECEPTOR_ENSEMBLE_328_PAIRS_V1.csv": "c9aab5c32e5d985e8c7d0dbb122c2bf4b6e1165fc6f2522bc6d65c3399e88b72",
+    "outputs/evidence_routing_compute_plan_20260808_v1/TASK_C3_BOLTZ_AFTER_RECEPTOR_RESCUE_102_PAIRS_V1.csv": "293cffa79f7be0488d9010bd3958b5fcde7bee36a7491049d810b09bec7ba8b5"
+  },
+  "execution_rule": "Repair tasks precede pair reruns. MD is not authorized by this manifest and requires a post-stability shortlist."
+}

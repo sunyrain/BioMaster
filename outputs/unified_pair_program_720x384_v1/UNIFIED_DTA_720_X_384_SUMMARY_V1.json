@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-08-09T15:11:23.683859+00:00",
+  "status": "PASS",
+  "rows": 276480,
+  "ligands": 720,
+  "targets": 384,
+  "target_branches": {
+    "STRICT_EXPERIMENTAL_POCKET_MAINLINE_338": 338,
+    "RECOVERED_NO_EXPERIMENTAL_POCKET_46": 46
+  },
+  "conplex_targets": 384,
+  "drugclip_targets": 382,
+  "known_project_pairs": 791,
+  "known_chembl37_moa_pairs": 429,
+  "known_union_pairs": 807,
+  "target_top10_two_model_pairs": 3362,
+  "drug_centric_top10_two_model_pairs": 3972,
+  "bidirectional_top10_two_model_pairs": 1106,
+  "sequence_only_fragment_top5_pairs": 72,
+  "shortlist_pairs": 6943,
+  "novelty_counts": {
+    "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA": 275673,
+    "K0_KNOWN_PROJECT_RELATIONSHIP": 791,
+    "K1_KNOWN_CHEMBL37_MOA_RELATIONSHIP": 16
+  },
+  "rank_policy": {
+    "conplex_drug_centric": "Rank each drug across all 384 active targets",
+    "drugclip_drug_centric": "Rank each drug across 382 structurally eligible targets; cross-source rank is exploratory",
+    "source_stratified": "Experimental-holo 338 and predicted-pocket 44 ranks are retained separately",
+    "no_cross_target_probability": true
+  },
+  "novelty_boundary": "N1 means absent only from the frozen project relationship controls and ChEMBL 37 small-molecule MoA mapping; it is not a claim of absence from all databases or literature.",
+  "outputs": {
+    "target_master": "/root/autodl-tmp/BioMaster/outputs/unified_pair_program_720x384_v1/UNIFIED_ACTIVE_TARGET_MASTER_384_V1.csv",
+    "known_moa_pairs": "/root/autodl-tmp/BioMaster/outputs/unified_pair_program_720x384_v1/UNIFIED_CHEMBL37_KNOWN_MOA_PAIRS_720_X_384_V1.csv",
+    "matrix": "/root/autodl-tmp/BioMaster/outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz",
+    "shortlist": "/root/autodl-tmp/BioMaster/outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_PAIR_SHORTLIST_720_X_384_V1.csv.gz"
+  },
+  "sha256": {
+    "matrix": "b0bf5d5b180384bc60c1876f0c65f9655609124d4157fd653fdbcca809e2dc58",
+    "shortlist": "89c050a78fc498475aad7bdd6eff968974381f972768462fe9a21d6e11413525"
+  }
+}

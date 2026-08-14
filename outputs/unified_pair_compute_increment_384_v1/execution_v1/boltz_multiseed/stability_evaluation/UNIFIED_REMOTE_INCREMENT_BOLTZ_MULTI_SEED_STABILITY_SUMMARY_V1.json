@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-08-09T15:40:28.497691+00:00",
+  "status": "PASS",
+  "pairs": 15,
+  "completed_seed1": 15,
+  "completed_seed2": 15,
+  "score_stability_classes": {
+    "S1_SCORE_SUPPORT_3_OF_3": 15
+  },
+  "final_decisions": {
+    "PASS_SCORE_AND_CONDITIONAL_POSE_STABILITY": 15
+  },
+  "pose_comparisons_completed": 30,
+  "pairs_with_two_pose_comparisons": 15,
+  "output": "outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_multiseed/stability_evaluation/UNIFIED_REMOTE_INCREMENT_BOLTZ_MULTI_SEED_STABILITY_V1.csv.gz",
+  "lane_decisions": "outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_multiseed/stability_evaluation/UNIFIED_REMOTE_INCREMENT_BOLTZ_MULTI_SEED_LANE_DECISIONS_V1.csv"
+}

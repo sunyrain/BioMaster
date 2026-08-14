@@ -1,0 +1,56 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_NEAREST_METHOD_IMPLEMENTATION_AMENDMENT_V1",
+  "created_utc": "2026-08-13T19:59:00Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN_OR_STAGE0_DECISION",
+  "amends": {
+    "path": "configs/biomaster_eqir_v3_nearest_method_comparator_freeze_20260814.json",
+    "sha256": "2fc61f2c7b4d942b7b284eb268976c3e04eaf618a3496fa2da44c71765342272"
+  },
+  "trigger": {
+    "type": "OFFICIAL_DRUGCMF_CODE_SEMANTICS_AUDIT",
+    "repository": "third_party/sota_dti_2026/DrugCMF",
+    "commit": "85100c59b3da6f4e5d3da624dea842f81321c74b",
+    "formal_structure_evaluation_files_present": 0,
+    "stage0_decision_available": false,
+    "confirmatory_s3_folds_3_4_read_for_this_amendment": false
+  },
+  "verified_implementation_semantics": {
+    "confidence_head": "Linear(2d,d/2) -> ReLU -> Linear(d/2,1), with no sigmoid, clamp or softmax before feature multiplication",
+    "confidence_supervision": "MSE between the raw confidence scalar and the modality classifier probability assigned to the true class",
+    "gradient_clipping": "the released code calls optimizer.step() before clip_grad_norm_, so clipping does not modify the update that has already occurred",
+    "threshold_comparison": "Python-list >= numpy.float64 is handled by NumPy reflected comparison and is not an execution error",
+    "threshold_metric_labels": "with sklearn confusion_matrix row 0=negative and row 1=positive, the released variables named sensitivity and specificity compute true-negative rate and true-positive rate respectively, so the names are reversed",
+    "auroc_auprc_impact": "the threshold-label issue does not change AUROC or AUPRC; the confidence parameterization and gradient order can change fitted predictions"
+  },
+  "supersedes_parent_comparator_fields": {
+    "TCP_INSPIRED_ELIGIBLE_SUBSET_CONFIDENCE_FUSION.mechanism": "the primary code-faithful control uses an unbounded raw linear confidence scalar exactly as released; a separately named bounded-confidence sensitivity control applies sigmoid and is not code-faithful",
+    "TCP_INSPIRED_MASKED_ALL_TARGET_CONFIDENCE_FUSION.mechanism": "both raw-linear and sigmoid-bounded confidence parameterizations are required; missing structure remains explicitly masked in both adapted controls"
+  },
+  "required_variants_after_amendment": [
+    "TCP_RELEASE_CODE_FAITHFUL_RAW_CONFIDENCE_ELIGIBLE_SUBSET",
+    "TCP_STABILIZED_SIGMOID_CONFIDENCE_ELIGIBLE_SUBSET",
+    "TCP_ADAPTED_RAW_CONFIDENCE_MASKED_ALL_TARGET",
+    "TCP_ADAPTED_SIGMOID_CONFIDENCE_MASKED_ALL_TARGET"
+  ],
+  "training_fairness": {
+    "code_faithful_gradient_order": "report the released optimizer-step-then-clip behavior only as a diagnostic run, not as the primary capacity-matched comparator",
+    "primary_comparator_gradient_order": "clip_grad_norm_ before optimizer.step for all EQIR and TCP variants",
+    "reason": "otherwise an ineffective safety operation would confound architecture comparison",
+    "shared_protocol": "all parent same folds, seeds, selection objective, selection constraints, parameter-count matching and held-test isolation remain unchanged"
+  },
+  "reporting_policy": {
+    "official_reproduction_name_forbidden": true,
+    "raw_and_bounded_confidence_results_both_required": true,
+    "auroc_and_auprc_use_raw_probabilities": true,
+    "threshold_metrics_use_standard_sklearn_positive_class_definitions": true,
+    "released_metric_name_reversal_must_be_disclosed_if_threshold_metrics_are_compared": true
+  },
+  "unchanged_invariants": [
+    "no comparator is implemented or trained unless every Stage0 gate passes",
+    "all 480 hard-gate exclusions remain excluded",
+    "all 24 later pocket-quality exclusions remain excluded",
+    "the 46 recovered targets have a(t)=0 because no experimental pocket exists",
+    "confirmatory S3 folds 3-4 remain locked",
+    "EQIR still must beat every required nearest-method variant and every parent ablation"
+  ]
+}

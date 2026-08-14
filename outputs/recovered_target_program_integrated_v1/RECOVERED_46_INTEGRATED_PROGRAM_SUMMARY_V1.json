@@ -1,0 +1,109 @@
+{
+  "scope": {
+    "official_universe": 888,
+    "hard_gate_excluded": 480,
+    "hard_gate_reason_counts": {
+      "EXCLUDE_GPCR": 143,
+      "EXCLUDE_NO_CHEMBL_SMALL_MOLECULE_MOA": 295,
+      "EXCLUDE_UNSUPPORTED_TARGET_CLASS": 42
+    },
+    "after_hard_gates": 408,
+    "strict_experimental_pocket_mainline": 338,
+    "recovered_only_for_no_experimental_pocket": 46,
+    "later_pocket_quality_excluded": 24,
+    "later_pocket_quality_reason_counts": {
+      "EXCLUDE_NO_PREFERRED_EXPERIMENTAL_POCKET": 21,
+      "EXCLUDE_NO_PREFERRED_DRUGLIKE_HOLO_POCKET": 3
+    },
+    "active_union": 384,
+    "mainline_recovery_overlap": 0,
+    "invariants": {
+      "universe_partition": "480 + 338 + 46 + 24 = 888",
+      "active_union": "338 + 46 = 384",
+      "recovery_definition": "first_exclusion_reason == EXCLUDE_NO_ELIGIBLE_EXPERIMENTAL_POCKET",
+      "raw_151_no_known_pocket_cache_is_not_formal_scope": true
+    }
+  },
+  "recovered_target_count": 46,
+  "mechanistic_branch_count": 12,
+  "legacy_assay_lane_counts": {
+    "ENZYME_BIOCHEMICAL": 24,
+    "ION_CHANNEL_FUNCTIONAL": 8,
+    "KINASE_BIOCHEMICAL": 6,
+    "TRANSPORTER_MEMBRANE_FUNCTIONAL": 6,
+    "NUCLEAR_EPIGENETIC_DOMAIN": 2
+  },
+  "mechanistic_branch_counts": {
+    "B01_PROTEIN_KINASE": 6,
+    "B02_LIPID_METABOLIC_KINASE": 3,
+    "B03_COFACTOR_RED_OX_ENZYME": 11,
+    "B04_MEMBRANE_NADPH_OXIDASE": 2,
+    "B05_NONREDOX_METABOLIC_ENZYME": 7,
+    "B06_MULTISUBUNIT_RNA_POLYMERASE": 2,
+    "B07_UBIQUITIN_ADAPTOR": 1,
+    "B08_ION_CHANNEL_PORE": 8,
+    "B09_CHANNEL_AUXILIARY_SUBUNIT": 1,
+    "B10_SOLUTE_TRANSPORTER": 3,
+    "B11_EPIGENETIC_ENZYME": 1,
+    "B12_TRANSCRIPTION_FACTOR_PPI": 1
+  },
+  "pocket_evidence_counts": {
+    "P1_P2RANK_FPOCKET_SAME_SITE": 37,
+    "P2_FPOCKET_GEOMETRIC_RESCUE": 7,
+    "P3_LOW_CONFIDENCE_FRAGMENT_HYPOTHESIS": 2
+  },
+  "gnina_control_status_counts": {
+    "NOT_EVALUABLE_MINIMUM_12X12_NOT_MET": 23,
+    "FAILED_CONTROL_SEPARATION": 11,
+    "MARGINAL_NOT_QUALIFIED": 9,
+    "QUALIFIED_STRONG_RETROSPECTIVE_CONTROL_SEPARATION": 3
+  },
+  "program_status_counts": {
+    "S5_DUAL_PREDICTED_POCKET_WITHOUT_12X12_CONTROLS": 15,
+    "S4_POCKET_FAILED_RETROSPECTIVE_CONTROLS": 11,
+    "S3_MARGINAL_POCKET_CONTROL_SEPARATION": 9,
+    "S5_GEOMETRIC_RESCUE_WITHOUT_12X12_CONTROLS": 6,
+    "S0_LOW_CONFIDENCE_STRUCTURE_FIRST": 2,
+    "S2_POCKET_STRONG_DTA_MODEL_DISAGREEMENT": 1,
+    "S1_TWO_COMPUTATIONAL_CANDIDATES_REQUIRE_EXPERIMENT": 1,
+    "S2_POCKET_STRONG_NO_SUPPORTED_CANDIDATE": 1
+  },
+  "dta": {
+    "conplex_targets_complete": 46,
+    "drugclip_exact_sequence_targets_complete": 44,
+    "structure_first_targets_excluded_from_formal_3d": 2
+  },
+  "candidate_evidence": {
+    "candidate_pairs_docked": 27,
+    "formal_computational_triage_pairs_requiring_experiment": 2,
+    "diagnostic_rescue_pairs": 5,
+    "formal_binding_evidence_pairs": 0
+  },
+  "boltz_md": {
+    "boltz_pairs_completed": 2,
+    "md_authorized_pairs": 0,
+    "decision": "NO_MD_LOW_COMPLEX_CONFIDENCE_AND_MISSING_CU_LTQ_CONTEXT"
+  },
+  "wetlab": {
+    "execution_rows": 46,
+    "stage_counts": {
+      "W5_CONTROL_ACQUISITION": 21,
+      "W4_STRUCTURE_AND_POCKET_REMODEL": 11,
+      "W3_MARGIN_REPLICATION": 9,
+      "W6_STRUCTURE_ACQUISITION_FIRST": 2,
+      "W2_MODEL_DIAGNOSTIC_PANEL": 1,
+      "W1_CANDIDATE_CONFIRMATION": 1,
+      "W2_PREDICTED_SITE_VALIDATION": 1
+    },
+    "physical_execution_status": "EXTERNAL_LAB_EXECUTION_REQUIRED"
+  },
+  "scientific_boundary": "Predicted pockets and candidate scores are triage evidence, not measured binding or activity.",
+  "outputs": {
+    "classification": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/RECOVERED_46_MECHANISTIC_CLASSIFICATION_V1.csv",
+    "target_outcomes": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/RECOVERED_46_INTEGRATED_TARGET_OUTCOMES_V1.csv",
+    "wetlab_execution_panel": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/RECOVERED_46_WETLAB_EXECUTION_PANEL_V1.csv",
+    "branch_summary": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/RECOVERED_46_CLASS_BRANCH_SUMMARY_V1.csv",
+    "active_384": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/ACTIVE_TARGET_BRANCHES_384_V1.csv",
+    "full_888_audit": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/FULL_TARGET_SCOPE_AUDIT_888_V1.csv"
+  }
+}

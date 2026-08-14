@@ -1,0 +1,226 @@
+{
+  "schema_version": "BIOMASTER_DRUG_CONDITIONED_MUTATION_DELTA_PHASE_A_FREEZE_V1",
+  "created_utc": "2026-08-13T21:50:48Z",
+  "status": "FROZEN_BEFORE_MODEL_IMPLEMENTATION_OR_LABEL_JOIN",
+  "objective": "Test whether label-blind local WT-to-mutant ESM2 differences contain drug-conditioned mutation-response information beyond the frozen V10 mutation-token model.",
+  "scope": {
+    "phase": "A_SINGLE_SEED_MECHANISM_SCREEN",
+    "measurements": 19639,
+    "drugs": 76,
+    "genes": 35,
+    "variant_constructs": 299,
+    "esm2_reconstructable_constructs": 240,
+    "protocols": [
+      "DRUG_COLD",
+      "VARIANT_CONSTRUCT_COLD",
+      "GENE_COLD"
+    ],
+    "folds_per_protocol": 5,
+    "adapter_seed": 20260814,
+    "confirmatory_multiseed_authorized_at_freeze": false,
+    "independent_external_validation": false
+  },
+  "immutable_inputs": {
+    "v10_panel": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_aware_multitask_v10/MUTATION_AWARE_PANEL_19639_V10.csv.gz",
+      "sha256": "99e0515b0b6fd21d05588794f52dbcd6ad715556aa1b7f579b7fec6b87ff9f30"
+    },
+    "v10_summary": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_aware_multitask_v10/MUTATION_AWARE_MULTITASK_SUMMARY_V10.json",
+      "sha256": "382b0da9ba0502c1549e7fa06820ea0ac20b596c31b1542cc6288a22e592fe59"
+    },
+    "v10_training_implementation": {
+      "path": "scripts/train_v8_mutation_aware_multitask.py",
+      "sha256": "b7283a527fb87e915f5226895588d2368545c5a3e7cd09abf628b40346a40680"
+    },
+    "v10_prior": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/unseeded_target_lanes/OLD_DRUG_TARGET_BRANCH_ROUTING_276480_V10.csv.gz",
+      "sha256": "abf6b201997ca0d0bf734a2f7d338ed0094c5bf124694c132808eec98fda66d4",
+      "score_column": "branch_primary_score_v10",
+      "rank_column": "branch_primary_rank_within_drug_v10"
+    },
+    "pair_routing": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v7/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V7.csv.gz",
+      "sha256": "af957eff71ec8ad7e133986b54fa037c63be4711dac5674fe57404e1d5ec9430"
+    },
+    "target_routing": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v7/TARGET_EVIDENCE_LAYER_ROUTING_384_V7.csv",
+      "sha256": "1cd2c242da3fbfc12500a78611459f0ba47556ab15c18dd11504cd173fc8fcd2"
+    },
+    "target_sequences": {
+      "path": "outputs/target_universe_ch37_v2/TARGET_SET_SEQUENCE_DTA_ALL_V2.csv",
+      "sha256": "828c4fd97f6542d91c42fb1e97f1b30aac9e3453cfe0bfb58fabf87727052059"
+    },
+    "morgan_features": {
+      "path": "outputs/strict_dta_720x338_v1/conplex_cache/Morgan_features.h5",
+      "sha256": "83af8e322443c142ca92afa09789066556097044c4cad00c59afb43a6fe9b722"
+    },
+    "protbert_main": {
+      "path": "outputs/strict_dta_720x338_v1/conplex_cache/ProtBert_features.h5",
+      "sha256": "a7fad0ed1d139165385160230a213a6ea16cbd5e259dcf061565c532c2e5c391"
+    },
+    "protbert_recovered": {
+      "path": "outputs/recovered_dta_720x46_v1/conplex_cache/ProtBert_features.h5",
+      "sha256": "8cf3c80563c607ad246bd519b0518168f8466abb6bec5c7b0645228f89f60f11"
+    },
+    "esm2_feature_summary": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_local_esm2_delta_v11/MUTATION_LOCAL_ESM2_DELTA_FEATURE_SUMMARY_V1.json",
+      "sha256": "68a33ba0146c9ea4c43f631cbce3b929a146451bcadba39e630026ec439fc6d0"
+    },
+    "construct_manifest": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_local_esm2_delta_v11/MUTATION_LOCAL_ESM2_CONSTRUCT_MANIFEST_299_V1.csv",
+      "sha256": "50e7d81e2c0249f8502f67355c399a1475fde0570a83d20477328c353bbc8b0d"
+    },
+    "wt_center_mean": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_local_esm2_delta_v11/MUTATION_LOCAL_ESM2_WT_CENTER_MEAN_299X1280_FLOAT32_V1.npy",
+      "sha256": "33620e52cf262183656730ecdd1dbceadd0f42043964b93ad5535716fe65b3b7"
+    },
+    "center_delta_mean": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_local_esm2_delta_v11/MUTATION_LOCAL_ESM2_CENTER_DELTA_MEAN_299X1280_FLOAT32_V1.npy",
+      "sha256": "dc3336350b6b487f9640484dc0fc2beea9b4fa8aaf975ac7628f20017b69d92d"
+    },
+    "center_delta_signed_maxabs": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_local_esm2_delta_v11/MUTATION_LOCAL_ESM2_CENTER_DELTA_SIGNED_MAXABS_299X1280_FLOAT32_V1.npy",
+      "sha256": "cbc675f2931e1aacab8104a481774ad2da3b3deb6602674ffc2a65e57d8e551e"
+    },
+    "window_mean_delta": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/mutation_local_esm2_delta_v11/MUTATION_LOCAL_ESM2_WINDOW_MEAN_DELTA_MEAN_299X1280_FLOAT32_V1.npy",
+      "sha256": "b1da40ed02b96b44d101bfea09abd7c4b6f8b98468d72678eb4785be838aae8f"
+    }
+  },
+  "data_firewall": {
+    "feature_extraction_label_columns_read": [],
+    "outer_test_labels_used_for_training_or_preprocessing": false,
+    "dimension_reduction_fit_scope": "unique reconstructable constructs in the outer training boundary only",
+    "base_model_fit_scope": "outer training boundary only",
+    "adapter_fit_scope": "outer training boundary only after the base model is frozen",
+    "outer_test_access": "prediction and final prespecified metrics only",
+    "shuffled_control_generation": "label-blind deterministic outer-training-donor-only within-gene cyclic permutation; test recipients use a deterministic outer-training donor from the same gene and genes without an eligible training donor receive zero delta",
+    "unavailable_construct_rule": "exact V10 base prediction; structure absence is never encoded as a negative label"
+  },
+  "base_reproduction": {
+    "implementation": "exact V10 MutationAwareModel, feature preparation, objective, GroupKFold order, 100 epochs and fold seed offsets",
+    "source_seed": 20260813,
+    "protocol_seed_offsets": {
+      "DRUG_COLD": 0,
+      "VARIANT_CONSTRUCT_COLD": 100,
+      "GENE_COLD": 200
+    },
+    "maximum_allowed_oof_probability_absolute_error": 1e-5,
+    "base_parameters_frozen_before_adapter_training": true
+  },
+  "label_blind_projection": {
+    "method": "outer-train-only randomized PCA followed by outer-train component standardization",
+    "components_per_source": 32,
+    "sources": [
+      "WT_CENTER_MEAN",
+      "CENTER_DELTA_MEAN",
+      "CENTER_DELTA_SIGNED_MAXABS",
+      "WINDOW_MEAN_DELTA"
+    ],
+    "random_state": 20260814,
+    "fit_unit": "unique construct",
+    "unavailable_vectors_after_projection": "exact zero"
+  },
+  "adapter_architecture": {
+    "name": "DRUG_CONDITIONED_COUNTERFACTUAL_MUTATION_DELTA_ADAPTER_V1",
+    "frozen_inputs": [
+      "V10 drug latent 64",
+      "V10 target latent 64",
+      "V10 explicit mutation-token latent 64",
+      "outer-train PCA WT local context 32",
+      "three outer-train PCA mutation-delta views 96"
+    ],
+    "effect_encoder": "[WT32, DELTA96, TARGET64, MUTATION64, availability1] -> 128 -> 64",
+    "drug_conditioning": "Hadamard product between effect64 and frozen V10 drug64",
+    "task_increments": [
+      "active logit increment",
+      "sensitization logit increment",
+      "residual-activity logit increment"
+    ],
+    "maximum_absolute_logit_increment": 1.0,
+    "exact_fallback": "torch.where(availability, sigmoid(base_logit + bounded_increment), base_probability)",
+    "trainable_base_parameters": 0
+  },
+  "capacity_matched_variants": [
+    {
+      "name": "TOKEN_BASE",
+      "description": "Exact outer-fold V10 base with no adapter."
+    },
+    {
+      "name": "WT_LOCAL_ONLY",
+      "description": "Own WT local context, all three mutant-delta views set to zero; drug conditioning retained."
+    },
+    {
+      "name": "SHUFFLED_DELTA_WITHIN_GENE",
+      "description": "Own WT context plus label-blind wrong-construct delta from the same gene; singleton donors receive zero delta."
+    },
+    {
+      "name": "DELTA_NO_DRUG_CONDITIONING",
+      "description": "Own WT and true mutant-delta views; drug-effect interaction tensor set to zero."
+    },
+    {
+      "name": "FULL_DRUG_CONDITIONED_COUNTERFACTUAL_DELTA",
+      "description": "Own WT and true mutant-delta views with explicit frozen-drug-by-mutation-effect interaction."
+    }
+  ],
+  "adapter_training": {
+    "epochs": 60,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0003,
+    "scheduler": "CosineAnnealingLR",
+    "gradient_clip_norm": 5.0,
+    "loss": "class-balanced active BCE + 0.30 sensitization BCE + 0.25 Huber residual + 0.30 within-drug BPR",
+    "same_initialization_across_capacity_matched_variants_within_fold": true,
+    "full_batch": true
+  },
+  "prespecified_metrics": {
+    "primary": [
+      "drug-cold all-variant active micro AUPRC",
+      "drug-cold strict-M2 sensitization micro AUPRC"
+    ],
+    "secondary": [
+      "cold-variant active micro AUPRC",
+      "cold-gene active micro AUPRC",
+      "macro drug AUPRC",
+      "macro recall at 20",
+      "residual MAE"
+    ],
+    "paired_cluster_bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260814,
+    "cluster_units": {
+      "DRUG_COLD": "kirhub_compound",
+      "VARIANT_CONSTRUCT_COLD": "variant_construct",
+      "GENE_COLD": "gene_symbol"
+    }
+  },
+  "phase_a_integrity_gates": {
+    "all_input_hashes_match": true,
+    "all_three_protocols_have_five_complete_nonoverlapping_outer_folds": true,
+    "base_oof_reproduces_frozen_v10_within_absolute_tolerance": true,
+    "all_predictions_finite": true,
+    "all_unavailable_construct_predictions_exactly_equal_base": true,
+    "all_variants_use_identical_trainable_parameter_count_and_optimization": true,
+    "no_outer_test_labels_used_before_final_scoring": true
+  },
+  "phase_a_signal_gates_for_multiseed_authorization": {
+    "drug_cold_active_full_minus_base_auprc_point_gt_0": true,
+    "drug_cold_active_full_minus_base_drug_cluster_bootstrap_ci95_lower_gt_0": true,
+    "drug_cold_sensitization_full_minus_base_auprc_point_gt_0": true,
+    "drug_cold_sensitization_full_minus_base_drug_cluster_bootstrap_ci95_lower_gt_0": true,
+    "drug_cold_active_full_auprc_gt_each_wt_only_shuffled_and_no_drug_control": true,
+    "drug_cold_sensitization_full_auprc_gt_each_wt_only_shuffled_and_no_drug_control": true,
+    "drug_cold_active_full_minus_shuffled_bootstrap_ci95_lower_gt_0": true,
+    "cold_variant_active_full_minus_base_point_ge_minus_0_002": true,
+    "cold_gene_active_full_minus_base_point_ge_minus_0_002": true,
+    "available_subset_active_full_minus_base_point_gt_0": true
+  },
+  "decision_rule": {
+    "authorize_five_seed_confirmation_only_if": "every integrity gate and every signal gate passes",
+    "otherwise": "reject this V1 mechanism without opening a five-seed confirmation; redesign only through a new pre-freeze using genuinely new information or a materially different mechanism",
+    "full_algorithm_innovation_claim_after_phase_a": false,
+    "full_sota_claim_after_phase_a": false
+  },
+  "claim_boundary": "Phase A is an internal KiRHub mechanism screen. ESM2, WT-mutant differences, multitask learning, gating and drug-protein interaction features are prior art individually. Only the prespecified joint mechanism can become a candidate contribution, and only after successful Phase A, five-seed confirmation, same-data comparators and independent external validation."
+}

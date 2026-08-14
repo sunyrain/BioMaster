@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-08-09T15:28:44.179345+00:00",
+  "status": "PASS",
+  "targets": 4,
+  "candidate_pairs": 6,
+  "supported_pairs": 2,
+  "tier_counts": {
+    "NO_CALIBRATED_SUPPORT": 4,
+    "GNINA_REMOTE_A": 2
+  },
+  "outputs": {
+    "integrity": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_evaluation/GNINA_REMOTE_INCREMENT_RUN_INTEGRITY_V1.csv",
+    "pair_evidence": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_evaluation/GNINA_REMOTE_INCREMENT_PAIR_EVIDENCE_V1.csv"
+  }
+}

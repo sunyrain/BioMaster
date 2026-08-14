@@ -1,0 +1,161 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_MFDR_CONTROL_FREEZE_V1",
+  "created_utc": "2026-08-13T20:40:41Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN; CONDITIONAL_ON_ALL_STAGE0_GATES_PASSING",
+  "purpose": "test whether any apparent EQIR gain is explained by ordinary multisource fusion and multibranch auxiliary supervision rather than evidence qualification, exact fallback or dual-query base-relative tail-risk control",
+  "parents": {
+    "stage1_method_freeze": {
+      "path": "configs/biomaster_eqir_v3_stage1_method_freeze_20260814.json",
+      "sha256": "ebb3255d0ea445d2c1220b61af1f3fabfce7af38ff4aa4b8740f669d2403cdd1"
+    },
+    "safe_dual_query_objective_amendment": {
+      "path": "configs/biomaster_eqir_v3_safe_dual_query_objective_amendment_20260814.json",
+      "sha256": "0f0b293c0584e9c2dc6b91716420b9d43b3811584d9ab8308c48cd0bd6a20f04"
+    },
+    "mfdr_released_code_data_audit": {
+      "path": "outputs/old_drug_target_sota_v1/MFDR_DTI_RELEASED_CODE_DATA_AUDIT_V1.json",
+      "sha256": "65518d70dc80b177cda56c37b7219bfcd68a5fe8e5579cccc2174fa96fea46a3"
+    },
+    "primary_paper_matrix": {
+      "path": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V11.csv",
+      "sha256": "fe97d8666b93e21cd05077d63d76e356e5ca615edc1180089ebde65cf0056a61"
+    }
+  },
+  "freeze_timing_integrity": {
+    "formal_structure_evaluation_files_present": 0,
+    "formal_structure_scores_joined_to_labels": false,
+    "stage0_decision_available": false,
+    "confirmatory_s3_folds_3_4_read_for_this_freeze": false,
+    "official_mfdr_repository": "third_party/sota_dti_2026/MFDR_DTI@616ba8b3503c6cecd95e75d32c23b4842d037781"
+  },
+  "activation_rule": {
+    "required_stage0_decision": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "all_amended_stage0_gates_required": true,
+    "otherwise": "DO_NOT_IMPLEMENT_OR_TRAIN_MFDR_INSPIRED_CONTROLS"
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "why_not_use_the_released_mfdr_headline_as_a_comparator": {
+    "execution": "RunModel.py has a release-blocking syntax error and the loader requires unshipped BERT resources through three hard-coded absolute paths",
+    "split": "the released code reuses one warm random fixed 20 percent test set for five inner-fold models, omits the final shuffled row and applies drop_last to train, validation and test",
+    "data": "Enzyme contains 92 and GPCR contains 258 trainval-test opposite-label pair collisions; the Enzyme release has 5840 rows while the paper table states 5940",
+    "implementation": "sequence-length-one attention is query-independent with zero WQ/WK gradients; DWLoss parameters are not included in the optimizer; descriptor scaling is fit on the complete dataset",
+    "conclusion": "the control below is capacity-matched and MFDR-inspired, not an official reproduction and not a numerical comparison to the published headline"
+  },
+  "shared_protocol": {
+    "primary_protocol": "S3_STRICT_DOUBLE_COLD",
+    "secondary_stress_protocols": [
+      "S1_SCAFFOLD_COLD_DRUG",
+      "S2_HOMOLOGY_COLD_TARGET"
+    ],
+    "development_folds": [0, 1, 2],
+    "confirmatory_s3_folds_locked": [3, 4],
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817],
+    "inner_validation": "the same deterministic grouped inner folds jointly respecting target homology cluster and drug scaffold group as EQIR",
+    "fit_boundary": "all projections, normalization statistics, auxiliary heads, fusion parameters and checkpoints are learned inside the current frozen TRAIN/VALID boundary; held TEST is evaluated once",
+    "selection_objective": "equal-weight mean of inner-validation micro AUPRC, target-macro AUPRC and drug-macro AUPRC",
+    "selection_constraints": [
+      "drug-macro must not be below the frozen query-balanced base",
+      "target-macro may be at most 0.002 below the frozen query-balanced base",
+      "held TEST labels may not influence normalization, hyperparameters, checkpoint selection, calibration or modality weights"
+    ]
+  },
+  "frozen_inputs": {
+    "nonstructural": [
+      "fold-specific frozen DTIAM logit",
+      "fold-specific frozen BioMaster logit",
+      "fold-specific frozen query-balanced base logit",
+      "absolute DTIAM-BioMaster probability disagreement"
+    ],
+    "structure": [
+      "primary_cnn_affinity_target_ecdf_minus_0_5",
+      "negative_primary_pose_vina_affinity_target_ecdf_minus_0_5",
+      "target_local_pose_score_spread_robust_quantile",
+      "log1p_valid_pose_count",
+      "frozen target QC vector"
+    ],
+    "missingness": [
+      "label-independent structure eligibility a(t)",
+      "fixed all-zero structure vector plus explicit missingness bit when a(t)=0"
+    ],
+    "target_identity_used": false,
+    "external_mfdr_labels_or_features_pooled": false
+  },
+  "required_variants": [
+    {
+      "name": "FROZEN_QUERY_BALANCED_BASE_ONLY",
+      "role": "strong nonnovel no-refit reference"
+    },
+    {
+      "name": "MFDR_INSPIRED_DIRECT_MULTIVIEW_FUSION",
+      "role": "ordinary direct multisource fusion control without auxiliary branch losses, exact fallback or base-relative risk constraints",
+      "mechanism": "separate LayerNorm plus low-rank projections for nonstructural and structure views; concatenate projected views, elementwise product, absolute difference, eligibility bit and base logit; classify with a two-layer SiLU MLP"
+    },
+    {
+      "name": "MFDR_INSPIRED_MULTIBRANCH_AUXILIARY_FUSION",
+      "role": "tests whether auxiliary supervision alone explains an EQIR gain",
+      "mechanism": "the direct multiview fusion control plus nonstructural-only, structure-only and fused prediction heads",
+      "objective": "fused BCE plus three auxiliary BCE terms whose coefficients are validation-selected from a frozen finite grid; all coefficient logits must be included in the optimizer when learnable"
+    },
+    {
+      "name": "EQIR_FULL",
+      "role": "preregistered qualified-structure candidate with exact fallback and dual-query base-relative tail-risk constraints"
+    }
+  ],
+  "control_constraints": {
+    "cross_attention": "not used in the primary control because the official MFDR attention is mathematically degenerate at sequence length one; an optional corrected token-level attention diagnostic cannot replace the preregistered concat control",
+    "normalization": "all normalization is fit using current TRAIN only",
+    "missing_structure": "ordinary controls use a zero vector plus missingness bit and are allowed to change the base prediction when structure is absent; this deliberately tests the value of EQIR exact fallback",
+    "loss_weight_grid": [
+      [1.0, 0.25, 0.25, 0.25],
+      [1.0, 0.5, 0.5, 0.5],
+      [1.0, 1.0, 1.0, 1.0]
+    ]
+  },
+  "capacity_and_training_fairness": {
+    "projection_widths": [16, 32, 64],
+    "head_widths": [16, 32, 64],
+    "parameter_matching": "choose the smallest control within plus or minus 10 percent of EQIR active trainable parameters; if no exact candidate exists, use the nearest model and report the mismatch",
+    "optimizer": "AdamW",
+    "learning_rates": [0.0003, 0.001],
+    "weight_decay": 0.0001,
+    "maximum_epochs": 100,
+    "early_stopping_patience": 12,
+    "gradient_norm_clip_before_optimizer_step": 1.0,
+    "same_batches": "use the same fold-specific pair population, eligibility mask and seed order as EQIR"
+  },
+  "mandatory_metrics_and_gates": {
+    "metrics": [
+      "micro AUPRC",
+      "target-macro AUPRC",
+      "drug-macro AUPRC",
+      "target-query within-group permutation signal",
+      "drug-query within-group permutation signal"
+    ],
+    "uncertainty": [
+      "target-homology-cluster grouped bootstrap",
+      "drug-scaffold grouped bootstrap",
+      "drug-grouped directional bootstrap"
+    ],
+    "eqir_must_beat": [
+      "MFDR_INSPIRED_DIRECT_MULTIVIEW_FUSION",
+      "MFDR_INSPIRED_MULTIBRANCH_AUXILIARY_FUSION"
+    ],
+    "minimum_support": "at least 4 of 5 EQIR seeds improve versus each control, both cold-axis CI lower bounds exceed zero, target-macro is noninferior within -0.002, drug-macro grouped CI lower bound exceeds zero, and both query-direction permutation gates pass"
+  },
+  "reporting_policy": {
+    "official_mfdr_reproduction_name_forbidden": true,
+    "published_mfdr_headline_same_data_comparison_forbidden": true,
+    "dynamic_loss_or_cross_attention_novelty_claim_forbidden": true,
+    "report_direct_and_auxiliary_controls_together": true,
+    "disclose_release_code_data_audit": true
+  }
+}

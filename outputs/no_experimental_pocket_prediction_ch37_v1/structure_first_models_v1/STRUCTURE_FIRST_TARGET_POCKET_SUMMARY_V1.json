@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-08-09T13:10:42.555348+00:00",
+  "status": "PASS",
+  "targets": 2,
+  "fragments": 7,
+  "completed_fragments": 7,
+  "p2rank_pocket_candidates": 121,
+  "fpocket_pocket_candidates": 436,
+  "target_evidence_tiers": {
+    "PF3_LOW_CONFIDENCE_FRAGMENT_POCKET_HYPOTHESES": 2
+  },
+  "boundaries": [
+    "Fragment models provide local pocket hypotheses and do not establish a full-length conformational state.",
+    "Empty-MSA Boltz-2 structures are lower-confidence than exact-sequence AFDB or experimental structures.",
+    "Canonical residue mapping preserves sequence location but not inter-fragment geometry."
+  ]
+}

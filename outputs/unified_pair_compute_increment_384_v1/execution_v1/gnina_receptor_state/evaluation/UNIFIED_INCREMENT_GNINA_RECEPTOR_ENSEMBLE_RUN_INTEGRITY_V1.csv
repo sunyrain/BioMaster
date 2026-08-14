@@ -1,0 +1,4 @@
+protocol_target_id,base_target_chembl_id,expected_ligands,observed_ligands,pose_rows,integrity_status
+CHEMBL331__ALT1,CHEMBL331,65,65,325,PASS
+CHEMBL4128__ALT1,CHEMBL4128,65,65,325,PASS
+CHEMBL4128__ALT2,CHEMBL4128,65,65,325,PASS

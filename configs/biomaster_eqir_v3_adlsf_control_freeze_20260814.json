@@ -1,0 +1,158 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_ADLSF_CONTROL_FREEZE_V1",
+  "created_utc": "2026-08-13T20:54:30Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN; CONDITIONAL_ON_ALL_STAGE0_GATES_PASSING",
+  "purpose": "test whether a recent expressive asymmetric gated multimodal fusion control explains any EQIR gain without evidence-qualified exact fallback or dual-query base-relative tail-risk constraints",
+  "parents": {
+    "stage1_method_freeze": {
+      "path": "configs/biomaster_eqir_v3_stage1_method_freeze_20260814.json",
+      "sha256": "ebb3255d0ea445d2c1220b61af1f3fabfce7af38ff4aa4b8740f669d2403cdd1"
+    },
+    "safe_dual_query_objective_amendment": {
+      "path": "configs/biomaster_eqir_v3_safe_dual_query_objective_amendment_20260814.json",
+      "sha256": "0f0b293c0584e9c2dc6b91716420b9d43b3811584d9ab8308c48cd0bd6a20f04"
+    },
+    "ad_lsf_release_audit": {
+      "path": "outputs/old_drug_target_sota_v1/AD_LSF_RELEASED_CODE_DATA_SPLIT_AUDIT_V1.json",
+      "sha256": "e1f04efafef15cab66f1d9cc555d226600d9f6c086e980fdbf13fce2c72056cf"
+    },
+    "primary_paper_matrix": {
+      "path": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V12.csv",
+      "sha256": "b01c1ceb63b53002affc35f3dab387b81118f43bc20b9feed1efee500e7a7df5"
+    }
+  },
+  "freeze_timing_integrity": {
+    "formal_structure_evaluation_files_present": 0,
+    "formal_structure_scores_joined_to_labels": false,
+    "stage0_decision_available": false,
+    "confirmatory_s3_folds_3_4_read_for_this_freeze": false,
+    "official_ad_lsf_repository": "third_party/sota_dti_2026/AD-LSF@5bee039edaf6bf508eaae07f414f9074988a4ed8"
+  },
+  "activation_rule": {
+    "required_stage0_decision": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "all_amended_stage0_gates_required": true,
+    "otherwise": "DO_NOT_IMPLEMENT_OR_TRAIN_ADLSF_INSPIRED_CONTROL"
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "why_not_use_the_published_or_released_ad_lsf_directly": {
+    "headline": "published results use warm random pair splits rather than BioMaster scaffold, homology, double, temporal or old-drug cold protocols",
+    "reproducibility": "exact random split files, seeds for five stated repeats, embeddings, weights and dependency environment are absent; model/dti.py imports a missing Fusion1.py",
+    "data": "Human and C. elegans releases contain 731 and 1234 repeated positive rows; released valid/test cold files contain repeated pairs",
+    "implementation": "released positional encoding operates on batch slot rather than token position and is not batch-permutation equivariant",
+    "conclusion": "the comparator below tests the paper-level asymmetric-gating hypothesis using corrected, capacity-matched semantics; it is not an official AD-LSF reproduction"
+  },
+  "shared_protocol": {
+    "primary_protocol": "S3_STRICT_DOUBLE_COLD",
+    "secondary_stress_protocols": [
+      "S1_SCAFFOLD_COLD_DRUG",
+      "S2_HOMOLOGY_COLD_TARGET"
+    ],
+    "development_folds": [0, 1, 2],
+    "confirmatory_s3_folds_locked": [3, 4],
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817],
+    "inner_validation": "same deterministic grouped inner folds jointly respecting target homology and drug scaffold groups as EQIR",
+    "fit_boundary": "all projections, gates, fusion weights, normalization and checkpoints are learned within the current frozen TRAIN/VALID boundary; held TEST is evaluated once",
+    "selection_objective": "equal-weight mean of inner-validation micro AUPRC, target-macro AUPRC and drug-macro AUPRC",
+    "selection_constraints": [
+      "drug-macro must not be below the frozen query-balanced base",
+      "target-macro may be at most 0.002 below the frozen query-balanced base",
+      "held TEST labels may not influence preprocessing, model selection or calibration"
+    ]
+  },
+  "frozen_inputs": {
+    "drug_global": "DTIAM_BERMOL768_FLOAT32_V1",
+    "target_global": "DTIAM_ESM2_T33_650M_1280_FLOAT32_V1",
+    "nonstructural_scores": [
+      "fold-specific frozen DTIAM logit",
+      "fold-specific frozen BioMaster logit",
+      "fold-specific frozen query-balanced base logit",
+      "absolute DTIAM-BioMaster probability disagreement"
+    ],
+    "structure_view": [
+      "primary_cnn_affinity_target_ecdf_minus_0_5",
+      "negative_primary_pose_vina_affinity_target_ecdf_minus_0_5",
+      "target_local_pose_score_spread_robust_quantile",
+      "log1p_valid_pose_count",
+      "frozen target QC vector"
+    ],
+    "missingness": "zero structure vector plus explicit eligibility bit when a(t)=0",
+    "target_identity_used": false,
+    "external_ad_lsf_data_labels_embeddings_or_weights_pooled": false
+  },
+  "required_variants": [
+    {
+      "name": "FROZEN_QUERY_BALANCED_BASE_ONLY",
+      "role": "strong nonnovel no-refit reference"
+    },
+    {
+      "name": "ADLSF_INSPIRED_ASYMMETRIC_GATED_FUSION",
+      "role": "expressive generic fusion control",
+      "mechanism": "project frozen drug, target, nonstructural-score and structure views separately; condition independent sigmoid gates for each view on the other three projected summaries; concatenate gated views, pairwise products, absolute differences, base logit and eligibility bit into a two-layer SiLU head",
+      "objective": "ordinary binary cross entropy without exact fallback, residual-only restriction or query-regret constraints"
+    },
+    {
+      "name": "ADLSF_INSPIRED_BIDIRECTIONAL_ALIGNMENT_FUSION",
+      "role": "tests whether explicit bidirectional view alignment explains any EQIR gain",
+      "mechanism": "the asymmetric gated control plus drug-to-target and target-to-drug projected alignment scores and nonstructural-to-structure and structure-to-nonstructural gates; no batch-position encoding or external data",
+      "objective": "ordinary binary cross entropy plus symmetric cosine-alignment regularization selected from a frozen grid"
+    },
+    {
+      "name": "EQIR_FULL",
+      "role": "preregistered qualified-structure adapter with exact fallback and dual-query base-relative upper-tail regret constraints"
+    }
+  ],
+  "corrected_semantics": {
+    "positional_encoding": "none is used because every released input is a pooled frozen vector; the official batch-axis bug is not reproduced",
+    "dynamic_frequency_claim": "not implemented for pooled vectors and not claimed as an official paper reproduction",
+    "normalization": "LayerNorm or training-boundary StandardScaler only; no full-dataset fit",
+    "duplicates": "BioMaster frozen pairs and folds remain authoritative; no AD-LSF released labels or duplicates enter training"
+  },
+  "capacity_and_training_fairness": {
+    "projection_widths": [16, 32, 64],
+    "head_widths": [16, 32, 64],
+    "parameter_matching": "select the smallest control within plus or minus 10 percent of EQIR active trainable parameters; otherwise report the closest mismatch",
+    "alignment_regularization_grid": [0.0, 0.01, 0.05],
+    "optimizer": "AdamW",
+    "learning_rates": [0.0003, 0.001],
+    "weight_decay": 0.0001,
+    "maximum_epochs": 100,
+    "early_stopping_patience": 12,
+    "gradient_norm_clip_before_optimizer_step": 1.0,
+    "same_batches": "same fold-specific pair population, eligibility mask and seed order as EQIR"
+  },
+  "mandatory_metrics_and_gates": {
+    "metrics": [
+      "micro AUPRC",
+      "target-macro AUPRC",
+      "drug-macro AUPRC",
+      "target-query within-group permutation signal",
+      "drug-query within-group permutation signal"
+    ],
+    "uncertainty": [
+      "target-homology-cluster grouped bootstrap",
+      "drug-scaffold grouped bootstrap",
+      "drug-grouped directional bootstrap"
+    ],
+    "eqir_must_beat": [
+      "ADLSF_INSPIRED_ASYMMETRIC_GATED_FUSION",
+      "ADLSF_INSPIRED_BIDIRECTIONAL_ALIGNMENT_FUSION"
+    ],
+    "minimum_support": "at least 4 of 5 EQIR seeds improve versus each control, both cold-axis CI lower bounds exceed zero, target-macro is noninferior within -0.002, drug-macro grouped CI lower bound exceeds zero and both query-direction permutation gates pass"
+  },
+  "reporting_policy": {
+    "official_ad_lsf_reproduction_name_forbidden": true,
+    "published_random_split_headline_same_data_comparison_forbidden": true,
+    "asymmetric_gating_or_latent_fusion_novelty_claim_forbidden": true,
+    "report_both_ad_lsf_inspired_controls": true,
+    "disclose_release_code_data_split_audit": true
+  }
+}

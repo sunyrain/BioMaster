@@ -1,0 +1,8 @@
+模块,当前状态,数量/范围,下一动作
+靶点锚点,READY,338个唯一靶点/基因/accession/序列,冻结为target anchor universe
+实验口袋,READY,338个常规药物样holo口袋,按选定PDB链和配体建立结构清单
+实验结构坐标,NOT_BUILT,338套新结构包,从PDBe下载mmCIF/PDB、生物组装并核对目标链和配体
+受体准备,NOT_BUILT,338靶点,补全缺失残基/原子、质子化、金属和辅因子策略，生成receptor-ready结构
+FDA药物实体,REBUILD_REQUIRED,旧表915记录；旧项目750记录/723结构,重新核对批准实体、盐/复方/前药/活性物、非治疗性排除和唯一模型结构
+正式pair空间,NOT_FROZEN,338 × 待定唯一药物结构,药物主表冻结后生成全量pair并标记exact-known排除/校准
+模型推理,DO_NOT_START,未生成新正式pair,完成结构包与药物包后，再部署DTA和结构级级联

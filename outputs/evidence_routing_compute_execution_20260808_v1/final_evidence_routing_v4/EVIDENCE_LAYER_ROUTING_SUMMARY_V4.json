@@ -1,0 +1,84 @@
+{
+  "package_name": "UNIFIED_EVIDENCE_LAYER_ROUTING_720_X_384_V4",
+  "created_utc": "2026-08-09T15:24:09.021388+00:00",
+  "status": "PASS",
+  "universe": {
+    "pairs": 276480,
+    "ligands": 720,
+    "targets": 384,
+    "mainline_targets": 338,
+    "recovered_targets": 46
+  },
+  "pair_compute_coverage": {
+    "conplex_pairs": 276480,
+    "drugclip_pairs": 275040,
+    "gnina_primary_pairs": 7538,
+    "boltz_primary_pairs": 14470,
+    "any_physical_pairs": 14503,
+    "boltz_multiseed_or_multimodel_pairs": 664,
+    "gnina_receptor_ensemble_pairs": 311
+  },
+  "recovered_46": {
+    "dta_pairs": 33120,
+    "drugclip_pairs": 31680,
+    "gnina_candidate_pairs": 27,
+    "boltz_candidate_pairs": 2,
+    "qualified_target_top10_pairs": 7,
+    "qualified_target_top10_compute_gap": 0
+  },
+  "target_route_counts": {
+    "E3_LOCAL_ONLY_QUALIFIED": 91,
+    "E5_NO_MODEL_QUALIFICATION": 90,
+    "E2_SINGLE_MODEL_REMOTE_QUALIFIED": 73,
+    "E6_NO_ADEQUATE_HISTORICAL_CONTROL": 50,
+    "E4_RECEPTOR_PROTOCOL_REPAIR": 21,
+    "S5_DUAL_PREDICTED_POCKET_WITHOUT_12X12_CONTROLS": 15,
+    "E1_DUAL_REMOTE_QUALIFIED": 13,
+    "S4_POCKET_FAILED_RETROSPECTIVE_CONTROLS": 11,
+    "S3_MARGINAL_POCKET_CONTROL_SEPARATION": 9,
+    "S5_GEOMETRIC_RESCUE_WITHOUT_12X12_CONTROLS": 6,
+    "S0_LOW_CONFIDENCE_STRUCTURE_FIRST": 2,
+    "S2_POCKET_STRONG_NO_SUPPORTED_CANDIDATE": 1,
+    "S2_POCKET_STRONG_DTA_MODEL_DISAGREEMENT": 1,
+    "S1_TWO_COMPUTATIONAL_CANDIDATES_REQUIRE_EXPERIMENT": 1
+  },
+  "pair_evidence_layer_counts": {
+    "L5_TARGET_GATE_HOLD": 144913,
+    "L5_DTA_ONLY_NOT_PHYSICALLY_TESTED": 115995,
+    "L4_COMPUTED_NO_PROMOTABLE_PHYSICAL_SUPPORT": 13729,
+    "C0_KNOWN_RELATIONSHIP_CONTROL": 807,
+    "L2_BOLTZ_REPRODUCED": 410,
+    "L4_HOLD_NOT_REPRODUCED_OR_UNQUALIFIED": 355,
+    "L2_GNINA_RECEPTOR_STATE_STABLE": 103,
+    "L3_STRUCTURE_OR_STATE_REVIEW": 69,
+    "L3_SINGLE_STATE_GNINA_ONLY": 52,
+    "L4_PREDICTED_POCKET_DIAGNOSTIC_OR_UNSUPPORTED": 25,
+    "L1_MULTI_METHOD_STATE_STABLE": 15,
+    "L2_BOLTZ_REPRODUCED_GNINA_PRIMARY": 5,
+    "L3_PREDICTED_POCKET_COMPUTATIONAL_TRIAGE": 2
+  },
+  "priority_review_pairs": 2807,
+  "boundaries": [
+    "Absence from V3 is not interpreted as absence of computation; raw GNINA and Boltz completion are tracked separately.",
+    "Predicted-pocket DrugCLIP ranks remain exploratory and are not treated as experimental-pocket-equivalent evidence.",
+    "The two LOXL2 pairs are computational triage only; Boltz low complex confidence, pose inconsistency, and missing Cu/LTQ prohibit MD and binding claims.",
+    "No cross-target total score or binding probability is produced.",
+    "N1_UNRECORDED means absent only from the frozen project controls and local ChEMBL37 MoA mapping, not absent from all databases or literature."
+  ],
+  "outputs": {
+    "all_pairs": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V4.csv.gz",
+    "targets": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/TARGET_EVIDENCE_LAYER_ROUTING_384_V4.csv",
+    "priority_review": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/PAIR_EVIDENCE_LAYER_PRIORITY_REVIEW_V4.csv.gz"
+  },
+  "source_hashes": {
+    "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz": "b0bf5d5b180384bc60c1876f0c65f9655609124d4157fd653fdbcca809e2dc58",
+    "outputs/unified_pair_program_720x384_v1/UNIFIED_ACTIVE_TARGET_MASTER_384_V1.csv": "9be1e913d0bbb2d36baa746c451c4c39901b1d056cd15b7dd2440b6d01a19ea6",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v2/TARGET_EVIDENCE_LAYER_ROUTING_338_V2.csv": "73467f230b8f922b85077d7b12320c0fc19d9e5146d156eb6f900dba512dea8b",
+    "outputs/recovered_target_program_integrated_v1/RECOVERED_46_INTEGRATED_TARGET_OUTCOMES_V1.csv": "b71b892df87754664e4a2319e6e2846235b3eab03cd20ccaecfa20595e626d92",
+    "outputs/current_results_classified_20260806_v1/CURRENT_RESULTS_MASTER_14488_CLASSIFIED_V1.csv.gz": "7301363875a3132193d51319fc060423eff0e3e119531931430b9664949bdd08",
+    "outputs/gnina_discovery_7511_v1/evaluation/GNINA_DISCOVERY_7511_TARGET_CALIBRATED_EVIDENCE_V1.csv.gz": "bcdc323f86c241276e71901c805dca6bb19373c44b68f867ea3895d07b420128",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v3/PAIR_EVIDENCE_LAYER_ROUTING_CURRENT_V3.csv.gz": "d1aca017fe3193350116bbc4a235e0ddf831f67e293bb0dd74c083a3475b4955",
+    "outputs/recovered_gnina_candidate_docking_v1/RECOVERED_GNINA_CANDIDATE_EVIDENCE_V1.csv": "bb14eb50469378461e397b4ef9bd8073c42a432b3526ed845e10f5bdbc65005d",
+    "outputs/recovered_boltz2_loxl2_candidates_v1/RECOVERED_BOLTZ2_LOXL2_PAIR_SUMMARY_V1.csv": "2e5f51bc607ea9f980ad68fee1118321c8e9570f5af43915b4e880e86d1c93e9"
+  }
+}

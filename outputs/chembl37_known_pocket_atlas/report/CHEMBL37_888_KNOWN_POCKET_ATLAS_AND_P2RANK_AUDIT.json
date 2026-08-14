@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-04T04:15:41.553662+00:00",
+  "targets": 888,
+  "unique_uniprot": 888,
+  "decision_tier_sum": 888,
+  "known_pocket_targets": 737,
+  "pdf_pages": 7,
+  "pdf_text_characters": 5157,
+  "blank_pages": [],
+  "files": {
+    "outputs/chembl37_known_pocket_atlas/report/CHEMBL37_888_KNOWN_POCKET_ATLAS_AND_P2RANK_AUDIT_ZH.pdf": {
+      "bytes": 494891,
+      "sha256": "bdca18db086350f24f74bc3d9d48217324f3cc9cf96897a19809a043a997a623"
+    },
+    "outputs/chembl37_known_pocket_atlas/report/CHEMBL37_888_KNOWN_POCKET_ATLAS_AND_P2RANK_AUDIT_ZH.html": {
+      "bytes": 17184,
+      "sha256": "15952c90b8ea6785a4920e3aec1a17a054eeb0a1a9e17820b1e401b9219c38c6"
+    },
+    "outputs/chembl37_known_pocket_atlas/report/CHEMBL37_888_KNOWN_POCKET_ATLAS_AND_P2RANK.xlsx": {
+      "bytes": 303660,
+      "sha256": "f0e54792f4ee7ddc63f557de6080012b915edf81653bc1694c92b1801642b0e4"
+    },
+    "outputs/chembl37_known_pocket_atlas/report/KNOWN_POCKET_SOURCE_PROVENANCE.json": {
+      "bytes": 1946,
+      "sha256": "c7f72e932bdf9269d0dd40ce3bdedc277de8901d84c4eaf9adcd82d269892d54"
+    },
+    "outputs/chembl37_known_pocket_atlas/report/TARGET_POCKET_DECISION_PACKAGE_888.csv": {
+      "bytes": 519036,
+      "sha256": "b474bf375a2a8c2742c7a2b31b77711c378dc4fc14ca8e166affa8ed358e64e0"
+    }
+  },
+  "checks": {
+    "targets_888": true,
+    "unique_uniprot_888": true,
+    "decision_tiers_sum_888": true,
+    "known_pocket_targets_737": true,
+    "no_blank_pdf_pages": true
+  }
+}

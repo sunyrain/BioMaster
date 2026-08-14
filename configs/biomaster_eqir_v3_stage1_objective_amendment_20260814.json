@@ -1,0 +1,61 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_STAGE1_OBJECTIVE_AMENDMENT_V1",
+  "created_utc": "2026-08-13T19:10:47Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN_OR_STAGE0_DECISION",
+  "amends": {
+    "path": "configs/biomaster_eqir_v3_stage1_method_freeze_20260814.json",
+    "sha256": "ebb3255d0ea445d2c1220b61af1f3fabfce7af38ff4aa4b8740f669d2403cdd1"
+  },
+  "freeze_timing_integrity": {
+    "formal_evaluation_directory_files_present": 0,
+    "formal_gnina_score_label_join_performed": false,
+    "stage0_decision_available": false,
+    "only_label_free_extraction_smoke_completed": true,
+    "confirmatory_s3_folds_3_4_read_for_this_amendment": false
+  },
+  "independent_trigger": {
+    "type": "MATHEMATICAL_DIMENSION_AND_PRIOR_ART_AUDIT",
+    "dimension_issue": "the parent freeze compared a probability residual y-p0 directly with a raw logit increment r; the effective target and prediction must be expressed in the same probability scale",
+    "prior_art_issue": "orthogonal multimodal fusion and generic residual multimodal fusion have prior disclosures and cannot be standalone novelty claims",
+    "collision_matrix": "outputs/old_drug_target_sota_v1/SOTA_ALGORITHM_NOVELTY_COLLISION_MATRIX_V1.csv",
+    "collision_matrix_sha256": "81b2dc74763a987c2bb0759ec73ac9bb3d46a324bec6c0a3d68f179f33e50d72",
+    "new_prior_rows": [
+      "orthogonal_sequential_multimodal_fusion",
+      "generic_residual_multimodal_fusion"
+    ],
+    "uses_stage0_scores_or_labels": false
+  },
+  "effective_candidate_claim": {
+    "name": "Evidence-Qualified Incremental Residual (EQIR)",
+    "removed_terms": [
+      "orthogonal multimodal fusion",
+      "Neyman-orthogonal learner",
+      "residual fusion as a standalone innovation"
+    ],
+    "candidate_difference": "the joint mechanism of label-independent evidence qualification; a frozen cross-fitted strongest nonstructural offset; structure-limited incremental correction; exact functional fallback outside the eligible set; and simultaneous target-query plus drug-query incremental-value gates",
+    "algorithm_novelty_already_established": false
+  },
+  "supersedes_parent_fields": {
+    "residual_mechanism.residual_pseudo_outcome": "u(d,t)=y(d,t)-p0(d,t), where p0(d,t)=sigmoid(b(d,t))",
+    "residual_mechanism.induced_probability_increment": "delta_theta(d,t)=sigmoid(b(d,t)+a(t)*r_theta(d,t))-sigmoid(b(d,t))",
+    "residual_mechanism.final_logit": "s(d,t)=b(d,t)+a(t)*clip(r_theta(d,t),-4,4)",
+    "training_objective.residual_loss": "Huber(u(d,t), delta_theta(d,t), delta=0.25) on qualified VALID pairs",
+    "training_objective.dimension_check": "u and delta_theta are both probability-scale increments; u-delta_theta equals y-sigmoid(s)",
+    "training_objective.full_objective": "L_probability_increment_residual + lambda_target*L_target_query + lambda_drug*L_drug_query + 1e-4*L2"
+  },
+  "unchanged_parent_invariants": [
+    "Stage 1 remains inactive unless every amended Stage 0 gate passes",
+    "the frozen S3 query-balanced blend remains the base offset",
+    "a(t) is deterministic and independent of interaction labels",
+    "a(t)=0 implies exact bitwise equality between final and base logits",
+    "only S3 development folds 0-2 may be used before implementation freeze",
+    "confirmatory folds 3-4 remain locked",
+    "five seeds and all eight parent ablations remain mandatory",
+    "all pooled; dual-axis; target-macro; drug-macro; and within-drug permutation gates remain mandatory"
+  ],
+  "claim_policy": {
+    "stage0_or_stage1_failure": "NO_FULL_SOTA_CLAIM",
+    "passing_stage1_development_alone": "CANDIDATE_ALGORITHM_EVIDENCE_ONLY",
+    "full_algorithm_claim_requires": "locked confirmation; same-data baselines; complete ablations; and external or source-held validation"
+  }
+}

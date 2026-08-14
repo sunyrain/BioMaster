@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-08-09T15:32:08.140036+00:00",
+  "input_pairs": 55,
+  "completed_pairs": 55,
+  "completed_targets": 26,
+  "tier_counts": {
+    "BOLTZ_BELOW_TARGET_BACKGROUND": 40,
+    "BOLTZ_STRUCTURE_A": 8,
+    "BOLTZ_STRUCTURE_C": 5,
+    "BOLTZ_STRUCTURE_B": 2
+  },
+  "route_tier_counts": {
+    "UNIFIED_384_RERANK_REMOTE_N2_N3": {
+      "BOLTZ_BELOW_TARGET_BACKGROUND": 40,
+      "BOLTZ_STRUCTURE_A": 8,
+      "BOLTZ_STRUCTURE_C": 5,
+      "BOLTZ_STRUCTURE_B": 2
+    }
+  },
+  "binding_priority_pairs": 15,
+  "gnina_queue_completed": 0,
+  "interpretation": {
+    "A_B_C": "target-calibrated Boltz evidence tiers",
+    "out_of_domain": "computed for comparison/information only; cannot promote or reject",
+    "below_background": "negative Boltz vote under this protocol, not proof of no binding"
+  },
+  "output": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/boltz_evaluation/BOLTZ2_CONDITIONAL_DISCOVERY_EVIDENCE_V1.csv.gz"
+}

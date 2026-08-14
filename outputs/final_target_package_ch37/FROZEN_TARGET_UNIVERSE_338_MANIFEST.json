@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN",
+  "frozen_utc": "2026-08-04T05:29:47.246889+00:00",
+  "target_count": 338,
+  "definition": "ChEMBL 37 human SINGLE PROTEIN small-molecule direct MoA; non-GPCR; supported target class; preferred druglike experimental holo pocket",
+  "explicitly_removed_after_preferred_pocket_gate": [
+    "DNMT3A",
+    "ODC1",
+    "TXN"
+  ],
+  "authoritative_files": {
+    "outputs/final_target_package_ch37/FINAL_FROZEN_CHEMBL_SM_TARGETS_WITH_DRUGLIKE_HOLO_338.csv": "aeabd3f2dd8a64467a7a5131d6d97864c4419aa2b2219f1605932a6f276e625b",
+    "outputs/final_target_package_ch37/FINAL_TARGET_COMPUTE_READINESS_338.csv": "28611e6bb1724d2c6cd89f14cc1588c9974f59f6c5e1be963d65406ca080e5ab",
+    "outputs/final_target_package_ch37/FINAL_TARGET_FUNNEL_COUNTS_ZH.csv": "7c54434544388007183ffe8b2274101089d42e4709d706f1d0221cecbebdde1c",
+    "outputs/final_target_package_ch37/FINAL_TARGET_EXCLUSION_AUDIT_888.csv": "90a826a62f64303e20b5554b2089528f5fa2f38fd60769868e902695ee6211b4"
+  },
+  "upstream_source_hashes": {
+    "outputs/chembl37_known_pocket_atlas/final_atlas/KNOWN_POCKET_INSTANCES_ANNOTATED_FULL.csv.gz": "97b87ea63de7a7cb54d208be718da1b16388c54a61ada6da8e8472f64b873d77",
+    "configs/pdbe_experiment_metadata_corrections_ch37.csv": "eb28cc4ba54070a7b7c2175ec36259f2bad39272b3eaaa60f1f1294046e8750f"
+  },
+  "usage_rule": "New pair-space construction must read the frozen 338 target CSV; legacy 341/463 target manifests are not production inputs."
+}

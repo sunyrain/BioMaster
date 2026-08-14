@@ -1,0 +1,21 @@
+{
+  "target_universe": 888,
+  "pdbe_raw_instances": 95209,
+  "pdbe_benchmark_eligible_instances": 38850,
+  "canonical_unique_known_pockets": 35269,
+  "targets_with_known_pocket": 737,
+  "targets_with_k1_drug_mapped_pocket": 225,
+  "targets_with_k1_k2_high_conf_pocket": 579,
+  "p2rank_prediction_targets": 815,
+  "p2rank_predicted_pockets": 7632,
+  "known_pocket_targets_with_exact_af": 729,
+  "thresholds": {
+    "minimum_binding_residues": 3,
+    "jaccard": 0.1,
+    "known_residue_recall": 0.25,
+    "center_distance_angstrom": [
+      4.0,
+      8.0
+    ]
+  }
+}

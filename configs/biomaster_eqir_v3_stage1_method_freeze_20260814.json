@@ -1,0 +1,188 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_STAGE1_METHOD_FREEZE_V1",
+  "created_utc": "2026-08-13T18:50:34Z",
+  "status": "FROZEN_CONDITIONAL_METHOD_BEFORE_STAGE0_SCORE_LABEL_JOIN; DO_NOT_RUN_UNLESS_ALL_STAGE0_GATES_PASS",
+  "parents": {
+    "candidate_preregistration": {
+      "path": "configs/biomaster_eqir_v3_preregistration.json",
+      "sha256": "d79ffba3e0d85b31251a13471521cd175f7121e89da6fc50bb198f851f8c2e1b"
+    },
+    "stage0_directional_amendment": {
+      "path": "configs/biomaster_eqir_v3_stage0_directional_gate_amendment_20260814.json",
+      "sha256": "f6bdfff06768c5033f76f9045c92638de8b8ae33d93194cfa8798fef8e6367b0"
+    },
+    "strong_nonnovel_floor": {
+      "path": "configs/biomaster_s3_query_balanced_blend_baseline_freeze_20260814.json",
+      "sha256": "9cf879c62dc3ba5fc5ad51b83aa0eba5d9d5defbe925e7b9cd51d8276e1da1dc"
+    }
+  },
+  "freeze_timing_integrity": {
+    "small_molecule_stage0_evaluation_files_present_at_freeze": 0,
+    "gnina_scores_joined_to_labels_at_freeze": false,
+    "stage0_decision_available_at_freeze": false,
+    "confirmatory_s3_folds_3_4_read_for_this_freeze": false,
+    "purpose": "reduce researcher degrees of freedom by freezing the conditional Stage-1 mechanism before observing Stage-0 utility"
+  },
+  "activation_rule": {
+    "required_stage0_decision": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "all_amended_stage0_gates_required": true,
+    "otherwise": "DO_NOT_IMPLEMENT_OR_TRAIN_STAGE1; RETAIN_NO_FULL_SOTA_CLAIM"
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "development_protocol": {
+    "protocol": "S3_STRICT_DOUBLE_COLD",
+    "development_folds": [0, 1, 2],
+    "confirmatory_folds_locked": [3, 4],
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817],
+    "fit_boundary": "for each held development fold, residual fitting and model selection use only its frozen VALID role; its TEST role is evaluated once",
+    "inner_validation": "deterministic grouped inner folds on VALID, grouping jointly by target_homology_cluster and scaffold_group",
+    "test_labels_used_for_training_or_selection": false
+  },
+  "base_offset": {
+    "name": "FROZEN_QUERY_BALANCED_NONSTRUCTURAL_FLOOR",
+    "definition": "b(d,t)=logit(clip(w_f*p_DTIAM(d,t)+(1-w_f)*p_BioMaster_seed(d,t),1e-6,1-1e-6))",
+    "frozen_dtiam_weight_by_held_fold": {
+      "0": 0.25,
+      "1": 0.275,
+      "2": 0.325
+    },
+    "weights_selected_before_structure_scores": true,
+    "base_models_frozen_during_residual_training": true,
+    "why_this_base": "EQIR must add value beyond the strongest frozen nonnovel S3 development floor rather than inherit an easier BioMaster-only reference"
+  },
+  "label_independent_qualification": {
+    "symbol": "a(t)",
+    "type": "deterministic_binary_not_learned_from_interaction_labels",
+    "equals_one_only_if_all": [
+      "target is in the effective label-blind structure manifest",
+      "strict experimental receptor route is used",
+      "redock_status_final is PASS",
+      "receptor identifier and receptor file hash match the frozen job",
+      "all GNINA controls for the target completed without extraction failure",
+      "the target-local candidate set contains at least 16 molecules"
+    ],
+    "equals_zero_if_any": [
+      "experimental structure or qualified pocket is absent",
+      "receptor or redocking QC fails",
+      "GNINA job or score extraction is incomplete",
+      "target is one of the 46 recovered only because no experimental pocket existed"
+    ],
+    "forbidden": [
+      "Gate A or Gate B derived from evaluation-fold activity labels",
+      "positive or negative control membership",
+      "target identity embedding",
+      "learning qualification parameters from pair labels"
+    ]
+  },
+  "structure_increment_inputs": {
+    "pair_features": [
+      "primary_cnn_affinity_target_ecdf_minus_0_5",
+      "negative_primary_pose_vina_affinity_target_ecdf_minus_0_5",
+      "target_local_pose_score_spread_robust_quantile",
+      "log1p_valid_pose_count"
+    ],
+    "target_qc_features": [
+      "redocking_rmsd_robust_quantile",
+      "pocket_volume_robust_quantile",
+      "receptor_resolution_robust_quantile_when_available"
+    ],
+    "normalization": "target-local empirical CDF or robust quantile fitted without interaction labels; raw docking scores are never compared across targets",
+    "missing_value_policy": "qualification becomes zero; no zero-filled learned structure vector is passed to the residual head",
+    "prohibited_features": [
+      "raw cross-target GNINA score",
+      "target ID",
+      "database membership label",
+      "control class",
+      "current-fold Gate A or Gate B"
+    ]
+  },
+  "residual_mechanism": {
+    "cross_fitted_base_probability": "p0(d,t)=sigmoid(b(d,t))",
+    "residual_pseudo_outcome": "u(d,t)=y(d,t)-p0(d,t)",
+    "head": {
+      "type": "small residual MLP",
+      "hidden_widths": [32, 16],
+      "activation": "SiLU",
+      "normalization": "LayerNorm after each hidden affine layer",
+      "dropout": 0.1,
+      "output": "one scalar clipped to [-4,4]"
+    },
+    "final_logit": "s(d,t)=b(d,t)+a(t)*clip(r_theta(d,t),-4,4)",
+    "exact_fallback_invariant": "a(t)=0 implies s(d,t) and b(d,t) are bitwise identical before sigmoid",
+    "increment_interpretation": "the structure head is trained only to explain the cross-fitted nonstructural prediction residual; it is not permitted to relearn the complete label from sequence, molecule, or target identity"
+  },
+  "training_objective": {
+    "residual_loss": "Huber(u(d,t), a(t)*r_theta(d,t), delta=0.25) on qualified VALID pairs",
+    "target_query_loss": "pairwise softplus(-(s_positive-s_negative)) within target_chembl_id",
+    "drug_query_loss": "pairwise softplus(-(s_positive-s_negative)) within parent_molecule_chembl_id",
+    "full_objective": "L_residual + lambda_target*L_target_query + lambda_drug*L_drug_query + 1e-4*L2",
+    "query_pair_sampling": "equal numbers of evaluable target-query and drug-query positive-negative pairs per optimizer step; deterministic seed-specific sampling",
+    "fixed_search_grid": {
+      "lambda_target": [0.1, 0.25],
+      "lambda_drug": [0.25, 0.5, 1.0],
+      "learning_rate": [0.0003, 0.001],
+      "weight_decay": [0.0001],
+      "batch_qualified_pairs": [512]
+    },
+    "selection_objective": "equal-weight mean of inner-validation micro AUPRC, target-macro AUPRC, and drug-macro AUPRC",
+    "selection_constraints": [
+      "inner-validation drug-macro must not be below the frozen base",
+      "inner-validation target-macro may be at most 0.002 below the frozen base",
+      "ties within 1e-6 choose the lower-capacity and lower-learning-rate candidate"
+    ],
+    "optimizer": "AdamW",
+    "maximum_epochs": 100,
+    "early_stopping_patience": 12,
+    "gradient_norm_clip": 1.0
+  },
+  "required_variants": [
+    "BASE_ONLY_FROZEN_QUERY_BALANCED_BLEND",
+    "BASE_PLUS_TARGET_LOCAL_STRUCTURE_WITHOUT_QUALIFICATION",
+    "BASE_PLUS_QUALIFICATION_WITHOUT_RESIDUALIZATION",
+    "BASE_PLUS_RESIDUAL_WITHOUT_EXACT_FALLBACK_CONSTRAINT",
+    "FULL_EQIR_WITHOUT_DRUG_QUERY_LOSS",
+    "FULL_EQIR_WITHOUT_TARGET_QUERY_LOSS",
+    "FULL_EQIR_WITHOUT_TARGET_QC_FEATURES",
+    "FULL_EQIR"
+  ],
+  "mandatory_audits": {
+    "five_seed_directional_consistency": "at least 4 of 5 seeds have positive held-test micro AUPRC difference versus every required same-data reference",
+    "target_homology_cluster_bootstrap_micro_ci95_low": "> 0",
+    "drug_scaffold_bootstrap_micro_ci95_low": "> 0",
+    "target_macro_difference_point": ">= 0",
+    "target_macro_difference_ci95_low": ">= -0.002",
+    "drug_macro_difference_ci95_low": "> 0",
+    "drug_query_pair_signal": "full EQIR drug-macro AUPRC exceeds the within-drug score-permutation 95% upper bound",
+    "exact_fallback": {
+      "required": true,
+      "maximum_absolute_logit_difference_when_a_equals_zero": 0.0
+    },
+    "qualification_independence": "recompute a(t) using only frozen QC artifacts and verify no label-derived column is read"
+  },
+  "required_references": [
+    "same-data DTIAM official-representation compatible retrain",
+    "frozen BioMaster V1 five-seed model",
+    "frozen S3 query-balanced nonnovel blend",
+    "every required ablation"
+  ],
+  "post_stage1_decision": {
+    "all_development_gates_pass": "FREEZE_IMPLEMENTATION_HASH_THEN_OPEN_S3_CONFIRMATORY_FOLDS_3_4",
+    "any_development_gate_fails": "STOP_EQIR; RETAIN_NO_FULL_SOTA_CLAIM",
+    "stage1_success_alone_establishes_full_sota": false,
+    "full_algorithm_claim_still_requires": [
+      "locked S3 folds 3-4 confirmation",
+      "same-data comparator audit",
+      "source-held or genuinely external validation",
+      "complete five-seed ablation evidence"
+    ]
+  }
+}

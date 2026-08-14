@@ -1,0 +1,9 @@
+priority,task_code,task_zh,unit,units,max_model_runs,start_condition
+0,C0_QUINIDINE_INPUT_REPAIR,quinidine输入修复,pair,20,20,立即
+0,C0_RECEPTOR_PROTOCOL_REPAIR,受体协议修复,target,22,0,4个有A/B/C靶点优先
+0,C0_GATE_FAILURE_DIAGNOSTIC,Gate失败诊断,target,100,0,立即，先不扩筛pair
+0,C0_CONTROL_ACQUISITION,历史正负对照补全,target,54,0,立即，数据任务
+1,C1_BOLTZ_MULTI_SEED,Boltz多seed稳定性,pair,549,1098,可立即运行
+2,C2_GNINA_RECEPTOR_ENSEMBLE,GNINA替代受体ensemble,pair,311,614,27个靶点有合格替代实验结构；17条pair阻塞
+2,C3_BOLTZ_AFTER_RECEPTOR_RESCUE,受体修复后重算,pair,102,102,新受体协议redocking通过
+3,C4_MD_DEFERRED,限额MD,pair,100,100,多seed/ensemble稳定且pair级审计通过

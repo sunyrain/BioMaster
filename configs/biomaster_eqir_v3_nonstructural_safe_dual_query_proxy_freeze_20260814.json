@@ -1,0 +1,174 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_NONSTRUCTURAL_SAFE_DUAL_QUERY_PROXY_FREEZE_V1",
+  "created_utc": "2026-08-13T21:02:32Z",
+  "status": "FROZEN_BEFORE_PROXY_EXECUTION; DEVELOPMENT_ONLY; DOES_NOT_AUTHORIZE_STRUCTURE_TRAINING",
+  "purpose": "stress-test whether the frozen base-relative target-query and drug-query tail-regret objective can be optimized and can improve bidirectional ranking using only already available nonstructural development predictions",
+  "claim_boundary": {
+    "this_is": "an optimizer and objective pressure test on an intentionally permissive score-only adapter",
+    "this_is_not": [
+      "an EQIR implementation",
+      "evidence for structural feature utility",
+      "evidence for algorithmic novelty",
+      "a same-data SOTA result",
+      "authorization to open confirmatory folds 3-4",
+      "authorization to train any Stage1 structural model"
+    ],
+    "success_interpretation": "the dual-axis safe objective is computationally viable and merits retention for a future Stage1 experiment only if Stage0 independently passes all frozen gates",
+    "failure_interpretation": "the current dual-axis objective is weakened and must be revised or abandoned before any Stage1 use; Stage0 status cannot rescue a failed proxy objective"
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_exclusions_never_recovered": 480,
+    "later_pocket_quality_exclusions_never_recovered": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "input": {
+    "path": "outputs/old_drug_target_sota_v1/s3_query_balanced_blend_dev_v1/S3_DEV_FOLDS_0_2_QUERY_BALANCED_BLEND_PREDICTIONS_V1.csv.gz",
+    "sha256": "ee8120c37c716940c78271c132e5efbd0d70d1755438c758d706c9ca72b105e3",
+    "required_rows": 10531,
+    "required_folds_exactly": [0, 1, 2],
+    "confirmatory_folds_forbidden": [3, 4],
+    "label_column": "binary_label",
+    "target_query_column": "target_chembl_id",
+    "drug_query_column": "parent_standard_inchi_key",
+    "target_cold_cluster_column": "target_homology_cluster",
+    "drug_cold_cluster_column": "scaffold_group",
+    "frozen_base_score_column": "query_balanced_blend"
+  },
+  "outer_protocol": {
+    "scheme": "three-fold cross-fit over development folds 0-2",
+    "for_each_held_fold": "fit on the other two development folds and predict the held fold",
+    "hyperparameter_search": "none",
+    "early_stopping": "none",
+    "held_fold_usage": "metrics only after its model has finished; never used for fitting, epoch selection, calibration, thresholding, or constraint updates",
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817]
+  },
+  "adapter": {
+    "inputs_in_order": [
+      "logit(dtiam_probability)",
+      "logit(biomaster_stack_score)",
+      "logit(dtiam_probability)-logit(biomaster_stack_score)",
+      "absolute_logit_difference",
+      "logit(query_balanced_blend)"
+    ],
+    "prohibited_inputs": [
+      "binary label",
+      "target identifier",
+      "drug identifier",
+      "target homology cluster",
+      "drug scaffold group",
+      "fold identifier",
+      "any structure or pocket feature",
+      "any data from folds 3-4"
+    ],
+    "standardization": "training-fold mean and standard deviation only",
+    "network": "5 -> LayerNorm(5) -> Linear(5,8) -> GELU -> Linear(8,1)",
+    "residual_bound": [-2.0, 2.0],
+    "final_logit": "logit(query_balanced_blend)+clip(adapter_output,-2,2)",
+    "probability_clipping_epsilon": 1e-6,
+    "initialization": "seed-specific PyTorch default initialization",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 80,
+    "gradient_clip_norm": 5.0,
+    "device": "CPU",
+    "torch_threads": 4
+  },
+  "pair_and_risk_definition": {
+    "pair_construction": "all positive-negative Cartesian pairs within every evaluable query group inside the current training boundary; no random pair subsampling",
+    "pairwise_loss": "softplus(-(score_positive-score_negative))",
+    "group_regret": "mean(final_pairwise_loss-base_pairwise_loss) within each query group",
+    "cvar": "eta + mean(relu(group_regret-eta))/(1-alpha)",
+    "alpha": 0.8,
+    "delta_target": 0.01,
+    "delta_drug": 0.01,
+    "dual_initial_value": 0.0,
+    "dual_learning_rate": 0.003,
+    "dual_projection": [0.0, 10.0],
+    "eta_initial_value": 0.0,
+    "axis_aggregation": "target and drug pairwise terms are each averaged within axis before applying their frozen coefficients"
+  },
+  "variants": {
+    "BASE": {
+      "trainable": false,
+      "score": "query_balanced_blend"
+    },
+    "UNCONSTRAINED_BCE_ADAPTER": {
+      "bce": 1.0,
+      "lambda_target_pairwise": 0.0,
+      "lambda_drug_pairwise": 0.0,
+      "target_cvar_constraint": false,
+      "drug_cvar_constraint": false
+    },
+    "ORDINARY_DUAL_QUERY": {
+      "bce": 1.0,
+      "lambda_target_pairwise": 0.1,
+      "lambda_drug_pairwise": 0.25,
+      "target_cvar_constraint": false,
+      "drug_cvar_constraint": false
+    },
+    "TARGET_CVAR_ONLY": {
+      "bce": 1.0,
+      "lambda_target_pairwise": 0.1,
+      "lambda_drug_pairwise": 0.25,
+      "target_cvar_constraint": true,
+      "drug_cvar_constraint": false
+    },
+    "DRUG_CVAR_ONLY": {
+      "bce": 1.0,
+      "lambda_target_pairwise": 0.1,
+      "lambda_drug_pairwise": 0.25,
+      "target_cvar_constraint": false,
+      "drug_cvar_constraint": true
+    },
+    "DUAL_CVAR": {
+      "bce": 1.0,
+      "lambda_target_pairwise": 0.1,
+      "lambda_drug_pairwise": 0.25,
+      "target_cvar_constraint": true,
+      "drug_cvar_constraint": true
+    }
+  },
+  "required_outputs": [
+    "row-level out-of-fold probabilities for every learned variant and seed",
+    "per-fold and pooled micro AUPRC, target-macro AUPRC, and drug-macro AUPRC",
+    "per-fold and pooled target/drug group regret distributions and empirical CVaR_0.8",
+    "five-seed mean, standard deviation, and win counts",
+    "target-homology-cluster and drug-scaffold clustered paired bootstrap uncertainty",
+    "target-query and drug-query grouped bootstrap uncertainty",
+    "within-drug label-permutation diagnostic",
+    "machine-readable gate decision and full provenance hashes"
+  ],
+  "proxy_gates": {
+    "all_five_seeds_required": true,
+    "dual_seed_consistency": "DUAL_CVAR must exceed BASE micro AUPRC in at least 4 of 5 seeds",
+    "micro_cold_axis_uncertainty": "DUAL_CVAR minus BASE micro AUPRC 95% lower bound must exceed 0 under both target-homology-cluster and drug-scaffold resampling",
+    "target_direction": "target-macro point difference versus BASE must be nonnegative and grouped-bootstrap 95% lower bound must be at least -0.002",
+    "drug_direction": "drug-macro grouped-bootstrap 95% lower bound versus BASE must exceed 0",
+    "tail_no_harm": "pooled empirical target and drug CVaR_0.8 relative regret for DUAL_CVAR must each be <=0.01",
+    "incremental_value": "DUAL_CVAR must have nonnegative pooled target-macro and drug-macro differences versus ORDINARY_DUAL_QUERY",
+    "permutation": "DUAL_CVAR drug-macro AUPRC must exceed the 95th percentile of the frozen within-drug label-permutation null",
+    "all_gates_pass": "OBJECTIVE_PROXY_SUPPORTED_BUT_STAGE1_STILL_REQUIRES_INDEPENDENT_STAGE0_ALL_PASS",
+    "any_gate_fails": "OBJECTIVE_PROXY_NOT_SUPPORTED; DO_NOT_TRANSFER_THIS_OBJECTIVE_TO_STAGE1"
+  },
+  "uncertainty": {
+    "bootstrap_iterations": 2000,
+    "permutation_iterations": 1000,
+    "random_seed": 20260814,
+    "confidence_level": 0.95,
+    "five_seed_ensemble": "arithmetic mean of held-fold probabilities"
+  },
+  "hard_stops": [
+    "abort if input hash differs",
+    "abort if any fold outside 0-2 is observed",
+    "abort if any required identifier or score is missing",
+    "never modify or overwrite the frozen input",
+    "never use this proxy result to recover any of the 480 hard-gate or 24 later pocket-quality exclusions",
+    "never launch structural Stage1 from this script"
+  ]
+}

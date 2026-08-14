@@ -1,0 +1,156 @@
+{
+  "schema_version": "BIOMASTER_PIC_DTA_LABEL_BLIND_FEATURE_FREEZE_V1",
+  "created_utc": "2026-08-14T06:30:00Z",
+  "status": "FROZEN_BEFORE_LABEL_BLIND_FEATURE_EXTRACTION",
+  "method_working_name": "PIC-DTA: Paired Interval-Censored Counterfactual Drug-Target Affinity",
+  "purpose": "construct immutable drug and WT-to-modified protein features for a later paired potential-outcome model without opening affinity labels",
+  "novelty_boundary": {
+    "esm2_embeddings_are_prior_art": true,
+    "wildtype_mutant_embedding_differences_are_prior_art": true,
+    "siamese_or_delta_affinity_prediction_is_prior_art": true,
+    "antisymmetry_is_prior_art": true,
+    "tobit_censored_regression_is_prior_art": true,
+    "morgan_fingerprints_are_prior_art": true,
+    "feature_store_is_algorithmically_novel": false,
+    "candidate_contribution_to_test_later": "a drug-conditioned WT-versus-modified potential-outcome effect distribution supervised jointly by exact deltas and mathematically valid one-sided delta intervals induced by paired assay censoring",
+    "claim_gate": "no core algorithm innovation claim unless the frozen full model beats mutation-identity shuffle, no-drug-conditioning, point-label-only, WT-echo, and direct-affinity controls under grouped out-of-fold evaluation"
+  },
+  "inputs": {
+    "official_construct_full_fasta": {
+      "path": "outputs/old_drug_target_sota_v1/davis_complete_sequence_reconstruction_v1/DAVIS_COMPLETE_FULL_CONSTRUCTS_V1.fasta",
+      "sha256": "ccd4f1aef35729a5caeb4fb5a57ef3f482a2191a6699043343f2015b9bcdcd62",
+      "allowed_fields": ["protein_identifier", "amino_acid_sequence"]
+    },
+    "official_construct_domain_fasta": {
+      "path": "outputs/old_drug_target_sota_v1/davis_complete_sequence_reconstruction_v1/DAVIS_COMPLETE_KINASE_DOMAIN_CONSTRUCTS_V1.fasta",
+      "sha256": "fa393e2d0025598b9f2e81ef57088f79c814ee235476fa77acbdf12d0540c886",
+      "allowed_fields": ["protein_identifier", "amino_acid_sequence"]
+    },
+    "official_construct_manifest": {
+      "path": "outputs/old_drug_target_sota_v1/davis_complete_sequence_reconstruction_v1/DAVIS_COMPLETE_SEQUENCE_MANIFEST_V1.csv",
+      "sha256": "8e07f3dc53b54d4f6ee12b9d3ec639d8eb534798a1ae4767b5fc1d9b3222b5a6",
+      "columns_allowed": [
+        "official_row_index",
+        "gene_symbol_source",
+        "protein_display_name",
+        "protein",
+        "uniprot_accession",
+        "kinase_domain_length"
+      ]
+    },
+    "sequence_reconstruction_summary": {
+      "path": "outputs/old_drug_target_sota_v1/davis_complete_sequence_reconstruction_v1/DAVIS_COMPLETE_SEQUENCE_RECONSTRUCTION_SUMMARY_V1.json",
+      "sha256": "76754f753250fbd0b499f857dda78bb596fd0e4bbcdfa5faf5f8839d497e1858"
+    },
+    "official_ligand_dictionary": {
+      "path": ".external/davis_complete/scripts/davis_complete_curation/dict_name_cid_smi.pkl",
+      "sha256": "a1fdbe1d53caf579aa297a66e0d2b23d53510ae2f3986cf2c90c25c8bbd3e66c",
+      "allowed_fields": ["drug_name", "pubchem_cid", "smiles"]
+    },
+    "esm2_checkpoint": {
+      "path": "/root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D.pt",
+      "sha256": "ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c"
+    },
+    "esm2_contact_regression_checkpoint": {
+      "path": "/root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D-contact-regression.pt",
+      "sha256": "8ffe6edbd4173dc8d45c2cd5cb27d43aad77ec26b4c768200c58ae1f96693575"
+    }
+  },
+  "forbidden_inputs": [
+    ".external/davis_complete/scripts/davis_complete_curation/DAVIS.xls",
+    "outputs/old_drug_target_sota_v1/davis_complete_audit_v1/DAVIS_COMPLETE_LABEL_LEVEL_31824_V1.csv.gz",
+    "affinity_nM",
+    "y_pKd",
+    "is_capped_10uM",
+    "delta_pKd_modified_minus_wildtype"
+  ],
+  "frozen_counts_before_extraction": {
+    "official_constructs": 442,
+    "official_ligands": 72,
+    "official_modified_constructs": 56,
+    "paired_modified_constructs": 55,
+    "unpaired_modified_constructs": 1,
+    "paired_base_genes": 10,
+    "sequence_indistinguishable_phosphorylation_groups": 6
+  },
+  "pair_mapping": {
+    "paired_base_proteins": ["abl1", "braf", "egfr", "fgfr3", "flt3", "kit", "lrrk2", "met", "pik3ca", "ret"],
+    "mapping_rule": "a modified identifier is paired to the unique listed base protein whose identifier plus underscore is its prefix",
+    "unpaired_construct": "gcn2_kindom2s808g",
+    "unpaired_rule": "retain in feature manifest but exclude from paired-effect Phase A",
+    "phosphorylation_rule": "suffix/state p is an explicit binary feature even when amino-acid sequences are identical"
+  },
+  "drug_representation": {
+    "morgan_radius": 2,
+    "morgan_bits": 2048,
+    "use_chirality": true,
+    "saved_dtype": "uint8",
+    "invalid_smiles_hard_stop": true,
+    "no_label_derived_feature_selection": true
+  },
+  "protein_representation": {
+    "model": "ESM2 t33 650M UR50D",
+    "checkpoint_source": "local immutable checkpoint only",
+    "layer": 33,
+    "alignment": {
+      "algorithm": "Biopython PairwiseAligner global alignment",
+      "sequence_scope": "official full construct sequence, so mutations outside the UniProt kinase-domain annotation remain visible",
+      "match_score": 2.0,
+      "mismatch_score": -1.0,
+      "open_gap_score": -5.0,
+      "extend_gap_score": -1.0,
+      "changed_blocks": "maximal non-identical aligned blocks",
+      "hard_stop": "every non-phosphorylation-only modified construct must yield at least one changed block"
+    },
+    "context": {
+      "radius_residues_per_changed_block": 128,
+      "maximum_window_length": 257,
+      "wt_and_modified_windows": "separate aligned local windows centered on each changed block",
+      "same_sequence_phosphorylation": "exact zero ESM2 delta with explicit phosphorylation token"
+    },
+    "saved_vectors": [
+      "mean WT local-window embedding across changed blocks",
+      "mean modified local-window embedding across changed blocks",
+      "mean modified-minus-WT local-window embedding",
+      "signed per-dimension maximum-absolute local-window delta"
+    ],
+    "embedding_dimension": 1280,
+    "precision": "CUDA autocast float16 with float32 saved outputs",
+    "batch_size": 4,
+    "deterministic_seed": 20260814
+  },
+  "explicit_modification_features": {
+    "source_amino_acid_count": "20 dimensions from aligned substitutions/deletions",
+    "destination_amino_acid_count": "20 dimensions from aligned substitutions/insertions",
+    "scalar_features": [
+      "changed_block_count",
+      "substitution_count",
+      "deleted_residue_count",
+      "inserted_residue_count",
+      "net_length_change",
+      "is_phosphorylated_state",
+      "is_indel_or_itd",
+      "is_multi_event"
+    ],
+    "saved_dtype": "float32"
+  },
+  "required_audits": [
+    "all input and checkpoint hashes",
+    "no forbidden label file or label column opened",
+    "exact construct, ligand, modification, pairing and phosphorylation-group counts",
+    "alignment reconstruction equals each original WT and modified sequence",
+    "finite embeddings",
+    "nonzero ESM2 delta for every sequence-changing modified construct",
+    "exact-zero ESM2 delta for same-sequence phosphorylation-only construct",
+    "valid 72 by 2048 Morgan matrix",
+    "all output file hashes"
+  ],
+  "hard_stops": [
+    "abort on any hash or frozen count mismatch",
+    "never read DAVIS affinity labels during feature extraction",
+    "never infer phosphorylation from amino-acid sequence alone",
+    "never use the unpaired GCN2 construct as a paired delta observation",
+    "never alter the immutable 888/480/24/384 target scope",
+    "never call label-blind features a validated model or algorithm innovation"
+  ]
+}

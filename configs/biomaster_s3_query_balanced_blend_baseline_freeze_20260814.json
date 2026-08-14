@@ -1,0 +1,51 @@
+{
+  "version": "BIOMASTER_S3_QUERY_BALANCED_BLEND_BASELINE_FREEZE_20260814",
+  "status": "FROZEN_STRONG_NONNOVEL_DEVELOPMENT_BASELINE",
+  "parent_directional_gate": {
+    "path": "configs/biomaster_eqir_v3_directional_baseline_amendment_20260814.json",
+    "sha256": "d26cc9a19b807df5010a43f68e947220de0b473be57cd44e3678e02b13f0220e"
+  },
+  "scope": "S3_STRICT_DOUBLE_COLD development folds 0-2 only",
+  "fit_rule": "For each held-out development fold, select a DTIAM convex weight on the other two folds by maximizing the equal-weight mean of micro, target-macro and drug-macro AUPRC.",
+  "weight_grid": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "step": 0.025
+  },
+  "selected_dtiam_weight_by_held_fold": {
+    "0": 0.25,
+    "1": 0.275,
+    "2": 0.325
+  },
+  "pooled_crossfit_metrics": {
+    "micro_auprc": 0.6674694593411943,
+    "target_macro_auprc": 0.6952564021738544,
+    "drug_macro_auprc": 0.65705861194128,
+    "target_query_pair_signal_supported": true,
+    "drug_query_pair_signal_supported": true
+  },
+  "references": {
+    "dtiam": {
+      "micro_auprc": 0.6485601341855043,
+      "target_macro_auprc": 0.6893627302476969,
+      "drug_macro_auprc": 0.6309861111111111
+    },
+    "biomaster_stack": {
+      "micro_auprc": 0.6555050112797188,
+      "target_macro_auprc": 0.669287963301706,
+      "drug_macro_auprc": 0.6220914917598741
+    }
+  },
+  "statistical_boundary": {
+    "point_metrics_exceed_both_references": true,
+    "both_query_permutation_gates_pass": true,
+    "all_directional_paired_bootstrap_lowers_above_zero": false,
+    "all_clustered_micro_bootstrap_lowers_above_zero": false,
+    "closest_failed_gate": "micro AUPRC versus BioMaster under target-homology bootstrap: CI95 lower = -0.00005945"
+  },
+  "evidence": {
+    "summary": "outputs/old_drug_target_sota_v1/s3_query_balanced_blend_dev_v1/S3_QUERY_BALANCED_BLEND_DEV_SUMMARY_V1.json",
+    "summary_sha256": "65c8788faed80d483e6575356f72306cabab5c43bd7bca7b34122616ea31ea96"
+  },
+  "promotion_policy": "EQIR and any future algorithm candidate must be evaluated against this blend in addition to DTIAM and BioMaster V1. A convex score blend is calibration/ensemble engineering and is not an algorithm novelty."
+}

@@ -1,0 +1,38 @@
+{
+  "version": "BIOMASTER_EQIR_V3_QUERY_SIGNAL_AMENDMENT_20260813",
+  "status": "FROZEN_QUERY_SHORTCUT_BOUNDARY; CONTINGENT_ON_STAGE0_PASS",
+  "amends_without_overwriting": [
+    {
+      "path": "configs/biomaster_eqir_v3_preregistration.json",
+      "sha256": "d79ffba3e0d85b31251a13471521cd175f7121e89da6fc50bb198f851f8c2e1b"
+    },
+    {
+      "path": "configs/biomaster_eqir_v3_novelty_amendment_20260813.json",
+      "sha256": "2c99a7b5b0a650761f036bd78659d64f878723d3dcee5261920c980743e49fa5"
+    }
+  ],
+  "falsification_evidence": {
+    "query_shortcut_audit": {
+      "path": "outputs/old_drug_target_sota_v1/query_shortcut_dependence_audit_v1/QUERY_SHORTCUT_DEPENDENCE_SUMMARY_V1.json",
+      "sha256": "95180cc18337347ed8cbfdede894052a456d40596f2bd5f6c5233fa3076c4f89",
+      "result": "BioMaster V1 target-query pair signal is supported in S2/S3/S5, but drug-query pair signal is not supported in S2 or S3."
+    },
+    "simple_neutralization_audit": {
+      "path": "outputs/old_drug_target_sota_v1/s3_query_prior_neutralization_dev_v1/S3_QUERY_PRIOR_NEUTRALIZATION_DEV_SUMMARY_V1.json",
+      "sha256": "8b5bfa7e4b2c348034ade8b28affaadcb831dc03e5864719f409901fad8054ec",
+      "scope": "S3 development folds 0-2 only; confirmation folds 3-4 were not read",
+      "result": "Cross-fold target score mean neutralization reduced drug-macro AUPRC from 0.62209149 to 0.61828957; paired group bootstrap CI [-0.04890237, 0.04092232]; drug-query permutation gate remained false."
+    }
+  },
+  "new_required_gate_if_stage0_passes": {
+    "name": "drug_query_pair_signal_beyond_group_prior",
+    "definition": "Within each old-drug query group, permute candidate-target ordering while preserving that drug's score distribution. The full EQIR drug-macro AUPRC must exceed the 95th percentile of this null distribution.",
+    "rationale": "Micro-AUPRC or a preserved drug-level score prior does not demonstrate old-drug-to-new-target pair ranking.",
+    "applies_to": [
+      "FULL_CROSSFIT_ORTHOGONAL_EQIR",
+      "all directional ablations used to attribute the gain"
+    ],
+    "failure_action": "DO_NOT_ADVANCE_TO_CONFIRMATION_FOLDS; NO_OLD_DRUG_NEW_TARGET_ALGORITHM_CLAIM"
+  },
+  "prohibited_claim": "Target score centering, query-prior subtraction, or calibration alone is not an algorithm novelty and cannot substitute for pair-level incremental evidence."
+}

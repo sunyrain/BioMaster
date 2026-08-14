@@ -1,0 +1,149 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_TAPB_CONTROL_FREEZE_V1",
+  "created_utc": "2026-08-13T20:21:51Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN; CONDITIONAL_ON_ALL_STAGE0_GATES_PASSING",
+  "purpose": "test whether target-prior intervention and target-feature corruption explain any apparent EQIR gain, using the same leak-free BioMaster folds rather than TAPB released headline splits",
+  "parents": {
+    "stage1_method_freeze": {
+      "path": "configs/biomaster_eqir_v3_stage1_method_freeze_20260814.json",
+      "sha256": "ebb3255d0ea445d2c1220b61af1f3fabfce7af38ff4aa4b8740f669d2403cdd1"
+    },
+    "stage1_objective_amendment": {
+      "path": "configs/biomaster_eqir_v3_stage1_objective_amendment_20260814.json",
+      "sha256": "b2c82e995d00bf09991633824197889656b50d0a4eaa297de556b4237388bdc4"
+    },
+    "tapb_code_split_audit": {
+      "path": "outputs/old_drug_target_sota_v1/TAPB_RELEASED_CODE_AND_SPLIT_AUDIT_V1.json",
+      "sha256": "55c23a0d3923376c498efa0af7f25f602782bb2b3c7c402e9925a26d451f91d4"
+    },
+    "tapb_biomaster_source_overlap_audit": {
+      "path": "outputs/old_drug_target_sota_v1/TAPB_BIOMASTER_SOURCE_OVERLAP_AUDIT_V1.json",
+      "sha256": "61471c885deb4ed9af154de0f0eddf1af45129266dca64feb72384decacf180a"
+    },
+    "primary_paper_matrix": {
+      "path": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V10.csv",
+      "sha256": "82e2f2eb5f5f51fd034e4f9029390ef976fe138c1af2f825228bd2e702e964f5"
+    }
+  },
+  "freeze_timing_integrity": {
+    "formal_structure_evaluation_files_present": 0,
+    "formal_structure_scores_joined_to_labels": false,
+    "stage0_decision_available": false,
+    "confirmatory_s3_folds_3_4_read_for_this_freeze": false,
+    "official_tapb_repository": "third_party/sota_dti_2026/TAPB@ac846b1463ecf4a031b84bd6caacb57b25d50d4f",
+    "official_tapb_released_csvs_audited": 20
+  },
+  "activation_rule": {
+    "required_stage0_decision": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "all_amended_stage0_gates_required": true,
+    "otherwise": "DO_NOT_IMPLEMENT_OR_TRAIN_TAPB_INSPIRED_CONTROLS"
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "why_not_use_released_tapb_headline_as_the_comparator": {
+    "cluster_execution": "official main.py assigns target_test_with_id.csv to both validation and test, and Trainer selects the best epoch by validation AUROC",
+    "davis_release": "train-val/train-test/val-test contain 126/177/246 exact pair overlaps and 24/46/28 label-set conflicts",
+    "source_overlap": "the union of six released TAPB training files overlaps 1713 frozen BioMaster canonical pairs with 109 label-set conflicts; S5 contains 136 affected rows",
+    "conclusion": "released values are prior-art context, not same-data or independent-validation evidence"
+  },
+  "shared_protocol": {
+    "primary_protocol": "S3_STRICT_DOUBLE_COLD",
+    "secondary_stress_protocol": "S2_HOMOLOGY_COLD_TARGET",
+    "development_folds": [0, 1, 2],
+    "confirmatory_s3_folds_locked": [3, 4],
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817],
+    "inner_validation": "the same deterministic grouped inner folds jointly respecting target homology cluster and drug scaffold group as EQIR",
+    "fit_boundary": "all train-derived target prototypes, priors, corruption statistics, model parameters and checkpoints are recomputed inside each frozen TRAIN/VALID boundary; held TEST is evaluated once",
+    "selection_objective": "equal-weight mean of inner-validation micro AUPRC, target-macro AUPRC and drug-macro AUPRC",
+    "selection_constraints": [
+      "drug-macro must not be below the frozen query-balanced base",
+      "target-macro may be at most 0.002 below the frozen query-balanced base",
+      "no held-test labels may influence prototype construction, hyperparameters, checkpoint selection or calibration"
+    ]
+  },
+  "frozen_inputs": {
+    "drug": "DTIAM_BERMOL768_FLOAT32_V1, frozen and projected by a trainable low-rank adapter",
+    "target": "DTIAM_ESM2_T33_650M_1280_FLOAT32_V1, frozen and projected by a trainable low-rank adapter",
+    "nonstructural_reference": "the fold-specific frozen DTIAM-BioMaster query-balanced base logit",
+    "structure_features_used_by_tapb_controls": false,
+    "target_identity_used": false,
+    "external_tapb_labels_pooled": false
+  },
+  "train_only_target_prior_intervention": {
+    "prototype_builder": "KMeans over frozen ESM2 target embeddings from the current TRAIN boundary only",
+    "prototype_counts": [4, 8, 16],
+    "prototype_prior": "empirical TRAIN target assignment frequency normalized to sum one",
+    "alignment": "projected target query attends to train-only target prototypes; prototype-conditioned predictions are marginalized by the train-only prototype prior",
+    "target_feature_corruption": {
+      "dropout_rates": [0.0, 0.3, 0.7],
+      "gaussian_mutation_standard_deviation": [0.0, 0.05, 0.1],
+      "statistics": "mutation scale is computed only from current TRAIN target embeddings"
+    },
+    "important_boundary": "this is a capacity-matched TAPB-inspired control, not an official TAPB reproduction and not a causal-effect estimate"
+  },
+  "required_variants": [
+    {
+      "name": "FROZEN_QUERY_BALANCED_BASE_ONLY",
+      "role": "strong nonnovel no-refit reference"
+    },
+    {
+      "name": "TAPB_INSPIRED_DIRECT_FROZEN_EMBEDDING_ADAPTER",
+      "role": "same encoder/adaptor capacity without target prototypes, prior marginalization or target corruption"
+    },
+    {
+      "name": "TAPB_INSPIRED_TRAIN_ONLY_TARGET_INTERVENTION",
+      "role": "full target-prototype alignment, train-only prior marginalization and target corruption control"
+    },
+    {
+      "name": "EQIR_FULL",
+      "role": "preregistered qualified-structure candidate, activated only after Stage0"
+    }
+  ],
+  "capacity_and_training_fairness": {
+    "projection_widths": [16, 32],
+    "interaction": "elementwise product, absolute difference and scalar dot product after matched projections",
+    "head": "two-layer SiLU MLP with LayerNorm and dropout 0.1",
+    "parameter_matching": "select the smallest projection/head combination within plus or minus 10 percent of the active trainable parameter count of EQIR; report exact counts",
+    "optimizer": "AdamW",
+    "learning_rates": [0.0003, 0.001],
+    "weight_decay": 0.0001,
+    "maximum_epochs": 100,
+    "early_stopping_patience": 12,
+    "gradient_norm_clip_before_optimizer_step": 1.0,
+    "same_batch_and_pair_sampling": "match EQIR qualified-pair batch size and dual-query positive-negative sampling where applicable"
+  },
+  "mandatory_metrics_and_gates": {
+    "metrics": [
+      "micro AUPRC",
+      "target-macro AUPRC",
+      "drug-macro AUPRC",
+      "target-query within-group permutation signal",
+      "drug-query within-group permutation signal"
+    ],
+    "uncertainty": [
+      "target-homology-cluster grouped bootstrap",
+      "drug-scaffold grouped bootstrap",
+      "drug-grouped directional bootstrap"
+    ],
+    "eqir_must_beat": [
+      "TAPB_INSPIRED_DIRECT_FROZEN_EMBEDDING_ADAPTER",
+      "TAPB_INSPIRED_TRAIN_ONLY_TARGET_INTERVENTION"
+    ],
+    "minimum_support": "at least 4 of 5 EQIR seeds improve held-test micro AUPRC versus each TAPB-inspired control, both cold-axis CI lower bounds exceed zero, target-macro is noninferior within -0.002, and drug-macro grouped CI lower bound exceeds zero"
+  },
+  "reporting_policy": {
+    "official_tapb_reproduction_name_forbidden": true,
+    "causal_effect_claim_forbidden": true,
+    "released_tapb_headline_same_data_comparison_forbidden": true,
+    "report_direct_adapter_and_intervention_variants_together": true,
+    "disclose_code_split_and_source_overlap_audits": true
+  }
+}

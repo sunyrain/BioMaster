@@ -1,0 +1,34 @@
+{
+  "version": "BIOMASTER_EQIR_V3_GNINA_EXECUTION_FREEZE_20260814",
+  "status": "FULL_QUEUE_RUNNING",
+  "queue_freeze": {
+    "path": "configs/biomaster_eqir_v3_effective_structure_queue_freeze_20260813.json",
+    "sha256": "7da8958d2eb1d3b9a40ca40cf94703a6d00be86fcb136b3b100a62d1a9c08774"
+  },
+  "benchmark": {
+    "targets": 4,
+    "controls": 76,
+    "completed_targets": 4,
+    "failed_targets": 0,
+    "elapsed_seconds": 839.9976947307587,
+    "workers_on_one_gpu": 4,
+    "cpus_per_job": 4,
+    "summary": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_execution_inputs_v1/GNINA_CALIBRATION_RUN_SUMMARY_V3_SMALL_MOLECULE_BENCHMARK4_V1.json",
+    "summary_sha256": "318d35bea93acafe15adc1c4a6c9491b6db3548f91651ed6103c14febca3d865"
+  },
+  "full_execution": {
+    "jobs": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_execution_inputs_v1/V3_LABEL_BLIND_GNINA_ALL_READY_JOBS_V1.csv",
+    "jobs_sha256": "42ee166ed626fe12d544f5b143558bbb92fa3b6f10d32d36cd62c926d24b7d58",
+    "gpu_ids": [
+      0
+    ],
+    "jobs_per_gpu": 8,
+    "cpus_per_job": 4,
+    "exhaustiveness": 16,
+    "num_modes": 5,
+    "cnn_scoring": "rescore",
+    "run_label": "v3_stage0_small_molecule_full8",
+    "resume_policy": "Reuse only a completed run_status whose output ligand count exactly equals prepared_controls; otherwise overwrite the incomplete output and rerun."
+  },
+  "scientific_invariance": "Concurrency changes wall-clock throughput only; every target retains its frozen receptor, ligand set, box, GNINA seed, exhaustiveness, mode count and scoring protocol."
+}

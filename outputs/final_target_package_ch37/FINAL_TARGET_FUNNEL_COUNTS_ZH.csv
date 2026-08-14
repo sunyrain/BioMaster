@@ -1,0 +1,8 @@
+步骤,集合,保留数,本步去除数,规则
+0,ChEMBL 37人源单蛋白MoA全集,888,0,Homo sapiens + SINGLE PROTEIN + 至少一条drug mechanism/MoA记录
+1,排除GPCR,745,143,排除ChEMBL或Open Targets标记为GPCR的靶点
+2,保留ChEMBL小分子MoA靶点,450,295,非GPCR，且ChEMBL 37 molecule_type=Small molecule的MoA记录至少一条
+3,保留五类可实验靶点,408,42,激酶、酶、核内/表观遗传蛋白、离子通道、转运体
+4,要求已有合格实验口袋,362,46,至少一个映射到canonical UniProt残基、接触残基>=3且已去除水/添加剂/离子/微小碎片的实验配体接触集合
+5,要求优先实验口袋,341,21,只保留药物映射高质量实验口袋或专业口袋数据库确认的实验位点
+6,要求药物样holo口袋,338,3,优先实验口袋中至少存在DRUG_MAPPED或DRUGLIKE_UNMAPPED实验配体；排除仅有辅因子/功能片段位点

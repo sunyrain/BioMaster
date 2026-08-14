@@ -1,0 +1,200 @@
+{
+  "schema_version": "BIOMASTER_PIC_DTA_PHASE_A_FREEZE_V1",
+  "created_utc": "2026-08-14T06:48:00Z",
+  "status": "FROZEN_BEFORE_PHASE_A_IMPLEMENTATION_OR_MODEL_FITTING",
+  "method_working_name": "PIC-DTA: Paired Interval-Censored Counterfactual Drug-Target Affinity",
+  "primary_question": "Does a drug-conditioned WT-to-modification effect distribution learn true modification identity and one-sided paired censoring information better than conventional point regression and matched negative controls?",
+  "claim_boundary_before_results": {
+    "verified_core_algorithm_innovation": false,
+    "verified_same_data_sota": false,
+    "feature_embeddings_novel": false,
+    "permitted_language": "preregistered algorithm candidate and mechanism test",
+    "forbidden_language": ["SOTA", "validated innovation", "best model", "novel architecture"]
+  },
+  "inputs": {
+    "label_table": {
+      "path": "outputs/old_drug_target_sota_v1/davis_complete_audit_v1/DAVIS_COMPLETE_LABEL_LEVEL_31824_V1.csv.gz",
+      "sha256": "c1275e737080a2f8aa44982c8216128b61d3f816abcb972136d1bc44d221d16e"
+    },
+    "official_data_audit": {
+      "path": "outputs/old_drug_target_sota_v1/davis_complete_audit_v1/DAVIS_COMPLETE_OFFICIAL_CODE_DATA_AUDIT_SUMMARY_V1.json",
+      "sha256": "919feab7f616b67c9ca53cd59c91338190fc147d048afb102c930d07e437c8b3"
+    },
+    "label_blind_feature_summary": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_LABEL_BLIND_FEATURE_SUMMARY_V1.json",
+      "sha256": "cfc5c86b8782f7425911445c99b1dd64471f08b640207107717572d2586aedd1"
+    },
+    "construct_manifest": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_MODIFIED_CONSTRUCT_FEATURE_MANIFEST_56_V1.csv",
+      "sha256": "1790e2d54e27e5c1b03b386d5d0ad0b804000820fb2fcc31e9b3742c692c7435"
+    },
+    "drug_manifest": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_DRUG_FEATURE_MANIFEST_72_V1.csv",
+      "sha256": "69196b2d9347328b660444bd69508c1796c8bf806f0f033aeee04f6f4a02b3a0"
+    },
+    "explicit_modification_features": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_EXPLICIT_MODIFICATION_FEATURES_56X48_FLOAT32_V1.npy",
+      "sha256": "a5f0f7d1bdf8bb770eaf71c071598512d82d78408586b6f2b6c1c76b0888bea1"
+    },
+    "drug_morgan_features": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_DRUG_MORGAN_72X2048_UINT8_V1.npy",
+      "sha256": "acfbd7700adfd2a51dfd3ea5dfc976c09756f70394d765211a242dbadc744e05"
+    },
+    "esm2_wt_local_features": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_ESM2_WT_LOCAL_MEAN_56X1280_FLOAT32_V1.npy",
+      "sha256": "e8df7bb65f19157c183c73cc5a85d76ef68af5f0e75b77e1eec73355d0555bb7"
+    },
+    "esm2_modified_local_features": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_ESM2_MODIFIED_LOCAL_MEAN_56X1280_FLOAT32_V1.npy",
+      "sha256": "78a0852609c2d6059484bb1b35a1e4e57e7a690bd1c62fee728d773990578afe"
+    },
+    "esm2_delta_mean_features": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_ESM2_LOCAL_DELTA_MEAN_56X1280_FLOAT32_V1.npy",
+      "sha256": "791d300fc9a60beceba50525c26716e0458cb2dccd2080f4a3ddaf83122df84f"
+    },
+    "esm2_delta_maxabs_features": {
+      "path": "outputs/old_drug_target_sota_v1/pic_dta_label_blind_features_v1/PIC_DTA_ESM2_LOCAL_DELTA_SIGNED_MAXABS_56X1280_FLOAT32_V1.npy",
+      "sha256": "3049dbc90cd2e6a86dd35ce5209b531298d25bddfb57f9901c104e0f7a8209e6"
+    }
+  },
+  "frozen_data_scope": {
+    "paired_modified_constructs": 55,
+    "base_genes": 10,
+    "drugs": 72,
+    "paired_rows": 3960,
+    "exact_delta_rows": 1601,
+    "lower_bound_delta_rows": 134,
+    "upper_bound_delta_rows": 157,
+    "uninformative_both_capped_delta_rows": 2068,
+    "unpaired_gcn2_rows_excluded": 72,
+    "censoring_threshold_pKd": 5.0,
+    "delta_definition": "modified pKd minus WT pKd; positive means stronger modified binding"
+  },
+  "paired_interval_targets": {
+    "WT_UNCAPPED_MODIFIED_UNCAPPED": "exact delta = modified_pKd - WT_pKd",
+    "WT_CAPPED_MODIFIED_UNCAPPED": "lower bound delta >= modified_pKd - 5.0",
+    "WT_UNCAPPED_MODIFIED_CAPPED": "upper bound delta <= 5.0 - WT_pKd",
+    "WT_CAPPED_MODIFIED_CAPPED": "no identifiable delta supervision; never substitute zero or a point value",
+    "loss": {
+      "exact": "Gaussian negative log density",
+      "lower_bound": "negative log normal survival probability",
+      "upper_bound": "negative log normal CDF probability",
+      "category_weighting": "exact total weight equals combined lower-plus-upper total weight; lower and upper each receive half the exact total weight",
+      "exact_weight": 1.0,
+      "lower_weight": 5.973880597014926,
+      "upper_weight": 5.098726114649682
+    }
+  },
+  "outer_protocols": {
+    "VARIANT_CONSTRUCT_COLD": {
+      "folds": 5,
+      "group": "exact modified construct",
+      "assignment": "sort constructs by sha256('PIC-DTA-VARIANT|'+protein), then assign consecutive groups round-robin to folds 0-4",
+      "expected_test_constructs_per_fold": 11
+    },
+    "BASE_GENE_COLD": {
+      "folds": 5,
+      "group": "base wild-type protein",
+      "fixed_test_groups": {
+        "0": ["abl1"],
+        "1": ["egfr", "fgfr3"],
+        "2": ["pik3ca", "braf"],
+        "3": ["kit", "met"],
+        "4": ["flt3", "ret", "lrrk2"]
+      }
+    },
+    "DRUG_SCAFFOLD_COLD": {
+      "folds": 5,
+      "group": "RDKit Bemis-Murcko generic scaffold; empty-scaffold drugs use canonical SMILES as an acyclic singleton group",
+      "assignment": "sort scaffold groups by descending drug count then sha256('PIC-DTA-DRUG|'+group); greedily assign each group to the least-loaded fold, breaking ties by fold index"
+    }
+  },
+  "inner_validation": {
+    "group_scope": "same grouping unit as the outer protocol",
+    "fraction_of_outer_train_groups": 0.15,
+    "minimum_validation_groups": 1,
+    "selection": "minimum validation loss for the variant-specific frozen objective",
+    "test_labels_never_used_for_selection": true
+  },
+  "outer_train_only_preprocessing": {
+    "drug_morgan": "StandardScaler then PCA32 fitted on unique outer-training drugs; zero-pad if rank below 32",
+    "wt_esm2": "StandardScaler then PCA16 fitted on unique outer-training constructs",
+    "modified_esm2": "StandardScaler then PCA16 fitted on unique outer-training constructs for the direct-affinity control and reverse audits",
+    "delta_mean_esm2": "StandardScaler then PCA16 fitted on unique outer-training constructs",
+    "delta_maxabs_esm2": "StandardScaler then PCA16 fitted on unique outer-training constructs",
+    "explicit_modification": "StandardScaler fitted on unique outer-training constructs",
+    "no_transductive_fit_on_outer_test_features": true
+  },
+  "model": {
+    "drug_encoder": "PCA32 -> Linear64 -> GELU -> Linear32",
+    "modification_encoder": "WT-PCA16 + delta-mean-PCA16 + delta-maxabs-PCA16 + explicit48 = 96 -> Linear64 -> GELU -> Linear32",
+    "effect_mean": "linear modification main effect plus scaled 32-dimensional drug-modification dot product",
+    "effect_scale": "Softplus of Linear64->32->1 over concatenated drug and modification latents, clamped to [0.02, 3.0]",
+    "identity_consistency": "virtual zero-modification rows for each training drug must predict tau=0",
+    "identity_consistency_weight": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 512,
+    "maximum_epochs": 300,
+    "early_stopping_patience": 35,
+    "gradient_clip_norm": 5.0,
+    "phase_a_seed": 20260814,
+    "device": "CUDA if available without interrupting GNINA, otherwise CPU"
+  },
+  "frozen_variants": {
+    "ZERO_TAU_WT_ECHO": "tau is exactly zero; no fitting",
+    "RIDGE_POINT_EXACT": "RidgeCV on exact deltas using all frozen preprocessed features",
+    "DIRECT_MUTANT_TOBIT": "same neural encoders predict absolute modified pKd with exact-or-upper-censored Tobit likelihood; derive delta only where WT is exact",
+    "WT_LOCAL_ONLY_INTERVAL": "same effect model and parameter count; delta and explicit modification inputs are exact zeros",
+    "SHUFFLED_MODIFICATION_IDENTITY_WITHIN_GENE_INTERVAL": "same effect model; permute WT, delta and explicit modification feature rows within gene separately in train/validation/test using a frozen seed, leaving labels and drugs fixed",
+    "NO_DRUG_CONDITIONING_INTERVAL": "same effect model and parameter count; drug encoder input is exact zero",
+    "FULL_POINT_EXACT_ONLY": "full effect model trained only on exact delta rows",
+    "FULL_PAIRED_INTERVAL": "full effect model trained on exact deltas plus lower and upper bounds with identity consistency"
+  },
+  "primary_metrics": {
+    "exact_delta": ["MSE", "RMSE", "MAE", "Pearson", "Spearman", "concordance_index"],
+    "informative_interval": ["weighted_interval_NLL", "one_sided_bound_violation"],
+    "strict_direction": "balanced accuracy and AUROC on exact deltas with |delta| >= 0.3 pKd",
+    "ranking": ["mean within-modification across-drug Pearson", "mean within-drug/base-gene across-modification Pearson"]
+  },
+  "uncertainty": {
+    "cluster_bootstrap_replicates": 1000,
+    "confidence_interval": 0.95,
+    "cluster_by_protocol": {
+      "VARIANT_CONSTRUCT_COLD": "protein",
+      "BASE_GENE_COLD": "base_wildtype_protein",
+      "DRUG_SCAFFOLD_COLD": "drug_scaffold_group"
+    }
+  },
+  "phase_a_signal_gates": {
+    "gate_1": "FULL_PAIRED_INTERVAL exact-delta MSE is lower than ZERO_TAU_WT_ECHO in VARIANT_CONSTRUCT_COLD",
+    "gate_2": "FULL_PAIRED_INTERVAL beats SHUFFLED_MODIFICATION_IDENTITY_WITHIN_GENE_INTERVAL on exact-delta MSE with cluster-bootstrap 95% upper bound below zero in VARIANT_CONSTRUCT_COLD",
+    "gate_3": "FULL_PAIRED_INTERVAL beats NO_DRUG_CONDITIONING_INTERVAL on exact-delta MSE with cluster-bootstrap 95% upper bound below zero in VARIANT_CONSTRUCT_COLD",
+    "gate_4": "FULL_PAIRED_INTERVAL beats FULL_POINT_EXACT_ONLY on weighted interval NLL with cluster-bootstrap 95% upper bound below zero, while exact-delta MSE is not worse by more than 0.01",
+    "gate_5": "FULL_PAIRED_INTERVAL strict-direction balanced accuracy exceeds 0.55 in both VARIANT_CONSTRUCT_COLD and BASE_GENE_COLD",
+    "gate_6": "all input, split, finite-prediction, parameter-count, unavailable/uninformative-label and test-label isolation audits pass"
+  },
+  "decision_rule": {
+    "all_gates_pass": "OPEN_FIVE_SEED_CONFIRMATION_AND_OFFICIAL_FEW_SHOT_COMPARISON; still do not claim SOTA before confirmation and external validation",
+    "any_gate_fails": "PHASE_A_MECHANISM_NOT_SUPPORTED; retain null result and do not call PIC-DTA an algorithm innovation",
+    "independent_external_validation": "PBCNet2.0 mutation set and/or another mutation-affinity dataset is mandatory after internal DAVIS development"
+  },
+  "required_outputs": [
+    "split audit with exact non-overlap",
+    "out-of-fold predictions for every variant and protocol",
+    "metrics and 1000-replicate cluster bootstrap comparisons",
+    "checkpoints and parameter counts",
+    "frozen gate decisions",
+    "input/output hashes and explicit claim boundary"
+  ],
+  "hard_stops": [
+    "never convert a capped pKd=5 observation into an exact delta",
+    "never use both-capped pairs as mutation-effect point labels",
+    "never tune on outer-test labels",
+    "never change folds, variants, metrics or gates after viewing Phase A results",
+    "never use unpaired GCN2 in paired-effect training",
+    "never alter the immutable 888/480/24/384 target scope",
+    "never call an internal single-dataset result SOTA"
+  ]
+}

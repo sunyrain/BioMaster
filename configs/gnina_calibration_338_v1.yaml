@@ -1,0 +1,66 @@
+version: GNINA_CALIBRATION_338_V1
+
+source_scope:
+  chembl_release: 37
+  organism: Homo sapiens
+  target_type: SINGLE PROTEIN
+  assay_type: B
+  assay_relationship_type: D
+  minimum_assay_confidence: 9
+  exclude_variant_assays: true
+  exclude_potential_duplicates: true
+  allowed_data_validity_comments: ["", Manually validated]
+
+activity_evidence:
+  numeric_standard_types: [Kd, Ki, IC50]
+  numeric_standard_units: [nM]
+  positive_pchembl_min: 6.0
+  negative_pchembl_max: 5.0
+  positive_censored_relations: ["<", "<="]
+  negative_censored_relations: [">", ">="]
+  positive_censored_max_nm: 1000.0
+  negative_censored_min_nm: 10000.0
+  explicit_inactive_patterns: [inactive, not active, no activity]
+
+control_quality:
+  positive_gold: quantitative Kd/Ki at or stronger than 1 uM
+  positive_silver: quantitative binding IC50 at or stronger than 1 uM
+  negative_gold: quantitative Kd/Ki at or weaker than 10 uM
+  negative_silver: quantitative binding IC50 at or weaker than 10 uM
+  negative_bronze: explicit inactive text without qualifying quantitative evidence
+  grey: activity between 1 and 10 uM or insufficient quantitative direction
+  conflict: the same parent compound-target pair contains both positive and negative evidence
+
+docking_domain:
+  minimum_mw: 100.0
+  maximum_mw: 900.0
+  minimum_heavy_atoms: 7
+  maximum_heavy_atoms: 65
+  maximum_rotatable_bonds: 20
+  maximum_absolute_formal_charge: 2
+  allowed_atomic_numbers: [1, 6, 7, 8, 9, 15, 16, 17, 35, 53]
+  require_single_fragment: true
+
+panel:
+  quota_levels_per_class: [32, 16, 8]
+  reference_exact_tanimoto: 0.999
+  reference_near_tanimoto: 0.70
+  remote_tanimoto: 0.40
+  primary_negative_qualities: [NEG_Q1_DIRECT_KD_KI, NEG_Q2_BINDING_IC50]
+  reserve_negative_qualities: [NEG_Q3_EXPLICIT_INACTIVE_TEXT]
+  property_distance_scales:
+    mw: 100.0
+    clogp: 2.0
+    heavy_atoms: 10.0
+    rotatable_bonds: 5.0
+    hbd: 2.0
+    hba: 4.0
+    formal_charge: 1.0
+
+execution:
+  gnina_binary: /root/autodl-tmp/tools/gnina/gnina.1.3.2
+  cnn_scoring: rescore
+  exhaustiveness: 16
+  num_modes: 5
+  receptor_protocol_required_status: FROZEN_PASS
+  partial_reference_status: FROZEN_PASS_PARTIAL_REFERENCE_REVIEW

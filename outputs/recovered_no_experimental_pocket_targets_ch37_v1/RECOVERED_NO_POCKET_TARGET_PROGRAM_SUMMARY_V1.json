@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-08-09T13:57:04.563204+00:00",
+  "status": "PASS",
+  "scope_definition": "targets whose first exclusion reason is only EXCLUDE_NO_ELIGIBLE_EXPERIMENTAL_POCKET",
+  "targets": 46,
+  "assay_lane_counts": {
+    "ENZYME_BIOCHEMICAL": 24,
+    "ION_CHANNEL_FUNCTIONAL": 8,
+    "KINASE_BIOCHEMICAL": 6,
+    "TRANSPORTER_MEMBRANE_FUNCTIONAL": 6,
+    "NUCLEAR_EPIGENETIC_DOMAIN": 2
+  },
+  "historical_experimental_evidence_counts": {
+    "H5_SPARSE_OR_NONE": 21,
+    "H1_RICH_POSITIVE_NEGATIVE": 11,
+    "H2_ADEQUATE_POSITIVE_NEGATIVE": 9,
+    "H3_MINIMUM_POSITIVE_NEGATIVE": 4,
+    "H4_POSITIVE_ONLY": 1
+  },
+  "computed_pocket_evidence_counts": {
+    "P1_P2RANK_FPOCKET_SAME_SITE": 37,
+    "P2_FPOCKET_GEOMETRIC_RESCUE": 7,
+    "P3_LOW_CONFIDENCE_FRAGMENT_HYPOTHESIS": 2
+  },
+  "evidence_compute_route_counts": {
+    "R1_DUAL_POCKET_WITH_MEASURED_CONTROLS": 23,
+    "R2_DUAL_POCKET_CONTROL_ACQUISITION": 14,
+    "R4_GEOMETRIC_RESCUE_CONTROL_ACQUISITION": 6,
+    "R5_LOW_CONFIDENCE_STRUCTURE_FIRST": 2,
+    "R3_GEOMETRIC_RESCUE_WITH_MEASURED_CONTROLS": 1
+  },
+  "wetlab_priority_counts": {
+    "W1_IMMEDIATE_CONTROL_AND_BINDING_PANEL": 19,
+    "W3_CONTROL_OR_STRUCTURE_ACQUISITION": 16,
+    "W2_MINIMUM_CONTROL_AND_POCKET_VALIDATION": 11
+  },
+  "invariants": {
+    "exactly_46_targets": true,
+    "all_pass_non_gpcr_gate": true,
+    "all_pass_small_molecule_moa_gate": true,
+    "all_pass_supported_class_gate": true,
+    "all_fail_only_experimental_pocket_gate": true,
+    "all_have_computed_pocket_route": true,
+    "all_have_class_specific_compute": true,
+    "all_have_wetlab_route": true,
+    "44_exact_structures_plus_2_fragment_models": true,
+    "class_summary_sums_to_46": true
+  },
+  "boundaries": [
+    "These 46 targets passed all earlier hard gates and are recovered only for computational pocket follow-up.",
+    "Predicted pockets do not become experimental pocket evidence.",
+    "Historical target activity controls calibrate target-level protocols; they do not validate a new drug-target pair.",
+    "Only prospective binding and functional assays can promote recovered targets into the experimental target set."
+  ],
+  "outputs": {
+    "target_matrix": "/root/autodl-tmp/BioMaster/outputs/recovered_no_experimental_pocket_targets_ch37_v1/RECOVERED_NO_EXPERIMENTAL_POCKET_TARGETS_46_V1.csv",
+    "workbook": "/root/autodl-tmp/BioMaster/outputs/recovered_no_experimental_pocket_targets_ch37_v1/RECOVERED_NO_POCKET_TARGET_PROGRAM_46_V1.xlsx"
+  }
+}

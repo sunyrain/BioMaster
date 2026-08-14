@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-08-09T15:24:09.021388+00:00",
+  "authoritative_outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V4.csv.gz": "19e6ec410c73cf7612e78ed239866ffb576772c9b44f88edef11a0faadf8b0a9",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/TARGET_EVIDENCE_LAYER_ROUTING_384_V4.csv": "edb70bfb537943c8d3283c3e72c5bc92dae3f14389e9221a3558aa8b13943e79",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/PAIR_EVIDENCE_LAYER_PRIORITY_REVIEW_V4.csv.gz": "e81b5b49eda849bb1b675b0a3dbdbff5b1c0b5c2bfaec9d30f9f0ee46522c0d8",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v4/EVIDENCE_LAYER_ROUTING_SUMMARY_V4.json": "8eb7a6cf62270d8d9fa0da7265ae56855bf11eb418d9126c0f701d274b2a99e5"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "run_label": "unified_remote_increment",
+  "requested_targets": 4,
+  "completed_targets": 4,
+  "failed_targets": 0,
+  "requested_controls": 6,
+  "completed_controls": 6,
+  "elapsed_seconds": 46.202532052993774,
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "jobs_per_gpu": 1,
+  "cpus_per_job": 6,
+  "results": "outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_inputs/GNINA_CALIBRATION_RUN_RESULTS_UNIFIED_REMOTE_INCREMENT_V1.csv"
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_NONSTRUCTURAL_NESTED_SAFE_STEP_PROXY_V2_FREEZE_V1",
+  "created_utc": "2026-08-13T21:25:00Z",
+  "status": "FROZEN_AFTER_V1_REJECTION_AND_POSTHOC_DIAGNOSIS; BEFORE_V2_EXECUTION; DEVELOPMENT_ONLY",
+  "iteration_provenance": {
+    "v1_proxy_summary": {
+      "path": "outputs/old_drug_target_sota_v1/s3_nonstructural_safe_dual_query_proxy_v1/S3_NONSTRUCTURAL_SAFE_DUAL_QUERY_PROXY_SUMMARY_V1.json",
+      "sha256": "ce24196f8e4424a206cecbca1aa9875ca2200cfcd654e38faf4bcca0a7782433",
+      "required_decision": "OBJECTIVE_PROXY_NOT_SUPPORTED; DO_NOT_TRANSFER_THIS_OBJECTIVE_TO_STAGE1"
+    },
+    "posthoc_frontier_summary": {
+      "path": "outputs/old_drug_target_sota_v1/s3_nonstructural_safe_dual_query_proxy_v1/frontier_diagnostic_v1/S3_NONSTRUCTURAL_PROXY_FRONTIER_DIAGNOSTIC_SUMMARY_V1.json",
+      "sha256": "705414bf6583528471f752e9ca3109b7929e1d22dfa3c82297be1d34d0909d8b"
+    },
+    "observed_failure_used_for_v2_design": "the unshrunk residual had useful mean direction on some queries but violated both held-fold tail constraints; the primal-dual multipliers remained too small to enforce feasibility",
+    "posthoc_values_are_not_candidates": true
+  },
+  "purpose": "prospectively test whether independent inner-fold calibration of a bounded candidate residual can preserve exact fallback, simultaneously control target-query and drug-query base-relative tail risk, and transfer utility to an untouched outer development fold",
+  "claim_boundary": {
+    "nested_step_calibration_is_algorithmically_novel": false,
+    "learn_then_test_is_prior_art": true,
+    "conformal_or_pareto_multi_risk_calibration_is_prior_art": true,
+    "this_proxy_contains_structure_evidence": false,
+    "this_proxy_can_establish_eqir_novelty": false,
+    "this_proxy_can_authorize_stage1": false,
+    "candidate_joint_mechanism_if_later_structurally_validated": "label-independent evidence qualification over a frozen cross-fitted DTI base, with target-query and old-drug-query base-relative tail risks jointly controlling a residual step and exact function fallback when no risk-controlled structural increment is available",
+    "prior_art_sources": [
+      "https://arxiv.org/abs/2110.01052",
+      "https://proceedings.iclr.cc/paper_files/paper/2024/file/f3549ef9b5ff520a7e41ff3cc306ab2b-Paper-Conference.pdf",
+      "https://openreview.net/forum?id=cyg2YXn_BqF"
+    ]
+  },
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_exclusions_never_recovered": 480,
+    "later_pocket_quality_exclusions_never_recovered": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480
+  },
+  "input": {
+    "path": "outputs/old_drug_target_sota_v1/s3_query_balanced_blend_dev_v1/S3_DEV_FOLDS_0_2_QUERY_BALANCED_BLEND_PREDICTIONS_V1.csv.gz",
+    "sha256": "ee8120c37c716940c78271c132e5efbd0d70d1755438c758d706c9ca72b105e3",
+    "required_rows": 10531,
+    "required_folds_exactly": [0, 1, 2],
+    "confirmatory_folds_forbidden": [3, 4],
+    "base_score_column": "query_balanced_blend"
+  },
+  "nested_protocol": {
+    "outer_scheme": "hold each development fold h in {0,1,2} for evaluation only",
+    "inner_scheme": "for the two remaining folds a and b, fit component A on a and calibrate its residual step on b; fit component B on b and calibrate its residual step on a",
+    "held_fold_access": "the outer held fold is predicted only after each component's step has been fixed on its opposite inner calibration fold",
+    "component_combination": "final_logit=base_logit+0.5*(gamma_A*residual_A+gamma_B*residual_B)",
+    "component_seed_rule": "seed + 1000*outer_held_fold + 100*component_train_fold + component_calibration_fold",
+    "exact_fallback": "if both selected gammas are zero, final logits are copied from the frozen base before sigmoid",
+    "hyperparameter_search": "none outside the frozen step grid",
+    "early_stopping": "none",
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817]
+  },
+  "candidate_generator": {
+    "role": "deliberately conventional direction generator; not a novelty claim",
+    "features": [
+      "logit(dtiam_probability)",
+      "logit(biomaster_stack_score)",
+      "logit_difference",
+      "absolute_logit_difference",
+      "logit(query_balanced_blend)"
+    ],
+    "prohibited_features": [
+      "labels as inputs",
+      "drug or target identifiers",
+      "homology or scaffold identifiers",
+      "fold identifier",
+      "structure or pocket evidence",
+      "folds 3-4"
+    ],
+    "network": "5 -> LayerNorm(5) -> Linear(5,8) -> GELU -> Linear(8,1)",
+    "training_objective": "binary cross entropy only",
+    "residual_clip": [-2.0, 2.0],
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 80,
+    "gradient_clip_norm": 5.0,
+    "probability_clipping_epsilon": 1e-6,
+    "device": "CPU",
+    "torch_threads": 4
+  },
+  "step_grid": [0.0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15],
+  "risk": {
+    "pair_definition": "all positive-negative Cartesian pairs within each target query or drug query in the current boundary",
+    "pairwise_loss": "softplus(-margin)",
+    "group_regret": "mean final pairwise loss minus frozen-base pairwise loss",
+    "alpha": 0.8,
+    "target_delta": 0.01,
+    "drug_delta": 0.01,
+    "empirical_cvar": "minimum over observed group regrets of eta+mean(relu(regret-eta))/(1-alpha)",
+    "candidate_residual_bound": "for step gamma, pairwise logistic regret is deterministically bounded in [-4*gamma,4*gamma]"
+  },
+  "calibration_variants": {
+    "FIXED_GAMMA_0_10": {
+      "selection": "none; gamma_A=gamma_B=0.10",
+      "role": "fixed shrinkage control motivated by V1 diagnosis but prospectively frozen for V2"
+    },
+    "EMPIRICAL_NESTED_SAFE_STEP": {
+      "risk_gate": "both empirical CVaR values <=0.01 on the independent inner calibration fold",
+      "utility_filter": [
+        "micro AUPRC difference versus base >=0",
+        "target-macro AUPRC difference versus base >=-0.002",
+        "drug-macro AUPRC difference versus base >=0"
+      ],
+      "selection": "maximize equal-weight mean of micro, target-macro and drug-macro AUPRC; tie-break to smaller gamma",
+      "fallback": "gamma=0"
+    },
+    "ASYMPTOTIC_LTT_NESTED_SAFE_STEP": {
+      "risk_gate": "EMPIRICAL_NESTED_SAFE_STEP gate plus a Learn-then-Test intersection-union p-value for both axes",
+      "eta_rule": "for each gamma and axis, fix eta to the empirical 80th percentile of group regrets on the component training fold before reading its inner calibration fold",
+      "calibration_loss": "eta+relu(group_regret-eta)/(1-alpha), whose expectation upper-bounds CVaR at the fixed eta",
+      "axis_p_value": "one-sided Student t p-value for H0: expected calibration loss >0.01; zero variance is handled deterministically",
+      "joint_configuration_p_value": "maximum of target and drug p-values as an intersection-union test",
+      "familywise_control": "Bonferroni over the six positive gamma configurations at delta=0.05; gamma=0 is the deterministic fallback",
+      "guarantee_boundary": "asymptotic and conditional on exchangeable query groups; not called distribution-free or exact because group counts are small and target/drug axes overlap",
+      "utility_filter_and_selection": "same as EMPIRICAL_NESTED_SAFE_STEP among LTT-passing configurations",
+      "fallback": "gamma=0"
+    }
+  },
+  "required_outputs": [
+    "all component training diagnostics and inner calibration rows before outer metrics",
+    "selected gamma and selection reason for every outer fold, seed, component and calibration variant",
+    "row-level outer OOF probabilities for all variants and five seeds",
+    "pooled and per-fold three-direction metrics",
+    "pooled and per-fold target/drug empirical CVaR and group regret distributions",
+    "five-seed consistency",
+    "target-homology and drug-scaffold clustered micro bootstrap",
+    "target-query and drug-query grouped macro bootstrap",
+    "within-drug permutation diagnostic",
+    "source, config, script and output hashes"
+  ],
+  "promotion_gates": {
+    "main_variant": "ASYMPTOTIC_LTT_NESTED_SAFE_STEP",
+    "positive_step_usage": "at least one positive component step must be selected in at least 4 of 5 seeds",
+    "seed_consistency": "main variant micro AUPRC exceeds BASE in at least 4 of 5 seeds",
+    "micro_cold_axes": "target-homology and drug-scaffold clustered-bootstrap 95% lower bounds versus BASE both exceed zero",
+    "target_direction": "target-macro point difference is nonnegative and grouped-bootstrap lower bound >=-0.002",
+    "drug_direction": "drug-macro grouped-bootstrap lower bound >0 and score exceeds within-drug permutation 95% upper bound",
+    "held_tail_risk": "pooled held target and drug empirical CVaR values are each <=0.01",
+    "incremental_safe_calibration_value": "main variant is noninferior to FIXED_GAMMA_0_10 and EMPIRICAL_NESTED_SAFE_STEP on all three pooled ranking metrics",
+    "all_pass": "V2_PROXY_SUPPORTED_FOR_OBJECTIVE_DESIGN_ONLY; STAGE1_STILL_REQUIRES_STAGE0_ALL_PASS",
+    "any_fail": "V2_PROXY_NOT_SUPPORTED; RETAIN_EXACT_BASE_AND_REDESIGN_OR_STOP_SAFE_RESIDUAL_ROUTE"
+  },
+  "uncertainty": {
+    "bootstrap_iterations": 2000,
+    "permutation_iterations": 1000,
+    "seed": 20260814,
+    "confidence_level": 0.95
+  },
+  "hard_stops": [
+    "abort on any source or input hash mismatch",
+    "abort on any fold outside 0-2",
+    "never use outer held labels in component fitting or step calibration",
+    "never overwrite V1 or frontier artifacts",
+    "never open folds 3-4",
+    "never recover the 480 hard-gate or 24 later pocket-quality exclusions",
+    "never launch structural Stage1",
+    "never relabel an empirical or asymptotic calibration result as a finite-sample structural guarantee"
+  ]
+}

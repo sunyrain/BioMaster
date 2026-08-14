@@ -1,0 +1,69 @@
+{
+  "package_name": "EVIDENCE_ROUTING_COMPUTE_PLAN_20260808_V1",
+  "created_utc": "2026-08-08T14:32:28.116082+00:00",
+  "status": "PASS",
+  "current_result": {
+    "boltz_input_pairs": 14488,
+    "boltz_completed_pairs": 14468,
+    "strict_boltz_ab_core": 333,
+    "strict_boltz_c_reserve": 133,
+    "technical_incomplete": 20
+  },
+  "target_route_counts": {
+    "E1_DUAL_REMOTE_QUALIFIED": 13,
+    "E2_SINGLE_MODEL_REMOTE_QUALIFIED": 70,
+    "E3_LOCAL_ONLY_QUALIFIED": 79,
+    "E4_RECEPTOR_PROTOCOL_REPAIR": 22,
+    "E5_NO_MODEL_QUALIFICATION": 100,
+    "E6_NO_ADEQUATE_HISTORICAL_CONTROL": 54
+  },
+  "pair_union": {
+    "pairs": 639,
+    "targets": 83,
+    "drug_entities": 305,
+    "model_structures": 318,
+    "unified_n3": 571,
+    "unified_n2": 68
+  },
+  "pair_lane_counts": {
+    "P1_DUAL_STRUCTURE_SUPPORT": 15,
+    "P2_BOLTZ_SUPPORT_GNINA_DISAGREES": 140,
+    "P3_GNINA_SUPPORT_BOLTZ_DISAGREES": 83,
+    "P4_BOLTZ_ONLY_APPLICABLE": 311,
+    "P5_GNINA_ONLY_APPLICABLE": 90
+  },
+  "compute_budget": {
+    "boltz_multiseed_pairs": 549,
+    "boltz_added_seeds_per_pair": 2,
+    "boltz_multiseed_runs": 1098,
+    "gnina_ensemble_pairs": 328,
+    "gnina_ensemble_ready_pairs": 311,
+    "gnina_ensemble_ready_targets": 27,
+    "gnina_ensemble_blocked_pairs": 17,
+    "gnina_ensemble_blocked_targets": 1,
+    "gnina_max_alternate_states": 2,
+    "gnina_ensemble_max_runs": 614,
+    "receptor_repair_targets": 22,
+    "urgent_receptor_repair_targets": 4,
+    "post_repair_boltz_pairs": 102,
+    "quinidine_repair_pairs": 20,
+    "gate_failure_diagnostic_targets": 100,
+    "control_acquisition_targets": 54,
+    "md_pair_cap": 100
+  },
+  "boundaries": [
+    "Target routes are mutually exclusive; pair evidence lanes are mutually exclusive within the 639-pair union.",
+    "Multi-seed and receptor ensembles estimate stability; they do not create independent experimental evidence.",
+    "A model score cannot promote or reject a pair outside that model's target/novelty qualification scope.",
+    "MD is deferred until multi-seed, receptor-state and pair-level audits are complete."
+  ],
+  "source_hashes": {
+    "outputs/current_results_classified_20260806_v1/CURRENT_RESULTS_MASTER_14488_CLASSIFIED_V1.csv.gz": "7301363875a3132193d51319fc060423eff0e3e119531931430b9664949bdd08",
+    "outputs/current_results_classified_20260806_v1/CURRENT_RESULTS_CLASSIFIED_SUMMARY_V1.json": "096db64b62b638a97147cca08eab4355ce9acc6df8fb3de01f35f10fe60aac52",
+    "outputs/boltz2_calibration_338_v1/evaluation/BOLTZ2_TARGET_QUALIFICATION_338_V1.csv": "fc59f8a9cd0ee309b3d8ec1838350fbb3d6af613fd5f34d4a85f02a0e1c3aacd",
+    "outputs/gnina_discovery_7511_v1/evaluation/GNINA_DISCOVERY_7511_TARGET_CALIBRATED_EVIDENCE_V1.csv.gz": "bcdc323f86c241276e71901c805dca6bb19373c44b68f867ea3895d07b420128",
+    "outputs/strict_receptor_protocol_338_v1/FINAL_RECEPTOR_PROTOCOL_AUDIT_338.csv": "4bd9d4910206f9fa2c76bf141ae3a1cd7a1d5aa61f5aa5d144aed5963e1d1c95",
+    "outputs/chembl37_known_pocket_atlas/final_atlas/KNOWN_POCKET_INSTANCES_ANNOTATED_FULL.csv.gz": "97b87ea63de7a7cb54d208be718da1b16388c54a61ada6da8e8472f64b873d77",
+    "outputs/current_results_classified_20260806_v1/TECHNICAL_INCOMPLETE_20_V1.csv": "890123cfd79364df6ddb3fd5ee760ad778ef8065b216794ca97f6a587047019c"
+  }
+}

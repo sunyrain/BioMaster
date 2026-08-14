@@ -1,0 +1,41 @@
+{
+  "version": "BIOMASTER_EQIR_V3_SMALL_MOLECULE_APPLICABILITY_AMENDMENT_20260813",
+  "status": "FROZEN_BEFORE_STRUCTURE_SCORE_EVALUATION",
+  "amends_without_overwriting": {
+    "path": "configs/biomaster_eqir_v3_preregistration.json",
+    "sha256": "d79ffba3e0d85b31251a13471521cd175f7121e89da6fc50bb198f851f8c2e1b"
+  },
+  "reason": "The original label-blind queue contains ultra-large peptides up to 530 heavy atoms and MW 8095.85, while the intended 720-old-drug deployment universe has maxima of 50 heavy atoms, MW 693.732 and 15 rotatable bonds. One such target stalled conformer generation after only 10 of 64 ligands for approximately one hour.",
+  "selection_rule_reads_activity_labels": false,
+  "applicability_rule": {
+    "maximum_heavy_atoms": 50,
+    "maximum_molecular_weight": 700.0,
+    "maximum_rotatable_bonds": 15,
+    "minimum_eligible_pairs_per_target": 16,
+    "threshold_source": "rounded ceilings above the observed maxima of the frozen 720-old-drug deployment universe"
+  },
+  "result": {
+    "source_pairs": 18230,
+    "source_targets": 290,
+    "selected_pairs": 17248,
+    "selected_targets": 289,
+    "excluded_pairs": 982,
+    "excluded_targets_entirely": [
+      "CHEMBL3273"
+    ],
+    "all_720_deployment_drugs_inside_domain": true
+  },
+  "evidence": {
+    "summary": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_SMALL_MOLECULE_APPLICABILITY_SUMMARY_V1.json",
+    "summary_sha256": "9a5447b2113fbeddc5c713d00a53424a450f0c279afb6c9bb5ddbd22b4c9857b",
+    "selected_manifest": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_GNINA_SMALL_MOLECULE_MANIFEST_V1.csv.gz",
+    "selected_manifest_sha256": "6c1a9ce72485be21a2e4ef2fb2a787f654ca4e53fd551f3d162a7e09de40d1d5"
+  },
+  "execution_policy": {
+    "use_small_molecule_manifest_for_new_gnina_preparation": true,
+    "reuse_prior_docking_only_when_receptor_hash_ligand_set_and_protocol_match": true,
+    "do_not_read_evaluation_ledger_labels_during_filtering_or_preparation": true,
+    "effective_evaluation_ledger_must_be_filtered_by_frozen_selected_pair_ids_only": true
+  },
+  "claim_boundary": "This amendment defines the intended small-molecule applicability domain and computational tractability; it is not a model algorithm contribution."
+}

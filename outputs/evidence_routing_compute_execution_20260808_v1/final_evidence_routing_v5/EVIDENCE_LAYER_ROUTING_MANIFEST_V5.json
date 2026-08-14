@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-08-09T16:08:24.432676+00:00",
+  "authoritative_outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V5.csv.gz": "9d47083991882b0d520b65e36a5770d8c502226dc48045782a058d0116423c87",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/TARGET_EVIDENCE_LAYER_ROUTING_384_V5.csv": "c81b32ef6ab8d16d21a27e2e4442dfd497ba08ba7047dcbfb3efeb96d03d1212",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/INCREMENTAL_REMOTE_N2_N3_PAIR_RESULTS_57_V1.csv": "e03ced403d5897b2820fbbbd0c93977b0e9bf7a217ed1b68f1793f39f2c96bbc",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/PAIR_EVIDENCE_LAYER_PRIORITY_REVIEW_V5.csv.gz": "c92d548a89c5e7d3b1b0e5c6592a2fafbecbc064bc46e781f45296c61783a2af",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v5/EVIDENCE_LAYER_ROUTING_SUMMARY_V5.json": "c3a06464e54547e652cec309de7e18ffc33ddf444849137cc2947bde24c591d7"
+  }
+}

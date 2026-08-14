@@ -1,0 +1,25 @@
+{
+  "official_universe": 888,
+  "hard_gate_excluded": 480,
+  "hard_gate_reason_counts": {
+    "EXCLUDE_GPCR": 143,
+    "EXCLUDE_NO_CHEMBL_SMALL_MOLECULE_MOA": 295,
+    "EXCLUDE_UNSUPPORTED_TARGET_CLASS": 42
+  },
+  "after_hard_gates": 408,
+  "strict_experimental_pocket_mainline": 338,
+  "recovered_only_for_no_experimental_pocket": 46,
+  "later_pocket_quality_excluded": 24,
+  "later_pocket_quality_reason_counts": {
+    "EXCLUDE_NO_PREFERRED_EXPERIMENTAL_POCKET": 21,
+    "EXCLUDE_NO_PREFERRED_DRUGLIKE_HOLO_POCKET": 3
+  },
+  "active_union": 384,
+  "mainline_recovery_overlap": 0,
+  "invariants": {
+    "universe_partition": "480 + 338 + 46 + 24 = 888",
+    "active_union": "338 + 46 = 384",
+    "recovery_definition": "first_exclusion_reason == EXCLUDE_NO_ELIGIBLE_EXPERIMENTAL_POCKET",
+    "raw_151_no_known_pocket_cache_is_not_formal_scope": true
+  }
+}

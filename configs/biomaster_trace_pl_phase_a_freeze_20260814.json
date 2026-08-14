@@ -1,0 +1,142 @@
+{
+  "schema_version": "BIOMASTER_TRACE_PL_PHASE_A_FREEZE_20260814",
+  "freeze_status": "FROZEN_BEFORE_FEATURE_EXTRACTION_OR_MODEL_FITTING",
+  "candidate_method": {
+    "short_name": "TRACE-PL",
+    "expanded_name": "Thermodynamic Rotamer-Averaged Counterfactual Energy for Protein-Ligand mutation effects",
+    "claim_status": "CANDIDATE_ALGORITHMIC_INNOVATION_NOT_YET_VALIDATED",
+    "core_definition": "A shared atomic state-potential network scores rotamer ensembles for residue identities on the same WT protein-ligand backbone; mutation DDG is exactly G(mutant_state)-G(wild_type_state).",
+    "candidate_novel_combination": [
+      "WT-complex-only counterfactual side-chain ensemble generation without mutant complex coordinates",
+      "drug-conditioned ligand-atom to side-chain-atom messages before pooling",
+      "rotamer free-energy marginalization rather than a single mutant conformation",
+      "shared residue-state potential that gives exact antisymmetry and exact single-site path closure by construction"
+    ],
+    "not_claimed_as_novel_alone": [
+      "antisymmetry",
+      "rotamer libraries or conformer ensembles",
+      "WT-only mutation prediction",
+      "message-passing neural networks",
+      "Morgan fingerprints",
+      "censored likelihoods"
+    ]
+  },
+  "immutable_project_target_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "later_pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_for_missing_experimental_pocket": 46,
+    "old_drugs": 720,
+    "deployment_pairs": 276480,
+    "prohibited_scope_changes": [
+      "restore_any_of_480_hard_gate_exclusions",
+      "restore_any_of_24_later_pocket_quality_exclusions",
+      "expand_to_all_888_targets"
+    ]
+  },
+  "development_data": {
+    "source": "official Platinum database open download",
+    "normalized_manifest": "outputs/old_drug_target_sota_v1/platinum_official_audit_v1/PLATINUM_NORMALIZED_MUTATION_MANIFEST_V1.csv",
+    "homology_safe_manifest": "outputs/old_drug_target_sota_v1/platinum_pbcnet2_homology_exclusion_v1/PLATINUM_PHASE_A_HOMOLOGY_SAFE_ELIGIBLE_V1.csv",
+    "rows": 384,
+    "uniprot_ids": 85,
+    "structure_homology_clusters": 84,
+    "label": "R*298K*ln(K_mutant/K_wild_type) in kcal/mol",
+    "label_policy_phase_a": "exact numerical single substitutions only",
+    "mutant_coordinates_allowed": false,
+    "pbcnet2_homologs_allowed": false
+  },
+  "frozen_input_hashes": {
+    "platinum_normalized_manifest_sha256": "8961900d060a5b31c08cfae90ff067712e5e664e8ca66ba5e21eadc613156945c063162",
+    "platinum_homology_safe_manifest_sha256": "b86ab1616d513096615c8d235f4064f061be07f720dd89b85c11188d2e1d0d0f",
+    "pbcnet2_external_audit_summary_sha256": "a2738320e6cc4ae5783bd65b6febf788a4afde9fdde15d02c5c14c0235f851a2"
+  },
+  "locked_external_test": {
+    "source": "PBCNet2.0 public Mutation set",
+    "targets": 8,
+    "examples": 65,
+    "training_or_model_selection_use": "PROHIBITED",
+    "reference_macro_target_pearson": 0.5450085628922587,
+    "reference_macro_target_spearman": 0.5296807359307361,
+    "reference_model": "PBCNet2.0 official weight reproduced on CPU",
+    "homology_exclusion": "all Platinum chains in a component with >=30% identity and >=80% shorter-chain coverage to any PBCNet2 WT chain are removed"
+  },
+  "counterfactual_structure": {
+    "backbone_source": "WT experimental complex only",
+    "amino_acid_states": "20 canonical amino acids",
+    "conformer_generator": "RDKit ETKDGv3 free-amino-acid conformers aligned by N-CA-C to the WT backbone",
+    "conformers_requested_per_state": 64,
+    "conformers_retained_per_state": 16,
+    "conformer_pruning_rms_angstrom": 0.15,
+    "conformer_optimization": "MMFF when parameterized, otherwise UFF",
+    "hydrogen_policy": "heavy atoms only in learned contact messages",
+    "observed_wt_sidechain_special_casing": false,
+    "reason_no_observed_wt_special_case": "state representation must be independent of forward or reverse direction for exact antisymmetry"
+  },
+  "model": {
+    "ligand_sidechain_contact_cutoff_angstrom": 8.0,
+    "environment_cutoff_from_mutation_ca_angstrom": 8.0,
+    "distance_rbf_count": 16,
+    "atom_embedding_dimension": 16,
+    "amino_acid_embedding_dimension": 12,
+    "hidden_dimension": 48,
+    "morgan_radius": 2,
+    "morgan_bits": 256,
+    "ensemble_aggregation": "normalized negative logsumexp over conformer state energies",
+    "prediction": "G_theta(mutant_state)-G_theta(wild_type_state)",
+    "hard_antisymmetry": true,
+    "hard_single_site_path_closure": true,
+    "parameter_budget_rule": "TRACE-PL and direct-pair neural comparator must be within 10% trainable parameters"
+  },
+  "phase_a_training": {
+    "seed": 20260814,
+    "folds": 5,
+    "primary_split": "30%-identity structure-homology-cluster cold GroupKFold",
+    "secondary_split": "Bemis-Murcko ligand-scaffold cold GroupKFold",
+    "validation": "inner group-disjoint validation only",
+    "epochs_max": 300,
+    "early_stopping_patience": 35,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "loss": "Huber exact-label loss in Phase A",
+    "batch_size": 16,
+    "model_selection_metric": "validation RMSE",
+    "test_labels_visible_during_selection": false
+  },
+  "mandatory_comparators": [
+    "zero-DDG predictor",
+    "training-fold mean predictor",
+    "ridge on mutation identity, mutation-ligand distance, ligand Morgan and residue physicochemical deltas",
+    "ExtraTrees on the same non-atomic features",
+    "matched-capacity direct-pair neural network without a shared state potential",
+    "TRACE-PL single-conformer ablation",
+    "TRACE-PL no-atomic-contact ablation",
+    "TRACE-PL shuffled-ligand-contact negative control",
+    "official PBCNet2.0 on the locked 65-example external set"
+  ],
+  "integrity_gates": [
+    "all development and test structure-homology components disjoint",
+    "all train, validation and test groups disjoint in every fold",
+    "no test-label access before checkpoint selection",
+    "all predictions finite",
+    "matched neural parameter budgets within 10%",
+    "max absolute forward-plus-reverse prediction <= 1e-6",
+    "max absolute three-state path closure error <= 1e-6"
+  ],
+  "mechanism_signal_gates": {
+    "primary_full_beats_direct_pair_rmse": "cluster-bootstrap 95% CI for RMSE_full-RMSE_direct_pair is below 0",
+    "primary_full_beats_single_conformer_rmse": "cluster-bootstrap 95% CI below 0",
+    "primary_full_beats_shuffled_contacts_rmse": "cluster-bootstrap 95% CI below 0",
+    "primary_correlation_floor": "Pearson >= 0.20 under homology-cluster cold evaluation",
+    "external_sota_gate": "macro-target Pearson > 0.5450085629 and macro-target Spearman > 0.5296807359 on locked PBCNet2 65",
+    "all_integrity_gates_required": true
+  },
+  "decision_rule": {
+    "open_multiseed_confirmation_only_if": "all integrity gates and all development mechanism gates pass; external SOTA is evaluated once after model freeze",
+    "failure_status": "PHASE_A_MECHANISM_NOT_SUPPORTED; DO_NOT_CLAIM_ALGORITHM_INNOVATION_OR_SOTA",
+    "success_status": "PHASE_A_SUPPORTED; OPEN_FIVE_SEED_CONFIRMATION; STILL_NO_SOTA CLAIM UNTIL CONFIRMATION"
+  }
+}

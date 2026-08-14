@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "completed_targets": 23,
+  "expected_targets": 23,
+  "ligand_rows": 552,
+  "pose_rows": 2760,
+  "primary_gate_pass": 3,
+  "primary_gate_strong": 3,
+  "secondary_vina_consistent": 10,
+  "qualification_counts": {
+    "FAILED_CONTROL_SEPARATION": 11,
+    "MARGINAL_NOT_QUALIFIED": 9,
+    "QUALIFIED_STRONG_RETROSPECTIVE_CONTROL_SEPARATION": 3
+  },
+  "qualification_policy": "Frozen before full evaluation: 12x12 controls, CNN-affinity AUROC >=0.65, AP >=0.60, BH q<=0.10; strong additionally requires bootstrap AUROC lower CI >0.50. Vina AUROC >=0.55 is an orthogonal direction check.",
+  "interpretation": "Retrospective docking control separation can qualify a predicted pocket for candidate docking, but never upgrades it to experimental-pocket evidence or establishes binding.",
+  "outputs": {
+    "poses": "/root/autodl-tmp/BioMaster/outputs/recovered_gnina_pocket_validation_23_v1/RECOVERED_GNINA_CONTROL_POSES_V1.csv.gz",
+    "ligand_evidence": "/root/autodl-tmp/BioMaster/outputs/recovered_gnina_pocket_validation_23_v1/RECOVERED_GNINA_CONTROL_LIGAND_EVIDENCE_V1.csv.gz",
+    "metrics": "/root/autodl-tmp/BioMaster/outputs/recovered_gnina_pocket_validation_23_v1/RECOVERED_GNINA_PREDICTED_POCKET_METRICS_23_V1.csv"
+  }
+}

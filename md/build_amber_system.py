@@ -8,12 +8,31 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 from openmm.app import AmberInpcrdFile, AmberPrmtopFile
 
 
+def bounded_environment() -> dict[str, str]:
+    """Keep nested quantum/BLAS work within the queue's declared CPU share."""
+    environment = os.environ.copy()
+    threads = environment.get("BIOMASTER_MD_PREP_THREADS", "2")
+    environment.update(
+        {
+            "OMP_NUM_THREADS": threads,
+            "MKL_NUM_THREADS": threads,
+            "OPENBLAS_NUM_THREADS": threads,
+            "NUMEXPR_MAX_THREADS": threads,
+        }
+    )
+    return environment
+
+
 def executable(name: str) -> str:
+    candidate = Path(sys.executable).resolve().parent / name
+    if candidate.is_file():
+        return str(candidate)
     path = shutil.which(name)
     if path is None:
         raise FileNotFoundError(f"Required AmberTools executable is absent: {name}")
@@ -28,7 +47,7 @@ def run(command: list[str], log_path: Path, cwd: Path) -> None:
             stdout=handle,
             stderr=subprocess.STDOUT,
             check=False,
-            env=os.environ.copy(),
+            env=bounded_environment(),
         )
     if completed.returncode:
         raise RuntimeError(f"Command failed ({completed.returncode}); see {log_path}: {command}")

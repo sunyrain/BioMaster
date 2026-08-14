@@ -1,0 +1,132 @@
+{
+  "schema_version": "BIOMASTER_FIRST_EVENT_DTI_PHASE_A_FREEZE_V1",
+  "frozen_utc": "2026-08-14T00:14:00Z",
+  "status": "FROZEN_BEFORE_EVENT_MANIFEST_CONSTRUCTION_OR_MODEL_TRAINING",
+  "candidate_name": "OFER-DTI",
+  "candidate_expansion": "Old-drug First-Event Retrieval for DTI",
+  "claim_status": "CANDIDATE_MECHANISM_ONLY; NOT_VERIFIED_ALGORITHM_INNOVATION; NO_SOTA_CLAIM",
+  "immutable_scope": {
+    "official_targets": 888,
+    "hard_gate_excluded_never_recover": 480,
+    "pocket_quality_excluded_never_recover": 24,
+    "active_targets": 384,
+    "strict_experimental_pocket_targets": 338,
+    "recovered_only_missing_experimental_pocket": 46,
+    "deployment_old_drugs": 720,
+    "deployment_pairs": 276480,
+    "training_benchmark_sequences": 428
+  },
+  "scientific_estimand": {
+    "risk_state": "pair has not yet appeared in the available strict-binding database by the beginning of year tau",
+    "events": [
+      "first strict-binding record is positive",
+      "first strict-binding record is numeric weak or explicitly inactive"
+    ],
+    "censoring": "pair remains absent at the end of the historical window; absence is never an inactive label",
+    "primary_query": "given an existing/old drug at time tau, rank targets by future active-event cumulative incidence",
+    "secondary_query": "given a target at time tau, rank drugs by future active-event cumulative incidence"
+  },
+  "model": {
+    "drug_input": "Morgan radius 2, 2048 bits, computed from standardized parent SMILES",
+    "target_input": "frozen ProtBERT-1024 benchmark embedding",
+    "shared_pair_encoder": "two 256-dimensional adapters plus normalized product, absolute difference and low-rank bilinear interaction",
+    "observation_hazard": "discrete-year sigmoid hazard that a previously absent pair receives its first strict-binding record",
+    "conditional_outcome": "sigmoid probability that the first record is active conditional on observation",
+    "cause_specific_factorization": {
+      "active": "h_obs(tau|d,t) * q_active(d,t)",
+      "inactive": "h_obs(tau|d,t) * (1-q_active(d,t))"
+    },
+    "primary_loss": "exact discrete-time first-event competing-risk likelihood with sampled right-censored risk-set pairs",
+    "retrieval_auxiliary": "within-drug listwise softmax over future active events versus same-year at-risk targets",
+    "secondary_no_harm": "within-target retrieval loss and target-macro development noninferiority constraint",
+    "structure_extension": "not used in Phase A; later only as label-independent eligibility-controlled residual with exact fallback"
+  },
+  "risk_set_rules": {
+    "drug_entry_year": "earliest strict-binding document year for that standardized compound, computed inside the historical source available to the fold",
+    "target_entry_year": "earliest strict-binding document year for that benchmark sequence, computed inside the historical source available to the fold",
+    "pair_entry_year": "maximum of drug and target entry years",
+    "event_year": "minimum document year of the collapsed strict-binding pair",
+    "unobserved_sampling": "four targets per observed event within drug plus four drugs per observed event within target, deterministic seed and inverse sampling-probability weight",
+    "future_event_exclusion": "a future event may be sampled as censored only up to the fold cutoff; its future label/type is never exposed to training",
+    "unknown_as_negative": false
+  },
+  "development_windows": [
+    {
+      "name": "DEV_2015_2018",
+      "training_events_through": 2014,
+      "development_first_event_start": 2015,
+      "development_first_event_end": 2018
+    },
+    {
+      "name": "DEV_2019_2022",
+      "training_events_through": 2018,
+      "development_first_event_start": 2019,
+      "development_first_event_end": 2022
+    }
+  ],
+  "locked_pressure_test": {
+    "start": 2023,
+    "end": 2025,
+    "independent_confirmatory": false,
+    "reason": "S4 labels and baseline results were already inspected before this candidate was designed",
+    "open_only_if_all_phase_a_mechanism_gates_pass": true
+  },
+  "controls": [
+    "static observed-only BCE with the same pair encoder",
+    "static FNML-style observation/outcome dual head without event time or risk-set survival",
+    "single-event survival without active/inactive competing causes",
+    "drug-listwise-only model without event likelihood",
+    "timestamp-shuffled full model",
+    "full model without observation hazard",
+    "target-prior and drug-prior only controls",
+    "TAPB-inspired capacity-matched prior intervention control"
+  ],
+  "training": {
+    "phase_a_seeds": [20260814],
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size_events": 1024,
+    "maximum_epochs": 40,
+    "early_stopping_patience": 6,
+    "gradient_clip_norm": 5.0,
+    "selection_metric": "equal mean of drug-macro AUPRC and drug-macro Recall@20 across the two historical development windows"
+  },
+  "metrics": [
+    "drug-macro AUPRC",
+    "drug-macro Recall@5/10/20",
+    "drug-macro NDCG@20",
+    "target-macro AUPRC",
+    "micro AUPRC",
+    "active-event integrated Brier score",
+    "observation-hazard calibration error"
+  ],
+  "phase_a_mechanism_gates_all_required": [
+    "all timestamp, risk-set, entity and future-label leakage audits pass",
+    "full model exceeds static BCE on drug-macro AUPRC or Recall@20 in both development windows",
+    "full model exceeds static FNML-style control in both development windows",
+    "drug-cluster bootstrap 95% confidence lower bound for the pooled primary gain is greater than zero",
+    "target-macro AUPRC is no worse than the strongest control by more than 0.005",
+    "full model exceeds timestamp-shuffled full model",
+    "full model exceeds no-observation-hazard ablation",
+    "event cumulative-incidence predictions are finite and lie in [0,1]"
+  ],
+  "failure_action": "PHASE_A_MECHANISM_NOT_SUPPORTED; DO_NOT_OPEN_2023_2025_OR_DEPLOYMENT_RANKING; DO_NOT_RUN_MULTISEED",
+  "success_action": "freeze implementation hashes, run five seeds, then open the reused 2023-2025 pressure test exactly once",
+  "novelty_boundary": {
+    "survival_is_novel": false,
+    "competing_risks_is_novel": false,
+    "mnar_modeling_is_novel": false,
+    "drug_centered_ranking_is_novel": false,
+    "temporal_link_prediction_is_novel": false,
+    "candidate_joint_mechanism": "DTI first-observation active/inactive competing-event likelihood plus old-drug retrieval and later evidence-qualified exact fallback",
+    "novelty_still_requires_results_and_broader_search": true
+  },
+  "frozen_dependencies": {
+    "outputs/current_production_package_v2/chembl37_target_calibration_v5/PROJECT463_CHEMBL37_STRICT_BINDING_PAIR_CALIBRATION_V5.csv.gz": "2dd28252e62164fa8b4122a35b22d8a679ffd3db578a1b6aa334694d7ef4e125",
+    "outputs/old_drug_target_sota_v1/benchmark_splits_v1/CHEMBL37_86674_FROZEN_SPLIT_ASSIGNMENTS_V1.csv.gz": "12853d74817d1971a46af9dc40e31d41effc6e15a86ebba73b2534c41c82f688",
+    "configs/project_drugs_v4.csv": "6cadd584283c4377fa1c311b94c63f58442436ee7523236e0c2c40ae914f4f61",
+    "outputs/old_drug_target_sota_v1/first_event_dti_feasibility_v1/FIRST_EVENT_DTI_FEASIBILITY_SUMMARY_V1.json": "a643b110950343300215a370c526478f7bea5c480a7169c2ebc8bc5e9d76a743",
+    "outputs/old_drug_target_sota_v1/FIRST_EVENT_DTI_PRIOR_ART_COLLISION_AUDIT_20260814.md": "5cecbc54d40e1336ffbe9b7d3a2c7f8e515ea527c7d080fd6729b0f373ff67df"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-08-09T12:56:00.243082+00:00",
+  "status": "PASS",
+  "targets_without_known_experimental_pocket": 151,
+  "targets_with_exact_sequence_structure": 146,
+  "fpocket_completed_targets": 146,
+  "p2rank_completed_with_pocket_targets": 121,
+  "targets_with_any_predicted_pocket": 146,
+  "structure_first_targets": 5,
+  "consensus_class_counts": {
+    "C1_DUAL_METHOD_SAME_SITE": 76,
+    "C4_FPOCKET_RESCUE": 70,
+    "C6_STRUCTURE_FIRST_NO_EXACT_MODEL": 5
+  },
+  "target_class_counts": {
+    "Enzyme": 35,
+    "Unclassified protein": 35,
+    "Membrane receptor": 28,
+    "Secreted protein": 24,
+    "Ion channel": 9,
+    "Transporter": 8,
+    "Surface antigen": 3,
+    "Other cytosolic protein": 2,
+    "Structural protein": 2,
+    "Auxiliary transport protein": 1,
+    "Epigenetic regulator": 1,
+    "Adhesion": 1,
+    "Adhesion;Secreted protein": 1,
+    "Transcription factor": 1
+  },
+  "outputs": {
+    "target_consensus": "/root/autodl-tmp/BioMaster/outputs/no_experimental_pocket_prediction_ch37_v1/NO_EXPERIMENTAL_POCKET_CONSENSUS_TARGETS_151_V1.csv",
+    "fpocket_candidates": "/root/autodl-tmp/BioMaster/outputs/no_experimental_pocket_prediction_ch37_v1/FPOCKET_POCKET_CANDIDATES_NO_EXPERIMENTAL_146_V1.csv.gz",
+    "method_site_comparison": "/root/autodl-tmp/BioMaster/outputs/no_experimental_pocket_prediction_ch37_v1/P2RANK_FPOCKET_SITE_COMPARISON_NO_EXPERIMENTAL_V1.csv.gz"
+  },
+  "interpretation_boundaries": [
+    "Predicted pockets are computational hypotheses, not experimental pocket evidence.",
+    "A negative static-structure pocket call does not exclude cryptic, induced, interface, or state-specific pockets.",
+    "Targets without an exact-sequence structure remain structure-first tasks and are not counted as negative predictions."
+  ]
+}

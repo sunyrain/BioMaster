@@ -1,0 +1,68 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_STAGE0_DIRECTIONAL_GATE_AMENDMENT_V1",
+  "created_utc": "2026-08-13T17:31:48Z",
+  "status": "FROZEN_BEFORE_ANY_GNINA_SCORE_LABEL_JOIN_OR_STAGE0_EVALUATION",
+  "amends": {
+    "path": "configs/biomaster_eqir_v3_preregistration.json",
+    "sha256": "d79ffba3e0d85b31251a13471521cd175f7121e89da6fc50bb198f851f8c2e1b"
+  },
+  "reason_for_amendment": {
+    "independent_trigger_protocol": "S2_HOMOLOGY_COLD_TARGET",
+    "trigger_summary": "Both raw and validation-only fused models can improve pooled or target-centric AUPRC while degrading or failing the old-drug-to-new-target direction.",
+    "s2_audit_freeze": "configs/biomaster_s2_dtiam_same_data_audit_freeze_20260814.json",
+    "s2_audit_freeze_sha256": "0011a3c579073d8ec249393e6e456187aec7d083844f4f447f76517718bb187b",
+    "s2_directional_summary_sha256": "db923d3fe297e07e75d12d1ca4acf81bcb984abc5a5de08f9966bf744ea8277c",
+    "s2_query_balanced_summary_sha256": "b5c0f0c4d276a2cfdc542553bc5b455e889ed4d5cc282801d553df6f129b2682",
+    "uses_s3_stage0_labels_or_structure_scores": false
+  },
+  "freeze_timing_integrity": {
+    "small_molecule_stage0_evaluation_files_present_at_freeze": 0,
+    "gnina_score_extraction_run_at_freeze": false,
+    "gnina_scores_joined_to_evaluation_labels_at_freeze": false,
+    "completed_raw_docking_targets_may_exist": true,
+    "raw_docking_outputs_were_not_used_to_choose_gates": true,
+    "confirmatory_s3_folds_3_4_remain_locked": true
+  },
+  "effective_structure_queue": {
+    "manifest": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_GNINA_EFFECTIVE_MANIFEST_V1.csv.gz",
+    "manifest_sha256": "b943d3c2d3d463611fe17722a3d705d4af743037dbf4fa3afae019a5d1a5a3f1",
+    "evaluation_ledger": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_EFFECTIVE_EVALUATION_LEDGER_V1.csv.gz",
+    "evaluation_ledger_sha256": "329e3e82ad28423397726196c5a1ff132d919f55d4dade4ca7c06ef3d8a1f3b1",
+    "pairs": 17241,
+    "targets": 289
+  },
+  "amended_stage0_selection": {
+    "alpha_grid": {
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "step": 0.05
+    },
+    "validation_only": true,
+    "selection_objective": "equal-weight mean of micro AUPRC, target-macro AUPRC, and drug-macro AUPRC",
+    "held_test_labels_used_for_alpha_selection": false
+  },
+  "amended_stage0_promotion_gates": {
+    "at_least_4_of_5_seed_micro_differences_positive": true,
+    "ensemble_micro_difference_positive": true,
+    "target_homology_cluster_bootstrap_micro_difference_ci95_low": "> 0",
+    "drug_scaffold_bootstrap_micro_difference_ci95_low": "> 0",
+    "target_macro_difference_point": ">= 0",
+    "target_macro_difference_ci95_low": ">= -0.002",
+    "target_macro_noninferiority_margin_absolute_auprc": 0.002,
+    "drug_macro_difference_ci95_low": "> 0",
+    "fused_drug_macro_auprc": "> within-drug score-permutation null 95% upper bound",
+    "full_label_blind_structure_queue_complete": true,
+    "all_gates_required": true
+  },
+  "decision_policy": {
+    "all_gates_pass": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "any_gate_fails": "STOP_STRUCTURE_ALGORITHM_LINE_STAGE0_INCREMENT_NOT_ESTABLISHED",
+    "stage0_alone_establishes_algorithm_novelty": false
+  },
+  "implementation": {
+    "script": "scripts/evaluate_biomaster_eqir_v3_stage0.py",
+    "script_sha256": "d2afb80a57a874d391eb16782bbee15e89eb0b723c17d23682ea4dcd8e645da9",
+    "bootstrap_iterations": 2000,
+    "within_query_permutations": 200
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-08-09T14:01:29Z",
+  "status": "PASS",
+  "rows": 33120,
+  "ligands": 720,
+  "targets": 46,
+  "conplex_targets": 46,
+  "drugclip_predicted_pocket_targets": 44,
+  "two_model_target_top10pct_pairs": 276,
+  "two_model_bidirectional_top10pct_pairs": 58,
+  "sequence_only_fragment_top5pct_pairs": 72,
+  "physical_review_shortlist_pairs": 348,
+  "targets_with_two_model_shortlist": 42,
+  "score_policy": "No cross-target total score. Candidate routing uses within-target threshold concordance; raw scores, ranks, six-fold uncertainty, and disagreement are retained.",
+  "scope_policy": "Only 46 targets removed solely for lack of an experimental pocket. DrugCLIP scores are predicted-pocket retrieval evidence for 44 exact AlphaFold structures, never experimental-pocket evidence.",
+  "limitations": [
+    "ConPLEx and DrugCLIP scores are ranking signals, not Kd or calibrated binder probabilities.",
+    "Predicted-pocket DrugCLIP evidence is structurally weaker than holo-pocket retrieval and requires control docking or experimental validation.",
+    "DIO1 and RYR1 have sequence-only exploratory rankings because their fragment models are low confidence.",
+    "Historical positive/negative counts describe available ChEMBL calibration evidence; they are not necessarily members of the 720-drug candidate set."
+  ],
+  "outputs": {
+    "matrix": "outputs/recovered_dta_720x46_v1/RECOVERED_DTA_720_X_46_EVIDENCE_MATRIX_V1.csv.gz",
+    "shortlist": "outputs/recovered_dta_720x46_v1/RECOVERED_DTA_PHYSICAL_REVIEW_SHORTLIST_V1.csv"
+  },
+  "sha256": {
+    "matrix": "411c9972af463ee4ffcd2c7a4041323141e41b5e26da48d5623e57fe71b2bade",
+    "shortlist": "226de86e94b7c02119b73b940f44ac1a308432f84689cb221f829f0d41cf528f"
+  }
+}

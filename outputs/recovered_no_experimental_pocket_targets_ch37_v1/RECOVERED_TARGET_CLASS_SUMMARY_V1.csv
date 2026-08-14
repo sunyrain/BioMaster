@@ -1,0 +1,6 @@
+assay_lane,target_compute_class_zh,targets,dual_same_site,geometric_rescue,low_confidence_fragment,rich_or_adequate_controls,sparse_controls
+ENZYME_BIOCHEMICAL,非激酶酶,24,22,1,1,10,12
+ION_CHANNEL_FUNCTIONAL,离子通道,8,2,5,1,2,6
+KINASE_BIOCHEMICAL,激酶,6,6,0,0,5,0
+NUCLEAR_EPIGENETIC_DOMAIN,核内/表观遗传蛋白,2,1,1,0,1,1
+TRANSPORTER_MEMBRANE_FUNCTIONAL,转运体,6,6,0,0,2,3

@@ -1,0 +1,36 @@
+{
+  "version": "BIOMASTER_EQIR_V3_DIRECTIONAL_BASELINE_AMENDMENT_20260814",
+  "status": "FROZEN_BEFORE_EQIR_STAGE1",
+  "amends_without_overwriting": {
+    "path": "configs/biomaster_eqir_v3_query_signal_amendment_20260813.json",
+    "sha256": "b1c0bb37400c509507f8f8bafc54866d0a61bc6254066d132b4e058f246d72a8"
+  },
+  "same_pair_evidence": {
+    "path": "outputs/old_drug_target_sota_v1/query_shortcut_dtiam_biomaster_s3_audit_v1/S3_DTIAM_BIOMASTER_DIRECTIONAL_SIGNAL_SUMMARY_V1.json",
+    "sha256": "0b57ffcfee950dc045ba7740a581360efa76e46c4a2aba85a7d795012b3495b8",
+    "population": "S3_STRICT_DOUBLE_COLD identical 17,732 pairs",
+    "dtiam": {
+      "micro_auprc": 0.6516699519601021,
+      "target_macro_auprc": 0.6902886917688383,
+      "drug_macro_auprc": 0.6597106810390018,
+      "target_query_pair_signal_supported": true,
+      "drug_query_pair_signal_supported": true
+    },
+    "biomaster_v1_stack": {
+      "micro_auprc": 0.6623501051574967,
+      "target_macro_auprc": 0.6747538995802347,
+      "drug_macro_auprc": 0.6327630325043588,
+      "target_query_pair_signal_supported": true,
+      "drug_query_pair_signal_supported": false
+    },
+    "interpretation": "DTIAM proves that drug-to-target pair signal is recoverable on this protocol. BioMaster V1's failure is a model deficiency rather than protocol impossibility."
+  },
+  "co_primary_directional_promotion_gates": {
+    "micro_pair_metric": "Full EQIR must exceed frozen BioMaster V1 on S3 development-fold micro AUPRC with both target-homology and drug-scaffold bootstrap lower bounds above zero.",
+    "target_query_metric": "Full EQIR must not materially degrade target-macro AUPRC relative to the stronger of DTIAM and BioMaster V1; a noninferiority margin must be frozen before confirmation evaluation.",
+    "drug_query_metric": "Full EQIR must exceed same-pair DTIAM drug-macro AUPRC on development folds and its within-drug permutation 95% upper bound; paired drug-group bootstrap lower bound versus DTIAM must be above zero before confirmation folds are read.",
+    "consistency": "At least 4 of 5 seeds must improve both micro AUPRC and drug-macro AUPRC relative to their corresponding frozen references.",
+    "failure_action": "DO_NOT_ADVANCE_TO_CONFIRMATION_FOLDS; NO_BIDIRECTIONAL_OR_OLD_DRUG_NEW_TARGET_ALGORITHM_CLAIM"
+  },
+  "claim_boundary": "The all-fold audit is diagnostic for existing frozen models and is not used to tune EQIR. New EQIR choices remain restricted to development folds 0-2."
+}

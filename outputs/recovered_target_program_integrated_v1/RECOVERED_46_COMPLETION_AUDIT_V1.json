@@ -1,0 +1,10 @@
+{
+  "audit_status": "PASS",
+  "checks_total": 16,
+  "checks_passed": 16,
+  "checks_failed": 0,
+  "scope_boundary": "Exact 46 first-exclusion no-pocket targets; active union 338+46=384",
+  "physical_wetlab_boundary": "Protocols are execution-ready plans; physical measurements require an external laboratory",
+  "failed_checks": [],
+  "checks_csv": "/root/autodl-tmp/BioMaster/outputs/recovered_target_program_integrated_v1/RECOVERED_46_COMPLETION_AUDIT_CHECKS_V1.csv"
+}

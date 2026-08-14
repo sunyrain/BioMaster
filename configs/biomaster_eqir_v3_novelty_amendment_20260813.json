@@ -1,0 +1,75 @@
+{
+  "version": "BIOMASTER_EQIR_V3_NOVELTY_AMENDMENT_20260813",
+  "status": "FROZEN_NOVELTY_BOUNDARY; CONTINGENT_ON_STAGE0_PASS",
+  "amends_without_overwriting": {
+    "path": "configs/biomaster_eqir_v3_preregistration.json",
+    "sha256": "d79ffba3e0d85b31251a13471521cd175f7121e89da6fc50bb198f851f8c2e1b"
+  },
+  "new_primary_prior_art": [
+    {
+      "method": "FMIN",
+      "source": "https://doi.org/10.1016/j.neucom.2026.133351",
+      "collision": "arbitrary and missing modalities, dynamic branch skipping, iterative fusion and geometry-aware alignment",
+      "consequence": "missing-modality handling or skipping an unavailable structure branch is not an EQIR novelty"
+    },
+    {
+      "method": "MMTF-DTI",
+      "source": "https://doi.org/10.1016/j.jbi.2026.105069",
+      "collision": "dual sequence/graph pathways, dynamic multimodal fusion and domain-adversarial alignment",
+      "consequence": "dynamic fusion, sequence/graph dual paths and DANN are comparator components rather than novelty"
+    },
+    {
+      "method": "DrugCMF",
+      "source": "https://doi.org/10.1609/aaai.v40i32.39972",
+      "collision": "pair-specific confidence-aware 1D/3D fusion",
+      "consequence": "generic confidence or reliability gating is not an EQIR novelty"
+    },
+    {
+      "method": "ConfDTI",
+      "source": "https://doi.org/10.1021/acs.jcim.6c01036",
+      "collision": "pLDDT-guided structural encoding and confidence-modulated fusion",
+      "consequence": "structure-confidence weighting is not an EQIR novelty"
+    }
+  ],
+  "remaining_candidate_core": {
+    "name": "cross-fitted evidence-qualified orthogonal increment",
+    "definition": "s(d,t)=b(d,t)+a(t)r(d,t), with b frozen from label-disjoint cross-fitting, a determined only by pair-label-independent experimental receptor QC, and r trained only on the residual information not predictable from the base representation",
+    "orthogonalization_if_stage0_passes": {
+      "outcome_residual": "u = y - crossfit_predict_y_from_sequence_and_chemistry",
+      "structure_residual": "z_perp = z - crossfit_predict_z_from_sequence_and_chemistry",
+      "increment_fit": "fit r from z_perp and permitted interactions to u only on qualified evidence rows; do not refit the full label",
+      "target_balance": "weight qualified targets so highly assayed targets cannot dominate the residual objective",
+      "fallback": "a(t)=0 implies bitwise-identical base logit and rank input before any optional postprocessing"
+    },
+    "candidate_novelty_is_joint_not_componentwise": [
+      "pair-label-independent experimental-evidence eligibility",
+      "cross-fitted projection of both the label and structure feature onto the universal sequence-chemistry information space",
+      "residual-only optional evidence learner",
+      "exact functional fallback when optional evidence is absent",
+      "the same increment audited in both target-to-drug and drug-to-target query directions"
+    ]
+  },
+  "additional_required_ablations_if_stage0_passes": [
+    "FMIN_STYLE_SKIP_MISSING_FUSION",
+    "DRUGCMF_CONFIDENCE_FUSION",
+    "CONFDTI_STRUCTURE_CONFIDENCE_FUSION_IF_REPRODUCIBLE",
+    "MMTF_STYLE_DYNAMIC_FUSION_WITHOUT_ORTHOGONAL_INCREMENT",
+    "OUTCOME_RESIDUAL_ONLY_WITHOUT_STRUCTURE_RESIDUALIZATION",
+    "STRUCTURE_RESIDUAL_ONLY_WITHOUT_OUTCOME_RESIDUALIZATION",
+    "FULL_CROSSFIT_ORTHOGONAL_EQIR"
+  ],
+  "promotion_policy": {
+    "stage0_must_pass_first": true,
+    "all_original_preregistration_gates_remain": true,
+    "generic_missing_modality_claim_prohibited": true,
+    "generic_confidence_fusion_claim_prohibited": true,
+    "generic_dynamic_fusion_or_domain_alignment_claim_prohibited": true,
+    "same_data_claim_only": "SOTA wording requires the frozen ChEMBL37 split population and identical evaluation pairs; public random or cross-domain headline results remain separate context"
+  },
+  "evidence": {
+    "paper_matrix_v2": "outputs/old_drug_target_sota_v1/SOTA_PRIMARY_PAPER_TRAINING_DATA_RESULTS_MATRIX_V2.csv",
+    "paper_matrix_v2_sha256": "d103b4a4a810dcc72f3bb76c495da94b42433e51c8ec642b1364e7206c4b191a",
+    "collision_matrix": "outputs/old_drug_target_sota_v1/SOTA_ALGORITHM_NOVELTY_COLLISION_MATRIX_V1.csv",
+    "collision_matrix_sha256": "e77b4451f7cb303c6310c5cb22d48a0797aaa6610ed0e77e8b2a26e536d4cbbe"
+  }
+}

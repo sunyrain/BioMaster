@@ -1,0 +1,57 @@
+{
+  "freeze_utc": "2026-08-13T12:29:41Z",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_TEST_PREDICTIONS",
+  "protocol": "S3_STRICT_DOUBLE_COLD",
+  "development_folds_already_observed": [0, 1, 2],
+  "confirmatory_folds_not_yet_completed_at_freeze": [3, 4],
+  "implementation": {
+    "path": "scripts/evaluate_dtiam_biomaster_cold_fusion_v1.py",
+    "sha256": "9e978bd3a843dc87469e94da22158a783a0632a09f3d87f2eabefef7da06de97"
+  },
+  "fixed_fit_rule": {
+    "fit_role": "FROZEN_VALIDATION_ONLY_PER_FOLD",
+    "estimator": "StandardScaler_then_balanced_LogisticRegression",
+    "C": 0.1,
+    "max_iter": 2000,
+    "random_state": 20260813,
+    "test_labels_used_for_fitting": false
+  },
+  "leakage_safe_primary_candidate": {
+    "model": "DTIAM_BIOMASTER_SAME_DATA_ROUTED_FUSION",
+    "features": [
+      "dtiam_logit",
+      "biomaster_logit",
+      "train_positive_max_tanimoto",
+      "target_train_prior",
+      "target_has_train_positive_pool"
+    ],
+    "external_checkpoint_scores_included": false
+  },
+  "source_overlap_limited_secondary_candidate": {
+    "model": "DTIAM_BIOMASTER_CONPLEX_EXTERNAL_ROUTED_FUSION",
+    "features": [
+      "dtiam_logit",
+      "biomaster_logit",
+      "conplex_score",
+      "train_positive_max_tanimoto",
+      "target_train_prior",
+      "target_has_train_positive_pool"
+    ],
+    "external_checkpoint_scores_included": true,
+    "claim_limit": "ConPLex source overlap is unresolved; this route cannot establish leakage-free SOTA."
+  },
+  "confirmatory_endpoints": {
+    "primary": "pooled_micro_auprc_on_folds_3_and_4",
+    "paired_references": [
+      "biomaster_stack_score",
+      "dtiam_probability"
+    ],
+    "bootstrap_cluster_axes": [
+      "target_homology_cluster",
+      "scaffold_group"
+    ],
+    "bootstrap_iterations": 2000,
+    "success_rule": "Observed AUPRC difference must be positive and both independently reported 95% cluster-bootstrap intervals must exclude zero."
+  },
+  "no_post_freeze_rule_change": "Do not change features, regularization, seed, endpoint, or success rule after S3 folds 3 or 4 test predictions become available. Any later variant receives a new exploratory version and cannot use folds 3 or 4 as confirmatory evidence."
+}

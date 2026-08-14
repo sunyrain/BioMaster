@@ -1,0 +1,121 @@
+{
+  "schema_version": "BIOMASTER_MUTATION_LOCAL_ESM2_DELTA_FEATURE_FREEZE_V1",
+  "created_utc": "2026-08-13T21:45:00Z",
+  "status": "FROZEN_BEFORE_LABEL_BLIND_FEATURE_EXTRACTION",
+  "purpose": "add actual WT-to-mutant sequence information to the mutation-response branch by extracting residue-local ESM2 representations without reading activity, sensitization, or residual-response labels",
+  "claim_boundary": {
+    "protein_language_model_embeddings_are_prior_art": true,
+    "wildtype_mutant_embedding_differences_are_prior_art": true,
+    "mutation_effect_prediction_is_prior_art": true,
+    "this_feature_store_is_algorithmically_novel": false,
+    "permitted_interpretation": "a preregistered new-information feature source for a later drug-conditioned mutation-response mechanism",
+    "direct_prior_art_examples": [
+      "https://doi.org/10.1073/pnas.2220778120",
+      "https://www.nature.com/articles/s42004-023-00920-7",
+      "https://arxiv.org/abs/2403.02603",
+      "https://doi.org/10.1038/s41592-026-03086-x"
+    ]
+  },
+  "inputs": {
+    "mutation_panel": {
+      "path": "outputs/evidence_routing_compute_execution_20260808_v1/old_drug_innovation_v7/OLD_DRUG_MUTATION_APPLICATION_PANEL_V7.csv",
+      "sha256": "524a92a406e1be794534e12180eebacb789c6238eb35896c5e4826d26e2f90c4",
+      "columns_allowed": ["target_chembl_id", "gene_symbol", "variant_construct"],
+      "label_columns_forbidden": [
+        "variant_active_le30pct_residual",
+        "variant_residual_activity_pct_1uM",
+        "wt_min_residual_activity_pct_1uM",
+        "mutation_response_class_v7"
+      ]
+    },
+    "reference_sequences": {
+      "path": "outputs/target_universe_ch37_v2/TARGET_SET_SEQUENCE_DTA_ALL_V2.csv",
+      "sha256": "828c4fd97f6542d91c42fb1e97f1b30aac9e3453cfe0bfb58fabf87727052059",
+      "columns_allowed": ["target_chembl_id", "sequence", "sequence_length"]
+    },
+    "esm2_checkpoint": {
+      "path": "/root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D.pt",
+      "sha256": "ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c"
+    },
+    "esm2_contact_regression_checkpoint": {
+      "path": "/root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D-contact-regression.pt",
+      "sha256": "8ffe6edbd4173dc8d45c2cd5cb27d43aad77ec26b4c768200c58ae1f96693575"
+    }
+  },
+  "frozen_counts_before_extraction": {
+    "unique_constructs": 299,
+    "targets": 35,
+    "constructs_with_one_to_four_parsable_substitutions": 244,
+    "constructs_with_all_reference_residues_matching": 240,
+    "constructs_with_numbering_or_isoform_mismatch": 4,
+    "constructs_without_parsable_substitutions": 55,
+    "measurement_rows_covered_by_reconstructable_substitutions": 15670,
+    "total_measurement_rows": 19639
+  },
+  "reconstruction": {
+    "substitution_pattern": "one to four underscore-delimited canonical AA-position-AA substitutions inside construct parentheses",
+    "required_reference_check": "reference_sequence[position-1] must equal stated source amino acid for every substitution",
+    "multi_substitution_rule": "apply all substitutions simultaneously before taking any mutant window",
+    "unavailable_routes": [
+      "NO_PARSABLE_SUBSTITUTION including insertions, deletions, ITDs, fusions and shorthand constructs",
+      "REFERENCE_RESIDUE_MISMATCH_OR_ISOFORM_NUMBERING"
+    ],
+    "no_implicit_offset_repair": true
+  },
+  "representation": {
+    "model": "ESM2 t33 650M UR50D",
+    "checkpoint_source": "local immutable checkpoint only; no network fetch",
+    "layer": "final layer 33",
+    "window_radius_residues": 128,
+    "maximum_window_length": 257,
+    "site_center_embedding": "final-layer token at the mutated residue in the local window",
+    "site_window_mean_embedding": "mean final-layer representation over amino-acid tokens, excluding BOS and EOS",
+    "construct_aggregation": [
+      "mean WT center embedding across sites",
+      "mean mutant center embedding across sites",
+      "mean mutant-minus-WT center delta across sites",
+      "signed per-dimension maximum-absolute center delta across sites",
+      "mean mutant-minus-WT window-mean delta across sites"
+    ],
+    "embedding_dimension": 1280,
+    "unavailable_embedding_rule": "all five construct-level vectors are exact float32 zero and availability is false",
+    "inference_precision": "CUDA autocast float16 with float32 saved outputs",
+    "batch_size": 4,
+    "deterministic_seed": 20260814
+  },
+  "required_audits": [
+    "input and checkpoint hashes",
+    "allowed columns read and forbidden label columns not read",
+    "exact construct/target/reconstruction counts",
+    "per-site reference-residue checks",
+    "finite embeddings and nonzero delta norms for every available construct",
+    "exact-zero vectors for every unavailable construct",
+    "saved construct manifest, site manifest and five float32 vector matrices with hashes"
+  ],
+  "future_model_boundary": {
+    "feature_extraction_does_not_authorize_training": true,
+    "required_comparators": [
+      "V10 mutation model with explicit mutation tokens only",
+      "capacity-matched model with shuffled ESM2 delta vectors within gene",
+      "WT ESM2 without mutant delta",
+      "local delta without explicit mutation tokens",
+      "full drug-conditioned local-delta model"
+    ],
+    "required_evaluations": [
+      "cold drug",
+      "cold variant construct",
+      "cold gene",
+      "strict variant-specific sensitization",
+      "drug-cluster bootstrap"
+    ],
+    "same_kirhub_internal_boundary": "all model development remains internal until a genuinely independent mutation-response dataset or experiment is supplied"
+  },
+  "hard_stops": [
+    "abort on any input or checkpoint hash mismatch",
+    "never read response labels during feature extraction",
+    "never guess isoform offsets for four mismatched constructs",
+    "never encode unavailable constructs as negative response",
+    "never alter the 888/480/24/384 target scope",
+    "never call the extracted embeddings a validated model or SOTA result"
+  ]
+}

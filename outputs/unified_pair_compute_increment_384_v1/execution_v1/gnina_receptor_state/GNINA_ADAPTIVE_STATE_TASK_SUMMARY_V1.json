@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-08-09T15:40:53.753129+00:00",
+  "status": "PASS",
+  "pairs": 2,
+  "targets": 2,
+  "tier_counts": {
+    "GNINA_REMOTE_A": 2
+  },
+  "purpose": "Test whether primary-structure GNINA support persists in independently redocked receptor states; absence of an eligible alternate is inconclusive.",
+  "output": "/root/autodl-tmp/BioMaster/outputs/unified_pair_compute_increment_384_v1/execution_v1/gnina_receptor_state/GNINA_ADAPTIVE_PRIMARY_SUPPORT_STATE_TASK_V1.csv"
+}

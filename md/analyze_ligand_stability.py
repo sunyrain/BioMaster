@@ -9,6 +9,7 @@ from pathlib import Path
 
 import MDAnalysis as mda
 import numpy as np
+import parmed as pmd
 from MDAnalysis.lib.distances import distance_array, minimize_vectors
 from MDAnalysis.lib.mdamath import make_whole
 
@@ -42,11 +43,34 @@ def summary_stats(values: list[float]) -> dict[str, float]:
 
 def reconstruct_complex(protein, ligand, dimensions) -> None:  # noqa: ANN001
     """Make both fragments whole and place the ligand in the protein's nearest image."""
-    make_whole(protein)
-    make_whole(ligand)
+    # A protein selection can contain multiple chains or disconnected termini;
+    # make each covalently connected fragment whole independently.
+    for fragment in protein.fragments:
+        if len(fragment) > 1:
+            make_whole(fragment)
+    for fragment in ligand.fragments:
+        if len(fragment) > 1:
+            make_whole(fragment)
     displacement = ligand.center_of_geometry() - protein.center_of_geometry()
     nearest = minimize_vectors(displacement, dimensions)
     ligand.positions += nearest - displacement
+
+
+def recover_reference_dimensions(topology: Path, coordinates: Path, trajectory_dimensions):  # noqa: ANN201
+    """Recover the periodic box when MDAnalysis does not expose it from AMBER inpcrd."""
+    try:
+        structure = pmd.load_file(str(topology), str(coordinates))
+        if structure.box is not None and len(structure.box) == 6:
+            values = np.asarray(structure.box, dtype=float)
+            if np.isfinite(values).all() and (values[:3] > 0).all():
+                return values, "parmed_coordinates_box"
+    except Exception:  # noqa: BLE001
+        pass
+    if trajectory_dimensions is not None:
+        values = np.asarray(trajectory_dimensions, dtype=float)
+        if len(values) == 6 and np.isfinite(values).all() and (values[:3] > 0).all():
+            return values, "first_trajectory_frame_box_fallback"
+    raise ValueError("No periodic box is available from coordinates or trajectory")
 
 
 def parse_args() -> argparse.Namespace:
@@ -94,12 +118,50 @@ def main() -> None:
     if not len(backbone) or not len(ligand):
         raise ValueError("Protein backbone or ligand selection is empty")
 
-    universe.trajectory[0]
-    if not args.disable_pbc_reconstruction:
-        reconstruct_complex(protein, ligand, universe.trajectory.ts.dimensions)
-    reference_backbone = backbone.positions.copy()
-    reference_ligand = ligand.positions.copy()
-    initial_distances = distance_array(reference_ligand, protein_heavy.positions)
+    # Use the prepared complex, not the first post-equilibration trajectory
+    # frame, as the reference. This preserves any displacement occurring during
+    # minimization and restrained equilibration in the reported pose drift.
+    if coordinates is not None:
+        universe.trajectory[0]
+        reference = mda.Universe(str(topology), str(coordinates))
+        reference_backbone_atoms = reference.select_atoms("protein and backbone")
+        reference_ligand_atoms = reference.select_atoms(
+            f"resname {args.ligand_resname} and not name H*"
+        )
+        reference_protein_heavy = reference.select_atoms("protein and not name H*")
+        reference_protein = reference.select_atoms("protein")
+        if (
+            len(reference_backbone_atoms) != len(backbone)
+            or len(reference_ligand_atoms) != len(ligand)
+        ):
+            raise ValueError("Reference and trajectory atom selections do not match")
+        reference.trajectory[0]
+        reference_box_source = "coordinates_reader"
+        if reference.trajectory.ts.dimensions is None:
+            dimensions, reference_box_source = recover_reference_dimensions(
+                topology, coordinates, universe.trajectory.ts.dimensions
+            )
+            reference.dimensions = dimensions
+        if not args.disable_pbc_reconstruction:
+            reconstruct_complex(
+                reference_protein,
+                reference_ligand_atoms,
+                reference.trajectory.ts.dimensions,
+            )
+        reference_backbone = reference_backbone_atoms.positions.copy()
+        reference_ligand = reference_ligand_atoms.positions.copy()
+        reference_protein_heavy_positions = reference_protein_heavy.positions.copy()
+        reference_source = str(coordinates.resolve())
+    else:
+        universe.trajectory[0]
+        if not args.disable_pbc_reconstruction:
+            reconstruct_complex(protein, ligand, universe.trajectory.ts.dimensions)
+        reference_backbone = backbone.positions.copy()
+        reference_ligand = ligand.positions.copy()
+        reference_protein_heavy_positions = protein_heavy.positions.copy()
+        reference_source = "first_trajectory_frame"
+        reference_box_source = "first_trajectory_frame"
+    initial_distances = distance_array(reference_ligand, reference_protein_heavy_positions)
     initial_contact_residues = {
         protein_heavy[j].resindex
         for _, j in zip(*np.where(initial_distances <= args.contact_cutoff_a), strict=True)
@@ -141,6 +203,8 @@ def main() -> None:
 
     result = {
         "trajectory": str(args.trajectory.resolve()),
+        "reference_coordinates": reference_source,
+        "reference_box_source": reference_box_source,
         "total_frames": len(universe.trajectory),
         "skipped_equilibration_frames": args.equilibration_frames,
         "analyzed_frames": analyzed_frames,

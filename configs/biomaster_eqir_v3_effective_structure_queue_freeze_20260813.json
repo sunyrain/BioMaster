@@ -1,0 +1,36 @@
+{
+  "version": "BIOMASTER_EQIR_V3_EFFECTIVE_STRUCTURE_QUEUE_FREEZE_20260813",
+  "status": "FROZEN_BEFORE_GNINA_SCORE_EVALUATION",
+  "parent_applicability_amendment": {
+    "path": "configs/biomaster_eqir_v3_small_molecule_applicability_amendment_20260813.json",
+    "sha256": "6124d0ac83c4761717d034f9d8f94d371080fb7a3f6ea46fe2fb61f994c46644"
+  },
+  "preparation": {
+    "requested_pairs": 17248,
+    "requested_targets": 289,
+    "prepared_pairs": 17241,
+    "ready_targets": 289,
+    "deterministic_conformer_failures": 7,
+    "receptor_hash_mismatches": 0,
+    "summary": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_execution_inputs_v1/GNINA_CALIBRATION_PREPARATION_SUMMARY_V1.json",
+    "summary_sha256": "348e51203d951e51491cfb080808f08ed363997dcf5b697b98409744402a509b"
+  },
+  "effective_queue": {
+    "pairs": 17241,
+    "targets": 289,
+    "all_targets_at_least_16_pairs": true,
+    "pending_preparation_pairs": 0,
+    "all_receptors_hash_match": true,
+    "all_jobs_ready": true,
+    "manifest": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_GNINA_EFFECTIVE_MANIFEST_V1.csv.gz",
+    "manifest_sha256": "b943d3c2d3d463611fe17722a3d705d4af743037dbf4fa3afae019a5d1a5a3f1",
+    "evaluation_ledger": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_EFFECTIVE_EVALUATION_LEDGER_V1.csv.gz",
+    "evaluation_ledger_sha256": "329e3e82ad28423397726196c5a1ff132d919f55d4dade4ca7c06ef3d8a1f3b1",
+    "jobs": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_execution_inputs_v1/V3_LABEL_BLIND_GNINA_ALL_READY_JOBS_V1.csv",
+    "jobs_sha256": "42ee166ed626fe12d544f5b143558bbb92fa3b6f10d32d36cd62c926d24b7d58",
+    "summary": "outputs/old_drug_target_sota_v1/v3_label_blind_structure_audit_v1/small_molecule_applicability_v1/V3_LABEL_BLIND_EFFECTIVE_MANIFEST_SUMMARY_V1.json",
+    "summary_sha256": "bd2e17c461df93cd0cc903733f68d8e8ceabdb4b1c6229d11d5d2bd1a22e6354"
+  },
+  "failure_policy": "EXCLUDE_WITH_AUDIT; NEVER_ENCODE_AS_NEGATIVE; NO_LABEL_BASED_REPLACEMENT",
+  "evaluation_lock": "No activity label, Stage-0 metric, or GNINA score was used to choose the applicability thresholds, retained targets, or conformer-failure handling."
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "BIOMASTER_EQIR_V3_SAFE_DUAL_QUERY_OBJECTIVE_AMENDMENT_V1",
+  "created_utc": "2026-08-13T20:21:51Z",
+  "status": "FROZEN_BEFORE_FORMAL_STRUCTURE_SCORE_LABEL_JOIN_OR_STAGE0_DECISION; CONDITIONAL_ON_ALL_STAGE0_GATES_PASSING",
+  "purpose": "replace algebraically non-distinct residual wording with a genuinely base-relative, group-risk-constrained dual-query adapter objective while preserving every no-leakage and exact-fallback invariant",
+  "parents": {
+    "stage1_method_freeze": {
+      "path": "configs/biomaster_eqir_v3_stage1_method_freeze_20260814.json",
+      "sha256": "ebb3255d0ea445d2c1220b61af1f3fabfce7af38ff4aa4b8740f669d2403cdd1"
+    },
+    "probability_scale_objective_amendment": {
+      "path": "configs/biomaster_eqir_v3_stage1_objective_amendment_20260814.json",
+      "sha256": "b2c82e995d00bf09991633824197889656b50d0a4eaa297de556b4237388bdc4"
+    },
+    "mathematical_novelty_audit": {
+      "path": "outputs/old_drug_target_sota_v1/EQIR_V3_MATHEMATICAL_NOVELTY_AUDIT_20260814.md",
+      "sha256": "388939a4a4c4668244d58de662360e6d6ec9866bbf30a43e0641eabbc361419f"
+    },
+    "nearest_method_comparator_freeze": {
+      "path": "configs/biomaster_eqir_v3_nearest_method_comparator_freeze_20260814.json",
+      "sha256": "2fc61f2c7b4d942b7b284eb268976c3e04eaf618a3496fa2da44c71765342272"
+    },
+    "tapb_control_freeze": {
+      "path": "configs/biomaster_eqir_v3_tapb_control_freeze_20260814.json",
+      "sha256": "de03acd7126d238c2c5013cadf62db969c465bac4d52e327e2f644fa97a72523"
+    }
+  },
+  "freeze_timing_integrity": {
+    "formal_structure_evaluation_files_present": 0,
+    "formal_structure_scores_joined_to_labels": false,
+    "stage0_decision_available": false,
+    "confirmatory_s3_folds_3_4_read_for_this_amendment": false,
+    "trigger": "the probability-residual Huber term was proven algebraically equivalent to direct final-probability error, and existing S2/S4 evidence showed pooled gains can harm the old-drug query direction"
+  },
+  "activation_rule": {
+    "required_stage0_decision": "ADVANCE_TO_EQIR_STAGE1_FIVE_SEED_ABLATIONS",
+    "all_amended_stage0_gates_required": true,
+    "otherwise": "DO_NOT_IMPLEMENT_OR_TRAIN_THIS_OBJECTIVE"
+  },
+  "claim_boundary": {
+    "not_novel_by_itself": [
+      "pairwise logistic ranking",
+      "CVaR or group distributionally robust optimization",
+      "safe transfer or baseline-regret constraints",
+      "frozen adapters",
+      "missing-modality fallback"
+    ],
+    "candidate_joint_mechanism": "a label-independent evidence-qualified structural adapter over a frozen cross-fitted DTI base, optimized for base-relative regret on both drug and target query groups with upper-tail no-harm constraints, and exactly identical to the base outside the eligible evidence set",
+    "algorithm_novelty_already_established": false,
+    "stage1_development_success_alone_establishes_full_sota": false
+  },
+  "prior_art_boundaries": [
+    {
+      "concept": "safe transfer learning",
+      "example": "Batch Spectral Shrinkage",
+      "source": "https://proceedings.neurips.cc/paper/2019/hash/c6bff625bdb0393992c9d4db0c6bbe45-Abstract.html",
+      "boundary": "generic negative-transfer control is prior art; EQIR does not claim safe transfer broadly"
+    },
+    {
+      "concept": "baseline-relative no-harm learning",
+      "example": "Fair Classifiers that Abstain without Harm",
+      "source": "https://openreview.net/forum?id=jvveGAbkVx",
+      "boundary": "group no-harm objectives are prior art; evidence-qualified dual DTI query regret is the task-specific candidate difference"
+    },
+    {
+      "concept": "low regret relative to a user baseline",
+      "example": "Calibrated Regression Against An Adversary Without Regret",
+      "source": "https://proceedings.mlr.press/v286/deshpande25a.html",
+      "boundary": "baseline regret is not claimed as new and the cited method concerns online calibrated regression"
+    },
+    {
+      "concept": "drug-centric pairwise DTI ranking",
+      "example": "BRDTI",
+      "source": "https://doi.org/10.1016/j.cmpb.2017.09.003",
+      "boundary": "per-drug ranking is prior art; the amendment requires simultaneous target-query and drug-query base-relative structural regret"
+    }
+  ],
+  "unchanged_prediction_function": {
+    "frozen_base_logit": "b(d,t)",
+    "qualification": "a(t) in {0,1}, deterministic and independent of interaction labels",
+    "bounded_structure_adapter": "r_theta(d,t) clipped to [-4,4]",
+    "final_logit": "s_theta(d,t)=b(d,t)+a(t)*clip(r_theta(d,t),-4,4)",
+    "final_probability": "p_theta(d,t)=sigmoid(s_theta(d,t))",
+    "exact_fallback": "a(t)=0 implies s_theta(d,t) is bitwise identical to b(d,t) before sigmoid"
+  },
+  "base_relative_dual_query_regret": {
+    "pair_definition": "within one query group, pair each observed positive with a deterministically sampled observed negative from the same frozen TRAIN or inner-VALID boundary",
+    "pairwise_logistic_loss": "ell(m)=softplus(-m)",
+    "target_query_base_margin": "m0_T=b(d_positive,t)-b(d_negative,t)",
+    "target_query_final_margin": "mtheta_T=s_theta(d_positive,t)-s_theta(d_negative,t)",
+    "drug_query_base_margin": "m0_D=b(d,t_positive)-b(d,t_negative)",
+    "drug_query_final_margin": "mtheta_D=s_theta(d,t_positive)-s_theta(d,t_negative)",
+    "target_group_regret": "R_T(t)=mean_pairs_within_t[ell(mtheta_T)-ell(m0_T)]",
+    "drug_group_regret": "R_D(d)=mean_pairs_within_d[ell(mtheta_D)-ell(m0_D)]",
+    "interpretation": "negative regret means the qualified structure adapter improved pairwise ordering relative to the frozen base; positive regret means harm",
+    "why_not_algebraically_equivalent_to_direct_pairwise_training": "the base loss enters a nonlinear upper-tail group-risk constraint after per-query aggregation; it is not merely an additive constant in the optimized criterion"
+  },
+  "upper_tail_no_harm_constraints": {
+    "risk_definition": "CVaR_alpha(R)=min_eta eta + E[relu(R-eta)]/(1-alpha)",
+    "alpha": 0.8,
+    "interpretation": "control mean regret in the worst 20 percent of evaluable query groups",
+    "target_constraint": "CVaR_0.8({R_T(t)}) <= delta_T",
+    "drug_constraint": "CVaR_0.8({R_D(d)}) <= delta_D",
+    "fixed_tolerances": {
+      "delta_T": 0.01,
+      "delta_D": 0.01
+    },
+    "optimization": "primal-dual AdamW; nonnegative dual variables projected to [0,10] after every update",
+    "dual_learning_rates": [0.001, 0.003],
+    "infeasibility_policy": "if no candidate satisfies both inner-validation constraints, return the frozen base for that held fold and record the full candidate as infeasible; do not relax tolerances after seeing results"
+  },
+  "effective_training_objective": {
+    "calibration_term": "binary cross entropy of p_theta on qualified pairs",
+    "ordinary_target_pairwise_term": "mean ell(mtheta_T), retained as a nonnovel ranking component",
+    "ordinary_drug_pairwise_term": "mean ell(mtheta_D), retained as a nonnovel ranking component",
+    "constrained_problem": "minimize L_BCE + lambda_T*mean(ell(mtheta_T)) + lambda_D*mean(ell(mtheta_D)) + 1e-4*L2 subject to both CVaR regret constraints",
+    "lambda_target": [0.1, 0.25],
+    "lambda_drug": [0.25, 0.5, 1.0],
+    "point_probability_huber": "retained only as a preregistered diagnostic variant; it is not the effective full-model objective and cannot support novelty",
+    "query_sampling": "equal numbers of target-query and drug-query positive-negative pairs per step, with deterministic seed-specific sampling and no held-test access"
+  },
+  "required_objective_ablations": [
+    "PARENT_ORDINARY_DUAL_QUERY_OBJECTIVE_WITHOUT_BASE_RELATIVE_CVAR_CONSTRAINTS",
+    "SAFE_TARGET_QUERY_REGRET_ONLY",
+    "SAFE_DRUG_QUERY_REGRET_ONLY",
+    "SAFE_DUAL_QUERY_REGRET_WITHOUT_LABEL_INDEPENDENT_QUALIFICATION",
+    "SAFE_DUAL_QUERY_REGRET_WITHOUT_EXACT_FALLBACK",
+    "FULL_EQIR_SAFE_DUAL_QUERY"
+  ],
+  "mandatory_nearest_controls": [
+    "every raw and sigmoid TCP-inspired variant from the nearest-method freezes",
+    "TAPB_INSPIRED_DIRECT_FROZEN_EMBEDDING_ADAPTER",
+    "TAPB_INSPIRED_TRAIN_ONLY_TARGET_INTERVENTION",
+    "frozen query-balanced base",
+    "same-data DTIAM",
+    "BioMaster V1"
+  ],
+  "selection_and_promotion": {
+    "inner_selection_objective": "equal-weight mean of micro AUPRC, target-macro AUPRC and drug-macro AUPRC after both CVaR constraints are satisfied",
+    "development_folds": [0, 1, 2],
+    "confirmatory_folds_locked": [3, 4],
+    "seeds": [20260813, 20260814, 20260815, 20260816, 20260817],
+    "required_seed_consistency": "at least 4 of 5 seeds improve held-test micro AUPRC versus every mandatory nearest control",
+    "required_cold_axis_uncertainty": "target-homology-cluster and drug-scaffold bootstrap 95 percent lower bounds for micro AUPRC difference both exceed zero",
+    "required_directional_uncertainty": [
+      "target-macro point difference is nonnegative and grouped CI lower bound is at least -0.002",
+      "drug-macro grouped CI lower bound exceeds zero",
+      "full model drug-macro exceeds the within-drug permutation 95 percent upper bound",
+      "held-test upper-tail query regret is reported separately for target and drug query groups and neither may be positive beyond its frozen 0.01 tolerance"
+    ],
+    "any_failure": "STOP_EQIR_AND_RETAIN_NO_FULL_SOTA_CLAIM",
+    "all_development_gates_pass": "freeze implementation hash before opening S3 folds 3-4"
+  },
+  "unchanged_invariants": [
+    "all 480 hard-gate exclusions remain excluded",
+    "all 24 later pocket-quality exclusions remain excluded",
+    "only the 46 targets excluded solely for missing experimental pocket were recovered into the 384 active scope",
+    "the 46 recovered targets have a(t)=0 for the experimental-structure adapter",
+    "no structure fusion model or comparator is trained unless every Stage0 gate passes",
+    "S3 confirmation folds 3-4 remain locked",
+    "public checkpoints require actual training-source overlap and source-disjoint sensitivity audits"
+  ]
+}
