@@ -1,0 +1,3 @@
+target_feature_index,panel_role,uniprot_accession,gene_symbol,protein_name,target_assay_family,sequence_length,sequence_sha256,protbert_l2_norm,esm2_l2_norm
+0,PRIMARY_SHOWCASE,Q99611,SEPHS2,Selenophosphate synthetase 2,enzyme,448,b6a2b37eff2cbbb5d5cca44992ed2570cc24494e615cf170cc689228499834ec,2.854334592819214,6.715891361236572
+1,MANDATORY_CO_REPORT,A5D8V6,VPS37C,Vacuolar protein sorting-associated protein 37C,other_assayable,355,969365ce5da41361b5cb322a6ebeeec43e1f4d8b49db8392a96d42adf4cbde17,3.680137872695923,7.641993045806885

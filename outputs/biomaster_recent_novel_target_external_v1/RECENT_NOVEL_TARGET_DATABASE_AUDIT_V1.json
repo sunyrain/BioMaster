@@ -1,0 +1,189 @@
+{
+  "created_utc": "2026-08-19T14:07:50.170156+00:00",
+  "status": "PASS",
+  "terminology_boundary": "DATABASE-DISJOINT means absent from the frozen DTI graph, ChEMBL 37 target/pair tables and audited BindingDB 2026-07 exports. Both proteins have UniProt records.",
+  "chembl_version": [
+    {
+      "name": "Bioassay Ontology 2.0",
+      "creation_date": null,
+      "comments": "BAO version used for assays (http://bioassayontology.org/)"
+    },
+    {
+      "name": "COCONUT 2025-07",
+      "creation_date": null,
+      "comments": "COCONUT version used for natural product flagging (https://coconut.naturalproducts.net/)"
+    },
+    {
+      "name": "ChEMBL_37",
+      "creation_date": "2026-05-01 00:00:00.000000",
+      "comments": "ChEMBL Release 37 (https://www.ebi.ac.uk/chembl)"
+    },
+    {
+      "name": "ChEMBL_Structure_Pipeline 1.2.0",
+      "creation_date": null,
+      "comments": "ChEMBL_Structure_Pipeline version used for chemical structure curation (https://github.com/chembl/ChEMBL_Structure_Pipeline)"
+    },
+    {
+      "name": "EFO 3.74.0",
+      "creation_date": null,
+      "comments": "EFO version used for indication and warning data (https://www.ebi.ac.uk/efo/)"
+    },
+    {
+      "name": "Gene Ontology 2024-02-22",
+      "creation_date": null,
+      "comments": "GO version used for genes (https://www.ebi.ac.uk/QuickGO/)"
+    },
+    {
+      "name": "InChI v1.06",
+      "creation_date": null,
+      "comments": "InChI version used for compound registration (https://github.com/IUPAC-InChI/InChI)"
+    },
+    {
+      "name": "MeSH 2025",
+      "creation_date": null,
+      "comments": "MeSH version used for indication data (https://www.nlm.nih.gov/mesh/meshhome.html)"
+    },
+    {
+      "name": "RDKit 2022.09.4",
+      "creation_date": null,
+      "comments": "RDKit version used for standardisation and salt stripping of chemical structures (https://www.rdkit.org/)"
+    },
+    {
+      "name": "Swiss-Prot 2025_03",
+      "creation_date": null,
+      "comments": "UniProtKB version used for component_sequences data (https://www.expasy.org/resources/uniprotkb)"
+    },
+    {
+      "name": "UBERON 2024-03-22",
+      "creation_date": null,
+      "comments": "UBERON version used for tissues (http://obophenotype.github.io/uberon/)"
+    }
+  ],
+  "bindingdb_exports": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/external_relation_audit_v7/raw/bindingdb_202607/BindingDB_BindingDB_Articles_202607_tsv.zip": "d2584d1519318d00ab5f46289da5ab3549affe732d598a5072f8777b6b3b5262",
+    "outputs/evidence_routing_compute_execution_20260808_v1/external_relation_audit_v7/raw/bindingdb_202607/BindingDB_PubChem_202607_tsv.zip": "ed551bf753eb3cbb2281c8be491f80cadb326248fc70f2beabe95cd3d0536bd7"
+  },
+  "checks": {
+    "training_target_count_is_428": true,
+    "deployment_target_count_is_384": true,
+    "project_target_universe_is_888": true,
+    "old_drug_universe_is_720": true,
+    "both_targets_absent_from_training_sequences": true,
+    "both_targets_absent_from_training_pair_metadata": true,
+    "both_targets_absent_from_deployment_384": true,
+    "both_targets_absent_from_project_888": true,
+    "both_targets_absent_from_chembl37": true,
+    "both_pairs_absent_from_chembl37": true,
+    "both_target_tokens_absent_from_bindingdb_202607": true,
+    "both_experimental_old_drugs_exactly_once_in_720": true,
+    "both_experimental_old_drugs_present_in_chembl37": true
+  },
+  "targets": [
+    {
+      "uniprot_accession": "Q99611",
+      "gene_symbol": "SEPHS2",
+      "training_target_exact_sequence_rows": 0,
+      "training_pair_accession_rows": 0,
+      "training_pair_gene_rows": 0,
+      "deployment_384_accession_rows": 0,
+      "deployment_384_exact_sequence_rows": 0,
+      "project_888_accession_rows": 0,
+      "project_888_exact_sequence_rows": 0,
+      "old_drug_720_rows": 1,
+      "old_drug_720_record": [
+        {
+          "drug_feature_index": 698,
+          "ligand_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+          "ligand_smiles": "Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1",
+          "drug_names": "dasatinib",
+          "on_bits": 65
+        }
+      ],
+      "bindingdb_literal_token_hits": {
+        "outputs/evidence_routing_compute_execution_20260808_v1/external_relation_audit_v7/raw/bindingdb_202607/BindingDB_BindingDB_Articles_202607_tsv.zip": {
+          "Q99611": 0,
+          "SEPHS2": 0
+        },
+        "outputs/evidence_routing_compute_execution_20260808_v1/external_relation_audit_v7/raw/bindingdb_202607/BindingDB_PubChem_202607_tsv.zip": {
+          "Q99611": 0,
+          "SEPHS2": 0
+        }
+      },
+      "bindingdb_target_tokens_absent": true,
+      "chembl37": {
+        "uniprot_accession": "Q99611",
+        "gene_symbol": "SEPHS2",
+        "component_accession_rows": 0,
+        "component_description_gene_matches": 0,
+        "component_synonym_exact_gene_matches": 0,
+        "target_dictionary_gene_name_matches": 0,
+        "target_dictionary_accession_linked_rows": 0,
+        "experimental_pair_activity_rows": 0,
+        "old_drug_rows": [
+          {
+            "molregno": 361469,
+            "chembl_id": "CHEMBL1421",
+            "pref_name": "DASATINIB ANHYDROUS",
+            "max_phase": 4
+          }
+        ],
+        "target_absent_from_chembl37": true,
+        "experimental_pair_absent_from_chembl37": true,
+        "old_drug_present_in_chembl37": true
+      }
+    },
+    {
+      "uniprot_accession": "A5D8V6",
+      "gene_symbol": "VPS37C",
+      "training_target_exact_sequence_rows": 0,
+      "training_pair_accession_rows": 0,
+      "training_pair_gene_rows": 0,
+      "deployment_384_accession_rows": 0,
+      "deployment_384_exact_sequence_rows": 0,
+      "project_888_accession_rows": 0,
+      "project_888_exact_sequence_rows": 0,
+      "old_drug_720_rows": 1,
+      "old_drug_720_record": [
+        {
+          "drug_feature_index": 666,
+          "ligand_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+          "ligand_smiles": "CCN(CCO)CCCC(C)Nc1ccnc2cc(Cl)ccc12",
+          "drug_names": "hydroxychloroquine",
+          "on_bits": 49
+        }
+      ],
+      "bindingdb_literal_token_hits": {
+        "outputs/evidence_routing_compute_execution_20260808_v1/external_relation_audit_v7/raw/bindingdb_202607/BindingDB_BindingDB_Articles_202607_tsv.zip": {
+          "A5D8V6": 0,
+          "VPS37C": 0
+        },
+        "outputs/evidence_routing_compute_execution_20260808_v1/external_relation_audit_v7/raw/bindingdb_202607/BindingDB_PubChem_202607_tsv.zip": {
+          "A5D8V6": 0,
+          "VPS37C": 0
+        }
+      },
+      "bindingdb_target_tokens_absent": true,
+      "chembl37": {
+        "uniprot_accession": "A5D8V6",
+        "gene_symbol": "VPS37C",
+        "component_accession_rows": 0,
+        "component_description_gene_matches": 0,
+        "component_synonym_exact_gene_matches": 0,
+        "target_dictionary_gene_name_matches": 0,
+        "target_dictionary_accession_linked_rows": 0,
+        "experimental_pair_activity_rows": 0,
+        "old_drug_rows": [
+          {
+            "molregno": 429737,
+            "chembl_id": "CHEMBL1535",
+            "pref_name": "HYDROXYCHLOROQUINE",
+            "max_phase": 4
+          }
+        ],
+        "target_absent_from_chembl37": true,
+        "experimental_pair_absent_from_chembl37": true,
+        "old_drug_present_in_chembl37": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "created_utc": "2026-08-19T14:07:52.393624+00:00",
+  "status": "PASS",
+  "evaluation_type": "RETROSPECTIVE_TARGET_COLD_DATABASE_RELATION_DISJOINT_OLD_DRUG_RETRIEVAL",
+  "prospective_claim_allowed": false,
+  "claim_level": "PRIMARY_MISSED_PREDECLARED_TOP5_PERCENT",
+  "conclusion_zh": "主案例未进入预设 Top 5%；本次验证应作为诚实失败/边界结果报告，不能用于宣称新靶点老药发现能力。",
+  "freeze_id": "BIOMASTER_RECENT_NOVEL_TARGET_EXTERNAL_FREEZE_20260819",
+  "frozen_targets": [
+    {
+      "panel_role": "PRIMARY_SHOWCASE",
+      "uniprot_accession": "Q99611",
+      "gene_symbol": "SEPHS2",
+      "protein_name": "Selenophosphate synthetase 2",
+      "organism": "Homo sapiens",
+      "fixed_target_assay_family": "enzyme",
+      "sequence": "MAEASATGACGEAMAAAEGSSGPAGLTLGRSFSNYRPFEPQALGLSPSWRLTGFSGMKGUGCKVPQEALLKLLAGLTRPDVRPPLGRGLVGGQEEASQEAGLPAGAGPSPTFPALGIGMDSCVIPLRHGGLSLVQTTDFFYPLVEDPYMMGRIACANVLSDLYAMGITECDNMLMLLSVSQSMSEEEREKVTPLMVKGFRDAAEEGGTAVTGGQTVVNPWIIIGGVATVVCQPNEFIMPDSAVVGDVLVLTKPLGTQVAVNAHQWLDNPERWNKVKMVVSREEVELAYQEAMFNMATLNRTAAGLMHTFNAHAATDITGFGILGHSQNLAKQQRNEVSFVIHNLPIIAKMAAVSKASGRFGLLQGTSAETSGGLLICLPREQAARFCSEIKSSKYGEGHQAWIVGIVEKGNRTARIIDKPRVIEVLPRGATAAVLAPDSSNASSEPSS",
+      "sequence_length": 448,
+      "sequence_sha256": "b6a2b37eff2cbbb5d5cca44992ed2570cc24494e615cf170cc689228499834ec",
+      "sequence_source": "https://rest.uniprot.org/uniprotkb/Q99611.fasta",
+      "experimental_positive": {
+        "old_drug_name": "dasatinib",
+        "old_drug_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+        "reported_kd_micromolar": 9.1,
+        "reported_kd_sd_micromolar": 0.8,
+        "evidence": [
+          "POST-IT live-cell target identification",
+          "microscale thermophoresis",
+          "competition pull-down",
+          "molecular docking"
+        ]
+      }
+    },
+    {
+      "panel_role": "MANDATORY_CO_REPORT",
+      "uniprot_accession": "A5D8V6",
+      "gene_symbol": "VPS37C",
+      "protein_name": "Vacuolar protein sorting-associated protein 37C",
+      "organism": "Homo sapiens",
+      "fixed_target_assay_family": "other_assayable",
+      "sequence": "METLKDKTLQELEELQNDSEAIDQLALESPEVQDLQLEREMALATNRSLAERNLEFQGPLEISRSNLSDRYQELRKLVERCQEQKAKLEKFSSALQPGTLLDLLQVEGMKIEEESEAMAEKFLEGEVPLETFLENFSSMRMLSHLRRVRVEKLQEVVRKPRASQELAGDAPPPRPPPPVRPVPQGTPPVVEEQPQPPLAMPPYPLPYSPSPSLPVGPTAHGALPPAPFPVVSQPSFYSGPLGPTYPAAQLGPRGAAGYSWSPQRSMPPRPGYPGTPMGASGPGYPLRGGRAPSPGYPQQSPYPATGGKPPYPIQPQLPSFPGQPQPSVPLQPPYPPGPAPPYGFPPPPGPAWPGY",
+      "sequence_length": 355,
+      "sequence_sha256": "969365ce5da41361b5cb322a6ebeeec43e1f4d8b49db8392a96d42adf4cbde17",
+      "sequence_source": "https://rest.uniprot.org/uniprotkb/A5D8V6.fasta",
+      "experimental_positive": {
+        "old_drug_name": "hydroxychloroquine",
+        "old_drug_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+        "reported_kd_micromolar": 16.9,
+        "reported_kd_sd_micromolar": 8.7,
+        "evidence": [
+          "POST-IT live-cell target identification",
+          "microscale thermophoresis",
+          "competition pull-down",
+          "cellular thermal shift assay"
+        ]
+      }
+    }
+  ],
+  "ranking_space": {
+    "targets": 2,
+    "old_drugs_per_target": 720,
+    "pairs": 1440,
+    "direction": "old drugs ranked within each target"
+  },
+  "predeclared_threshold_results": {
+    "top5_percent_cutoff_rank": 36,
+    "top1_percent_cutoff_rank": 8,
+    "positive_controls_top5_percent": 0,
+    "positive_controls_top1_percent": 0,
+    "positive_controls_total": 2
+  },
+  "positive_control_results": [
+    {
+      "drug_feature_index": 698,
+      "ligand_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+      "ligand_smiles": "Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCO)CC2)n1",
+      "drug_names": "dasatinib",
+      "on_bits": 65,
+      "target_feature_index": 0,
+      "panel_role": "PRIMARY_SHOWCASE",
+      "uniprot_accession": "Q99611",
+      "gene_symbol": "SEPHS2",
+      "protein_name": "Selenophosphate synthetase 2",
+      "target_assay_family": "enzyme",
+      "experimental_positive_old_drug_name": "dasatinib",
+      "experimental_positive_old_drug_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+      "is_literature_experimental_positive": true,
+      "score_seed_20260816": 0.09327869943932242,
+      "score_seed_20260817": 0.15474026694125956,
+      "score_seed_20260818": 0.13421863061611192,
+      "score_seed_20260819": 0.2280559808376921,
+      "score_seed_20260820": 0.1997364221688468,
+      "biomaster_ensemble_score": 0.16200600000064655,
+      "biomaster_ensemble_logit": -7.646825790405273,
+      "model_seed_std": 0.04761208951981445,
+      "rank_within_target_720": 395,
+      "percentile_within_target_720": 0.4520166898470097,
+      "top_1_percent": false,
+      "top_5_percent": false,
+      "top_10": false
+    },
+    {
+      "drug_feature_index": 666,
+      "ligand_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+      "ligand_smiles": "CCN(CCO)CCCC(C)Nc1ccnc2cc(Cl)ccc12",
+      "drug_names": "hydroxychloroquine",
+      "on_bits": 49,
+      "target_feature_index": 1,
+      "panel_role": "MANDATORY_CO_REPORT",
+      "uniprot_accession": "A5D8V6",
+      "gene_symbol": "VPS37C",
+      "protein_name": "Vacuolar protein sorting-associated protein 37C",
+      "target_assay_family": "other_assayable",
+      "experimental_positive_old_drug_name": "hydroxychloroquine",
+      "experimental_positive_old_drug_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+      "is_literature_experimental_positive": true,
+      "score_seed_20260816": 0.12020538644223036,
+      "score_seed_20260817": 0.15830317087281368,
+      "score_seed_20260818": 0.21602081366111978,
+      "score_seed_20260819": 0.8377406569854623,
+      "score_seed_20260820": 0.11252061637513334,
+      "biomaster_ensemble_score": 0.2889581288673519,
+      "biomaster_ensemble_logit": -5.125324821472168,
+      "model_seed_std": 0.2768250411563931,
+      "rank_within_target_720": 219,
+      "percentile_within_target_720": 0.6968011126564673,
+      "top_1_percent": false,
+      "top_5_percent": false,
+      "top_10": false
+    }
+  ],
+  "model": {
+    "name": "BioMaster-ODTI V2 ESM2 S5 five-seed ensemble",
+    "parameter_count_per_seed": 10419932,
+    "checkpoint_config": {
+      "drug_input_dim": 2048,
+      "target_input_dim": 1024,
+      "target_aux_input_dim": 1280,
+      "target_token_input_dim": 0,
+      "target_token_heads": 4,
+      "target_token_max_len": 1022,
+      "structure_input_dim": 19,
+      "embedding_dim": 192,
+      "hidden_dim": 256,
+      "family_dim": 24,
+      "expert_count": 6,
+      "dropout": 0.12,
+      "rank_weight": 0.12,
+      "listwise_weight": 0.0,
+      "affinity_weight": 0.06,
+      "observation_weight": 0.1,
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "rank_max_pairs": 4096,
+      "affinity_min_log_variance": -6.0,
+      "affinity_max_log_variance": 4.0
+    },
+    "families": [
+      "enzyme",
+      "ion_channel",
+      "kinase",
+      "nuclear_epigenetic",
+      "other_assayable",
+      "transporter",
+      "__UNK__"
+    ],
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "checkpoint_metadata": [
+      {
+        "seed": 20260816,
+        "temperature": 4.711470182590743,
+        "checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260816/BEST_MODEL_V2.pt",
+        "checkpoint_sha256": "a92de9d6c2ac8841dfebca360082917d34774fb356ee29a72e3691d60e454478",
+        "test_micro_auprc": 0.512975782493863,
+        "fallback_max_abs_final_minus_base_logit": 0.0
+      },
+      {
+        "seed": 20260817,
+        "temperature": 4.711470182590743,
+        "checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260817/BEST_MODEL_V2.pt",
+        "checkpoint_sha256": "3b5dcfadb02a92453c071548d762ffc5bd39108d1a40479bea5190fe794204ea",
+        "test_micro_auprc": 0.5049946451230299,
+        "fallback_max_abs_final_minus_base_logit": 0.0
+      },
+      {
+        "seed": 20260818,
+        "temperature": 4.4816890703380645,
+        "checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260818/BEST_MODEL_V2.pt",
+        "checkpoint_sha256": "5f9ccbff42ad7fb9404d924cc9c1cf290e9f87c5230b5ff6a5c8aec1f67163e3",
+        "test_micro_auprc": 0.5464261102796023,
+        "fallback_max_abs_final_minus_base_logit": 0.0
+      },
+      {
+        "seed": 20260819,
+        "temperature": 4.055199966844676,
+        "checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260819/BEST_MODEL_V2.pt",
+        "checkpoint_sha256": "f09c55b5ccb9d69b3856a8d087da220bbea0adeb9dc41af3582f58c02214227e",
+        "test_micro_auprc": 0.5004345527727918,
+        "fallback_max_abs_final_minus_base_logit": 0.0
+      },
+      {
+        "seed": 20260820,
+        "temperature": 4.4816890703380645,
+        "checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260820/BEST_MODEL_V2.pt",
+        "checkpoint_sha256": "b9d76a6af319c43d1ded6507c1ce491be76ca6d865054ac30f09ae1aa263148b",
+        "test_micro_auprc": 0.5014194884940028,
+        "fallback_max_abs_final_minus_base_logit": 0.0
+      }
+    ],
+    "score_semantics": "temperature-scaled ensemble ranking score; not a calibrated probability of physical binding"
+  },
+  "structure_fallback": {
+    "structure_mask_zero_rows": 1440,
+    "exact_fallback_required": true,
+    "max_abs_final_minus_base_logit_by_seed": {
+      "20260816": 0.0,
+      "20260817": 0.0,
+      "20260818": 0.0,
+      "20260819": 0.0,
+      "20260820": 0.0
+    }
+  },
+  "applicability": {
+    "nearest_training_targets": {
+      "Q99611": {
+        "maximum_protbert_cosine": 0.9407660961151123,
+        "maximum_esm2_cosine": 0.9641313552856445,
+        "maximum_mean_cosine": 0.9495036602020264,
+        "top5_by_mean_cosine": [
+          {
+            "rank": 1,
+            "target_feature_index": 225,
+            "sequence_key": "SEQ000416",
+            "sequence_length": 528,
+            "primary_gene": "TH",
+            "query_accession": "P07101",
+            "target_chembl_id": "CHEMBL1969",
+            "target_assay_family": "enzyme",
+            "protbert_cosine": 0.9407660961151123,
+            "esm2_cosine": 0.9582412838935852,
+            "mean_cosine": 0.9495036602020264
+          },
+          {
+            "rank": 2,
+            "target_feature_index": 244,
+            "sequence_key": "SEQ000450",
+            "sequence_length": 1333,
+            "primary_gene": "XDH",
+            "query_accession": "P47989",
+            "target_chembl_id": "CHEMBL1929",
+            "target_assay_family": "enzyme",
+            "protbert_cosine": 0.9334587454795837,
+            "esm2_cosine": 0.954573929309845,
+            "mean_cosine": 0.9440163373947144
+          },
+          {
+            "rank": 3,
+            "target_feature_index": 119,
+            "sequence_key": "SEQ000239",
+            "sequence_length": 1159,
+            "primary_gene": "KCNH2",
+            "query_accession": "Q12809",
+            "target_chembl_id": "CHEMBL240",
+            "target_assay_family": "ion_channel",
+            "protbert_cosine": 0.935797393321991,
+            "esm2_cosine": 0.9500811696052551,
+            "mean_cosine": 0.942939281463623
+          },
+          {
+            "rank": 4,
+            "target_feature_index": 117,
+            "sequence_key": "SEQ000237",
+            "sequence_length": 613,
+            "primary_gene": "KCNA5",
+            "query_accession": "P22460",
+            "target_chembl_id": "CHEMBL4306",
+            "target_assay_family": "ion_channel",
+            "protbert_cosine": 0.9352028965950012,
+            "esm2_cosine": 0.9484730362892151,
+            "mean_cosine": 0.9418379664421082
+          },
+          {
+            "rank": 5,
+            "target_feature_index": 45,
+            "sequence_key": "SEQ000093",
+            "sequence_length": 772,
+            "primary_gene": "CPT1B",
+            "query_accession": "Q92523",
+            "target_chembl_id": "CHEMBL2216739",
+            "target_assay_family": "transporter",
+            "protbert_cosine": 0.9240498542785645,
+            "esm2_cosine": 0.9596153497695923,
+            "mean_cosine": 0.9418326020240784
+          }
+        ]
+      },
+      "A5D8V6": {
+        "maximum_protbert_cosine": 0.9493354558944702,
+        "maximum_esm2_cosine": 0.9580848217010498,
+        "maximum_mean_cosine": 0.9458416700363159,
+        "top5_by_mean_cosine": [
+          {
+            "rank": 1,
+            "target_feature_index": 168,
+            "sequence_key": "SEQ000321",
+            "sequence_length": 933,
+            "primary_gene": "PGR",
+            "query_accession": "P06401",
+            "target_chembl_id": "CHEMBL208",
+            "target_assay_family": "nuclear_epigenetic",
+            "protbert_cosine": 0.9493354558944702,
+            "esm2_cosine": 0.9423478841781616,
+            "mean_cosine": 0.9458416700363159
+          },
+          {
+            "rank": 2,
+            "target_feature_index": 112,
+            "sequence_key": "SEQ000232",
+            "sequence_length": 712,
+            "primary_gene": "IRAK1",
+            "query_accession": "P51617",
+            "target_chembl_id": "CHEMBL3357",
+            "target_assay_family": "kinase",
+            "protbert_cosine": 0.919745683670044,
+            "esm2_cosine": 0.953644335269928,
+            "mean_cosine": 0.9366949796676636
+          },
+          {
+            "rank": 3,
+            "target_feature_index": 291,
+            "sequence_key": "SEQ000554",
+            "sequence_length": 847,
+            "primary_gene": "MAP3K11",
+            "query_accession": "Q16584",
+            "target_chembl_id": "CHEMBL2708",
+            "target_assay_family": "kinase",
+            "protbert_cosine": 0.9135652780532837,
+            "esm2_cosine": 0.9577174186706543,
+            "mean_cosine": 0.935641348361969
+          },
+          {
+            "rank": 4,
+            "target_feature_index": 153,
+            "sequence_key": "SEQ000293",
+            "sequence_length": 984,
+            "primary_gene": "NR3C2",
+            "query_accession": "P08235",
+            "target_chembl_id": "CHEMBL1994",
+            "target_assay_family": "nuclear_epigenetic",
+            "protbert_cosine": 0.9321560263633728,
+            "esm2_cosine": 0.9380248785018921,
+            "mean_cosine": 0.9350904226303101
+          },
+          {
+            "rank": 5,
+            "target_feature_index": 163,
+            "sequence_key": "SEQ000314",
+            "sequence_length": 1141,
+            "primary_gene": "PDE3A",
+            "query_accession": "Q14432",
+            "target_chembl_id": "CHEMBL241",
+            "target_assay_family": "enzyme",
+            "protbert_cosine": 0.9200375080108643,
+            "esm2_cosine": 0.9491103291511536,
+            "mean_cosine": 0.9345738887786865
+          }
+        ]
+      }
+    }
+  },
+  "database_audit_status": "PASS",
+  "limitations": [
+    "The experimental outcomes were published before this evaluation; this is retrospective rather than prospective discovery.",
+    "Panel selection used known 2024 literature outcomes, although target/family choices and both-pair reporting were frozen before model scoring.",
+    "Database-disjoint means absent from the audited DTI relationship stores, not absent from UniProt.",
+    "The frozen model was optimized primarily on observed ChEMBL DTI labels and is not guaranteed to rank every target class equally."
+  ],
+  "artifacts": {
+    "database_audit": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_DATABASE_AUDIT_V1.json",
+    "scores": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_720_DRUG_SCORES_V1.csv.gz",
+    "top20": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_TOP20_V1.csv",
+    "positive_control_ranks": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_POSITIVE_CONTROL_RANKS_V1.csv",
+    "report_zh": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_EXTERNAL_REPORT_ZH_V1.md"
+  },
+  "artifact_sha256": {
+    "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_DATABASE_AUDIT_V1.json": "06ff3b1a101d5ce2ac8d8e446bab3e589110d31288d09786b5048fe2773203c4",
+    "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_720_DRUG_SCORES_V1.csv.gz": "647f572c6c84a6b4918b854a84ba6724ceefbe4f738991b55854b8d4399d95d3",
+    "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_TOP20_V1.csv": "08f4242a3fd7bdfad621ffe188d42fdb03dd5f1419ff392d29dc8869930368d3",
+    "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_POSITIVE_CONTROL_RANKS_V1.csv": "4d4f93ab41cbaa9e331def9f006f9d9424e0956c005046c6b785b9ada8f12b98",
+    "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_EXTERNAL_REPORT_ZH_V1.md": "a017b925c582c0fa55574dbd10947b2b1ac589c921b519666f364b53e6a43c50"
+  }
+}

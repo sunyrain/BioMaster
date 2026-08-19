@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-08-19T14:05:47.459666+00:00",
+  "status": "PASS",
+  "freeze_id": "BIOMASTER_RECENT_NOVEL_TARGET_EXTERNAL_FREEZE_20260819",
+  "device": "cuda:0",
+  "checks": {
+    "freeze_valid": true,
+    "exact_two_targets": true,
+    "protbert_shape_2x1024": true,
+    "esm2_shape_2x1280": true,
+    "all_features_finite": true,
+    "protbert_reference_reproduced": true,
+    "esm2_reference_reproduced": true
+  },
+  "protbert": {
+    "route": "CONPLEX_PROTBERT_PER_RESIDUE_MEAN_EXCLUDING_SPECIAL_TOKENS",
+    "transformers_version": "4.46.3",
+    "reference_target_feature_index": 0,
+    "reference_max_abs_difference": 6.556510925292969e-07,
+    "reference_cosine": 1.0,
+    "reference_bitwise_exact": false
+  },
+  "esm2": {
+    "route": "DTIAM_ESM2_T33_650M_FINAL_LAYER_MEAN_POSITIONS_1_THROUGH_EOS",
+    "esm_version": "2.0.0",
+    "reference_target_feature_index": 0,
+    "reference_max_abs_difference": 0.0,
+    "reference_cosine": 0.9999999403953552,
+    "reference_bitwise_exact": true,
+    "input_lengths": [
+      448,
+      355
+    ]
+  },
+  "inputs": {
+    "configs/biomaster_recent_novel_target_external_freeze_20260819.json": "37aa239896e5af4a014d62b96a48fe6e3d2e1b6e0441459c8db252ee4bea993d",
+    "outputs/old_drug_target_sota_v1/feature_store_v1/TARGET_FEATURE_INDEX_V1.csv.gz": "2c959ef251a0775a6cb5df96d06c37eff25d80d671a82d7bb5f2e7b90ff1c628",
+    "outputs/old_drug_target_sota_v1/feature_store_v1/PROTBERT1024_FLOAT32_V1.npy": "9ec6c1038c78c2eb3fe8b8c8d318308d787359869924d4e108c7484ece8825f5",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_official_feature_store_v1/DTIAM_ESM2_T33_650M_1280_FLOAT32_V1.npy": "879a351e2574e3a159697496a2a2245c2eedabc30acd18d7816838157db6cd52",
+    "/root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D.pt": "ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c",
+    "/root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D-contact-regression.pt": "8ffe6edbd4173dc8d45c2cd5cb27d43aad77ec26b4c768200c58ae1f96693575"
+  },
+  "outputs": {
+    "protbert": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_PROTBERT1024_FLOAT32_V1.npy",
+    "protbert_sha256": "403a7da72362264584e9ff301ca096e6af5d23d4f0b2293f6c6497b3e5cc272b",
+    "esm2": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_ESM2_T33_650M_1280_FLOAT32_V1.npy",
+    "esm2_sha256": "97047b469e5de2d6b9fd2142175321072f64344006c2edd0abf371afe49f53ff",
+    "index": "outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_INDEX_V1.csv",
+    "index_sha256": "96cd465b488621318e24c768590159bbb29d6048fd71db7843f9a1b1e0cac20f"
+  }
+}

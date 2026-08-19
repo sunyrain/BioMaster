@@ -1,0 +1,78 @@
+{
+  "freeze_id": "BIOMASTER_RECENT_NOVEL_TARGET_EXTERNAL_FREEZE_20260819",
+  "frozen_utc": "2026-08-19T00:00:00Z",
+  "status": "FROZEN_BEFORE_MODEL_SCORING",
+  "objective": "Rank the fixed 720-old-drug universe for recently reported human drug-target relationships whose protein targets are absent from the frozen BioMaster training graph and ChEMBL 37 target dictionary.",
+  "model_policy": {
+    "checkpoint_suite": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal",
+    "seeds": [20260816, 20260817, 20260818, 20260819, 20260820],
+    "ranking_direction": "within each new target over all 720 old drugs",
+    "retraining_or_finetuning": false,
+    "structure_policy": "mask=0 exact sequence/chemistry fallback",
+    "report_all_frozen_controls": true,
+    "no_post_score_target_or_family_changes": true
+  },
+  "success_rules": {
+    "primary_success": "experimental positive ranks in top 5 percent (rank <= 36 of 720)",
+    "stretch_success": "experimental positive ranks in top 1 percent (rank <= 8 of 720)",
+    "top10_success": "experimental positive rank <= 10",
+    "panel_policy": "Report both frozen positive controls even if either or both fail. No cherry-picking."
+  },
+  "database_audit_scope": {
+    "chembl_release": "ChEMBL 37, local SQLite release 2026-05-01",
+    "bindingdb_exports": "BindingDB Articles and PubChem TSV exports dated 2026-07",
+    "training_graph": "BioMaster ChEMBL37 86,674-pair feature store with 428 unique protein sequences",
+    "deployment_target_set": "BioMaster frozen 384-target deployment set",
+    "project_target_universe": "BioMaster ChEMBL37 official 888-target universe",
+    "terminology": "Not in database means absent from the frozen DTI/training and audited drug-target relationship databases; it does not mean that the protein lacks a UniProt record."
+  },
+  "literature_source": {
+    "title": "Target protein identification in live cells and organisms with a non-diffusive proximity tagging system",
+    "journal": "eLife",
+    "publication_year": 2024,
+    "doi": "10.7554/eLife.102667",
+    "url": "https://doi.org/10.7554/eLife.102667",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11677243/",
+    "selection_note": "The paper reports both pairs as novel direct binders/targets; the complete two-pair panel is frozen together."
+  },
+  "targets": [
+    {
+      "panel_role": "PRIMARY_SHOWCASE",
+      "uniprot_accession": "Q99611",
+      "gene_symbol": "SEPHS2",
+      "protein_name": "Selenophosphate synthetase 2",
+      "organism": "Homo sapiens",
+      "fixed_target_assay_family": "enzyme",
+      "sequence": "MAEASATGACGEAMAAAEGSSGPAGLTLGRSFSNYRPFEPQALGLSPSWRLTGFSGMKGUGCKVPQEALLKLLAGLTRPDVRPPLGRGLVGGQEEASQEAGLPAGAGPSPTFPALGIGMDSCVIPLRHGGLSLVQTTDFFYPLVEDPYMMGRIACANVLSDLYAMGITECDNMLMLLSVSQSMSEEEREKVTPLMVKGFRDAAEEGGTAVTGGQTVVNPWIIIGGVATVVCQPNEFIMPDSAVVGDVLVLTKPLGTQVAVNAHQWLDNPERWNKVKMVVSREEVELAYQEAMFNMATLNRTAAGLMHTFNAHAATDITGFGILGHSQNLAKQQRNEVSFVIHNLPIIAKMAAVSKASGRFGLLQGTSAETSGGLLICLPREQAARFCSEIKSSKYGEGHQAWIVGIVEKGNRTARIIDKPRVIEVLPRGATAAVLAPDSSNASSEPSS",
+      "sequence_length": 448,
+      "sequence_sha256": "b6a2b37eff2cbbb5d5cca44992ed2570cc24494e615cf170cc689228499834ec",
+      "sequence_source": "https://rest.uniprot.org/uniprotkb/Q99611.fasta",
+      "experimental_positive": {
+        "old_drug_name": "dasatinib",
+        "old_drug_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+        "reported_kd_micromolar": 9.1,
+        "reported_kd_sd_micromolar": 0.8,
+        "evidence": ["POST-IT live-cell target identification", "microscale thermophoresis", "competition pull-down", "molecular docking"]
+      }
+    },
+    {
+      "panel_role": "MANDATORY_CO_REPORT",
+      "uniprot_accession": "A5D8V6",
+      "gene_symbol": "VPS37C",
+      "protein_name": "Vacuolar protein sorting-associated protein 37C",
+      "organism": "Homo sapiens",
+      "fixed_target_assay_family": "other_assayable",
+      "sequence": "METLKDKTLQELEELQNDSEAIDQLALESPEVQDLQLEREMALATNRSLAERNLEFQGPLEISRSNLSDRYQELRKLVERCQEQKAKLEKFSSALQPGTLLDLLQVEGMKIEEESEAMAEKFLEGEVPLETFLENFSSMRMLSHLRRVRVEKLQEVVRKPRASQELAGDAPPPRPPPPVRPVPQGTPPVVEEQPQPPLAMPPYPLPYSPSPSLPVGPTAHGALPPAPFPVVSQPSFYSGPLGPTYPAAQLGPRGAAGYSWSPQRSMPPRPGYPGTPMGASGPGYPLRGGRAPSPGYPQQSPYPATGGKPPYPIQPQLPSFPGQPQPSVPLQPPYPPGPAPPYGFPPPPGPAWPGY",
+      "sequence_length": 355,
+      "sequence_sha256": "969365ce5da41361b5cb322a6ebeeec43e1f4d8b49db8392a96d42adf4cbde17",
+      "sequence_source": "https://rest.uniprot.org/uniprotkb/A5D8V6.fasta",
+      "experimental_positive": {
+        "old_drug_name": "hydroxychloroquine",
+        "old_drug_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+        "reported_kd_micromolar": 16.9,
+        "reported_kd_sd_micromolar": 8.7,
+        "evidence": ["POST-IT live-cell target identification", "microscale thermophoresis", "competition pull-down", "cellular thermal shift assay"]
+      }
+    }
+  ]
+}
