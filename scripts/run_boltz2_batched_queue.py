@@ -148,14 +148,20 @@ def prepare_batches(
             yaml_files.append(dest.name)
 
         expected_stems = {Path(name).stem for name in yaml_files}
+        # ``prepare_batches`` is also used directly by lightweight tests and
+        # older orchestration callers that construct a partial Namespace.
+        # Keep the CLI defaults here so adding multi-sample support does not
+        # break signed-batch resume checks for those callers.
+        diffusion_samples = max(1, int(getattr(args, "diffusion_samples", 1)))
+        accept_partial = bool(getattr(args, "accept_partial", False))
         completed_outputs = completed_prediction_stems(
             batch_run_dir,
-            required_models=max(1, int(args.diffusion_samples)),
+            required_models=diffusion_samples,
         )
         provenance_path = out_dir / "provenance" / f"{batch_name}.csv"
         accepted_missing = (
             set(str(value) for value in previous.get("missingStems", []))
-            if args.accept_partial and previous.get("status") == "partial_success"
+            if accept_partial and previous.get("status") == "partial_success"
             else set()
         )
         provenance_ok = False
@@ -166,9 +172,20 @@ def prepare_batches(
                 completed_flags = previous_provenance[
                     "resultCompletedVerified"
                 ].astype(str).str.lower().isin({"true", "1", "1.0"})
-                provenance_stems = previous_provenance["yamlFile"].map(
-                    lambda value: Path(str(value)).stem
-                )
+                if "yamlFile" in previous_provenance.columns:
+                    provenance_stems = previous_provenance["yamlFile"].map(
+                        lambda value: Path(str(value)).stem
+                    )
+                else:
+                    # Older/minimal provenance records only carried pairId.
+                    # Resolve the stem from the current signed batch rows;
+                    # production provenance still prefers its explicit
+                    # yamlFile field.
+                    yaml_by_pair = {
+                        str(row["pairId"]): Path(str(row["yamlFile"])).stem
+                        for row in rows
+                    }
+                    provenance_stems = previous_provenance["pairId"].astype(str).map(yaml_by_pair)
                 allowed_incomplete = provenance_stems.isin(accepted_missing)
                 provenance_ok = (
                     len(previous_provenance) == len(rows)
@@ -179,7 +196,7 @@ def prepare_batches(
                 )
         completed = (
             previous.get("status") in (
-                {"success", "partial_success"} if args.accept_partial else {"success"}
+                {"success", "partial_success"} if accept_partial else {"success"}
             )
             and previous_signature == batch_input_signature
             and (expected_stems - accepted_missing).issubset(completed_outputs)

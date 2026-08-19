@@ -1,17 +1,34 @@
-# BioMaster Experiment Closure Tracker
+# BioMaster Experiment Closure Tracker（历史快照）
 
 Generated UTC: 2026-06-05T07:21:57Z
 
-This tracker records the current experiment-closure state. The authoritative machine-readable summaries are:
+This file records a historical experiment-closure snapshot generated on June 5, 2026. It is **not** the current runtime status: the current workspace no longer contains the `outputs/report_scale` full-DiffDock artifacts referenced below. Do not report the old queue as running, completed, or resumed without rebuilding a manifest, job index, and frozen execution protocol.
+
+For the current ODTI model/data program, the authoritative machine-readable summaries are:
+
+- `outputs/biomaster_odti_live_status_v1/BIOMASTER_ODTI_LIVE_STATUS_V1.json`
+- `outputs/biomaster_odti_model_data_readiness_v1/BIOMASTER_ODTI_MODEL_DATA_READINESS_V1.json`
+- `outputs/biomaster_odti_external_entity_cold_landscape_v1/EXTERNAL_ENTITY_COLD_LANDSCAPE_V1.json`
+
+The historical tracker references are retained below for provenance only:
 
 - `outputs/sota_validation/sota_compute_closure_summary.json`
 - `outputs/sota_validation/external_dependency_audit/sota_external_dependency_audit.json`
 - `outputs/report_scale/diffdock_full_run/diffdock_full_progress_summary.json`
 - `outputs/sota_validation/sota_artifact_manifest.json`
 
-## Current Conclusion
+## Historical Conclusion（2026-06-05）
 
-The core P0 data and validation layers are ready. The experiment is not blocked by missing core downloads. The expanded STRING/HuRI network-medicine layer has now been computed and merged into the SOTA-network prioritization. The only required long-running computation still in progress is the full DiffDock expansion, followed by ligand rescue, full result merge, and final re-audit.
+At the time of generation, the core P0 data and validation layers were ready and the full DiffDock expansion was reported as running. That statement is historical and has not been revalidated in the current workspace.
+
+## Current Workspace Reconciliation
+
+The current audit reports `NOT_INITIALIZED_IN_CURRENT_WORKSPACE` for the old full-DiffDock branch: no `outputs/report_scale` directory, job index, score directory, or current queue process is present. The old experiment-closure audit therefore remains `not_complete` and must not be combined with the current ODTI E0 results.
+
+The current ODTI execution queue is documented in:
+
+- `docs/BIOMASTER_ACTIVE_EXECUTION_QUEUE_20260817_ZH.md`
+- `outputs/biomaster_odti_model_data_readiness_v1/BIOMASTER_ODTI_MODEL_DATA_READINESS_V1.md`
 
 ## Running Required Computation
 

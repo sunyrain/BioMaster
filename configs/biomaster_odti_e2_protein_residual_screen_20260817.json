@@ -1,0 +1,71 @@
+{
+  "protocol_name": "BIOMASTER_ODTI_E2_PROTEIN_RESIDUAL_SCREEN_V1",
+  "created_date": "2026-08-17",
+  "status": "READY_PENDING_FEATURES",
+  "objective": "Test one new frozen protein-language-model representation as a gated target-side residual without changing the E0 champion, data split, loss contract, or external claims.",
+  "baseline": {
+    "model": "Morgan2048 + ProtBERT1024 + pooled ESM2-650M-1280 + 19-D structure-context + 6 routed experts",
+    "checkpoint_status": "E0_UNIFIED_CHAMPION_PASS",
+    "keep_drug_encoder": "Morgan2048",
+    "keep_target_base": "ProtBERT1024",
+    "keep_existing_target_aux": "pooled ESM2-650M-1280",
+    "keep_structure_branch": "19-D structure-context residual",
+    "keep_loss_and_split_contract": true
+  },
+  "candidate": {
+    "name": "new_protein_plm_gated_residual",
+    "source_path": null,
+    "feature_dim": 1280,
+    "feature_kind": "pooled_protein_embedding",
+    "feature_label_dependency": false,
+    "normalization": "train-fold-only mean/std",
+    "fusion": "target_base + target_aux_mask * sigmoid(gate([target_base,target_aux])) * target_aux",
+    "cold_start_gate_bias": -4.0,
+    "missing_feature_policy": "mask_zero_and_exact_base_fallback"
+  },
+  "screen": {
+    "protocols": [
+      "S2_HOMOLOGY_COLD_TARGET",
+      "S3_STRICT_DOUBLE_COLD",
+      "S5_OLD_DRUG_ENTITY_COLD"
+    ],
+    "fold_contract": "reuse_frozen_E0_split_assignments",
+    "seeds": [20260816, 20260817],
+    "epochs_and_budget": "match_E0_screen_budget_exactly",
+    "stage_2_expansion": "only_if_stage_1_noninferiority_passes_then_expand_to_E0_seed_count",
+    "structure_fallback_exact": true,
+    "target_token_branch": false,
+    "drug_aux_branch": false,
+    "conplex_input": false
+  },
+  "promotion_gates": {
+    "paired_micro_auprc_delta_min": -0.002,
+    "target_macro_auprc_delta_min": -0.005,
+    "drug_macro_auprc_delta_min": -0.005,
+    "ece_absolute_increase_max": 0.02,
+    "cluster_bootstrap_required": true,
+    "source_heldout_noninferiority_required": true,
+    "w1_test_reuse_forbidden": true,
+    "all_predictions_finite_and_bounded": true,
+    "checkpoint_feature_hash_required": true,
+    "unknown_pairs_are_not_negative": true
+  },
+  "prohibited_changes": [
+    "replace ProtBERT base and new PLM simultaneously",
+    "replace Morgan2048 simultaneously",
+    "change frozen split assignments",
+    "change loss weights while screening the new PLM",
+    "tune on W1 and then call W1 a final test",
+    "promote from a single seed or a short smoke run",
+    "use Davis labels for training before external test split is frozen"
+  ],
+  "required_artifacts_before_start": [
+    "new feature matrix with one row per frozen target entity",
+    "target identity index with exact sequence/key and source version",
+    "feature SHA256 and model-weight provenance",
+    "finite-value and dimension audit",
+    "train-fold-only normalization manifest",
+    "paired E0 baseline predictions aligned by calibration_pair_id"
+  ],
+  "claim_contract": "INTERNAL_PAIRED_RESIDUAL_SCREEN_ONLY_UNTIL_EXTERNAL_AND_W1_GATES_PASS"
+}

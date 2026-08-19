@@ -50,6 +50,11 @@ outputs/report_scale/manifest_915k_structure_ready.csv
 outputs/report_scale/manifest_915k_diffdock_ready.csv
 ```
 
+The two `outputs/report_scale` paths belong to the historical full-DiffDock branch and are
+not present in the current workspace snapshot. They are reproducibility targets, not evidence
+that the old queue is currently running or complete. The active ODTI program uses its own frozen
+feature stores and status artifacts under `outputs/biomaster_odti_*`.
+
 Current local coverage:
 
 - 1000 proteins.

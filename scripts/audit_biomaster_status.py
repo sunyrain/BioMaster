@@ -184,6 +184,7 @@ def audit_stage_outputs(root: Path) -> dict[str, Any]:
 
 def audit_full_diffdock(root: Path) -> dict[str, Any]:
     job_index = resolve(root, FULL_DIFFDOCK_JOB_INDEX)
+    report_scale_dir = resolve(root, REPORT_DIR)
     jobs = read_csv(job_index)
     jobs_total = len(jobs)
     ready_meta = load_json(resolve(root, "outputs/report_scale/manifest_915k_diffdock_ready.metadata.json")) or {}
@@ -210,6 +211,11 @@ def audit_full_diffdock(root: Path) -> dict[str, Any]:
             zero_chunks.append({"file": score_file.name, "drugs": drugs})
 
     return {
+        "scope_status": (
+            "NOT_INITIALIZED_IN_CURRENT_WORKSPACE"
+            if not job_index.exists() and not report_scale_dir.exists()
+            else ("PREPARED_OR_PARTIAL" if job_index.exists() else "MISSING_JOB_INDEX")
+        ),
         "job_index": str(job_index),
         "score_dir": str(resolve(root, FULL_DIFFDOCK_SCORES_DIR)),
         "jobs_total": jobs_total,
@@ -237,17 +243,26 @@ def build_warnings(audit: dict[str, Any]) -> list[str]:
     processes = audit["processes"]
     stage = audit["stage_outputs"]
 
+    if full["scope_status"] == "NOT_INITIALIZED_IN_CURRENT_WORKSPACE":
+        warnings.append(
+            "当前工作区没有旧 report_scale/full DiffDock 运行产物；六月 tracker 的后台运行状态已失效，"
+            "不能将该分支报告为运行中或已完成。若重新纳入主线，必须先重建 manifest、job index 和冻结执行协议。"
+        )
+        return warnings
+
     if full["row_progress_pct"] is not None and full["row_progress_pct"] < 100:
         warnings.append("全量 DiffDock 尚未完成；当前只能声明 Top1000 结构增强完成 940/1000，全量结构扩展仍在后台运行。")
     if full["zero_completed_chunks"]:
         warnings.append("部分 DiffDock chunk 为 0 completed，需后续建立失败 pair 的 SMILES/参数补跑队列。")
     if disk["used_pct"] is not None and disk["used_pct"] >= 85:
         warnings.append("磁盘使用率已达到或超过 85%，继续运行全量 DiffDock 时应监控可用空间。")
-    if not processes["queue_running"]:
+    if not processes["queue_running"] and full["jobs_total"] > 0:
         warnings.append("未检测到 full DiffDock queue 进程；如预期应继续运行，需要检查后台任务。")
     stage6_meta = stage.get("stage6_metadata") or {}
-    if stage6_meta.get("diffdock_completed") != 940:
+    if stage6_meta and stage6_meta.get("diffdock_completed") != 940:
         warnings.append("Stage6 Top1000 DiffDock 完成数不是既定 940/1000，请复核结构增强结果。")
+    elif not stage6_meta:
+        warnings.append("当前工作区缺少 Stage6 DiffDock metadata；不能声明 Top1000 结构增强完成。")
     return warnings
 
 

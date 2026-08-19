@@ -1,0 +1,55 @@
+{
+  "version": "BIOMASTER_ODTI_E1_DRUG_AUX_SCREEN_FREEZE_20260817",
+  "status": "READY_NOT_LAUNCHED_WAITING_FOR_E0_FREEZE",
+  "objective": "Test whether a frozen drug-side molecular pretraining residual improves cold drug/target retrieval without replacing Morgan2048 or changing labels and splits.",
+  "baseline": {
+    "model": "pooled-ESM2 ODTI V2 + Morgan2048 + ProtBERT1024 + 19-D structure-context + 6 experts",
+    "required_reference": "unified E0 run with identical protocol, fold, seed, epochs, patience and feature hashes"
+  },
+  "candidate": {
+    "drug_aux_features": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_official_feature_store_v1/DTIAM_BERMOL768_FLOAT32_V1.npy",
+    "drug_aux_dim": 768,
+    "drug_aux_sha256": "2c4b1d7d6b11a9126b20283ad1adc20597a014d7471c09458ac4f3ee30e0b38f",
+    "drug_aux_index": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_official_feature_store_v1/DTIAM_BERMOL_DRUG_INDEX_V1.csv.gz",
+    "drug_aux_index_sha256": "0ce614ca424543ad181cad88d585f4700a3dfa7ca73b5da56886e05c13f97821",
+    "available_drugs": 62476,
+    "drug_aux_gate_init_bias": -4.0,
+    "fusion": "drug_base + drug_aux_mask * sigmoid(gate([drug_base, drug_aux])) * drug_aux",
+    "normalization": "train-only mean/std over unique drug_feature_index values in the fitting role",
+    "label_dependency": "NONE"
+  },
+  "screening": {
+    "protocols": [
+      "S3_STRICT_DOUBLE_COLD",
+      "S5_OLD_DRUG_ENTITY_COLD"
+    ],
+    "seeds": [20260816, 20260817],
+    "epochs": 40,
+    "patience": 8,
+    "selection_metric": "composite",
+    "batch_sampler": "target",
+    "reason": "S3 tests simultaneous entity coldness; S5 directly matches old-drug retrieval. Full S2/S3/S5 follows only after the screen passes."
+  },
+  "screening_gates": {
+    "paired_micro_auprc_delta_min": -0.002,
+    "target_macro_auprc_delta_min": -0.005,
+    "drug_macro_auprc_delta_min": -0.005,
+    "ece_absolute_increase_max": 0.02,
+    "all_predictions_finite_and_bounded": true,
+    "structure_fallback_exact": true,
+    "checkpoint_feature_hash_required": true
+  },
+  "promotion_suite": {
+    "protocols": [
+      "S2_HOMOLOGY_COLD_TARGET",
+      "S3_STRICT_DOUBLE_COLD",
+      "S5_OLD_DRUG_ENTITY_COLD"
+    ],
+    "folds": "frozen protocol folds",
+    "seeds": [20260816, 20260817, 20260818, 20260819, 20260820],
+    "paired_cluster_bootstrap_required": true,
+    "source_heldout_noninferiority_required": true,
+    "w1_untouched_until_after_evaluation": true
+  },
+  "launch_policy": "Do not launch concurrently with the unified E0 confirmatory suite and do not promote from smoke or unpaired metrics."
+}

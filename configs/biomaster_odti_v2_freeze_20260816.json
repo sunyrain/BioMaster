@@ -1,0 +1,239 @@
+{
+  "version": "BIOMASTER_ODTI_V2_1_TRAINING_CORRECTION_FREEZE_20260816",
+  "status": "IMPLEMENTED_NOT_BENCHMARK_PROMOTED",
+  "model": "BIOMASTER_ODTI_ROUTED_INTERACTION_RANKER_V2",
+  "scope_invariants": {
+    "training_pairs": 86674,
+    "positive": 45983,
+    "negative_or_inactive": 40691,
+    "training_targets": 428,
+    "deployment_old_drugs": 720,
+    "deployment_targets": 384,
+    "deployment_pairs": 276480,
+    "hard_gate_targets_recovered": 0
+  },
+  "representation": {
+    "drug": "Morgan radius-2 2048-bit feature store; optional gated molecular PLM residual (BERMOL768 smoke-validated, not promoted)",
+    "target": "ProtBERT 1024 exact-sequence feature store; optional pooled ESM2 auxiliary and residue-level ESM2 token cross-attention",
+    "family": "target assay-family embedding",
+    "structure": "optional pair-aligned pocket/structure vector with explicit structure_mask; safe 19-d target-context store available for 61450/86674 pairs",
+    "safe_structure_store": "outputs/old_drug_target_sota_v1/feature_store_v1/ODTI_STRUCTURE_CONTEXT_V1.csv.gz",
+    "safe_structure_manifest": "outputs/old_drug_target_sota_v1/feature_store_v1/ODTI_STRUCTURE_CONTEXT_V1_MANIFEST.json",
+    "conplex": "optional frozen external score, separately auditable"
+  },
+  "architecture": {
+    "drug_encoder": "2048 -> 512 -> 192 with LayerNorm/GELU/dropout",
+    "drug_auxiliary_encoder": "optional molecular PL residual 768 -> 512 -> 192 with pair-conditioned gated residual",
+    "target_encoder": "1024 -> 512 -> 192 with LayerNorm/GELU/dropout",
+    "target_auxiliary_encoder": "optional ESM2-650M pooled 1280 -> 512 -> 192 residual gated branch",
+    "target_token_encoder": "optional stitched ESM2 residue tokens -> 192 with drug-conditioned multi-head cross-attention",
+    "base_pair_features": [
+      "drug_embedding",
+      "target_embedding",
+      "elementwise_product",
+      "absolute_difference",
+      "learned_bilinear_interaction",
+      "family_embedding"
+    ],
+    "base_pair_trunk": "984 -> 256 -> 256 with LayerNorm/GELU/dropout",
+    "experts": 6,
+    "routing": "drug_embedding + target_embedding + family_embedding -> pair-conditioned softmax expert gate",
+    "structure_residual": "drug/target/structure cross features -> residual trunk -> gated residual logit",
+    "heads": [
+      "binary final_logit",
+      "auxiliary pChEMBL affinity",
+      "observation propensity",
+      "affinity log variance",
+      "expert gate and structure gate diagnostics"
+    ]
+  },
+  "loss": {
+    "target_balanced_bce": 1.0,
+    "within_target_pairwise_rank": 0.12,
+    "within_drug_pairwise_rank": 0.0,
+    "expert_load_balance": 0.0,
+    "target_wise_listwise_rank": 0.0,
+    "heteroscedastic_interval_censored_affinity_nll": 0.06,
+    "observation_propensity": 0.10,
+    "bidirectional_contrastive": 0.05,
+    "contrastive_temperature": 0.10
+  },
+  "fallback_invariant": "structure_mask=0 implies final_logit == base_logit exactly; missing structure is never encoded as negative interaction",
+  "training_defaults": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "dropout": 0.12,
+    "batch_size": 1024,
+    "gradient_clip": 5.0,
+    "temperature_calibration": "validation_only",
+    "minibatch_sampler": "target_aware_chunks_default; optional linear dual_query target/drug chunks; random opt-out",
+    "family_vocabulary": "train_only_with_UNK",
+    "validation_selection": "0.50 micro AUPRC + 0.30 target-macro AUPRC + 0.20 drug-macro AUPRC",
+    "structure_normalization": "train_masked_rows_only"
+  },
+  "promotion_gates": {
+    "preserve_s1_s5_frozen_splits": true,
+    "five_seed_results_required": true,
+    "s2_target_cold_bootstrap_ci_reported": true,
+    "s3_double_cold_confirmatory_folds_locked": true,
+    "source_held_out_external_required": true,
+    "prospective_w1_must_remain_untouched_until_after_v1_evaluation": true,
+    "no_full_sota_claim_before_all_gates": true
+  },
+  "implementation_evidence": {
+    "tests": "64 passed",
+    "s1_v21_formal": {
+      "runs": 25,
+      "folds": 5,
+      "seeds": 5,
+      "micro_auprc": 0.9306560967170199,
+      "target_macro_auprc": 0.8812213240949007,
+      "drug_macro_auprc": 0.8551388528891877,
+      "ece_15": 0.06667382318162285,
+      "claim": "complete internal scaffold-cold structure-context formal; not external or prospective validation"
+    },
+    "s1_v21_paired_cluster_bootstrap": {
+      "status": "PASS",
+      "iterations": 2000,
+      "summary": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_v21_s1_formal/paired_bootstrap_v1/S1_V2_PAIRED_CLUSTER_BOOTSTRAP_SUMMARY_V1.json",
+      "scaffold_delta_ci95": {
+        "target_empirical_bayes_prior": [0.2475696380464309, 0.2710866716211666],
+        "conplex_frozen_external": [0.30548355110598036, 0.3307190631241519],
+        "train_positive_morgan_similarity": [0.026050317182890498, 0.03428930063409851]
+      },
+      "claim": "paired scaffold-cold internal evidence; not entity-cold external validation"
+    },
+    "esm2_auxiliary_smoke": "S2 fold0 seed20260816 two-epoch GPU PASS; full S2 5-seed x 5-fold PASS",
+    "esm2_auxiliary_s2_paired": {
+      "micro_auprc": 0.7938525053562779,
+      "v21_micro_auprc": 0.7899357006819548,
+      "scaffold_micro_auprc_delta_ci95": [0.0020068249586346065, 0.006022536172170884],
+      "target_homology_micro_auprc_delta_ci95": [-0.0010007105025418351, 0.007942499341074568],
+      "claim": "promising scaffold-cold gain; target-cold gain not significant"
+    },
+    "esm2_auxiliary_s4_temporal": {
+      "seeds": 5,
+      "micro_auroc": 0.7791314516297566,
+      "micro_auprc": 0.832525608053382,
+      "target_macro_auprc": 0.7831583686504929,
+      "drug_macro_auprc": 0.825081277490916,
+      "claim": "temporal internal evidence; no source-held-out or prospective claim"
+    },
+    "esm2_auxiliary_s5_old_drug": {
+      "seeds": 5,
+      "micro_auroc": 0.7866269493064857,
+      "micro_auprc": 0.5569399771378981,
+      "target_macro_auprc": 0.641494347415263,
+      "drug_macro_auprc": 0.7759318944049792,
+      "claim": "old-drug entity-cold internal evidence; calibration remains imperfect"
+    },
+    "s5_selective_uncertainty": {
+      "uncertainty": "std_across_five_seed_probabilities",
+      "coverage_10pct_micro_auprc": 0.907032,
+      "coverage_50pct_micro_auprc": 0.701896,
+      "coverage_100pct_micro_auprc": 0.5569399771378981,
+      "claim": "useful triage signal; requires prospective validation before wet-lab policy"
+    },
+    "drug_auxiliary_residual": {
+      "status": "IMPLEMENTED_SMOKE_VALIDATED_NOT_PROMOTED",
+      "feature_store": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_official_feature_store_v1/DTIAM_BERMOL768_FLOAT32_V1.npy",
+      "feature_dim": 768,
+      "gate": "drug_base + sigmoid(gate([drug_base, drug_aux])) * drug_aux",
+      "normalization": "train-only per-feature mean/std",
+      "smoke": "S3 fold0 seed20260816 one epoch CPU PASS; checkpoint and feature SHA provenance recorded",
+      "claim": "plumbing and invariant evidence only; no formal multiseed promotion result"
+    },
+    "residue_token_branch": {
+      "status": "implemented_and_smoke_validated_but_not_promoted",
+      "s2_screening_seeds": 2,
+      "s2_screening_folds": 5,
+      "paired_micro_auprc_delta_vs_v21": -0.007096017202489646,
+      "target_homology_delta_ci95": [-0.01221430272265677, -0.0017897858916242008],
+      "claim": "underperforms current V2.1 under the screened training budget; retain as research branch"
+    },
+    "bindingdb_source_heldout": {
+      "status": "PASS_POSITIVE_ONLY_RETRIEVAL",
+      "strict_support_rows": 628,
+      "unique_pairs_before_overlap_removal": 316,
+      "exact_chembl37_pair_overlap_removed": 65,
+      "pair_heldout_pairs_before_feature_alignment": 251,
+      "aligned_pairs": 235,
+      "aligned_ligands": 44,
+      "aligned_targets": 101,
+      "target_universe": 428,
+      "recall_at_5": 0.4925121485892237,
+      "recall_at_10": 0.5731158725168113,
+      "recall_at_20": 0.6514105356928973,
+      "median_best_positive_rank": 2.0,
+      "mean_average_precision": 0.4573783646199765,
+      "random_expected_recall_at_5": 0.011682242990654205,
+      "claim": "source-held pair retrieval signal only; aligned entities are seen and unlabeled targets are not asserted negatives"
+    },
+    "dual_query_drug_rank_screen": {
+      "status": "IMPLEMENTED_NOT_PROMOTED",
+      "sampler": "linear row-exclusive mixed target/drug chunks",
+      "candidate_weight": 0.08,
+      "seeds": [20260816, 20260817],
+      "candidate_micro_auprc": 0.46374020786608444,
+      "same_seed_baseline_micro_auprc": 0.5396401220793554,
+      "candidate_drug_macro_auprc": 0.7185425250709531,
+      "same_seed_baseline_drug_macro_auprc": 0.7742586021669221,
+      "claim": "training component is active and audited but underperforms the pooled-ESM2 baseline; keep opt-in with zero default"
+    },
+    "ofer_dti_components": {
+      "status": "IMPLEMENTED_VARIANT_MATRIX_NOT_FORMAL_PROMOTED",
+      "module": "biomaster/ofer_dti.py",
+      "heads": ["conditional_activity", "observation_hazard", "direct_active_hazard"],
+      "variants": [
+        "TARGET_PRIOR",
+        "STATIC_OBSERVED_ONLY_BCE",
+        "STATIC_FNML_STYLE",
+        "DIRECT_ACTIVE_SURVIVAL_NO_OBSERVATION_HEAD",
+        "TIMESTAMP_SHUFFLED_OFER",
+        "OFER_FULL"
+      ],
+      "loss": "OFER_FULL exact first-event competing-risk likelihood + inverse-weighted auxiliary query ranking; controls use their frozen reduced objectives",
+      "pre_event_policy": "survival rows have active_given_observed=-1 and never enter activity BCE/ranking",
+      "trainer": "scripts/train_biomaster_ofer_dti_phase_a.py",
+      "suite_runner": "scripts/evaluate_biomaster_ofer_dti_phase_a.py",
+      "smoke": "DEV_2015_2018, 1 epoch, 2048 risk rows, CPU PASS; full-window 1 epoch CUDA PASS",
+      "full_window_dev1": {
+        "risk_rows": 1205098,
+        "internal_valid_loss": 0.24177383063203198,
+        "development_rows": 82487,
+        "development_active_events": 162,
+        "micro_auprc": 0.005093227528133649,
+        "drug_macro_auprc": 0.0509873916272707,
+        "drug_macro_recall_at_20": 0.09034546371502893,
+        "claim": "throughput/development smoke only; one epoch is not a Phase-A conclusion"
+      },
+      "full_window_dev2019_1": {
+        "risk_rows": 2455264,
+        "internal_valid_loss": 0.2340180149457107,
+        "development_rows": 113675,
+        "development_active_events": 67,
+        "micro_auprc": 0.0008179928635794262,
+        "drug_macro_auprc": 0.08681325140245337,
+        "drug_macro_recall_at_20": 0.17105263157894737,
+        "claim": "throughput/development smoke only; one epoch is not a Phase-A conclusion"
+      },
+      "competing_risk_listwise_dev5": {
+        "window": "DEV_2015_2018",
+        "epochs": 5,
+        "internal_valid_loss": 0.05157323193850323,
+        "development_micro_auprc": 0.0041254303543982645,
+        "development_drug_macro_auprc": 0.0466509679038681,
+        "development_drug_macro_recall_at_20": 0.05168929211934883,
+        "claim": "listwise competing-risk development screen only; full Phase-A controls and bootstrap gates remain open"
+      },
+      "claim": "forward/loss/score unit-tested and Phase-A trainer smoke-pass; full historical windows and refit remain open"
+    },
+    "safe_structure_feature_dim": 19,
+    "safe_structure_targets": 287,
+    "safe_structure_pairs": 61450,
+    "s3_structure_smoke": "fold0 128/128/128 one epoch PASS",
+    "s3_multiseed_smoke": "2 seeds x 5 folds x 64 rows per role PASS"
+  },
+  "claim_status": "IMPLEMENTED_V2_1_SMOKE_PASS; NO_SOTA_OR_PROSPECTIVE_BIOLOGICAL_CLAIM"
+}

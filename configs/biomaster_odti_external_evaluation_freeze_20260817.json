@@ -1,0 +1,62 @@
+{
+  "version": "BIOMASTER_ODTI_BINDINGDB_SOURCE_HELDOUT_FREEZE_20260817",
+  "status": "FROZEN_POSITIVE_ONLY_EXTERNAL_EVIDENCE_NOT_ENTITY_COLD",
+  "protocol": "PAIR_HELDOUT_BINDINGDB_POSITIVE_ONLY_RETRIEVAL",
+  "model_scope": "pooled-ESM2 ODTI V2 five-seed S4 champion; structure fallback mask=0",
+  "inputs": {
+    "bindingdb_evidence_rows": "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v9/BINDINGDB_EXACT_EVIDENCE_ROWS_V9.csv",
+    "bindingdb_evidence_sha256": "ba52a53e4f98f0d4998a4b60f3d2fda1d85329e5c9417dfea1f1841dc062d0e6",
+    "frozen_chembl_pairs": "outputs/old_drug_target_sota_v1/feature_store_v1/CHEMBL37_86674_INDEXED_PAIRS_V1.csv.gz",
+    "frozen_chembl_pairs_sha256": "a01a41fc230fe481466ac71187e89cb8d77a2b5fc6aea20de9b8103e015ae4f8",
+    "evaluation_script": "scripts/evaluate_biomaster_odti_bindingdb_source_heldout_v1.py",
+    "evaluation_script_sha256": "a0c3bfb252dc15229ceac40506de7aeef224325f09c6415ccccab565ea6ebab9"
+  },
+  "funnel": {
+    "strict_support_rows": 628,
+    "unique_pairs_before_overlap_removal": 316,
+    "exact_frozen_pair_overlap_removed": 65,
+    "pair_heldout_before_feature_alignment": 251,
+    "feature_alignment_dropped": 16,
+    "aligned_pairs": 235,
+    "aligned_ligands": 44,
+    "aligned_targets": 101,
+    "candidate_rows_scored": 18832,
+    "target_universe": 428
+  },
+  "entity_coverage": {
+    "ligand_entity_coverage_after_alignment": 1.0,
+    "target_entity_coverage_after_alignment": 1.0,
+    "prealignment_ligand_unseen_target_seen_pairs": 16,
+    "prealignment_both_unseen_pairs": 0,
+    "interpretation": "Aligned scored entities are all seen in the current feature store; this is not entity-cold."
+  },
+  "ranking_results": {
+    "recall_at_5": 0.4925121485892237,
+    "recall_at_10": 0.5731158725168113,
+    "recall_at_20": 0.6514105356928973,
+    "median_best_positive_rank": 2.0,
+    "mean_average_precision": 0.4573783646199765
+  },
+  "claim_contract": {
+    "allowed": [
+      "source-heldout positive-only retrieval signal",
+      "ranking and rediscovery-oriented evidence over observed external positives"
+    ],
+    "forbidden": [
+      "negative benchmark",
+      "entity-cold external validation",
+      "calibrated binding probability",
+      "full SOTA claim",
+      "prospective biological validation"
+    ],
+    "next_required": [
+      "freeze a non-overlapping external entity-cold subset with unseen ligand and/or target feature stores",
+      "retain unknown as unlabeled rather than pseudo-negative",
+      "evaluate prospective W1 readout without reusing it after tuning"
+    ]
+  },
+  "artifact": {
+    "summary": "outputs/biomaster_bindingdb_source_heldout_current_20260817/BINDINGDB_PAIR_HELDOUT_SUMMARY.json",
+    "summary_sha256": "16e47dabfef8293622801ff74b7343d3fe4a0d708821dcc0eedcc388b3facf04"
+  }
+}

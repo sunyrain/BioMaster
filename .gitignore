@@ -19,6 +19,7 @@ dist/
 venv/
 env/
 .cache/
+.model_cache/
 .external/
 .conda_envs/
 .conda_pkgs/
@@ -189,6 +190,44 @@ scripts/*.py
 !scripts/build_strict895_agent_review_package.py
 !scripts/build_strict895_concrete_disease_annotations.py
 !scripts/build_strict895_final_report_pdf.py
+
+# Strengthened BioMaster-ODTI formal implementation and audit chain.
+!scripts/build_biomaster_odti_structure_features_v1.py
+!scripts/build_biomaster_odti_structure_features_v2.py
+!scripts/build_biomaster_odti_target_token_features_v1.py
+!scripts/train_biomaster_odti_v2.py
+!scripts/evaluate_biomaster_odti_v2.py
+!scripts/evaluate_biomaster_odti_v2_vs_v1.py
+!scripts/evaluate_biomaster_odti_v2_ablation.py
+!scripts/evaluate_biomaster_odti_v2_s1_bootstrap_v1.py
+!scripts/evaluate_biomaster_odti_v2_paired_bootstrap_v1.py
+!scripts/evaluate_biomaster_odti_selective_uncertainty_v1.py
+!scripts/audit_biomaster_odti_v2_suite_v1.py
+!scripts/score_biomaster_odti_720x384_v2.py
+!scripts/build_biomaster_odti_v2_evidence_matrix_v1.py
+!scripts/build_biomaster_odti_unified_e0_summary_v1.py
+!scripts/build_biomaster_odti_live_status_v1.py
+!scripts/build_biomaster_odti_model_data_readiness_v1.py
+!scripts/build_biomaster_odti_external_entity_cold_landscape_v1.py
+!scripts/build_biomaster_odti_v3_data_contract_v1.py
+!scripts/validate_biomaster_odti_e2_feature_package_v1.py
+!scripts/train_biomaster_ofer_dti_phase_a.py
+!scripts/evaluate_biomaster_ofer_dti_phase_a.py
+!scripts/build_biomaster_odti_w1_v3_bridge_v1.py
+!scripts/build_biomaster_odti_w1_v3_semantic_input_template_v1.py
+!scripts/validate_biomaster_odti_w1_v3_semantic_rows_v1.py
+!scripts/audit_biomaster_odti_w1_v3_training_preflight_v1.py
+!scripts/build_biomaster_odti_molformer_features_v1.py
+!scripts/build_biomaster_odti_esmc_features_v1.py
+!scripts/run_biomaster_odti_pretrained_residual_screen_v1.py
+!scripts/audit_biomaster_odti_pretrained_residual_formal_v1.py
+!scripts/run_biomaster_odti_structure_interaction_screen_v1.py
+!scripts/build_biomaster_odti_local_graph_features_v1.py
+!scripts/run_biomaster_odti_local_graph_screen_v1.py
+!scripts/run_biomaster_odti_local_graph_formal_v1.py
+!scripts/audit_biomaster_odti_local_graph_features_v1.py
+!scripts/audit_biomaster_odti_local_graph_pair_coverage_v1.py
+!scripts/audit_biomaster_odti_local_graph_formal_v1.py
 
 # ChEMBL 37 official target universe and known-pocket atlas (promoted 2026-08-04).
 !scripts/target_universe_ch37_common.py
@@ -460,3 +499,17 @@ configs/current_pipeline_v2.yaml
 Thumbs.db
 .vscode/
 .idea/
+
+# Frozen recent-novel-target external validation (compact, audited outputs only).
+!scripts/build_biomaster_recent_novel_target_features_v1.py
+!scripts/score_biomaster_recent_novel_targets_v1.py
+!outputs/biomaster_recent_novel_target_external_v1/
+outputs/biomaster_recent_novel_target_external_v1/*
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_FEATURE_AUDIT_V1.json
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_INDEX_V1.csv
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_DATABASE_AUDIT_V1.json
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_720_DRUG_SCORES_V1.csv.gz
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_TOP20_V1.csv
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_POSITIVE_CONTROL_RANKS_V1.csv
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_EXTERNAL_SUMMARY_V1.json
+!outputs/biomaster_recent_novel_target_external_v1/RECENT_NOVEL_TARGET_EXTERNAL_REPORT_ZH_V1.md
