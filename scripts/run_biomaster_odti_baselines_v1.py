@@ -29,6 +29,7 @@ PROTOCOLS = [
     "S3_STRICT_DOUBLE_COLD",
     "S4_FIRST_SEEN_TEMPORAL_2023_2025",
     "S5_OLD_DRUG_ENTITY_COLD",
+    "S6_NEW_TARGET_OLD_DRUG_DOUBLE_COLD",
 ]
 
 
@@ -87,6 +88,24 @@ def split_masks(data: pd.DataFrame, protocol: str, fold: int) -> dict[str, np.nd
             "train": (eligible & ~valid).to_numpy(),
             "valid": valid.to_numpy(),
             "test": data["is_deployment_old_drug"].astype(bool).to_numpy(),
+        }
+    if protocol == "S6_NEW_TARGET_OLD_DRUG_DOUBLE_COLD":
+        # Deployment-aligned target-to-drug retrieval.  The queried old-drug
+        # entities and every one of their observed Murcko scaffolds are absent
+        # from fitting, while validation/test target homology components are
+        # also disjoint from fitting and from one another.  Unlike S3, the
+        # complete old-drug slice of each target-cold fold is evaluated rather
+        # than only the accidental scaffold-fold intersection.
+        target_fold = data["target_homology_cold_fold"]
+        valid_fold = (fold + 1) % FOLDS
+        old_drug = data["is_deployment_old_drug"].astype(bool)
+        eligible_train = ~data["has_deployment_old_drug_scaffold"].astype(bool)
+        return {
+            "train": (
+                eligible_train & ~target_fold.isin([fold, valid_fold])
+            ).to_numpy(),
+            "valid": (old_drug & target_fold.eq(valid_fold)).to_numpy(),
+            "test": (old_drug & target_fold.eq(fold)).to_numpy(),
         }
     raise ValueError(protocol)
 

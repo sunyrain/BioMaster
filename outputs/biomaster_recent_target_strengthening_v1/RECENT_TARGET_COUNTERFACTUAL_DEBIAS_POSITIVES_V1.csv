@@ -1,0 +1,3 @@
+uniprot_accession,gene_symbol,drug_names,ligand_inchikey,actual_base_rank_720,counterfactual_binary_rank_720,actual_affinity_rank_720,counterfactual_affinity_rank_720,counterfactual_fusion_rank_720
+A5D8V6,VPS37C,hydroxychloroquine,XXSMGPRMXLTPCZ-UHFFFAOYSA-N,184,184,238,238,221
+Q99611,SEPHS2,dasatinib,ZBNZXTGUTAYRHI-UHFFFAOYSA-N,310,310,234,234,250

@@ -297,7 +297,13 @@ def inference_arrays(frame: pd.DataFrame, checkpoint: dict[str, object]) -> dict
     family_index = frame["target_assay_family"].astype(str).map(family_lookup)
     if family_index.isna().any():
         missing = sorted(frame.loc[family_index.isna(), "target_assay_family"].unique())
-        raise RuntimeError(f"frozen target family is unavailable in checkpoint: {missing}")
+        if "__UNK__" not in family_lookup:
+            raise RuntimeError(f"frozen target family is unavailable in checkpoint: {missing}")
+        # Strict target-cold folds can legitimately omit an entire assay
+        # family from fitting.  Training creates an explicit __UNK__ bucket
+        # for exactly this case, so external inference must honor that same
+        # contract instead of failing before the model is evaluated.
+        family_index = family_index.fillna(family_lookup["__UNK__"])
     return {
         "families": checkpoint["families"],
         "family_index": family_index.to_numpy(dtype=np.int64),

@@ -1,0 +1,309 @@
+{
+  "created_utc": "2026-08-19T15:03:07.817420+00:00",
+  "status": "PASS",
+  "analysis_status": "POST_HOC_DEVELOPMENT_DIAGNOSTIC_NOT_BLIND_EXTERNAL_VALIDATION",
+  "internal_selection": {
+    "selection_population": "S6 slice of S2 OOF predictions, folds 0-2 only",
+    "objective": "target_macro_auprc",
+    "grid_step": 0.25,
+    "weights": {
+      "binary": 0.25,
+      "affinity": 0.75,
+      "conplex": 0.0
+    },
+    "development_objective_value": 0.5711621330877157,
+    "heldout_folds": [
+      3,
+      4
+    ]
+  },
+  "internal_metrics": [
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "head": "BINARY",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5668085995839408,
+      "target_macro_auroc": 0.7232063774789762,
+      "micro_auprc": 0.22540804388760477,
+      "micro_auroc": 0.6941473155467721
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "head": "AFFINITY",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5684507769734397,
+      "target_macro_auroc": 0.7247120512565516,
+      "micro_auprc": 0.22421789058451017,
+      "micro_auroc": 0.692183382740448
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "head": "CONPLEX",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.4806086000222529,
+      "target_macro_auroc": 0.5957593665058913,
+      "micro_auprc": 0.20210422228416913,
+      "micro_auroc": 0.6150279973649538
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "head": "INTERNAL_SELECTED_FUSION",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5711621330877157,
+      "target_macro_auroc": 0.726415394597481,
+      "micro_auprc": 0.23217110049131948,
+      "micro_auroc": 0.6956315876152832
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "head": "BINARY",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7303844977495269,
+      "target_macro_auroc": 0.7902406061479595,
+      "micro_auprc": 0.3924408435286977,
+      "micro_auroc": 0.70637819815902
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "head": "AFFINITY",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7326229251333617,
+      "target_macro_auroc": 0.8056131544499623,
+      "micro_auprc": 0.393230630812366,
+      "micro_auroc": 0.7087519025875189
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "head": "CONPLEX",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.6188016668416824,
+      "target_macro_auroc": 0.6293847049863865,
+      "micro_auprc": 0.3550584561911818,
+      "micro_auroc": 0.6719069362904978
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "head": "INTERNAL_SELECTED_FUSION",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7324382910701636,
+      "target_macro_auroc": 0.8043731713208594,
+      "micro_auprc": 0.40323838033876885,
+      "micro_auroc": 0.7110639994201637
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "head": "BINARY",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6437854928383342,
+      "target_macro_auroc": 0.7547518968526155,
+      "micro_auprc": 0.28661812419026844,
+      "micro_auroc": 0.6973700077484772
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "head": "AFFINITY",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6457082584604619,
+      "target_macro_auroc": 0.762783158641686,
+      "micro_auprc": 0.28603194112845726,
+      "micro_auroc": 0.6975072738188703
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "head": "CONPLEX",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.5456406314666905,
+      "target_macro_auroc": 0.611583055202595,
+      "micro_auprc": 0.257148357409671,
+      "micro_auroc": 0.6418138107626863
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "head": "INTERNAL_SELECTED_FUSION",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6470567956676911,
+      "target_macro_auroc": 0.7631014071731882,
+      "micro_auprc": 0.29473253470841054,
+      "micro_auroc": 0.700492490134803
+    }
+  ],
+  "external_positive_ranks": [
+    {
+      "uniprot_accession": "Q99611",
+      "gene_symbol": "SEPHS2",
+      "drug_names": "dasatinib",
+      "ligand_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+      "experimental_positive_old_drug_name": "dasatinib",
+      "conplex_official__rank_720": 596,
+      "internal_selected_fusion__rank_720": 263,
+      "S2_TARGET_COLD_25__binary__rank_720": 346,
+      "S2_TARGET_COLD_25__affinity_pchembl__rank_720": 234,
+      "S2_TARGET_COLD_25__binary_rank_unit__rank_720": 346,
+      "S2_TARGET_COLD_25__affinity_rank_unit__rank_720": 234,
+      "S3_DOUBLE_COLD_25__binary__rank_720": 297,
+      "S3_DOUBLE_COLD_25__affinity_pchembl__rank_720": 226,
+      "S3_DOUBLE_COLD_25__binary_rank_unit__rank_720": 297,
+      "S3_DOUBLE_COLD_25__affinity_rank_unit__rank_720": 226,
+      "S5_OLD_DRUG_COLD_5__binary__rank_720": 395,
+      "S5_OLD_DRUG_COLD_5__affinity_pchembl__rank_720": 202,
+      "S5_OLD_DRUG_COLD_5__binary_rank_unit__rank_720": 395,
+      "S5_OLD_DRUG_COLD_5__affinity_rank_unit__rank_720": 202
+    },
+    {
+      "uniprot_accession": "A5D8V6",
+      "gene_symbol": "VPS37C",
+      "drug_names": "hydroxychloroquine",
+      "ligand_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+      "experimental_positive_old_drug_name": "hydroxychloroquine",
+      "conplex_official__rank_720": 389,
+      "internal_selected_fusion__rank_720": 222,
+      "S2_TARGET_COLD_25__binary__rank_720": 183,
+      "S2_TARGET_COLD_25__affinity_pchembl__rank_720": 238,
+      "S2_TARGET_COLD_25__binary_rank_unit__rank_720": 183,
+      "S2_TARGET_COLD_25__affinity_rank_unit__rank_720": 238,
+      "S3_DOUBLE_COLD_25__binary__rank_720": 252,
+      "S3_DOUBLE_COLD_25__affinity_pchembl__rank_720": 273,
+      "S3_DOUBLE_COLD_25__binary_rank_unit__rank_720": 252,
+      "S3_DOUBLE_COLD_25__affinity_rank_unit__rank_720": 273,
+      "S5_OLD_DRUG_COLD_5__binary__rank_720": 219,
+      "S5_OLD_DRUG_COLD_5__affinity_pchembl__rank_720": 193,
+      "S5_OLD_DRUG_COLD_5__binary_rank_unit__rank_720": 219,
+      "S5_OLD_DRUG_COLD_5__affinity_rank_unit__rank_720": 193
+    }
+  ],
+  "cross_target_binary_rank_spearman": {
+    "S2_TARGET_COLD_25": 0.7478711254359155,
+    "S3_DOUBLE_COLD_25": 0.7765751146370244,
+    "S5_OLD_DRUG_COLD_5": 0.6556209633221803
+  },
+  "checkpoint_suites": [
+    {
+      "suite": "S2_TARGET_COLD_25",
+      "checkpoint_count": 25,
+      "checkpoints": [
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_0__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_0__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_0__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_0__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_1__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_1__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_1__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_1__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_1__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_2__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_2__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_2__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_2__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_2__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_3__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_3__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_3__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_3__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_3__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_4__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_4__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_4__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_4__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s2_esm2_full/S2_HOMOLOGY_COLD_TARGET__fold_4__seed_20260820/BEST_MODEL_V2.pt"
+      ],
+      "max_abs_final_minus_base_logit": 0.0
+    },
+    {
+      "suite": "S3_DOUBLE_COLD_25",
+      "checkpoint_count": 25,
+      "checkpoints": [
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_1__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_1__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_1__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_1__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_1__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_2__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_2__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_2__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_2__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_2__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_3__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_3__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_3__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_3__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_3__seed_20260820/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_4__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_4__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_4__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_4__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/odti_unified_champion_s3_20260817/S3_STRICT_DOUBLE_COLD__fold_4__seed_20260820/BEST_MODEL_V2.pt"
+      ],
+      "max_abs_final_minus_base_logit": 0.0
+    },
+    {
+      "suite": "S5_OLD_DRUG_COLD_5",
+      "checkpoint_count": 5,
+      "checkpoints": [
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260817/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260818/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260820/BEST_MODEL_V2.pt"
+      ],
+      "max_abs_final_minus_base_logit": 0.0
+    }
+  ],
+  "interpretation_boundary": [
+    "Binary heads target the frozen strong-activity contract (positive mean pChEMBL >= 6).",
+    "Affinity heads rank predicted pChEMBL and are exploratory for weak micromolar binding.",
+    "The literature Kd values map to about pKd 5.04 and 4.77, so neither pair is a clean strong-activity positive under the training contract.",
+    "Unknown target-drug pairs are not verified negatives; ranks are retrieval hypotheses."
+  ],
+  "artifacts": {
+    "internal_metrics": "outputs/biomaster_recent_target_strengthening_v1/S6_INTERNAL_HEAD_AND_FUSION_METRICS_V1.csv",
+    "external_scores": "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_HEAD_DIAGNOSTIC_SCORES_V1.csv.gz",
+    "external_positive_ranks": "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_HEAD_DIAGNOSTIC_POSITIVES_V1.csv"
+  },
+  "artifact_sha256": {
+    "outputs/biomaster_recent_target_strengthening_v1/S6_INTERNAL_HEAD_AND_FUSION_METRICS_V1.csv": "689b0124858af05b4ddc8bfba2dc3cae11f0c5ae5578c9a21a28c1ad271d0735",
+    "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_HEAD_DIAGNOSTIC_SCORES_V1.csv.gz": "2cba498447a82a528f69532f59a7ed53edf9629bbd66626d10f387f5b710b98e",
+    "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_HEAD_DIAGNOSTIC_POSITIVES_V1.csv": "b43e27e73651657a8a6f8d44d04c09b657b55ad0a251c4e1d0d555f263eea563"
+  }
+}

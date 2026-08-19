@@ -228,6 +228,24 @@ scripts/*.py
 !scripts/audit_biomaster_odti_local_graph_features_v1.py
 !scripts/audit_biomaster_odti_local_graph_pair_coverage_v1.py
 !scripts/audit_biomaster_odti_local_graph_formal_v1.py
+!scripts/audit_biomaster_odti_s6_split_v1.py
+!scripts/diagnose_biomaster_recent_target_retrieval_heads_v1.py
+!scripts/evaluate_biomaster_counterfactual_target_debias_v1.py
+
+# Compact reports for the 2026-08-19 recent-target strengthening iteration.
+# Full pair scores, counterfactual priors and experimental checkpoints remain
+# local to avoid turning a diagnostic iteration into a large repository diff.
+!outputs/biomaster_recent_target_strengthening_v1/
+outputs/biomaster_recent_target_strengthening_v1/*
+!outputs/biomaster_recent_target_strengthening_v1/S6_NEW_TARGET_OLD_DRUG_DOUBLE_COLD_AUDIT_V1.json
+!outputs/biomaster_recent_target_strengthening_v1/S6_NEW_TARGET_OLD_DRUG_DOUBLE_COLD_MANIFEST_V1.csv
+!outputs/biomaster_recent_target_strengthening_v1/S6_INTERNAL_HEAD_AND_FUSION_METRICS_V1.csv
+!outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_HEAD_DIAGNOSTIC_POSITIVES_V1.csv
+!outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_HEAD_DIAGNOSTIC_SUMMARY_V1.json
+!outputs/biomaster_recent_target_strengthening_v1/S6_COUNTERFACTUAL_DEBIAS_INTERNAL_METRICS_V1.csv
+!outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_COUNTERFACTUAL_DEBIAS_POSITIVES_V1.csv
+!outputs/biomaster_recent_target_strengthening_v1/COUNTERFACTUAL_TARGET_DEBIAS_SUMMARY_V1.json
+!outputs/biomaster_recent_target_strengthening_v1/STRENGTHENING_CONVERGENCE_REPORT_ZH_V1.md
 
 # ChEMBL 37 official target universe and known-pocket atlas (promoted 2026-08-04).
 !scripts/target_universe_ch37_common.py

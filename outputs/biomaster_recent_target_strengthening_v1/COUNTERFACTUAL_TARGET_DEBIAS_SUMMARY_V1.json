@@ -1,0 +1,234 @@
+{
+  "created_utc": "2026-08-19T15:22:28.520079+00:00",
+  "status": "PASS",
+  "method": "COUNTERFACTUAL_TARGET_MARGINALIZATION_V1",
+  "selection_status": "INTERNAL_S6_DEVELOPMENT_FOLDS_ONLY",
+  "selected": {
+    "binary_weight": 0.25,
+    "affinity_weight": 0.75,
+    "binary_prior_alpha": 0.0,
+    "affinity_prior_alpha": 0.0,
+    "development_target_macro_auprc": 0.5709493220196415
+  },
+  "internal_metrics": [
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "score": "RAW_BINARY",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5668144076407894,
+      "target_macro_auroc": 0.7219716667007001,
+      "micro_auprc": 0.290832243864299,
+      "micro_auroc": 0.7527009222661396
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "score": "COUNTERFACTUAL_BINARY",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5668144076407894,
+      "target_macro_auroc": 0.7219716667007001,
+      "micro_auprc": 0.290832243864299,
+      "micro_auroc": 0.7527009222661396
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "score": "RAW_AFFINITY",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5684507769734397,
+      "target_macro_auroc": 0.7247120512565516,
+      "micro_auprc": 0.23849366752642503,
+      "micro_auroc": 0.6851943346508564
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "score": "COUNTERFACTUAL_AFFINITY",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5684507769734397,
+      "target_macro_auroc": 0.7247120512565516,
+      "micro_auprc": 0.23849366752642503,
+      "micro_auroc": 0.6851943346508564
+    },
+    {
+      "partition": "DEVELOPMENT_FOLDS_0_2",
+      "score": "SELECTED_COUNTERFACTUAL_FUSION",
+      "rows": 1637,
+      "positives": 165,
+      "prevalence": 0.10079413561392792,
+      "target_groups_with_both_classes": 54,
+      "target_macro_auprc": 0.5709493220196415,
+      "target_macro_auroc": 0.7263796174661155,
+      "micro_auprc": 0.23001458100285951,
+      "micro_auroc": 0.6950984025032938
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "score": "RAW_BINARY",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7355314945127418,
+      "target_macro_auroc": 0.8096106841454885,
+      "micro_auprc": 0.542920767663966,
+      "micro_auroc": 0.7565702688990359
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "score": "COUNTERFACTUAL_BINARY",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7355314945127418,
+      "target_macro_auroc": 0.8096106841454885,
+      "micro_auprc": 0.542920767663966,
+      "micro_auroc": 0.7565702688990359
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "score": "RAW_AFFINITY",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7326229251333617,
+      "target_macro_auroc": 0.8056131544499623,
+      "micro_auprc": 0.49640286358400076,
+      "micro_auroc": 0.7335072841922157
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "score": "COUNTERFACTUAL_AFFINITY",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7326229251333617,
+      "target_macro_auroc": 0.8056131544499623,
+      "micro_auprc": 0.49640286358400076,
+      "micro_auroc": 0.7335072841922157
+    },
+    {
+      "partition": "HELDOUT_FOLDS_3_4",
+      "score": "SELECTED_COUNTERFACTUAL_FUSION",
+      "rows": 919,
+      "positives": 189,
+      "prevalence": 0.20565832426550598,
+      "target_groups_with_both_classes": 48,
+      "target_macro_auprc": 0.7320905086612598,
+      "target_macro_auroc": 0.8045944733810627,
+      "micro_auprc": 0.4062283174977117,
+      "micro_auroc": 0.7127020366746393
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "score": "RAW_BINARY",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6462106838158258,
+      "target_macro_auroc": 0.7632135572629535,
+      "micro_auprc": 0.3977485688048429,
+      "micro_auroc": 0.7416986098923937
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "score": "COUNTERFACTUAL_BINARY",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6462106838158258,
+      "target_macro_auroc": 0.7632135572629535,
+      "micro_auprc": 0.3977485688048429,
+      "micro_auroc": 0.7416986098923937
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "score": "RAW_AFFINITY",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6457082584604619,
+      "target_macro_auroc": 0.762783158641686,
+      "micro_auprc": 0.3368893435508674,
+      "micro_auroc": 0.7042262555355429
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "score": "COUNTERFACTUAL_AFFINITY",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6457082584604619,
+      "target_macro_auroc": 0.762783158641686,
+      "micro_auprc": 0.3368893435508674,
+      "micro_auroc": 0.7042262555355429
+    },
+    {
+      "partition": "ALL_FOLDS_REPORT_ONLY",
+      "score": "SELECTED_COUNTERFACTUAL_FUSION",
+      "rows": 2556,
+      "positives": 354,
+      "prevalence": 0.13849765258215962,
+      "target_groups_with_both_classes": 102,
+      "target_macro_auprc": 0.6467804686745208,
+      "target_macro_auroc": 0.763186608484914,
+      "micro_auprc": 0.29458350790339494,
+      "micro_auroc": 0.7008247509967827
+    }
+  ],
+  "external_status": "POST_HOC_DEVELOPMENT_DIAGNOSTIC_NOT_BLIND_VALIDATION",
+  "external_positive_ranks": [
+    {
+      "uniprot_accession": "A5D8V6",
+      "gene_symbol": "VPS37C",
+      "drug_names": "hydroxychloroquine",
+      "ligand_inchikey": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N",
+      "actual_base_rank_720": 184,
+      "counterfactual_binary_rank_720": 184,
+      "actual_affinity_rank_720": 238,
+      "counterfactual_affinity_rank_720": 238,
+      "counterfactual_fusion_rank_720": 221
+    },
+    {
+      "uniprot_accession": "Q99611",
+      "gene_symbol": "SEPHS2",
+      "drug_names": "dasatinib",
+      "ligand_inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+      "actual_base_rank_720": 310,
+      "counterfactual_binary_rank_720": 310,
+      "actual_affinity_rank_720": 234,
+      "counterfactual_affinity_rank_720": 234,
+      "counterfactual_fusion_rank_720": 250
+    }
+  ],
+  "external_cross_target_fusion_spearman": 0.830454689557364,
+  "claim_boundary": "The marginal is label-free at scoring time but learned model parameters still use ChEMBL labels. The two literature controls were not used for selection and remain retrospective weak-binding cases.",
+  "artifacts": {
+    "priors": "outputs/biomaster_recent_target_strengthening_v1/S2_OLD_DRUG_COUNTERFACTUAL_TARGET_PRIORS_V1.csv.gz",
+    "internal_metrics": "outputs/biomaster_recent_target_strengthening_v1/S6_COUNTERFACTUAL_DEBIAS_INTERNAL_METRICS_V1.csv",
+    "external_scores": "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_COUNTERFACTUAL_DEBIAS_SCORES_V1.csv.gz",
+    "external_positive_ranks": "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_COUNTERFACTUAL_DEBIAS_POSITIVES_V1.csv"
+  },
+  "artifact_sha256": {
+    "outputs/biomaster_recent_target_strengthening_v1/S2_OLD_DRUG_COUNTERFACTUAL_TARGET_PRIORS_V1.csv.gz": "4c1c3e0406a33a3b0879d0886fbcf139f2469361113ad3a416c7fda067e42540",
+    "outputs/biomaster_recent_target_strengthening_v1/S6_COUNTERFACTUAL_DEBIAS_INTERNAL_METRICS_V1.csv": "bc7e9d3275599e28715da590855f0c45cfff536fc9c95cbc804aa1c5dbe54afe",
+    "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_COUNTERFACTUAL_DEBIAS_SCORES_V1.csv.gz": "b2efec69f3a886bf1fa4609b67d6f3b067140a862b8c5b7586a90725d57cad93",
+    "outputs/biomaster_recent_target_strengthening_v1/RECENT_TARGET_COUNTERFACTUAL_DEBIAS_POSITIVES_V1.csv": "455d96d59362abc66c75b7681d134d774c95cb5acf04264ab7c195509c45f9f1"
+  }
+}
