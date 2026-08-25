@@ -742,7 +742,10 @@ def build_payload(root: Path) -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build a SOTA readiness audit from local BioMaster artifacts.")
     parser.add_argument("--root", default=".")
-    parser.add_argument("--out-md", default="docs/SOTA_COMPUTE_READINESS_2026_06_03.md")
+    parser.add_argument(
+        "--out-md",
+        default="docs/archive/legacy_pre_v4/SOTA_COMPUTE_READINESS_2026_06_03.md",
+    )
     parser.add_argument("--out-html", default="docs/sota-readiness.html")
     parser.add_argument("--out-js", default="docs/assets/sota-readiness-data.js")
     parser.add_argument("--out-shortlist", default="docs/assets/sota-validation-shortlist.csv")

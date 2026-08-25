@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-08-21T12:05:15.005647+00:00",
+  "protocol": "COMPREHENSIVE_FULL_FIT_SIX_CHECKPOINT_CONSENSUS_V5",
+  "ranking_universe": "720 frozen old drugs independently within each of 384 targets",
+  "model_family_weights": {
+    "conservative_v3": 0.5,
+    "recall_v4": 0.5
+  },
+  "checkpoint_seeds_per_family": [
+    20260816,
+    20260817,
+    20260820
+  ],
+  "fusion": {
+    "strategy": "top20_refine",
+    "binary_shortlist_top_fraction": 0.2,
+    "within_shortlist_binary_weight": 0.55,
+    "within_shortlist_affinity_weight": 0.45
+  },
+  "selection_current_external_case_labels_used": false,
+  "validation": {
+    "development_selection": {
+      "fusion_strategy": "top20_refine",
+      "affinity_weight": 0.45,
+      "binary_weight": 0.55,
+      "selection_value": 0.83442150138796,
+      "dev_temporal_queries": 18,
+      "dev_temporal_candidate_drugs": 720,
+      "dev_temporal_mean_rank": 99.83333333333333,
+      "dev_temporal_median_rank": 41.0,
+      "dev_temporal_mrr": 0.24637589880919133,
+      "dev_temporal_mean_reciprocal_log_rank": 0.37384143079495863,
+      "dev_temporal_mean_top_percentile": 0.8627314814814815,
+      "dev_temporal_hit_at_10": 0.4444444444444444,
+      "dev_temporal_hit_at_36": 0.4444444444444444,
+      "dev_temporal_hit_at_72": 0.7222222222222222,
+      "dev_recovered_relation_rows": 18,
+      "dev_recovered_relation_positive_rows": 8,
+      "dev_recovered_relation_negative_rows": 10,
+      "dev_recovered_relation_auprc": 0.9519230769230769,
+      "dev_recovered_relation_auroc": 0.9375,
+      "dev_recovered_relation_positive_mean_top_percentile": 0.9246527777777778,
+      "dev_recovered_relation_negative_mean_top_percentile": 0.446111111111111,
+      "dev_recovered_relation_positive_median_rank": 2.0,
+      "dev_recovered_relation_negative_median_rank": 393.5,
+      "dev_recovered_relation_positive_hit_at_36": 0.875,
+      "dev_recovered_relation_negative_hit_at_36": 0.1,
+      "audit_pre2022_relation_rows": 4969,
+      "audit_pre2022_relation_positive_rows": 791,
+      "audit_pre2022_relation_negative_rows": 4178,
+      "audit_pre2022_relation_auprc": 0.9378741975309827,
+      "audit_pre2022_relation_auroc": 0.9796412670305417,
+      "audit_pre2022_relation_positive_mean_top_percentile": 0.9470870206489675,
+      "audit_pre2022_relation_negative_mean_top_percentile": 0.3837944125312483,
+      "audit_pre2022_relation_positive_median_rank": 14.0,
+      "audit_pre2022_relation_negative_median_rank": 472.0,
+      "audit_pre2022_relation_positive_hit_at_36": 0.718078381795196,
+      "audit_pre2022_relation_negative_hit_at_36": 0.006223073240785065,
+      "negative_control_pass": true
+    },
+    "test_after_fusion_freeze": {
+      "strict_temporal_2024_2025_positive_retrieval": {
+        "queries": 27,
+        "candidate_drugs": 720,
+        "mean_rank": 207.96296296296296,
+        "median_rank": 120.0,
+        "mrr": 0.027166427972224107,
+        "mean_reciprocal_log_rank": 0.16768941714046376,
+        "mean_top_percentile": 0.7125514403292181,
+        "hit_at_10": 0.07407407407407407,
+        "hit_at_36": 0.2222222222222222,
+        "hit_at_72": 0.37037037037037035
+      },
+      "recovered_relation_test": {
+        "rows": 37,
+        "positive_rows": 21,
+        "negative_rows": 16,
+        "auprc": 0.9330361437504298,
+        "auroc": 0.8809523809523809,
+        "positive_mean_top_percentile": 0.8576058201058201,
+        "negative_mean_top_percentile": 0.41927083333333337,
+        "positive_median_rank": 6.0,
+        "negative_median_rank": 416.0,
+        "positive_hit_at_36": 0.7142857142857143,
+        "negative_hit_at_36": 0.0
+      }
+    },
+    "selection_reason": "DEVELOPMENT_GAIN_EXCEEDS_MIN_DELTA",
+    "temporal_test_labels_used_for_selection": false
+  },
+  "sources": {
+    "outputs/biomaster_comprehensive_balanced_full_fit_720x384_v3/AUGMENTED_FULL_FIT_720X384_SCORES_V1.csv.gz": "2af32aea843ee4fde8f79946a68ca169711e74ed932a3ad26b4c0a9f2b4e2957",
+    "outputs/biomaster_comprehensive_balanced_full_fit_720x384_v3/AUGMENTED_FULL_FIT_720X384_SUMMARY_V1.json": "0f7cd39c5c4318236d401c2b5b4e42029952e1dbfb077a1e92ce840b3283c7d5",
+    "outputs/biomaster_comprehensive_binary_selected_720x384_v4/AUGMENTED_FULL_FIT_720X384_SCORES_V1.csv.gz": "432c36053a39b9a1afe2f2b2d51035c89e7401e27b1d529ec67e988c8d94322e",
+    "outputs/biomaster_comprehensive_binary_selected_720x384_v4/CURRENT_DOUBLE_WARM_CASE_RANKS_V1.csv": "d5bab8735ae8c38d8a65f9dac3026784333c96ef5d03e4a4c303f62e87e999df",
+    "outputs/biomaster_comprehensive_binary_selected_720x384_v4/AUGMENTED_FULL_FIT_720X384_SUMMARY_V1.json": "059916cc60e2d6c74578a2daefed58e4fbcebf13bd6d28b22a75376109c2d966",
+    "outputs/biomaster_comprehensive_consensus_fusion_calibration_v5/FUSION_CALIBRATION_SUMMARY_V2.json": "16784de5d07070c4fd85f5c93049166d82fec0645d7606380218520a13dd2874"
+  },
+  "cases": [
+    {
+      "gene_symbol": "PLK4",
+      "target_chembl_id": "CHEMBL3788",
+      "drug_name": "lorlatinib",
+      "drug_inchikey": "IIXWYSCJSQVBQM-LLVKDONJSA-N",
+      "rank_within_target_720": 4,
+      "percentile_top": 0.9958333333333333,
+      "conservative_binary_rank": 4,
+      "recall_binary_rank": 6,
+      "structure_mask": 1,
+      "cold_start_class": "BOTH_SEEN_RELATION_HELD_OUT",
+      "exact_relation_in_full_fit": false,
+      "exact_positive_relation_in_full_fit": false
+    },
+    {
+      "gene_symbol": "IDO1",
+      "target_chembl_id": "CHEMBL4685",
+      "drug_name": "pitavastatin",
+      "drug_inchikey": "VGYFMXBACGZSIL-MCBHFWOFSA-N",
+      "rank_within_target_720": 146,
+      "percentile_top": 0.7986111111111112,
+      "conservative_binary_rank": 181,
+      "recall_binary_rank": 107,
+      "structure_mask": 1,
+      "cold_start_class": "BOTH_SEEN_RELATION_HELD_OUT",
+      "exact_relation_in_full_fit": false,
+      "exact_positive_relation_in_full_fit": false
+    },
+    {
+      "gene_symbol": "IRAK1",
+      "target_chembl_id": "CHEMBL3357",
+      "drug_name": "tepotinib",
+      "drug_inchikey": "AHYMHWXQRWRBKT-UHFFFAOYSA-N",
+      "rank_within_target_720": 658,
+      "percentile_top": 0.08750000000000002,
+      "conservative_binary_rank": 662,
+      "recall_binary_rank": 649,
+      "structure_mask": 1,
+      "cold_start_class": "BOTH_SEEN_RELATION_HELD_OUT",
+      "exact_relation_in_full_fit": true,
+      "exact_positive_relation_in_full_fit": false
+    },
+    {
+      "gene_symbol": "IRAK4",
+      "target_chembl_id": "CHEMBL3778",
+      "drug_name": "tepotinib",
+      "drug_inchikey": "AHYMHWXQRWRBKT-UHFFFAOYSA-N",
+      "rank_within_target_720": 573,
+      "percentile_top": 0.2055555555555556,
+      "conservative_binary_rank": 570,
+      "recall_binary_rank": 573,
+      "structure_mask": 1,
+      "cold_start_class": "BOTH_SEEN_RELATION_HELD_OUT",
+      "exact_relation_in_full_fit": true,
+      "exact_positive_relation_in_full_fit": false
+    }
+  ],
+  "artifacts": {
+    "scores": "outputs/biomaster_comprehensive_consensus_720x384_v5/CONSENSUS_FULL_FIT_720X384_SCORES_V5.csv.gz",
+    "scores_sha256": "5adaf062776e930253fa649af28ab2ecb626473ae05406e3698ec62dd2fb6683",
+    "case_ranks": "outputs/biomaster_comprehensive_consensus_720x384_v5/CURRENT_DOUBLE_WARM_CASE_RANKS_V5.csv",
+    "case_ranks_sha256": "7046ac15b538d4ca07cbab8595730e54f122f9fc6e743e086485b29acabbf959",
+    "checkpoint_manifest": "outputs/biomaster_comprehensive_consensus_720x384_v5/FULL_FIT_CHECKPOINT_MANIFEST_V5.json",
+    "checkpoint_manifest_sha256": "68baccaa64d935e003ac93355cfd6dc5d78c9cfc5fe539e60e1321703c05a362"
+  }
+}

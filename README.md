@@ -1,150 +1,103 @@
 # BioMaster
 
-BioMaster is a reproducible, physics-first FDA small-molecule target-repurposing workflow. The current production line uses ChEMBL mechanism-of-action anchors, Open Targets tractability annotations, ConPLEx sequence/SMILES prioritisation, AlphaFold/P2Rank/PUResNet pocket priors, and refined Boltz-2 protein-ligand follow-up.
+BioMaster 是一个面向老药新靶点发现的可复现研究仓库。当前主任务是：给定一种已上市/老药，在固定的 384 个候选靶点中排序潜在作用靶点；反向的“给定靶点排序 720 种药物”保留为辅助评估，而不是主要交付。
 
-## Current Production Line
+## 当前研究边界
 
-The formal local funnel is:
+- 部署空间：720 种老药 × 384 个候选靶点，共 276,480 个 pair。
+- 综合训练表：437,248 条去重关系，未知关系不会被自动当作负例。
+- 模型形态：共享 drug–target pair backbone，加药物→靶点主排序头和靶点→药物辅助排序头。
+- 当前最可靠范围：药物和靶点实体均在训练数据中出现、但 exact relation 被留出的 double-warm 检索。
+- target-cold 与 double-cold 仍是研究边界，不能作为已经解决的问题对外宣称。
+- target-level pocket 上下文与候选药物无关；pair-specific pose/contact 特征只用于候选后的结构复核，尚未晋级主模型。
 
-```text
-915 FDA structure entries × 891 unique ChEMBL-MoA target sequences = 815,265 raw pairs
-└── 750 direct-action therapeutic drugs × 463 non-GPCR target-engagement sequences
-    = 347,250 ID-level audit pairs
-    = 334,749 unique model-ligand x target physical pairs
-    ├── 491 ChEMBL/FDA known controls (calibration only; excluded from discovery)
-    └── physics-first diverse shortlist: 3,000
-        ├── ConPLEx full-space score and bidirectional rank
-        ├── AlphaFold/P2Rank/PUResNet target pocket prior
-        └── refined Boltz-2 pair follow-up
-            ├── formal candidate package: 1,000 pair hypotheses
-            └── stronger wet-lab nomination queue: 384 pair hypotheses
-```
+完整口径和汇报结构见 [完整汇报大纲](docs/BIOMASTER_COMPLETE_PPT_OUTLINE_20260825_ZH.md)。
 
-The 384-row output is a nomination queue, not an executable four-plate map. Multiple target-specific assays are represented, so dose, replicates, positive/negative controls, and counterscreens must be defined before physical plate layout.
-
-The previous 106,561-row table was derived after a per-drug Top300 truncation. It is retained for provenance but is not the formal universe and is not used to claim recall. The v4 production path retains 347,250 ID-level rows for audit, ranks 334,749 structure-collapsed physical pairs, and applies no Top300 hard gate.
-
-Build the scope audit with:
-
-```bash
-python scripts/build_universe_scope_audit_v4.py
-```
-
-See `docs/PRODUCTION_PIPELINE_V4_ZH.md` for the frozen scientific and output contracts.
-
-Formal selection uses versioned 750-drug and 463-target entity manifests, one shared full-space ConPLEx calibration scale, Open Targets target classification/tractability, active-moiety × target deduplication, sequence-homology extension risk, RDKit assay-liability flags, continuous Boltz outputs, and two-sample conditional pose stability. Open Targets disease evidence, TxGNN, STRING, and expression signatures are auxiliary interpretation fields and do not determine the physics-first rank.
-
-Large datasets, model weights, third-party repositories, and generated structure outputs are intentionally excluded from git.
-
-## Historical Demo Scope
-
-The small package demo and early scale scripts below reflect the original general workflow. They are retained for regression testing and examples; they are not the current formal candidate-selection entrypoint.
-
-1. Build and normalize an FDA-approved small-molecule library.
-2. Build a 1000-protein human target library with AlphaFold receptor paths.
-3. Score all 915,000 drug-target pairs with ConPLex.
-4. Build structure-ready and DiffDock-ready manifests.
-5. Rank all pairs with Open Targets, STRING v12.0 API, and TxGNN disease evidence.
-6. Structurally enhance the Stage 5 Top1000 candidates with DiffDock.
-
-The repository contains the pipeline code and small examples. The full local data products are not committed because they include multi-GB datasets, model weights, third-party code, and generated docking outputs.
-
-## Repository Layout
+## 仓库结构
 
 ```text
-biomaster/      Core Python package and demo CLI.
-scripts/        Scale-run utilities for ChEMBL/PubChem, AlphaFold, Open Targets, STRING, TxGNN, and DiffDock.
-examples/       Small CSV examples for the demo pipeline.
-tests/          Unit tests for the core pipeline.
-docs/           Release notes, data-access notes, and current result summaries.
+biomaster/       可复用 Python 包：基础流程、生产筛选工具和 ODTI 模型组件
+scripts/         数据构建、训练、评估、部署评分与结构复核入口
+tests/           核心包、正式脚本合同和 ODTI 回归测试
+configs/         冻结范围、标签和评估协议
+docs/            当前文档、汇报材料和历史文档索引
+examples/        不依赖大数据的小型演示输入
+outputs/         仅跟踪少量审计摘要；全量结果、checkpoint 和分数表默认忽略
+md/              分子动力学准备与分析工具
 ```
 
-## Install
+大型数据库、模型权重、第三方仓库、虚拟环境和生成的全量结果不进入 Git。具体边界见 [数据访问说明](docs/DATA_ACCESS.md)。
+
+## 安装
+
+基础演示：
 
 ```bash
 python -m pip install -e .
-python -m pip install pytest
 ```
 
-Some scale scripts require additional packages or external tools depending on the step:
+当前 ODTI 训练与测试：
 
-- `requests` and `openpyxl` for API and workbook processing.
-- `pyyaml` for DiffDock job configuration.
-- RDKit for molecule handling in enrichment and docking preparation.
-- Local clones or installs of ConPLex, DiffDock, and TxGNN for model execution.
+```bash
+python -m pip install -e '.[odti,dev]'
+```
 
-## Quick Demo
+其他按需安装组：
 
-The demo uses only small bundled examples:
+- `workflow`：Excel 与 YAML 工作流。
+- `structure`：结构生物信息与 RDKit 工具。
+- `reports`：PDF/HTML 报告生成。
+- `production`：上述生产与训练依赖的完整集合。
+
+## 当前可复现入口
+
+主线按以下顺序组织：
+
+```text
+build_biomaster_comprehensive_training_v1.py
+  → train_biomaster_comprehensive_balanced_v2.py
+  → train_biomaster_bidirectional_v6.py
+  → refit_biomaster_bidirectional_v6_full_fit.py
+  → score_biomaster_bidirectional_v6_720x384.py
+  → summarize_biomaster_bidirectional_v6.py
+```
+
+冻结的药物中心基线与外部审计：
+
+```text
+train_v10_leakage_safe_ranker.py
+  → evaluate_v10_leakage_safe_external.py
+  → audit_drug_centric_kirhub_v1.py
+```
+
+这些文件仍保留历史版本号，以便结果溯源；面向项目的汇报统一描述为“BioMaster 双向关系检索方法”。脚本职责和入口索引见 [scripts/README.md](scripts/README.md)。
+
+## 小型演示
 
 ```bash
 python -m biomaster.cli run-demo --out outputs/demo --offline
 ```
 
-Expected demo outputs:
+演示使用 `examples/` 内的小型 CSV，不下载模型或大型数据库。
 
-```text
-outputs/demo/drug_library.csv
-outputs/demo/protein_library.csv
-outputs/demo/diffdock_manifest.csv
-outputs/demo/stage4_affinity_candidates.csv
-outputs/demo/stage5_disease_ranked_candidates.csv
-```
-
-## Historical Scale Workflow
-
-The production-scale run in this workspace used the scripts below:
-
-```bash
-python scripts/enrich_drug_structures_pubchem_chembl.py
-python scripts/build_alphafold_receptor_manifest.py
-python scripts/download_opentargets_filtered.py
-python scripts/download_string_filtered.py
-python scripts/rerank_stage5_open_targets_string.py
-python scripts/run_txgnn_cancer_inference.py
-python scripts/merge_stage5_with_txgnn.py
-python scripts/build_diffdock_ready_manifest.py
-python scripts/build_stage5_top_diffdock_manifest.py --top-n 1000
-python scripts/prepare_diffdock_full_run.py
-python scripts/run_diffdock_full_queue.py
-python scripts/merge_stage6_top_diffdock.py
-python scripts/export_stage6_report_artifacts.py
-python scripts/write_biomaster_paper_zh_cn.py
-```
-
-The exact scale-run command arguments depend on local data paths and model installs. See `docs/DATA_ACCESS.md` and `docs/RESULTS_STATUS_ZH.md` for the current local run status and data provenance.
-
-## What Is Not Tracked
-
-The following are intentionally ignored:
-
-- FDA workbook and other raw source datasets.
-- AlphaFold human proteome tarball.
-- ChEMBL/PubChem-derived SDF library.
-- Open Targets, STRING, and TxGNN processed evidence tables.
-- ConPLex, DiffDock, TxGNN, DrugBAN, and DeepDTA third-party repositories or weights.
-- Full-scale manifests, score tables, logs, structure predictions, and model outputs.
-
-This keeps the GitHub repository lightweight and avoids publishing data or weights that should remain local or be obtained from their original sources.
-
-## Current Result Summary
-
-Current audited counts are generated from CSV/JSON artifacts rather than copied into reports:
-
-- 915 FDA structure entries and 892 ChEMBL-MoA genes represented by 891 unique sequences.
-- 815,265 full ConPLEx predictions; numerical regression against the prior subset is effectively exact.
-- 750 drug records (723 unique model-ligand structures) × 463 targets = 347,250 ID-level / 334,749 physical non-GPCR target-engagement pairs; `BCL2L10` was restored after independent P2Rank/PUResNet pocket consensus.
-- 491 in-scope known ID-pair controls, or 473 unique active-moiety × target controls. With average ranks for tied ConPLEx scores, ID-pair Recall@100 is 59.27% and Recall@300 is 83.10%; active-moiety-collapsed values are 59.20% and 83.30%. This is calibration, not temporal generalization.
-- The legacy Top300 plus absolute-score gate has been removed from v4. Structure and direct-small-molecule tractability retain 427/491 known controls (86.97%) before discovery exclusion.
-
-## Tests
+## 验证
 
 ```bash
 pytest -q
+python -m compileall -q biomaster scripts tests
 ```
 
-Current local test status: `39 passed`.
+测试分为三类：纯单元测试、正式脚本合同测试、依赖本地紧凑审计产物的回归测试。仓库整理时不以“测试数量少”为目标；只有对应实现被删除且已有等价覆盖时才删除测试。
 
-## Release Boundary
+## 文档与汇报
 
-This private repository is intended for collaborative code review and reproducibility planning. It should not be treated as a public data release. Recreate large results locally from source databases and model downloads.
+- [文档入口](docs/README.md)
+- [完整汇报大纲](docs/BIOMASTER_COMPLETE_PPT_OUTLINE_20260825_ZH.md)
+- [正式候选筛选流程](docs/PRODUCTION_PIPELINE_V4_ZH.md)
+- [当前结果状态](docs/RESULTS_STATUS_ZH.md)
+- [汇报图片与源文件](docs/presentations/README.md)
+- [历史文档索引](docs/archive/README.md)
+
+## 发布边界
+
+本仓库用于协作开发、结果审计和复现规划，不是数据库、模型权重或候选结果的公开发布包。任何对外结果应以冻结评估摘要和当前文档口径为准，不能把 FULL_FIT coverage、开发集选择结果或结构诊断分数表述为独立前瞻验证。

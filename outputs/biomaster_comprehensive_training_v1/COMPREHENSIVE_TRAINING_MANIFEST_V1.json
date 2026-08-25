@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-08-21T07:26:32.785342+00:00",
+  "protocol": "UNCAPPED_CHEMBL37_COMPREHENSIVE_TRAINING_V1",
+  "counts": {
+    "source_rows_before_label_filter": 509172,
+    "source_eligible_rows_before_feature_filter": 427526,
+    "source_rows_feature_resolved": 426939,
+    "source_positive_rows": 331135,
+    "source_negative_rows": 95804,
+    "source_feature_failures": 587,
+    "bindingdb_rows": 9778,
+    "recovered_rows": 914,
+    "recovered_duplicate_of_comprehensive": 383,
+    "combined_rows_with_audit_duplicates": 437631,
+    "unique_model_smiles": 296110,
+    "source_720_rows": 6692,
+    "source_720_positive_rows": 953,
+    "any_warm_720_after_comprehensive": 497,
+    "positive_warm_720_after_comprehensive": 346
+  },
+  "checks": {
+    "no_per_target_label_cap": true,
+    "all_428_base_targets_present": true,
+    "comprehensive_source_rows_above_426k": true,
+    "comprehensive_positive_rows_above_330k": true,
+    "tepotinib_met_positive_present": true,
+    "all_feature_indices_in_bounds": true,
+    "calibration_pair_ids_unique_within_source": true
+  },
+  "inputs": {
+    "outputs/current_production_package_v2/chembl37_target_calibration_v5/PROJECT463_CHEMBL37_STRICT_BINDING_PAIR_CALIBRATION_V5.csv.gz": "2dd28252e62164fa8b4122a35b22d8a679ffd3db578a1b6aa334694d7ef4e125",
+    "outputs/old_drug_target_sota_v1/feature_store_v1/TARGET_FEATURE_INDEX_V1.csv.gz": "2c959ef251a0775a6cb5df96d06c37eff25d80d671a82d7bb5f2e7b90ff1c628",
+    "outputs/biomaster_bindingdb_affinity_feature_package_v1/BINDINGDB_DIRECT_KI_KD_AFFINITY_PAIRS_V1.csv.gz": "9ac81285932a43ede830ff318368c8cc9b55d885e18c3ad7a8aebb80ad9172f5",
+    "outputs/biomaster_deployment_augmentation_v1/RECOVERED_CHEMBL37_RELATIONS_V1.csv.gz": "e58ab308fd0dc10938ae21e62ae9aff4ea6f5d002455c34602a052f899021fad",
+    "outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/OLD_DRUG_TARGET_INDEXED_PAIRS_276480_V1.csv.gz": "db0bea2e09b0b875d7f91accf31031d1e3f4fa4dbc12570a53118d8e1b7f0e92"
+  },
+  "artifacts": {
+    "relations": "outputs/biomaster_comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+    "morgan": "outputs/biomaster_comprehensive_training_v1/MORGAN2048_UINT8_COMPREHENSIVE_V1.npy",
+    "drug_index": "outputs/biomaster_comprehensive_training_v1/DRUG_FEATURE_INDEX_COMPREHENSIVE_V1.csv.gz",
+    "failures": "outputs/biomaster_comprehensive_training_v1/MOLECULE_FEATURE_FAILURES_V1.csv.gz"
+  }
+}

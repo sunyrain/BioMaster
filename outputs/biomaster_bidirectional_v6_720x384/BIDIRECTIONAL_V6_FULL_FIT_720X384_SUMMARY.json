@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-08-25T11:44:50.424610+00:00",
+  "protocol": "BIOMASTER_BIDIRECTIONAL_V6_FULL_FIT_720X384",
+  "rows": 276480,
+  "drug_queries": 720,
+  "candidate_targets": 384,
+  "primary_score": "equal-mean ensemble_drug_to_target_logit across three seeds",
+  "primary_rank": "v6_rank_target_within_drug_384",
+  "auxiliary_rank": "v6_aux_rank_drug_within_target_720",
+  "checkpoints": [
+    {
+      "seed": 20260816,
+      "checkpoint": "outputs/biomaster_bidirectional_v6_full_fit/seed_20260816/FULL_FIT_BIDIRECTIONAL_V6.pt",
+      "sha256": "22c7771a91834daa718682ff909fe775ba95ff5dd2f63a772528dcd6ac2d1f45",
+      "selected_epochs": 6
+    },
+    {
+      "seed": 20260817,
+      "checkpoint": "outputs/biomaster_bidirectional_v6_full_fit/seed_20260817/FULL_FIT_BIDIRECTIONAL_V6.pt",
+      "sha256": "c9399ee771369d1b384a2e009ab78341ca5ee0652161f71e8148303d4df3ec90",
+      "selected_epochs": 3
+    },
+    {
+      "seed": 20260820,
+      "checkpoint": "outputs/biomaster_bidirectional_v6_full_fit/seed_20260820/FULL_FIT_BIDIRECTIONAL_V6.pt",
+      "sha256": "053340bfea3b0d09787dcc57b3b9331b5369915e116b6705de69884415602234",
+      "selected_epochs": 2
+    }
+  ],
+  "structure": {
+    "rows_mask_one": 182880,
+    "rows_mask_zero": 93600,
+    "rows_recovered_from_augmentation": 1440
+  },
+  "showcase_cases": [
+    {
+      "drug_name": "lazertinib",
+      "drug_inchikey": "RRMJMHOQSALEJJ-UHFFFAOYSA-N",
+      "gene_symbol": "ERBB4",
+      "target_chembl_id": "CHEMBL3009",
+      "v6_rank_target_within_drug_384": 3,
+      "pair_rank_target_within_drug_384": 5,
+      "rank_change_positive_is_better": 2,
+      "v6_aux_rank_drug_within_target_720": 31,
+      "ensemble_drug_to_target_logit": 5.013484477996826,
+      "ensemble_drug_to_target_residual": 0.724987268447876,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "lazertinib",
+      "drug_inchikey": "RRMJMHOQSALEJJ-UHFFFAOYSA-N",
+      "gene_symbol": "AXL",
+      "target_chembl_id": "CHEMBL4895",
+      "v6_rank_target_within_drug_384": 41,
+      "pair_rank_target_within_drug_384": 52,
+      "rank_change_positive_is_better": 11,
+      "v6_aux_rank_drug_within_target_720": 69,
+      "ensemble_drug_to_target_logit": 3.256298303604126,
+      "ensemble_drug_to_target_residual": 1.0855110883712769,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "repotrectinib",
+      "drug_inchikey": "FIKPXCOQUIZNHB-WDEREUQCSA-N",
+      "gene_symbol": "AXL",
+      "target_chembl_id": "CHEMBL4895",
+      "v6_rank_target_within_drug_384": 2,
+      "pair_rank_target_within_drug_384": 9,
+      "rank_change_positive_is_better": 7,
+      "v6_aux_rank_drug_within_target_720": 6,
+      "ensemble_drug_to_target_logit": 7.521195888519287,
+      "ensemble_drug_to_target_residual": 0.6060306429862976,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "repotrectinib",
+      "drug_inchikey": "FIKPXCOQUIZNHB-WDEREUQCSA-N",
+      "gene_symbol": "PLK4",
+      "target_chembl_id": "CHEMBL3788",
+      "v6_rank_target_within_drug_384": 6,
+      "pair_rank_target_within_drug_384": 6,
+      "rank_change_positive_is_better": 0,
+      "v6_aux_rank_drug_within_target_720": 3,
+      "ensemble_drug_to_target_logit": 7.077798366546631,
+      "ensemble_drug_to_target_residual": -0.06879100203514099,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "lorlatinib",
+      "drug_inchikey": "IIXWYSCJSQVBQM-LLVKDONJSA-N",
+      "gene_symbol": "PLK4",
+      "target_chembl_id": "CHEMBL3788",
+      "v6_rank_target_within_drug_384": 24,
+      "pair_rank_target_within_drug_384": 26,
+      "rank_change_positive_is_better": 2,
+      "v6_aux_rank_drug_within_target_720": 2,
+      "ensemble_drug_to_target_logit": 7.117896556854248,
+      "ensemble_drug_to_target_residual": 0.029318036511540413,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "pitavastatin",
+      "drug_inchikey": "VGYFMXBACGZSIL-MCBHFWOFSA-N",
+      "gene_symbol": "IDO1",
+      "target_chembl_id": "CHEMBL4685",
+      "v6_rank_target_within_drug_384": 10,
+      "pair_rank_target_within_drug_384": 18,
+      "rank_change_positive_is_better": 8,
+      "v6_aux_rank_drug_within_target_720": 186,
+      "ensemble_drug_to_target_logit": 1.806083083152771,
+      "ensemble_drug_to_target_residual": 1.499019742012024,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "tepotinib",
+      "drug_inchikey": "AHYMHWXQRWRBKT-UHFFFAOYSA-N",
+      "gene_symbol": "IRAK1",
+      "target_chembl_id": "CHEMBL3357",
+      "v6_rank_target_within_drug_384": 336,
+      "pair_rank_target_within_drug_384": 324,
+      "rank_change_positive_is_better": -12,
+      "v6_aux_rank_drug_within_target_720": 668,
+      "ensemble_drug_to_target_logit": -6.927163600921631,
+      "ensemble_drug_to_target_residual": 0.28527894616127014,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "tepotinib",
+      "drug_inchikey": "AHYMHWXQRWRBKT-UHFFFAOYSA-N",
+      "gene_symbol": "IRAK4",
+      "target_chembl_id": "CHEMBL3778",
+      "v6_rank_target_within_drug_384": 155,
+      "pair_rank_target_within_drug_384": 233,
+      "rank_change_positive_is_better": 78,
+      "v6_aux_rank_drug_within_target_720": 550,
+      "ensemble_drug_to_target_logit": -4.819764614105225,
+      "ensemble_drug_to_target_residual": 1.4831323623657227,
+      "structure_mask": 1
+    },
+    {
+      "drug_name": "deucravacitinib",
+      "drug_inchikey": "BZZKEPGENYLQSC-FIBGUPNXSA-N",
+      "gene_symbol": "FGFR4",
+      "target_chembl_id": "CHEMBL3973",
+      "v6_rank_target_within_drug_384": 25,
+      "pair_rank_target_within_drug_384": 37,
+      "rank_change_positive_is_better": 12,
+      "v6_aux_rank_drug_within_target_720": 12,
+      "ensemble_drug_to_target_logit": 6.638011455535889,
+      "ensemble_drug_to_target_residual": 0.3049250543117523,
+      "structure_mask": 1
+    }
+  ],
+  "artifacts": {
+    "scores": "outputs/biomaster_bidirectional_v6_720x384/BIDIRECTIONAL_V6_FULL_FIT_720X384_SCORES.csv.gz",
+    "scores_sha256": "3b3a72103f74fbf000ad518b67c55b8b9ac9c8e6a597e4e2688481d57cfe127f",
+    "showcase_case_ranks": "outputs/biomaster_bidirectional_v6_720x384/BIDIRECTIONAL_V6_SHOWCASE_CASE_RANKS.csv",
+    "showcase_case_ranks_sha256": "597b72a70dde76e6f4a91681585c546a757291d63fe8bd1a09ed2e9d322ea279"
+  },
+  "claim_boundary": "FULL_FIT scores are for production candidate prioritization and have no unbiased post-refit performance estimate. Unreported pairs are not negatives. Use rank/384 within each drug; do not interpret the directional logit as a binding probability or physical affinity."
+}

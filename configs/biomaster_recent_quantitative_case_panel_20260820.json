@@ -1,0 +1,98 @@
+{
+  "freeze_id": "BIOMASTER_RECENT_QUANTITATIVE_CASE_PANEL_20260820",
+  "frozen_utc": "2026-08-20T00:00:00Z",
+  "status": "FROZEN_BEFORE_V3_INTERNAL_SELECTION_AND_FINAL_SCORING",
+  "retrospective_boundary": "The unchanged V2 model had already been diagnostically scored on the SIRT3 controls. These labels and ranks must not be used for V3 architecture, loss-weight, epoch or seed selection.",
+  "deployment_query": "For each exact new protein sequence, rank the frozen universe of 720 old drugs.",
+  "selection_policy": {
+    "model_selection_data": "ChEMBL37 frozen validation plus pre-2023 BindingDB exact-sequence target-cold validation only",
+    "external_case_labels_are_read_only": true,
+    "report_every_frozen_quantitative_control": true,
+    "no_case_replacement_after_scoring": true
+  },
+  "label_contract": {
+    "continuous_label": "pActivity = 9 - log10(Kd_or_Ki_nM)",
+    "strong": "pActivity >= 6 (Kd/Ki <= 1 micromolar)",
+    "weak": "pActivity <= 5 (Kd/Ki >= 10 micromolar)",
+    "grey_zone": "5 < pActivity < 6; retained for interval/continuous affinity learning but excluded from strong-vs-weak classification",
+    "unknown_relation": "never converted to a negative label"
+  },
+  "success_gates": {
+    "retrieval_success": "experimental positive rank <= 36 of 720 (top 5 percent)",
+    "strong_direct_binding": "direct experimental Kd or Ki with pActivity >= 6",
+    "pair_novelty": "exact drug-target relationship absent from frozen ChEMBL37 training and the pre-2023 BindingDB training subset",
+    "teacher_strict_showcase": "retrieval_success AND strong_direct_binding AND pair_novelty AND exact target protein absent from the audited relationship database target dictionary",
+    "claim_policy": "SIRT3 can satisfy a strong novel-relation showcase but not the teacher-strict absent-protein gate because SIRT3 itself is present in ChEMBL37. The CHIKV envelope case remains pending until its assayed exact sequence is resolved."
+  },
+  "targets": [
+    {
+      "case_id": "SIRT3_SPR_2026",
+      "case_tier": "STRONG_DIRECT_RELATION_ABSENT_TARGET_PRESENT",
+      "uniprot_accession": "Q9NTG7",
+      "gene_symbol": "SIRT3",
+      "protein_name": "NAD-dependent protein deacetylase sirtuin-3, mitochondrial",
+      "organism": "Homo sapiens",
+      "fixed_target_assay_family": "enzyme",
+      "sequence": "MAFWGWRAAAALRLWGRVVERVEAGGGVGPFQACGCRLVLGGRDDVSAGLRGSHGARGEPLDPARPLQRPPRPEVPRAFRRQPRAAAPSFFFSSIKGGRRSISFSVGASSVVGSGGSSDKGKLSLQDVAELIRARACQRVVVMVGAGISTPSGIPDFRSPGSGLYSNLQQYDLPYPEAIFELPFFFHNPKPFFTLAKELYPGNYKPNVTHYFLRLLHDKGLLLRLYTQNIDGLERVSGIPASKLVEAHGTFASATCTVCQRPFPGEDIRADVMADRVPRCPVCTGVVKPDIVFFGEPLPQRFLLHVVDFPMADLLLILGTSLEVEPFASLTEAVRSSVPRLLINRDLVGPLAWHPRSRDVAQLGDVVHGVESLVELLGWTEEMRDLVQRETGKLDGPDK",
+      "sequence_length": 399,
+      "sequence_sha256": "f2d07041af22e226b457bf91c3076c7f7120aca41217c5054ff4709272490e29",
+      "sequence_source": "https://rest.uniprot.org/uniprotkb/Q9NTG7.fasta",
+      "database_status": {
+        "target_in_chembl37": true,
+        "target_chembl_id": "CHEMBL4461",
+        "target_rows_in_frozen_86674_training_pairs": 0,
+        "both_frozen_positive_pairs_absent_from_chembl37": true,
+        "eligible_for_teacher_strict_absent_protein_claim": false
+      },
+      "literature": {
+        "title": "An integrated in silico and SPR-based workflow identifies FDA-approved drugs as previously unrecognized SIRT3 binders",
+        "publication_year": 2026,
+        "doi": "10.1016/j.bioorg.2026.110235",
+        "url": "https://doi.org/10.1016/j.bioorg.2026.110235",
+        "direct_assay": "surface plasmon resonance"
+      },
+      "experimental_positives": [
+        {
+          "old_drug_name": "binimetinib",
+          "old_drug_inchikey": "ACWZRVQXLIRSDF-UHFFFAOYSA-N",
+          "reported_kd_nM": 21.28,
+          "reported_kd_sd_nM": 3.5,
+          "reported_pKd": 7.6720
+        },
+        {
+          "old_drug_name": "olaparib",
+          "old_drug_inchikey": "FDLYAMZZIXQODN-UHFFFAOYSA-N",
+          "reported_kd_nM": 84.0,
+          "reported_kd_sd_nM": 5.7,
+          "reported_pKd": 7.0757
+        }
+      ]
+    },
+    {
+      "case_id": "CHIKV_E1_E2_TIRBANIBULIN_2026",
+      "case_tier": "TEACHER_STRICT_CANDIDATE_SEQUENCE_PENDING",
+      "target_name": "Chikungunya virus envelope E1/E2 complex",
+      "organism": "Chikungunya virus",
+      "exact_assayed_sequence": null,
+      "model_scoring_status": "BLOCKED_UNTIL_EXACT_ASSAYED_SEQUENCE_IS_RESOLVED",
+      "database_status": {
+        "target_in_human_chembl37_single_protein_training": false,
+        "domain_shift": "viral heteromeric envelope complex versus a human single-protein training domain",
+        "eligible_for_teacher_strict_absent_protein_claim": "pending exact sequence and database audit"
+      },
+      "literature": {
+        "title": "Tirbanibulin targets the Chikungunya virus E1/E2 complex to inhibit viral entry and replication",
+        "publication_year": 2026,
+        "doi": "10.1111/bph.70642",
+        "url": "https://doi.org/10.1111/bph.70642",
+        "reported_kd_nM": 73.0,
+        "reported_pKd": 7.1367,
+        "direct_assay": "surface plasmon resonance"
+      },
+      "experimental_positive": {
+        "old_drug_name": "tirbanibulin",
+        "old_drug_inchikey": "HUNGUWOZPQBXGX-UHFFFAOYSA-N"
+      }
+    }
+  ]
+}

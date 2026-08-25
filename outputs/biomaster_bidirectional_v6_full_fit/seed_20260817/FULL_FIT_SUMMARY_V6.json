@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-08-25T11:37:43.706212+00:00",
+  "seed": 20260817,
+  "device": "cuda",
+  "reference_checkpoint": "outputs/biomaster_comprehensive_balanced_full_fit_v2/FULL_FIT_2026_COMPREHENSIVE_BALANCED__seed_20260817/FULL_FIT_MODEL_COMPREHENSIVE_BALANCED_V2.pt",
+  "stage_summary": "outputs/biomaster_bidirectional_v6_stage_a_dense/seed_20260817/STAGE_A_SUMMARY_V6.json",
+  "full_fit_contract": {
+    "protocol": "BIOMASTER_BIDIRECTIONAL_V6_HEAD_ONLY_FULL_FIT",
+    "training_mode": "FROZEN_V5_FULL_FIT_BACKBONE_DIRECTIONAL_HEAD_REFIT",
+    "selected_epochs_from_stage_a": 3,
+    "all_feature_resolved_relations_eligible": true,
+    "full_fit_rows": 437248,
+    "backbone_frozen": true,
+    "pair_logit_unchanged_from_reference": true,
+    "external_current_case_labels_used_for_selection": false,
+    "statistical_status": "EXPLORATORY_PASS_WITH_UNCERTAINTY"
+  },
+  "samplers": {
+    "drug_to_target": {
+      "batch_size": 1024,
+      "steps_per_epoch": 48,
+      "rows_per_query": 16,
+      "query_frequency_power": 0.0,
+      "eligible_two_class_queries": 8029
+    },
+    "target_to_drug": {
+      "batch_size": 1024,
+      "steps_per_epoch": 32,
+      "rows_per_query": 16,
+      "query_frequency_power": 0.25,
+      "eligible_two_class_queries": 434
+    }
+  },
+  "split_audit": {
+    "source_rows": 426939,
+    "bindingdb_rows": 9778,
+    "recovered_rows": 914,
+    "recovered_train_rows": 726,
+    "recovered_train_unique_rows_added": 440,
+    "recovered_dev_rows": 78,
+    "recovered_test_rows": 110,
+    "recovered_duplicates_not_repeated_full_fit": 383,
+    "held_relation_keys": 188,
+    "source_rows_excluded_for_relation_evaluation": 97,
+    "bindingdb_target_cold_dev_rows": 346,
+    "bindingdb_target_cold_dev_targets": 12,
+    "bindingdb_target_cold_test_rows": 325,
+    "bindingdb_target_cold_test_targets": 8,
+    "evaluation_fit_rows": 436389,
+    "full_fit_rows": 437248,
+    "full_fit_unique_drugs": 296108,
+    "full_fit_unique_targets": 843
+  },
+  "structure": {
+    "target_count": 843,
+    "base_structure_targets": 428,
+    "augmented_structure_targets": 130,
+    "available_structure_targets": 347,
+    "pair_rows_with_structure": 299094,
+    "columns": [
+      "structure_context_available",
+      "receptor_experimental_holo",
+      "pocket_top_score",
+      "pocket_top_probability",
+      "pocket_center_x",
+      "pocket_center_y",
+      "pocket_center_z",
+      "pocket_volume",
+      "pocket_num_residues",
+      "pocket_puresnet_overlap",
+      "pocket_puresnet_jaccard",
+      "receptor_residue_count",
+      "experimental_entry_count_top20",
+      "candidate_holo_entry_count_top20",
+      "best_holo_resolution",
+      "best_holo_coverage",
+      "structure_bin_is_strict",
+      "structure_bin_is_manual_review",
+      "sequence_exact_match"
+    ]
+  },
+  "checkpoint": "outputs/biomaster_bidirectional_v6_full_fit/seed_20260817/FULL_FIT_BIDIRECTIONAL_V6.pt",
+  "claim_boundary": "This is a production-scoring candidate refit after architecture and epoch selection. It has no unbiased post-FULL_FIT temporal performance estimate. The three-seed Stage-A ensemble remains exploratory because its test bootstrap confidence interval crosses zero."
+}

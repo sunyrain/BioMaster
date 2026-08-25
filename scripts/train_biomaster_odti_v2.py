@@ -1359,6 +1359,11 @@ def train(args: argparse.Namespace) -> dict[str, object]:
         expert_balance_weight=args.expert_balance_weight,
         listwise_weight=args.listwise_weight,
         affinity_weight=args.affinity_weight,
+        affinity_rank_weight=getattr(args, "affinity_rank_weight", 0.0),
+        affinity_drug_rank_weight=getattr(args, "affinity_drug_rank_weight", 0.0),
+        affinity_rank_min_delta=getattr(args, "affinity_rank_min_delta", 0.25),
+        affinity_rank_margin=getattr(args, "affinity_rank_margin", 0.10),
+        affinity_rank_max_pairs=getattr(args, "affinity_rank_max_pairs", 4096),
         observation_weight=args.observation_weight,
         contrastive_weight=args.contrastive_weight,
         contrastive_temperature=args.contrastive_temperature,
@@ -1723,6 +1728,18 @@ def train(args: argparse.Namespace) -> dict[str, object]:
     predictions["v2_probability_calibrated"] = test_probability
     prediction_path = run_dir / "TEST_PREDICTIONS_V2.csv.gz"
     predictions.to_csv(prediction_path, index=False)
+    # Exact fallback applies only when every optional structural residual is
+    # absent.  A local experimental graph is allowed to contribute even when
+    # the older fixed-width structure vector is unavailable.
+    fallback_rows = structure_mask[test_positions] == 0
+    if local_graph_store is not None:
+        test_drug_indices = test_frame["drug_feature_index"].to_numpy(dtype=np.int64)
+        test_target_indices = test_frame["target_feature_index"].to_numpy(dtype=np.int64)
+        local_available = (
+            np.asarray(local_graph_store["ligand_available"])[test_drug_indices]
+            & np.asarray(local_graph_store["pocket_available"])[test_target_indices]
+        )
+        fallback_rows = fallback_rows & ~local_available
     checks = {
         "feature_store_pass": feature_audit["status"] == "PASS",
         "train_valid_test_nonempty": all(len(x) > 0 for x in [train_positions, valid_positions, test_positions]),
@@ -1733,8 +1750,8 @@ def train(args: argparse.Namespace) -> dict[str, object]:
         "test_predictions_bounded": ((test_probability >= 0) & (test_probability <= 1)).all(),
         "structure_fallback_rows_exact": bool(
             np.allclose(
-                test["final_logit"][structure_mask[test_positions] == 0],
-                test["base_logit"][structure_mask[test_positions] == 0],
+                test["final_logit"][fallback_rows],
+                test["base_logit"][fallback_rows],
             )
         ),
     }
@@ -1919,6 +1936,11 @@ def main() -> None:
     parser.add_argument("--listwise-weight", type=float, default=0.0)
     parser.add_argument("--rank-max-pairs", type=int, default=4096)
     parser.add_argument("--affinity-weight", type=float, default=0.06)
+    parser.add_argument("--affinity-rank-weight", type=float, default=0.0)
+    parser.add_argument("--affinity-drug-rank-weight", type=float, default=0.0)
+    parser.add_argument("--affinity-rank-min-delta", type=float, default=0.25)
+    parser.add_argument("--affinity-rank-margin", type=float, default=0.10)
+    parser.add_argument("--affinity-rank-max-pairs", type=int, default=4096)
     parser.add_argument("--observation-weight", type=float, default=0.10)
     parser.add_argument("--contrastive-weight", type=float, default=0.05)
     parser.add_argument("--contrastive-temperature", type=float, default=0.10)

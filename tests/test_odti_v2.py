@@ -16,6 +16,7 @@ from biomaster.odti_v2 import (
     expert_balance_loss,
     odti_v2_loss,
     within_group_rank_loss,
+    within_group_interval_rank_loss,
     within_group_listwise_loss,
 )
 from biomaster.ofer_dti import OFERDTIConfig, OFERDTIModel, ofer_discovery_score, ofer_phase_a_loss
@@ -32,6 +33,7 @@ from scripts.train_biomaster_odti_v2 import (
     local_graph_batch,
 )
 from scripts.evaluate_biomaster_odti_v2 import progress_state, reusable_run
+from scripts.train_biomaster_bindingdb_affinity_augmented_v1 import affinity_retrieval_metrics
 from scripts.build_biomaster_odti_target_token_features_v1 import window_bounds
 from scripts.build_biomaster_odti_structure_features_v1 import build_structure_context
 from scripts.build_biomaster_odti_structure_features_v2 import (
@@ -350,7 +352,12 @@ def test_target_token_loader_validates_pocket_mask_alignment(tmp_path: Path) -> 
 
 def test_v2_loss_has_all_components_and_backpropagates() -> None:
     torch.manual_seed(11)
-    config = ODTIV2Config(structure_input_dim=4, drug_rank_weight=0.08)
+    config = ODTIV2Config(
+        structure_input_dim=4,
+        drug_rank_weight=0.08,
+        affinity_rank_weight=0.05,
+        affinity_drug_rank_weight=0.03,
+    )
     model = RoutedInteractionRankerV2(family_count=3, config=config)
     drug, target, family, conplex = make_inputs()
     result = model(
@@ -369,12 +376,14 @@ def test_v2_loss_has_all_components_and_backpropagates() -> None:
     )
     assert set(losses) == {
         "total", "bce", "rank", "drug_rank", "expert_balance", "listwise", "affinity",
-        "observation", "contrastive",
+        "affinity_rank", "affinity_drug_rank", "observation", "contrastive",
     }
     assert torch.isfinite(losses["total"])
     assert torch.isfinite(losses["drug_rank"])
     assert losses["drug_rank"] > 0
     assert torch.isfinite(losses["expert_balance"])
+    assert torch.isfinite(losses["affinity_rank"])
+    assert losses["affinity_rank"] > 0
     losses["total"].backward()
     assert any(parameter.grad is not None for parameter in model.parameters())
 
@@ -410,6 +419,44 @@ def test_pairwise_group_rank_loss_is_finite() -> None:
     value = within_group_rank_loss(logits, labels, groups, max_pairs=2)
     assert torch.isfinite(value)
     assert value > 0
+
+
+def test_interval_affinity_rank_uses_only_unambiguous_orders() -> None:
+    prediction = torch.tensor([7.0, 5.0, 4.0, 9.0], requires_grad=True)
+    lower = torch.tensor([7.0, 5.0, 4.0, 8.0])
+    upper = torch.tensor([7.0, 5.5, 4.0, float("inf")])
+    groups = torch.tensor([0, 0, 0, 1])
+    value = within_group_interval_rank_loss(
+        prediction, lower, upper, groups, min_delta=0.5, margin=0.1
+    )
+    assert torch.isfinite(value)
+    assert value > 0
+    value.backward()
+    assert prediction.grad is not None
+    # Overlapping intervals and singleton groups have no invented order.
+    zero = within_group_interval_rank_loss(
+        torch.tensor([1.0, 2.0]),
+        torch.tensor([5.0, 5.2]),
+        torch.tensor([5.5, 5.6]),
+        torch.tensor([0, 0]),
+        min_delta=0.25,
+    )
+    assert torch.equal(zero, torch.tensor(0.0))
+
+
+def test_bindingdb_affinity_metrics_keep_grey_zone_out_of_binary_contract() -> None:
+    frame = pd.DataFrame(
+        {
+            "target_sequence_hash": ["a"] * 5 + ["b"] * 3,
+            "mean_pchembl": [7.0, 6.2, 5.5, 4.8, 4.0, 7.0, 5.5, 4.0],
+        }
+    )
+    score = frame["mean_pchembl"].to_numpy()
+    result = affinity_retrieval_metrics(frame, score)
+    assert result["targets"] == 2
+    assert result["targets_with_strong_weak_metric"] == 2
+    assert result["target_macro_spearman"] == pytest.approx(1.0)
+    assert result["target_macro_strong_weak_auprc"] == pytest.approx(1.0)
 
 
 def test_expert_balance_loss_is_zero_for_uniform_usage() -> None:

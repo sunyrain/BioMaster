@@ -76,12 +76,30 @@ class ODTIV2Config:
     expert_balance_weight: float = 0.0
     listwise_weight: float = 0.0
     affinity_weight: float = 0.06
+    # The scalar affinity head otherwise learns only absolute pActivity.  The
+    # two optional interval-ranking terms make the deployment contracts
+    # explicit: rank compounds within a target and targets within an old drug.
+    # Bounds are standardized by the trainer, so min_delta and margin are in
+    # training-set affinity standard-deviation units.
+    affinity_rank_weight: float = 0.0
+    affinity_drug_rank_weight: float = 0.0
+    affinity_rank_min_delta: float = 0.25
+    affinity_rank_margin: float = 0.10
+    affinity_rank_max_pairs: int = 4096
     observation_weight: float = 0.10
     contrastive_weight: float = 0.05
     contrastive_temperature: float = 0.10
     rank_max_pairs: int = 4096
     affinity_min_log_variance: float = -6.0
     affinity_max_log_variance: float = 4.0
+    # Optional query-direction residual heads.  ``final_logit`` remains the
+    # shared pairwise activity evidence.  Each retrieval direction learns only
+    # a small residual from the same pair representation, and the final layer
+    # is zero initialized so enabling the heads cannot change an existing
+    # checkpoint's predictions before training.
+    directional_heads_enabled: bool = False
+    directional_hidden_dim: int = 64
+    directional_dropout: float = 0.0
 
 
 class _Encoder(nn.Module):
@@ -99,6 +117,25 @@ class _Encoder(nn.Module):
 
     def forward(self, value: Tensor) -> Tensor:
         return self.net(value)
+
+
+class _DirectionalResidualHead(nn.Module):
+    """Small zero-start residual used by one query direction."""
+
+    def __init__(self, input_dim: int, hidden_dim: int, dropout: float) -> None:
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.LayerNorm(hidden_dim),
+            nn.GELU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dim, 1),
+        )
+        nn.init.zeros_(self.net[-1].weight)
+        nn.init.zeros_(self.net[-1].bias)
+
+    def forward(self, value: Tensor) -> Tensor:
+        return self.net(value).squeeze(1)
 
 
 class _LowRankBilinear(nn.Module):
@@ -259,6 +296,10 @@ class RoutedInteractionRankerV2(nn.Module):
             raise ValueError("interaction_rank must be positive")
         if cfg.film_scale < 0:
             raise ValueError("film_scale must be non-negative")
+        if cfg.directional_heads_enabled and cfg.directional_hidden_dim < 1:
+            raise ValueError("directional_hidden_dim must be positive")
+        if not 0.0 <= cfg.directional_dropout < 1.0:
+            raise ValueError("directional_dropout must be in [0, 1)")
         if cfg.structure_group_dims:
             if sum(cfg.structure_group_dims) != cfg.structure_input_dim:
                 raise ValueError(
@@ -510,6 +551,14 @@ class RoutedInteractionRankerV2(nn.Module):
         if self.use_conplex:
             self.conplex_weight = nn.Parameter(torch.tensor(0.2, dtype=torch.float32))
             self.conplex_bias = nn.Parameter(torch.tensor(0.0, dtype=torch.float32))
+
+        if cfg.directional_heads_enabled:
+            self.drug_to_target_head = _DirectionalResidualHead(
+                cfg.hidden_dim, cfg.directional_hidden_dim, cfg.directional_dropout
+            )
+            self.target_to_drug_head = _DirectionalResidualHead(
+                cfg.hidden_dim, cfg.directional_hidden_dim, cfg.directional_dropout
+            )
 
     @staticmethod
     def _mask(value: Tensor | None, batch_size: int, device: torch.device) -> Tensor:
@@ -997,9 +1046,19 @@ class RoutedInteractionRankerV2(nn.Module):
             fused_hidden = fused_hidden + local_hidden * local_pair_gate.unsqueeze(1)
 
         final_logit = base_logit + residual_logit + local_pair_residual_logit
+        if cfg.directional_heads_enabled:
+            drug_to_target_residual = self.drug_to_target_head(fused_hidden)
+            target_to_drug_residual = self.target_to_drug_head(fused_hidden)
+        else:
+            drug_to_target_residual = torch.zeros_like(final_logit)
+            target_to_drug_residual = torch.zeros_like(final_logit)
         return {
             "base_logit": base_logit,
             "final_logit": final_logit,
+            "drug_to_target_logit": final_logit + drug_to_target_residual,
+            "target_to_drug_logit": final_logit + target_to_drug_residual,
+            "drug_to_target_residual": drug_to_target_residual,
+            "target_to_drug_residual": target_to_drug_residual,
             "affinity": self.affinity_head(fused_hidden).squeeze(1),
             "observation_logit": self.observation_head(fused_hidden).squeeze(1),
             "affinity_log_variance": self.affinity_log_variance_head(fused_hidden)
@@ -1066,22 +1125,36 @@ def within_group_rank_loss(
     subsampled to keep the loss quadratic term bounded.
     """
 
+    # Most drug groups in a target-aware minibatch occur only once and can
+    # never contain both classes.  Precompute class counts and avoid a Python
+    # loop plus full-batch comparison for those mathematically zero terms.
+    # Iterating eligible groups in torch.unique's sorted order preserves the
+    # exact reduction/subsampling order of the original implementation.
+    unique_groups, inverse = torch.unique(groups, sorted=True, return_inverse=True)
+    positive_counts = torch.zeros(
+        len(unique_groups), dtype=torch.long, device=groups.device
+    )
+    negative_counts = torch.zeros_like(positive_counts)
+    positive_counts.scatter_add_(0, inverse, labels.gt(0.5).long())
+    negative_counts.scatter_add_(0, inverse, labels.lt(0.5).long())
+    eligible = torch.nonzero(
+        positive_counts.gt(0) & negative_counts.gt(0), as_tuple=False
+    ).flatten()
     losses: list[Tensor] = []
-    for group in torch.unique(groups):
-        selected = groups.eq(group)
+    for group_index in eligible:
+        selected = inverse.eq(group_index)
         positive = logits[selected & labels.gt(0.5)]
         negative = logits[selected & labels.lt(0.5)]
-        if positive.numel() and negative.numel():
-            if max_pairs <= 0:
-                raise ValueError("max_pairs must be positive")
-            # Keep the batch order (which is seeded by the trainer) so the
-            # subsampling remains reproducible without a second RNG stream.
-            max_positive = max(1, min(positive.numel(), int(max_pairs**0.5)))
-            max_negative = max(1, min(negative.numel(), max_pairs // max_positive))
-            positive = positive[:max_positive]
-            negative = negative[:max_negative]
-            pairwise = negative.reshape(1, -1) - positive.reshape(-1, 1)
-            losses.append(F.softplus(pairwise).mean())
+        if max_pairs <= 0:
+            raise ValueError("max_pairs must be positive")
+        # Keep the batch order (which is seeded by the trainer) so the
+        # subsampling remains reproducible without a second RNG stream.
+        max_positive = max(1, min(positive.numel(), int(max_pairs**0.5)))
+        max_negative = max(1, min(negative.numel(), max_pairs // max_positive))
+        positive = positive[:max_positive]
+        negative = negative[:max_negative]
+        pairwise = negative.reshape(1, -1) - positive.reshape(-1, 1)
+        losses.append(F.softplus(pairwise).mean())
     if not losses:
         return logits.sum() * 0.0
     return torch.stack(losses).mean()
@@ -1246,6 +1319,73 @@ def censored_affinity_loss(
     return torch.cat([part.reshape(-1) for part in losses]).mean()
 
 
+def within_group_interval_rank_loss(
+    prediction: Tensor,
+    lower: Tensor,
+    upper: Tensor,
+    groups: Tensor,
+    observed: Tensor | None = None,
+    min_delta: float = 0.25,
+    margin: float = 0.10,
+    max_pairs: int = 4096,
+) -> Tensor:
+    """Rank affinity intervals only when their ordering is unambiguous.
+
+    A row ``i`` is stronger than ``j`` only when ``lower[i]`` exceeds
+    ``upper[j]`` by at least ``min_delta``.  This retains exact Ki/Kd values
+    and safely uses one-sided/censored measurements without converting an
+    unknown or overlapping interval into a false order.  Large groups are
+    deterministically truncated in batch order.
+    """
+
+    prediction = prediction.reshape(-1)
+    lower = lower.reshape(-1)
+    upper = upper.reshape(-1)
+    groups = groups.reshape(-1)
+    if not (prediction.shape == lower.shape == upper.shape == groups.shape):
+        raise ValueError("prediction/lower/upper/groups shapes must match")
+    if min_delta < 0:
+        raise ValueError("min_delta must be non-negative")
+    if margin < 0:
+        raise ValueError("margin must be non-negative")
+    if max_pairs <= 0:
+        raise ValueError("max_pairs must be positive")
+    if observed is None:
+        observed_mask = torch.isfinite(lower) | torch.isfinite(upper)
+    else:
+        observed_mask = observed.reshape(-1).bool()
+        if observed_mask.shape != prediction.shape:
+            raise ValueError("observed must match prediction shape")
+
+    losses: list[Tensor] = []
+    for group in torch.unique(groups):
+        selected = groups.eq(group) & observed_mask
+        if int(selected.sum()) < 2:
+            continue
+        group_prediction = prediction[selected]
+        group_lower = lower[selected]
+        group_upper = upper[selected]
+        # [stronger, weaker]. Infinite missing-side bounds naturally make a
+        # comparison unavailable; valid one-sided bounds remain usable.
+        comparable = (
+            torch.isfinite(group_lower).reshape(-1, 1)
+            & torch.isfinite(group_upper).reshape(1, -1)
+            & (group_lower.reshape(-1, 1) >= group_upper.reshape(1, -1) + min_delta)
+        )
+        stronger, weaker = torch.nonzero(comparable, as_tuple=True)
+        if stronger.numel() == 0:
+            continue
+        stronger = stronger[:max_pairs]
+        weaker = weaker[:max_pairs]
+        violations = (
+            group_prediction[weaker] - group_prediction[stronger] + float(margin)
+        )
+        losses.append(F.softplus(violations).mean())
+    if not losses:
+        return prediction.sum() * 0.0
+    return torch.stack(losses).mean()
+
+
 def odti_v2_loss(
     outputs: dict[str, Tensor],
     labels: Tensor,
@@ -1316,8 +1456,30 @@ def odti_v2_loss(
             affinity_observed,
             outputs.get("affinity_log_variance"),
         )
+        affinity_rank = within_group_interval_rank_loss(
+            outputs["affinity"],
+            affinity_lower,
+            affinity_upper,
+            target_group,
+            affinity_observed,
+            cfg.affinity_rank_min_delta,
+            cfg.affinity_rank_margin,
+            cfg.affinity_rank_max_pairs,
+        )
+        affinity_drug_rank = within_group_interval_rank_loss(
+            outputs["affinity"],
+            affinity_lower,
+            affinity_upper,
+            drug_group,
+            affinity_observed,
+            cfg.affinity_rank_min_delta,
+            cfg.affinity_rank_margin,
+            cfg.affinity_rank_max_pairs,
+        )
     else:
         affinity = outputs["affinity"].sum() * 0.0
+        affinity_rank = outputs["affinity"].sum() * 0.0
+        affinity_drug_rank = outputs["affinity"].sum() * 0.0
     if observed_labels is None:
         observation = outputs["observation_logit"].sum() * 0.0
     else:
@@ -1331,6 +1493,8 @@ def odti_v2_loss(
         + cfg.expert_balance_weight * expert_balance
         + cfg.listwise_weight * listwise
         + cfg.affinity_weight * affinity
+        + cfg.affinity_rank_weight * affinity_rank
+        + cfg.affinity_drug_rank_weight * affinity_drug_rank
         + cfg.observation_weight * observation
         + cfg.contrastive_weight * contrastive
     )
@@ -1342,8 +1506,89 @@ def odti_v2_loss(
         "expert_balance": expert_balance,
         "listwise": listwise,
         "affinity": affinity,
+        "affinity_rank": affinity_rank,
+        "affinity_drug_rank": affinity_drug_rank,
         "observation": observation,
         "contrastive": contrastive,
+    }
+
+
+def directional_retrieval_loss(
+    outputs: dict[str, Tensor],
+    labels: Tensor,
+    groups: Tensor,
+    direction: str,
+    binary_observed: Tensor | None = None,
+    bce_weight: float = 0.25,
+    rank_weight: float = 1.0,
+    listwise_weight: float = 0.25,
+    residual_weight: float = 1e-3,
+    max_pairs: int = 4096,
+) -> dict[str, Tensor]:
+    """Train one explicit retrieval direction without inventing negatives.
+
+    ``groups`` is the query entity: drug IDs for drug-to-target retrieval and
+    target IDs for target-to-drug retrieval.  Only rows marked
+    ``binary_observed`` participate.  This is intentionally separate from the
+    universal pair loss so old checkpoints and their classification head keep
+    an exact backwards-compatible contract.
+    """
+
+    key_by_direction = {
+        "drug_to_target": ("drug_to_target_logit", "drug_to_target_residual"),
+        "target_to_drug": ("target_to_drug_logit", "target_to_drug_residual"),
+    }
+    if direction not in key_by_direction:
+        raise ValueError("direction must be drug_to_target or target_to_drug")
+    if min(bce_weight, rank_weight, listwise_weight, residual_weight) < 0:
+        raise ValueError("directional loss weights must be non-negative")
+    logit_key, residual_key = key_by_direction[direction]
+    logits = outputs[logit_key].reshape(-1)
+    residual = outputs[residual_key].reshape(-1)
+    labels = labels.float().reshape(-1)
+    groups = groups.reshape(-1)
+    if not (logits.shape == residual.shape == labels.shape == groups.shape):
+        raise ValueError("directional logits, labels and groups must have equal length")
+    if binary_observed is None:
+        observed = torch.ones_like(labels, dtype=torch.bool)
+    else:
+        observed = binary_observed.reshape(-1).bool()
+        if observed.shape != labels.shape:
+            raise ValueError("binary_observed must match labels")
+    if observed.any():
+        selected_logits = logits[observed]
+        selected_labels = labels[observed]
+        selected_groups = groups[observed]
+        weights = target_balanced_weights(selected_labels, selected_groups).to(logits.device)
+        bce_rows = F.binary_cross_entropy_with_logits(
+            selected_logits, selected_labels, reduction="none"
+        )
+        bce = (bce_rows * weights).mean()
+        rank = within_group_rank_loss(
+            selected_logits, selected_labels, selected_groups, max_pairs
+        )
+        listwise = within_group_listwise_loss(
+            selected_logits, selected_labels, selected_groups
+        )
+        residual_l2 = residual[observed].square().mean()
+    else:
+        zero = logits.sum() * 0.0
+        bce = zero
+        rank = zero
+        listwise = zero
+        residual_l2 = zero
+    total = (
+        bce_weight * bce
+        + rank_weight * rank
+        + listwise_weight * listwise
+        + residual_weight * residual_l2
+    )
+    return {
+        "total": total,
+        "bce": bce,
+        "rank": rank,
+        "listwise": listwise,
+        "residual_l2": residual_l2,
     }
 
 
@@ -1369,6 +1614,8 @@ __all__ = [
     "expert_balance_loss",
     "bidirectional_contrastive_loss",
     "censored_affinity_loss",
+    "within_group_interval_rank_loss",
     "odti_v2_loss",
+    "directional_retrieval_loss",
     "ensemble_summary",
 ]

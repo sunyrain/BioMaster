@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-08-13T01:00:51.553349+00:00",
+  "status": "PASS",
+  "checks": {
+    "v10_frozen_hash_verified_before_external_reads": true,
+    "exactly_8058_kirhub_pairs": true,
+    "strict_kirhub_exactly_2823_pairs_202_positives": true,
+    "all_seven_kirhub_models_complete": true,
+    "all_1000_drug_cluster_bootstraps_complete": true,
+    "bindingdb_strict_exactly_11_pairs_8_drugs": true,
+    "bindingdb_v10_ranks_complete": true,
+    "all_10000_bindingdb_permutations_complete": true
+  },
+  "model": "HGB_KNOWN_GRAPH_ONLY_SAFE",
+  "external_firewall": "Frozen V10 prediction SHA-256 was verified before KiRHub or BindingDB was opened.",
+  "strict_kirhub": {
+    "pairs": 2823,
+    "positives": 202,
+    "v10": {
+      "micro_auroc": 0.6443245907955923,
+      "micro_auprc": 0.1857960597617742,
+      "macro_drug_auroc": 0.680509412158257,
+      "macro_drug_auprc": 0.3978214267431311,
+      "macro_recall_at_5": 0.39146126600672054,
+      "macro_recall_at_10": 0.5051151542060633,
+      "macro_recall_at_20": 0.6774614610978248
+    },
+    "v8_previous": {
+      "micro_auroc": 0.6504395193430064,
+      "micro_auprc": 0.14906931466820347,
+      "macro_drug_auroc": 0.6797245758331986,
+      "macro_drug_auprc": 0.37217979581907845,
+      "macro_recall_at_5": 0.3230578512396694,
+      "macro_recall_at_10": 0.43294459749005204,
+      "macro_recall_at_20": 0.610745584381948
+    },
+    "v10_minus_v8_bootstrap": {
+      "micro_auroc": {
+        "point": -0.0061149285474140225,
+        "ci95": [
+          -0.13197645066774275,
+          0.09410355777018084
+        ]
+      },
+      "micro_auprc": {
+        "point": 0.03672674509357074,
+        "ci95": [
+          -0.08107647048145643,
+          0.12443380318181584
+        ]
+      },
+      "macro_recall_at_20": {
+        "point": 0.06671587671587675,
+        "ci95": [
+          -0.014763637506284491,
+          0.16577547047859537
+        ]
+      }
+    }
+  },
+  "strict_bindingdb_positive_only": {
+    "pairs": 11,
+    "drugs": 8,
+    "median_rank": 251.0,
+    "mean_reciprocal_rank": 0.006043010754014069,
+    "mean_rank_percentile": 0.4467125563731308,
+    "recall_at_5": 0.0,
+    "recall_at_10": 0.0,
+    "recall_at_20": 0.0,
+    "recall_at_50": 0.0,
+    "permutation_p": {
+      "mean_reciprocal_rank": 0.8824117588241176,
+      "mean_rank_percentile": 0.7273272672732727,
+      "recall_at_20": 1.0
+    }
+  },
+  "claim_boundaries": [
+    "KiRHub was used in earlier project versions: this is post-freeze for V10, not never-seen for the project.",
+    "BindingDB is positive-only and previously inspected in V9: it estimates retrieval, not AUROC or specificity.",
+    "No external result was used to reselect or refit the V10 model."
+  ],
+  "inputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_ALL_276480_V10.csv.gz": "92c61f8431b0f09c39508d02a1a799813cdfe5e222143a73c60e865b19b83e73",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_SUMMARY_V10.json": "ad8d57d3848d17722f0224fdd9d1c379336b49b2b04ef098193152f7f190359f",
+    "outputs/evidence_routing_compute_execution_20260808_v1/old_drug_advanced_ranker_v8/external_evaluation/OLD_DRUG_ADVANCED_RANKER_EXTERNAL_KIRHUB_V8.csv": "3fb4d8a294fe0c556feb01c1001cc080495ff44e3b784097970621f0db55035e",
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v9/BINDINGDB_PAIR_POSITIVE_RETRIEVAL_V9.csv": "13d417d2a69204275206429e2d52414b3bef659aa61ff8e420d33afe7add452f"
+  },
+  "outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/external_evaluation/OLD_DRUG_LEAKAGE_SAFE_EXTERNAL_KIRHUB_V10.csv": "c6abd226bcef1ce3f4769ef838d4c55a1ba8d6f0c9c8dc24a1449015987dd698",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/external_evaluation/OLD_DRUG_LEAKAGE_SAFE_EXTERNAL_KIRHUB_METRICS_V10.csv": "0a372c6c186f7d1a709976f900eee933a52a6ceaa23262cfdcdf87e9fdca4473",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/external_evaluation/OLD_DRUG_LEAKAGE_SAFE_EXTERNAL_KIRHUB_BOOTSTRAP_V10.csv": "9020d994f90e0ecfa2d2a952d317dab977e9608bdeac516f5476bbf7e5b4fe70",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/external_evaluation/OLD_DRUG_LEAKAGE_SAFE_BINDINGDB_RETRIEVAL_V10.csv": "42332b3293177a98043d32a1b3abf80b8e924fa3a89909199cf5eec381f7c8fb",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/external_evaluation/OLD_DRUG_LEAKAGE_SAFE_BINDINGDB_METRICS_V10.csv": "d70467ae84e5744e011120e44eec2b7bbfb1cc1fe1013a63aa966221fbf8f82f",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/external_evaluation/OLD_DRUG_LEAKAGE_SAFE_BINDINGDB_PERMUTATION_V10.csv": "cdc1f68aba8b3d3c457b5435f70787c7a9093f07dc4023b60d4b9c87a3302e52"
+  }
+}

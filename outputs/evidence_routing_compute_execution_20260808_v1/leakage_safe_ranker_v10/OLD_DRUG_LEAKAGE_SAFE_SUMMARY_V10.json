@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-08-13T00:57:00.386092+00:00",
+  "status": "PASS",
+  "checks": {
+    "corrected_graph_package_pass": true,
+    "exact_620_positive_4358_negative_labels": true,
+    "exact_80_single_and_99_multi_positive_drugs": true,
+    "five_drug_grouped_folds": true,
+    "all_candidate_oof_scores_complete": true,
+    "transductive_controls_excluded_from_selection": true,
+    "selected_model_uses_no_secondary_or_union_graph_features": true,
+    "all_276480_pairs_scored": true,
+    "each_drug_has_384_valid_ranks": true,
+    "kirhub_and_bindingdb_not_read": true
+  },
+  "task": "old-drug secondary/new-target ranking with secondary-label-independent model selection",
+  "selected_architecture": "HGB_KNOWN_GRAPH_ONLY_SAFE",
+  "selected_features": [
+    "known_graph_drug_seed_degree",
+    "known_graph_target_seed_degree",
+    "known_graph_target_profile_max_cosine",
+    "known_graph_target_profile_top3_mean_cosine",
+    "known_graph_ligand_neighbor_max_tanimoto",
+    "known_graph_ligand_neighbor_top3_mean_tanimoto",
+    "known_graph_drug_knn32_propagation",
+    "known_graph_target_knn16_propagation",
+    "known_graph_two_sided_knn_propagation",
+    "known_graph_max_two_sided_edge_kernel"
+  ],
+  "selection_criterion": "eligible-only drug-grouped OOF Recall@10, then macro AUPRC, Recall@20, micro AUPRC",
+  "selection_eligible_models": [
+    "ET_BASELINE_SAFE",
+    "HGB_BASELINE_SAFE",
+    "ET_KNOWN_GRAPH_FUSION_SAFE",
+    "HGB_KNOWN_GRAPH_FUSION_SAFE",
+    "HGB_KNOWN_GRAPH_ONLY_SAFE"
+  ],
+  "transductive_diagnostic_controls": [
+    "ET_CORRECTED_ALL_GRAPH_TRANSDUCTIVE_CONTROL",
+    "HGB_CORRECTED_ALL_GRAPH_TRANSDUCTIVE_CONTROL"
+  ],
+  "selected_oof_all_positive_drugs": {
+    "micro_auroc": 0.5898178202648612,
+    "micro_auprc": 0.03862338005931952,
+    "macro_drug_auroc": 0.6567696250046805,
+    "macro_drug_auprc": 0.167585646882606,
+    "macro_recall_at_5": 0.18442012616260675,
+    "macro_recall_at_10": 0.22976212064931645,
+    "macro_recall_at_20": 0.2861200417369018
+  },
+  "selected_oof_single_positive_drugs": {
+    "micro_auroc": 0.6422507343342037,
+    "micro_auprc": 0.06318890836011061,
+    "macro_drug_auroc": 0.6399804177545692,
+    "macro_drug_auprc": 0.1550235190912792,
+    "macro_recall_at_5": 0.2,
+    "macro_recall_at_10": 0.25,
+    "macro_recall_at_20": 0.3
+  },
+  "v8_internal_metric_correction": {
+    "previous_selected_architecture": "HGB_GRAPH_FUSION",
+    "previous_reported_oof": {
+      "model_name": "HGB_GRAPH_FUSION",
+      "evaluation_set": "FULL_384_DRUG_GROUPED_OOF_RETRIEVAL",
+      "pairs": 110592,
+      "positives": 620,
+      "prevalence": 0.005606192129629629,
+      "micro_auroc": 0.9924984864182438,
+      "micro_auprc": 0.5541547569448677,
+      "macro_drug_auroc": 0.9877452755222651,
+      "macro_drug_auprc": 0.8413505449412343,
+      "drugs_with_two_classes": 179,
+      "macro_recall_at_5": 0.8143381449770574,
+      "macro_precision_at_5": 0.3363128491620112,
+      "macro_recall_at_10": 0.8565884545259124,
+      "macro_precision_at_10": 0.20279329608938554,
+      "macro_recall_at_20": 0.8981223504343867,
+      "macro_precision_at_20": 0.11983240223463688
+    },
+    "previous_metric_validity": "Not valid as candidate-edge-excluded OOF because six degree features contained the candidate adjacency indicator."
+  },
+  "external_firewall": "No KiRHub or BindingDB file is read; predictions and model are frozen before evaluation.",
+  "deployment_scope": "Old-drug target-profile expansion using only frozen known/MoA graph context for eligible models; not novel-drug cold start and not a binding probability.",
+  "software": {
+    "sklearn": "1.8.0",
+    "seed": 20260813
+  },
+  "inputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v9/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V9.csv.gz": "06e78ebe02c672d1afa964a450e1c3dfaad82ed374fc6dfecf3c94f81714fe86",
+    "outputs/evidence_routing_compute_execution_20260808_v1/candidate_edge_excluded_graph_v10/CANDIDATE_EDGE_EXCLUDED_GRAPH_FEATURES_720_X_384_V10.csv.gz": "12f330963a88d7669de36a7501fd3f51f32b23845d0c9288b8d5c0f81d3a7481",
+    "outputs/evidence_routing_compute_execution_20260808_v1/candidate_edge_excluded_graph_v10/CANDIDATE_EDGE_EXCLUDED_GRAPH_SUMMARY_V10.json": "03bc53f691e3c331264e417d34c5a80fc69e752c3f601cbf9cbe9a30eb262ff7",
+    "outputs/evidence_routing_compute_execution_20260808_v1/old_drug_advanced_ranker_v8/OLD_DRUG_ADVANCED_RANKER_SUMMARY_V8.json": "cb56a80368ea26e226c0954a01518b212adcc515e5cf95431a8ca2bfd656cfa7"
+  },
+  "outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_ALL_276480_V10.csv.gz": "92c61f8431b0f09c39508d02a1a799813cdfe5e222143a73c60e865b19b83e73",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_OOF_METRICS_V10.csv": "2ad2eada96e927300edde17d72c65aa27e44a48e91ef63370f6da56343bb741b",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_FULL384_OOF_V10.csv.gz": "fcb5a9072e9f0cd095d84d18316bf888d414778c05d88de552e5c2b459e347f0",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_MODEL_V10.joblib": "cf9c7fe0e4ebf406450d6641de746b110c9798f8731122099aa9f922c578385d"
+  }
+}

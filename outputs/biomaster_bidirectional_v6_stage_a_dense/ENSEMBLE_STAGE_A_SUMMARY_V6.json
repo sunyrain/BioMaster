@@ -1,0 +1,216 @@
+{
+  "status": "EXPLORATORY_PASS_WITH_UNCERTAINTY",
+  "created_utc": "2026-08-25T11:34:46.060743+00:00",
+  "protocol": "BIOMASTER_BIDIRECTIONAL_V6_STAGE_A_THREE_SEED_ENSEMBLE",
+  "seeds": [
+    20260816,
+    20260817,
+    20260820
+  ],
+  "development_selection_deltas": {
+    "20260816": 0.0449384873051496,
+    "20260817": 0.04980804024687835,
+    "20260820": 0.019691521180146554
+  },
+  "metrics": {
+    "development_2023": {
+      "pair_ensemble": {
+        "queries": 11,
+        "candidate_rows": 4164,
+        "held_future_positives": 18,
+        "candidate_targets_mean": 378.54545454545456,
+        "macro_best_positive_rank": 74.0909090909091,
+        "macro_mean_positive_rank": 76.18181818181819,
+        "macro_mrr": 0.29094636519233813,
+        "macro_mean_reciprocal_log_rank": 0.35070598968209693,
+        "macro_mean_top_percentile": 0.8021165196911468,
+        "macro_positive_retrieval_ap": 0.24327129220405708,
+        "macro_recall_at_1": 0.09090909090909091,
+        "macro_hit_at_1": 0.18181818181818182,
+        "macro_ndcg_at_1": 0.18181818181818182,
+        "macro_recall_at_5": 0.303030303030303,
+        "macro_hit_at_5": 0.45454545454545453,
+        "macro_ndcg_at_5": 0.23721887732682242,
+        "macro_recall_at_10": 0.46969696969696967,
+        "macro_hit_at_10": 0.5454545454545454,
+        "macro_ndcg_at_10": 0.3024021342999219,
+        "macro_recall_at_20": 0.5454545454545454,
+        "macro_hit_at_20": 0.5454545454545454,
+        "macro_ndcg_at_20": 0.32813081132455085,
+        "macro_recall_at_50": 0.6666666666666666,
+        "macro_hit_at_50": 0.7272727272727273,
+        "macro_ndcg_at_50": 0.35613917595255384
+      },
+      "drug_to_target_ensemble": {
+        "queries": 11,
+        "candidate_rows": 4164,
+        "held_future_positives": 18,
+        "candidate_targets_mean": 378.54545454545456,
+        "macro_best_positive_rank": 58.18181818181818,
+        "macro_mean_positive_rank": 61.56060606060607,
+        "macro_mrr": 0.29150786824583613,
+        "macro_mean_reciprocal_log_rank": 0.34854158098896304,
+        "macro_mean_top_percentile": 0.8405809957005097,
+        "macro_positive_retrieval_ap": 0.23763169391511638,
+        "macro_recall_at_1": 0.09090909090909091,
+        "macro_hit_at_1": 0.18181818181818182,
+        "macro_ndcg_at_1": 0.18181818181818182,
+        "macro_recall_at_5": 0.3333333333333333,
+        "macro_hit_at_5": 0.45454545454545453,
+        "macro_ndcg_at_5": 0.24755370157584322,
+        "macro_recall_at_10": 0.46969696969696967,
+        "macro_hit_at_10": 0.5454545454545454,
+        "macro_ndcg_at_10": 0.2977119534077975,
+        "macro_recall_at_20": 0.6363636363636364,
+        "macro_hit_at_20": 0.7272727272727273,
+        "macro_ndcg_at_20": 0.34516278722210614,
+        "macro_recall_at_50": 0.7272727272727273,
+        "macro_hit_at_50": 0.7272727272727273,
+        "macro_ndcg_at_50": 0.3691581202756488
+      }
+    },
+    "test_2024_2025": {
+      "pair_ensemble": {
+        "queries": 20,
+        "candidate_rows": 7558,
+        "held_future_positives": 27,
+        "candidate_targets_mean": 377.9,
+        "macro_best_positive_rank": 87.95,
+        "macro_mean_positive_rank": 91.66666666666667,
+        "macro_mrr": 0.17711606667015706,
+        "macro_mean_reciprocal_log_rank": 0.27512789620389644,
+        "macro_mean_top_percentile": 0.7603207300320519,
+        "macro_positive_retrieval_ap": 0.13866910668684665,
+        "macro_recall_at_1": 0.06666666666666667,
+        "macro_hit_at_1": 0.1,
+        "macro_ndcg_at_1": 0.1,
+        "macro_recall_at_5": 0.10833333333333332,
+        "macro_hit_at_5": 0.2,
+        "macro_ndcg_at_5": 0.10052458427084318,
+        "macro_recall_at_10": 0.36666666666666664,
+        "macro_hit_at_10": 0.45,
+        "macro_ndcg_at_10": 0.19112117759083902,
+        "macro_recall_at_20": 0.4333333333333333,
+        "macro_hit_at_20": 0.5,
+        "macro_ndcg_at_20": 0.21063886810210758,
+        "macro_recall_at_50": 0.55,
+        "macro_hit_at_50": 0.55,
+        "macro_ndcg_at_50": 0.23802242136511728
+      },
+      "drug_to_target_ensemble": {
+        "queries": 20,
+        "candidate_rows": 7558,
+        "held_future_positives": 27,
+        "candidate_targets_mean": 377.9,
+        "macro_best_positive_rank": 85.7,
+        "macro_mean_positive_rank": 88.69166666666668,
+        "macro_mrr": 0.20767475164347887,
+        "macro_mean_reciprocal_log_rank": 0.29346985676224663,
+        "macro_mean_top_percentile": 0.7681834965493148,
+        "macro_positive_retrieval_ap": 0.16165610079649367,
+        "macro_recall_at_1": 0.06666666666666667,
+        "macro_hit_at_1": 0.1,
+        "macro_ndcg_at_1": 0.1,
+        "macro_recall_at_5": 0.15833333333333333,
+        "macro_hit_at_5": 0.25,
+        "macro_ndcg_at_5": 0.13915715988973104,
+        "macro_recall_at_10": 0.3583333333333333,
+        "macro_hit_at_10": 0.4,
+        "macro_ndcg_at_10": 0.20905467234508462,
+        "macro_recall_at_20": 0.4583333333333333,
+        "macro_hit_at_20": 0.5,
+        "macro_ndcg_at_20": 0.23678900345839343,
+        "macro_recall_at_50": 0.55,
+        "macro_hit_at_50": 0.55,
+        "macro_ndcg_at_50": 0.2571152434150996
+      }
+    }
+  },
+  "paired_query_bootstrap_test": {
+    "method": "paired_query_bootstrap",
+    "queries": 20,
+    "replicates": 20000,
+    "seed": 20260825,
+    "direction": "positive values favor the D2T ensemble",
+    "composite": {
+      "mean_delta": 0.020643492789822644,
+      "ci95": [
+        -0.002616717433896027,
+        0.04949834155129957
+      ],
+      "bootstrap_probability_improvement": 0.9523
+    },
+    "mean_rank": {
+      "mean_delta": 2.975,
+      "ci95": [
+        -6.783333333333333,
+        12.091874999999982
+      ],
+      "bootstrap_probability_improvement": 0.7397
+    },
+    "mrr": {
+      "mean_delta": 0.03055868497332175,
+      "ci95": [
+        -0.004903227396047371,
+        0.0742053057589221
+      ],
+      "bootstrap_probability_improvement": 0.94755
+    },
+    "mean_top_percentile": {
+      "mean_delta": 0.007862766517262754,
+      "ci95": [
+        -0.01779401051857507,
+        0.03188757466076821
+      ],
+      "bootstrap_probability_improvement": 0.7409
+    },
+    "recall_at_5": {
+      "mean_delta": 0.05,
+      "ci95": [
+        0.0,
+        0.15
+      ],
+      "bootstrap_probability_improvement": 0.6425
+    },
+    "recall_at_10": {
+      "mean_delta": -0.008333333333333337,
+      "ci95": [
+        -0.15833333333333335,
+        0.14166666666666666
+      ],
+      "bootstrap_probability_improvement": 0.4256
+    },
+    "recall_at_20": {
+      "mean_delta": 0.025,
+      "ci95": [
+        0.0,
+        0.075
+      ],
+      "bootstrap_probability_improvement": 0.6398
+    },
+    "ndcg_at_20": {
+      "mean_delta": 0.026150135356285874,
+      "ci95": [
+        -0.006163028530800993,
+        0.06563491913444892
+      ],
+      "bootstrap_probability_improvement": 0.9364
+    },
+    "ap": {
+      "mean_delta": 0.022986994109647038,
+      "ci95": [
+        -0.006371986876814477,
+        0.0630074150373326
+      ],
+      "bootstrap_probability_improvement": 0.9181
+    }
+  },
+  "decision": {
+    "all_three_development_seeds_improve": true,
+    "ensemble_test_composite_point_estimate_improves": true,
+    "ensemble_test_composite_bootstrap_probability_gt_0_90": true,
+    "ensemble_test_composite_ci95_excludes_zero": false
+  },
+  "recommendation": "Freeze the backbone and directional architecture. A head-only FULL_FIT candidate is justified, but do not claim statistically confirmed superiority and do not unfreeze the backbone from this 20-query test.",
+  "claim_boundary": "The 2024-2025 ensemble point estimate is positive, but the paired-query 95% bootstrap interval crosses zero. Replication across three seeds controls model initialization variance, not the limited number of future old-drug queries."
+}

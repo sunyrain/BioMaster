@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-08-13T01:37:15.579246+00:00",
+  "status": "PASS",
+  "checks": {
+    "frozen_v10_dependency_pass": true,
+    "exact_5_outer_and_4_inner_folds": true,
+    "only_five_leakage_safe_candidates": true,
+    "all_nested_scores_complete_for_288_drugs": true,
+    "exact_620_positive_179_evaluation_drugs": true,
+    "fixed_winner_scores_merge_complete": true,
+    "all_1000_paired_drug_bootstraps_complete": true,
+    "no_external_benchmark_read": true
+  },
+  "protocol": "Five outer drug-group folds. Within each outer training partition, four inner drug-group folds select among the five predeclared leakage-safe architectures. The selected architecture is refit on the outer training partition and evaluated only on outer-held-out drugs.",
+  "outer_model_choices": {
+    "HGB_KNOWN_GRAPH_ONLY_SAFE": 3,
+    "HGB_KNOWN_GRAPH_FUSION_SAFE": 1,
+    "ET_KNOWN_GRAPH_FUSION_SAFE": 1
+  },
+  "nested_selection_oof_metrics": {
+    "pairs": 68736,
+    "positives": 620,
+    "prevalence": 0.009020018621973928,
+    "micro_auroc": 0.6111615100615837,
+    "micro_auprc": 0.03858643722039548,
+    "macro_drug_auroc": 0.6623372497934296,
+    "macro_drug_auprc": 0.16043755254911798,
+    "drugs_with_two_classes": 179,
+    "macro_recall_at_5": 0.16810676361284313,
+    "macro_precision_at_5": 0.08379888268156424,
+    "macro_recall_at_10": 0.22081210679633292,
+    "macro_precision_at_10": 0.05810055865921787,
+    "macro_recall_at_20": 0.2763842264071435,
+    "macro_precision_at_20": 0.040223463687150844
+  },
+  "fixed_full_oof_selected_winner_metrics": {
+    "pairs": 68736,
+    "positives": 620,
+    "prevalence": 0.009020018621973928,
+    "micro_auroc": 0.5898178202648612,
+    "micro_auprc": 0.03862338005931952,
+    "macro_drug_auroc": 0.6567696250046805,
+    "macro_drug_auprc": 0.167585646882606,
+    "drugs_with_two_classes": 179,
+    "macro_recall_at_5": 0.18442012616260675,
+    "macro_precision_at_5": 0.08938547486033518,
+    "macro_recall_at_10": 0.22976212064931645,
+    "macro_precision_at_10": 0.05977653631284916,
+    "macro_recall_at_20": 0.2861200417369018,
+    "macro_precision_at_20": 0.04022346368715084
+  },
+  "nested_minus_fixed_paired_drug_bootstrap": [
+    {
+      "comparison": "NESTED_SELECTION_MINUS_FIXED_WINNER_OOF",
+      "metric": "drug_auroc",
+      "point_estimate": 0.005567624788749104,
+      "bootstrap_mean": 0.005981137977511466,
+      "ci95_lower": -0.023002324768172024,
+      "ci95_upper": 0.04010866920196651,
+      "cluster_unit": "ligand_inchikey",
+      "bootstrap_replicates": 1000,
+      "seed": 20260813
+    },
+    {
+      "comparison": "NESTED_SELECTION_MINUS_FIXED_WINNER_OOF",
+      "metric": "drug_auprc",
+      "point_estimate": -0.0071480943334880295,
+      "bootstrap_mean": -0.0073744594914289365,
+      "ci95_lower": -0.026597354178559907,
+      "ci95_upper": 0.010570505799558488,
+      "cluster_unit": "ligand_inchikey",
+      "bootstrap_replicates": 1000,
+      "seed": 20260813
+    },
+    {
+      "comparison": "NESTED_SELECTION_MINUS_FIXED_WINNER_OOF",
+      "metric": "recall_at_20",
+      "point_estimate": -0.009735815329758288,
+      "bootstrap_mean": -0.01021669968683347,
+      "ci95_lower": -0.04614785042214475,
+      "ci95_upper": 0.022079237899217282,
+      "cluster_unit": "ligand_inchikey",
+      "bootstrap_replicates": 1000,
+      "seed": 20260813
+    }
+  ],
+  "interpretation": "Nested selection is the less optimistic internal performance estimate. The separately frozen full-data architecture remains the deployment fit; external results remain untouched.",
+  "inputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/final_evidence_routing_v9/PAIR_EVIDENCE_LAYER_ROUTING_ALL_720_X_384_V9.csv.gz": "06e78ebe02c672d1afa964a450e1c3dfaad82ed374fc6dfecf3c94f81714fe86",
+    "outputs/evidence_routing_compute_execution_20260808_v1/candidate_edge_excluded_graph_v10/CANDIDATE_EDGE_EXCLUDED_GRAPH_FEATURES_720_X_384_V10.csv.gz": "12f330963a88d7669de36a7501fd3f51f32b23845d0c9288b8d5c0f81d3a7481",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_SUMMARY_V10.json": "ad8d57d3848d17722f0224fdd9d1c379336b49b2b04ef098193152f7f190359f",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/OLD_DRUG_LEAKAGE_SAFE_FULL384_OOF_V10.csv.gz": "fcb5a9072e9f0cd095d84d18316bf888d414778c05d88de552e5c2b459e347f0"
+  },
+  "outputs": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/nested_selection_audit/OLD_DRUG_NESTED_MODEL_SELECTION_OOF_V10.csv.gz": "5a1c4616034915014fab7beddde5cf4ad2b4ec2f1f8bb222ad3eb814eaa720bb",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/nested_selection_audit/OLD_DRUG_NESTED_MODEL_SELECTION_INNER_METRICS_V10.csv": "e295dd6745c4eb26fb65d4457948b163760b383f70ff994eb0cc86605b9b434c",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/nested_selection_audit/OLD_DRUG_NESTED_MODEL_SELECTION_OUTER_CHOICES_V10.csv": "12fb6c961eb5756a451dedabe9c8c6d31acab31c2a6d049bed937cd163f14163",
+    "outputs/evidence_routing_compute_execution_20260808_v1/leakage_safe_ranker_v10/nested_selection_audit/OLD_DRUG_NESTED_MODEL_SELECTION_BOOTSTRAP_V10.csv": "cbf5e6e128f21f74498bd1b66a93c88f8395170ccee144a1445d3930fa43f561"
+  }
+}
