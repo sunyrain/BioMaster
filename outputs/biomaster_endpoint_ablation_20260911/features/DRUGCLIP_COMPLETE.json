@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE",
+  "required": 857540,
+  "available": 842996,
+  "graph_fallback": 14544,
+  "checkpoint_sha256": "129196ea9eb211c6b931d8dc5cd4edccbc4c6fd382aae7200b455d3bc3847e5c",
+  "new_status_counts": {
+    "etkdg3d_mmff_0": 424,
+    "etkdg3d_uff_0": 12,
+    "etkdg3d_uff_1": 2351,
+    "etkdg3d_mmff_1": 591880,
+    "embedding_failed_graph_fallback": 7384,
+    "etkdg3d_none_-1": 17,
+    "oversized_global_graph_fallback": 4767
+  },
+  "seconds": 1328.689627878368,
+  "fp32_interface": true,
+  "streaming_committed_conformers": true
+}

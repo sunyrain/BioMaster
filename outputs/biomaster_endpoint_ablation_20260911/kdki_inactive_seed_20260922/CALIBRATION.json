@@ -1,0 +1,7 @@
+{
+  "slope": 0.2338872406230624,
+  "intercept": -0.16618466827142134,
+  "threshold": 0.4683462103409556,
+  "validation_f1": 0.9036289448266346,
+  "fit_panel": "VALIDATION_AFFINITY_KD_KI"
+}

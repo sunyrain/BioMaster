@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "required": 857540,
+  "all_done": true,
+  "new_counts": {
+    "etkdg3d_mmff_1": 591880,
+    "oversized_global_graph_fallback": 4767,
+    "etkdg3d_mmff_0": 424,
+    "embedding_failed_graph_fallback": 7384,
+    "etkdg3d_uff_1": 2351,
+    "etkdg3d_none_-1": 17,
+    "etkdg3d_uff_0": 12
+  },
+  "seconds": 1929.0749749550596
+}

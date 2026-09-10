@@ -1,0 +1,5 @@
+arm,split,pairs,positive,negative,explicit_inactive_pairs,inactivity_added,molecules,targets,quarantined_conflicts
+kdki_inactive,train,337570,188799,148771,105368,50783,140064,2290,2888
+kdki_inactive,validation,41806,24419,17387,11719,7121,17649,2124,383
+all_inactive,train,1116270,769395,346875,105368,46051,690439,3647,12797
+all_inactive,validation,135215,94084,41131,11719,6675,83246,2999,1506

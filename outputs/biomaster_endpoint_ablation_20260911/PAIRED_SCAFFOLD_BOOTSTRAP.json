@@ -1,0 +1,146 @@
+[
+  {
+    "panel": "AFFINITY_KD_KI",
+    "scope": "all",
+    "pairs": 34327,
+    "groups": 6672,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      -0.06810887939641497,
+      -0.012799099579087567
+    ],
+    "ap_delta_ci95": [
+      -0.051992638852574005,
+      -0.0034052738320057875
+    ],
+    "auroc_delta": -0.0403648193112377,
+    "ap_delta": -0.02658451933776418,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "AFFINITY_KD_KI",
+    "scope": "document_disjoint",
+    "pairs": 503,
+    "groups": 105,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      -0.03894967653534249,
+      0.027940570661634367
+    ],
+    "ap_delta_ci95": [
+      -0.03152292303487114,
+      0.01829323908133561
+    ],
+    "auroc_delta": -0.005726129417550796,
+    "ap_delta": -0.006427563065141251,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "ACTIVITY_IC50",
+    "scope": "all",
+    "pairs": 85704,
+    "groups": 23286,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      0.2254111223018832,
+      0.25465596238262705
+    ],
+    "ap_delta_ci95": [
+      0.10095705843243118,
+      0.1164550658992765
+    ],
+    "auroc_delta": 0.23961768306641051,
+    "ap_delta": 0.10862589550761048,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "ACTIVITY_IC50",
+    "scope": "document_disjoint",
+    "pairs": 995,
+    "groups": 214,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      0.047781606197101784,
+      0.14372909972405076
+    ],
+    "ap_delta_ci95": [
+      0.029016379489590932,
+      0.13215729898312842
+    ],
+    "auroc_delta": 0.09399128445188276,
+    "ap_delta": 0.07751978158569739,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "ACTIVITY_EC50",
+    "scope": "all",
+    "pairs": 11957,
+    "groups": 4171,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      0.212397554687416,
+      0.2560493703038078
+    ],
+    "ap_delta_ci95": [
+      0.10671779794512644,
+      0.13997435121683946
+    ],
+    "auroc_delta": 0.2335806503795096,
+    "ap_delta": 0.1229831642697683,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "ACTIVITY_EC50",
+    "scope": "document_disjoint",
+    "pairs": 188,
+    "groups": 37,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      -0.008275568181818134,
+      0.15413430357699176
+    ],
+    "ap_delta_ci95": [
+      -0.006811355118008733,
+      0.049253930976794466
+    ],
+    "auroc_delta": 0.06900328587075577,
+    "ap_delta": 0.01395288623976243,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "ALL_ENDPOINT_UNION",
+    "scope": "all",
+    "pairs": 132331,
+    "groups": 31075,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      0.1468254567721276,
+      0.1812550492314944
+    ],
+    "ap_delta_ci95": [
+      0.07822381177690015,
+      0.1012463698119014
+    ],
+    "auroc_delta": 0.1627431524884535,
+    "ap_delta": 0.0885549135401893,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  {
+    "panel": "ALL_ENDPOINT_UNION",
+    "scope": "document_disjoint",
+    "pairs": 4371,
+    "groups": 315,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      0.03584228856411157,
+      0.18984456916206768
+    ],
+    "ap_delta_ci95": [
+      0.055270621761862114,
+      0.28898143970340157
+    ],
+    "auroc_delta": 0.10385564861717134,
+    "ap_delta": 0.2300331101388452,
+    "direction": "all_inactive minus kdki_inactive"
+  }
+]

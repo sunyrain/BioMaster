@@ -1,0 +1,24 @@
+{
+  "primary_metric": "AP on shared Kd/Ki test",
+  "verdict": "本次共同Kd/Ki测试支持Kd/Ki＋明确失活获得更高AP；全端点混合在直接亲和力任务上出现负迁移。",
+  "per_seed_mean_ap_delta": -0.026961820562145578,
+  "primary_bootstrap": {
+    "panel": "AFFINITY_KD_KI",
+    "scope": "all",
+    "pairs": 34327,
+    "groups": 6672,
+    "valid_replicates": 500,
+    "auroc_delta_ci95": [
+      -0.06810887939641497,
+      -0.012799099579087567
+    ],
+    "ap_delta_ci95": [
+      -0.051992638852574005,
+      -0.0034052738320057875
+    ],
+    "auroc_delta": -0.0403648193112377,
+    "ap_delta": -0.02658451933776418,
+    "direction": "all_inactive minus kdki_inactive"
+  },
+  "production_promoted": false
+}

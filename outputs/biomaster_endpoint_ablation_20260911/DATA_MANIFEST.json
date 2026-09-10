@@ -1,0 +1,76 @@
+{
+  "status": "COMPLETE",
+  "required_molecules": 857540,
+  "required_sequences": 4742,
+  "shared_explicit_inactive_training_pairs": 105368,
+  "counts": [
+    {
+      "arm": "kdki_inactive",
+      "split": "train",
+      "pairs": 337570,
+      "positive": 188799,
+      "negative": 148771,
+      "explicit_inactive_pairs": 105368,
+      "inactivity_added": 50783,
+      "molecules": 140064,
+      "targets": 2290,
+      "quarantined_conflicts": 2888
+    },
+    {
+      "arm": "kdki_inactive",
+      "split": "validation",
+      "pairs": 41806,
+      "positive": 24419,
+      "negative": 17387,
+      "explicit_inactive_pairs": 11719,
+      "inactivity_added": 7121,
+      "molecules": 17649,
+      "targets": 2124,
+      "quarantined_conflicts": 383
+    },
+    {
+      "arm": "all_inactive",
+      "split": "train",
+      "pairs": 1116270,
+      "positive": 769395,
+      "negative": 346875,
+      "explicit_inactive_pairs": 105368,
+      "inactivity_added": 46051,
+      "molecules": 690439,
+      "targets": 3647,
+      "quarantined_conflicts": 12797
+    },
+    {
+      "arm": "all_inactive",
+      "split": "validation",
+      "pairs": 135215,
+      "positive": 94084,
+      "negative": 41131,
+      "explicit_inactive_pairs": 11719,
+      "inactivity_added": 6675,
+      "molecules": 83246,
+      "targets": 2999,
+      "quarantined_conflicts": 1506
+    }
+  ],
+  "files": {
+    "kdki_inactive_PAIR_AUDIT.parquet": "4dd409806f3ecd1239f7862e9744b96a1fc44e2ce7e31ccffb93f26f550f8cbe",
+    "kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "kdki_inactive_VALIDATION.parquet": "1eaf1d72bdaec91d58dd17462a105c5b2211e8ffe701488b9955811da0305449",
+    "all_inactive_PAIR_AUDIT.parquet": "09bb3c77a625c26bd9f5900b9623effafb841042ccf5860cdd94bb16bc46bb99",
+    "all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "all_inactive_VALIDATION.parquet": "4251ee0ac27ba008851fa60ce50a4b0434c365c6394752be3ea42662bdf4a01c",
+    "COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "REQUIRED_DRUG_IDS.npy": "8eedfae3a3d8f51c0320f0abb9faa6e4aad94a6aba3ef024bb5c7de30f191d39",
+    "REQUIRED_TARGET_IDS.npy": "488e05819b1b80565a3cbc285ed70160cb856685be63bbc953b5b1bca963dc26",
+    "ARM_DATA_COUNTS.csv": "9a0678652db6208a8b8495799716f9ba63e6a14e4b5b80e7b7d6df893100088d"
+  },
+  "frozen_inputs": {
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+  },
+  "protocol_sha256": "ee1be3cc2d79e8e9f3a78db3588ecf519454aba6d38b5963f29aa85a15cffcc3"
+}

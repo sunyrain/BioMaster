@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE",
+  "required_molecules": 857540,
+  "required_sequences": 4742,
+  "all_required_rows_prepared": true,
+  "no_labels_encoded": true,
+  "files": {
+    "AVAILABLE.npy": {
+      "sha256": "8ec33f29e1e3c4566a3608844ed772f68dfd35eb99a6a88aed1b0f54f7426fb3",
+      "bytes": 996824
+    },
+    "CHEM_DONE.npy": {
+      "sha256": "eff9af3728fe3fa0eb89c7ea9d49707d72d1164c0e0485ea6559d7c44f2254ea",
+      "bytes": 996824
+    },
+    "DRUG_CLIP.npy": {
+      "sha256": "dc06b928157cbb55e35ebb35239e45530a3896ed446e8b9c250d14b7809116f7",
+      "bytes": 2041233536
+    },
+    "DRUG_DONE.npy": {
+      "sha256": "eff9af3728fe3fa0eb89c7ea9d49707d72d1164c0e0485ea6559d7c44f2254ea",
+      "bytes": 996824
+    },
+    "GRAPH.npy": {
+      "sha256": "82d720cc069b277173fab119286a1876f9a8e4531b6723efe663289fcee1e015",
+      "bytes": 159471488
+    },
+    "MORGAN.npy": {
+      "sha256": "fb03865807e074db9868fa8caee4bb6fee566cebd3996b8c1f0ea0cde1bce9fb",
+      "bytes": 2041233536
+    },
+    "TARGET.npy": {
+      "sha256": "a6cb1a98b0ba017cd476a81310a4b0cc6118be9c1d0438cc71a4fa2711c7617d",
+      "bytes": 26040448
+    },
+    "TARGET_DONE.npy": {
+      "sha256": "a7df8e5b9a8d64087e57abbc3d5094a03619439788707bd97bd05f0e525caef6",
+      "bytes": 5214
+    }
+  },
+  "producer_sha256": "afd32d6cbd7da54d07e33712349ad50c4259effe77c7cd3239b31ff4db1beb36"
+}

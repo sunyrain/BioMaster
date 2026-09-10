@@ -791,3 +791,27 @@
 !/training_dataset_full_20260910_v1/TARGET_SUPERVISION_COVERAGE.csv
 !/training_dataset_full_20260910_v1/WETLAB384_HISTORICAL_COVERAGE.csv
 !/training_dataset_full_20260910_v1/RELEASE_VERIFICATION.json
+
+# Matched endpoint comparison: compact provenance and metrics, no features/weights.
+!/biomaster_endpoint_ablation_20260911/PROTOCOL.json
+!/biomaster_endpoint_ablation_20260911/DATA_MANIFEST.json
+!/biomaster_endpoint_ablation_20260911/ARM_DATA_COUNTS.csv
+!/biomaster_endpoint_ablation_20260911/ALL_FITS_FROZEN.json
+!/biomaster_endpoint_ablation_20260911/TEST_METRICS.csv
+!/biomaster_endpoint_ablation_20260911/TEST_SUMMARY.csv
+!/biomaster_endpoint_ablation_20260911/RESULT_COMPARISON.csv
+!/biomaster_endpoint_ablation_20260911/QUERY_MACRO_SUMMARY.csv
+!/biomaster_endpoint_ablation_20260911/PAIRED_SCAFFOLD_BOOTSTRAP.json
+!/biomaster_endpoint_ablation_20260911/ENDPOINT_COMPARISON.png
+!/biomaster_endpoint_ablation_20260911/REPORT_DECISION.json
+!/biomaster_endpoint_ablation_20260911/SUMMARY.json
+!/biomaster_endpoint_ablation_20260911/RELEASE_VERIFICATION.json
+!/biomaster_endpoint_ablation_20260911/*_seed_*/RESULT.json
+!/biomaster_endpoint_ablation_20260911/*_seed_*/HISTORY.json
+!/biomaster_endpoint_ablation_20260911/*_seed_*/CALIBRATION.json
+!/biomaster_endpoint_ablation_20260911/*_seed_*/VALIDATION_METRICS.csv
+!/biomaster_endpoint_ablation_20260911/features/INITIALIZED.json
+!/biomaster_endpoint_ablation_20260911/features/CHEMISTRY_COMPLETE.json
+!/biomaster_endpoint_ablation_20260911/features/PROTEIN_COMPLETE.json
+!/biomaster_endpoint_ablation_20260911/features/DRUGCLIP_COMPLETE.json
+!/biomaster_endpoint_ablation_20260911/features/MANIFEST.json

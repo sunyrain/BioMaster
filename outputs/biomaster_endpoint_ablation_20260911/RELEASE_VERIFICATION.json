@@ -1,0 +1,47 @@
+{
+  "all_pass": true,
+  "checks": {
+    "frozen_training_protocol_and_data": true,
+    "production_and_wetlab_assets_unchanged": true,
+    "explicit_inactivity_shared_and_no_unmeasured_negatives": true,
+    "pair_scaffold_connectivity_split_separation": true,
+    "all_feature_files_hash_verified": true,
+    "six_fits_same_initialization_architecture_budget_full_exposure": true,
+    "all_six_models_scored_identical_common_panels": true,
+    "repository_tests_391_passed": true
+  },
+  "test_result": "391 passed, 1 warning in 48.62s",
+  "shared_inactive_training_pairs": 105368,
+  "run_count": 6,
+  "result_files": {
+    "TEST_METRICS.csv": {
+      "bytes": 46148,
+      "sha256": "8d34f06f20a42475d8ac0b07fad425cc22ca6b64fbf9c758db4aa0d73c60e26a"
+    },
+    "TEST_PREDICTIONS.parquet": {
+      "bytes": 16431235,
+      "sha256": "ac150eef15d68b9c5d177271187fb74df833298aae21d8aefbd25ba2e91225a2"
+    },
+    "PAIRED_SCAFFOLD_BOOTSTRAP.json": {
+      "bytes": 3481,
+      "sha256": "e62ce9bbac08082038b308d78fc055d7b735a02bce3ca359c74e7c9ae9858d96"
+    },
+    "SUMMARY.json": {
+      "bytes": 8023,
+      "sha256": "d7cee8d7ce27488014f62a2cfcdfe14a4e8b2c5c49fec82e5a9b6f2288240bf8"
+    },
+    "RESULT_COMPARISON.csv": {
+      "bytes": 16038,
+      "sha256": "ad619c15074ba46664f81c5260fa4f345ddac4df12d812027e767b4e595e274c"
+    },
+    "QUERY_MACRO_SUMMARY.csv": {
+      "bytes": 5256,
+      "sha256": "c7dbc845991318eafd6b2b9cac1c2f3566fc9cec5999b79e8cee75f994ef57b7"
+    },
+    "REPORT_DECISION.json": {
+      "bytes": 733,
+      "sha256": "c444065def80422c0a1cb09d27e69bb1814a654ab4b1529d5ce07d9895a61463"
+    }
+  },
+  "verifier_sha256": "67f4c7d5be57e723268b0e77c91506e5eebba9b737eade4ed44729db3cfa8c65"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "molecules": 996696,
+  "required_molecules": 857540,
+  "required_targets": 4742,
+  "exact_canonical_smiles_cached_molecules": 250705,
+  "new_molecules": 606835,
+  "cached_targets": 719,
+  "new_targets": 4023,
+  "source_hashes": {
+    "outputs/biomaster_unified_interaction_20260906/features/ATOM_MANIFEST.json": "d7315cec995b6186c3705e2828dc3cce888a8f39bc052150dc9b265985e050bd",
+    "outputs/biomaster_unified_interaction_20260906/features/MOLECULE_GLOBAL.npy": "45e630d9b4d53048458dd3693902adcc537f56d7fc742c58a076832106b2060e",
+    "outputs/biomaster_unified_interaction_20260906/features/PRETRAINED_AVAILABLE.npy": "5995b57a49ba30ef10a8e087c4ddeedcc55339241f9965bb10140e55205550a7",
+    "outputs/biomaster_unified_interaction_20260906/features/ATOM_INDEX.npz": "6c8a1d87e1727eb7544cfe1ea097c28f79874c024095cb9b5f02b6763e51e8b5",
+    "outputs/biomaster_best_model_20260906/data/supplemental_features/ATOM_MANIFEST.json": "5466fd2b8c42e4ed8a85c93e0d14b5b884ec7348ab1a75e634664560325431df",
+    "outputs/biomaster_best_model_20260906/data/supplemental_features/MOLECULE_GLOBAL.npy": "00a38ddaeb23d63a8a5bdbd85949b1ed45cf3607b787c34a50d952a00fb8de34",
+    "outputs/biomaster_best_model_20260906/data/supplemental_features/PRETRAINED_AVAILABLE.npy": "baad7b252b07328f2cb3d3cc8ec5ae7cdd6e0f5ac6da9fcf48dcadd892e6bcfd",
+    "outputs/biomaster_best_model_20260906/data/supplemental_features/ATOM_INDEX.npz": "cb54cf7b5edf759404479e85c3b33979d40cf94e02646bbea8cd502144227798",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MOLECULES.csv.gz": "aeaed335a7e8df4b8f17cab8f79712768f717c1fcbff7eadb7c4908ea2279ff4",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MORGAN.npy": "293ff4c036234e32a2c627076ac2d8405f8e6cee9a758245939f8eea01999535",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_GLOBAL.npy": "b33395dc27a57036f396e37cd5eb5fac570e7cd4c8f48c5632fd90400b9f398f"
+  },
+  "no_label_features": true,
+  "drug_reuse_identity": "exact canonical SMILES",
+  "target_reuse_identity": "exact sequence SHA256"
+}

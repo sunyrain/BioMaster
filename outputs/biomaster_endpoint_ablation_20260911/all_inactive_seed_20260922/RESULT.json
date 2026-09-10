@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "arm": "all_inactive",
+  "seed": 20260922,
+  "identity": {
+    "protocol": "ee1be3cc2d79e8e9f3a78db3588ecf519454aba6d38b5963f29aa85a15cffcc3",
+    "data": "a1124102a36b4a25f7faac5b0e9db882b56edb79e04c6422eb4ce965f7059c40",
+    "features": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "producer": "49cdf8b68efb567443aadd05fca6d89ca819d776a4a15c8bb9ae0f98258434cd",
+    "rules": "fd1cf146504979bc041170e8d6dca155b7670b9559443692c2bea0b9c21f9fe4",
+    "model_code": "92acb4ad6971900f3d21eee7d11af1e21449052ec1c7e047322dbbba6d614dd4",
+    "model_input_code": "ca7b51762424e6645f84eb6540648a359bfd0147fac9b6cae210c1100ee05f74"
+  },
+  "pairs": 1116270,
+  "positive": 769395,
+  "negative": 346875,
+  "explicit_inactive_pairs": 105368,
+  "initialization_sha256": "b8e49dec243bc2f0220eb6b1cff89087518969851d30254d3fea2112f047e687",
+  "trainable_parameters": 1235604,
+  "optimizer_steps": 6000,
+  "sampled_rows": 6144000,
+  "complete_training_passes": 5,
+  "checkpoint_sha256": "b3fbc32b11fb48a82d517755052416364f779aeb62bcd1d462973d1d9d1c826d",
+  "sampling_trace_this_process": "2483d1f8dd1503f3bbb5f05b309510286ad9306289ac974b26c0ba264dc92f09",
+  "seconds": 51.03302394039929,
+  "test_used_for_fitting": false,
+  "production_replaced": false
+}

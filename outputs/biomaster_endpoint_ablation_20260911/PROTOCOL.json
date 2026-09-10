@@ -1,0 +1,44 @@
+{
+  "status": "FROZEN_BEFORE_TRAINING",
+  "arms": {
+    "kdki_inactive": [
+      "AFFINITY_KD_KI"
+    ],
+    "all_inactive": [
+      "AFFINITY_KD_KI",
+      "ACTIVITY_IC50",
+      "ACTIVITY_EC50"
+    ]
+  },
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "source_manifest_sha256": "aa2eee855fcc8ed335d014f4dd97fdf6a4364abc3b864de6714e255f8f753474",
+  "initialization": "identical random initialization per seed; no parent supervised weights",
+  "architecture": "molecular_control/global drugclip_morgan, width192; production architecture",
+  "frozen_encoders": "DrugCLIP fold0 CLS512 + Morgan2048 + atom-summary40 + availability; ESM2 t33 650M full-sequence mean1280",
+  "batch_size": 1024,
+  "steps": 6000,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "ema_decay": 0.995,
+  "loss": "class-balanced measured-pair BCE on both readouts; no unmeasured negative pairs",
+  "score": "mean of the two readout logits; no retrieval loss, so no directional specialization claim",
+  "schedule": "cosine to 20% of initial LR; final EMA only; same 6000 optimizer steps and 6144000 sampled rows per arm",
+  "split": "reuse fixed scaffold/connectivity splits and wetlab/previous benchmark reserves",
+  "inactivity": "All accepted explicit inactivity, including endpoint-bearing annotations, enters both arms as pair negatives; conflicting positives in any task quarantine the inactivity pair in both arms",
+  "all_endpoint_pooling": "One binary label per pair; selected-task positive/negative or within-task conflicts quarantined; Kd/Ki arm ignores other numeric endpoints except shared inactivity contradiction QC",
+  "primary_evaluation": "identical TEST affinity Kd/Ki panel; IC50, EC50, union and pure inactivity panels secondary",
+  "calibration": "Platt fitted on common validation Kd/Ki labels only; threshold maximizing validation F1; test never used for choice",
+  "test_policy": "test scores generated only after all six fits complete; all seeds reported, no best-seed selection",
+  "confidence_intervals": "paired scaffold bootstrap of seed-mean predictions; seed-level results also retained",
+  "limitations": [
+    "Retrospective scaffold holdout, not prospective SPR or protein-homology cold start.",
+    "Main scaffold splits may share documents; evaluate a separate test subset without train/validation citations.",
+    "Public encoder pretraining relation/scaffold exposure is not certified.",
+    "All-endpoint pooling tests the requested mixed-label hypothesis, not equivalence of Kd, Ki, IC50 and EC50."
+  ],
+  "production_model_sha256": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76"
+}

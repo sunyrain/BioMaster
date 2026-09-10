@@ -322,3 +322,8 @@ Thumbs.db
 !/scripts/export_biomaster_incremental_matrices_20260910.py
 !/scripts/build_final_training_dataset_20260910.py
 !/scripts/finalize_training_dataset_20260910.py
+!/scripts/prepare_endpoint_ablation_20260911.py
+!/scripts/build_endpoint_features_20260911.py
+!/scripts/run_endpoint_ablation_20260911.py
+!/scripts/report_endpoint_ablation_20260911.py
+!/scripts/verify_endpoint_ablation_20260911.py
