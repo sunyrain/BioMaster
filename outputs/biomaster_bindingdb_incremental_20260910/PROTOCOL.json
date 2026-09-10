@@ -1,0 +1,31 @@
+{
+  "status": "FIXED_BEFORE_NEW_FITS",
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "steps": 500,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0001,
+  "replay_batch": 256,
+  "extra_batch": 16,
+  "extra_loss_weight": 0.25,
+  "ema_decay": 0.99,
+  "class_balanced_bce": true,
+  "initialization": "frozen selected fullfit 2025",
+  "trainable": "all interaction-network parameters",
+  "frozen": "ESM2, DrugCLIP, Morgan features",
+  "arms": [
+    "replay_control",
+    "bindingdb_increment"
+  ],
+  "split": "Drug connectivity hash modulo 5 == 0 is held out; remove all increment-training pairs sharing any holdout DOI/PMID/patent",
+  "selection": "Fixed final EMA; no holdout tuning, seed selection, early stopping, or automatic deployment",
+  "interpretation": "Versioned research incremental refit; not a full-archive from-scratch retraining",
+  "parent_sha256": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+  "parent_train_sha256": "32ffa41c74c53b01cb0442caee553e8b26c0517262768ff7f017657e21910065",
+  "supplemental_sha256": "3781ae02054fca56682ba8f9a2beecd8c0cabe2e5ae32b4aede3c592dd3285df",
+  "qc_sha256": "510878e2bd395bb96c121b35737523f8223edaea8254ea4e6038ad17311d0f44",
+  "producer_sha256": "948f22015bb7d24aae5f0c853961c5c8b4d5d0236951892e7672247cd64025aa"
+}

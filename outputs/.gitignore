@@ -744,3 +744,27 @@
 !/spr_expanded_review_20260910/expanded_batch_1.json
 !/spr_expanded_review_20260910/expanded_batch_2.json
 !/spr_expanded_review_20260910/expanded_batch_3.json
+
+# Full matrix and audited incremental refit, 2026-09-10
+!/biomaster_matrix_720x890_20260910/SUMMARY.json
+!/biomaster_matrix_720x890_20260910/FROZEN_INPUTS.json
+!/biomaster_matrix_720x890_20260910/FEATURE_AUDIT.csv
+!/biomaster_matrix_720x890_20260910/DRUG_INDEX.csv
+!/biomaster_bindingdb_incremental_20260910/PROTOCOL.json
+!/biomaster_bindingdb_incremental_20260910/DATA_AUDIT.json
+!/biomaster_bindingdb_incremental_20260910/FITTING_INPUTS.json
+!/biomaster_bindingdb_incremental_20260910/LABEL_ELIGIBILITY_AUDIT.csv
+!/biomaster_bindingdb_incremental_20260910/FROZEN_SPLIT.csv
+!/biomaster_bindingdb_incremental_20260910/HISTORY.json
+!/biomaster_bindingdb_incremental_20260910/BASELINE_ALL_ELIGIBLE_METRICS.csv
+!/biomaster_bindingdb_incremental_20260910/HOLDOUT_METRICS.csv
+!/biomaster_bindingdb_incremental_20260910/HOLDOUT_PREDICTIONS.csv
+!/biomaster_bindingdb_incremental_20260910/PAIRED_DRUG_BOOTSTRAP.json
+!/biomaster_bindingdb_incremental_20260910/COMPARISON_SUMMARY.csv
+!/biomaster_bindingdb_incremental_20260910/MODEL_DECISION.json
+!/biomaster_bindingdb_incremental_20260910/SUMMARY.json
+!/biomaster_bindingdb_incremental_20260910/RESEARCH_MATRICES.json
+!/biomaster_bindingdb_incremental_20260910/RUN_VERIFICATION.json
+!/biomaster_bindingdb_incremental_20260910/bindingdb_increment_seed_20260921/MATRIX_MANIFEST.json
+!/biomaster_bindingdb_incremental_20260910/bindingdb_increment_seed_20260922/MATRIX_MANIFEST.json
+!/biomaster_bindingdb_incremental_20260910/bindingdb_increment_seed_20260923/MATRIX_MANIFEST.json

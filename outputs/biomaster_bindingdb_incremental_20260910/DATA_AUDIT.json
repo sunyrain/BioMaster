@@ -1,0 +1,68 @@
+{
+  "original_supplemental_pairs": 931,
+  "original_label_counts": {
+    "0.0": 556,
+    "1.0": 375
+  },
+  "current_parent_exact_overlap": 7,
+  "current_parent_connectivity_overlap": 9,
+  "exclusions_nonexclusive": {
+    "identity_hold": 54,
+    "model_structure_mismatch": 0,
+    "current_parent_overlap": 9,
+    "previous_training_overlap": 0,
+    "wetlab_frozen": 0,
+    "no_bindingdb_decisive_label": 14,
+    "source_conflict": 0,
+    "construct_hold": 37,
+    "no_citation": 12
+  },
+  "eligible_pairs": 822,
+  "eligible_label_counts": {
+    "0.0": 510,
+    "1.0": 312
+  },
+  "split_counts": {
+    "holdout": {
+      "0.0": 105,
+      "1.0": 36
+    },
+    "purged_shared_holdout_document": {
+      "0.0": 286,
+      "1.0": 92
+    },
+    "train": {
+      "0.0": 119,
+      "1.0": 184
+    }
+  },
+  "wetlab_pairs_used": 0,
+  "prior_training_sources": [
+    {
+      "path": "outputs/retrain_20260901/comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+      "rows": 437631,
+      "unique_pairs": 437248,
+      "sha256": "dabda92e4d18bd76a9c10322d394eb19d5aeecc8988c6ae2733ef1543faa25b1"
+    },
+    {
+      "path": "outputs/biomaster_comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+      "rows": 437631,
+      "unique_pairs": 437248,
+      "sha256": "715f13ded9c5b34bc1c44952d7c37f08f128e00baecb69626bfc33fb0acb3ee2"
+    },
+    {
+      "path": "outputs/old_drug_target_sota_v1/feature_store_v1/CHEMBL37_86674_INDEXED_PAIRS_V1.csv.gz",
+      "rows": 86674,
+      "unique_pairs": 86674,
+      "sha256": "a01a41fc230fe481466ac71187e89cb8d77a2b5fc6aea20de9b8103e015ae4f8"
+    },
+    {
+      "path": "outputs/biomaster_bindingdb_affinity_feature_package_v1/BINDINGDB_DIRECT_KI_KD_AFFINITY_PAIRS_V1.csv.gz",
+      "rows": 9778,
+      "unique_pairs": 9778,
+      "sha256": "9ac81285932a43ede830ff318368c8cc9b55d885e18c3ad7a8aebb80ad9172f5"
+    }
+  ],
+  "citation_purged_between_increment_and_holdout": true,
+  "holdout_role": "Retrospective development holdout, NOT an untouched prospective validation; parent historical document exposure is not certified."
+}

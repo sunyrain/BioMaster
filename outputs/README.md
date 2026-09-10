@@ -1,5 +1,7 @@
 # Tracked result snapshots
 
+`biomaster_matrix_720x890_20260910/` contains completed frozen-model predictions for all 888 registry targets plus LYVE1/SLC8A1. `biomaster_bindingdb_incremental_20260910/` records the three-seed September BindingDB incremental refit and matched replay controls. The new models remain research versions: overall AUROC improved, AP did not consistently improve, and core-target performance regressed. Production and the wet-lab 384 remain frozen. See `docs/BIOMASTER_FULL_MATRIX_AND_BINDINGDB_REFIT_20260910_ZH.md`; only compact audits are tracked, not weights or full matrices.
+
 The current wet-lab handoff is `spr384_final_experiment_table_20260910/`: 384 candidate pairs plus 112 separately counted reference controls. The reviewed CSV/JSON records, control revisions, and compact quality audits are versioned. Experimental observations in `biomaster_explorer/spr_results/`, authentication files, databases, checkpoints, and large feature/score files remain local.
 
 `outputs/.gitignore` is the explicit allowlist for new snapshots. Directory exceptions alone must not expose all descendants: that previously exposed per-system caches and a 417 MiB checkpoint. Add individual reviewed files to the allowlist; do not force-add whole output directories.

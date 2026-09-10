@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "drugs": 720,
+  "original_targets": 888,
+  "requested_extra_targets": [
+    "LYVE1",
+    "SLC8A1"
+  ],
+  "targets": 890,
+  "pairs": 640800,
+  "original_core_targets": 384,
+  "extended_targets": 506,
+  "additional_pairs": 364320,
+  "model_sha256": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+  "core_feature_max_abs_difference": 0.0,
+  "core_score_max_abs_difference": 4.2438507080078125e-05,
+  "frozen_inputs_unchanged": true,
+  "feature_routes": {
+    "frozen_bundle_exact": 384,
+    "new_full_chain_esm2": 351,
+    "full_residue_bank": 124,
+    "added_residue_bank": 28,
+    "requested_target_cache": 3
+  },
+  "feature_protocol": "ESM2 t33 650M layer33; 1022/128 windows; FP16 residue rounding; FP32 full-chain mean",
+  "scores": "Two directional logits, neither probabilities nor Kd; ranks use 720 drugs / 890 targets",
+  "extended_target_accuracy_validated": false,
+  "production_bundle_modified": false,
+  "seconds": 32.8,
+  "producer_sha256": "59a1e6ab15d5a28522b8e72856ea1557131442fa1d72e9a35612198968bcda3c"
+}

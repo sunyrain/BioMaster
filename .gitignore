@@ -317,3 +317,6 @@ Thumbs.db
 !/scripts/validate_spr_expanded_review_20260910.py
 !/scripts/verify_spr64_design_20260909.py
 !/scripts/verify_txgnn_biopathnet_comparison_20260909.py
+!/scripts/extend_biomaster_matrix_20260910.py
+!/scripts/retrain_biomaster_bindingdb_20260910.py
+!/scripts/export_biomaster_incremental_matrices_20260910.py

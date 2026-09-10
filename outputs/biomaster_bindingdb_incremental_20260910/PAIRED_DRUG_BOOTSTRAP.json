@@ -1,0 +1,170 @@
+[
+  {
+    "seed": 20260921,
+    "reference": "frozen_parent",
+    "head": "drug_to_target",
+    "auroc_delta_ci95": [
+      -0.06805373446486736,
+      0.25094662728805706
+    ],
+    "ap_delta_ci95": [
+      -0.14091766023550534,
+      0.1300224720622596
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260921,
+    "reference": "frozen_parent",
+    "head": "target_to_drug",
+    "auroc_delta_ci95": [
+      -0.07212912871609913,
+      0.24899283935242833
+    ],
+    "ap_delta_ci95": [
+      -0.13615920143179217,
+      0.12309024351521308
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260921,
+    "reference": "replay_control",
+    "head": "drug_to_target",
+    "auroc_delta_ci95": [
+      -0.05898155987475444,
+      0.2715668767507002
+    ],
+    "ap_delta_ci95": [
+      -0.12302016131932045,
+      0.14360702585972326
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260921,
+    "reference": "replay_control",
+    "head": "target_to_drug",
+    "auroc_delta_ci95": [
+      -0.053230645785720454,
+      0.2675804924242425
+    ],
+    "ap_delta_ci95": [
+      -0.12479594145930557,
+      0.14515851913930825
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260922,
+    "reference": "frozen_parent",
+    "head": "drug_to_target",
+    "auroc_delta_ci95": [
+      -0.05430873568939777,
+      0.2556925126643436
+    ],
+    "ap_delta_ci95": [
+      -0.11350956356810157,
+      0.12142400787663282
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260922,
+    "reference": "frozen_parent",
+    "head": "target_to_drug",
+    "auroc_delta_ci95": [
+      -0.051763539040863955,
+      0.241997787368881
+    ],
+    "ap_delta_ci95": [
+      -0.10890278233910032,
+      0.11949360707487613
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260922,
+    "reference": "replay_control",
+    "head": "drug_to_target",
+    "auroc_delta_ci95": [
+      -0.05928934487460098,
+      0.26391989791422266
+    ],
+    "ap_delta_ci95": [
+      -0.12146161073077429,
+      0.11205334980276578
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260922,
+    "reference": "replay_control",
+    "head": "target_to_drug",
+    "auroc_delta_ci95": [
+      -0.046618608805998316,
+      0.2607852953074433
+    ],
+    "ap_delta_ci95": [
+      -0.11350171637863374,
+      0.1211168704436006
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260923,
+    "reference": "frozen_parent",
+    "head": "drug_to_target",
+    "auroc_delta_ci95": [
+      -0.07260006067819547,
+      0.26153014569766275
+    ],
+    "ap_delta_ci95": [
+      -0.14251044882320435,
+      0.13556716523733764
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260923,
+    "reference": "frozen_parent",
+    "head": "target_to_drug",
+    "auroc_delta_ci95": [
+      -0.06495382846157813,
+      0.25102931019597696
+    ],
+    "ap_delta_ci95": [
+      -0.13589237230397153,
+      0.1322891508331006
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260923,
+    "reference": "replay_control",
+    "head": "drug_to_target",
+    "auroc_delta_ci95": [
+      -0.07067438167981656,
+      0.26396196940314576
+    ],
+    "ap_delta_ci95": [
+      -0.14024824948747952,
+      0.14329822881251256
+    ],
+    "valid_reps": 1000
+  },
+  {
+    "seed": 20260923,
+    "reference": "replay_control",
+    "head": "target_to_drug",
+    "auroc_delta_ci95": [
+      -0.06502746958860554,
+      0.2548775814809111
+    ],
+    "ap_delta_ci95": [
+      -0.13624218314050981,
+      0.14280590380122188
+    ],
+    "valid_reps": 1000
+  }
+]

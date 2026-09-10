@@ -1,0 +1,11 @@
+{
+  "status": "RETAIN_FROZEN_PRODUCTION_MODEL",
+  "reason": "Overall AUROC improved, AP essentially unchanged, original-core AP regressed, paired drug-bootstrap intervals include zero; no general improvement established.",
+  "incremental_models_role": "Research only; all three predeclared seeds retained without best-seed selection",
+  "new_target_scope": "Full scores available; cold-target reliability remains limited",
+  "frozen_384_unchanged": true,
+  "new_training_labels": 303,
+  "holdout_pairs": 141,
+  "holdout_positive": 36,
+  "holdout_weak_negative": 105
+}

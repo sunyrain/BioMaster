@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "frozen_inputs_unchanged": true,
+  "parent_replay_wetlab_connectivity_overlap": 0,
+  "increment_holdout_drug_connectivity_overlap": 0,
+  "increment_holdout_document_overlap": 0,
+  "holdout_metric_rows_recomputed": 42,
+  "incremental_research_matrices_verified": 3,
+  "producer_unchanged_during_training": true,
+  "pytest_passed": 378,
+  "input_fingerprints": {
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MOLECULES.csv.gz": "aeaed335a7e8df4b8f17cab8f79712768f717c1fcbff7eadb7c4908ea2279ff4",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_GLOBAL.npy": "b33395dc27a57036f396e37cd5eb5fac570e7cd4c8f48c5632fd90400b9f398f",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda",
+    "outputs/biomaster_bindingdb_incremental_20260910/PARENT_MOLECULE_KEYS.csv.gz": "21effd15a0db9a57efb10fee16c8d90d6527ae11f180002da78bab8a6f9474f5",
+    "outputs/biomaster_unified_interaction_20260906/features/ATOM_MANIFEST.json": "d7315cec995b6186c3705e2828dc3cce888a8f39bc052150dc9b265985e050bd",
+    "outputs/biomaster_unified_interaction_20260906/features/TARGET_MANIFEST.json": "6bbc6ee51aa9326e226ad1facabd687bb35b0bfe0ebfd0648098f8a17f43a580"
+  }
+}

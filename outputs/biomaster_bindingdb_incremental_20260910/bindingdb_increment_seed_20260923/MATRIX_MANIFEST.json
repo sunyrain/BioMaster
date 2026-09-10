@@ -1,0 +1,12 @@
+{
+  "seed": 20260923,
+  "model_sha256": "3a44a78f77ef9c25ecad45c3cdb2c4262a290eb694e5f70a8fc686f43b983bf7",
+  "matrix_sha256": "6590f83524d906dddf669325f83828a1d62f445fd3d4a1f5e3f85192bd4011e5",
+  "drugs": 720,
+  "targets": 890,
+  "pairs": 640800,
+  "axis_indexes": "outputs/biomaster_matrix_720x890_20260910",
+  "model_selected_by_holdout": false,
+  "production_deployed": false,
+  "mean_absolute_logit_change": 5.57373046875
+}
