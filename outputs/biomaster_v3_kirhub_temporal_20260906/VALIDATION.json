@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "frozen_training_source_hashes_verified": true,
+  "checkpoint_hashes_verified": true,
+  "kirhub_source_hashes_verified": true,
+  "final_epochs_match_early_selection": true,
+  "all_cached_supports_train_only_and_self_excluded": true,
+  "period_first_seen_disjointness_asserted": true,
+  "training_runs": 10,
+  "tests_passed": 25,
+  "test_evidence_sha256": "aa010b2f57669cf0444ac89a03bbf20de9b4755b07d7b64058cb725675bfd751",
+  "report_sha256": "f08e4754b3ef9102b1eaf8b4b990a3911e754840a84ae6ed9a654541a21dd2d6"
+}

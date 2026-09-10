@@ -1,0 +1,506 @@
+﻿target_chembl_id,target_name,drug_chembl_id,drug_name,max_phase,withdrawn_flag,molecule_type,action_type,mechanism_of_action,direct_interaction,mec_id
+CHEMBL1782,Farnesyl pyrophosphate synthase,CHEMBL675,ALENDRONATE SODIUM,4,0,Small molecule,INHIBITOR,Farnesyl diphosphate synthase inhibitor,1,1047
+CHEMBL1782,Farnesyl pyrophosphate synthase,CHEMBL3989569,IBANDRONATE SODIUM,4,0,Small molecule,INHIBITOR,Farnesyl diphosphate synthase inhibitor,1,1050
+CHEMBL1782,Farnesyl pyrophosphate synthase,CHEMBL319144,MINODRONIC ACID,4,0,Small molecule,INHIBITOR,Farnesyl diphosphate synthase inhibitor,1,7562
+CHEMBL1782,Farnesyl pyrophosphate synthase,CHEMBL3989401,PAMIDRONATE DISODIUM,4,0,Small molecule,INHIBITOR,Farnesyl diphosphate synthase inhibitor,1,1051
+CHEMBL1782,Farnesyl pyrophosphate synthase,CHEMBL1654,RISEDRONATE SODIUM,4,0,Small molecule,INHIBITOR,Farnesyl diphosphate synthase inhibitor,1,1048
+CHEMBL1782,Farnesyl pyrophosphate synthase,CHEMBL4303669,ZOLEDRONIC ACID,4,0,Small molecule,INHIBITOR,Farnesyl diphosphate synthase inhibitor,1,1049
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1694,BENAZEPRIL HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,113
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1560,CAPTOPRIL,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,114
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL515606,CILAZAPRIL,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,6674
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1200659,ENALAPRIL MALEATE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,117
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL3989406,ENALAPRILAT,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,109
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL3039596,FOSINOPRIL SODIUM,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,111
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL317094,IMIDAPRIL,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,7552
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL419213,LISINOPRIL,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,116
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1200534,MOEXIPRIL HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,108
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL3544986,PERINDOPRIL ARGININE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,2399
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1200343,PERINDOPRIL ERBUMINE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,115
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1201011,QUINAPRIL HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,106
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1168,RAMIPRIL,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,110
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1200831,SPIRAPRIL HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,118
+CHEMBL1808,Angiotensin-converting enzyme,CHEMBL1519,TRANDOLAPRIL,4,0,Small molecule,INHIBITOR,Angiotensin-converting enzyme inhibitor,1,107
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL2105712,AFATINIB DIMALEATE,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,2257
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL2105719,DACOMITINIB,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,5312
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL2110732,DACOMITINIB ANHYDROUS,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,7416
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL1201179,LAPATINIB DITOSYLATE,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,130
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL2364649,MARGETUXIMAB,4,0,Antibody,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,5944
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL313972,MASOPROCOL,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,4740
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL180022,NERATINIB,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,5286
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL3989921,NERATINIB MALEATE,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,7421
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL2007641,PERTUZUMAB,4,0,Antibody,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,128
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL1201585,TRASTUZUMAB,4,0,Antibody,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,127
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL4297844,TRASTUZUMAB DERUXTECAN,4,0,Antibody drug conjugate,BINDING AGENT,Receptor protein-tyrosine kinase erbB-2 binding agent,1,7490
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL1743082,TRASTUZUMAB EMTANSINE,4,0,Antibody drug conjugate,BINDING AGENT,Receptor protein-tyrosine kinase erbB-2 binding agent,1,129
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL1743082,TRASTUZUMAB EMTANSINE,4,0,Antibody drug conjugate,BINDING AGENT,Receptor protein-tyrosine kinase erbB-2 binding agent,1,6331
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL3989868,TUCATINIB,4,0,Small molecule,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,4298
+CHEMBL1824,Receptor tyrosine-protein kinase erbB-2,CHEMBL4650256,ZANIDATAMAB,4,0,Antibody,INHIBITOR,Receptor protein-tyrosine kinase erbB-2 inhibitor,1,9309
+CHEMBL1827,"cGMP-specific 3',5'-cyclic phosphodiesterase",CHEMBL1963681,AVANAFIL,4,0,Small molecule,INHIBITOR,Phosphodiesterase 5A inhibitor,1,188
+CHEMBL1827,"cGMP-specific 3',5'-cyclic phosphodiesterase",CHEMBL19449,IBUDILAST,4,0,Small molecule,INHIBITOR,Phosphodiesterase 5A inhibitor,1,7584
+CHEMBL1827,"cGMP-specific 3',5'-cyclic phosphodiesterase",CHEMBL1737,SILDENAFIL CITRATE,4,0,Small molecule,INHIBITOR,Phosphodiesterase 5A inhibitor,1,187
+CHEMBL1827,"cGMP-specific 3',5'-cyclic phosphodiesterase",CHEMBL779,TADALAFIL,4,0,Small molecule,INHIBITOR,Phosphodiesterase 5A inhibitor,1,185
+CHEMBL1827,"cGMP-specific 3',5'-cyclic phosphodiesterase",CHEMBL1339,VARDENAFIL HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Phosphodiesterase 5A inhibitor,1,186
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL4594608,AXATILIMAB,4,0,Antibody,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,8708
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,235
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL3813873,PEXIDARTINIB,4,0,Small molecule,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,4796
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL3989973,PEXIDARTINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,7389
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL576982,QUIZARTINIB,4,0,Small molecule,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,5248
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,9798
+CHEMBL1844,Macrophage colony-stimulating factor 1 receptor,CHEMBL1567,SUNITINIB MALATE,4,0,Small molecule,INHIBITOR,Macrophage colony stimulating factor receptor inhibitor,1,236
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL4208229,ASCIMINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,4093
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL288441,BOSUTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,302
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL1421,DASATINIB ANHYDROUS,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,301
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL1642,IMATINIB MESYLATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,304
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL1201740,NILOTINIB HYDROCHLORIDE MONOHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,300
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL1946170,REGORAFENIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,303
+CHEMBL1862,Tyrosine-protein kinase ABL1,CHEMBL3989869,UMBRALISIB TOSYLATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase ABL inhibitor,1,9123
+CHEMBL1868,Vascular endothelial growth factor receptor 1,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Vascular endothelial growth factor receptor 1 inhibitor,1,9803
+CHEMBL1871,Androgen receptor,CHEMBL254328,ABIRATERONE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,6884
+CHEMBL1871,Androgen receptor,CHEMBL3183409,APALUTAMIDE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,5219
+CHEMBL1871,Androgen receptor,CHEMBL409,BICALUTAMIDE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,1320
+CHEMBL1871,Androgen receptor,CHEMBL3590187,CLASCOTERONE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,4561
+CHEMBL1871,Androgen receptor,CHEMBL1479,DANAZOL,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1333
+CHEMBL1871,Androgen receptor,CHEMBL4297185,DAROLUTAMIDE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,5217
+CHEMBL1871,Androgen receptor,CHEMBL1201048,DROMOSTANOLONE PROPIONATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1319
+CHEMBL1871,Androgen receptor,CHEMBL1082407,ENZALUTAMIDE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,1331
+CHEMBL1871,Androgen receptor,CHEMBL1200623,ETHYLESTRENOL,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1322
+CHEMBL1871,Androgen receptor,CHEMBL1445,FLUOXYMESTERONE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1330
+CHEMBL1871,Androgen receptor,CHEMBL806,FLUTAMIDE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,1317
+CHEMBL1871,Androgen receptor,CHEMBL1395,METHYLTESTOSTERONE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1321
+CHEMBL1871,Androgen receptor,CHEMBL1200946,NANDROLONE DECANOATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1326
+CHEMBL1871,Androgen receptor,CHEMBL1200412,NANDROLONE PHENPROPIONATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1332
+CHEMBL1871,Androgen receptor,CHEMBL1274,NILUTAMIDE,4,0,Small molecule,ANTAGONIST,Androgen Receptor antagonist,1,1318
+CHEMBL1871,Androgen receptor,CHEMBL1200436,OXANDROLONE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1327
+CHEMBL1871,Androgen receptor,CHEMBL1200585,OXYMETHOLONE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1316
+CHEMBL1871,Androgen receptor,CHEMBL2079587,STANOZOLOL,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1323
+CHEMBL1871,Androgen receptor,CHEMBL386630,TESTOSTERONE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1329
+CHEMBL1871,Androgen receptor,CHEMBL1201101,TESTOSTERONE CYPIONATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1328
+CHEMBL1871,Androgen receptor,CHEMBL1200335,TESTOSTERONE ENANTHATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1325
+CHEMBL1871,Androgen receptor,CHEMBL1170,TESTOSTERONE PROPIONATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,1324
+CHEMBL1871,Androgen receptor,CHEMBL2107067,TESTOSTERONE UNDECANOATE,4,0,Small molecule,AGONIST,Androgen Receptor agonist,1,2270
+CHEMBL1902,Peptidyl-prolyl cis-trans isomerase FKBP1A,CHEMBL1908360,EVEROLIMUS,4,0,Small molecule,INHIBITOR,FK506-binding protein 1A inhibitor,1,384
+CHEMBL1902,Peptidyl-prolyl cis-trans isomerase FKBP1A,CHEMBL1200686,PIMECROLIMUS,4,0,Small molecule,INHIBITOR,FK506-binding protein 1A inhibitor,1,385
+CHEMBL1902,Peptidyl-prolyl cis-trans isomerase FKBP1A,CHEMBL413,SIROLIMUS,4,0,Small molecule,INHIBITOR,FK506-binding protein 1A inhibitor,1,383
+CHEMBL1902,Peptidyl-prolyl cis-trans isomerase FKBP1A,CHEMBL3989887,TACROLIMUS,4,0,Small molecule,INHIBITOR,FK506-binding protein 1A inhibitor,1,386
+CHEMBL1902,Peptidyl-prolyl cis-trans isomerase FKBP1A,CHEMBL1201182,TEMSIROLIMUS,4,0,Small molecule,INHIBITOR,FK506-binding protein 1A inhibitor,1,382
+CHEMBL1908,"Cytochrome P450 11B1, mitochondrial",CHEMBL295698,LEVOKETOCONAZOLE,4,0,Small molecule,INHIBITOR,Cytochrome P450 11B1 inhibitor,1,9157
+CHEMBL1908,"Cytochrome P450 11B1, mitochondrial",CHEMBL934,METYRAPONE,4,0,Small molecule,INHIBITOR,"Cytochrome P450 11B1, mitochondrial inhibitor",1,10126
+CHEMBL1908,"Cytochrome P450 11B1, mitochondrial",CHEMBL1670,MITOTANE,4,0,Small molecule,INHIBITOR,Cytochrome P450 11B1 inhibitor,1,1369
+CHEMBL1908,"Cytochrome P450 11B1, mitochondrial",CHEMBL3707393,OSILODROSTAT PHOSPHATE,4,0,Small molecule,INHIBITOR,Cytochrome P450 11B1 inhibitor,1,7465
+CHEMBL1929,Xanthine dehydrogenase/oxidase,CHEMBL1467,ALLOPURINOL,4,0,Small molecule,INHIBITOR,Xanthine dehydrogenase inhibitor,1,439
+CHEMBL1929,Xanthine dehydrogenase/oxidase,CHEMBL1200477,ALLOPURINOL SODIUM,4,0,Small molecule,INHIBITOR,Xanthine dehydrogenase inhibitor,1,437
+CHEMBL1929,Xanthine dehydrogenase/oxidase,CHEMBL1164729,FEBUXOSTAT,4,0,Small molecule,INHIBITOR,Xanthine dehydrogenase inhibitor,1,438
+CHEMBL1935,"Aldehyde dehydrogenase, mitochondrial",CHEMBL964,DISULFIRAM,4,0,Small molecule,INHIBITOR,Aldehyde dehydrogenase inhibitor,1,445
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL4204794,AVAPRITINIB,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,7482
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL1421,DASATINIB ANHYDROUS,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,446
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL1642,IMATINIB MESYLATE,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,451
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL608533,MIDOSTAURIN,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,5315
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,447
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL3813873,PEXIDARTINIB,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,4798
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL3989973,PEXIDARTINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,7427
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL576982,QUIZARTINIB,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,5250
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL1946170,REGORAFENIB,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,448
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL4216467,RIPRETINIB,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,7607
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL1200485,SORAFENIB TOSYLATE,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,449
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,9800
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL1567,SUNITINIB MALATE,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,450
+CHEMBL1936,Mast/stem cell growth factor receptor Kit,CHEMBL2105756,TIVOZANIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Stem cell growth factor receptor inhibitor,1,8711
+CHEMBL1937,Histone deacetylase 2,CHEMBL98,VORINOSTAT,4,0,Small molecule,INHIBITOR,Histone deacetylase 2 inhibitor,1,1489
+CHEMBL1944,Neprilysin,CHEMBL2103772,RACECADOTRIL,4,0,Small molecule,INHIBITOR,Neprilysin inhibitor,1,9254
+CHEMBL1944,Neprilysin,CHEMBL3137301,SACUBITRIL,4,0,Small molecule,INHIBITOR,Neprilysin inhibitor,1,2347
+CHEMBL1947,Thyroid hormone receptor beta,CHEMBL3261331,RESMETIROM,4,0,Small molecule,AGONIST,Thyroid hormone receptor beta-1 agonist,1,4084
+CHEMBL1952,Thymidylate synthase,CHEMBL1773,CAPECITABINE,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,485
+CHEMBL1952,Thymidylate synthase,CHEMBL917,FLOXURIDINE,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,483
+CHEMBL1952,Thymidylate synthase,CHEMBL185,FLUOROURACIL,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,486
+CHEMBL1952,Thymidylate synthase,CHEMBL225072,PEMETREXED,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,9637
+CHEMBL1952,Thymidylate synthase,CHEMBL2360464,PEMETREXED DISODIUM,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,484
+CHEMBL1952,Thymidylate synthase,CHEMBL5315053,PEMETREXED MONOHYDRATE,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,9826
+CHEMBL1952,Thymidylate synthase,CHEMBL225071,RALTITREXED,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,5908
+CHEMBL1952,Thymidylate synthase,CHEMBL20883,TEGAFUR,4,0,Small molecule,INHIBITOR,Thymidylate synthase inhibitor,1,9000
+CHEMBL1957,Insulin-like growth factor 1 receptor,CHEMBL313972,MASOPROCOL,4,0,Small molecule,INHIBITOR,Insulin-like growth factor I receptor inhibitor,1,4741
+CHEMBL1957,Insulin-like growth factor 1 receptor,CHEMBL1201716,MECASERMIN,4,0,Protein,AGONIST,Insulin-like growth factor I receptor agonist,1,488
+CHEMBL1957,Insulin-like growth factor 1 receptor,CHEMBL1201717,MECASERMIN RINFABATE,4,0,Protein,AGONIST,Insulin-like growth factor I receptor agonist,1,487
+CHEMBL1957,Insulin-like growth factor 1 receptor,CHEMBL1743079,TEPROTUMUMAB,4,0,Antibody,ANTAGONIST,Insulin-like growth factor I receptor antagonist,1,5977
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL1287853,FEDRATINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,5326
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL4297216,FEDRATINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,7452
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL3301622,GILTERITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,5110
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL3301603,GILTERITINIB FUMARATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,7350
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL608533,MIDOSTAURIN,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,5314
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL2035187,PACRITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,5329
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL5095049,PACRITINIB CITRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,9592
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL3813873,PEXIDARTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,4797
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL3989973,PEXIDARTINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,7426
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL576982,QUIZARTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,5249
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL2105709,QUIZARTINIB DIHYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,9862
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL1200485,SORAFENIB TOSYLATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,510
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,9805
+CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,CHEMBL1567,SUNITINIB MALATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor FLT3 inhibitor,1,511
+CHEMBL1977,Vitamin D3 receptor,CHEMBL1601669,ALFACALCIDOL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,6447
+CHEMBL1977,Vitamin D3 receptor,CHEMBL3544909,CALCIFEDIOL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,520
+CHEMBL1977,Vitamin D3 receptor,CHEMBL1200666,CALCIPOTRIENE,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,517
+CHEMBL1977,Vitamin D3 receptor,CHEMBL846,CALCITRIOL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,519
+CHEMBL1977,Vitamin D3 receptor,CHEMBL1042,CHOLECALCIFEROL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,515
+CHEMBL1977,Vitamin D3 receptor,CHEMBL2356023,DIHYDROTACHYSTEROL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,6791
+CHEMBL1977,Vitamin D3 receptor,CHEMBL1200810,DOXERCALCIFEROL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,521
+CHEMBL1977,Vitamin D3 receptor,CHEMBL1536,ERGOCALCIFEROL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,516
+CHEMBL1977,Vitamin D3 receptor,CHEMBL1200622,PARICALCITOL,4,0,Small molecule,AGONIST,Vitamin D receptor agonist,1,518
+CHEMBL1978,Aromatase,CHEMBL488,AMINOGLUTETHIMIDE,4,0,Small molecule,INHIBITOR,Cytochrome P450 19A1 inhibitor,1,526
+CHEMBL1978,Aromatase,CHEMBL1399,ANASTROZOLE,4,0,Small molecule,INHIBITOR,Cytochrome P450 19A1 inhibitor,1,523
+CHEMBL1978,Aromatase,CHEMBL1200374,EXEMESTANE,4,0,Small molecule,INHIBITOR,Cytochrome P450 19A1 inhibitor,1,525
+CHEMBL1978,Aromatase,CHEMBL1444,LETROZOLE,4,0,Small molecule,INHIBITOR,Cytochrome P450 19A1 inhibitor,1,524
+CHEMBL1978,Aromatase,CHEMBL1571,TESTOLACTONE,4,0,Small molecule,INHIBITOR,Cytochrome P450 19A1 inhibitor,1,522
+CHEMBL1981,Insulin receptor,CHEMBL1201496,INSULIN ASPART,4,0,Protein,AGONIST,Insulin receptor agonist,1,559
+CHEMBL1981,Insulin receptor,CHEMBL1201664,INSULIN ASPART PROTAMINE RECOMBINANT,4,0,Protein,AGONIST,Insulin receptor agonist,1,560
+CHEMBL1981,Insulin receptor,CHEMBL2107869,INSULIN DEGLUDEC,4,0,Protein,AGONIST,Insulin receptor agonist,1,2409
+CHEMBL1981,Insulin receptor,CHEMBL2104391,INSULIN DETEMIR,4,0,Protein,AGONIST,Insulin receptor agonist,1,561
+CHEMBL1981,Insulin receptor,CHEMBL1201497,INSULIN GLARGINE,4,0,Protein,AGONIST,Insulin receptor agonist,1,550
+CHEMBL1981,Insulin receptor,CHEMBL1201613,INSULIN GLULISINE,4,0,Protein,AGONIST,Insulin receptor agonist,1,548
+CHEMBL1981,Insulin receptor,CHEMBL1201631,INSULIN HUMAN,4,0,Protein,AGONIST,Insulin receptor agonist,1,537
+CHEMBL1981,Insulin receptor,CHEMBL2108974,INSULIN HUMAN ZINC,4,0,Protein,AGONIST,Insulin receptor agonist,1,9976
+CHEMBL1981,Insulin receptor,CHEMBL2108973,"INSULIN HUMAN, ISOPHANE",4,0,Protein,AGONIST,Insulin receptor agonist,1,9359
+CHEMBL1981,Insulin receptor,CHEMBL4594581,INSULIN ICODEC,4,0,Protein,AGONIST,Insulin receptor agonist,1,9977
+CHEMBL1981,Insulin receptor,CHEMBL1201538,INSULIN LISPRO,4,0,Protein,AGONIST,Insulin receptor agonist,1,547
+CHEMBL1981,Insulin receptor,CHEMBL1201611,INSULIN LISPRO PROTAMINE RECOMBINANT,4,0,Protein,AGONIST,Insulin receptor agonist,1,545
+CHEMBL1981,Insulin receptor,CHEMBL1201539,INSULIN PORK,4,0,Protein,AGONIST,Insulin receptor agonist,1,551
+CHEMBL1981,Insulin receptor,CHEMBL1201629,INSULIN PURIFIED BEEF,4,0,Protein,AGONIST,Insulin receptor agonist,1,532
+CHEMBL1981,Insulin receptor,CHEMBL1201630,INSULIN PURIFIED PORK,4,0,Protein,AGONIST,Insulin receptor agonist,1,542
+CHEMBL1981,Insulin receptor,CHEMBL1201545,INSULIN SUSP ISOPHANE BEEF,4,0,Protein,AGONIST,Insulin receptor agonist,1,543
+CHEMBL1981,Insulin receptor,CHEMBL1201540,INSULIN SUSP ISOPHANE RECOMBINANT HUMAN,4,0,Protein,AGONIST,Insulin receptor agonist,1,531
+CHEMBL1981,Insulin receptor,CHEMBL1201627,INSULIN SUSP ISOPHANE SEMISYNTHETIC PURIFIED HUMAN,4,0,Protein,AGONIST,Insulin receptor agonist,1,556
+CHEMBL1981,Insulin receptor,CHEMBL1201644,INSULIN ZINC SUSP RECOMBINANT HUMAN,4,0,Protein,AGONIST,Insulin receptor agonist,1,533
+CHEMBL1981,Insulin receptor,CHEMBL2108966,"INSULIN, NEUTRAL",4,0,Protein,AGONIST,Insulin receptor agonist,1,9863
+CHEMBL1981,Insulin receptor,CHEMBL2109046,"INSULIN, PROTAMINE ZINC",4,0,Protein,AGONIST,Insulin receptor agonist,1,9206
+CHEMBL1993,DNA (cytosine-5)-methyltransferase 1,CHEMBL1489,AZACITIDINE,4,0,Small molecule,INHIBITOR,DNA (cytosine-5)-methyltransferase 1 inhibitor,1,654
+CHEMBL1993,DNA (cytosine-5)-methyltransferase 1,CHEMBL1201129,DECITABINE,4,0,Small molecule,INHIBITOR,DNA (cytosine-5)-methyltransferase 1 inhibitor,1,655
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1200542,DESOXYCORTICOSTERONE ACETATE,4,0,Small molecule,AGONIST,Mineralocorticoid receptor agonist,1,657
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1200592,DESOXYCORTICOSTERONE PIVALATE,4,0,Small molecule,AGONIST,Mineralocorticoid receptor agonist,1,660
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1509,DROSPIRENONE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,661
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1095097,EPLERENONE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,656
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1480,FELODIPINE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,663
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL2181927,FINERENONE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,4578
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1201010,FLUDROCORTISONE ACETATE,4,0,Small molecule,AGONIST,Mineralocorticoid receptor agonist,1,658
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1428,NIMODIPINE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,662
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL1393,SPIRONOLACTONE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,659
+CHEMBL1994,Mineralocorticoid receptor,CHEMBL2348780,VAMOROLONE,4,0,Small molecule,ANTAGONIST,Mineralocorticoid receptor antagonist,1,9638
+CHEMBL2007,Platelet-derived growth factor receptor alpha,CHEMBL4204794,AVAPRITINIB,4,0,Small molecule,INHIBITOR,Platelet-derived growth factor receptor alpha inhibitor,1,7483
+CHEMBL2007,Platelet-derived growth factor receptor alpha,CHEMBL1743049,OLARATUMAB,4,0,Antibody,ANTAGONIST,Platelet-derived growth factor receptor alpha antagonist,1,6014
+CHEMBL2007,Platelet-derived growth factor receptor alpha,CHEMBL4216467,RIPRETINIB,4,0,Small molecule,INHIBITOR,Platelet-derived growth factor receptor alpha inhibitor,1,7656
+CHEMBL2007,Platelet-derived growth factor receptor alpha,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Platelet-derived growth factor receptor alpha inhibitor,1,9802
+CHEMBL2008,Retinoic acid receptor beta,CHEMBL25202,TAMIBAROTENE,4,0,Small molecule,AGONIST,Retinoic acid receptor beta agonist,1,7519
+CHEMBL202,Dihydrofolate reductase,CHEMBL34259,METHOTREXATE,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,2256
+CHEMBL202,Dihydrofolate reductase,CHEMBL3244648,METHOTREXATE SODIUM,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,849
+CHEMBL202,Dihydrofolate reductase,CHEMBL225072,PEMETREXED,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,9635
+CHEMBL202,Dihydrofolate reductase,CHEMBL6068329,PEMETREXED DIPOTASSIUM,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,9994
+CHEMBL202,Dihydrofolate reductase,CHEMBL2360464,PEMETREXED DISODIUM,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,850
+CHEMBL202,Dihydrofolate reductase,CHEMBL5315053,PEMETREXED MONOHYDRATE,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,9825
+CHEMBL202,Dihydrofolate reductase,CHEMBL3989962,PEMETREXED TROMETHAMINE,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,9594
+CHEMBL202,Dihydrofolate reductase,CHEMBL1201746,PRALATREXATE,4,0,Small molecule,INHIBITOR,Dihydrofolate reductase inhibitor,1,848
+CHEMBL2023,Catechol O-methyltransferase,CHEMBL953,ENTACAPONE,4,0,Small molecule,INHIBITOR,Catechol O-methyltransferase inhibitor,1,736
+CHEMBL2023,Catechol O-methyltransferase,CHEMBL1089318,OPICAPONE,4,0,Small molecule,INHIBITOR,Catechol O-methyltransferase inhibitor,1,7762
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200989,ALCLOMETASONE DIPROPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,799
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200732,AMCINONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,798
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200500,BECLOMETHASONE DIPROPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,784
+CHEMBL2034,Glucocorticoid receptor,CHEMBL632,BETAMETHASONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,764
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200538,BETAMETHASONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,779
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200376,BETAMETHASONE BENZOATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,795
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200384,BETAMETHASONE DIPROPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,778
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200762,BETAMETHASONE SODIUM PHOSPHATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,772
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1497,BETAMETHASONE VALERATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,814
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1370,BUDESONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,812
+CHEMBL2034,Glucocorticoid receptor,CHEMBL2040682,CICLESONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,809
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1159650,CLOBETASOL PROPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,768
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200975,CLOCORTOLONE PIVALATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,807
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1650,CORTISONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,815
+CHEMBL2034,Glucocorticoid receptor,CHEMBL2105842,CORTIVAZOL,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,6683
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201891,DEFLAZACORT,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,6166
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201109,DESONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,782
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1766,DESOXIMETASONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,794
+CHEMBL2034,Glucocorticoid receptor,CHEMBL384467,DEXAMETHASONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,813
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1530428,DEXAMETHASONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,803
+CHEMBL2034,Glucocorticoid receptor,CHEMBL2021430,DEXAMETHASONE SODIUM PHOSPHATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,780
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200545,DIFLORASONE DIACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,785
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201749,DIFLUPREDNATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,763
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200877,FLUMETHASONE PIVALATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,786
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1512,FLUNISOLIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,776
+CHEMBL2034,Glucocorticoid receptor,CHEMBL989,FLUOCINOLONE ACETONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,810
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1501,FLUOCINONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,792
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200600,FLUOROMETHOLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,770
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201064,FLUOROMETHOLONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,789
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200774,FLUPREDNISOLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,805
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201012,FLURANDRENOLIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,819
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1676,FLUTICASONE FUROATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,793
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1473,FLUTICASONE PROPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,820
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200845,HALCINONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,761
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200908,HALOBETASOL PROPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,787
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200635,HYDROCORTAMATE HYDROCHLORIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,771
+CHEMBL2034,Glucocorticoid receptor,CHEMBL389621,HYDROCORTISONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,765
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1091,HYDROCORTISONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,801
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1683,HYDROCORTISONE BUTYRATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,804
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1549,HYDROCORTISONE CYPIONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,767
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200953,HYDROCORTISONE PROBUTATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,818
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200968,HYDROCORTISONE SODIUM PHOSPHATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,788
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200495,HYDROCORTISONE SODIUM SUCCINATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,769
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200562,HYDROCORTISONE VALERATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,797
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200865,LOTEPREDNOL ETABONATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,773
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201173,MEDRYSONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,762
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201148,MEPREDNISONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,808
+CHEMBL2034,Glucocorticoid receptor,CHEMBL650,METHYLPREDNISOLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,790
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1364144,METHYLPREDNISOLONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,817
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201081,METHYLPREDNISOLONE SODIUM SUCCINATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,781
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1276308,MIFEPRISTONE,4,0,Small molecule,ANTAGONIST,Glucocorticoid receptor antagonist,1,821
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1161,MOMETASONE FUROATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,802
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200342,PARAMETHASONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,777
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200386,PREDNICARBATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,783
+CHEMBL2034,Glucocorticoid receptor,CHEMBL131,PREDNISOLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,775
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1152,PREDNISOLONE ACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,811
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1201014,PREDNISOLONE SODIUM PHOSPHATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,800
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200909,PREDNISOLONE TEBUTATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,774
+CHEMBL2034,Glucocorticoid receptor,CHEMBL635,PREDNISONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,760
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200617,RIMEXOLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,816
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1451,TRIAMCINOLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,791
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1504,TRIAMCINOLONE ACETONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,766
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200449,TRIAMCINOLONE DIACETATE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,796
+CHEMBL2034,Glucocorticoid receptor,CHEMBL1200878,TRIAMCINOLONE HEXACETONIDE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,806
+CHEMBL2034,Glucocorticoid receptor,CHEMBL2348780,VAMOROLONE,4,0,Small molecule,AGONIST,Glucocorticoid receptor agonist,1,9636
+CHEMBL2039,Amine oxidase [flavin-containing] B,CHEMBL1201142,RASAGILINE MESYLATE,4,0,Small molecule,INHIBITOR,Monoamine oxidase B inhibitor,1,835
+CHEMBL2039,Amine oxidase [flavin-containing] B,CHEMBL6067988,RASAGILINE TARTRATE,4,0,Small molecule,INHIBITOR,Monoamine oxidase B inhibitor,1,9640
+CHEMBL2039,Amine oxidase [flavin-containing] B,CHEMBL396778,SAFINAMIDE,4,0,Small molecule,INHIBITOR,Monoamine oxidase B inhibitor,1,5725
+CHEMBL2039,Amine oxidase [flavin-containing] B,CHEMBL48582,SAFINAMIDE MESYLATE,4,0,Small molecule,INHIBITOR,Monoamine oxidase B inhibitor,1,6163
+CHEMBL2039,Amine oxidase [flavin-containing] B,CHEMBL972,SELEGILINE,4,0,Small molecule,INHIBITOR,Monoamine oxidase B inhibitor,1,837
+CHEMBL2039,Amine oxidase [flavin-containing] B,CHEMBL1200904,SELEGILINE HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Monoamine oxidase B inhibitor,1,836
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL3707320,ALECTINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,2432
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL4582651,PRALSETINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,7700
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL576982,QUIZARTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,5252
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL1946170,REGORAFENIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,1516
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL4559134,SELPERCATINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,7624
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL1200485,SORAFENIB TOSYLATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,1517
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,9806
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL1567,SUNITINIB MALATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,1518
+CHEMBL2041,Proto-oncogene tyrosine-protein kinase receptor Ret,CHEMBL24828,VANDETANIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor RET inhibitor,1,1519
+CHEMBL205,Carbonic anhydrase 2,CHEMBL20,ACETAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,92
+CHEMBL205,Carbonic anhydrase 2,CHEMBL1200814,ACETAZOLAMIDE SODIUM,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,93
+CHEMBL205,Carbonic anhydrase 2,CHEMBL220491,BRINZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,87
+CHEMBL205,Carbonic anhydrase 2,CHEMBL17,DICHLORPHENAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,89
+CHEMBL205,Carbonic anhydrase 2,CHEMBL1201162,DORZOLAMIDE HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,88
+CHEMBL205,Carbonic anhydrase 2,CHEMBL19,METHAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,90
+CHEMBL205,Carbonic anhydrase 2,CHEMBL220492,TOPIRAMATE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase II inhibitor,1,91
+CHEMBL206,Estrogen receptor,CHEMBL3185958,CLOMIPHENE CITRATE,4,0,Small molecule,MODULATOR,Estrogen receptor alpha modulator,1,861
+CHEMBL206,Estrogen receptor,CHEMBL411,DIETHYLSTILBESTROL,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,867
+CHEMBL206,Estrogen receptor,CHEMBL4297509,ELACESTRANT,4,0,Small molecule,DEGRADER,Estrogen receptor alpha degrader,1,4552
+CHEMBL206,Estrogen receptor,CHEMBL4594273,ELACESTRANT HYDROCHLORIDE,4,0,Small molecule,DEGRADER,Estrogen receptor alpha degrader,1,9606
+CHEMBL206,Estrogen receptor,CHEMBL135,ESTRADIOL,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,858
+CHEMBL206,Estrogen receptor,CHEMBL1200430,ESTRADIOL ACETATE,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,859
+CHEMBL206,Estrogen receptor,CHEMBL1200973,ESTRADIOL CYPIONATE,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,864
+CHEMBL206,Estrogen receptor,CHEMBL1511,ESTRADIOL VALERATE,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,860
+CHEMBL206,Estrogen receptor,CHEMBL1405,ESTRONE,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,857
+CHEMBL206,Estrogen receptor,CHEMBL1200980,ESTROPIPATE,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,865
+CHEMBL206,Estrogen receptor,CHEMBL691,ETHINYL ESTRADIOL,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,862
+CHEMBL206,Estrogen receptor,CHEMBL1358,FULVESTRANT,4,0,Small molecule,ANTAGONIST,Estrogen receptor alpha antagonist,1,1075
+CHEMBL206,Estrogen receptor,CHEMBL1358,FULVESTRANT,4,0,Small molecule,DEGRADER,Estrogen receptor degrader,1,10100
+CHEMBL206,Estrogen receptor,CHEMBL1201151,MESTRANOL,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,866
+CHEMBL206,Estrogen receptor,CHEMBL1201477,POLYESTRADIOL PHOSPHATE,4,0,Small molecule,AGONIST,Estrogen receptor alpha agonist,1,855
+CHEMBL206,Estrogen receptor,CHEMBL81,RALOXIFENE,4,0,Small molecule,MODULATOR,Estrogen receptor modulator,1,10131
+CHEMBL206,Estrogen receptor,CHEMBL786,TAMOXIFEN CITRATE,4,0,Small molecule,MODULATOR,Estrogen receptor alpha modulator,1,856
+CHEMBL2063,Ceramide glucosyltransferase,CHEMBL5723563,ELIGLUSTAT TARTRATE,4,0,Small molecule,INHIBITOR,Ceramide glucosyltransferase inhibitor,1,2298
+CHEMBL2063,Ceramide glucosyltransferase,CHEMBL1029,MIGLUSTAT,4,0,Small molecule,INHIBITOR,Ceramide glucosyltransferase inhibitor,1,853
+CHEMBL208,Progesterone receptor,CHEMBL1479,DANAZOL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1028
+CHEMBL208,Progesterone receptor,CHEMBL1533,DESOGESTREL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1022
+CHEMBL208,Progesterone receptor,CHEMBL1509,DROSPIRENONE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1027
+CHEMBL208,Progesterone receptor,CHEMBL1200853,DYDROGESTERONE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1017
+CHEMBL208,Progesterone receptor,CHEMBL1200624,ETHYNODIOL DIACETATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1025
+CHEMBL208,Progesterone receptor,CHEMBL1531,ETONOGESTREL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1011
+CHEMBL208,Progesterone receptor,CHEMBL1389,LEVONORGESTREL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1021
+CHEMBL208,Progesterone receptor,CHEMBL717,MEDROXYPROGESTERONE ACETATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1014
+CHEMBL208,Progesterone receptor,CHEMBL1201139,MEGESTROL ACETATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1012
+CHEMBL208,Progesterone receptor,CHEMBL1276308,MIFEPRISTONE,4,0,Small molecule,ANTAGONIST,Progesterone receptor antagonist,1,1026
+CHEMBL208,Progesterone receptor,CHEMBL2105722,NOMEGESTROL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,9422
+CHEMBL208,Progesterone receptor,CHEMBL1476022,NOMEGESTROL ACETATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,9423
+CHEMBL208,Progesterone receptor,CHEMBL1200807,NORELGESTROMIN,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1024
+CHEMBL208,Progesterone receptor,CHEMBL1162,NORETHINDRONE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1015
+CHEMBL208,Progesterone receptor,CHEMBL1201146,NORETHINDRONE ACETATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1013
+CHEMBL208,Progesterone receptor,CHEMBL1387,NORETHYNODREL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1010
+CHEMBL208,Progesterone receptor,CHEMBL1200934,NORGESTIMATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1020
+CHEMBL208,Progesterone receptor,CHEMBL2107797,NORGESTREL,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1019
+CHEMBL208,Progesterone receptor,CHEMBL103,PROGESTERONE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,1018
+CHEMBL208,Progesterone receptor,CHEMBL3707377,SEGESTERONE ACETATE,4,0,Small molecule,AGONIST,Progesterone receptor agonist,1,7395
+CHEMBL208,Progesterone receptor,CHEMBL2103846,ULIPRISTAL,4,0,Small molecule,MODULATOR,Progesterone receptor modulator,1,5609
+CHEMBL2148,Tyrosine-protein kinase JAK3,CHEMBL4594382,DEURUXOLITINIB PHOSPHATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK3 inhibitor,1,9864
+CHEMBL2148,Tyrosine-protein kinase JAK3,CHEMBL3301607,FILGOTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK3 inhibitor,1,9797
+CHEMBL2148,Tyrosine-protein kinase JAK3,CHEMBL4298167,FILGOTINIB MALEATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK3 inhibitor,1,9820
+CHEMBL2148,Tyrosine-protein kinase JAK3,CHEMBL4085457,RITLECITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK3 inhibitor,1,7430
+CHEMBL2148,Tyrosine-protein kinase JAK3,CHEMBL5314649,RITLECITINIB TOSYLATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK3 inhibitor,1,9653
+CHEMBL2148,Tyrosine-protein kinase JAK3,CHEMBL5315119,UPADACITINIB HEMIHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK3 inhibitor,1,9835
+CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,CHEMBL1200760,BALSALAZIDE DISODIUM,4,0,Small molecule,INHIBITOR,Arachidonate 5-lipoxygenase inhibitor,1,268
+CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,CHEMBL1562610,MECLOFENAMATE SODIUM,4,0,Small molecule,INHIBITOR,Arachidonate 5-lipoxygenase inhibitor,1,269
+CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,CHEMBL704,MESALAMINE,4,0,Small molecule,INHIBITOR,Arachidonate 5-lipoxygenase inhibitor,1,270
+CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,CHEMBL1201013,OLSALAZINE SODIUM,4,0,Small molecule,INHIBITOR,Arachidonate 5-lipoxygenase inhibitor,1,271
+CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,CHEMBL421,SULFASALAZINE,4,0,Small molecule,INHIBITOR,Arachidonate 5-lipoxygenase inhibitor,1,272
+CHEMBL215,Polyunsaturated fatty acid 5-lipoxygenase,CHEMBL93,ZILEUTON,4,0,Small molecule,INHIBITOR,Arachidonate 5-lipoxygenase inhibitor,1,267
+CHEMBL2189110,Histone-lysine N-methyltransferase EZH2,CHEMBL4594260,TAZEMETOSTAT HYDROBROMIDE,4,0,Small molecule,INHIBITOR,Histone-lysine N-methyltransferase EZH2 inhibitor,1,7484
+CHEMBL220,Acetylcholinesterase,CHEMBL1200541,AMBENONIUM CHLORIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,746
+CHEMBL220,Acetylcholinesterase,CHEMBL6068431,BENZGALANTAMINE GLUCONATE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,9930
+CHEMBL220,Acetylcholinesterase,CHEMBL1200514,DEMECARIUM BROMIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,745
+CHEMBL220,Acetylcholinesterase,CHEMBL1199307,DISTIGMINE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,8246
+CHEMBL220,Acetylcholinesterase,CHEMBL1678,DONEPEZIL HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,738
+CHEMBL220,Acetylcholinesterase,CHEMBL1201341,ECHOTHIOPHATE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,5522
+CHEMBL220,Acetylcholinesterase,CHEMBL1200367,ECHOTHIOPHATE IODIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,744
+CHEMBL220,Acetylcholinesterase,CHEMBL1128,EDROPHONIUM CHLORIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,743
+CHEMBL220,Acetylcholinesterase,CHEMBL1555,GALANTAMINE HYDROBROMIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,741
+CHEMBL220,Acetylcholinesterase,CHEMBL1200933,HEXAFLUORENIUM BROMIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,739
+CHEMBL220,Acetylcholinesterase,CHEMBL1025,ISOFLUROPHATE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,742
+CHEMBL220,Acetylcholinesterase,CHEMBL211471,NEOSTIGMINE METHYLSULFATE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,737
+CHEMBL220,Acetylcholinesterase,CHEMBL338975,PHYSOSTIGMINE SALICYLATE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,7605
+CHEMBL220,Acetylcholinesterase,CHEMBL748,PRALIDOXIME CHLORIDE,4,0,Small molecule,ACTIVATOR,Acetylcholinesterase activator,1,747
+CHEMBL220,Acetylcholinesterase,CHEMBL812,PYRIDOSTIGMINE BROMIDE,4,0,Small molecule,INHIBITOR,Acetylcholinesterase inhibitor,1,740
+CHEMBL2243,Fatty-acid amide hydrolase 1,CHEMBL112,ACETAMINOPHEN,4,0,Small molecule,INHIBITOR,Anandamide amidohydrolase inhibitor,1,2226
+CHEMBL2326,Carbonic anhydrase 7,CHEMBL19,METHAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase VII inhibitor,1,13
+CHEMBL235,Peroxisome proliferator-activated receptor gamma,CHEMBL1200760,BALSALAZIDE DISODIUM,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor gamma agonist,1,425
+CHEMBL235,Peroxisome proliferator-activated receptor gamma,CHEMBL704,MESALAMINE,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor gamma agonist,1,426
+CHEMBL235,Peroxisome proliferator-activated receptor gamma,CHEMBL1201013,OLSALAZINE SODIUM,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor gamma agonist,1,427
+CHEMBL235,Peroxisome proliferator-activated receptor gamma,CHEMBL1715,PIOGLITAZONE HYDROCHLORIDE,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor gamma agonist,1,422
+CHEMBL241,"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",CHEMBL799,CILOSTAZOL,4,0,Small molecule,INHIBITOR,Phosphodiesterase 3A inhibitor,1,1380
+CHEMBL241,"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",CHEMBL1752,DYPHYLLINE,4,0,Small molecule,INHIBITOR,Phosphodiesterase 3A inhibitor,1,1382
+CHEMBL241,"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",CHEMBL19449,IBUDILAST,4,0,Small molecule,INHIBITOR,Phosphodiesterase 3A inhibitor,1,7572
+CHEMBL241,"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",CHEMBL2096642,INAMRINONE LACTATE,4,0,Small molecule,INHIBITOR,Phosphodiesterase 3A inhibitor,1,1379
+CHEMBL241,"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",CHEMBL1200977,MILRINONE LACTATE,4,0,Small molecule,INHIBITOR,Phosphodiesterase 3A inhibitor,1,1381
+CHEMBL242,Estrogen receptor beta,CHEMBL1200761,CHLOROTRIANISENE,4,0,Small molecule,MODULATOR,Estrogen receptor beta modulator,1,648
+CHEMBL242,Estrogen receptor beta,CHEMBL1200721,ESTRAMUSTINE PHOSPHATE SODIUM,4,0,Small molecule,MODULATOR,Estrogen receptor beta modulator,1,647
+CHEMBL242,Estrogen receptor beta,CHEMBL1116,RALOXIFENE HYDROCHLORIDE,4,0,Small molecule,MODULATOR,Estrogen receptor beta modulator,1,649
+CHEMBL258,Tyrosine-protein kinase Lck,CHEMBL1201733,PAZOPANIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase LCK inhibitor,1,840
+CHEMBL261,Carbonic anhydrase 1,CHEMBL20,ACETAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase I inhibitor,1,17
+CHEMBL261,Carbonic anhydrase 1,CHEMBL1200814,ACETAZOLAMIDE SODIUM,4,0,Small molecule,INHIBITOR,Carbonic anhydrase I inhibitor,1,15
+CHEMBL261,Carbonic anhydrase 1,CHEMBL17,DICHLORPHENAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase I inhibitor,1,16
+CHEMBL261,Carbonic anhydrase 1,CHEMBL19,METHAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase I inhibitor,1,18
+CHEMBL261,Carbonic anhydrase 1,CHEMBL1201117,METHOCARBAMOL,4,0,Small molecule,INHIBITOR,Carbonic anhydrase I inhibitor,1,14
+CHEMBL267,Proto-oncogene tyrosine-protein kinase Src,CHEMBL288441,BOSUTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase SRC inhibitor,1,682
+CHEMBL267,Proto-oncogene tyrosine-protein kinase Src,CHEMBL571546,TIRBANIBULIN,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase SRC inhibitor,1,4751
+CHEMBL267,Proto-oncogene tyrosine-protein kinase Src,CHEMBL24828,VANDETANIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase SRC inhibitor,1,683
+CHEMBL2722,"Cytochrome P450 11B2, mitochondrial",CHEMBL295698,LEVOKETOCONAZOLE,4,0,Small molecule,INHIBITOR,Cytochrome P450 11B2 inhibitor,1,9158
+CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL2103868,CABOZANTINIB S-MALATE,4,0,Small molecule,INHIBITOR,Vascular endothelial growth factor receptor 2 inhibitor,1,753
+CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL608533,MIDOSTAURIN,4,0,Small molecule,INHIBITOR,Vascular endothelial growth factor receptor 2 inhibitor,1,5318
+CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL1743062,RAMUCIRUMAB,4,0,Antibody,INHIBITOR,Vascular endothelial growth factor receptor 2 inhibitor,1,2273
+CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL535,SUNITINIB,4,0,Small molecule,INHIBITOR,Vascular endothelial growth factor receptor 2 inhibitor,1,9799
+CHEMBL2815,High affinity nerve growth factor receptor,CHEMBL1946170,REGORAFENIB,4,0,Small molecule,INHIBITOR,Nerve growth factor receptor Trk-A inhibitor,1,8646
+CHEMBL2815,High affinity nerve growth factor receptor,CHEMBL4298138,REPOTRECTINIB,4,0,Small molecule,INHIBITOR,Nerve growth factor receptor Trk-A inhibitor,1,9663
+CHEMBL2821,Coagulation factor XII,CHEMBL4297549,HUMAN C1-ESTERASE INHIBITOR,4,0,Protein,INHIBITOR,Coagulation factor XII inhibitor,1,7750
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL3655081,ABROCITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,4318
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL2105759,BARICITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,5293
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL4594382,DEURUXOLITINIB PHOSPHATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,9931
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL3301607,FILGOTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,4723
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL4298167,FILGOTINIB MALEATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,9819
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL1078178,MOMELOTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,5280
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL6068336,MOMELOTINIB DIHYDROCHLORIDE MONOHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,9996
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL1795071,RUXOLITINIB PHOSPHATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,934
+CHEMBL2835,Tyrosine-protein kinase JAK1,CHEMBL5315119,UPADACITINIB HEMIHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK1 inhibitor,1,9837
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL227529,ALOGLIPTIN BENZOATE,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,465
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL1929396,ANAGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,7548
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL1779710,EVOGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,7601
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL515387,GOSOGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,5599
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL237500,LINAGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,467
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL2105762,OMARIGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,5684
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL1201743,SAXAGLIPTIN HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,468
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL5315049,SITAGLIPTIN FUMARATE,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,9654
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL6068334,SITAGLIPTIN HYDROCHLORIDE MONOHYDRATE,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,10022
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL1201174,SITAGLIPTIN PHOSPHATE,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,466
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL2147777,TENELIGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,7541
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL2105754,TRELAGLIPTIN SUCCINATE,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,5682
+CHEMBL284,Dipeptidyl peptidase 4,CHEMBL142703,VILDAGLIPTIN,4,0,Small molecule,INHIBITOR,Dipeptidyl peptidase IV inhibitor,1,5734
+CHEMBL286,Renin,CHEMBL3545059,ALISKIREN FUMARATE,4,0,Small molecule,INHIBITOR,Renin inhibitor,1,640
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL2105759,BARICITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,5294
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL4594382,DEURUXOLITINIB PHOSPHATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9908
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL1287853,FEDRATINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,5327
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL4297216,FEDRATINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,7451
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL3301607,FILGOTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9795
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL4298167,FILGOTINIB MALEATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9822
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL1078178,MOMELOTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,5281
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL6068336,MOMELOTINIB DIHYDROCHLORIDE MONOHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9909
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL6068336,MOMELOTINIB DIHYDROCHLORIDE MONOHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9997
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL2035187,PACRITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,5328
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL5095049,PACRITINIB CITRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9591
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL5095049,PACRITINIB CITRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9593
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL1795071,RUXOLITINIB PHOSPHATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,936
+CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL5315119,UPADACITINIB HEMIHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase JAK2 inhibitor,1,9836
+CHEMBL2973,Rho-associated protein kinase 2,CHEMBL2005186,BELUMOSUDIL,4,0,Small molecule,INHIBITOR,Rho-associated protein kinase 2 inhibitor,1,8779
+CHEMBL3234,Tyrosine-protein kinase HCK,CHEMBL288441,BOSUTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase HCK inhibitor,1,926
+CHEMBL3242,Carbonic anhydrase 12,CHEMBL20,ACETAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase XII inhibitor,1,928
+CHEMBL3242,Carbonic anhydrase 12,CHEMBL1200814,ACETAZOLAMIDE SODIUM,4,0,Small molecule,INHIBITOR,Carbonic anhydrase XII inhibitor,1,929
+CHEMBL3242,Carbonic anhydrase 12,CHEMBL17,DICHLORPHENAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase XII inhibitor,1,927
+CHEMBL325,Histone deacetylase 1,CHEMBL98,VORINOSTAT,4,0,Small molecule,INHIBITOR,Histone deacetylase 1 inhibitor,1,121
+CHEMBL3267,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform",CHEMBL5315125,DUVELISIB MONOHYDRATE,4,0,Small molecule,INHIBITOR,PI3-kinase p110-gamma subunit inhibitor,1,9844
+CHEMBL3522,"Steroid 17-alpha-hydroxylase/17,20 lyase",CHEMBL254328,ABIRATERONE,4,0,Small molecule,INHIBITOR,Cytochrome P450 17A1 inhibitor,1,6494
+CHEMBL3522,"Steroid 17-alpha-hydroxylase/17,20 lyase",CHEMBL271227,ABIRATERONE ACETATE,4,0,Small molecule,INHIBITOR,Cytochrome P450 17A1 inhibitor,1,947
+CHEMBL3522,"Steroid 17-alpha-hydroxylase/17,20 lyase",CHEMBL295698,LEVOKETOCONAZOLE,4,0,Small molecule,INHIBITOR,Cytochrome P450 17A1 inhibitor,1,9362
+CHEMBL3553,Non-receptor tyrosine-protein kinase TYK2,CHEMBL4435170,DEUCRAVACITINIB,4,0,Small molecule,NEGATIVE ALLOSTERIC MODULATOR,Tyrosine-protein kinase TYK2 negative allosteric modulator,1,8904
+CHEMBL3553,Non-receptor tyrosine-protein kinase TYK2,CHEMBL4594382,DEURUXOLITINIB PHOSPHATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase TYK2 inhibitor,1,9953
+CHEMBL3553,Non-receptor tyrosine-protein kinase TYK2,CHEMBL3301607,FILGOTINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase TYK2 inhibitor,1,9796
+CHEMBL3553,Non-receptor tyrosine-protein kinase TYK2,CHEMBL4298167,FILGOTINIB MALEATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase TYK2 inhibitor,1,9821
+CHEMBL3553,Non-receptor tyrosine-protein kinase TYK2,CHEMBL5315119,UPADACITINIB HEMIHYDRATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase TYK2 inhibitor,1,9834
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL4297774,AMIVANTAMAB,4,0,Antibody,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,8821
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL2108332,BEPERMINOGENE PERPLASMID,4,0,Gene,AGONIST,Hepatocyte growth factor receptor agonist,1,7627
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL2103868,CABOZANTINIB S-MALATE,4,0,Small molecule,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,954
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL3188267,CAPMATINIB,4,0,Small molecule,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,4867
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL3989937,CAPMATINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,7763
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL601719,CRIZOTINIB,4,0,Small molecule,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,955
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL3402762,TEPOTINIB,4,0,Small molecule,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,4865
+CHEMBL3717,Hepatocyte growth factor receptor,CHEMBL4594292,TEPOTINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,Hepatocyte growth factor receptor inhibitor,1,7764
+CHEMBL3729,Carbonic anhydrase 4,CHEMBL20,ACETAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase IV inhibitor,1,959
+CHEMBL3729,Carbonic anhydrase 4,CHEMBL1200814,ACETAZOLAMIDE SODIUM,4,0,Small molecule,INHIBITOR,Carbonic anhydrase IV inhibitor,1,960
+CHEMBL3729,Carbonic anhydrase 4,CHEMBL17,DICHLORPHENAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase IV inhibitor,1,956
+CHEMBL3729,Carbonic anhydrase 4,CHEMBL19,METHAZOLAMIDE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase IV inhibitor,1,957
+CHEMBL3729,Carbonic anhydrase 4,CHEMBL220492,TOPIRAMATE,4,0,Small molecule,INHIBITOR,Carbonic anhydrase IV inhibitor,1,958
+CHEMBL3972,Trifunctional purine biosynthetic protein adenosine-3,CHEMBL225072,PEMETREXED,4,0,Small molecule,INHIBITOR,GAR transformylase inhibitor,1,9666
+CHEMBL3972,Trifunctional purine biosynthetic protein adenosine-3,CHEMBL6068329,PEMETREXED DIPOTASSIUM,4,0,Small molecule,INHIBITOR,GAR transformylase inhibitor,1,9932
+CHEMBL3972,Trifunctional purine biosynthetic protein adenosine-3,CHEMBL2360464,PEMETREXED DISODIUM,4,0,Small molecule,INHIBITOR,GAR transformylase inhibitor,1,963
+CHEMBL3972,Trifunctional purine biosynthetic protein adenosine-3,CHEMBL5315053,PEMETREXED MONOHYDRATE,4,0,Small molecule,INHIBITOR,GAR transformylase inhibitor,1,9824
+CHEMBL3972,Trifunctional purine biosynthetic protein adenosine-3,CHEMBL3989962,PEMETREXED TROMETHAMINE,4,0,Small molecule,INHIBITOR,GAR transformylase inhibitor,1,9595
+CHEMBL3979,Peroxisome proliferator-activated receptor delta,CHEMBL3707395,ELAFIBRANOR,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor delta agonist,1,8073
+CHEMBL3979,Peroxisome proliferator-activated receptor delta,CHEMBL230158,SELADELPAR,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor delta agonist,1,4592
+CHEMBL3979,Peroxisome proliferator-activated receptor delta,CHEMBL3989960,SELADELPAR LYSINE,4,0,Small molecule,AGONIST,Peroxisome proliferator-activated receptor delta agonist,1,9933
+CHEMBL3991,Coagulation factor VII,CHEMBL6068490,COAGULATION FACTOR VII HUMAN,4,0,Protein,EXOGENOUS PROTEIN,Coagulation factor VII exogenous protein,1,9911
+CHEMBL3991,Coagulation factor VII,CHEMBL2108334,EPTACOG ALFA (ACTIVATED),4,0,Protein,EXOGENOUS PROTEIN,Coagulation factor VII exogenous protein,1,9512
+CHEMBL3991,Coagulation factor VII,CHEMBL5315078,EPTACOG BETA (ACTIVATED),4,0,Unknown,EXOGENOUS PROTEIN,Coagulation factor VII exogenous protein,1,9664
+CHEMBL4005,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",CHEMBL2396661,ALPELISIB,4,0,Small molecule,INHIBITOR,PI3-kinase p110-alpha subunit inhibitor,1,4681
+CHEMBL4005,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",CHEMBL3218576,COPANLISIB,4,0,Small molecule,INHIBITOR,PI3-kinase p110-alpha subunit inhibitor,1,7412
+CHEMBL4005,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",CHEMBL3545068,COPANLISIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,PI3-kinase p110-alpha subunit inhibitor,1,6902
+CHEMBL4005,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",CHEMBL4650215,INAVOLISIB,4,0,Small molecule,INHIBITOR,PI3-kinase p110-alpha subunit inhibitor,1,8223
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL393220,ATORVASTATIN CALCIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1058
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL2218894,FLUVASTATIN SODIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1055
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL503,LOVASTATIN,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1052
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL1237061,PITAVASTATIN CALCIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1054
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL3989923,PITAVASTATIN MAGNESIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,6914
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL3989920,PITAVASTATIN SODIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,6915
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL690,PRAVASTATIN SODIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1057
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL1744447,ROSUVASTATIN CALCIUM,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1056
+CHEMBL402,3-hydroxy-3-methylglutaryl-coenzyme A reductase,CHEMBL1064,SIMVASTATIN,4,0,Small molecule,INHIBITOR,HMG-CoA reductase inhibitor,1,1059
+CHEMBL4073,Matrilysin,CHEMBL1200699,DOXYCYCLINE,4,0,Small molecule,INHIBITOR,Matrix metalloproteinase 7 inhibitor,1,966
+CHEMBL4073,Matrilysin,CHEMBL2364574,DOXYCYCLINE CALCIUM,4,0,Small molecule,INHIBITOR,Matrix metalloproteinase 7 inhibitor,1,967
+CHEMBL4073,Matrilysin,CHEMBL3989740,DOXYCYCLINE HYCLATE,4,0,Small molecule,INHIBITOR,Matrix metalloproteinase 7 inhibitor,1,968
+CHEMBL4142,Fibroblast growth factor receptor 2,CHEMBL1201821,PALIFERMIN,4,0,Protein,AGONIST,Fibroblast growth factor receptor 2 agonist,1,969
+CHEMBL4142,Fibroblast growth factor receptor 2,CHEMBL4297522,PEMIGATINIB,4,0,Small molecule,INHIBITOR,Fibroblast growth factor receptor 2 inhibitor,1,7598
+CHEMBL4142,Fibroblast growth factor receptor 2,CHEMBL1946170,REGORAFENIB,4,0,Small molecule,INHIBITOR,Fibroblast growth factor receptor 2 inhibitor,1,970
+CHEMBL4142,Fibroblast growth factor receptor 2,CHEMBL2108081,TRAFERMIN,4,0,Protein,AGONIST,Fibroblast growth factor receptor 2 agonist,1,5879
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL3707320,ALECTINIB HYDROCHLORIDE,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,2431
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL3545311,BRIGATINIB,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,4622
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL2403108,CERITINIB,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,2293
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL601719,CRIZOTINIB,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,973
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL4113131,ENSARTINIB,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,4415
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL1983268,ENTRECTINIB,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,7456
+CHEMBL4247,ALK tyrosine kinase receptor,CHEMBL3286830,LORLATINIB,4,0,Small molecule,INHIBITOR,ALK tyrosine kinase receptor inhibitor,1,7370
+CHEMBL4409,"cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A",CHEMBL19449,IBUDILAST,4,0,Small molecule,INHIBITOR,Phosphodiesterase 10A inhibitor,1,7583
+CHEMBL4588,Neutrophil collagenase,CHEMBL1200699,DOXYCYCLINE,4,0,Small molecule,INHIBITOR,Matrix metalloproteinase 8 inhibitor,1,978
+CHEMBL4588,Neutrophil collagenase,CHEMBL2364574,DOXYCYCLINE CALCIUM,4,0,Small molecule,INHIBITOR,Matrix metalloproteinase 8 inhibitor,1,979
+CHEMBL4588,Neutrophil collagenase,CHEMBL3989740,DOXYCYCLINE HYCLATE,4,0,Small molecule,INHIBITOR,Matrix metalloproteinase 8 inhibitor,1,980
+CHEMBL4895,Tyrosine-protein kinase receptor UFO,CHEMBL3301622,GILTERITINIB,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor UFO inhibitor,1,5111
+CHEMBL4895,Tyrosine-protein kinase receptor UFO,CHEMBL3301603,GILTERITINIB FUMARATE,4,0,Small molecule,INHIBITOR,Tyrosine-protein kinase receptor UFO inhibitor,1,7418
+CHEMBL4898,BDNF/NT-3 growth factors receptor,CHEMBL4298138,REPOTRECTINIB,4,0,Small molecule,INHIBITOR,Neurotrophic tyrosine kinase receptor type 2 inhibitor,1,9668
+CHEMBL5145,Serine/threonine-protein kinase B-raf,CHEMBL2105729,DABRAFENIB MESYLATE,4,0,Small molecule,INHIBITOR,Serine/threonine-protein kinase B-raf inhibitor,1,992
+CHEMBL5145,Serine/threonine-protein kinase B-raf,CHEMBL3301612,ENCORAFENIB,4,0,Small molecule,INHIBITOR,Serine/threonine-protein kinase B-raf inhibitor,1,5298
+CHEMBL5145,Serine/threonine-protein kinase B-raf,CHEMBL1946170,REGORAFENIB,4,0,Small molecule,INHIBITOR,Serine/threonine-protein kinase B-raf inhibitor,1,993
+CHEMBL5145,Serine/threonine-protein kinase B-raf,CHEMBL1200485,SORAFENIB TOSYLATE,4,0,Small molecule,INHIBITOR,Serine/threonine-protein kinase B-raf inhibitor,1,994
+CHEMBL5145,Serine/threonine-protein kinase B-raf,CHEMBL1229517,VEMURAFENIB,4,0,Small molecule,INHIBITOR,Serine/threonine-protein kinase B-raf inhibitor,1,995
+CHEMBL5366,Poly [ADP-ribose] polymerase 2,CHEMBL1094636,NIRAPARIB,4,0,Small molecule,INHIBITOR,Poly [ADP-ribose] polymerase 2 inhibitor,1,5681
+CHEMBL5366,Poly [ADP-ribose] polymerase 2,CHEMBL3989922,NIRAPARIB TOSYLATE MONOHYDRATE,4,0,Small molecule,INHIBITOR,Poly [ADP-ribose] polymerase 2 inhibitor,1,7424
+CHEMBL5366,Poly [ADP-ribose] polymerase 2,CHEMBL3137320,TALAZOPARIB,4,0,Small molecule,INHIBITOR,Poly [ADP-ribose] polymerase 2 inhibitor,1,5842
+CHEMBL5366,Poly [ADP-ribose] polymerase 2,CHEMBL3137318,TALAZOPARIB TOSYLATE,4,0,Small molecule,INHIBITOR,Poly [ADP-ribose] polymerase 2 inhibitor,1,5789
+CHEMBL5608,NT-3 growth factor receptor,CHEMBL4298138,REPOTRECTINIB,4,0,Small molecule,INHIBITOR,NT-3 growth factor receptor inhibitor,1,9675
+CHEMBL5705,Prolyl hydroxylase EGLN3,CHEMBL3646221,VADADUSTAT,4,0,Small molecule,INHIBITOR,Egl nine homolog 3 inhibitor,1,7672

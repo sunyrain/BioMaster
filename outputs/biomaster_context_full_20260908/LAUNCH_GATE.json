@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-08T04:20:11.551183+00:00",
+  "tests_passed": true,
+  "test_count": 24,
+  "test_command": "pytest -q tests/test_context_full.py tests/test_context_pocket.py tests/test_pocket_precision.py tests/test_structural_training.py",
+  "real_data_resume_verified": true,
+  "resume_evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_context_full_20260908/RESUME_VERIFICATION.json",
+  "final_driver_evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_context_full_20260908/FINAL_DRIVER_VERIFICATION.json",
+  "evaluator_evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_context_full_20260908/EVALUATOR_VERIFICATION.json",
+  "data_ready_required": true,
+  "initial_full_validation_required": true,
+  "full_training_complete": false,
+  "sources": {
+    "/root/autodl-tmp/BioMaster/biomaster/context_pocket.py": "2c86e85aee06bfdd6422f1a1ff4bb28d2b553fc1503f97884d3ca617b54d954a",
+    "/root/autodl-tmp/BioMaster/biomaster/context_pocket_full.py": "1ef82ae2fdad88bd65b5ed7feb6749ef9c05ef44d127ead217a8eb8721e3e920",
+    "/root/autodl-tmp/BioMaster/biomaster/context_full_training.py": "702a227115f6f0efb32e59fac4f4cc594dcb70d38432ec6cfcd378514a709894",
+    "/root/autodl-tmp/BioMaster/scripts/train_biomaster_context_full_20260908.py": "3f6ef7e05ad8e5b698fc6155304106b087e537a41a65a31aa5d8f31082a7fcaa",
+    "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_context_full_20260908.py": "ce4d3e0663d73841a2aa12140bdc6661160cf3dd1c37f25c8612e1a8bf9117ed",
+    "/root/autodl-tmp/BioMaster/scripts/run_biomaster_context_full_20260908.py": "edec36559da78ed0b0ff03efa74c81d058d256c7790e9d67e0ee177fd22ff143",
+    "/root/autodl-tmp/BioMaster/configs/biomaster_context_full_20260908.json": "1873f4eb06ac40b06181d61627a168cb0e48d01c069ce466d74a5188e5404649"
+  }
+}

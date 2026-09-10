@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/package_smoke_geometry_v1/MANIFEST.json",
+    "sha256": "bff955f4a74988f5b980ac547ad2d66dfa5962b3d4b9a41f874be2140898986f",
+    "size_bytes": 4457
+  },
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/smoke/roll_2018/global_assay__refine_geometry/seed_20260921/BEST.pt",
+    "sha256": "73dca06b053247bd81b3c1f40d7c020c636219cfa1072d30326d2c68d6f8bdfd",
+    "size_bytes": 8232913
+  },
+  "tested_pairs": 19,
+  "fp32_max_abs_error": 0.0,
+  "complete_registry_axes_match": true,
+  "reload_bitwise_equal": true,
+  "invalid_inputs_rejected": 6,
+  "missing_geometry_max_abs_error": 0.0,
+  "independent_import": true,
+  "cpu_bidirectional_inference": true,
+  "verifier": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_catalog_model.py",
+    "sha256": "1d4cf1a695ac5231cb6ec4257c5e71196809888cb25a42a95ec986f5bcbe735c",
+    "size_bytes": 6464
+  }
+}

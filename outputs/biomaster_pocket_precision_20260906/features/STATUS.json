@@ -1,0 +1,35 @@
+{
+  "format": "POCKET_PRECISION_FEATURES_V1",
+  "status": "COMPLETE",
+  "labels_used": false,
+  "source_kind": "PREDICTED_P2RANK_ON_EXACT_ALPHAFOLD",
+  "targets": 384,
+  "targets_with_pockets": 352,
+  "pockets": 1187,
+  "heavy_atoms": 202988,
+  "residues": 24793,
+  "no_residue_or_atom_truncation": true,
+  "no_full_sequence_padding": true,
+  "all_valid_diverse_pockets": true,
+  "experimental_contacts_available": false,
+  "rejected": [],
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/third_party/sota_dti_2026/Drug-The-Whole-Genome/data/model_weights/6_folds/fold_0.pt",
+    "sha256": "129196ea9eb211c6b931d8dc5cd4edccbc4c6fd382aae7200b455d3bc3847e5c",
+    "size_bytes": 1199477971
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_pocket_precision.py",
+    "sha256": "91c0ecb083cd8d8b9a455a2bc303e2b2f73e12f8e315dcc579ec7cdf81b20004",
+    "size_bytes": 12988
+  },
+  "target_index": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TARGET_INDEX.csv.gz",
+    "sha256": "2c1f57cd5b80503d25383db7193c78e9020f7b5129090bc159958ec154e3d154",
+    "size_bytes": 203287
+  },
+  "molecule_projection": "original mol_project, normalize; same fold as original pocket_project",
+  "encoder_precision": "FP32, TF32 disabled",
+  "public_pretraining_temporal_overlap": "not_certified",
+  "seconds": 50.43404951505363
+}

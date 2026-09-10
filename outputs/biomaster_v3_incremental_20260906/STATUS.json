@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "training_runs": 33,
+  "validation_selected_winner": "J_old_relation_pretrained",
+  "test_used_for_selection": false,
+  "production_promotion": false,
+  "evaluation_code_sha256": "15c34da056fad253d765a635803a81c88495642798addd576032dd7134e20e1a"
+}

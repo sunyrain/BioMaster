@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "global_selection": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/GLOBAL_PARENT_SELECTION.json",
+    "sha256": "989785b916e49047141e3395da1efe415b048b87e40152534cd2082b060d5310",
+    "size_bytes": 31960
+  },
+  "parent": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260921/BEST.pt",
+    "sha256": "68681f79e782e3517d905eee5a0e596947ca264ba6a7005a7ef539c591e76e7e",
+    "size_bytes": 4956393
+  },
+  "pairs": 10,
+  "variants": [
+    {
+      "variant": "global",
+      "parameters": 1235604,
+      "exact_initial_parent_prediction": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "variant": "capacity",
+      "parameters": 2447390,
+      "exact_initial_parent_prediction": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "variant": "site",
+      "parameters": 2372516,
+      "exact_initial_parent_prediction": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "variant": "geometry",
+      "parameters": 2447205,
+      "exact_initial_parent_prediction": true,
+      "max_abs_error": 0.0
+    }
+  ],
+  "includes_missing_molecule_3d": true,
+  "includes_missing_receptor_geometry": true,
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_anchored_parent.py",
+    "sha256": "68b24c4800daafdfbb52448f49c611d112d9733513063884a6dbe8d88e035185",
+    "size_bytes": 3134
+  }
+}

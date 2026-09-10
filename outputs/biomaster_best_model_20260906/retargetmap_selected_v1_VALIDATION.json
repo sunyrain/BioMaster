@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+    "size_bytes": 3709
+  },
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+    "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+    "size_bytes": 4956687
+  },
+  "tested_pairs": 19,
+  "fp32_max_abs_error": 0.0,
+  "complete_registry_axes_match": true,
+  "reload_bitwise_equal": true,
+  "invalid_inputs_rejected": 6,
+  "missing_geometry_max_abs_error": null,
+  "independent_import": true,
+  "cpu_bidirectional_inference": true,
+  "verifier": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_catalog_model_v2.py",
+    "sha256": "f1cea15a8e6ea0b0a0bf77a8742228148ab29a3fe381173a80b6916ed1d7fd04",
+    "size_bytes": 6499
+  }
+}

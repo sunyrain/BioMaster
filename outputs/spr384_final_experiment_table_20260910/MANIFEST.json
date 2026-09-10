@@ -1,0 +1,49 @@
+{
+  "version": "20260910_FDA_V2",
+  "checks": {
+    "candidate_rows": 384,
+    "candidate_pairs": 384,
+    "targets": 112,
+    "control_rows": 112,
+    "control_pairs": 112,
+    "replaced_controls": 31,
+    "affected_candidate_rows": 84,
+    "same_frozen_candidate_set": true,
+    "priority_unchanged": true,
+    "candidate_drug_target_fields_unchanged": true,
+    "control_candidate_pairs_disjoint": true,
+    "new_control_ids_unique": true,
+    "fda_status_counts": {
+      "本轮未确认FDA批准身份": 55,
+      "FDA获批身份已匹配（完整结构；2026-08-03官方快照）": 52,
+      "FDA名称匹配；精确结构身份待复核": 5
+    },
+    "replacement_endpoints": {
+      "Kd": 20,
+      "Ki": 11
+    },
+    "all_replacements_exact_fda_identity": true,
+    "all_replacement_entities_have_selected_raw_activity": true,
+    "unique_control_compounds": 85,
+    "exact_control_activity_unresolved": 0
+  },
+  "baseline_sha256": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+  "previous_manifest_sha256": "bc115cb199df12824a210dee2bdd2d3a6e8c82722ef6a62f096e179947245242",
+  "curation_sha256": "44f2440b0aa70a30b58b61980f1befc8c974642d17f34116df274652acb2f387",
+  "input_sha256": {
+    "data/curation/spr112_fda_control_replacements_20260910.json": "44f2440b0aa70a30b58b61980f1befc8c974642d17f34116df274652acb2f387",
+    "outputs/spr112_fda_control_audit_20260910/RAW_EXACT_ENTITY_ACTIVITY.csv": "1aecb9b6ce1685833b446f8294ab0509cb85dec57460e70cc543fd2a00bc4193",
+    "outputs/spr112_fda_control_audit_20260910/FDA_DRUG_IDENTITY_CANDIDATES.csv": "5c78ed236932ba3a89079bf4039b18566f81fc217bd3484889d32c0c1b28b706",
+    "outputs/spr112_fda_control_audit_20260910/FDA_CONTROL_OPTIONS.csv": "66f92895328068460d0a363f1d6be82e322c678c3a7b2487e0b1a380a0473f3c"
+  },
+  "output_sha256": {
+    "SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4",
+    "CONTROL_SOURCE_ACTIVITY_EVIDENCE.csv": "f12774d6362e4f50fca1096ca348e6e80508d5cf8f9d24de151765fb688b8669",
+    "SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "SPR384_FINAL_FOUR_COLUMNS.csv": "0b94be528118e7984bc1e4a08b6da7a28422c719e65a0145de73953453554da3",
+    "SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "FDA_CONTROL_REPLACEMENTS.csv": "a474960b3b9d07c2f684b8ff3fb663e9dec06f45b1c56f211bef092b6d10f5c1",
+    "SPR384_FINAL_EXPERIMENT_TABLE.xlsx": "db404e38195cf6261356008fd225b809f7982c8ae54f449102a4e866e56ce0eb",
+    "README.md": "f6c86ff1f6d475d1984aac2281d9109c1fa33d03b9d8f985ff2f9c7fe80821a2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "run_manifest_sha256": "0b8699d9b8242a5a9a9a40ef9dbfd11d2752dd0510ac4bcec25187f8195c6aa2",
+  "artifact_sha256": {
+    "docs/BIOMASTER_RECOMMENDED384_COMPREHENSIVE_20260909_ZH.md": "42afcc43357856e89948e10bb227d528a77586724bafa196bbfccbf8fe911778",
+    "docs/BIOMASTER_JOINT384_AGENT_REVIEW_20260909_ZH.md": "76d27bf9f3c473e3774d8c9d0b345575685d6ab34a08ffafda91aa8004e49fd4",
+    "docs/BIOMASTER_SPR64_512_DESIGN_20260909_ZH.md": "a8313c7a7281db23230f2f0ea0491691348248f2f947b0ced571dfc2fb092b3e",
+    "outputs/joint384_comprehensive_20260909/AGENT384_BEFORE_COMPREHENSIVE.md": "ad6090ffc044ead86af10d7072350c3b0c09bc576743f16e0a9bf0e154e57090",
+    "outputs/joint384_comprehensive_20260909/DESIGN_BEFORE_COMPREHENSIVE.md": "4f47362bf9db5e68fe19ab4f9d49adf45c1fd2188af00fb3cf055062634644ad",
+    "outputs/joint384_comprehensive_20260909/FAIR_OLD_NEW_COMPARISON.csv": "cb06ef21b3b06d4883e298ab777abea141dbca95ccf34d012877bbfd9dbd64c0",
+    "outputs/joint384_comprehensive_20260909/REPLACEMENT_REASON_COUNTS.csv": "4bef2c94dfefabb537417438fce31b49f45c3c61ca7c5df010d1cb68aec4a199",
+    "outputs/joint384_comprehensive_20260909/STAGED_EXECUTION_REVIEW.csv": "cf766270614a3e98ef696614acfcae96ae7b456fea4a5e676efa9b22b70e8ee3",
+    "outputs/joint384_comprehensive_20260909/INDEPENDENT_VALIDATION.json": "998347dd51f83add1cd5fa6c8bebfee1709e5d019c6f8dea638a0b76843c1cac",
+    "outputs/joint384_comprehensive_20260909/LABEL_CACHE_MANIFEST.json": "9a0df979ee78acee9b8fb89294fb5799dbd9cf820db32ab1bbfb2781fb681a28",
+    "scripts/document_joint384_comprehensive_20260909.py": "9459668895e3903abb1ded9e788d91815ef26b7213e70c341fa2531c5347302e"
+  }
+}

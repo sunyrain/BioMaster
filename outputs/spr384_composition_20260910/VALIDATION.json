@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "rows": 384,
+  "baseline_sha_unchanged": true,
+  "rank_cross_action_reconciled": true,
+  "top10_explorable": 100,
+  "all_partition_denominators": 384,
+  "frontend_build_passed": true,
+  "browser_rank_filters": [
+    179,
+    205,
+    0
+  ],
+  "browser_top10_explorable_export": 100,
+  "browser_scope_isolation": true,
+  "browser_js_errors": 0
+}

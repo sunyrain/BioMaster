@@ -1,0 +1,56 @@
+{
+  "status": "PASS_DEFINED_CRITERIA",
+  "admitted": 11126,
+  "splits": {
+    "train": 9903,
+    "validation": 1223
+  },
+  "exclusions": {
+    "project_protein_sequence_similarity": 1460,
+    "project_morgan_tanimoto_at_least_0_8": 17
+  },
+  "project_sequence_policy": "exclude any chain with MMseqs identity>=30%, alignment covers >=50% of BOTH sequences",
+  "project_ligand_policy": "exclude connectivity match and Morgan radius2 2048-bit Tanimoto>=0.8",
+  "not_certified": "remote homologs/local pockets below thresholds and public pretrained overlap",
+  "mmseqs_command": [
+    "mmseqs",
+    "easy-search",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/CHAINS.fasta",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/PROJECT_TARGETS.fasta",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/PROJECT_SEQUENCE_HITS.tsv",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/mmseqs_tmp",
+    "--min-seq-id",
+    "0.3",
+    "-c",
+    "0.5",
+    "--cov-mode",
+    "0",
+    "-s",
+    "7.5",
+    "--max-seqs",
+    "1000",
+    "--threads",
+    "16",
+    "--format-output",
+    "query,target,fident,alnlen,qcov,tcov,evalue"
+  ],
+  "mmseqs_hits": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/PROJECT_SEQUENCE_HITS.tsv",
+    "sha256": "1138e89f9f92e6f99406f15f73658320215f33c9a703256e1415ae8a70667ded",
+    "size_bytes": 260237
+  },
+  "official_train_split_only": true,
+  "internal_clusters_disjoint": true,
+  "max_release_year": 2020,
+  "experimental_complexes_only": true,
+  "mapping": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/MAPPING_MANIFEST.json",
+    "sha256": "2ab7cab80acfaa5ff21e07893f932a61c74c1bd2f72b611f7061eb42c0b2f5a6",
+    "size_bytes": 6417050
+  },
+  "index": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/ADMITTED.parquet",
+    "sha256": "ad0ad62471e48c6bcb5ad3854802bbfdaa10c8311865eb58d27712d94bec1b23",
+    "size_bytes": 954197
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "TRAINING_PREPARATION_CHECKS_COMPLETE",
+  "utc": "2026-09-08T03:22:36.295522+00:00",
+  "candidate_audit": "candidate_audit/RESULT.json",
+  "candidate_selection_modified": false,
+  "architecture": "ContextPocketRanker",
+  "data_manifest": "context_pocket/MANIFEST.json",
+  "adaptation_preflight": "context_pocket/preflight_2updates/RESULT.json",
+  "joint_preflight_status": "context_pocket/joint_preflight_2updates/STATUS.json",
+  "tests_passed": 18,
+  "formal_training_started": false,
+  "long_training_ready": false,
+  "automatic_continuation": false,
+  "old_pocket_precision_status": "STOPPED_BY_USER",
+  "reports": [
+    "docs/BIOMASTER_SPR_CANDIDATE_QUALITY_20260908_ZH.md",
+    "docs/BIOMASTER_CONTEXT_POCKET_PREPARATION_20260908_ZH.md"
+  ],
+  "joint_preflight_result": "context_pocket/joint_preflight_2updates/RESULT.json",
+  "adaptation_updates": 2,
+  "joint_updates": 2,
+  "full_structural_validation_complexes": 1223,
+  "full_structural_retention_gate_pass": true,
+  "active_training_processes": [],
+  "remaining_before_long_training": [
+    "full FP32 development evaluator with matched parent baseline",
+    "validated checkpoint resume entry",
+    "explicit holo-to-predicted-pocket transfer data or controlled experiment protocol"
+  ],
+  "candidate_empirical_hit_rate": null
+}

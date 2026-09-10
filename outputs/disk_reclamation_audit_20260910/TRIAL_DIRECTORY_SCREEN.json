@@ -1,0 +1,170 @@
+[
+  {
+    "directory": "outputs/old_drug_target_sota_v2_token_pocket_smoke",
+    "total_GiB": 0.039752960205078125,
+    "checkpoint_GiB": 0.039493560791015625,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/old_drug_target_sota_v2_token_fold0_5ep",
+    "total_GiB": 0.040607452392578125,
+    "checkpoint_GiB": 0.039493560791015625,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/old_drug_target_sota_v2_token_gate_fold0_5ep",
+    "total_GiB": 0.040607452392578125,
+    "checkpoint_GiB": 0.039493560791015625,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/old_drug_target_sota_v2_token_gate_fold0_20ep",
+    "total_GiB": 0.040607452392578125,
+    "checkpoint_GiB": 0.039493560791015625,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_odti_e1_s3_screen_20260817",
+    "total_GiB": 0.4116668701171875,
+    "checkpoint_GiB": 0.40859222412109375,
+    "checkpoints": 10
+  },
+  {
+    "directory": "outputs/biomaster_odti_e1_s5_screen_20260817",
+    "total_GiB": 0.08211898803710938,
+    "checkpoint_GiB": 0.08171844482421875,
+    "checkpoints": 2
+  },
+  {
+    "directory": "outputs/biomaster_comprehensive_balanced_smoke_v2",
+    "total_GiB": 0.0263824462890625,
+    "checkpoint_GiB": 0.02632904052734375,
+    "checkpoints": 2
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_affinity_augmented_screen_v1",
+    "total_GiB": 0.312713623046875,
+    "checkpoint_GiB": 0.310760498046875,
+    "checkpoints": 8
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_cross_attention_smoke_v1",
+    "total_GiB": 0.042659759521484375,
+    "checkpoint_GiB": 0.04242706298828125,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_cross_attention_speed_v1",
+    "total_GiB": 0.042659759521484375,
+    "checkpoint_GiB": 0.04242706298828125,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_cross_attention_512_speed_v1",
+    "total_GiB": 0.04265594482421875,
+    "checkpoint_GiB": 0.04242706298828125,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_odti_pretrained_residual_smoke_v1",
+    "total_GiB": 0.041820526123046875,
+    "checkpoint_GiB": 0.041599273681640625,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_odti_pretrained_residual_screen_v1",
+    "total_GiB": 0.9967880249023438,
+    "checkpoint_GiB": 0.9895248413085938,
+    "checkpoints": 24
+  },
+  {
+    "directory": "outputs/biomaster_odti_esmc_debug",
+    "total_GiB": 0.3764228820800781,
+    "checkpoint_GiB": 0.3743934631347656,
+    "checkpoints": 9
+  },
+  {
+    "directory": "outputs/biomaster_odti_structure_interaction_v2_smoke_20260819",
+    "total_GiB": 0.014247894287109375,
+    "checkpoint_GiB": 0.014202117919921875,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_odti_structure_interaction_screen_v1",
+    "total_GiB": 0.21382904052734375,
+    "checkpoint_GiB": 0.2122955322265625,
+    "checkpoints": 8
+  },
+  {
+    "directory": "outputs/biomaster_odti_structure_interaction_screen_v2",
+    "total_GiB": 0.21382904052734375,
+    "checkpoint_GiB": 0.2122955322265625,
+    "checkpoints": 8
+  },
+  {
+    "directory": "outputs/biomaster_odti_local_graph_smoke_20260819",
+    "total_GiB": 0.01737213134765625,
+    "checkpoint_GiB": 0.01732635498046875,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_odti_local_graph_screen_v1",
+    "total_GiB": 0.22643661499023438,
+    "checkpoint_GiB": 0.22479248046875,
+    "checkpoints": 8
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_interval_rank_smoke_v2",
+    "total_GiB": 0.013332366943359375,
+    "checkpoint_GiB": 0.013164520263671875,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_interval_rank_screen_v2",
+    "total_GiB": 0.23515701293945312,
+    "checkpoint_GiB": 0.23385238647460938,
+    "checkpoints": 8
+  },
+  {
+    "directory": "outputs/biomaster_bindingdb_full_fit_2026_smoke_v1",
+    "total_GiB": 0.01317596435546875,
+    "checkpoint_GiB": 0.013164520263671875,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bidirectional_v6_smoke",
+    "total_GiB": 0.014064788818359375,
+    "checkpoint_GiB": 0.013294219970703125,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bidirectional_v6_dense_smoke",
+    "total_GiB": 0.014636993408203125,
+    "checkpoint_GiB": 0.013294219970703125,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bidirectional_joint_interaction_screen_v1",
+    "total_GiB": 0.0150604248046875,
+    "checkpoint_GiB": 0.013294219970703125,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_bidirectional_v6_query_diverse_screen_v1",
+    "total_GiB": 0.04512786865234375,
+    "checkpoint_GiB": 0.039882659912109375,
+    "checkpoints": 3
+  },
+  {
+    "directory": "outputs/biomaster_odti_query_balanced_screen_v1",
+    "total_GiB": 0.03910064697265625,
+    "checkpoint_GiB": 0.03887176513671875,
+    "checkpoints": 1
+  },
+  {
+    "directory": "outputs/biomaster_odti_query_balanced_screen_v2",
+    "total_GiB": 0.0391082763671875,
+    "checkpoint_GiB": 0.03887176513671875,
+    "checkpoints": 1
+  }
+]

@@ -1,0 +1,355 @@
+{
+  "status": "COMPLETE_READ_ONLY_SYSTEM_AUDIT",
+  "utc": "2026-09-07T03:57:11.861160+00:00",
+  "data": {
+    "all_training": {
+      "rows": 292408,
+      "molecules": 209659,
+      "targets": 358,
+      "positives": 235138,
+      "negatives": 57270,
+      "positive_fraction": 0.8041435254849388,
+      "local_available_rows": 275076,
+      "positive_drug_queries": 182228,
+      "positive_target_queries": 346
+    },
+    "old_drug_training": {
+      "rows": 4782,
+      "molecules": 307,
+      "targets": 240,
+      "positives": 770,
+      "negatives": 4012,
+      "positive_fraction": 0.16102049351735676,
+      "local_available_rows": 4759,
+      "positive_drug_queries": 234,
+      "positive_target_queries": 188
+    },
+    "all_validation": {
+      "rows": 59319,
+      "molecules": 34811,
+      "targets": 312,
+      "positives": 41469,
+      "negatives": 17850,
+      "positive_fraction": 0.6990846103272139,
+      "local_available_rows": 57928,
+      "positive_drug_queries": 31472,
+      "positive_target_queries": 280
+    },
+    "old_drug_validation": {
+      "rows": 116,
+      "molecules": 49,
+      "targets": 77,
+      "positives": 53,
+      "negatives": 63,
+      "positive_fraction": 0.45689655172413796,
+      "local_available_rows": 116,
+      "positive_drug_queries": 34,
+      "positive_target_queries": 39
+    }
+  },
+  "old_drug_training_fraction": 0.016353861727449317,
+  "single_target_training_molecules": 167607,
+  "structural_clusters": {
+    "train": {
+      "complexes": 9903,
+      "clusters": 489,
+      "largest_cluster": "c0",
+      "largest_cluster_complexes": 5279,
+      "largest_cluster_fraction": 0.533070786630314
+    },
+    "validation": {
+      "complexes": 1223,
+      "clusters": 162,
+      "largest_cluster": "c89",
+      "largest_cluster_complexes": 144,
+      "largest_cluster_fraction": 0.11774325429272281
+    }
+  },
+  "features": {
+    "targets": 384,
+    "targets_with_pockets": 352,
+    "pockets": 1187,
+    "single_pocket_targets": 104,
+    "old_drugs_with_molecule_features": 719,
+    "old_drug_total": 720
+  },
+  "local_parameters": 33652451,
+  "frozen_parent_parameters": 1235604,
+  "parameter_drift": {
+    "blocks.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": false,
+        "l2_change": 28.12546742845615,
+        "relative_l2_change": 0.1374643525635435
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": false,
+        "l2_change": 8.669571355728777,
+        "relative_l2_change": 0.04188856659962472
+      }
+    },
+    "pool_attention.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": false,
+        "l2_change": 0.025131711816437644,
+        "relative_l2_change": 0.04435342223330367
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": false,
+        "l2_change": 0.013375674588247982,
+        "relative_l2_change": 0.02376687840463124
+      }
+    },
+    "local_output.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": false,
+        "l2_change": 2.789857313986228,
+        "relative_l2_change": 0.05809041066572038
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": false,
+        "l2_change": 6.736947937370033,
+        "relative_l2_change": 0.14015238258869445
+      }
+    },
+    "pocket_gate.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": false,
+        "l2_change": 0.7622104718753691,
+        "relative_l2_change": 0.11633309128288832
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": false,
+        "l2_change": 0.5633186776054163,
+        "relative_l2_change": 0.0849701488396001
+      }
+    },
+    "refine.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": true,
+        "l2_change": 0.0,
+        "relative_l2_change": 0.0
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": false,
+        "l2_change": 1.9113688994386715,
+        "relative_l2_change": 0.09030739276706325
+      }
+    },
+    "distance_head.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": false,
+        "l2_change": 3.128877826863989,
+        "relative_l2_change": 0.2562058294004332
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": true,
+        "l2_change": 0.0,
+        "relative_l2_change": 0.0
+      }
+    },
+    "contact_head.": {
+      "pretraining_vs_initial": {
+        "exactly_unchanged": false,
+        "l2_change": 0.9247369101923567,
+        "relative_l2_change": 0.08162417699424573
+      },
+      "epoch1_vs_pretraining": {
+        "exactly_unchanged": true,
+        "l2_change": 0.0,
+        "relative_l2_change": 0.0
+      }
+    }
+  },
+  "structural_retention": {
+    "native_contact_ap": {
+      "before": 0.5671258218557094,
+      "after": 0.3555245520873743,
+      "after_minus_before": {
+        "mean_difference": -0.2116012697683351,
+        "ci95": [
+          -0.23520593520745112,
+          -0.18820074298989353
+        ],
+        "clusters": 162,
+        "resampling_unit": "whole internal structural cluster",
+        "iterations": 5000
+      }
+    },
+    "all_regions_contact_ap": {
+      "before": 0.5664301986207653,
+      "after": 0.25708955516147436,
+      "after_minus_before": {
+        "mean_difference": -0.3093406434592909,
+        "ci95": [
+          -0.3406284656408862,
+          -0.27366659608122473
+        ],
+        "clusters": 162,
+        "resampling_unit": "whole internal structural cluster",
+        "iterations": 5000
+      }
+    },
+    "native_distance_mae_capped32_A": {
+      "before": 1.2478746529105054,
+      "after": 2.4592761054744705,
+      "after_minus_before": {
+        "mean_difference": 1.211401452563965,
+        "ci95": [
+          1.056005652578639,
+          1.3912350922924472
+        ],
+        "clusters": 162,
+        "resampling_unit": "whole internal structural cluster",
+        "iterations": 5000
+      }
+    }
+  },
+  "retrieval_query_exposure": {
+    "drug_feature_index": {
+      "eligible_queries": 234,
+      "draws_first_epoch": 91,
+      "expected_distinct_queries": 75.52467669238312,
+      "interpretation": "expectation under uniform random draws with replacement, not reconstructed actual sampled IDs"
+    },
+    "target_feature_index": {
+      "eligible_queries": 188,
+      "draws_first_epoch": 91,
+      "expected_distinct_queries": 72.28763738784346,
+      "interpretation": "expectation under uniform random draws with replacement, not reconstructed actual sampled IDs"
+    }
+  },
+  "fp32_ranking": {
+    "metrics": {
+      "d2t": {
+        "parent": {
+          "all_queries": 34,
+          "positive_queries": 34,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.4764840284179942,
+          "macro_mrr": 0.5097983519598345,
+          "macro_recall_5": 0.5245098039215685,
+          "macro_recall_10": 0.571078431372549,
+          "macro_recall_20": 0.6627450980392157,
+          "macro_ndcg_20": 0.5267969250460204,
+          "min_candidates": 291.0,
+          "median_candidates": 381.0,
+          "max_candidates": 384.0
+        },
+        "new": {
+          "all_queries": 34,
+          "positive_queries": 34,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.47858142818767674,
+          "macro_mrr": 0.5103943928248614,
+          "macro_recall_5": 0.5318627450980392,
+          "macro_recall_10": 0.571078431372549,
+          "macro_recall_20": 0.6627450980392157,
+          "macro_ndcg_20": 0.5276276777016871,
+          "min_candidates": 291.0,
+          "median_candidates": 381.0,
+          "max_candidates": 384.0
+        }
+      },
+      "t2d": {
+        "parent": {
+          "all_queries": 39,
+          "positive_queries": 39,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.20256771015121797,
+          "macro_mrr": 0.2577542796342111,
+          "macro_recall_5": 0.2393162393162393,
+          "macro_recall_10": 0.3803418803418803,
+          "macro_recall_20": 0.5811965811965811,
+          "macro_ndcg_20": 0.2923962636363476,
+          "min_candidates": 657.0,
+          "median_candidates": 708.0,
+          "max_candidates": 720.0
+        },
+        "new": {
+          "all_queries": 39,
+          "positive_queries": 39,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.20972170058526737,
+          "macro_mrr": 0.2707718531718953,
+          "macro_recall_5": 0.21367521367521364,
+          "macro_recall_10": 0.34188034188034183,
+          "macro_recall_20": 0.6068376068376068,
+          "macro_ndcg_20": 0.3041063112407389,
+          "min_candidates": 657.0,
+          "median_candidates": 708.0,
+          "max_candidates": 720.0
+        }
+      }
+    },
+    "paired_query_ap_intervals": {
+      "d2t": {
+        "queries": 34,
+        "delta_ap": 0.002097399769682686,
+        "ci_low": -0.0007838801918553875,
+        "ci_high": 0.006391254354648491,
+        "confidence": 0.95
+      },
+      "t2d": {
+        "queries": 39,
+        "delta_ap": 0.007153990434049416,
+        "ci_low": -0.004919593832406429,
+        "ci_high": 0.022960627232170683,
+        "confidence": 0.95
+      }
+    }
+  },
+  "prepared_assay_data_not_consumed_by_current_trainer": {
+    "rows": 58923,
+    "groups": 3291,
+    "targets": 310,
+    "drugs": 49736,
+    "old_rows": 388,
+    "positives": 46104
+  },
+  "identities": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_data_training_20260907.py",
+      "sha256": "55a54e903ad22d634d0f1d6fdc186c9b79535859fd35255e0da234f6c7e57290",
+      "size_bytes": 8286
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/TRAIN.csv.gz",
+      "sha256": "125303c22875744a9e6adb980e9788add1d08c10f26b198bd51e3988b16f1eb2",
+      "size_bytes": 2712317
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+      "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+      "size_bytes": 458291
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+      "sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+      "size_bytes": 134792539
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/EPOCH1_SNAPSHOT.pt",
+      "sha256": "e170fde45439d7014d2db106cf28e18f6a990b52e01370f507551ff35de6a0c9",
+      "size_bytes": 139717267
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/contact_diagnostics/completed_pretraining/COMPLEX_METRICS.csv",
+      "sha256": "b5f23640bba554ed7a2f7f6191a220d4286e7fd774965d28eedf9a98081ed626",
+      "size_bytes": 262657
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_contact_retention_20260907/COMPLEX_METRICS.csv",
+      "sha256": "d089c41e37a8e92bca54989d857982942360e6b775843383fa9b8d9fb8a27b81",
+      "size_bytes": 264092
+    }
+  ],
+  "running_training_sources_unchanged": true,
+  "training_modified": false,
+  "used_for_selection": false,
+  "caveat": "Observed degradation with unchanged structural heads establishes lost original readout performance, not complete erasure of all latent geometric information."
+}

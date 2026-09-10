@@ -1,0 +1,76 @@
+{
+  "comparisons": [
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 10,
+      "observed_and_retrieval_exposure_identical": true
+    }
+  ]
+}

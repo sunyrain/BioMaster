@@ -1,0 +1,134 @@
+{
+  "status": "STOPPED_BY_USER",
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+      "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+      "bytes": 12551
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_features.py",
+      "sha256": "cb0585066011c975975408a039d65e4580b644f23e3e5371a51ab11c43a66df1",
+      "bytes": 6732
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_training.py",
+      "sha256": "619c7cdfc6b7ac94d2cafe786ec8466ae9978f123c0a3e7c6ec118b2b527f1f3",
+      "bytes": 3593
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_pocket_precision.py",
+      "sha256": "91c0ecb083cd8d8b9a455a2bc303e2b2f73e12f8e315dcc579ec7cdf81b20004",
+      "bytes": 12988
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_structural_pretraining_index.py",
+      "sha256": "2dea1a973a8c22de6ff46e30304feddb48750e47c903e1bb3cd5d0dbc9b00237",
+      "bytes": 7114
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_pocket_precision.py",
+      "sha256": "a59d0ce3aed6df69cc060ec62936201e99bfae1f7bfe33e4667f3e3dd53da740",
+      "bytes": 11620
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_pocket_precision.py",
+      "sha256": "8250341ee826c00a1a3dfe7154e1e33e158a0f4749ebced30ef28420c344f9d7",
+      "bytes": 7239
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_precision_assets.py",
+      "sha256": "88652bfa7c4ba62ab44d6c8fdf965d0c0f0c879a8469d4f1842d4c77a70b082e",
+      "bytes": 4348
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/tests/test_pocket_precision.py",
+      "sha256": "9e6b40df6262363c5b588e2ac10a80cc89cbc2d9ebe43596ce5c507408cd8690",
+      "bytes": 7390
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_pocket_precision_20260906.json",
+      "sha256": "25469f751967a073424bb945e58d69fa6118a3c1f4078a1de6e0faca23380543",
+      "bytes": 2127
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_POCKET_PRECISION_UPGRADE_20260906_ZH.md",
+      "sha256": "9cccf2597182fd9a3dc8d49cad6eab25f69b5d6eb9d11a467925bc38bf36b82a",
+      "bytes": 11291
+    }
+  ],
+  "unit_tests_passed": 10,
+  "engineering_optimizer_steps": 12,
+  "trainer_updates_before_resume": 2,
+  "trainer_updates_after_resume": 3,
+  "local_trainable_parameters": 33652451,
+  "full_training_complete": false,
+  "ranking_quality_measured": true,
+  "structural_pretraining_complete": true,
+  "selected_bundle_manifest_unchanged": true,
+  "real_structural_engineering_optimizer_updates": 6,
+  "live_program_status": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/PROGRAM_STATUS.json",
+  "structural_pretraining_implementation_complete": true,
+  "structural_data_ready": true,
+  "structural_training_complexes": 9903,
+  "structural_validation_complexes": 1223,
+  "structural_quality_measured": true,
+  "followup_utc": "2026-09-07T04:03:59.060913+00:00",
+  "first_400_updates_structural_contact_ap": 0.45994894283499643,
+  "first_200_updates_native_contact_ap": 0.39159922522807666,
+  "contact_diagnostic_status": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/contact_diagnostics/STATUS.json",
+  "first_epoch_updates": 619,
+  "first_epoch_macro_contact_ap": 0.4962884698522985,
+  "first_epoch_distance_mae_capped32_A": 2.744219612217495,
+  "structural_best_contact_ap": 0.5664865752614067,
+  "structural_final_native_contact_ap": 0.5671258218557094,
+  "ranking_evaluation_scope": "cutoff 2020; 2021-2022 development; seed 20260921; epoch 1; paired FP32 audit complete; no confirmed gain",
+  "first_downstream_d2t_ap": 0.4787038220831325,
+  "first_downstream_t2d_ap": 0.21029172492715192,
+  "first_ranking_report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_POCKET_FIRST_RANKING_20260907_ZH.md",
+  "ranking_fp32_audit_complete": true,
+  "first_epoch_structural_retention_measured": true,
+  "first_epoch_native_contact_ap_after_finetuning": 0.3555245520873743,
+  "first_epoch_ranking_gain_confirmed": false,
+  "system_audit_report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_DATA_TRAINING_ARCHITECTURE_AUDIT_20260907_ZH.md",
+  "status_before_user_stop": "DOWNSTREAM_2020_DEVELOPMENT_RUNNING",
+  "utc_before_user_stop": null,
+  "utc": "2026-09-07T05:11:25.914288+00:00",
+  "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+  "closure": {
+    "status": "STOPPED_BY_USER",
+    "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+    "updated_utc": "2026-09-07T05:11:25.914288+00:00",
+    "reason": "User requested stopping current work and closing out with a retrospective.",
+    "automatic_continuation_enabled": false,
+    "training_complete": false,
+    "structural_pretraining_complete": true,
+    "completed_downstream_epochs": 1,
+    "last_saved_updates": 10400,
+    "last_logged_updates": 10480,
+    "last_log_loss": 0.05849192723769647,
+    "last_log_loss_scope": "one sampled minibatch; not epoch mean or validation loss",
+    "known_logged_updates_after_checkpoint": 80,
+    "exact_in_memory_step_at_signal_unknown": true,
+    "ranking_gain_confirmed": false,
+    "promotion_eligible": false,
+    "new_2023_2025_or_kirhub_test_completed": false,
+    "selected_bundle_manifest_unchanged": true,
+    "evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/closure_20260907/EVIDENCE.json",
+    "report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_STOP_AND_RETROSPECTIVE_20260907_ZH.md",
+    "pending_experiments_cancelled": true,
+    "status_note": "Terminated by user, not converged or completed. Existing checkpoint payloads retain their historical saved status and were not rewritten."
+  },
+  "automatic_continuation_enabled": false,
+  "promotion_eligible": false,
+  "previous_next_required_not_scheduled": [
+    "complete structural pretraining and final contact diagnostics",
+    "complete 2020 downstream old-drug ranking development",
+    "2018 structural pretraining, other seeds and matched controls",
+    "frozen-choice retrospective regression evaluation"
+  ],
+  "next_required": [],
+  "last_saved_updates": 10400,
+  "last_logged_updates": 10480,
+  "downstream_ranking_complete": false
+}

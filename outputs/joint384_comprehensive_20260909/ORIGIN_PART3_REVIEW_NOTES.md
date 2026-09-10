@@ -1,0 +1,13 @@
+# 原用途part3审阅范围
+
+已读88药实际indications_text并逐药人工分类；68基于抓取标签，20另补官方标签/监管证据。去重展示句子只为减少重复阅读，没有用关键词自动分类。10个无可用抓取标签条目均补获用途证据，但复方与合并身份风险留在scope_limits。
+
+重点多用途：colchicine包含心血管风险降低；alpelisib包含非癌PROS；hydroxychloroquine兼感染/免疫；ruxolitinib兼血液肿瘤/GVHD/皮肤；relugolix补妇科复方；tadalafil补PAH；lidocaine补静脉抗室性心律失常；selegiline补MDD贴剂；flunisolide补历史哮喘吸入制剂；dextromethorphan/quinidine及trospium/xanomeline保留复方神经用途但说明成分角色。
+
+输入bazedoxifene误标单药但实为DUAVEE，另补Conbriza单药。meropenem和olmesartan也含复方污染。deutivacaftor/ivacaftor及choline fenofibrate/fenofibrate合并名的精确物种问题没有因用途可分类而自动解决。
+
+宏类映射是保守治疗领域：癌症统一ONCOLOGY；支持治疗单列说明，不误称抗肿瘤。PROS无先天发育宏类，按原监管病变描述映射骨软组织/皮肤/血管，不能当作这些领域全部疾病获批。药物标签里的病人风险因素、药理机制、警告和明确不适用项不视为独立适应症。
+
+原384中raloxifene/bazedoxifene共有6对：2个KDR配对全部达标疾病仅内异症和2亚型，另列疾病投资HOLD；其余RET、PPARG、THRB为肥胖共同疾病，不属于“仅内异症”集合。原384未改动。KDR两对的出处已在CSV逐条记录，HOLD只针对疾病投资，不能直接否定结合。
+
+最终多用途复核补入naltrexone与bupropion的CONTRAVE体重管理，保留复方限制；最终68 LABEL_REVIEWED、20 EXTERNAL_REVIEWED。

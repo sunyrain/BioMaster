@@ -1,0 +1,79 @@
+{
+  "protocol": "V3_OLD_RELATION_TRAIN_ONLY_HEAD_20260906",
+  "stage": "validation-guided second experiment, before any current-round test release",
+  "reason": "Stage 1 validation yielded negligible gains and frequent epoch-zero fallback; directly test known-old-drug retrieval supervision",
+  "seeds": [
+    20260908,
+    20260909,
+    20260910
+  ],
+  "epochs": 24,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "observed_batch_size": 4096,
+  "retrieval_queries_per_batch": 8,
+  "retrieval_temperature": 2.0,
+  "retrieval_weight": 0.5,
+  "observed_bce_weight": 0.25,
+  "training": "Every original V3 train biochemical row each epoch; every train-old-drug known-relation query in each direction each epoch; no validation/test known relation fitted",
+  "unknown_semantics": "unlabelled retrieval background in multi-positive softmax; never an added inactive label in biochemical BCE",
+  "selection": "unchanged Stage 1 validation objective and per-direction known/measured AP safeguards; epoch-zero frozen V3 eligible",
+  "variants": {
+    "G_matched_control": {
+      "evidence": false,
+      "pretrained": false,
+      "teacher": false,
+      "known_retrieval": false
+    },
+    "H_old_relation": {
+      "evidence": false,
+      "pretrained": false,
+      "teacher": false,
+      "known_retrieval": true
+    },
+    "I_old_relation_evidence": {
+      "evidence": true,
+      "pretrained": false,
+      "teacher": false,
+      "known_retrieval": true
+    },
+    "J_old_relation_pretrained": {
+      "evidence": true,
+      "pretrained": true,
+      "teacher": false,
+      "known_retrieval": true
+    },
+    "K_old_relation_teacher": {
+      "evidence": true,
+      "pretrained": false,
+      "teacher": true,
+      "known_retrieval": true
+    }
+  },
+  "contrasts": {
+    "known_relation_supervision": [
+      "H_old_relation",
+      "G_matched_control"
+    ],
+    "direct_evidence": [
+      "I_old_relation_evidence",
+      "H_old_relation"
+    ],
+    "pretrained_interaction": [
+      "J_old_relation_pretrained",
+      "I_old_relation_evidence"
+    ],
+    "teacher_prior": [
+      "K_old_relation_teacher",
+      "I_old_relation_evidence"
+    ]
+  },
+  "test_claim": "retrospective development regression; no untouched external confirmation",
+  "production_promotion": false,
+  "config_sha256": "57bcaf6e561a5985651dfab4884f3b9e1a05b41bc519fdb93136dbc439648b31",
+  "stage1_selection_sha256": "f841db517ce2bc5199ad0805afd1d0510969ce9dac661910cf3ff44e56e81f60",
+  "known_training_pairs": 471,
+  "known_training_drug_queries": 240,
+  "known_training_target_queries": 154,
+  "status": "FROZEN"
+}

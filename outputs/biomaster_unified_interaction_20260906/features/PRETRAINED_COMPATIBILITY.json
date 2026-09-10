@@ -1,0 +1,10 @@
+{
+  "mol_src_tokens_max_error": 0.0,
+  "mol_src_distance_max_error": 4.76837158203125e-07,
+  "mol_src_edge_type_max_error": 0.0,
+  "pretrained_token_max_error": 1.1682510375976562e-05,
+  "status": "PASS",
+  "comparison": "unmodified upstream DrugCLIP dataset and encoder",
+  "molecule_count": 4,
+  "explicit_isotope_hydrogen_removal_tested": true
+}

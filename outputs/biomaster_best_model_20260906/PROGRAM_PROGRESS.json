@@ -1,0 +1,315 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-06T09:38:29.293483+00:00",
+  "objective": "持续推进，最后给我一个干净的最佳模型。",
+  "final_model_selected": true,
+  "final_model_delivered": true,
+  "original_reproduction": {
+    "status": "COMPLETE",
+    "runs": 8,
+    "driver": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/reproduce_biomaster_unified_baselines.py",
+      "sha256": "ce1ab040e8c5db3ece5c352c87576904115f9e9eadd6146a8f1f3297a20658ac",
+      "size_bytes": 2411
+    },
+    "original_training_code_unchanged": true
+  },
+  "development": {
+    "status": "COMPLETE",
+    "global_runs": 54,
+    "candidates": 9,
+    "windows": 2,
+    "seeds": 3
+  },
+  "representations": {
+    "status": "COMPLETE",
+    "runs": 24
+  },
+  "validated": {
+    "property_tests_passed": 32,
+    "data_and_reproduction_audit": "DATA_AND_REPRODUCTION_AUDIT.json",
+    "portable_global_smoke": "package_smoke_global_v1_VALIDATION.json",
+    "portable_geometry_smoke": "package_smoke_geometry_v1_VALIDATION.json",
+    "exhaustive_global_smoke": "package_smoke_clip_morgan_v2_RELEASE_VALIDATION.json",
+    "completion_checks": 15,
+    "selected_release": "retargetmap_selected_v1_RELEASE_VALIDATION.json",
+    "independent_exported_cpu": "EXPORTED_CPU_PARITY.json"
+  },
+  "remaining": [],
+  "implementation_notes": [
+    "Live/frozen training source, model/config, selectors and earlier artifacts must not be edited",
+    "Selected global DrugCLIP+Morgan+EMA has 1235604 trainable parameters; fixed final global refit is five epochs",
+    "Two concurrent local GPU workers use ~38GB; avoid an additional full local bank until they finish",
+    "Regression scoring primary bf16 matches development; representative FP32 sensitivity is predefined; average metrics, never ensemble predictions",
+    "Only evaluated variants support the best-model claim; no SOTA or certified encoder chronology claim"
+  ],
+  "global_selection": {
+    "name": "drugclip_morgan",
+    "parameters": 1235604,
+    "recipe": "global_ema",
+    "representation": "drugclip_morgan",
+    "selection_mean": 0.4374925072801877,
+    "selection_seed_sd": 0.013383204542563918,
+    "d2t_ap_mean": 0.42110932913068794,
+    "d2t_ap_seed_sd": 0.017382921931468308,
+    "t2d_ap_mean": 0.28668768184120835,
+    "t2d_ap_seed_sd": 0.01696282592323203,
+    "d2t_r20_mean": 0.6673825085589792,
+    "d2t_r20_seed_sd": 0.01582723139134588,
+    "t2d_r20_mean": 0.5977078477078477,
+    "t2d_r20_seed_sd": 0.01706785331273309,
+    "d2t_measured_ap_mean": 0.8680426161651335,
+    "d2t_measured_ap_seed_sd": 0.008970092162788133,
+    "t2d_measured_ap_mean": 0.7892721049536968,
+    "t2d_measured_ap_seed_sd": 0.003177474569954375,
+    "seed_composites": {
+      "20260921": 0.4415600027667761,
+      "20260922": 0.4483700636607239,
+      "20260923": 0.42254745541306304
+    },
+    "window_composites": {
+      "2018": 0.43872237504523,
+      "2020": 0.43626263951514543
+    }
+  },
+  "anchored": {
+    "status": "COMPLETE",
+    "utc": "2026-09-06T09:28:07.044304+00:00",
+    "jobs": 24,
+    "completed": 24,
+    "finished": [
+      {
+        "seed": 20260921,
+        "cutoff": 2018,
+        "variant": "global"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2018,
+        "variant": "capacity"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2018,
+        "variant": "site"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2018,
+        "variant": "geometry"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2020,
+        "variant": "global"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2020,
+        "variant": "capacity"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2020,
+        "variant": "site"
+      },
+      {
+        "seed": 20260921,
+        "cutoff": 2020,
+        "variant": "geometry"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2018,
+        "variant": "global"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2018,
+        "variant": "capacity"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2018,
+        "variant": "site"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2018,
+        "variant": "geometry"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2020,
+        "variant": "global"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2020,
+        "variant": "capacity"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2020,
+        "variant": "site"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2018,
+        "variant": "global"
+      },
+      {
+        "seed": 20260922,
+        "cutoff": 2020,
+        "variant": "geometry"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2018,
+        "variant": "capacity"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2018,
+        "variant": "site"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2018,
+        "variant": "geometry"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2020,
+        "variant": "global"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2020,
+        "variant": "capacity"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2020,
+        "variant": "site"
+      },
+      {
+        "seed": 20260923,
+        "cutoff": 2020,
+        "variant": "geometry"
+      }
+    ],
+    "running": [],
+    "driver": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_anchored_round.py",
+      "sha256": "9d7a87556691006fbb8b069ac5977d5fa6a2070f16c06051b5b0aaa79541c8d1",
+      "size_bytes": 5092
+    },
+    "configuration": {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_best_model_refinement_20260906.json",
+      "sha256": "cd5947ed250d0cbfd89974ae6ceef36c533e3020599086a4346ddd069927f875",
+      "size_bytes": 2736
+    }
+  },
+  "final_refit": {
+    "status": "COMPLETE",
+    "jobs": 3,
+    "files": [
+      {
+        "mode": "global_refit",
+        "variant": "global",
+        "seed": 20260921,
+        "checkpoint": {
+          "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260921/BEST.pt",
+          "sha256": "53ad2e11e25d453d8803f2f923943aff6077db02e84441cf7bceb6ea3744971a",
+          "size_bytes": 4956687
+        },
+        "result": {
+          "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260921/RESULT.json",
+          "sha256": "cdf6c058fffa05b94b290c56f564e742d40b806f554b8cb709bde7c3bd0c1c23",
+          "size_bytes": 5295
+        }
+      },
+      {
+        "mode": "global_refit",
+        "variant": "global",
+        "seed": 20260922,
+        "checkpoint": {
+          "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260922/BEST.pt",
+          "sha256": "e891b668dd7a6496ef92f0c6efa22a69496a4cb81c250454d444cc4e4615f1aa",
+          "size_bytes": 4956687
+        },
+        "result": {
+          "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260922/RESULT.json",
+          "sha256": "203a015d47ade715bfa410881d082852a46e7649320a83fed03a3f17d4d119ae",
+          "size_bytes": 5295
+        }
+      },
+      {
+        "mode": "global_refit",
+        "variant": "global",
+        "seed": 20260923,
+        "checkpoint": {
+          "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260923/BEST.pt",
+          "sha256": "73399d5167bb8eea69d67206eef49aeab5baeae2aece928b06a1da4474a5bea3",
+          "size_bytes": 4956687
+        },
+        "result": {
+          "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260923/RESULT.json",
+          "sha256": "9bb09a948b790bc9d4345d9c2294b7efd08757f5949f97345ebf471bc4451ee0",
+          "size_bytes": 5295
+        }
+      }
+    ],
+    "final_selection": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/FINAL_ARCHITECTURE_SELECTION.json",
+      "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+      "size_bytes": 17515
+    },
+    "driver": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_final_refits.py",
+      "sha256": "af0ba058a0c209e215cd3881f59f1ad058a6c19ba3d504d12debd3b6f9f32852",
+      "size_bytes": 3544
+    }
+  },
+  "delivery": {
+    "status": "READY_FOR_EXPORT",
+    "utc": "2026-09-06T09:33:18.369940+00:00",
+    "checkpoint": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+      "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+      "size_bytes": 4956687
+    },
+    "selected_seed": 20260921,
+    "final_package_delivered": false
+  },
+  "final_selection": {
+    "variant": "parent",
+    "representation": "drugclip_morgan",
+    "recipe": "global_ema",
+    "seed": 20260921,
+    "parameters": 1235604
+  },
+  "packaging": {
+    "status": "COMPLETE",
+    "utc": "2026-09-06T09:33:37.680774+00:00",
+    "delivered": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/DELIVERED_MODEL.json",
+      "sha256": "4df97b4d733ebd55d7417b99e68d285951809508beb76ee0b55d9a2cc5f2bc12",
+      "size_bytes": 2135
+    }
+  },
+  "completion_audit": "COMPLETION_AUDIT.json",
+  "delivered_model": "DELIVERED_MODEL.json",
+  "canonical_report": "docs/BIOMASTER_SELECTED_MODEL_20260906_ZH.md",
+  "completed_execution_handles": {
+    "anchored_session": 86322,
+    "anchored_pid": 929699,
+    "refit_session": 12013,
+    "refit_pid": 932129,
+    "delivery_session": 6896,
+    "delivery_pid": 935574,
+    "package_session": 54798
+  },
+  "active_execution_handles": {}
+}

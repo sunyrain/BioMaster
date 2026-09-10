@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "chemical_associations": [
+    {
+      "gene": "LYVE1",
+      "model": "ours",
+      "score_mw_spearman": -0.0010873543901065597,
+      "score_logp_spearman": 0.1416123004237752,
+      "top20_median_molecular_weight": 440.1930000000002,
+      "top20_median_logp": 4.662490000000004
+    },
+    {
+      "gene": "LYVE1",
+      "model": "dtiam",
+      "score_mw_spearman": 0.7323519418702457,
+      "score_logp_spearman": 0.49296433445496274,
+      "top20_median_molecular_weight": 544.1335000000001,
+      "top20_median_logp": 4.835790000000004
+    },
+    {
+      "gene": "LYVE1",
+      "model": "drugclip",
+      "score_mw_spearman": -0.23212006963202952,
+      "score_logp_spearman": -0.34650594788862393,
+      "top20_median_molecular_weight": 342.8660000000001,
+      "top20_median_logp": 1.3267499999999997
+    },
+    {
+      "gene": "SLC8A1",
+      "model": "ours",
+      "score_mw_spearman": 0.09873572346019803,
+      "score_logp_spearman": 0.10012264846284068,
+      "top20_median_molecular_weight": 437.97900000000016,
+      "top20_median_logp": 4.278800000000002
+    },
+    {
+      "gene": "SLC8A1",
+      "model": "dtiam",
+      "score_mw_spearman": 0.7811510133188331,
+      "score_logp_spearman": 0.4499934996164272,
+      "top20_median_molecular_weight": 548.5375000000001,
+      "top20_median_logp": 4.386650000000003
+    },
+    {
+      "gene": "SLC8A1",
+      "model": "drugclip",
+      "score_mw_spearman": -0.4454872546310301,
+      "score_logp_spearman": -0.19655968626350678,
+      "top20_median_molecular_weight": 219.7105,
+      "top20_median_logp": 0.7499500000000001
+    },
+    {
+      "gene": "HGF",
+      "model": "ours",
+      "score_mw_spearman": -0.09647748827019521,
+      "score_logp_spearman": -0.18184394441520402,
+      "top20_median_molecular_weight": 353.9435000000001,
+      "top20_median_logp": 2.337400000000002
+    },
+    {
+      "gene": "HGF",
+      "model": "dtiam",
+      "score_mw_spearman": 0.7038282169598388,
+      "score_logp_spearman": 0.3820559192131125,
+      "top20_median_molecular_weight": 559.3765000000001,
+      "top20_median_logp": 4.614750000000004
+    },
+    {
+      "gene": "HGF",
+      "model": "drugclip",
+      "score_mw_spearman": -0.4194092035252931,
+      "score_logp_spearman": -0.35000296505878176,
+      "top20_median_molecular_weight": 282.81399999999996,
+      "top20_median_logp": 1.3693
+    }
+  ],
+  "partial_correlations": [
+    {
+      "gene": "LYVE1",
+      "model_a": "ours",
+      "model_b": "dtiam",
+      "raw_spearman": 0.052228243226667595,
+      "partial_rank_correlation": 0.01910529546071298
+    },
+    {
+      "gene": "LYVE1",
+      "model_a": "ours",
+      "model_b": "drugclip",
+      "raw_spearman": -0.13027140613054164,
+      "partial_rank_correlation": -0.09196921789327223
+    },
+    {
+      "gene": "LYVE1",
+      "model_a": "dtiam",
+      "model_b": "drugclip",
+      "raw_spearman": -0.28575404870970267,
+      "partial_rank_correlation": -0.12805252421602611
+    },
+    {
+      "gene": "SLC8A1",
+      "model_a": "ours",
+      "model_b": "dtiam",
+      "raw_spearman": 0.03408894801573727,
+      "partial_rank_correlation": -0.08978994994497318
+    },
+    {
+      "gene": "SLC8A1",
+      "model_a": "ours",
+      "model_b": "drugclip",
+      "raw_spearman": 0.08640143338753867,
+      "partial_rank_correlation": 0.146712268647683
+    },
+    {
+      "gene": "SLC8A1",
+      "model_a": "dtiam",
+      "model_b": "drugclip",
+      "raw_spearman": -0.461420491066611,
+      "partial_rank_correlation": -0.2061074793536501
+    },
+    {
+      "gene": "HGF",
+      "model_a": "ours",
+      "model_b": "dtiam",
+      "raw_spearman": -0.019584964279723217,
+      "partial_rank_correlation": 0.040529152658015453
+    },
+    {
+      "gene": "HGF",
+      "model_a": "ours",
+      "model_b": "drugclip",
+      "raw_spearman": 0.10191805282546197,
+      "partial_rank_correlation": 0.02874678613780797
+    },
+    {
+      "gene": "HGF",
+      "model_a": "dtiam",
+      "model_b": "drugclip",
+      "raw_spearman": -0.32320588288223984,
+      "partial_rank_correlation": -0.047632615497777156
+    }
+  ],
+  "dtiam_background": [
+    {
+      "gene": "LYVE1",
+      "query_vs_mean_384_score_spearman": 0.9547737923637923
+    },
+    {
+      "gene": "SLC8A1",
+      "query_vs_mean_384_score_spearman": 0.953870144627523
+    },
+    {
+      "gene": "HGF",
+      "query_vs_mean_384_score_spearman": 0.9161167858040596
+    }
+  ],
+  "normalization_sensitivity": [
+    {
+      "gene": "LYVE1",
+      "raw_cosine_vs_robust_z_rank_spearman": 0.9983815233697081,
+      "top20_overlap": 19,
+      "mean_fold_top20_count_for_ensemble_top20": 3.15
+    },
+    {
+      "gene": "SLC8A1",
+      "raw_cosine_vs_robust_z_rank_spearman": 0.864218198723377,
+      "top20_overlap": 12,
+      "mean_fold_top20_count_for_ensemble_top20": 3.95
+    },
+    {
+      "gene": "HGF",
+      "raw_cosine_vs_robust_z_rank_spearman": 0.991814927626532,
+      "top20_overlap": 13,
+      "mean_fold_top20_count_for_ensemble_top20": 3.05
+    }
+  ],
+  "random_overlap_reference": {
+    "candidate_entries": 720,
+    "top_k": 20,
+    "assumption": "Independent uniformly random size-20 subsets; illustrative reference, not a fitted null or significance test",
+    "pair_expected_overlap": 0.5555555555555556,
+    "pair_probability_zero": 0.5649047157327062,
+    "triple_expected_overlap": 0.015432098765432098,
+    "triple_probability_zero": 0.9846698920716607
+  },
+  "interpretation": "Descriptive associations in 3 targets. Neither causal feature attribution nor prospective accuracy.",
+  "model_predictions_modified": false,
+  "source_hashes": {
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_720x384_deployment_v1/DTIAM_720X384_SCORES_V1.csv.gz": "3e519575c0965306b1855522f482beeabee12c606a61498159439315d421718e",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/LYVE1_THREE_MODEL_COMPARISON_720.csv": "95f1eef0208c1bd20e68ac579df4ef6c0d3bdebcaeada7ba93af52f758ac5846",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/SLC8A1_THREE_MODEL_COMPARISON_720.csv": "b7c0bc17687f393ae0d5a883b7e0878775053241d3d718c2b27a756186611365",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/HGF_THREE_MODEL_COMPARISON_720.csv": "cc0f995f294c1972d2b0f50f889ae5327a4f644f5882afd9b8b0caf529183a89"
+  },
+  "producer_sha256": "266b1d099aeb8e1bef824b615ea2f60185163741ed2e7a024ec575e76da559db"
+}

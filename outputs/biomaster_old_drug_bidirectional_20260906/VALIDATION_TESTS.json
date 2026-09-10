@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "command": "python -m pytest -q tests/test_old_drug_ranking.py tests/test_odti_v3_panel_metrics.py tests/test_odti_v4.py",
+  "exit_code": 0,
+  "passed": 27,
+  "seconds": 2.75,
+  "files_sha256": {
+    "tests/test_old_drug_ranking.py": "b9adcc87bae086cb946a111fd3f116e59ea328e8f2c792ede7dc7271e118a400",
+    "tests/test_odti_v3_panel_metrics.py": "32c5c98e4af6c086de9e30bede5a2b7451c8b999702b57ca1569d8b5c94594aa",
+    "tests/test_odti_v4.py": "e0315709e9adef8f2123569d4ce3db616ef993702e97dfbe2ec1b37addd2b90c",
+    "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587",
+    "biomaster/odti_v3_panel_metrics.py": "89e26c09f1c20e74d8575906287f157d38ba3cbb626e1a7f4cddf926621adcc5",
+    "biomaster/odti_v4.py": "7f0a644913bfac24a3090457a4162a111ff1c0ea49003670a12ffecb15f4cfc9"
+  }
+}

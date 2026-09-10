@@ -1,0 +1,52 @@
+{
+  "status": "FROZEN",
+  "candidate_sha256": "0141c9731e24097b5d06740ff0c0972d5ce29aa536e7cd7ced663e0d46684ffa",
+  "labels": "residual activity <=30% at 1uM",
+  "fitting": false,
+  "claim": "retrospective external activity audit; dataset previously inspected; no KiRHub functional adapter fitted here",
+  "source_sha256": {
+    "outputs/evidence_routing_compute_execution_20260808_v1/old_drug_innovation_v7/OLD_DRUG_KIRHUB_PAIR_BENCHMARK_V7.csv": "8295ac18c4b8a3e6048c2079f643909fa9ae1ddea0f26b8c847a0025e25fde86",
+    "outputs/biomaster_v3_incremental_20260906/scores/frozen_v3.npz": "ca67d7c1484f252f8ee9833c13432439c5e3c1ec1224295d48e829c84015a97f",
+    "outputs/biomaster_v3_incremental_20260906/scores/J_old_relation_pretrained.npz": "607fca45fd851f2f762dad7ca8721157b7dee9d3af3fad8bd0350cd32eabf8f6",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/production_independent.npz": "b45dc1896be77bad97f4cfb09271eabccd640aaf3786165dbd41d619d84af11f",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/v6_directional_full_fit.npz": "16d49fcd9d6d1fc93f684e352643cc294fcd0cf9591c93caf6da10cb004a39bc",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/dtiam.npz": "5f1bda47f012400673fd2b07d193b90f46eb8b285cdc6ce47da6020966adf7cc",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/positive_nearest.npz": "214ce089c36eedf0b0ea5db58b8f7b4e9020b39663f8b6b82b05321ebce04de2",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/pn_logistic.npz": "603612494f673cdf08dc321f4f10306198e8e8984b30cd6b3795dbcaa584a687",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/conplex.npz": "ab86b3159a19714c8cd57651b9c6ca360b6397b2d86c10a9036d02af80a71be5"
+  },
+  "scopes": {
+    "historical_strict_2823": {
+      "rows": 2823,
+      "positives": 202,
+      "drugs": 78,
+      "targets": 103,
+      "pairs_seen_v3_binary_train": 0,
+      "pairs_seen_J_known_train": 0
+    },
+    "single_construct_7505": {
+      "rows": 7505,
+      "positives": 987,
+      "drugs": 79,
+      "targets": 96,
+      "pairs_seen_v3_binary_train": 2620,
+      "pairs_seen_J_known_train": 158
+    },
+    "single_construct_unseen_by_J": {
+      "rows": 4844,
+      "positives": 501,
+      "drugs": 79,
+      "targets": 96,
+      "pairs_seen_v3_binary_train": 0,
+      "pairs_seen_J_known_train": 0
+    },
+    "all_mapped_8058": {
+      "rows": 8058,
+      "positives": 1041,
+      "drugs": 79,
+      "targets": 103,
+      "pairs_seen_v3_binary_train": 2886,
+      "pairs_seen_J_known_train": 166
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "sampled_molecules": 1024,
+  "molecules_with_coordinates": 1017,
+  "atom_elements_agree_with_chemical_node_features": true,
+  "bond_distance_quantiles_A": {
+    "0": 1.1329874992370605,
+    "0.001": 1.1604540348052979,
+    "0.01": 1.2229799032211304,
+    "0.5": 1.4023168087005615,
+    "0.99": 1.7355799674987793,
+    "0.999": 1.8887728452682495,
+    "1": 2.109879732131958
+  },
+  "molecules_with_bond_over_3A": [],
+  "role": "independent numerical consistency check of chemical graph and conformer atom ordering; no labels read"
+}

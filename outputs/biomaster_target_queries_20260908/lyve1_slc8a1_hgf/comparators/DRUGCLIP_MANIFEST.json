@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "weights": "Official Drug-The-Whole-Genome six folds 0..5",
+  "folds": [
+    {
+      "fold": 0,
+      "sha256": "129196ea9eb211c6b931d8dc5cd4edccbc4c6fd382aae7200b455d3bc3847e5c",
+      "missing_keys": [],
+      "unused_auxiliary_keys": [
+        "mol_project_2.linear1.bias",
+        "mol_project_2.linear1.weight",
+        "mol_project_2.linear2.bias",
+        "mol_project_2.linear2.weight",
+        "mol_project_fake.linear1.bias",
+        "mol_project_fake.linear1.weight",
+        "mol_project_fake.linear2.bias",
+        "mol_project_fake.linear2.weight",
+        "pocket_project_2.linear1.bias",
+        "pocket_project_2.linear1.weight",
+        "pocket_project_2.linear2.bias",
+        "pocket_project_2.linear2.weight",
+        "pocket_project_fake.linear1.bias",
+        "pocket_project_fake.linear1.weight",
+        "pocket_project_fake.linear2.bias",
+        "pocket_project_fake.linear2.weight"
+      ]
+    },
+    {
+      "fold": 1,
+      "sha256": "2c17fce79d67da039fb396c2352a5c251b0d04c679ce9a0ea9f294dffccc9aa2",
+      "missing_keys": [],
+      "unused_auxiliary_keys": [
+        "mol_project_2.linear1.bias",
+        "mol_project_2.linear1.weight",
+        "mol_project_2.linear2.bias",
+        "mol_project_2.linear2.weight",
+        "mol_project_fake.linear1.bias",
+        "mol_project_fake.linear1.weight",
+        "mol_project_fake.linear2.bias",
+        "mol_project_fake.linear2.weight",
+        "pocket_project_2.linear1.bias",
+        "pocket_project_2.linear1.weight",
+        "pocket_project_2.linear2.bias",
+        "pocket_project_2.linear2.weight",
+        "pocket_project_fake.linear1.bias",
+        "pocket_project_fake.linear1.weight",
+        "pocket_project_fake.linear2.bias",
+        "pocket_project_fake.linear2.weight"
+      ]
+    },
+    {
+      "fold": 2,
+      "sha256": "8638bf55304287591fe20b82ee9d09508ff621fb2f71ba6d75f8bdb369bcd293",
+      "missing_keys": [],
+      "unused_auxiliary_keys": [
+        "mol_project_2.linear1.bias",
+        "mol_project_2.linear1.weight",
+        "mol_project_2.linear2.bias",
+        "mol_project_2.linear2.weight",
+        "mol_project_fake.linear1.bias",
+        "mol_project_fake.linear1.weight",
+        "mol_project_fake.linear2.bias",
+        "mol_project_fake.linear2.weight",
+        "pocket_project_2.linear1.bias",
+        "pocket_project_2.linear1.weight",
+        "pocket_project_2.linear2.bias",
+        "pocket_project_2.linear2.weight",
+        "pocket_project_fake.linear1.bias",
+        "pocket_project_fake.linear1.weight",
+        "pocket_project_fake.linear2.bias",
+        "pocket_project_fake.linear2.weight"
+      ]
+    },
+    {
+      "fold": 3,
+      "sha256": "80f5fec6026636935e3e100d155a6803f12d1593e7f74c32de46e74b7739831c",
+      "missing_keys": [],
+      "unused_auxiliary_keys": [
+        "mol_project_2.linear1.bias",
+        "mol_project_2.linear1.weight",
+        "mol_project_2.linear2.bias",
+        "mol_project_2.linear2.weight",
+        "mol_project_fake.linear1.bias",
+        "mol_project_fake.linear1.weight",
+        "mol_project_fake.linear2.bias",
+        "mol_project_fake.linear2.weight",
+        "pocket_project_2.linear1.bias",
+        "pocket_project_2.linear1.weight",
+        "pocket_project_2.linear2.bias",
+        "pocket_project_2.linear2.weight",
+        "pocket_project_fake.linear1.bias",
+        "pocket_project_fake.linear1.weight",
+        "pocket_project_fake.linear2.bias",
+        "pocket_project_fake.linear2.weight"
+      ]
+    },
+    {
+      "fold": 4,
+      "sha256": "931577ba8217fd08db744763ef9613562f67e8d390f6266450a7b8b2b06e13e3",
+      "missing_keys": [],
+      "unused_auxiliary_keys": [
+        "mol_project_2.linear1.bias",
+        "mol_project_2.linear1.weight",
+        "mol_project_2.linear2.bias",
+        "mol_project_2.linear2.weight",
+        "mol_project_fake.linear1.bias",
+        "mol_project_fake.linear1.weight",
+        "mol_project_fake.linear2.bias",
+        "mol_project_fake.linear2.weight",
+        "pocket_project_2.linear1.bias",
+        "pocket_project_2.linear1.weight",
+        "pocket_project_2.linear2.bias",
+        "pocket_project_2.linear2.weight",
+        "pocket_project_fake.linear1.bias",
+        "pocket_project_fake.linear1.weight",
+        "pocket_project_fake.linear2.bias",
+        "pocket_project_fake.linear2.weight"
+      ]
+    },
+    {
+      "fold": 5,
+      "sha256": "fe9ddd7f83201b25c70715a9e4010c93b3249fe9022005d612ffa52b6a5a1fc1",
+      "missing_keys": [],
+      "unused_auxiliary_keys": [
+        "mol_project_2.linear1.bias",
+        "mol_project_2.linear1.weight",
+        "mol_project_2.linear2.bias",
+        "mol_project_2.linear2.weight",
+        "mol_project_fake.linear1.bias",
+        "mol_project_fake.linear1.weight",
+        "mol_project_fake.linear2.bias",
+        "mol_project_fake.linear2.weight",
+        "pocket_project_2.linear1.bias",
+        "pocket_project_2.linear1.weight",
+        "pocket_project_2.linear2.bias",
+        "pocket_project_2.linear2.weight",
+        "pocket_project_fake.linear1.bias",
+        "pocket_project_fake.linear1.weight",
+        "pocket_project_fake.linear2.bias",
+        "pocket_project_fake.linear2.weight"
+      ]
+    }
+  ],
+  "precision": "FP32, TF32 disabled",
+  "mol_shape": [
+    720,
+    6,
+    128
+  ],
+  "pocket_shape": [
+    9,
+    6,
+    128
+  ],
+  "primary": "AFv6 + ligand-blind P2Rank >=0.2 where eligible; LYVE1 uses official DTWG because no P2Rank pocket qualifies",
+  "scoring": "mean six fold cosines; per-pocket 0.6745*(score-median)/(MAD+1e-6) across 720; max pockets",
+  "secondary": "official preencoded DTWG AFv4 pockets for covered targets; SLC8A1 absent",
+  "dtwg_norm_range": [
+    0.9999999403953552,
+    1.0
+  ],
+  "source_hashes": {
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/unimol/tasks/drugclip.py": "ac9ec53e772daf65b6fd913a081697b6c70206c4490cdbf396a8debbb8f588f7",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/unimol/models/drugclip.py": "ab95e715e310d94d1f4ff344bad781d4ed025d60de3b490b8dcbd5653391c5f9",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/data_downloads/benchmark_throughput/dtwg_af_names_.npy": "cbbc55c08799e8631c810713d2c959ed1e382cfb3eca0e5715d93c4ae9de7346",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/data_downloads/benchmark_throughput/dtwg_af_embeddings.npy": "3456159d13c4b9f88132b3cdcbf331ae48287d90d1ef05b62e1244a1cf11f4d7",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/molecules.lmdb": "e262b78dd141f620c74183770a30963a3e6aa0248fd6f264a8dda8a275739ee7",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/pockets.lmdb": "a0ce7969c1fab4fdad4d65043c576d62966b4df89371cbf6574ffa5495555048"
+  },
+  "caution": "Retrieval scores, not calibrated affinity; public training overlap unknown"
+}

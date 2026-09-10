@@ -1,0 +1,9 @@
+{
+  "pid": 157297,
+  "auth_preserved": true,
+  "login_http_status": 200,
+  "unauthenticated_download_status": 401,
+  "server_started_after_final_source_changes": true,
+  "started_epoch": 1789012082.507128,
+  "latest_changed_file_epoch": 1789012078.2834318
+}

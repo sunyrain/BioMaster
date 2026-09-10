@@ -1,0 +1,20 @@
+{
+  "experimental_native": {
+    "complexes": 1223,
+    "available": 1223,
+    "contact_positive_complexes": 1223,
+    "contact_ap": 0.5675434083027863,
+    "distance_mae": 1.2476616629984958,
+    "site_hit_1": 0.2534750613246116,
+    "predicted_residue_coverage": 0.7597891950266494
+  },
+  "experimental_p2rank": {
+    "complexes": 1223,
+    "available": 1111,
+    "contact_positive_complexes": 1086,
+    "contact_ap": 0.25731806979514726,
+    "distance_mae": 6.297765432017864,
+    "site_hit_1": 0.6083401471790678,
+    "predicted_residue_coverage": 0.7597891950266494
+  }
+}

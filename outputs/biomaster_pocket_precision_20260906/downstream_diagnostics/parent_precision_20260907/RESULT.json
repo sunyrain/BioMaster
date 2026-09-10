@@ -1,0 +1,129 @@
+{
+  "status": "COMPLETE_READ_ONLY_PARENT_PRECISION_AUDIT",
+  "utc": "2026-09-07T03:36:28.049817+00:00",
+  "scope": "cutoff 2020, validation 2021-2022, seed 20260921; first downstream epoch only",
+  "parent": {
+    "cutoff": 2020,
+    "seed": 20260921,
+    "checkpoint": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+      "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+      "size_bytes": 4956393
+    },
+    "config": {
+      "variant": "global",
+      "width": 192,
+      "pair_width": 32,
+      "blocks": 2,
+      "dropout": 0.1,
+      "capacity_hidden": 768,
+      "drug_representation": "drugclip_morgan"
+    },
+    "selected_epoch": 6,
+    "result": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "21f6f6f7bc0d3c3468bdf38565cdfa780cfd1d52b861a2250dcaf43d6912b84f",
+      "size_bytes": 6839
+    }
+  },
+  "evaluation_precision": "BF16 autocast, microbatch=1, TF32 disabled; exact frozen-parent path of current ranker",
+  "parent_metrics": {
+    "d2t": {
+      "all_queries": 34,
+      "positive_queries": 34,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.477443969891659,
+      "macro_mrr": 0.5097626391053688,
+      "macro_recall_5": 0.534313725490196,
+      "macro_recall_10": 0.571078431372549,
+      "macro_recall_20": 0.6627450980392157,
+      "macro_ndcg_20": 0.5274591200509028,
+      "min_candidates": 291.0,
+      "median_candidates": 381.0,
+      "max_candidates": 384.0
+    },
+    "t2d": {
+      "all_queries": 39,
+      "positive_queries": 39,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.20383246147517825,
+      "macro_mrr": 0.2589886109004325,
+      "macro_recall_5": 0.2393162393162393,
+      "macro_recall_10": 0.3803418803418803,
+      "macro_recall_20": 0.5555555555555555,
+      "macro_ndcg_20": 0.2876822508707552,
+      "min_candidates": 657.0,
+      "median_candidates": 708.0,
+      "max_candidates": 720.0
+    }
+  },
+  "downstream_first_epoch": {
+    "epoch": 1,
+    "metrics": {
+      "d2t": {
+        "all_queries": 34,
+        "positive_queries": 34,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.4787038220831325,
+        "macro_mrr": 0.5103344944512421,
+        "macro_recall_5": 0.5318627450980392,
+        "macro_recall_10": 0.571078431372549,
+        "macro_recall_20": 0.6627450980392157,
+        "macro_ndcg_20": 0.5277645288980406,
+        "min_candidates": 291.0,
+        "median_candidates": 381.0,
+        "max_candidates": 384.0
+      },
+      "t2d": {
+        "all_queries": 39,
+        "positive_queries": 39,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.21029172492715192,
+        "macro_mrr": 0.27138583043130554,
+        "macro_recall_5": 0.21367521367521364,
+        "macro_recall_10": 0.34188034188034183,
+        "macro_recall_20": 0.6324786324786325,
+        "macro_ndcg_20": 0.3104972514896457,
+        "min_candidates": 657.0,
+        "median_candidates": 708.0,
+        "max_candidates": 720.0
+      }
+    },
+    "composite": 0.43543200103127677
+  },
+  "downstream_minus_matched_parent": {
+    "d2t": {
+      "macro_ap": 0.0012598521914735095,
+      "macro_recall_20": 0.0
+    },
+    "t2d": {
+      "macro_ap": 0.006459263451973674,
+      "macro_recall_20": 0.07692307692307698
+    }
+  },
+  "parent_composite": 0.4211918490176087,
+  "validation_identity": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+    "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+    "size_bytes": 458291
+  },
+  "risk_identity": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+    "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+    "size_bytes": 276608
+  },
+  "source_identity": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_parent_precision.py",
+    "sha256": "320ded832e4a2f08aa9af12dae0a98e171e035f3df9ffbd8dbc0679b203c45cb",
+    "size_bytes": 4834
+  },
+  "seconds": 55.44620086904615,
+  "used_for_selection": false,
+  "training_modified": false,
+  "new_model_rescored": false,
+  "uncertainty": "No paired query confidence interval: current trainer stores aggregate validation only."
+}

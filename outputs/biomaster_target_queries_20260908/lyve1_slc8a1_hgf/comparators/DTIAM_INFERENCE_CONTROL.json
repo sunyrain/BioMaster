@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "control_pairs": 32,
+  "max_abs_diff": 2.7590408346878093e-08
+}

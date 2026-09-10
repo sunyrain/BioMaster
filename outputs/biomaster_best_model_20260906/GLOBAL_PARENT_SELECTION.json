@@ -1,0 +1,727 @@
+{
+  "utc": "2026-09-06T08:39:20.630668+00:00",
+  "status": "FROZEN_GLOBAL_PARENT",
+  "selected": {
+    "name": "drugclip_morgan",
+    "parameters": 1235604,
+    "recipe": "global_ema",
+    "representation": "drugclip_morgan",
+    "selection_mean": 0.4374925072801877,
+    "selection_seed_sd": 0.013383204542563918,
+    "d2t_ap_mean": 0.42110932913068794,
+    "d2t_ap_seed_sd": 0.017382921931468308,
+    "t2d_ap_mean": 0.28668768184120835,
+    "t2d_ap_seed_sd": 0.01696282592323203,
+    "d2t_r20_mean": 0.6673825085589792,
+    "d2t_r20_seed_sd": 0.01582723139134588,
+    "t2d_r20_mean": 0.5977078477078477,
+    "t2d_r20_seed_sd": 0.01706785331273309,
+    "d2t_measured_ap_mean": 0.8680426161651335,
+    "d2t_measured_ap_seed_sd": 0.008970092162788133,
+    "t2d_measured_ap_mean": 0.7892721049536968,
+    "t2d_measured_ap_seed_sd": 0.003177474569954375,
+    "seed_composites": {
+      "20260921": 0.4415600027667761,
+      "20260922": 0.4483700636607239,
+      "20260923": 0.42254745541306304
+    },
+    "window_composites": {
+      "2018": 0.43872237504523,
+      "2020": 0.43626263951514543
+    }
+  },
+  "candidates": [
+    {
+      "name": "global",
+      "parameters": 838292,
+      "recipe": "baseline",
+      "representation": "drugclip",
+      "selection_mean": 0.40016136727244755,
+      "selection_seed_sd": 0.020964443416970624,
+      "d2t_ap_mean": 0.3565834120285136,
+      "d2t_ap_seed_sd": 0.023156058202643562,
+      "t2d_ap_mean": 0.2732645202796481,
+      "t2d_ap_seed_sd": 0.028450369994376015,
+      "d2t_r20_mean": 0.6478835978835978,
+      "d2t_r20_seed_sd": 0.012176991758298412,
+      "t2d_r20_mean": 0.5502136752136751,
+      "t2d_r20_seed_sd": 0.038899419859910425,
+      "d2t_measured_ap_mean": 0.8517382346447872,
+      "d2t_measured_ap_seed_sd": 0.012211087443398966,
+      "t2d_measured_ap_mean": 0.7886014233189589,
+      "t2d_measured_ap_seed_sd": 0.0012787000372016166,
+      "seed_composites": {
+        "20260921": 0.4218827567011963,
+        "20260922": 0.3985550671221084,
+        "20260923": 0.38004627799403795
+      },
+      "window_composites": {
+        "2018": 0.3939311867024629,
+        "2020": 0.4063915478424322
+      }
+    },
+    {
+      "name": "capacity",
+      "parameters": 2711508,
+      "recipe": "baseline",
+      "representation": "drugclip",
+      "selection_mean": 0.4063368432277228,
+      "selection_seed_sd": 0.020046950439573386,
+      "d2t_ap_mean": 0.34956960543174254,
+      "d2t_ap_seed_sd": 0.004772758531113165,
+      "t2d_ap_mean": 0.2772123717107308,
+      "t2d_ap_seed_sd": 0.0217516527015824,
+      "d2t_r20_mean": 0.6535208527855586,
+      "d2t_r20_seed_sd": 0.036032540872461376,
+      "t2d_r20_mean": 0.5929001554001554,
+      "t2d_r20_seed_sd": 0.04023022468913135,
+      "d2t_measured_ap_mean": 0.8621447951588693,
+      "d2t_measured_ap_seed_sd": 0.00593617593880049,
+      "t2d_measured_ap_mean": 0.7917258746398893,
+      "t2d_measured_ap_seed_sd": 0.009136956203543541,
+      "seed_composites": {
+        "20260921": 0.42945317433961405,
+        "20260922": 0.3937267038742107,
+        "20260923": 0.3958306514693435
+      },
+      "window_composites": {
+        "2018": 0.38310226575834627,
+        "2020": 0.42957142069709925
+      }
+    },
+    {
+      "name": "global_ema",
+      "parameters": 838292,
+      "recipe": "global_ema",
+      "representation": "drugclip",
+      "selection_mean": 0.4103009182414598,
+      "selection_seed_sd": 0.009507867702402622,
+      "d2t_ap_mean": 0.35790281942413316,
+      "d2t_ap_seed_sd": 0.015817667850442717,
+      "t2d_ap_mean": 0.2932445153873539,
+      "t2d_ap_seed_sd": 0.00442097603184878,
+      "d2t_r20_mean": 0.6487122626828509,
+      "d2t_r20_seed_sd": 0.029398298676297948,
+      "t2d_r20_mean": 0.567283411033411,
+      "t2d_r20_seed_sd": 0.019600313254119338,
+      "d2t_measured_ap_mean": 0.8673399309873618,
+      "d2t_measured_ap_seed_sd": 0.005828676330789233,
+      "t2d_measured_ap_mean": 0.7946885094725786,
+      "t2d_measured_ap_seed_sd": 0.0036922368316673463,
+      "seed_composites": {
+        "20260921": 0.4160602180685987,
+        "20260922": 0.41551585895201876,
+        "20260923": 0.3993266777037618
+      },
+      "window_composites": {
+        "2018": 0.3942690766028176,
+        "2020": 0.4263327598801019
+      }
+    },
+    {
+      "name": "global_query",
+      "parameters": 838292,
+      "recipe": "global_query",
+      "representation": "drugclip",
+      "selection_mean": 0.4123429919414547,
+      "selection_seed_sd": 0.006496760550634527,
+      "d2t_ap_mean": 0.35174047218833565,
+      "d2t_ap_seed_sd": 0.013295469155394484,
+      "t2d_ap_mean": 0.31357776456668546,
+      "t2d_ap_seed_sd": 0.015346386318422842,
+      "d2t_r20_mean": 0.6169662309368191,
+      "d2t_r20_seed_sd": 0.021934610476735387,
+      "t2d_r20_mean": 0.5795778295778296,
+      "t2d_r20_seed_sd": 0.009254234671957719,
+      "d2t_measured_ap_mean": 0.8628751267515357,
+      "d2t_measured_ap_seed_sd": 0.008483354773414104,
+      "t2d_measured_ap_mean": 0.7951768266709252,
+      "t2d_measured_ap_seed_sd": 0.0045265289606609554,
+      "seed_composites": {
+        "20260921": 0.41253618673111286,
+        "20260922": 0.40575178874779394,
+        "20260923": 0.41874100034545725
+      },
+      "window_composites": {
+        "2018": 0.39502402840862816,
+        "2020": 0.42966195547428127
+      }
+    },
+    {
+      "name": "global_assay",
+      "parameters": 838292,
+      "recipe": "global_assay",
+      "representation": "drugclip",
+      "selection_mean": 0.4102989978253762,
+      "selection_seed_sd": 0.007914935390506826,
+      "d2t_ap_mean": 0.34946435569561424,
+      "d2t_ap_seed_sd": 0.013045107373653615,
+      "t2d_ap_mean": 0.3004086571729337,
+      "t2d_ap_seed_sd": 0.012991773784208824,
+      "d2t_r20_mean": 0.6301353874883286,
+      "d2t_r20_seed_sd": 0.030654996863636364,
+      "t2d_r20_mean": 0.5888209013209013,
+      "t2d_r20_seed_sd": 0.034037011864385,
+      "d2t_measured_ap_mean": 0.8554174821961095,
+      "d2t_measured_ap_seed_sd": 0.00917358199985467,
+      "t2d_measured_ap_mean": 0.7976501868367141,
+      "t2d_measured_ap_seed_sd": 0.004278777131894926,
+      "seed_composites": {
+        "20260921": 0.4075694304117069,
+        "20260922": 0.41921747589567127,
+        "20260923": 0.40411008716875046
+      },
+      "window_composites": {
+        "2018": 0.3920406384688895,
+        "2020": 0.428557357181863
+      }
+    },
+    {
+      "name": "bermol",
+      "parameters": 887956,
+      "recipe": "global_ema",
+      "representation": "bermol",
+      "selection_mean": 0.36904447807942226,
+      "selection_seed_sd": 0.018929135779509276,
+      "d2t_ap_mean": 0.3504210860873616,
+      "d2t_ap_seed_sd": 0.02435164533484222,
+      "t2d_ap_mean": 0.2405861247465806,
+      "t2d_ap_seed_sd": 0.025904460502367898,
+      "d2t_r20_mean": 0.6080376595082477,
+      "d2t_r20_seed_sd": 0.02631761952901934,
+      "t2d_r20_mean": 0.4732420357420357,
+      "t2d_r20_seed_sd": 0.028444183692821177,
+      "d2t_measured_ap_mean": 0.8496699670771365,
+      "d2t_measured_ap_seed_sd": 0.0008153045464941244,
+      "t2d_measured_ap_mean": 0.7641714818667905,
+      "t2d_measured_ap_seed_sd": 0.002859903662060915,
+      "seed_composites": {
+        "20260921": 0.3472593499549636,
+        "20260922": 0.37839810555758213,
+        "20260923": 0.38147597872572114
+      },
+      "window_composites": {
+        "2018": 0.3845060565125524,
+        "2020": 0.3535828996462922
+      }
+    },
+    {
+      "name": "bermol_morgan",
+      "parameters": 1285268,
+      "recipe": "global_ema",
+      "representation": "bermol_morgan",
+      "selection_mean": 0.4092299096441076,
+      "selection_seed_sd": 0.006722589677070825,
+      "d2t_ap_mean": 0.3908331913322347,
+      "d2t_ap_seed_sd": 0.022613729592250883,
+      "t2d_ap_mean": 0.26304508331979876,
+      "t2d_ap_seed_sd": 0.03318128229308153,
+      "d2t_r20_mean": 0.6388422035480859,
+      "d2t_r20_seed_sd": 0.021590443330580533,
+      "t2d_r20_mean": 0.5636412198912198,
+      "t2d_r20_seed_sd": 0.03523686443275364,
+      "d2t_measured_ap_mean": 0.8505805311763286,
+      "d2t_measured_ap_seed_sd": 0.013091151415915115,
+      "t2d_measured_ap_mean": 0.7669069179675522,
+      "t2d_measured_ap_seed_sd": 0.0071624199496053515,
+      "seed_composites": {
+        "20260921": 0.4169600928717899,
+        "20260922": 0.40475129344550825,
+        "20260923": 0.4059783426150244
+      },
+      "window_composites": {
+        "2018": 0.4217395583091043,
+        "2020": 0.3967202609791108
+      }
+    },
+    {
+      "name": "morgan",
+      "parameters": 1136276,
+      "recipe": "global_ema",
+      "representation": "morgan",
+      "selection_mean": 0.37038454694913575,
+      "selection_seed_sd": 0.007761818345906775,
+      "d2t_ap_mean": 0.35260011891256676,
+      "d2t_ap_seed_sd": 0.01563635281741438,
+      "t2d_ap_mean": 0.25511232772391507,
+      "t2d_ap_seed_sd": 0.01966974537121016,
+      "d2t_r20_mean": 0.5507975412387177,
+      "d2t_r20_seed_sd": 0.01838322487421696,
+      "t2d_r20_mean": 0.5004370629370629,
+      "t2d_r20_seed_sd": 0.013962725041590567,
+      "d2t_measured_ap_mean": 0.846210030022433,
+      "d2t_measured_ap_seed_sd": 0.009563000263616197,
+      "t2d_measured_ap_mean": 0.7618445189327584,
+      "t2d_measured_ap_seed_sd": 0.0029882637328858984,
+      "seed_composites": {
+        "20260921": 0.3686528489035852,
+        "20260922": 0.3636348368693807,
+        "20260923": 0.3788659550744413
+      },
+      "window_composites": {
+        "2018": 0.3932122770976581,
+        "2020": 0.34755681680061334
+      }
+    },
+    {
+      "name": "drugclip_morgan",
+      "parameters": 1235604,
+      "recipe": "global_ema",
+      "representation": "drugclip_morgan",
+      "selection_mean": 0.4374925072801877,
+      "selection_seed_sd": 0.013383204542563918,
+      "d2t_ap_mean": 0.42110932913068794,
+      "d2t_ap_seed_sd": 0.017382921931468308,
+      "t2d_ap_mean": 0.28668768184120835,
+      "t2d_ap_seed_sd": 0.01696282592323203,
+      "d2t_r20_mean": 0.6673825085589792,
+      "d2t_r20_seed_sd": 0.01582723139134588,
+      "t2d_r20_mean": 0.5977078477078477,
+      "t2d_r20_seed_sd": 0.01706785331273309,
+      "d2t_measured_ap_mean": 0.8680426161651335,
+      "d2t_measured_ap_seed_sd": 0.008970092162788133,
+      "t2d_measured_ap_mean": 0.7892721049536968,
+      "t2d_measured_ap_seed_sd": 0.003177474569954375,
+      "seed_composites": {
+        "20260921": 0.4415600027667761,
+        "20260922": 0.4483700636607239,
+        "20260923": 0.42254745541306304
+      },
+      "window_composites": {
+        "2018": 0.43872237504523,
+        "2020": 0.43626263951514543
+      }
+    }
+  ],
+  "parents": [
+    {
+      "cutoff": 2018,
+      "seed": 20260921,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260921/BEST.pt",
+        "sha256": "68681f79e782e3517d905eee5a0e596947ca264ba6a7005a7ef539c591e76e7e",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 6,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+        "sha256": "74147d5e1c280c5d0a15f0f0344c955a19856cfb95da57cb86fd85ff747bb623",
+        "size_bytes": 6837
+      }
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260922,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260922/BEST.pt",
+        "sha256": "3b10e319b36508a59b9d564fbce1a0590a30d150019c3faac34f94d7d29bc6f5",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 6,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+        "sha256": "39ad44c8c6272b0defed41bc8ff27d0a386e43005eb97a6c0c6cef4f091e085a",
+        "size_bytes": 6836
+      }
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260923,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260923/BEST.pt",
+        "sha256": "8cc3f3f22c2cddd9143fe424174dc07d278ec76b9b9d8650323bfb0f735855b1",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 4,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+        "sha256": "9fc368c2847146711796fc25a040318563233303db2153f07d99b1220a4670b9",
+        "size_bytes": 6836
+      }
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260921,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+        "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 6,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+        "sha256": "21f6f6f7bc0d3c3468bdf38565cdfa780cfd1d52b861a2250dcaf43d6912b84f",
+        "size_bytes": 6839
+      }
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260922,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260922/BEST.pt",
+        "sha256": "f64237cf9d950feb134c95a41b4d2ed6809cbf9f98a085fac01cb4a049f9a4f7",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 4,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+        "sha256": "7283517a8f36bc467c00cc205017f539bf8e112917632cffa58bd6654abeac0d",
+        "size_bytes": 6837
+      }
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260923,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260923/BEST.pt",
+        "sha256": "d6e5cf9800f82063a9e7f3442eaf0f464a8008b97b2e78b3731d468d931a9886",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 4,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+        "sha256": "c4319f7dcbd920aef9b0e9398e6035ed6f196fa83a873dcc265c5098dac1acbe",
+        "size_bytes": 6838
+      }
+    }
+  ],
+  "fixed_refit_global_epochs": 5,
+  "test_labels_used_for_selection": false,
+  "selection_scope": "two development windows, three seeds, nine global candidates",
+  "refinement_protocol": {
+    "path": "/root/autodl-tmp/BioMaster/configs/biomaster_best_model_refinement_20260906.json",
+    "sha256": "cd5947ed250d0cbfd89974ae6ceef36c533e3020599086a4346ddd069927f875",
+    "size_bytes": 2736
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/select_biomaster_global_parent.py",
+    "sha256": "15c429ff15ceac2ddbb7621a751140562919941651c022afa653f04665b651f9",
+    "size_bytes": 8850
+  },
+  "results": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/global/seed_20260921/RESULT.json",
+      "sha256": "08bc6e8ae835cc959a5458cd550f44fca432cbd56d0818a0f243277a1577bd6b",
+      "size_bytes": 4957
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/global/seed_20260922/RESULT.json",
+      "sha256": "e6e02c06bf45786c165cc376b77b8676af068f0eb9d5ace24c8527b39d705530",
+      "size_bytes": 4959
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/global/seed_20260923/RESULT.json",
+      "sha256": "dfdf7b7fd6e2b306c3e8c29c00a97a50e52b66688dd37fe7aea772e1fc228d64",
+      "size_bytes": 4960
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/development/global/seed_20260921/RESULT.json",
+      "sha256": "c39c083293f52cbbdb6b77d4172a03f1d0cb1d871929324aec51487a60b3fb12",
+      "size_bytes": 3563
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/global/seed_20260922/RESULT.json",
+      "sha256": "bff60428674ca075aaa148b44b9088d16b980fc9721cda3a070d5ed9269eb2fb",
+      "size_bytes": 3568
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/global/seed_20260923/RESULT.json",
+      "sha256": "b45eca67686a0159034c4ba2f154c13af6139c20f2725920c6a798be323af1bf",
+      "size_bytes": 3569
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/capacity/seed_20260921/RESULT.json",
+      "sha256": "4ec108d61d6c2b144dd248fa73f5500c33e2d9a4b304ac2240df23be61f62800",
+      "size_bytes": 4966
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/capacity/seed_20260922/RESULT.json",
+      "sha256": "8ff1a4d5c799c0386410cdd9f6e77df38022c198168e803c16719e3c9dead0ad",
+      "size_bytes": 4964
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/capacity/seed_20260923/RESULT.json",
+      "sha256": "f002b3fc1ab712fcbbb7a95a5fb32933bb891888f4457a1794990f917b944358",
+      "size_bytes": 4963
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/development/capacity/seed_20260921/RESULT.json",
+      "sha256": "be9bc419c487b885477099b61bc2dea5e0c816c84c781c7648696b71ae4d10e4",
+      "size_bytes": 3569
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260922/RESULT.json",
+      "sha256": "769463142794b03ecae6b00cbf700b1b8ae4331a3ab110c8e59f86ebceeb1bd6",
+      "size_bytes": 3574
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260923/RESULT.json",
+      "sha256": "552a6e0a639b08d6639005a6c7eca0807a1d21341ca915b4debfd3efdc09cf51",
+      "size_bytes": 3572
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "a58596f529ddbe01e6edbea981c4e564dc1fdf7f301a2b3df8ea03506873326e",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "e58008d5332ad21fdf14802dc9e076f394681e83a81011b764d27c0f57207c64",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "b26fb7c5927d327346e128ab559f3a98874a749987ec24dc14d88711798af199",
+      "size_bytes": 5618
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "53578e69fdfd204dbda3d7e1ddad278d08b94f675fd738b581eb7562f6900e88",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "055f8945c1ce53fc23a7584df1f1736f8b14d0c05bf292c8717be20f98a0c9f8",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+      "sha256": "2f1d8f18c0df6bea47f6aa9b78eb7356cc9dc30693c2a8b537ebd01f09842cfb",
+      "size_bytes": 5614
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_query/seed_20260921/RESULT.json",
+      "sha256": "8b9b6b1e7c2314a65449784261a245aaa3e664f03936812dc8c8851aa7472290",
+      "size_bytes": 5622
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_query/seed_20260922/RESULT.json",
+      "sha256": "7c4bce822a37a1eee492557f8cdc690257bc57d5816b50f49d0c62f82fdab6e0",
+      "size_bytes": 5618
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_query/seed_20260923/RESULT.json",
+      "sha256": "cd2a99bb8fa2ee310aaef63bf083dac733fc89320d96fcad567c5c926ec54810",
+      "size_bytes": 5622
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_query/seed_20260921/RESULT.json",
+      "sha256": "e7d64a18a4ab84e38578f0f0321b4ad1343f205eb949060f8fd2f62d931c9451",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_query/seed_20260922/RESULT.json",
+      "sha256": "dfec8296c5145f9a08ccf6d31463fd8535b151f6d1705652e700672abb25e577",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_query/seed_20260923/RESULT.json",
+      "sha256": "c57eb49dafbe3dcf5870ad091b107d6956650542067457a14fff33797e13ba01",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_assay/seed_20260921/RESULT.json",
+      "sha256": "a00734d3aff962b5f62ca28a784166dac0aa35a967398150b71ab0d551ba4f5f",
+      "size_bytes": 5625
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_assay/seed_20260922/RESULT.json",
+      "sha256": "dd1f4e80d65589a497fa50269dad6b8508f9089dc081afbcf189e35ebc7bc769",
+      "size_bytes": 5623
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_assay/seed_20260923/RESULT.json",
+      "sha256": "aff536524057471dd0c63bb0f9428b75be6da72fabfa5a4f35bc0744b0d0cd6b",
+      "size_bytes": 5618
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_assay/seed_20260921/RESULT.json",
+      "sha256": "74221e124d06ef567c68784d44bd8b57efde2a44ce9b5c1fba7ada78d88aef26",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_assay/seed_20260922/RESULT.json",
+      "sha256": "005b019a4a9aaab7e9a547ec3255358706f5b2401496f01e7a4a4a9ff22510a7",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_assay/seed_20260923/RESULT.json",
+      "sha256": "ad17257aba9e8d737558f65a244fbfea7d1ad5615439ffca78e6e721221ab122",
+      "size_bytes": 5621
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "6f2343f4be3ae9e5187747c8dcb7df6c4d75519d4a9e510ca633b252015034bb",
+      "size_bytes": 6838
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "2b39215a9eabeebff8e795c4a777c325448bae524888ab8b07cc29a2903d10d0",
+      "size_bytes": 6837
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "ea16cacb2ab44695755f7a70415b06353ac45a67c82b9faa239b2cf6f224b8ec",
+      "size_bytes": 6835
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "438b1b2cd5cf1078f929454095358421f603f0d16fa1e1d04f71fc167a8e22d2",
+      "size_bytes": 6838
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "adb39cda2b0ea6335ae28e243629c661773fd160a3d4c349d999de2d4eb1dc78",
+      "size_bytes": 6835
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+      "sha256": "3d9a43751115857b3dd9298616de2dc840409f407e117975cef0c4056516b00b",
+      "size_bytes": 6835
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "57ab739cf89780386f8d49a0a4f152b248d67c23da0f89639a5a48ece4e18c11",
+      "size_bytes": 6851
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "221aa9af8185ba8381337d11426be1b0efaa41acce1cdefab455084aa3a68be6",
+      "size_bytes": 6852
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "bad0ede5d0a1ec14642d8a61a53fcb370620130aadc599ee28536b1dd0499216",
+      "size_bytes": 6852
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "3bac1335437fcf6eb830a8ac5af0d33e0fe92f6f7c22ace6475ebe57ae87fb4c",
+      "size_bytes": 6854
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "ec58e2efbe81a9ada81d499ced97b03241d0dba474b8a8f84b2a8c37de1c2c7e",
+      "size_bytes": 6849
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+      "sha256": "0e47c2765659a951819e3e28a8dac3ed389a16f07b538e1d6de819d0f4db10cc",
+      "size_bytes": 6851
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/morgan/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "2c5069ad1d1da48f883682d97575c1f17c0af38365c6bc51bd8da2b391f91ecc",
+      "size_bytes": 6821
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/morgan/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "7be3a0114367a687de1116b8ab98b32878b2f680cab54efaefed354e95ce4128",
+      "size_bytes": 6821
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/morgan/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "2a9fb55bff730578ce90f33bcf45873db550e8dffd6050419f639e7d599c2807",
+      "size_bytes": 6816
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "9963340c3da7210a43f6f9d3580e57f8b4dae3bce77e5b3e2667f378cb9f5a6b",
+      "size_bytes": 6820
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/morgan/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "db652ed48bb03ada0550d191a23ed554dad509d5892a9d8ede8ba348240668dc",
+      "size_bytes": 6820
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/morgan/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+      "sha256": "1c5522435cb4f5ba6488cd64aa238be0aec63e4c6efae63f6401d8cbdb427067",
+      "size_bytes": 6821
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "74147d5e1c280c5d0a15f0f0344c955a19856cfb95da57cb86fd85ff747bb623",
+      "size_bytes": 6837
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "39ad44c8c6272b0defed41bc8ff27d0a386e43005eb97a6c0c6cef4f091e085a",
+      "size_bytes": 6836
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "9fc368c2847146711796fc25a040318563233303db2153f07d99b1220a4670b9",
+      "size_bytes": 6836
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "21f6f6f7bc0d3c3468bdf38565cdfa780cfd1d52b861a2250dcaf43d6912b84f",
+      "size_bytes": 6839
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "7283517a8f36bc467c00cc205017f539bf8e112917632cffa58bd6654abeac0d",
+      "size_bytes": 6837
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+      "sha256": "c4319f7dcbd920aef9b0e9398e6035ed6f196fa83a873dcc265c5098dac1acbe",
+      "size_bytes": 6838
+    }
+  ]
+}

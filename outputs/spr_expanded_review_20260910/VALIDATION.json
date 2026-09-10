@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "baseline_sha_unchanged": true,
+    "new384_unique_disjoint": true,
+    "baseline384_reclassified": true,
+    "new384_reviewed": true,
+    "no_local_raw_activity": true,
+    "identity_chemistry_novelty_gates": true,
+    "route_192_192": true,
+    "drug_cap4_target_cap8": true,
+    "joint_thresholds": true,
+    "graph_independent_thresholds": true,
+    "new_pool_not_experimental_release": true,
+    "batch1_complete_identity_sources": true,
+    "batch2_complete_identity_sources": true,
+    "batch3_complete_identity_sources": true
+  },
+  "all_passed": true,
+  "experimental_release": false
+}

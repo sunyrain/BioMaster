@@ -1,0 +1,98 @@
+[
+  {
+    "scope": "project_720x384",
+    "direction": "d2t",
+    "winner": "J_old_relation_pretrained",
+    "queries": 398,
+    "delta_ap": 0.2795361105381682,
+    "ci_low": 0.2411025253888553,
+    "ci_high": 0.3197262186139733,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "project_720x384",
+    "direction": "t2d",
+    "winner": "J_old_relation_pretrained",
+    "queries": 185,
+    "delta_ap": 0.29016496936406566,
+    "ci_low": 0.24224319076986747,
+    "ci_high": 0.34057820887447127,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "winner": "J_old_relation_pretrained",
+    "queries": 33,
+    "delta_ap": 0.20098827589333837,
+    "ci_low": 0.09313292260017209,
+    "ci_high": 0.3282442498368534,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "winner": "J_old_relation_pretrained",
+    "queries": 54,
+    "delta_ap": 0.09259067485993848,
+    "ci_low": 0.049989532818753235,
+    "ci_high": 0.14216713781541487,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "winner": "J_old_relation_pretrained",
+    "queries": 34,
+    "delta_ap": 0.20809724316412304,
+    "ci_low": 0.10493715041318594,
+    "ci_high": 0.3241561913642499,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "winner": "J_old_relation_pretrained",
+    "queries": 57,
+    "delta_ap": 0.13467491484224492,
+    "ci_low": 0.06333330554408162,
+    "ci_high": 0.21944423528780105,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "winner": "J_old_relation_pretrained",
+    "queries": 91,
+    "delta_ap": 0.21172472412520163,
+    "ci_low": 0.13729296964640672,
+    "ci_high": 0.2911737880093456,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  },
+  {
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "winner": "J_old_relation_pretrained",
+    "queries": 72,
+    "delta_ap": 0.14310084126716127,
+    "ci_low": 0.07815902376294355,
+    "ci_high": 0.2173809815272619,
+    "confidence": 0.975,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "interpretation": "ensemble logits ranked; 97.5% marginal interval for the two direction AP comparisons within scope"
+  }
+]

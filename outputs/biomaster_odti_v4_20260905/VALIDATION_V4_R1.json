@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "new_training_runs": 9,
+  "historical_checkpoints_evaluated": 2,
+  "simple_baselines": 2,
+  "new_model_epochs_total": 79,
+  "sum_training_seconds": 312.36,
+  "all_epochs_full_relation_coverage": true,
+  "selected_epochs_match_validation_argmax": true,
+  "all_prediction_shapes_and_values_valid": true,
+  "signed_score_contract_valid": true,
+  "bermol_recomputation_max_absolute_error": 3.419816493988037e-06,
+  "tests": "54 relevant tests passed, including CUDA direct/cached score equivalence",
+  "production_promoted": false
+}

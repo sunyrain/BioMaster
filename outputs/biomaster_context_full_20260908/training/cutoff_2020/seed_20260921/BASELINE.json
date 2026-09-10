@@ -1,0 +1,131 @@
+{
+  "original": {
+    "experimental_native": {
+      "complexes": 1223,
+      "available": 1223,
+      "contact_positive_complexes": 1223,
+      "contact_ap": 0.5671258218557094,
+      "distance_mae": 1.2478746625115806,
+      "site_hit_1": 0.9991823385118561,
+      "predicted_residue_coverage": 0.7597891950266494
+    }
+  },
+  "initial": {
+    "experimental_native": {
+      "complexes": 1223,
+      "available": 1223,
+      "contact_positive_complexes": 1223,
+      "contact_ap": 0.5675434083027863,
+      "distance_mae": 1.2476616629984958,
+      "site_hit_1": 0.2534750613246116,
+      "predicted_residue_coverage": 0.7597891950266494
+    },
+    "experimental_p2rank": {
+      "complexes": 1223,
+      "available": 1111,
+      "contact_positive_complexes": 1086,
+      "contact_ap": 0.25731806979514726,
+      "distance_mae": 6.297765432017864,
+      "site_hit_1": 0.6083401471790678,
+      "predicted_residue_coverage": 0.7597891950266494
+    }
+  },
+  "sentinel": {
+    "experimental_native": {
+      "complexes": 64,
+      "available": 64,
+      "contact_positive_complexes": 64,
+      "contact_ap": 0.49599621315506803,
+      "distance_mae": 1.4666364155709743,
+      "site_hit_1": 0.21875,
+      "predicted_residue_coverage": 0.6805022867749071
+    },
+    "experimental_p2rank": {
+      "complexes": 64,
+      "available": 55,
+      "contact_positive_complexes": 51,
+      "contact_ap": 0.24925087513573044,
+      "distance_mae": 7.376511634479869,
+      "site_hit_1": 0.546875,
+      "predicted_residue_coverage": 0.6805022867749071
+    }
+  },
+  "parent": {
+    "d2t": {
+      "all_queries": 34,
+      "positive_queries": 34,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.4764840284179942,
+      "macro_mrr": 0.5097983519598345,
+      "macro_recall_5": 0.5245098039215685,
+      "macro_recall_10": 0.571078431372549,
+      "macro_recall_20": 0.6627450980392157,
+      "macro_ndcg_20": 0.5267969250460204,
+      "min_candidates": 291.0,
+      "median_candidates": 381.0,
+      "max_candidates": 384.0
+    },
+    "t2d": {
+      "all_queries": 39,
+      "positive_queries": 39,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.20256771015121797,
+      "macro_mrr": 0.2577542796342111,
+      "macro_recall_5": 0.2393162393162393,
+      "macro_recall_10": 0.3803418803418803,
+      "macro_recall_20": 0.5811965811965811,
+      "macro_ndcg_20": 0.2923962636363476,
+      "min_candidates": 657.0,
+      "median_candidates": 708.0,
+      "max_candidates": 720.0
+    }
+  },
+  "initial_ranking": {
+    "d2t": {
+      "all_queries": 34,
+      "positive_queries": 34,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.23571665449610074,
+      "macro_mrr": 0.27258574494205895,
+      "macro_recall_5": 0.2852941176470588,
+      "macro_recall_10": 0.31323529411764706,
+      "macro_recall_20": 0.403921568627451,
+      "macro_ndcg_20": 0.2797756533524383,
+      "min_candidates": 291.0,
+      "median_candidates": 381.0,
+      "max_candidates": 384.0,
+      "paired_ap_vs_parent": {
+        "queries": 34,
+        "delta_ap": -0.24076737392189335,
+        "ci_low": -0.36375417432934526,
+        "ci_high": -0.12807661055017172,
+        "confidence": 0.95
+      }
+    },
+    "t2d": {
+      "all_queries": 39,
+      "positive_queries": 39,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.030642656946739868,
+      "macro_mrr": 0.03343018152053066,
+      "macro_recall_5": 0.05128205128205128,
+      "macro_recall_10": 0.0641025641025641,
+      "macro_recall_20": 0.1282051282051282,
+      "macro_ndcg_20": 0.04481176940613485,
+      "min_candidates": 657.0,
+      "median_candidates": 708.0,
+      "max_candidates": 720.0,
+      "paired_ap_vs_parent": {
+        "queries": 39,
+        "delta_ap": -0.17192505320447804,
+        "ci_low": -0.26117537125436907,
+        "ci_high": -0.0953430692684905,
+        "confidence": 0.95
+      }
+    }
+  }
+}

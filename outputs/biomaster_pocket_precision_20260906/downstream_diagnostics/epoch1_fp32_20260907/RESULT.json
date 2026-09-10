@@ -1,0 +1,118 @@
+{
+  "status": "COMPLETE_READ_ONLY_FP32_RANKING_AUDIT",
+  "utc": "2026-09-07T03:50:55.824347+00:00",
+  "snapshot": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/EPOCH1_SNAPSHOT.pt",
+    "sha256": "e170fde45439d7014d2db106cf28e18f6a990b52e01370f507551ff35de6a0c9",
+    "size_bytes": 139717267
+  },
+  "parent": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+    "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+    "size_bytes": 4956393
+  },
+  "validation": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+    "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+    "size_bytes": 458291
+  },
+  "risk": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+    "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+    "size_bytes": 276608
+  },
+  "source": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_ranking_fp32.py",
+    "sha256": "37ebb834c36ce49df300d12cf207cfe08a1e5bc9ac10fe289f1be31357838cdc",
+    "size_bytes": 7747
+  },
+  "evaluation": "FP32 weights/inputs/operations, TF32 disabled, microbatch=1, fixed epoch 1",
+  "scope": "cutoff 2020, validation 2021-2022, seed 20260921; all risk-set candidates, unknown background not inactivity",
+  "metrics": {
+    "d2t": {
+      "parent": {
+        "all_queries": 34,
+        "positive_queries": 34,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.4764840284179942,
+        "macro_mrr": 0.5097983519598345,
+        "macro_recall_5": 0.5245098039215685,
+        "macro_recall_10": 0.571078431372549,
+        "macro_recall_20": 0.6627450980392157,
+        "macro_ndcg_20": 0.5267969250460204,
+        "min_candidates": 291.0,
+        "median_candidates": 381.0,
+        "max_candidates": 384.0
+      },
+      "new": {
+        "all_queries": 34,
+        "positive_queries": 34,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.47858142818767674,
+        "macro_mrr": 0.5103943928248614,
+        "macro_recall_5": 0.5318627450980392,
+        "macro_recall_10": 0.571078431372549,
+        "macro_recall_20": 0.6627450980392157,
+        "macro_ndcg_20": 0.5276276777016871,
+        "min_candidates": 291.0,
+        "median_candidates": 381.0,
+        "max_candidates": 384.0
+      }
+    },
+    "t2d": {
+      "parent": {
+        "all_queries": 39,
+        "positive_queries": 39,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.20256771015121797,
+        "macro_mrr": 0.2577542796342111,
+        "macro_recall_5": 0.2393162393162393,
+        "macro_recall_10": 0.3803418803418803,
+        "macro_recall_20": 0.5811965811965811,
+        "macro_ndcg_20": 0.2923962636363476,
+        "min_candidates": 657.0,
+        "median_candidates": 708.0,
+        "max_candidates": 720.0
+      },
+      "new": {
+        "all_queries": 39,
+        "positive_queries": 39,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.20972170058526737,
+        "macro_mrr": 0.2707718531718953,
+        "macro_recall_5": 0.21367521367521364,
+        "macro_recall_10": 0.34188034188034183,
+        "macro_recall_20": 0.6068376068376068,
+        "macro_ndcg_20": 0.3041063112407389,
+        "min_candidates": 657.0,
+        "median_candidates": 708.0,
+        "max_candidates": 720.0
+      }
+    }
+  },
+  "paired_query_ap_intervals": {
+    "d2t": {
+      "queries": 34,
+      "delta_ap": 0.002097399769682686,
+      "ci_low": -0.0007838801918553875,
+      "ci_high": 0.006391254354648491,
+      "confidence": 0.95
+    },
+    "t2d": {
+      "queries": 39,
+      "delta_ap": 0.007153990434049416,
+      "ci_low": -0.004919593832406429,
+      "ci_high": 0.022960627232170683,
+      "confidence": 0.95
+    }
+  },
+  "seconds": 738.1360622206703,
+  "used_for_selection": false,
+  "promotion_eligible": false,
+  "training_modified": false,
+  "uncertainty": "Query bootstrap on one development window and seed; not multi-seed or external confirmation."
+}

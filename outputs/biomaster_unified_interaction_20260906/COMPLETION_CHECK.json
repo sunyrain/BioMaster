@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "complete_training_runs": [
+    {
+      "stage": "development",
+      "variant": "capacity",
+      "epochs": 10,
+      "selected_epoch": 6
+    },
+    {
+      "stage": "development",
+      "variant": "geometry",
+      "epochs": 10,
+      "selected_epoch": 6
+    },
+    {
+      "stage": "development",
+      "variant": "global",
+      "epochs": 7,
+      "selected_epoch": 3
+    },
+    {
+      "stage": "development",
+      "variant": "sequence",
+      "epochs": 8,
+      "selected_epoch": 4
+    },
+    {
+      "stage": "development",
+      "variant": "site",
+      "epochs": 8,
+      "selected_epoch": 4
+    },
+    {
+      "stage": "final",
+      "variant": "capacity",
+      "epochs": 6,
+      "selected_epoch": 6
+    },
+    {
+      "stage": "final",
+      "variant": "geometry",
+      "epochs": 6,
+      "selected_epoch": 6
+    },
+    {
+      "stage": "final",
+      "variant": "global",
+      "epochs": 3,
+      "selected_epoch": 3
+    }
+  ],
+  "artifact_and_checkpoint_hashes_match": true,
+  "frozen_training_sources_match": true,
+  "tests_passed": 20,
+  "production_promoted": false
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-01T10:41:40.350423+00:00",
+  "protocol": "RETARGETMAP_FIRST_WETLAB_PRELIMINARY_POOL_V1",
+  "selection_scope": {
+    "deployment_denominator": 384,
+    "direction": "old_drug_to_target",
+    "assay_routes": [
+      "ENZYME_BIOCHEMICAL",
+      "KINASE_BIOCHEMICAL",
+      "NUCLEAR_EPIGENETIC_DOMAIN"
+    ],
+    "target_warm_only": true,
+    "local_calibration_8x8_required": true,
+    "exact_pair_observed_in_training": false,
+    "unknown_pair_policy": "unknown_not_negative"
+  },
+  "counts": {
+    "rows": 192960,
+    "drugs": 720,
+    "targets": 268,
+    "model_selection_buckets": {
+      "CURRENT_DEFAULT_BORDA_ONLY_TOP10": 472,
+      "DTIAM_ONLY_TOP10": 1069,
+      "FOUR_SCORE_LOW_BACKGROUND": 31755,
+      "FULL_FIT_EXPLORATORY_ONLY_TOP10": 2274,
+      "INTERMEDIATE": 153511,
+      "S5_ANCHORED_DTIAM_CONSENSUS_TOP10": 700,
+      "S5_ANCHORED_ONLY_TOP10": 3179
+    }
+  },
+  "model_roles": {
+    "primary_recommender": "s5_anchored_independent_score / rank_within_drug_384",
+    "current_contract_default_challenger": "current_default_borda_score / rank_within_drug_384",
+    "external_comparator": "dtiam_probability / derived rank_within_drug_384",
+    "exploratory_support": "full_fit_directional_score / rank_within_drug_384",
+    "not_used_as_independent_recommender": "system score containing DTIAM"
+  },
+  "claim_boundary": "All rows are unreported in the frozen training relations, not proven novel. Current database/literature audit, assay feasibility, and compound QC are required before any pair enters the blinded experimental matrix.",
+  "artifacts": {
+    "pool": "outputs/retargetmap_experiment_20260901/RETARGETMAP_EXPERIMENT_PRELIMINARY_POOL_V1.csv.gz",
+    "target_assay_feasibility_roster": "outputs/retargetmap_experiment_20260901/RETARGETMAP_TARGET_ASSAY_FEASIBILITY_ROSTER_V1.csv"
+  },
+  "inputs": {
+    "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz": "10a456291bbc7ed518c1ed145ae8225d6988f65ead1f58a12977d881abdd9183",
+    "outputs/retrain_20260901/bidirectional_720x745_full_fit_rows4/BIOMASTER_BIDIRECTIONAL_720X745_ROUTED_SCORES_V1.csv.gz": "95cc0af1fc577dc7a8d72c0fc08becd9023f2328338f50cd5e40ece600640caf",
+    "outputs/target_discovery_scope_ch37_v3/TARGET_PRIMARY_DIRECT_SM_ASSAYABLE_450_V3.csv.gz": "fd6af7bb842c8266e73915a8d856c6ef3ede3f7262116196500ba0a9d5458371"
+  }
+}

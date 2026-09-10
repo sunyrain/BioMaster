@@ -1,0 +1,26 @@
+{
+  "status": "COMPLETE",
+  "task": "known old-drug/target bidirectional ranking",
+  "scopes": {
+    "project_720x384": {
+      "drugs": 720,
+      "targets": 384
+    },
+    "drugclip_common": {
+      "drugs": 548,
+      "targets": 269
+    },
+    "original_test_old_drugs": {
+      "drugs": 54,
+      "targets": 384
+    },
+    "old_drugs_absent_from_binary_relations": {
+      "drugs": 223,
+      "targets": 384
+    }
+  },
+  "models_evaluated": 11,
+  "new_training": false,
+  "original_protocol_sha256": "4c939d9323775ac4fd5f58cca538d334aa7e1cac3b5efbbaa84766ebc0b9474c",
+  "claim": "known-relationship recovery; inherited model training exposure and retrospective label coverage explicitly reported"
+}

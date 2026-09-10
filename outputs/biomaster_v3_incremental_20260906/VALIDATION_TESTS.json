@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "command": "python -m pytest -q tests/test_odti_v3_incremental.py tests/test_old_relation_retrieval.py tests/test_v3_incremental_selection.py tests/test_old_drug_ranking.py tests/test_odti_v3_panel_metrics.py",
+  "passed": 32,
+  "seconds": 2.21,
+  "exit_code": 0,
+  "files_sha256": {
+    "tests/test_odti_v3_incremental.py": "93822035637ad89e40aa2201c4e95eec8cffec87a733341e8d3864ed48633eaf",
+    "tests/test_old_relation_retrieval.py": "fab6d7ed2e71fdce6766154bec1a6ede062f3529045419b69bf8d612d99207d0",
+    "tests/test_v3_incremental_selection.py": "f47a1169a9898e3c5e47932e66ee936f03a8ca5afbc66a73af0edf74c6916ba3",
+    "tests/test_old_drug_ranking.py": "b9adcc87bae086cb946a111fd3f116e59ea328e8f2c792ede7dc7271e118a400",
+    "tests/test_odti_v3_panel_metrics.py": "32c5c98e4af6c086de9e30bede5a2b7451c8b999702b57ca1569d8b5c94594aa",
+    "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+    "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee",
+    "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595"
+  }
+}

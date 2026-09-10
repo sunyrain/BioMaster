@@ -1,0 +1,122 @@
+{
+  "status": "COMPLETE",
+  "target_index": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TARGET_INDEX.csv.gz",
+    "sha256": "2c1f57cd5b80503d25383db7193c78e9020f7b5129090bc159958ec154e3d154",
+    "size_bytes": 203287
+  },
+  "targets": 384,
+  "full_residue_targets": 384,
+  "new_full_residue_targets": 24,
+  "max_local_residues": 96,
+  "selection": "actual deterministic residue subsample + exact full-sequence mean; no token binning",
+  "geometry": "mapped AlphaFold CA distances; predicted P2Rank sites; no cross ligand-protein distances",
+  "pocket_coverage": {
+    "indexed_targets": 384,
+    "targets_with_selected_pockets": 352,
+    "targets_with_at_least_two_pockets": 248,
+    "selected_pocket_count": 759,
+    "candidate_rows_examined": 4380,
+    "candidate_rows_valid_before_deduplication": 1187,
+    "sequence_region_fallback_target_count": 32,
+    "sequence_region_fallback_target_ids": [
+      0,
+      15,
+      23,
+      33,
+      34,
+      42,
+      45,
+      57,
+      60,
+      72,
+      73,
+      95,
+      115,
+      117,
+      122,
+      143,
+      159,
+      160,
+      161,
+      175,
+      199,
+      204,
+      223,
+      254,
+      294,
+      297,
+      314,
+      328,
+      338,
+      344,
+      349,
+      381
+    ],
+    "rejection_counts": {
+      "probability_below_threshold_or_invalid": 3193,
+      "target_without_exact_AF": 5,
+      "target_source_file_missing": 1
+    }
+  },
+  "labels_used": false,
+  "residue_sources": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_bindingdb_target_token_feature_package_v1/ESM2_650M_RESIDUE_INDEX_COMBINED_V1.csv.gz",
+      "sha256": "8cf19ebcf16c72d0e806f52e14a72c4d9f2aa9472abd91cfdc40109573593ce0",
+      "size_bytes": 23856
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_odti_v4_20260905/features/ESM2_ADDED_RESIDUE_INDEX_V4.csv",
+      "sha256": "20b04d38f3032214e4b5fa3df4e75df6b9026cc071182d115860c7609b94ef7d",
+      "size_bytes": 2410
+    }
+  ],
+  "files": {
+    "TARGET_GLOBAL_MEAN.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_GLOBAL_MEAN.npy",
+      "sha256": "89de0c2edba1bd2b85f216216285505d8b3e3d18b7a21277f3a8de03c734b888",
+      "size_bytes": 1966208
+    },
+    "TARGET_SEQUENCE_TOKENS.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SEQUENCE_TOKENS.npy",
+      "sha256": "bfed105622a3b5ca890074669912354bca1a0ba3bfe07be6d4b5a8395bf2f1e0",
+      "size_bytes": 94371968
+    },
+    "TARGET_SEQUENCE_INDICES.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SEQUENCE_INDICES.npy",
+      "sha256": "f9432ab96d56b578a7f22c34be5c2fd98cb66f64fa9c108e95bda4ef50218690",
+      "size_bytes": 147584
+    },
+    "TARGET_SITE_TOKENS.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SITE_TOKENS.npy",
+      "sha256": "af568b63f10d053cfa82d5172b270814eae44d976793a36a0b3ad2cfacc5366c",
+      "size_bytes": 94371968
+    },
+    "TARGET_SITE_INDICES.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SITE_INDICES.npy",
+      "sha256": "8e89ffb4fc5d773319cf23422ce7e3c79eec298566ca9ac98bc95b12ff57cede",
+      "size_bytes": 147584
+    },
+    "TARGET_CA.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_CA.npy",
+      "sha256": "9d1455cf4231d54b0b03b41569fd905de7d2db048fe3dc408f7add969c9bb9ff",
+      "size_bytes": 442496
+    },
+    "TARGET_QUALITY.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_QUALITY.npy",
+      "sha256": "e95897a1219b3bf34e454ff6b9fe801681b38c038ac21486460b3a5550bba89e",
+      "size_bytes": 147584
+    },
+    "TARGET_GEOMETRY_MASK.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_GEOMETRY_MASK.npy",
+      "sha256": "f308d94d66fa753d23cd46059d36184e5de45ef0065576cd65a13f9274569653",
+      "size_bytes": 36992
+    },
+    "TARGET_SITE_MEMBER.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SITE_MEMBER.npy",
+      "sha256": "f308d94d66fa753d23cd46059d36184e5de45ef0065576cd65a13f9274569653",
+      "size_bytes": 36992
+    }
+  }
+}

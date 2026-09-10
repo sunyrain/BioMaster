@@ -1,0 +1,11 @@
+{
+  "pid": 10279,
+  "command": [
+    "/root/miniconda3/bin/python",
+    "-u",
+    "/root/autodl-tmp/BioMaster/scripts/train_biomaster_context_full_20260908.py",
+    "--output",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_context_full_20260908/training/cutoff_2020/seed_20260921"
+  ],
+  "started_utc": "2026-09-08T07:35:53.869045+00:00"
+}

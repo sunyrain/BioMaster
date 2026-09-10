@@ -1,0 +1,14 @@
+[
+  {
+    "epoch": 1,
+    "mean_bce": 0.6714520454406738,
+    "mean_retrieval": 4.204095840454102,
+    "validation": null,
+    "selected_epoch": 1,
+    "coverage_rows": 1024,
+    "exposure_sha256": "19e3472452b1c2fabc31aa5b013fa548278aeac147297422b0ca2fe929b4b205",
+    "learning_rate": 0.0003,
+    "gradient_norm": 1.0428454875946045,
+    "epoch_seconds": 0.948224188759923
+  }
+]

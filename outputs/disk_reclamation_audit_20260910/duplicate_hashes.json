@@ -1,0 +1,23 @@
+[
+  {
+    "primary": "outputs/boltz2_structure_affinity_v1/boltz_cache/boltz2_aff.ckpt",
+    "duplicate": "/root/autodl-tmp/boltz_cache/boltz2_aff.ckpt",
+    "size_bytes": 2062139170,
+    "sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e",
+    "equal": true
+  },
+  {
+    "primary": "outputs/boltz2_structure_affinity_v1/boltz_cache/boltz2_conf.ckpt",
+    "duplicate": "/root/autodl-tmp/boltz_cache/boltz2_conf.ckpt",
+    "size_bytes": 2286561469,
+    "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+    "equal": true
+  },
+  {
+    "primary": "outputs/boltz2_structure_affinity_v1/boltz_cache/mols.tar",
+    "duplicate": "/root/autodl-tmp/boltz_cache/mols.tar",
+    "size_bytes": 1855662080,
+    "sha256": "39e076d96dbec6b4e86982bbda16f3a53a2a60c9bdc17828d88f6f9a0c7d1fd7",
+    "equal": true
+  }
+]

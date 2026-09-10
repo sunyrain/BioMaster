@@ -1,0 +1,28 @@
+{
+  "targets": 112,
+  "candidate_rows": 384,
+  "target_categories": {
+    "A_完整FDA结构匹配且有Kd或Ki线索": 69,
+    "D_本次未找到合格FDA线索_不代表不存在": 21,
+    "C_仅结合类IC50线索": 14,
+    "B_FDA名称匹配且有Kd或Ki线索_身份待复核": 8
+  },
+  "candidate_categories": {
+    "A_完整FDA结构匹配且有Kd或Ki线索": 236,
+    "D_本次未找到合格FDA线索_不代表不存在": 70,
+    "C_仅结合类IC50线索": 43,
+    "B_FDA名称匹配且有Kd或Ki线索_身份待复核": 35
+  },
+  "fda_identity_candidates": 1952,
+  "raw_activity_rows": 11917,
+  "qualified_option_rows": 1112,
+  "fda_snapshot": "2026-08-03",
+  "replaces_frozen_controls": false,
+  "limitations": [
+    "FDA当前状态依据本地官方快照，未逐一在线核验近期变更",
+    "B类仅名称映射，不作为已确认FDA精确结构",
+    "Kd/Ki线索不等于SPR已测通；未逐篇排查所有描述中未结构化标注的突变、构建及测量问题",
+    "未覆盖不等于无FDA药；不含抗体、复合物靶点、代谢活性物种替代或功能实验外推",
+    "阈值Kd/Ki/IC50不超过1µM；同端点若出现不低于10µM反例，则不纳入初选"
+  ]
+}

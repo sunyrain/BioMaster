@@ -1,0 +1,16 @@
+{
+  "parts": [
+    ".tmp/bindingdb_202608_full/segments/part_00",
+    ".tmp/bindingdb_202608_full/segments/part_01",
+    ".tmp/bindingdb_202608_full/segments/part_02",
+    ".tmp/bindingdb_202608_full/segments/part_03",
+    ".tmp/bindingdb_202608_full/segments/part_04",
+    ".tmp/bindingdb_202608_full/segments/part_05",
+    ".tmp/bindingdb_202608_full/segments/part_06",
+    ".tmp/bindingdb_202608_full/segments/part_07"
+  ],
+  "assembled_archive": ".tmp/bindingdb_202608_full/BindingDB_All_202608_tsv.zip",
+  "concatenated_sha256": "8dc30541d668e5e403ba1fe9a682b76c42a50e1711aac44329c62ba24ccd57db",
+  "archive_sha256": "8dc30541d668e5e403ba1fe9a682b76c42a50e1711aac44329c62ba24ccd57db",
+  "equal": true
+}

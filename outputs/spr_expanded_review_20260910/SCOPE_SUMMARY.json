@@ -1,0 +1,20 @@
+{
+  "full_scored_pairs": 276480,
+  "pre_chemistry_scope": 4270,
+  "raw_activity_pairs": 176,
+  "new_eligible_pool": 991,
+  "new_llm_queue": 384,
+  "remaining_outside_review_queue": 607,
+  "new_reviewed_at_preparation": 0,
+  "new_pending_at_preparation": 384,
+  "new_drugs": 230,
+  "new_targets": 161,
+  "route_counts": {
+    "BINDING_CHEMISTRY_WITHOUT_GRAPH_GATE": 192,
+    "RELAXED_JOINT": 166,
+    "BOTH": 26
+  },
+  "baseline_candidates": 384,
+  "combined_review_target": 768,
+  "relaxation": "Binding rank 20→30; masked TxGNN rank50→100; OT>=0.3 unchanged. Separate binding Top10 + positive Tanimoto>=0.35 route without mandatory graph agreement. Known/identity/raw guards retained. First 384 new rows, max4/drug,max8/target; reserve up to192 graph-independent and remaining places relaxed-joint; chemical-support/rank ordering within each route. Not calibrated probabilities."
+}

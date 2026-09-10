@@ -1,0 +1,1412 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "winner": "J_old_relation_pretrained",
+  "stage2_validation_scores": {
+    "G_matched_control": 0.576867765880439,
+    "H_old_relation": 0.6023934431884336,
+    "I_old_relation_evidence": 0.6623612426643493,
+    "J_old_relation_pretrained": 0.6874634203160612,
+    "K_old_relation_teacher": 0.6640753848448986
+  },
+  "all_validation_scores": {
+    "A_residual_bce": 0.5603145700010649,
+    "B_residual_rank": 0.5603044321727519,
+    "C_evidence_bce": 0.5603830960876423,
+    "D_evidence_rank": 0.5603154201068158,
+    "E_pretrained_rank": 0.5599281042681642,
+    "F_teacher_rank": 0.5605322441719831,
+    "G_matched_control": 0.576867765880439,
+    "H_old_relation": 0.6023934431884336,
+    "I_old_relation_evidence": 0.6623612426643493,
+    "J_old_relation_pretrained": 0.6874634203160612,
+    "K_old_relation_teacher": 0.6640753848448986
+  },
+  "results": [
+    {
+      "status": "COMPLETE",
+      "variant": "G_matched_control",
+      "seed": 20260908,
+      "selected_epoch": 15,
+      "validation": {
+        "d2t": {
+          "ap": 0.5232200751313931,
+          "r20": 0.6792929292929293,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9512568421830564,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5189617248349893,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9477565050151284,
+          "measured_queries": 379
+        },
+        "selection": 0.5759168286414325
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "ced0363f3369abceec1ea95fd79b983008785f4427d65117f56a60da4de979a7",
+      "seconds": 23.1479418752715,
+      "trainable_parameters": 38020,
+      "matched_exposure_sha256": [
+        "20a35914b66b520e898353248ad7ba98e87764ecda342e2d761afc94f0df9bc7",
+        "2d32a75d466ef98e80431993ac1f7c9b4e18f9856bc2328b3be17b71699fb637",
+        "7d620f561452ae51cd47afbd3bcefce722f0369cdfd5c04cf760def70863e7b1",
+        "a27ab3f3e80bde6f86646543ddef4b29c3634577f9fb040b84766dfdc5f1cbf7",
+        "c9817d2fad9232ddefc7e4691030d2cf893673ebcf47dda87d176e95050ef8c0",
+        "cad60e65e8813ec55ed47107349a2a9378b9c581e7ee5595bb57070ef3c8dd30",
+        "085c638338b17e27e65ad4aa5a120b1156d86200090e12880ba7c541080f6b66",
+        "96974f3e09532bf4ef5de54b41468600dcd76cdd8ecbb8d52a3ead95987b7b74",
+        "ab8a302ad192fd7c73afd38d7d72117a19882818c7353c5b83373c12d8ee8c29",
+        "b3d328513d4099ddd489c2edbacbe30eb49bb8c6bbab979a278f7e5455b6863f",
+        "55b7d59e97844164107c8d42087b35fc5a9714c4a8e7005bc65217a8991b0b3b",
+        "0d8dae175d9a84647b64cd659e9ca1f244e75177985e00e503ec3fb33df6520c",
+        "42cd4ff7d8cad6db10fbea6b4903b19c0668af661e7d92702c547b5357954c14",
+        "d1914adca941de5e5e62de4142fa1fadb998fecfe56ae036def94c36d5dc48b7",
+        "3c7932a99c3dd6689169b0f1b8f431ef6b784eff4f56852147a5341035d8ce31",
+        "1ea0bb923846da73b2b80ac1303128114b34b47b6a3832dfad0a5ce3634aa2d9",
+        "a98b64d2d0681cec559d2133606dd17908136cd3e5479affbeecc28fd1083535",
+        "9157dc2632775b06f6349fb01edcd5ca4781bdd737d21e89021503c398d6890e",
+        "9c55e999d1e5fbb49b176d884e71895830a46fbad7e74399ef85f4793b251e0c",
+        "b9fab72007560a8068e66cf0b12110b57b57cc9bb6325be98c844298111891dc",
+        "6d325587ee695fcbe7d470f81c2dc45d4118022fd5fde0d6666ae7523b4e7cd8",
+        "78e04bd53f6f5ea2f90459b38d42465e1e0561c54841c9d732f042c42dd8b77b",
+        "e35d6135f599b07fbf800586ba8650fe2a1749d31f7e2837710117d971b18d2d",
+        "70c6a12ba539ebc75f8eff8bb2fa9a1a58b3ab107eb53afe7aa8609e08decb1b"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "G_matched_control",
+      "seed": 20260909,
+      "selected_epoch": 15,
+      "validation": {
+        "d2t": {
+          "ap": 0.5327576180432598,
+          "r20": 0.6772727272727274,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9480877539839159,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5275032744188152,
+          "r20": 0.7098765432098766,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9436278689161697,
+          "measured_queries": 379
+        },
+        "selection": 0.5791637029341168
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "c08e21894b8fd9629ade3b57ae6058338ec2c2a00791fe0329db65f5aca91d54",
+      "seconds": 22.63103871420026,
+      "trainable_parameters": 38020,
+      "matched_exposure_sha256": [
+        "afc51ad6a2f3c6652d466bb2f413f1a24a59271e0fe3d08fc780e9d581fcdfdb",
+        "0e9a9da14924c426c8afbb4e1a36a6fc7cf58dd29e1bc1b97e5587819ffa2914",
+        "945b6e6ba628e5ce24605abb232c03fb5836a2f4fb0dcedc34e3c04e0ad27621",
+        "2f5480fb8041150e573cf54935d1e237f9b1dde22f5ada9c29e4525a813556e5",
+        "38fd3e630ca442d9821a1a48ba013a292f3e6b8f7ed5f2f18985e360e4d26f27",
+        "dd47c8918ea8f145ca1086150358dc6f03766119720317b76b36a5f1d467eb1e",
+        "cd3d4772a867ba2c57ee0892a9cf220c8639504d3ba1d0512e442827680cbf97",
+        "0327ccf7fc49ebeeb5aeb3736ccd0a4b41928be1eb00861b9aedae3f99538c07",
+        "ea4fff747786f2e17561c28d76def5af6f29a86318586efb65113fd2f02f8d05",
+        "d9bacce6276ced26b20387cad7611f48709e0dad5d1ec89f4204430efe0ad119",
+        "8d21a817ca0044bd862fd9743391e02b70a2f00df35f25f297aa5aac17ab5794",
+        "b9578d1c26d7a5518f8bb1fe334e752ca015aebace7d0f8da909a6308082ed7b",
+        "6b0cf151aa52c01baf86b120709802f6ed62a89fd37387f4d08f4822af5a0a44",
+        "303d8c9f9550c674b1d5cf20dae5bea1aa4edc4ba91686253b39847cfcb84e66",
+        "d54e6d58defc0e7dd01dd117a96fe20b8abf458d99428527940c36b8ed834c8b",
+        "32811c903e5e4aee79eb490112887430b9a38e6a2a65c34d7e10aa3945b68615",
+        "9b8af5212aee68d509545b90230b3dd04eb3a979be2ab43a90d266b691ca2d34",
+        "e61d655f8612be8b8863c3fb63c9a122b8175631387fb1e3cf13405515fccc1d",
+        "4610739996fb689751c2f458b9c35f9164cfc14d1629872d7383836b5f1655d5",
+        "03c6f3399bb35ccb5dd84b44636f32987901a29fc03d0443b38974698f2f564b",
+        "2a6929a758c42b642cf47a3e5f44493612e1416d612821eac7b13fba65744b1d",
+        "881e7351ec8e6152e862b435fdf873648e7fe3dfe2a9709625841a10d835d586",
+        "66b90b155721d951403db8d4007f0543971facc1dab5e9b3310daee6eaba28e3",
+        "e457f4ed952401e4cf32d25d746381426846aed14b72c7d484c674e2fa15379c"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "G_matched_control",
+      "seed": 20260910,
+      "selected_epoch": 7,
+      "validation": {
+        "d2t": {
+          "ap": 0.5229287594215856,
+          "r20": 0.6540404040404041,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9514704637587421,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5342406635849847,
+          "r20": 0.7160493827160495,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9432677405523984,
+          "measured_queries": 379
+        },
+        "selection": 0.5755227660657676
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "9ed4e00effb31fc331b2ab81202b8e032e6debf1a8beae2d43c5cf78a9d7d476",
+      "seconds": 22.790147486142814,
+      "trainable_parameters": 38020,
+      "matched_exposure_sha256": [
+        "c29e0c490cd9464922f5121beb1a4b67c887de94bde4e87c16c3ead6429c5555",
+        "98fc89488af0633cf64fee5794250d21458af1c26b8f8ce37d5ba7c9d4149ba0",
+        "96537b990968a4e15eae28017f1fc035e02945e27f8989f2bf879ae74592ac2a",
+        "4902b2d844c7bdb67c8a399077e7e0d1eff6f3350a49584ec07cfe9c2a345d01",
+        "fac70dc7266f87ea84469dab2f69d3f1baa29450ae4cce34b89a57adccd006e0",
+        "f2ef18022401cd329f11fa0bd7b6f7bd8bf731564df3fe528871757e1308816d",
+        "c74728593a94601bc761b84af7ecbaf28bb51bd9c026a9aeeeea20ec7cccf881",
+        "dc16960daa76a5df29d98e725a7b98a68435fce5fd21144fc801c16360f0e377",
+        "529e602f002ebd3e17c86236c83226778a39f978abb5b34114f8e873f5cf3c65",
+        "3c29ba0ccc658490af6ebeeb5a73e5afe466fb210ca7d318963a123b7afa4018",
+        "d1ae09f050ab470a48de67d0d135be712ab30846776d6ffae6a6980bf9c69a0c",
+        "9e4c117274620d2a8c81988f3f081b6697cc42841de5d5654c03156e4ddfa154",
+        "53b5c53cdd8a66f91cede0832e64a59bf3f194f4544ed0fbcb7ddf2fe08b284b",
+        "08bde4787b6c10445b7cf852b3e4a4c2d05985f1f71cb0b26f0e9a7575d9002e",
+        "b527579575432dc38de91015443e0ed9c45308b4a02bd9f46ba0ec1add5cedbb",
+        "d6bfb8bc7b72d9cd14fac4185dc93e7eabceaa8f531322d3ad6a1c9405fed133",
+        "649209eb4127f7467346227a1dfb9dca7aa32a20a377a807e3832a9f59175240",
+        "96861fa23442a067b4a62e444f2acd59afa94c3b0013cf05df67ddee5ec9e578",
+        "391784a84124911ecc10dd833e8eab404527ded5c4407d29b62e19cfdffaa963",
+        "b551c185ef93299e3abf7cf3386c94d0153cd999817933f18983b1d5bea3d4f2",
+        "248ba5518e0eed3d515ea238750cdb2ea3d9f6d979f035532bfc2093b7444fe1",
+        "f6707a27081132f838f446a718ef0457808d9eaa07a870381ce506861eb5330f",
+        "cb63369b717d45785334376e2f48a86aad6525167fd52a1ee772529e047eff0d",
+        "a29707de6142e015925b05fb0ffd92edb5e1a26cbcb1cf9751c5d4085c143936"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "H_old_relation",
+      "seed": 20260908,
+      "selected_epoch": 20,
+      "validation": {
+        "d2t": {
+          "ap": 0.5073103195847449,
+          "r20": 0.7131313131313131,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9442546782927836,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5829275260552613,
+          "r20": 0.771604938271605,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9414550702635976,
+          "measured_queries": 379
+        },
+        "selection": 0.6042936836844399
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "70bf0dfefb31bf98d2a4a184ac6afe159f279542b54f46de5b582e702027571e",
+      "seconds": 22.813272703438997,
+      "trainable_parameters": 38020,
+      "matched_exposure_sha256": [
+        "20a35914b66b520e898353248ad7ba98e87764ecda342e2d761afc94f0df9bc7",
+        "2d32a75d466ef98e80431993ac1f7c9b4e18f9856bc2328b3be17b71699fb637",
+        "7d620f561452ae51cd47afbd3bcefce722f0369cdfd5c04cf760def70863e7b1",
+        "a27ab3f3e80bde6f86646543ddef4b29c3634577f9fb040b84766dfdc5f1cbf7",
+        "c9817d2fad9232ddefc7e4691030d2cf893673ebcf47dda87d176e95050ef8c0",
+        "cad60e65e8813ec55ed47107349a2a9378b9c581e7ee5595bb57070ef3c8dd30",
+        "085c638338b17e27e65ad4aa5a120b1156d86200090e12880ba7c541080f6b66",
+        "96974f3e09532bf4ef5de54b41468600dcd76cdd8ecbb8d52a3ead95987b7b74",
+        "ab8a302ad192fd7c73afd38d7d72117a19882818c7353c5b83373c12d8ee8c29",
+        "b3d328513d4099ddd489c2edbacbe30eb49bb8c6bbab979a278f7e5455b6863f",
+        "55b7d59e97844164107c8d42087b35fc5a9714c4a8e7005bc65217a8991b0b3b",
+        "0d8dae175d9a84647b64cd659e9ca1f244e75177985e00e503ec3fb33df6520c",
+        "42cd4ff7d8cad6db10fbea6b4903b19c0668af661e7d92702c547b5357954c14",
+        "d1914adca941de5e5e62de4142fa1fadb998fecfe56ae036def94c36d5dc48b7",
+        "3c7932a99c3dd6689169b0f1b8f431ef6b784eff4f56852147a5341035d8ce31",
+        "1ea0bb923846da73b2b80ac1303128114b34b47b6a3832dfad0a5ce3634aa2d9",
+        "a98b64d2d0681cec559d2133606dd17908136cd3e5479affbeecc28fd1083535",
+        "9157dc2632775b06f6349fb01edcd5ca4781bdd737d21e89021503c398d6890e",
+        "9c55e999d1e5fbb49b176d884e71895830a46fbad7e74399ef85f4793b251e0c",
+        "b9fab72007560a8068e66cf0b12110b57b57cc9bb6325be98c844298111891dc",
+        "6d325587ee695fcbe7d470f81c2dc45d4118022fd5fde0d6666ae7523b4e7cd8",
+        "78e04bd53f6f5ea2f90459b38d42465e1e0561c54841c9d732f042c42dd8b77b",
+        "e35d6135f599b07fbf800586ba8650fe2a1749d31f7e2837710117d971b18d2d",
+        "70c6a12ba539ebc75f8eff8bb2fa9a1a58b3ab107eb53afe7aa8609e08decb1b"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "H_old_relation",
+      "seed": 20260909,
+      "selected_epoch": 16,
+      "validation": {
+        "d2t": {
+          "ap": 0.515536686468004,
+          "r20": 0.7035353535353535,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.950507636148347,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.577465867936427,
+          "r20": 0.7777777777777778,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9403018260002917,
+          "measured_queries": 379
+        },
+        "selection": 0.6047478637385205
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "c98fa892591835c9f2e8548c71a44468ef2058f56e5247d1f471c976a4e772eb",
+      "seconds": 23.258188581094146,
+      "trainable_parameters": 38020,
+      "matched_exposure_sha256": [
+        "afc51ad6a2f3c6652d466bb2f413f1a24a59271e0fe3d08fc780e9d581fcdfdb",
+        "0e9a9da14924c426c8afbb4e1a36a6fc7cf58dd29e1bc1b97e5587819ffa2914",
+        "945b6e6ba628e5ce24605abb232c03fb5836a2f4fb0dcedc34e3c04e0ad27621",
+        "2f5480fb8041150e573cf54935d1e237f9b1dde22f5ada9c29e4525a813556e5",
+        "38fd3e630ca442d9821a1a48ba013a292f3e6b8f7ed5f2f18985e360e4d26f27",
+        "dd47c8918ea8f145ca1086150358dc6f03766119720317b76b36a5f1d467eb1e",
+        "cd3d4772a867ba2c57ee0892a9cf220c8639504d3ba1d0512e442827680cbf97",
+        "0327ccf7fc49ebeeb5aeb3736ccd0a4b41928be1eb00861b9aedae3f99538c07",
+        "ea4fff747786f2e17561c28d76def5af6f29a86318586efb65113fd2f02f8d05",
+        "d9bacce6276ced26b20387cad7611f48709e0dad5d1ec89f4204430efe0ad119",
+        "8d21a817ca0044bd862fd9743391e02b70a2f00df35f25f297aa5aac17ab5794",
+        "b9578d1c26d7a5518f8bb1fe334e752ca015aebace7d0f8da909a6308082ed7b",
+        "6b0cf151aa52c01baf86b120709802f6ed62a89fd37387f4d08f4822af5a0a44",
+        "303d8c9f9550c674b1d5cf20dae5bea1aa4edc4ba91686253b39847cfcb84e66",
+        "d54e6d58defc0e7dd01dd117a96fe20b8abf458d99428527940c36b8ed834c8b",
+        "32811c903e5e4aee79eb490112887430b9a38e6a2a65c34d7e10aa3945b68615",
+        "9b8af5212aee68d509545b90230b3dd04eb3a979be2ab43a90d266b691ca2d34",
+        "e61d655f8612be8b8863c3fb63c9a122b8175631387fb1e3cf13405515fccc1d",
+        "4610739996fb689751c2f458b9c35f9164cfc14d1629872d7383836b5f1655d5",
+        "03c6f3399bb35ccb5dd84b44636f32987901a29fc03d0443b38974698f2f564b",
+        "2a6929a758c42b642cf47a3e5f44493612e1416d612821eac7b13fba65744b1d",
+        "881e7351ec8e6152e862b435fdf873648e7fe3dfe2a9709625841a10d835d586",
+        "66b90b155721d951403db8d4007f0543971facc1dab5e9b3310daee6eaba28e3",
+        "e457f4ed952401e4cf32d25d746381426846aed14b72c7d484c674e2fa15379c"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "H_old_relation",
+      "seed": 20260910,
+      "selected_epoch": 12,
+      "validation": {
+        "d2t": {
+          "ap": 0.5008312855048855,
+          "r20": 0.6979797979797979,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9483727759936923,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5650871204236866,
+          "r20": 0.8024691358024693,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9428342539824376,
+          "measured_queries": 379
+        },
+        "selection": 0.5981387821423403
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "2765cd47ca6a8b4b95e0b5114bc1de39177e17aeae8978743b902a20360540bc",
+      "seconds": 22.87389866448939,
+      "trainable_parameters": 38020,
+      "matched_exposure_sha256": [
+        "c29e0c490cd9464922f5121beb1a4b67c887de94bde4e87c16c3ead6429c5555",
+        "98fc89488af0633cf64fee5794250d21458af1c26b8f8ce37d5ba7c9d4149ba0",
+        "96537b990968a4e15eae28017f1fc035e02945e27f8989f2bf879ae74592ac2a",
+        "4902b2d844c7bdb67c8a399077e7e0d1eff6f3350a49584ec07cfe9c2a345d01",
+        "fac70dc7266f87ea84469dab2f69d3f1baa29450ae4cce34b89a57adccd006e0",
+        "f2ef18022401cd329f11fa0bd7b6f7bd8bf731564df3fe528871757e1308816d",
+        "c74728593a94601bc761b84af7ecbaf28bb51bd9c026a9aeeeea20ec7cccf881",
+        "dc16960daa76a5df29d98e725a7b98a68435fce5fd21144fc801c16360f0e377",
+        "529e602f002ebd3e17c86236c83226778a39f978abb5b34114f8e873f5cf3c65",
+        "3c29ba0ccc658490af6ebeeb5a73e5afe466fb210ca7d318963a123b7afa4018",
+        "d1ae09f050ab470a48de67d0d135be712ab30846776d6ffae6a6980bf9c69a0c",
+        "9e4c117274620d2a8c81988f3f081b6697cc42841de5d5654c03156e4ddfa154",
+        "53b5c53cdd8a66f91cede0832e64a59bf3f194f4544ed0fbcb7ddf2fe08b284b",
+        "08bde4787b6c10445b7cf852b3e4a4c2d05985f1f71cb0b26f0e9a7575d9002e",
+        "b527579575432dc38de91015443e0ed9c45308b4a02bd9f46ba0ec1add5cedbb",
+        "d6bfb8bc7b72d9cd14fac4185dc93e7eabceaa8f531322d3ad6a1c9405fed133",
+        "649209eb4127f7467346227a1dfb9dca7aa32a20a377a807e3832a9f59175240",
+        "96861fa23442a067b4a62e444f2acd59afa94c3b0013cf05df67ddee5ec9e578",
+        "391784a84124911ecc10dd833e8eab404527ded5c4407d29b62e19cfdffaa963",
+        "b551c185ef93299e3abf7cf3386c94d0153cd999817933f18983b1d5bea3d4f2",
+        "248ba5518e0eed3d515ea238750cdb2ea3d9f6d979f035532bfc2093b7444fe1",
+        "f6707a27081132f838f446a718ef0457808d9eaa07a870381ce506861eb5330f",
+        "cb63369b717d45785334376e2f48a86aad6525167fd52a1ee772529e047eff0d",
+        "a29707de6142e015925b05fb0ffd92edb5e1a26cbcb1cf9751c5d4085c143936"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "I_old_relation_evidence",
+      "seed": 20260908,
+      "selected_epoch": 20,
+      "validation": {
+        "d2t": {
+          "ap": 0.5860029360964828,
+          "r20": 0.7878787878787878,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9483360388663039,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.6199817240329842,
+          "r20": 0.814814814814815,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9451477966798728,
+          "measured_queries": 379
+        },
+        "selection": 0.6624986714493539
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "dd9272df904bdb1cab0d159810233319d832b40d0e83eba2e4ba1d5f009956d8",
+      "seconds": 24.70735167339444,
+      "trainable_parameters": 38028,
+      "matched_exposure_sha256": [
+        "20a35914b66b520e898353248ad7ba98e87764ecda342e2d761afc94f0df9bc7",
+        "2d32a75d466ef98e80431993ac1f7c9b4e18f9856bc2328b3be17b71699fb637",
+        "7d620f561452ae51cd47afbd3bcefce722f0369cdfd5c04cf760def70863e7b1",
+        "a27ab3f3e80bde6f86646543ddef4b29c3634577f9fb040b84766dfdc5f1cbf7",
+        "c9817d2fad9232ddefc7e4691030d2cf893673ebcf47dda87d176e95050ef8c0",
+        "cad60e65e8813ec55ed47107349a2a9378b9c581e7ee5595bb57070ef3c8dd30",
+        "085c638338b17e27e65ad4aa5a120b1156d86200090e12880ba7c541080f6b66",
+        "96974f3e09532bf4ef5de54b41468600dcd76cdd8ecbb8d52a3ead95987b7b74",
+        "ab8a302ad192fd7c73afd38d7d72117a19882818c7353c5b83373c12d8ee8c29",
+        "b3d328513d4099ddd489c2edbacbe30eb49bb8c6bbab979a278f7e5455b6863f",
+        "55b7d59e97844164107c8d42087b35fc5a9714c4a8e7005bc65217a8991b0b3b",
+        "0d8dae175d9a84647b64cd659e9ca1f244e75177985e00e503ec3fb33df6520c",
+        "42cd4ff7d8cad6db10fbea6b4903b19c0668af661e7d92702c547b5357954c14",
+        "d1914adca941de5e5e62de4142fa1fadb998fecfe56ae036def94c36d5dc48b7",
+        "3c7932a99c3dd6689169b0f1b8f431ef6b784eff4f56852147a5341035d8ce31",
+        "1ea0bb923846da73b2b80ac1303128114b34b47b6a3832dfad0a5ce3634aa2d9",
+        "a98b64d2d0681cec559d2133606dd17908136cd3e5479affbeecc28fd1083535",
+        "9157dc2632775b06f6349fb01edcd5ca4781bdd737d21e89021503c398d6890e",
+        "9c55e999d1e5fbb49b176d884e71895830a46fbad7e74399ef85f4793b251e0c",
+        "b9fab72007560a8068e66cf0b12110b57b57cc9bb6325be98c844298111891dc",
+        "6d325587ee695fcbe7d470f81c2dc45d4118022fd5fde0d6666ae7523b4e7cd8",
+        "78e04bd53f6f5ea2f90459b38d42465e1e0561c54841c9d732f042c42dd8b77b",
+        "e35d6135f599b07fbf800586ba8650fe2a1749d31f7e2837710117d971b18d2d",
+        "70c6a12ba539ebc75f8eff8bb2fa9a1a58b3ab107eb53afe7aa8609e08decb1b"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "I_old_relation_evidence",
+      "seed": 20260909,
+      "selected_epoch": 10,
+      "validation": {
+        "d2t": {
+          "ap": 0.6158945977445742,
+          "r20": 0.748989898989899,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9504866392925434,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.617491679732053,
+          "r20": 0.808641975308642,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9451628653557046,
+          "measured_queries": 379
+        },
+        "selection": 0.6653299782616007
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "a04ea11fcea17fe713aaa4af51271e9e338944d4ef9fe32d3c1c9df8b0fbab35",
+      "seconds": 24.785673700273037,
+      "trainable_parameters": 38028,
+      "matched_exposure_sha256": [
+        "afc51ad6a2f3c6652d466bb2f413f1a24a59271e0fe3d08fc780e9d581fcdfdb",
+        "0e9a9da14924c426c8afbb4e1a36a6fc7cf58dd29e1bc1b97e5587819ffa2914",
+        "945b6e6ba628e5ce24605abb232c03fb5836a2f4fb0dcedc34e3c04e0ad27621",
+        "2f5480fb8041150e573cf54935d1e237f9b1dde22f5ada9c29e4525a813556e5",
+        "38fd3e630ca442d9821a1a48ba013a292f3e6b8f7ed5f2f18985e360e4d26f27",
+        "dd47c8918ea8f145ca1086150358dc6f03766119720317b76b36a5f1d467eb1e",
+        "cd3d4772a867ba2c57ee0892a9cf220c8639504d3ba1d0512e442827680cbf97",
+        "0327ccf7fc49ebeeb5aeb3736ccd0a4b41928be1eb00861b9aedae3f99538c07",
+        "ea4fff747786f2e17561c28d76def5af6f29a86318586efb65113fd2f02f8d05",
+        "d9bacce6276ced26b20387cad7611f48709e0dad5d1ec89f4204430efe0ad119",
+        "8d21a817ca0044bd862fd9743391e02b70a2f00df35f25f297aa5aac17ab5794",
+        "b9578d1c26d7a5518f8bb1fe334e752ca015aebace7d0f8da909a6308082ed7b",
+        "6b0cf151aa52c01baf86b120709802f6ed62a89fd37387f4d08f4822af5a0a44",
+        "303d8c9f9550c674b1d5cf20dae5bea1aa4edc4ba91686253b39847cfcb84e66",
+        "d54e6d58defc0e7dd01dd117a96fe20b8abf458d99428527940c36b8ed834c8b",
+        "32811c903e5e4aee79eb490112887430b9a38e6a2a65c34d7e10aa3945b68615",
+        "9b8af5212aee68d509545b90230b3dd04eb3a979be2ab43a90d266b691ca2d34",
+        "e61d655f8612be8b8863c3fb63c9a122b8175631387fb1e3cf13405515fccc1d",
+        "4610739996fb689751c2f458b9c35f9164cfc14d1629872d7383836b5f1655d5",
+        "03c6f3399bb35ccb5dd84b44636f32987901a29fc03d0443b38974698f2f564b",
+        "2a6929a758c42b642cf47a3e5f44493612e1416d612821eac7b13fba65744b1d",
+        "881e7351ec8e6152e862b435fdf873648e7fe3dfe2a9709625841a10d835d586",
+        "66b90b155721d951403db8d4007f0543971facc1dab5e9b3310daee6eaba28e3",
+        "e457f4ed952401e4cf32d25d746381426846aed14b72c7d484c674e2fa15379c"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "I_old_relation_evidence",
+      "seed": 20260910,
+      "selected_epoch": 12,
+      "validation": {
+        "d2t": {
+          "ap": 0.6143848439510479,
+          "r20": 0.7272727272727273,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9495686352960265,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.6162429410396368,
+          "r20": 0.7962962962962964,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9448302888928256,
+          "measured_queries": 379
+        },
+        "selection": 0.6592550782820932
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "3a35aba7af481b501dd30c1637b9aae74c9c80ed47106ad7c9f5b3061bc8af8d",
+      "seconds": 25.255021636374295,
+      "trainable_parameters": 38028,
+      "matched_exposure_sha256": [
+        "c29e0c490cd9464922f5121beb1a4b67c887de94bde4e87c16c3ead6429c5555",
+        "98fc89488af0633cf64fee5794250d21458af1c26b8f8ce37d5ba7c9d4149ba0",
+        "96537b990968a4e15eae28017f1fc035e02945e27f8989f2bf879ae74592ac2a",
+        "4902b2d844c7bdb67c8a399077e7e0d1eff6f3350a49584ec07cfe9c2a345d01",
+        "fac70dc7266f87ea84469dab2f69d3f1baa29450ae4cce34b89a57adccd006e0",
+        "f2ef18022401cd329f11fa0bd7b6f7bd8bf731564df3fe528871757e1308816d",
+        "c74728593a94601bc761b84af7ecbaf28bb51bd9c026a9aeeeea20ec7cccf881",
+        "dc16960daa76a5df29d98e725a7b98a68435fce5fd21144fc801c16360f0e377",
+        "529e602f002ebd3e17c86236c83226778a39f978abb5b34114f8e873f5cf3c65",
+        "3c29ba0ccc658490af6ebeeb5a73e5afe466fb210ca7d318963a123b7afa4018",
+        "d1ae09f050ab470a48de67d0d135be712ab30846776d6ffae6a6980bf9c69a0c",
+        "9e4c117274620d2a8c81988f3f081b6697cc42841de5d5654c03156e4ddfa154",
+        "53b5c53cdd8a66f91cede0832e64a59bf3f194f4544ed0fbcb7ddf2fe08b284b",
+        "08bde4787b6c10445b7cf852b3e4a4c2d05985f1f71cb0b26f0e9a7575d9002e",
+        "b527579575432dc38de91015443e0ed9c45308b4a02bd9f46ba0ec1add5cedbb",
+        "d6bfb8bc7b72d9cd14fac4185dc93e7eabceaa8f531322d3ad6a1c9405fed133",
+        "649209eb4127f7467346227a1dfb9dca7aa32a20a377a807e3832a9f59175240",
+        "96861fa23442a067b4a62e444f2acd59afa94c3b0013cf05df67ddee5ec9e578",
+        "391784a84124911ecc10dd833e8eab404527ded5c4407d29b62e19cfdffaa963",
+        "b551c185ef93299e3abf7cf3386c94d0153cd999817933f18983b1d5bea3d4f2",
+        "248ba5518e0eed3d515ea238750cdb2ea3d9f6d979f035532bfc2093b7444fe1",
+        "f6707a27081132f838f446a718ef0457808d9eaa07a870381ce506861eb5330f",
+        "cb63369b717d45785334376e2f48a86aad6525167fd52a1ee772529e047eff0d",
+        "a29707de6142e015925b05fb0ffd92edb5e1a26cbcb1cf9751c5d4085c143936"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "J_old_relation_pretrained",
+      "seed": 20260908,
+      "selected_epoch": 10,
+      "validation": {
+        "d2t": {
+          "ap": 0.6795607122200313,
+          "r20": 0.7772005772005771,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9490143739428162,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.6073551240780579,
+          "r20": 0.8179012345679012,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.941355193445877,
+          "measured_queries": 379
+        },
+        "selection": 0.689685814469603
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "a7ca54229c27ff27870e757b8ca44e92c75e6dc4be2089a7db4c86548fda297d",
+      "seconds": 28.158342082053423,
+      "trainable_parameters": 153006,
+      "matched_exposure_sha256": [
+        "20a35914b66b520e898353248ad7ba98e87764ecda342e2d761afc94f0df9bc7",
+        "2d32a75d466ef98e80431993ac1f7c9b4e18f9856bc2328b3be17b71699fb637",
+        "7d620f561452ae51cd47afbd3bcefce722f0369cdfd5c04cf760def70863e7b1",
+        "a27ab3f3e80bde6f86646543ddef4b29c3634577f9fb040b84766dfdc5f1cbf7",
+        "c9817d2fad9232ddefc7e4691030d2cf893673ebcf47dda87d176e95050ef8c0",
+        "cad60e65e8813ec55ed47107349a2a9378b9c581e7ee5595bb57070ef3c8dd30",
+        "085c638338b17e27e65ad4aa5a120b1156d86200090e12880ba7c541080f6b66",
+        "96974f3e09532bf4ef5de54b41468600dcd76cdd8ecbb8d52a3ead95987b7b74",
+        "ab8a302ad192fd7c73afd38d7d72117a19882818c7353c5b83373c12d8ee8c29",
+        "b3d328513d4099ddd489c2edbacbe30eb49bb8c6bbab979a278f7e5455b6863f",
+        "55b7d59e97844164107c8d42087b35fc5a9714c4a8e7005bc65217a8991b0b3b",
+        "0d8dae175d9a84647b64cd659e9ca1f244e75177985e00e503ec3fb33df6520c",
+        "42cd4ff7d8cad6db10fbea6b4903b19c0668af661e7d92702c547b5357954c14",
+        "d1914adca941de5e5e62de4142fa1fadb998fecfe56ae036def94c36d5dc48b7",
+        "3c7932a99c3dd6689169b0f1b8f431ef6b784eff4f56852147a5341035d8ce31",
+        "1ea0bb923846da73b2b80ac1303128114b34b47b6a3832dfad0a5ce3634aa2d9",
+        "a98b64d2d0681cec559d2133606dd17908136cd3e5479affbeecc28fd1083535",
+        "9157dc2632775b06f6349fb01edcd5ca4781bdd737d21e89021503c398d6890e",
+        "9c55e999d1e5fbb49b176d884e71895830a46fbad7e74399ef85f4793b251e0c",
+        "b9fab72007560a8068e66cf0b12110b57b57cc9bb6325be98c844298111891dc",
+        "6d325587ee695fcbe7d470f81c2dc45d4118022fd5fde0d6666ae7523b4e7cd8",
+        "78e04bd53f6f5ea2f90459b38d42465e1e0561c54841c9d732f042c42dd8b77b",
+        "e35d6135f599b07fbf800586ba8650fe2a1749d31f7e2837710117d971b18d2d",
+        "70c6a12ba539ebc75f8eff8bb2fa9a1a58b3ab107eb53afe7aa8609e08decb1b"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "J_old_relation_pretrained",
+      "seed": 20260909,
+      "selected_epoch": 12,
+      "validation": {
+        "d2t": {
+          "ap": 0.6947226939127259,
+          "r20": 0.784054834054834,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9499215767284128,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5799709141499625,
+          "r20": 0.7808641975308641,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9423874676295094,
+          "measured_queries": 379
+        },
+        "selection": 0.6808806175597957
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "2b92466e600840530d42f4c125a3a78801d531da05beaec24bb73477143ba45d",
+      "seconds": 27.62142939120531,
+      "trainable_parameters": 153006,
+      "matched_exposure_sha256": [
+        "afc51ad6a2f3c6652d466bb2f413f1a24a59271e0fe3d08fc780e9d581fcdfdb",
+        "0e9a9da14924c426c8afbb4e1a36a6fc7cf58dd29e1bc1b97e5587819ffa2914",
+        "945b6e6ba628e5ce24605abb232c03fb5836a2f4fb0dcedc34e3c04e0ad27621",
+        "2f5480fb8041150e573cf54935d1e237f9b1dde22f5ada9c29e4525a813556e5",
+        "38fd3e630ca442d9821a1a48ba013a292f3e6b8f7ed5f2f18985e360e4d26f27",
+        "dd47c8918ea8f145ca1086150358dc6f03766119720317b76b36a5f1d467eb1e",
+        "cd3d4772a867ba2c57ee0892a9cf220c8639504d3ba1d0512e442827680cbf97",
+        "0327ccf7fc49ebeeb5aeb3736ccd0a4b41928be1eb00861b9aedae3f99538c07",
+        "ea4fff747786f2e17561c28d76def5af6f29a86318586efb65113fd2f02f8d05",
+        "d9bacce6276ced26b20387cad7611f48709e0dad5d1ec89f4204430efe0ad119",
+        "8d21a817ca0044bd862fd9743391e02b70a2f00df35f25f297aa5aac17ab5794",
+        "b9578d1c26d7a5518f8bb1fe334e752ca015aebace7d0f8da909a6308082ed7b",
+        "6b0cf151aa52c01baf86b120709802f6ed62a89fd37387f4d08f4822af5a0a44",
+        "303d8c9f9550c674b1d5cf20dae5bea1aa4edc4ba91686253b39847cfcb84e66",
+        "d54e6d58defc0e7dd01dd117a96fe20b8abf458d99428527940c36b8ed834c8b",
+        "32811c903e5e4aee79eb490112887430b9a38e6a2a65c34d7e10aa3945b68615",
+        "9b8af5212aee68d509545b90230b3dd04eb3a979be2ab43a90d266b691ca2d34",
+        "e61d655f8612be8b8863c3fb63c9a122b8175631387fb1e3cf13405515fccc1d",
+        "4610739996fb689751c2f458b9c35f9164cfc14d1629872d7383836b5f1655d5",
+        "03c6f3399bb35ccb5dd84b44636f32987901a29fc03d0443b38974698f2f564b",
+        "2a6929a758c42b642cf47a3e5f44493612e1416d612821eac7b13fba65744b1d",
+        "881e7351ec8e6152e862b435fdf873648e7fe3dfe2a9709625841a10d835d586",
+        "66b90b155721d951403db8d4007f0543971facc1dab5e9b3310daee6eaba28e3",
+        "e457f4ed952401e4cf32d25d746381426846aed14b72c7d484c674e2fa15379c"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "J_old_relation_pretrained",
+      "seed": 20260910,
+      "selected_epoch": 5,
+      "validation": {
+        "d2t": {
+          "ap": 0.6245809895413443,
+          "r20": 0.7282828282828282,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9498772845952165,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.6576621772588405,
+          "r20": 0.8919753086419752,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9344792107291631,
+          "measured_queries": 379
+        },
+        "selection": 0.6918238289187852
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "50cfed70b446b0fd77b825575363bc528ca3a63015f8d3796c64e7e2dc4d69cc",
+      "seconds": 27.72378290630877,
+      "trainable_parameters": 153006,
+      "matched_exposure_sha256": [
+        "c29e0c490cd9464922f5121beb1a4b67c887de94bde4e87c16c3ead6429c5555",
+        "98fc89488af0633cf64fee5794250d21458af1c26b8f8ce37d5ba7c9d4149ba0",
+        "96537b990968a4e15eae28017f1fc035e02945e27f8989f2bf879ae74592ac2a",
+        "4902b2d844c7bdb67c8a399077e7e0d1eff6f3350a49584ec07cfe9c2a345d01",
+        "fac70dc7266f87ea84469dab2f69d3f1baa29450ae4cce34b89a57adccd006e0",
+        "f2ef18022401cd329f11fa0bd7b6f7bd8bf731564df3fe528871757e1308816d",
+        "c74728593a94601bc761b84af7ecbaf28bb51bd9c026a9aeeeea20ec7cccf881",
+        "dc16960daa76a5df29d98e725a7b98a68435fce5fd21144fc801c16360f0e377",
+        "529e602f002ebd3e17c86236c83226778a39f978abb5b34114f8e873f5cf3c65",
+        "3c29ba0ccc658490af6ebeeb5a73e5afe466fb210ca7d318963a123b7afa4018",
+        "d1ae09f050ab470a48de67d0d135be712ab30846776d6ffae6a6980bf9c69a0c",
+        "9e4c117274620d2a8c81988f3f081b6697cc42841de5d5654c03156e4ddfa154",
+        "53b5c53cdd8a66f91cede0832e64a59bf3f194f4544ed0fbcb7ddf2fe08b284b",
+        "08bde4787b6c10445b7cf852b3e4a4c2d05985f1f71cb0b26f0e9a7575d9002e",
+        "b527579575432dc38de91015443e0ed9c45308b4a02bd9f46ba0ec1add5cedbb",
+        "d6bfb8bc7b72d9cd14fac4185dc93e7eabceaa8f531322d3ad6a1c9405fed133",
+        "649209eb4127f7467346227a1dfb9dca7aa32a20a377a807e3832a9f59175240",
+        "96861fa23442a067b4a62e444f2acd59afa94c3b0013cf05df67ddee5ec9e578",
+        "391784a84124911ecc10dd833e8eab404527ded5c4407d29b62e19cfdffaa963",
+        "b551c185ef93299e3abf7cf3386c94d0153cd999817933f18983b1d5bea3d4f2",
+        "248ba5518e0eed3d515ea238750cdb2ea3d9f6d979f035532bfc2093b7444fe1",
+        "f6707a27081132f838f446a718ef0457808d9eaa07a870381ce506861eb5330f",
+        "cb63369b717d45785334376e2f48a86aad6525167fd52a1ee772529e047eff0d",
+        "a29707de6142e015925b05fb0ffd92edb5e1a26cbcb1cf9751c5d4085c143936"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "K_old_relation_teacher",
+      "seed": 20260908,
+      "selected_epoch": 20,
+      "validation": {
+        "d2t": {
+          "ap": 0.5857374999810282,
+          "r20": 0.7878787878787878,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9492995201976848,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.6098502910435907,
+          "r20": 0.814814814814815,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9452972105832118,
+          "measured_queries": 379
+        },
+        "selection": 0.658859767262657
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "079167a4a1230a0a6ab3d02892f327d0c82a753691113548ee5d122a9eb9173e",
+      "seconds": 25.54549694620073,
+      "trainable_parameters": 38028,
+      "matched_exposure_sha256": [
+        "20a35914b66b520e898353248ad7ba98e87764ecda342e2d761afc94f0df9bc7",
+        "2d32a75d466ef98e80431993ac1f7c9b4e18f9856bc2328b3be17b71699fb637",
+        "7d620f561452ae51cd47afbd3bcefce722f0369cdfd5c04cf760def70863e7b1",
+        "a27ab3f3e80bde6f86646543ddef4b29c3634577f9fb040b84766dfdc5f1cbf7",
+        "c9817d2fad9232ddefc7e4691030d2cf893673ebcf47dda87d176e95050ef8c0",
+        "cad60e65e8813ec55ed47107349a2a9378b9c581e7ee5595bb57070ef3c8dd30",
+        "085c638338b17e27e65ad4aa5a120b1156d86200090e12880ba7c541080f6b66",
+        "96974f3e09532bf4ef5de54b41468600dcd76cdd8ecbb8d52a3ead95987b7b74",
+        "ab8a302ad192fd7c73afd38d7d72117a19882818c7353c5b83373c12d8ee8c29",
+        "b3d328513d4099ddd489c2edbacbe30eb49bb8c6bbab979a278f7e5455b6863f",
+        "55b7d59e97844164107c8d42087b35fc5a9714c4a8e7005bc65217a8991b0b3b",
+        "0d8dae175d9a84647b64cd659e9ca1f244e75177985e00e503ec3fb33df6520c",
+        "42cd4ff7d8cad6db10fbea6b4903b19c0668af661e7d92702c547b5357954c14",
+        "d1914adca941de5e5e62de4142fa1fadb998fecfe56ae036def94c36d5dc48b7",
+        "3c7932a99c3dd6689169b0f1b8f431ef6b784eff4f56852147a5341035d8ce31",
+        "1ea0bb923846da73b2b80ac1303128114b34b47b6a3832dfad0a5ce3634aa2d9",
+        "a98b64d2d0681cec559d2133606dd17908136cd3e5479affbeecc28fd1083535",
+        "9157dc2632775b06f6349fb01edcd5ca4781bdd737d21e89021503c398d6890e",
+        "9c55e999d1e5fbb49b176d884e71895830a46fbad7e74399ef85f4793b251e0c",
+        "b9fab72007560a8068e66cf0b12110b57b57cc9bb6325be98c844298111891dc",
+        "6d325587ee695fcbe7d470f81c2dc45d4118022fd5fde0d6666ae7523b4e7cd8",
+        "78e04bd53f6f5ea2f90459b38d42465e1e0561c54841c9d732f042c42dd8b77b",
+        "e35d6135f599b07fbf800586ba8650fe2a1749d31f7e2837710117d971b18d2d",
+        "70c6a12ba539ebc75f8eff8bb2fa9a1a58b3ab107eb53afe7aa8609e08decb1b"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "K_old_relation_teacher",
+      "seed": 20260909,
+      "selected_epoch": 12,
+      "validation": {
+        "d2t": {
+          "ap": 0.6202385963300614,
+          "r20": 0.7232323232323232,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9496481270918378,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.639374349896875,
+          "r20": 0.8148148148148148,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9440181157217475,
+          "measured_queries": 379
+        },
+        "selection": 0.6715716018864983
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "6f0cc55e7d08d16f77f6a8be775bdd9aaacebe7357968809255a762a5bd34a64",
+      "seconds": 25.82535653654486,
+      "trainable_parameters": 38028,
+      "matched_exposure_sha256": [
+        "afc51ad6a2f3c6652d466bb2f413f1a24a59271e0fe3d08fc780e9d581fcdfdb",
+        "0e9a9da14924c426c8afbb4e1a36a6fc7cf58dd29e1bc1b97e5587819ffa2914",
+        "945b6e6ba628e5ce24605abb232c03fb5836a2f4fb0dcedc34e3c04e0ad27621",
+        "2f5480fb8041150e573cf54935d1e237f9b1dde22f5ada9c29e4525a813556e5",
+        "38fd3e630ca442d9821a1a48ba013a292f3e6b8f7ed5f2f18985e360e4d26f27",
+        "dd47c8918ea8f145ca1086150358dc6f03766119720317b76b36a5f1d467eb1e",
+        "cd3d4772a867ba2c57ee0892a9cf220c8639504d3ba1d0512e442827680cbf97",
+        "0327ccf7fc49ebeeb5aeb3736ccd0a4b41928be1eb00861b9aedae3f99538c07",
+        "ea4fff747786f2e17561c28d76def5af6f29a86318586efb65113fd2f02f8d05",
+        "d9bacce6276ced26b20387cad7611f48709e0dad5d1ec89f4204430efe0ad119",
+        "8d21a817ca0044bd862fd9743391e02b70a2f00df35f25f297aa5aac17ab5794",
+        "b9578d1c26d7a5518f8bb1fe334e752ca015aebace7d0f8da909a6308082ed7b",
+        "6b0cf151aa52c01baf86b120709802f6ed62a89fd37387f4d08f4822af5a0a44",
+        "303d8c9f9550c674b1d5cf20dae5bea1aa4edc4ba91686253b39847cfcb84e66",
+        "d54e6d58defc0e7dd01dd117a96fe20b8abf458d99428527940c36b8ed834c8b",
+        "32811c903e5e4aee79eb490112887430b9a38e6a2a65c34d7e10aa3945b68615",
+        "9b8af5212aee68d509545b90230b3dd04eb3a979be2ab43a90d266b691ca2d34",
+        "e61d655f8612be8b8863c3fb63c9a122b8175631387fb1e3cf13405515fccc1d",
+        "4610739996fb689751c2f458b9c35f9164cfc14d1629872d7383836b5f1655d5",
+        "03c6f3399bb35ccb5dd84b44636f32987901a29fc03d0443b38974698f2f564b",
+        "2a6929a758c42b642cf47a3e5f44493612e1416d612821eac7b13fba65744b1d",
+        "881e7351ec8e6152e862b435fdf873648e7fe3dfe2a9709625841a10d835d586",
+        "66b90b155721d951403db8d4007f0543971facc1dab5e9b3310daee6eaba28e3",
+        "e457f4ed952401e4cf32d25d746381426846aed14b72c7d484c674e2fa15379c"
+      ],
+      "test_used_for_selection": false
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "K_old_relation_teacher",
+      "seed": 20260910,
+      "selected_epoch": 12,
+      "validation": {
+        "d2t": {
+          "ap": 0.6183496865279895,
+          "r20": 0.7176767676767677,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9495676845347952,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.6183559532940933,
+          "r20": 0.808641975308642,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9452022971352305,
+          "measured_queries": 379
+        },
+        "selection": 0.6617947853855404
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "backbone_and_cache": {
+          "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+          "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+          "source_sha256": {
+            "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+            "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+            "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+            "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+          }
+        },
+        "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+          "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+        }
+      },
+      "checkpoint_sha256": "89740ba4f78bf3a6b31c0078c8c7e64090b3d4721973558e7bd1cdc3836664cc",
+      "seconds": 25.393889714963734,
+      "trainable_parameters": 38028,
+      "matched_exposure_sha256": [
+        "c29e0c490cd9464922f5121beb1a4b67c887de94bde4e87c16c3ead6429c5555",
+        "98fc89488af0633cf64fee5794250d21458af1c26b8f8ce37d5ba7c9d4149ba0",
+        "96537b990968a4e15eae28017f1fc035e02945e27f8989f2bf879ae74592ac2a",
+        "4902b2d844c7bdb67c8a399077e7e0d1eff6f3350a49584ec07cfe9c2a345d01",
+        "fac70dc7266f87ea84469dab2f69d3f1baa29450ae4cce34b89a57adccd006e0",
+        "f2ef18022401cd329f11fa0bd7b6f7bd8bf731564df3fe528871757e1308816d",
+        "c74728593a94601bc761b84af7ecbaf28bb51bd9c026a9aeeeea20ec7cccf881",
+        "dc16960daa76a5df29d98e725a7b98a68435fce5fd21144fc801c16360f0e377",
+        "529e602f002ebd3e17c86236c83226778a39f978abb5b34114f8e873f5cf3c65",
+        "3c29ba0ccc658490af6ebeeb5a73e5afe466fb210ca7d318963a123b7afa4018",
+        "d1ae09f050ab470a48de67d0d135be712ab30846776d6ffae6a6980bf9c69a0c",
+        "9e4c117274620d2a8c81988f3f081b6697cc42841de5d5654c03156e4ddfa154",
+        "53b5c53cdd8a66f91cede0832e64a59bf3f194f4544ed0fbcb7ddf2fe08b284b",
+        "08bde4787b6c10445b7cf852b3e4a4c2d05985f1f71cb0b26f0e9a7575d9002e",
+        "b527579575432dc38de91015443e0ed9c45308b4a02bd9f46ba0ec1add5cedbb",
+        "d6bfb8bc7b72d9cd14fac4185dc93e7eabceaa8f531322d3ad6a1c9405fed133",
+        "649209eb4127f7467346227a1dfb9dca7aa32a20a377a807e3832a9f59175240",
+        "96861fa23442a067b4a62e444f2acd59afa94c3b0013cf05df67ddee5ec9e578",
+        "391784a84124911ecc10dd833e8eab404527ded5c4407d29b62e19cfdffaa963",
+        "b551c185ef93299e3abf7cf3386c94d0153cd999817933f18983b1d5bea3d4f2",
+        "248ba5518e0eed3d515ea238750cdb2ea3d9f6d979f035532bfc2093b7444fe1",
+        "f6707a27081132f838f446a718ef0457808d9eaa07a870381ce506861eb5330f",
+        "cb63369b717d45785334376e2f48a86aad6525167fd52a1ee772529e047eff0d",
+        "a29707de6142e015925b05fb0ffd92edb5e1a26cbcb1cf9751c5d4085c143936"
+      ],
+      "test_used_for_selection": false
+    }
+  ],
+  "identity": {
+    "backbone_and_cache": {
+      "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+      "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+      "source_sha256": {
+        "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+        "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+        "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+        "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+      }
+    },
+    "protocol_sha256": "7250a7b4f9f569090c118f52b5be590ef70b093f93e5dc5e1f12b9b6bd4079c3",
+    "source_sha256": {
+      "scripts/train_biomaster_v3_old_relation_ablation.py": "d4e2391e46d856a95aeeb09848dcee3c843e634b073fca956f8f00cec1243a8a",
+      "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee"
+    }
+  },
+  "stage1_selection_sha256": "f841db517ce2bc5199ad0805afd1d0510969ce9dac661910cf3ff44e56e81f60",
+  "test_used_for_selection": false,
+  "same_exposure_verified": true,
+  "production_promotion": false
+}

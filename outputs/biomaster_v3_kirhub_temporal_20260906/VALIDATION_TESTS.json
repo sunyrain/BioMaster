@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "command": "python -m pytest -q tests/test_temporal_evaluation.py tests/test_temporal_relations.py tests/test_ranking_audit.py tests/test_odti_v3_incremental.py tests/test_old_relation_retrieval.py tests/test_old_drug_ranking.py",
+  "passed": 25,
+  "output": ".........................                                                [100%]\n25 passed in 2.43s\n",
+  "test_source_sha256": {
+    "tests/test_temporal_evaluation.py": "0211d83359bb10de2991d346483b7c605ef23a3810e059c7b621dc248b5dbef7",
+    "tests/test_temporal_relations.py": "8830e0c079f00338963f1bb42a0ef1835e9f1dafda372dc462cba440393f31e0",
+    "tests/test_ranking_audit.py": "c08985e071ccc7c575a109d4056b429a16a98924fdb050cba96f467d1fda68e8",
+    "tests/test_odti_v3_incremental.py": "93822035637ad89e40aa2201c4e95eec8cffec87a733341e8d3864ed48633eaf",
+    "tests/test_old_relation_retrieval.py": "fab6d7ed2e71fdce6766154bec1a6ede062f3529045419b69bf8d612d99207d0",
+    "tests/test_old_drug_ranking.py": "b9adcc87bae086cb946a111fd3f116e59ea328e8f2c792ede7dc7271e118a400"
+  }
+}

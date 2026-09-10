@@ -1,0 +1,49 @@
+{
+  "manifest": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_training_preparation_20260908/context_pocket/MANIFEST.json",
+    "sha256": "ba0f714f35b937cafb6caa25395312d789cb7adcfcb1b83ee7f9a7fc1b073b5b",
+    "size_bytes": 6576
+  },
+  "config": {
+    "path": "/root/autodl-tmp/BioMaster/configs/biomaster_context_pocket_20260908.json",
+    "sha256": "6b0b1eebf6c48d5238e8387b8d195d55b31995552944c81523f5003461be7945",
+    "size_bytes": 2717
+  },
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/context_pocket.py",
+      "sha256": "2c86e85aee06bfdd6422f1a1ff4bb28d2b553fc1503f97884d3ca617b54d954a",
+      "size_bytes": 9900
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+      "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+      "size_bytes": 12551
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_features.py",
+      "sha256": "cb0585066011c975975408a039d65e4580b644f23e3e5371a51ab11c43a66df1",
+      "size_bytes": 6732
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_training.py",
+      "sha256": "619c7cdfc6b7ac94d2cafe786ec8466ae9978f123c0a3e7c6ec118b2b527f1f3",
+      "size_bytes": 3593
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/structural_training.py",
+      "sha256": "9ba81818dffbb65e84f383afaa780f0ded8d505786d23f7bb71e8ee1306c3c9a",
+      "size_bytes": 4685
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/ranking_audit.py",
+      "sha256": "007db4793f3cb5684f6dd46ecb41b61c1d2cba9dc6dd29972df95e93ba75a225",
+      "size_bytes": 5414
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_context_pocket_20260908.py",
+      "sha256": "80153e8599cbf68e7fe2b96a8c32f89496412d07b4030b401e2da47493ba76ec",
+      "size_bytes": 19703
+    }
+  ]
+}

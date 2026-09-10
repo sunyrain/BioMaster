@@ -1,0 +1,119 @@
+{
+  "checked_files": 360,
+  "groups": [
+    {
+      "sha256": "2dab9184bbbf632514786973e2b3e330ddcc2d62f513e345d81f0555e53b68b2",
+      "logical_bytes": 36882336,
+      "paths": [
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_drugrank_smoke/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/old_drug_target_sota_v1/biomaster_odti_v2_drugrank_smoke_v2/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt"
+      ],
+      "inodes": [
+        9711358463,
+        9711363801
+      ]
+    },
+    {
+      "sha256": "6bfdc8c6b95a360d83cdd4d73c4d78ff86d6e367a4c3575e8f73e0c445e3a14a",
+      "logical_bytes": 44663210,
+      "paths": [
+        "outputs/biomaster_odti_pretrained_residual_smoke_v1/esmc/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/biomaster_odti_esmc_formal_s3_20260819/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+        "outputs/biomaster_odti_esmc_debug/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt"
+      ],
+      "inodes": [
+        15454220,
+        9685838798,
+        2685040499
+      ]
+    },
+    {
+      "sha256": "bfe541063c81e2c51cfc6ab5f59ef6bd5ba4cf67748da729bf5262839368c53e",
+      "logical_bytes": 41992991,
+      "paths": [
+        "outputs/biomaster_odti_structure_interaction_screen_v1/STRUCTURE_V2_ONLY/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/biomaster_odti_structure_interaction_screen_v2/STRUCTURE_V2_ONLY/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260819/BEST_MODEL_V2.pt"
+      ],
+      "inodes": [
+        15034902116,
+        4832073807
+      ]
+    },
+    {
+      "sha256": "5de8dfb5f92fc02f4f9623356c7badfb1988830f21705cbc5a40c11e49e7b7f6",
+      "logical_bytes": 41993055,
+      "paths": [
+        "outputs/biomaster_odti_structure_interaction_screen_v1/STRUCTURE_V2_ONLY/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260819/BEST_MODEL_V2.pt",
+        "outputs/biomaster_odti_structure_interaction_screen_v2/STRUCTURE_V2_ONLY/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260819/BEST_MODEL_V2.pt"
+      ],
+      "inodes": [
+        1090597607,
+        8071804354
+      ]
+    },
+    {
+      "sha256": "25d97583587a38875930f2b78bbc50a75e5e46e125ad8b48d968f60fc223a19c",
+      "logical_bytes": 127270144,
+      "paths": [
+        "outputs/biomaster_odti_local_graph_features_v1/LIGAND_ATOM_FEATURES_FLOAT16_V1.npy",
+        "outputs/biomaster_odti_experimental_template_graph_features_v1/LIGAND_ATOM_FEATURES_FLOAT16_V1.npy"
+      ],
+      "inodes": [
+        9663895106,
+        9663895106
+      ]
+    },
+    {
+      "sha256": "86d2f43583a4979442d4e1cb107669fd3e062af8138d5ec9ce9ffa951effc05e",
+      "logical_bytes": 606433408,
+      "paths": [
+        "outputs/biomaster_comprehensive_training_v1/MORGAN2048_UINT8_COMPREHENSIVE_V1.npy",
+        "outputs/retrain_20260901/comprehensive_training_v1/MORGAN2048_UINT8_COMPREHENSIVE_V1.npy"
+      ],
+      "inodes": [
+        2149017884,
+        15602032574
+      ]
+    },
+    {
+      "sha256": "af568b63f10d053cfa82d5172b270814eae44d976793a36a0b3ad2cfacc5366c",
+      "logical_bytes": 94371968,
+      "paths": [
+        "outputs/biomaster_unified_interaction_20260906/features/TARGET_SITE_TOKENS.npy",
+        "outputs/biomaster_best_model_20260906/package_smoke_geometry_v1/features/residue_tokens.npy",
+        "outputs/biomaster_best_model_20260906/package_smoke_anchored_v2/features/residue_tokens.npy"
+      ],
+      "inodes": [
+        8594660747,
+        4295677351,
+        3760158315
+      ]
+    },
+    {
+      "sha256": "e170fde45439d7014d2db106cf28e18f6a990b52e01370f507551ff35de6a0c9",
+      "logical_bytes": 139717267,
+      "paths": [
+        "outputs/biomaster_pocket_precision_20260906/training/structurally_pretrained/cutoff_2020/seed_20260921/BEST.pt",
+        "outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/EPOCH1_SNAPSHOT.pt"
+      ],
+      "inodes": [
+        537208196,
+        8053214921
+      ]
+    },
+    {
+      "sha256": "0cb720a5a647ff847e2b12f888ef15e506befc741dd8d855ba05ec5dbff87895",
+      "logical_bytes": 41538688,
+      "paths": [
+        "outputs/biomaster_disease_evidence_720x888_20260909/TXGNN_INDICATION_LOGITS.npy",
+        "outputs/offline_release_20260909/BioMaster_Offline_Windows_x64/outputs/biomaster_disease_evidence_720x888_20260909/TXGNN_INDICATION_LOGITS.npy",
+        "outputs/offline_release_20260909_r2/BioMaster_Offline_Windows_x64/outputs/biomaster_disease_evidence_720x888_20260909/TXGNN_INDICATION_LOGITS.npy"
+      ],
+      "inodes": [
+        4842306462,
+        11276915940,
+        10745083220
+      ]
+    }
+  ]
+}

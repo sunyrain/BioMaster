@@ -1,0 +1,653 @@
+{
+  "status": "EXPLORATORY_PREDICTIONS_COMPLETE",
+  "targets": [
+    {
+      "gene_symbol": "LYVE1",
+      "primary_pocket_route": "DTWG",
+      "top10": {
+        "BioMaster": [
+          {
+            "drug_id": "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+            "name": "fulvestrant",
+            "ours_rank": 1
+          },
+          {
+            "drug_id": "UREBDLICKHMUKA-CXSFZGCWSA-N",
+            "name": "dexamethasone",
+            "ours_rank": 2
+          },
+          {
+            "drug_id": "UREBDLICKHMUKA-DVTGEIKXSA-N",
+            "name": "betamethasone",
+            "ours_rank": 3
+          },
+          {
+            "drug_id": "UXNXMBYCBRBRFD-MUUNZHRXSA-N",
+            "name": "berotralstat",
+            "ours_rank": 4
+          },
+          {
+            "drug_id": "GFNANZIMVAIWHM-OBYCQNJPSA-N",
+            "name": "triamcinolone",
+            "ours_rank": 5
+          },
+          {
+            "drug_id": "HHZIURLSWUIHRB-UHFFFAOYSA-N",
+            "name": "nilotinib",
+            "ours_rank": 6
+          },
+          {
+            "drug_id": "VPPJLAIAVCUEMN-GFCCVEGCSA-N",
+            "name": "lacosamide",
+            "ours_rank": 7
+          },
+          {
+            "drug_id": "PHXJVRSECIGDHY-UHFFFAOYSA-N",
+            "name": "ponatinib",
+            "ours_rank": 8
+          },
+          {
+            "drug_id": "FNHKPVJBJVTLMP-UHFFFAOYSA-N",
+            "name": "regorafenib",
+            "ours_rank": 9
+          },
+          {
+            "drug_id": "MLDQJTXFUGDVEO-UHFFFAOYSA-N",
+            "name": "sorafenib",
+            "ours_rank": 10
+          }
+        ],
+        "DTIAM": [
+          {
+            "drug_id": "NSQSAUGJQHDYNO-UHFFFAOYSA-N",
+            "name": "tazemetostat",
+            "dtiam_rank": 1
+          },
+          {
+            "drug_id": "GBLBJPZSROAGMF-RWYJCYHVSA-N",
+            "name": "pralsetinib",
+            "dtiam_rank": 2
+          },
+          {
+            "drug_id": "NXQKSXLFSAEQCZ-SFHVURJKSA-N",
+            "name": "sotorasib",
+            "dtiam_rank": 3
+          },
+          {
+            "drug_id": "VCSUIBJKYCVWNF-NRFANRHFSA-N",
+            "name": "vanzacaftor",
+            "dtiam_rank": 4
+          },
+          {
+            "drug_id": "HAYYBYPASCDWEQ-UHFFFAOYSA-N",
+            "name": "entrectinib",
+            "dtiam_rank": 5
+          },
+          {
+            "drug_id": "AILRADAXUVEEIR-UHFFFAOYSA-N",
+            "name": "brigatinib",
+            "dtiam_rank": 6
+          },
+          {
+            "drug_id": "VERWOWGGCGHDQE-UHFFFAOYSA-N",
+            "name": "ceritinib",
+            "dtiam_rank": 7
+          },
+          {
+            "drug_id": "AHJRHEGDXFFMBM-UHFFFAOYSA-N",
+            "name": "palbociclib",
+            "dtiam_rank": 8
+          },
+          {
+            "drug_id": "DWYRIWUZIJHQKQ-SANMLTNESA-N",
+            "name": "avapritinib",
+            "dtiam_rank": 9
+          },
+          {
+            "drug_id": "PHXJVRSECIGDHY-UHFFFAOYSA-N",
+            "name": "ponatinib",
+            "dtiam_rank": 10
+          }
+        ],
+        "DrugCLIP": [
+          {
+            "drug_id": "YIMYDTCOUQIDMT-SNAWJCMRSA-N",
+            "name": "diroximel fumarate",
+            "drugclip_rank": 1
+          },
+          {
+            "drug_id": "GXXLUDOKHXEFBQ-YJFSRANCSA-N",
+            "name": "tebipenem pivoxil",
+            "drugclip_rank": 2
+          },
+          {
+            "drug_id": "SNUDIPVBUUXCDG-QHSBEEBCSA-N",
+            "name": "tebipenem pivoxil",
+            "drugclip_rank": 3
+          },
+          {
+            "drug_id": "AVAACINZEOAHHE-VFZPANTDSA-N",
+            "name": "doripenem",
+            "drugclip_rank": 4
+          },
+          {
+            "drug_id": "NDDAHWYSQHTHNT-UHFFFAOYSA-N",
+            "name": "indapamide",
+            "drugclip_rank": 5
+          },
+          {
+            "drug_id": "DMJNNHOOLUXYBV-PQTSNVLCSA-N",
+            "name": "meropenem",
+            "drugclip_rank": 6
+          },
+          {
+            "drug_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+            "name": "amoxicillin",
+            "drugclip_rank": 7
+          },
+          {
+            "drug_id": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+            "name": "vorinostat",
+            "drugclip_rank": 8
+          },
+          {
+            "drug_id": "ZSKVGTPCRGIANV-ZXFLCMHBSA-N",
+            "name": "imipenem",
+            "drugclip_rank": 9
+          },
+          {
+            "drug_id": "TYZROVQLWOKYKF-ZDUSSCGKSA-N",
+            "name": "linezolid",
+            "drugclip_rank": 10
+          }
+        ]
+      },
+      "triple_top20": 0,
+      "amiodarone": [
+        {
+          "ours_rank": 348,
+          "dtiam_rank": 352,
+          "drugclip_rank": 304
+        }
+      ]
+    },
+    {
+      "gene_symbol": "SLC8A1",
+      "primary_pocket_route": "P2RANK",
+      "top10": {
+        "BioMaster": [
+          {
+            "drug_id": "VPPJLAIAVCUEMN-GFCCVEGCSA-N",
+            "name": "lacosamide",
+            "ours_rank": 1
+          },
+          {
+            "drug_id": "CEUORZQYGODEFX-UHFFFAOYSA-N",
+            "name": "aripiprazole;aripiprazole lauroxil",
+            "ours_rank": 2
+          },
+          {
+            "drug_id": "GKCBAIGFKIBETG-UHFFFAOYSA-N",
+            "name": "tetracaine",
+            "ours_rank": 3
+          },
+          {
+            "drug_id": "NSQSAUGJQHDYNO-UHFFFAOYSA-N",
+            "name": "tazemetostat",
+            "ours_rank": 4
+          },
+          {
+            "drug_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N",
+            "name": "ranolazine",
+            "ours_rank": 5
+          },
+          {
+            "drug_id": "WINHZLLDWRZWRT-ATVHPVEESA-N",
+            "name": "sunitinib",
+            "ours_rank": 6
+          },
+          {
+            "drug_id": "XUKUURHRXDUEBC-KAYWLYCHSA-N",
+            "name": "atorvastatin",
+            "ours_rank": 7
+          },
+          {
+            "drug_id": "QCZAWDGAVJMPTA-RNFRBKRXSA-N",
+            "name": "vorasidenib",
+            "ours_rank": 8
+          },
+          {
+            "drug_id": "RYMZZMVNJRMUDD-HGQWONQESA-N",
+            "name": "simvastatin",
+            "ours_rank": 9
+          },
+          {
+            "drug_id": "RKEWSXXUOLRFBX-UHFFFAOYSA-N",
+            "name": "pimavanserin",
+            "ours_rank": 10
+          }
+        ],
+        "DTIAM": [
+          {
+            "drug_id": "NSQSAUGJQHDYNO-UHFFFAOYSA-N",
+            "name": "tazemetostat",
+            "dtiam_rank": 1
+          },
+          {
+            "drug_id": "MVRHVFSOIWFBTE-INIZCTEOSA-N",
+            "name": "elexacaftor",
+            "dtiam_rank": 2
+          },
+          {
+            "drug_id": "FRVSRBKUQZKTOW-YOCNBXQISA-N",
+            "name": "revumenib",
+            "dtiam_rank": 3
+          },
+          {
+            "drug_id": "AILRADAXUVEEIR-UHFFFAOYSA-N",
+            "name": "brigatinib",
+            "dtiam_rank": 4
+          },
+          {
+            "drug_id": "GBLBJPZSROAGMF-RWYJCYHVSA-N",
+            "name": "pralsetinib",
+            "dtiam_rank": 5
+          },
+          {
+            "drug_id": "VCSUIBJKYCVWNF-NRFANRHFSA-N",
+            "name": "vanzacaftor",
+            "dtiam_rank": 6
+          },
+          {
+            "drug_id": "HAYYBYPASCDWEQ-UHFFFAOYSA-N",
+            "name": "entrectinib",
+            "dtiam_rank": 7
+          },
+          {
+            "drug_id": "OFZJKCQENFPZBH-UHFFFAOYSA-N",
+            "name": "avatrombopag",
+            "dtiam_rank": 8
+          },
+          {
+            "drug_id": "VERWOWGGCGHDQE-UHFFFAOYSA-N",
+            "name": "ceritinib",
+            "dtiam_rank": 9
+          },
+          {
+            "drug_id": "DWYRIWUZIJHQKQ-SANMLTNESA-N",
+            "name": "avapritinib",
+            "dtiam_rank": 10
+          }
+        ],
+        "DrugCLIP": [
+          {
+            "drug_id": "NUKYPUAOHBNCPY-UHFFFAOYSA-N",
+            "name": "dalfampridine",
+            "drugclip_rank": 1
+          },
+          {
+            "drug_id": "VSNHCAURESNICA-UHFFFAOYSA-N",
+            "name": "hydroxyurea",
+            "drugclip_rank": 2
+          },
+          {
+            "drug_id": "OYTKINVCDFNREN-UHFFFAOYSA-N",
+            "name": "amifampridine",
+            "drugclip_rank": 3
+          },
+          {
+            "drug_id": "CMWTZPSULFXXJA-VIFPVBQESA-N",
+            "name": "naproxen",
+            "drugclip_rank": 4
+          },
+          {
+            "drug_id": "XZWYZXLIPXDOLR-UHFFFAOYSA-N",
+            "name": "metformin",
+            "drugclip_rank": 5
+          },
+          {
+            "drug_id": "HEFNNWSXXWATRW-UHFFFAOYSA-N",
+            "name": "ibuprofen",
+            "drugclip_rank": 6
+          },
+          {
+            "drug_id": "OFCNXPDARWKPPY-UHFFFAOYSA-N",
+            "name": "allopurinol",
+            "drugclip_rank": 7
+          },
+          {
+            "drug_id": "TZFNLOMSOLWIDK-JTQLQIEISA-N",
+            "name": "carbidopa",
+            "drugclip_rank": 8
+          },
+          {
+            "drug_id": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+            "name": "vorinostat",
+            "drugclip_rank": 9
+          },
+          {
+            "drug_id": "VOBHXZCDAVEXEY-JSGCOSHPSA-N",
+            "name": "lisdexamfetamine",
+            "drugclip_rank": 10
+          }
+        ]
+      },
+      "triple_top20": 0,
+      "amiodarone": [
+        {
+          "ours_rank": 87,
+          "dtiam_rank": 172,
+          "drugclip_rank": 429
+        }
+      ]
+    },
+    {
+      "gene_symbol": "HGF",
+      "primary_pocket_route": "P2RANK",
+      "top10": {
+        "BioMaster": [
+          {
+            "drug_id": "UXNXMBYCBRBRFD-MUUNZHRXSA-N",
+            "name": "berotralstat",
+            "ours_rank": 1
+          },
+          {
+            "drug_id": "AILRADAXUVEEIR-UHFFFAOYSA-N",
+            "name": "brigatinib",
+            "ours_rank": 2
+          },
+          {
+            "drug_id": "VPPJLAIAVCUEMN-GFCCVEGCSA-N",
+            "name": "lacosamide",
+            "ours_rank": 3
+          },
+          {
+            "drug_id": "WINHZLLDWRZWRT-ATVHPVEESA-N",
+            "name": "sunitinib",
+            "ours_rank": 4
+          },
+          {
+            "drug_id": "RVOLLAQWKVFTGE-UHFFFAOYSA-N",
+            "name": "pyridostigmine",
+            "ours_rank": 5
+          },
+          {
+            "drug_id": "KSGXQBZTULBEEQ-UHFFFAOYSA-N",
+            "name": "dabigatran etexilate",
+            "ours_rank": 6
+          },
+          {
+            "drug_id": "LXBIFEVIBLOUGU-DPYQTVNSSA-N",
+            "name": "migalastat",
+            "ours_rank": 7
+          },
+          {
+            "drug_id": "GNXFOGHNGIVQEH-UHFFFAOYSA-N",
+            "name": "methocarbamol",
+            "ours_rank": 8
+          },
+          {
+            "drug_id": "YQNQNVDNTFHQSW-UHFFFAOYSA-N",
+            "name": "nitazoxanide",
+            "ours_rank": 9
+          },
+          {
+            "drug_id": "BBAWEDCPNXPBQM-GDEBMMAJSA-N",
+            "name": "telaprevir",
+            "ours_rank": 10
+          }
+        ],
+        "DTIAM": [
+          {
+            "drug_id": "AILRADAXUVEEIR-UHFFFAOYSA-N",
+            "name": "brigatinib",
+            "dtiam_rank": 1
+          },
+          {
+            "drug_id": "FRVSRBKUQZKTOW-YOCNBXQISA-N",
+            "name": "revumenib",
+            "dtiam_rank": 2
+          },
+          {
+            "drug_id": "NSQSAUGJQHDYNO-UHFFFAOYSA-N",
+            "name": "tazemetostat",
+            "dtiam_rank": 3
+          },
+          {
+            "drug_id": "NXQKSXLFSAEQCZ-SFHVURJKSA-N",
+            "name": "sotorasib",
+            "dtiam_rank": 4
+          },
+          {
+            "drug_id": "VCSUIBJKYCVWNF-NRFANRHFSA-N",
+            "name": "vanzacaftor",
+            "dtiam_rank": 5
+          },
+          {
+            "drug_id": "VERWOWGGCGHDQE-UHFFFAOYSA-N",
+            "name": "ceritinib",
+            "dtiam_rank": 6
+          },
+          {
+            "drug_id": "GBLBJPZSROAGMF-RWYJCYHVSA-N",
+            "name": "pralsetinib",
+            "dtiam_rank": 7
+          },
+          {
+            "drug_id": "MVRHVFSOIWFBTE-INIZCTEOSA-N",
+            "name": "elexacaftor",
+            "dtiam_rank": 8
+          },
+          {
+            "drug_id": "DWYRIWUZIJHQKQ-SANMLTNESA-N",
+            "name": "avapritinib",
+            "dtiam_rank": 9
+          },
+          {
+            "drug_id": "KTEIFNKAUNYNJU-GFCCVEGCSA-N",
+            "name": "crizotinib",
+            "dtiam_rank": 10
+          }
+        ],
+        "DrugCLIP": [
+          {
+            "drug_id": "XUFQPHANEAPEMJ-UHFFFAOYSA-N",
+            "name": "famotidine",
+            "drugclip_rank": 1
+          },
+          {
+            "drug_id": "AQNDDEOPVVGCPG-UHFFFAOYSA-N",
+            "name": "esmolol",
+            "drugclip_rank": 2
+          },
+          {
+            "drug_id": "IUBSYMUCCVWXPE-UHFFFAOYSA-N",
+            "name": "metoprolol",
+            "drugclip_rank": 3
+          },
+          {
+            "drug_id": "DHSUYTOATWAVLW-WFVMDLQDSA-N",
+            "name": "cilastatin",
+            "drugclip_rank": 4
+          },
+          {
+            "drug_id": "FASDKYOPVNHBLU-ZETCQYMHSA-N",
+            "name": "pramipexole",
+            "drugclip_rank": 5
+          },
+          {
+            "drug_id": "ZSKVGTPCRGIANV-ZXFLCMHBSA-N",
+            "name": "imipenem",
+            "drugclip_rank": 6
+          },
+          {
+            "drug_id": "ZISJNXNHJRQYJO-CMDGGOBGSA-N",
+            "name": "tapinarof",
+            "drugclip_rank": 7
+          },
+          {
+            "drug_id": "ZBMZVLHSJCTVON-UHFFFAOYSA-N",
+            "name": "sotalol",
+            "drugclip_rank": 8
+          },
+          {
+            "drug_id": "HEFNNWSXXWATRW-UHFFFAOYSA-N",
+            "name": "ibuprofen",
+            "drugclip_rank": 9
+          },
+          {
+            "drug_id": "AVAACINZEOAHHE-VFZPANTDSA-N",
+            "name": "doripenem",
+            "drugclip_rank": 10
+          }
+        ]
+      },
+      "triple_top20": 0,
+      "amiodarone": [
+        {
+          "ours_rank": 437,
+          "dtiam_rank": 343,
+          "drugclip_rank": 435
+        }
+      ]
+    }
+  ],
+  "model_agreement": [
+    {
+      "gene_symbol": "LYVE1",
+      "model_a": "ours",
+      "model_b": "dtiam",
+      "spearman": 0.05223425070907415,
+      "top20_overlap": 3
+    },
+    {
+      "gene_symbol": "LYVE1",
+      "model_a": "ours",
+      "model_b": "drugclip",
+      "spearman": -0.13027140613054164,
+      "top20_overlap": 0
+    },
+    {
+      "gene_symbol": "LYVE1",
+      "model_a": "dtiam",
+      "model_b": "drugclip",
+      "spearman": -0.28575190152758784,
+      "top20_overlap": 0
+    },
+    {
+      "gene_symbol": "SLC8A1",
+      "model_a": "ours",
+      "model_b": "dtiam",
+      "spearman": 0.034094426622479336,
+      "top20_overlap": 1
+    },
+    {
+      "gene_symbol": "SLC8A1",
+      "model_a": "ours",
+      "model_b": "drugclip",
+      "spearman": 0.08640143338753867,
+      "top20_overlap": 0
+    },
+    {
+      "gene_symbol": "SLC8A1",
+      "model_a": "dtiam",
+      "model_b": "drugclip",
+      "spearman": -0.46142118972708923,
+      "top20_overlap": 0
+    },
+    {
+      "gene_symbol": "HGF",
+      "model_a": "ours",
+      "model_b": "dtiam",
+      "spearman": -0.01957520494188196,
+      "top20_overlap": 4
+    },
+    {
+      "gene_symbol": "HGF",
+      "model_a": "ours",
+      "model_b": "drugclip",
+      "spearman": 0.10191805282546197,
+      "top20_overlap": 1
+    },
+    {
+      "gene_symbol": "HGF",
+      "model_a": "dtiam",
+      "model_b": "drugclip",
+      "spearman": -0.3232043914693765,
+      "top20_overlap": 0
+    }
+  ],
+  "cross_target_similarity": [
+    {
+      "model": "ours",
+      "target_a": "LYVE1",
+      "target_b": "SLC8A1",
+      "spearman": 0.5988867648278642,
+      "top20_overlap": 2
+    },
+    {
+      "model": "ours",
+      "target_a": "LYVE1",
+      "target_b": "HGF",
+      "spearman": 0.6065711289309329,
+      "top20_overlap": 4
+    },
+    {
+      "model": "ours",
+      "target_a": "SLC8A1",
+      "target_b": "HGF",
+      "spearman": 0.5567051955475737,
+      "top20_overlap": 3
+    },
+    {
+      "model": "dtiam",
+      "target_a": "LYVE1",
+      "target_b": "SLC8A1",
+      "spearman": 0.908828559983076,
+      "top20_overlap": 12
+    },
+    {
+      "model": "dtiam",
+      "target_a": "LYVE1",
+      "target_b": "HGF",
+      "spearman": 0.8940726158808178,
+      "top20_overlap": 11
+    },
+    {
+      "model": "dtiam",
+      "target_a": "SLC8A1",
+      "target_b": "HGF",
+      "spearman": 0.873397871780874,
+      "top20_overlap": 15
+    },
+    {
+      "model": "drugclip",
+      "target_a": "LYVE1",
+      "target_b": "SLC8A1",
+      "spearman": 0.19975839073763646,
+      "top20_overlap": 2
+    },
+    {
+      "model": "drugclip",
+      "target_a": "LYVE1",
+      "target_b": "HGF",
+      "spearman": 0.5847730544747707,
+      "top20_overlap": 7
+    },
+    {
+      "model": "drugclip",
+      "target_a": "SLC8A1",
+      "target_b": "HGF",
+      "spearman": 0.5596993821361538,
+      "top20_overlap": 5
+    }
+  ],
+  "hgf_pocket_sensitivity": {
+    "spearman": 0.33668146221989886,
+    "top20_overlap": 1
+  },
+  "ground_truth_metrics": null,
+  "reason": "No complete direct-binding labels for these 3 x 720 pairs; cannot estimate AP or experimental hit rate",
+  "formal_context_model_used": false,
+  "verification_checks": 35
+}

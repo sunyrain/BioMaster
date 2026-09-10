@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-06T12:28:25.236128+00:00",
+  "program_status": "DATA_PREPARATION_RUNNING",
+  "download_selected": 14724,
+  "downloaded_complete_files": 6253,
+  "mapping_counts": {
+    "MAPPED": 5374,
+    "REJECTED": 853
+  },
+  "encoded": 5320,
+  "rejection_reasons": {
+    "cif_fasta_residue_mismatch": 516,
+    "ambiguous_or_unmatched_sdf_identity_and_stereochemistry": 138,
+    "pocket_residue_missing_heavy_atoms_or_modified": 154,
+    "independent_conformer_generation_failed": 8,
+    "protein_ligand_clash_or_no_contacts": 37
+  },
+  "supervisor_pid": 957523,
+  "formal_pretraining_started": false,
+  "downstream_ranking_metrics_available": false
+}

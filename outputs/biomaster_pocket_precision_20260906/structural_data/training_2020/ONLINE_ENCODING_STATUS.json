@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "completed": 12603,
+  "pending_snapshot": 0,
+  "training_admission": "NOT_YET_ADMITTED; sequence and ligand overlap audit runs before training",
+  "seconds": 3552.599949141033,
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/biomaster/structural_encoding.py",
+    "sha256": "7e8c64fbf1597544e6fa9373e117609eb6494866dbd95142614f37b81c7fbc79",
+    "size_bytes": 4935
+  },
+  "mapped_encoded": 12603
+}

@@ -1,0 +1,770 @@
+[
+  {
+    "system_id": "5elw__1__1.A_11.A_13.A__1.B_1.C_1.D",
+    "split": "validation",
+    "cluster": "c89",
+    "release_year": 2015,
+    "file": "encoded/5elw__1__1.A_11.A_13.A__1.B_1.C_1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5elw__1__1.A_11.A_13.A__1.B_1.C_1.D.pt",
+      "sha256": "2ef764cd8d5e2fb86a2a8ca727ba5b2175b00ae617f3f5f8a43a771a66bcff88",
+      "size_bytes": 294741
+    }
+  },
+  {
+    "system_id": "3tpt__1__1.A__1.C_1.D",
+    "split": "validation",
+    "cluster": "c2488",
+    "release_year": 2011,
+    "file": "encoded/3tpt__1__1.A__1.C_1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3tpt__1__1.A__1.C_1.D.pt",
+      "sha256": "f3f9d8379b4916b0c6dbd3f45d24ed1852c3abb651adbf750f1daf98adbce0c3",
+      "size_bytes": 463553
+    }
+  },
+  {
+    "system_id": "4c9g__1__1.A__1.B",
+    "split": "validation",
+    "cluster": "c2097",
+    "release_year": 2013,
+    "file": "encoded/4c9g__1__1.A__1.B.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4c9g__1__1.A__1.B.pt",
+      "sha256": "c65519e59272be58950256fbae7bb53d306436c3c59f49f3ce7a4d524d851416",
+      "size_bytes": 661865
+    }
+  },
+  {
+    "system_id": "4ibk__2__1.B__1.G",
+    "split": "validation",
+    "cluster": "c1616",
+    "release_year": 2012,
+    "file": "encoded/4ibk__2__1.B__1.G.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4ibk__2__1.B__1.G.pt",
+      "sha256": "6848b7a8131ff7bfc644f0420f522a82600b7f4a7e7faf15c832f47c199c1be7",
+      "size_bytes": 363881
+    }
+  },
+  {
+    "system_id": "5djg__1__1.A__1.B_1.C_1.D",
+    "split": "validation",
+    "cluster": "c414",
+    "release_year": 2015,
+    "file": "encoded/5djg__1__1.A__1.B_1.C_1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5djg__1__1.A__1.B_1.C_1.D.pt",
+      "sha256": "daf883b2d1614169736ba3b472549a1dea6cecdf03431569370c86aec710550d",
+      "size_bytes": 585881
+    }
+  },
+  {
+    "system_id": "3wy0__1__1.B__1.D",
+    "split": "validation",
+    "cluster": "c161",
+    "release_year": 2014,
+    "file": "encoded/3wy0__1__1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3wy0__1__1.B__1.D.pt",
+      "sha256": "566c1028c1d2c7995b4359cbdbc80ae553b5826dfd50b35e6a4a061237217f84",
+      "size_bytes": 597033
+    }
+  },
+  {
+    "system_id": "6rbj__1__1.A__1.D_1.E_1.F",
+    "split": "validation",
+    "cluster": "c2537",
+    "release_year": 2019,
+    "file": "encoded/6rbj__1__1.A__1.D_1.E_1.F.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6rbj__1__1.A__1.D_1.E_1.F.pt",
+      "sha256": "36e99f9b5b19db197ecff61425ada4a629fd9d664cccb6c20d39c2f62583a5ae",
+      "size_bytes": 319705
+    }
+  },
+  {
+    "system_id": "5g3l__1__1.C_1.D_1.E__1.M",
+    "split": "validation",
+    "cluster": "c9020",
+    "release_year": 2016,
+    "file": "encoded/5g3l__1__1.C_1.D_1.E__1.M.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5g3l__1__1.C_1.D_1.E__1.M.pt",
+      "sha256": "e1ecb5b420c6c4680f649cc9fdfd57acd09b2239af3d31f0bf4e1eb93e995f4d",
+      "size_bytes": 243673
+    }
+  },
+  {
+    "system_id": "3i0o__1__1.A__1.C",
+    "split": "validation",
+    "cluster": "c5298",
+    "release_year": 2009,
+    "file": "encoded/3i0o__1__1.A__1.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3i0o__1__1.A__1.C.pt",
+      "sha256": "5ca76411042308d4b088487b3a01ad7fdabea7a07599d1bda4f33b44b269d856",
+      "size_bytes": 283369
+    }
+  },
+  {
+    "system_id": "6wnd__1__1.A__1.I",
+    "split": "validation",
+    "cluster": "c164",
+    "release_year": 2020,
+    "file": "encoded/6wnd__1__1.A__1.I.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6wnd__1__1.A__1.I.pt",
+      "sha256": "1b3edc31cd80b7409a68b254d971f5404f7d046cdb501e57f8a3f86636d52dde",
+      "size_bytes": 361897
+    }
+  },
+  {
+    "system_id": "4e1b__1__1.A__1.B_1.C",
+    "split": "validation",
+    "cluster": "c1652",
+    "release_year": 2012,
+    "file": "encoded/4e1b__1__1.A__1.B_1.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4e1b__1__1.A__1.B_1.C.pt",
+      "sha256": "fdc8c10f982f74825bdf589e6733f302aaea81f63f09533895c7153ed7ebf8cc",
+      "size_bytes": 545281
+    }
+  },
+  {
+    "system_id": "5x62__1__1.B__1.D",
+    "split": "validation",
+    "cluster": "c3084",
+    "release_year": 2017,
+    "file": "encoded/5x62__1__1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5x62__1__1.B__1.D.pt",
+      "sha256": "72b363ac03b13da9c296ff0aad0e9fc68296f9f1f66875e3bbcfeb35fa4991c9",
+      "size_bytes": 482729
+    }
+  },
+  {
+    "system_id": "5ly3__1__1.A__1.C",
+    "split": "validation",
+    "cluster": "c2133",
+    "release_year": 2016,
+    "file": "encoded/5ly3__1__1.A__1.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5ly3__1__1.A__1.C.pt",
+      "sha256": "14e648dfeea5ef9fcd21668ea38d89705bd0ad8f6b0291d5e1f4cdbf22e9c86a",
+      "size_bytes": 452393
+    }
+  },
+  {
+    "system_id": "3f64__1__1.A__1.B",
+    "split": "validation",
+    "cluster": "c1940",
+    "release_year": 2008,
+    "file": "encoded/3f64__1__1.A__1.B.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3f64__1__1.A__1.B.pt",
+      "sha256": "37599c03b85373908afd26dc39ac2ad249a5091e5d8285ac36edcfc7d5cab278",
+      "size_bytes": 256681
+    }
+  },
+  {
+    "system_id": "4oke__1__1.A_1.B__1.C_1.D",
+    "split": "validation",
+    "cluster": "c7587",
+    "release_year": 2014,
+    "file": "encoded/4oke__1__1.A_1.B__1.C_1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4oke__1__1.A_1.B__1.C_1.D.pt",
+      "sha256": "456f5e8db44c5b36f9548e7e942c54b17532b91305e6c011faef58814a1ab4c7",
+      "size_bytes": 368793
+    }
+  },
+  {
+    "system_id": "5fll__1__1.B__1.G_1.H_1.I_1.J",
+    "split": "validation",
+    "cluster": "c1867",
+    "release_year": 2015,
+    "file": "encoded/5fll__1__1.B__1.G_1.H_1.I_1.J.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5fll__1__1.B__1.G_1.H_1.I_1.J.pt",
+      "sha256": "d333068af0e7deca11ca7866c7ebac49bf7ac6a5fbaa5dc6bb3564b71e78477f",
+      "size_bytes": 542257
+    }
+  },
+  {
+    "system_id": "4rpn__2__1.D__1.K",
+    "split": "validation",
+    "cluster": "c1738",
+    "release_year": 2014,
+    "file": "encoded/4rpn__2__1.D__1.K.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4rpn__2__1.D__1.K.pt",
+      "sha256": "81a072627b64821fc1416c5131efda2ebcf89d0c1dfe5e828fac4485a58b4e41",
+      "size_bytes": 274985
+    }
+  },
+  {
+    "system_id": "6lop__1__1.A_1.B__1.D",
+    "split": "validation",
+    "cluster": "c4280",
+    "release_year": 2020,
+    "file": "encoded/6lop__1__1.A_1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6lop__1__1.A_1.B__1.D.pt",
+      "sha256": "628eb764b3618b887cf88bcfc7ad1baa7fd0ca30b9a6e824f5236d12b2401fa8",
+      "size_bytes": 364033
+    }
+  },
+  {
+    "system_id": "3iu7__1__1.A__1.E",
+    "split": "validation",
+    "cluster": "c4291",
+    "release_year": 2009,
+    "file": "encoded/3iu7__1__1.A__1.E.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3iu7__1__1.A__1.E.pt",
+      "sha256": "36522569c5f0b4b30f3828aae2885759b55e1eef0e0d7cf8922b6d490d28abbc",
+      "size_bytes": 203753
+    }
+  },
+  {
+    "system_id": "2vud__1__1.C_1.D__1.M_1.N_1.O",
+    "split": "validation",
+    "cluster": "c266",
+    "release_year": 2008,
+    "file": "encoded/2vud__1__1.C_1.D__1.M_1.N_1.O.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2vud__1__1.C_1.D__1.M_1.N_1.O.pt",
+      "sha256": "2d6d63b09da85433062adb9ef689503713fc2425648ef427103151f845bbc290",
+      "size_bytes": 282225
+    }
+  },
+  {
+    "system_id": "4peg__3__1.C__1.N_1.O",
+    "split": "validation",
+    "cluster": "c1401",
+    "release_year": 2014,
+    "file": "encoded/4peg__3__1.C__1.N_1.O.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4peg__3__1.C__1.N_1.O.pt",
+      "sha256": "7b00cfad342bb949b0a1a6f2ee47ddb7dcb4b4187e63883d232aa08b5b376f38",
+      "size_bytes": 275457
+    }
+  },
+  {
+    "system_id": "4nca__2__1.B__1.K",
+    "split": "validation",
+    "cluster": "c2247",
+    "release_year": 2013,
+    "file": "encoded/4nca__2__1.B__1.K.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4nca__2__1.B__1.K.pt",
+      "sha256": "d6af1e28bf8290a3f2b4bdc97ff15404b9a02a21f253d40de92097045a496506",
+      "size_bytes": 368425
+    }
+  },
+  {
+    "system_id": "2pul__2__2.A__2.C_2.E",
+    "split": "validation",
+    "cluster": "c1052",
+    "release_year": 2007,
+    "file": "encoded/2pul__2__2.A__2.C_2.E.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2pul__2__2.A__2.C_2.E.pt",
+      "sha256": "4f4e83d220684caf2303aac9926966751df6139d30f36b07d6e621144ea97182",
+      "size_bytes": 531905
+    }
+  },
+  {
+    "system_id": "3zy5__1__1.A_2.A__2.F",
+    "split": "validation",
+    "cluster": "c5614",
+    "release_year": 2011,
+    "file": "encoded/3zy5__1__1.A_2.A__2.F.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3zy5__1__1.A_2.A__2.F.pt",
+      "sha256": "a2fb13c38e8faebf8a244cbfdb0e635d3a3047bcb6ffffee2506fdfe75a3bdbe",
+      "size_bytes": 583169
+    }
+  },
+  {
+    "system_id": "3fpe__1__1.B__1.D",
+    "split": "validation",
+    "cluster": "c2604",
+    "release_year": 2009,
+    "file": "encoded/3fpe__1__1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3fpe__1__1.B__1.D.pt",
+      "sha256": "3b2afd0e129c40adbb89cc9c966c683d68d005964d830be8f4edeadaf908b176",
+      "size_bytes": 468201
+    }
+  },
+  {
+    "system_id": "3fma__4__1.D__1.I",
+    "split": "validation",
+    "cluster": "c2953",
+    "release_year": 2008,
+    "file": "encoded/3fma__4__1.D__1.I.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3fma__4__1.D__1.I.pt",
+      "sha256": "084baa18a3c01e04d85a208291e2a25fcd4272c3a20b794b4f3f2035dbe9b623",
+      "size_bytes": 367785
+    }
+  },
+  {
+    "system_id": "5j47__1__1.A_5.A__5.D",
+    "split": "validation",
+    "cluster": "c1131",
+    "release_year": 2016,
+    "file": "encoded/5j47__1__1.A_5.A__5.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5j47__1__1.A_5.A__5.D.pt",
+      "sha256": "2f25319137baca48a2c36ce528af6d66f27bb04487a9f6de8bc4451d0c55cb01",
+      "size_bytes": 367425
+    }
+  },
+  {
+    "system_id": "4z0u__2__1.B__1.D",
+    "split": "validation",
+    "cluster": "c6412",
+    "release_year": 2015,
+    "file": "encoded/4z0u__2__1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4z0u__2__1.B__1.D.pt",
+      "sha256": "6095b632f287b7c926671e9a1dfd5c97780edfa972c50f8a4cadd8e0150c6df8",
+      "size_bytes": 384937
+    }
+  },
+  {
+    "system_id": "2oys__1__1.A_1.B__1.C",
+    "split": "validation",
+    "cluster": "c5781",
+    "release_year": 2007,
+    "file": "encoded/2oys__1__1.A_1.B__1.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2oys__1__1.A_1.B__1.C.pt",
+      "sha256": "f708d8919366d3e5efe642be66a47bc9f7f059bb6393800658bef6d7700c7657",
+      "size_bytes": 550657
+    }
+  },
+  {
+    "system_id": "6ipw__1__1.A_1.B__1.F",
+    "split": "validation",
+    "cluster": "c6533",
+    "release_year": 2018,
+    "file": "encoded/6ipw__1__1.A_1.B__1.F.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6ipw__1__1.A_1.B__1.F.pt",
+      "sha256": "6081a67f909181d7094ad6a94b9ba805aa580352d5eded08a18a3dfc25b16b02",
+      "size_bytes": 433281
+    }
+  },
+  {
+    "system_id": "2de3__2__1.B__1.G",
+    "split": "validation",
+    "cluster": "c4237",
+    "release_year": 2006,
+    "file": "encoded/2de3__2__1.B__1.G.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2de3__2__1.B__1.G.pt",
+      "sha256": "611e94b3343fa555f9ac619a143746b7c47f4aba6b534598723e711b86380165",
+      "size_bytes": 402025
+    }
+  },
+  {
+    "system_id": "2bdm__2__1.A_2.A__2.D",
+    "split": "validation",
+    "cluster": "c11013",
+    "release_year": 2005,
+    "file": "encoded/2bdm__2__1.A_2.A__2.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2bdm__2__1.A_2.A__2.D.pt",
+      "sha256": "714f82f37a921ab69babebe722488a0e2116ff8176fca42e863ac76dab6762d2",
+      "size_bytes": 391809
+    }
+  },
+  {
+    "system_id": "1txz__1__1.A_2.A__1.D_1.E_1.F",
+    "split": "validation",
+    "cluster": "c3228",
+    "release_year": 2004,
+    "file": "encoded/1txz__1__1.A_2.A__1.D_1.E_1.F.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/1txz__1__1.A_2.A__1.D_1.E_1.F.pt",
+      "sha256": "a54f7ffa0a1231bff64729a420a5cf1e2382cb34620cdc46059dd32a68e92d8a",
+      "size_bytes": 570417
+    }
+  },
+  {
+    "system_id": "3qzy__1__1.A__1.D",
+    "split": "validation",
+    "cluster": "c1187",
+    "release_year": 2011,
+    "file": "encoded/3qzy__1__1.A__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3qzy__1__1.A__1.D.pt",
+      "sha256": "d9531b1daab0e1ced1863350ef1630ec118e240632609572b09c46c817fcfdbb",
+      "size_bytes": 641961
+    }
+  },
+  {
+    "system_id": "6thj__4__1.D__1.R",
+    "split": "validation",
+    "cluster": "c2174",
+    "release_year": 2019,
+    "file": "encoded/6thj__4__1.D__1.R.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6thj__4__1.D__1.R.pt",
+      "sha256": "7016c8faf0f690553135c1ced12e5e393a89ab281fb721056bdedd9298272b88",
+      "size_bytes": 252969
+    }
+  },
+  {
+    "system_id": "4wbd__1__2.A__2.B",
+    "split": "validation",
+    "cluster": "c6395",
+    "release_year": 2014,
+    "file": "encoded/4wbd__1__2.A__2.B.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4wbd__1__2.A__2.B.pt",
+      "sha256": "42870bf12d65fa85644e632c6b7c532134b7c13a0e00ee55540e0fc901d3c437",
+      "size_bytes": 306729
+    }
+  },
+  {
+    "system_id": "2hvs__1__1.G__1.J",
+    "split": "validation",
+    "cluster": "c4705",
+    "release_year": 2006,
+    "file": "encoded/2hvs__1__1.G__1.J.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2hvs__1__1.G__1.J.pt",
+      "sha256": "5703b1518934d4c7bcbb6b42d2c0386d6152e23d366bf9a4055f20ae1724c97c",
+      "size_bytes": 401257
+    }
+  },
+  {
+    "system_id": "6eji__1__1.A__1.C_1.F_1.G",
+    "split": "validation",
+    "cluster": "c119",
+    "release_year": 2017,
+    "file": "encoded/6eji__1__1.A__1.C_1.F_1.G.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6eji__1__1.A__1.C_1.F_1.G.pt",
+      "sha256": "3d89142f25dd94f35bb232efacaa89474cbd4e203e76e95ee16e1c84555aae7f",
+      "size_bytes": 684185
+    }
+  },
+  {
+    "system_id": "5umx__1__1.A_1.B__1.D",
+    "split": "validation",
+    "cluster": "c2018",
+    "release_year": 2017,
+    "file": "encoded/5umx__1__1.A_1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5umx__1__1.A_1.B__1.D.pt",
+      "sha256": "817c0ea0d2a0cf4d06a210fb75a04a07c6fa69970215bdbe42bb851e876496b9",
+      "size_bytes": 386753
+    }
+  },
+  {
+    "system_id": "6dio__3__2.C_3.C__2.HA_2.IA",
+    "split": "validation",
+    "cluster": "c248",
+    "release_year": 2018,
+    "file": "encoded/6dio__3__2.C_3.C__2.HA_2.IA.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6dio__3__2.C_3.C__2.HA_2.IA.pt",
+      "sha256": "14877be2cedfcdd9915573e15c912a826bc6224c8e79f9c64506e175e8d4e355",
+      "size_bytes": 679653
+    }
+  },
+  {
+    "system_id": "3pnl__2__1.A_1.B__1.D_1.E_1.F",
+    "split": "validation",
+    "cluster": "c1033",
+    "release_year": 2010,
+    "file": "encoded/3pnl__2__1.A_1.B__1.D_1.E_1.F.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3pnl__2__1.A_1.B__1.D_1.E_1.F.pt",
+      "sha256": "65b611a377c251e36e483dc699f3704c9986e842c4fffa9c7b3f2dfe3124ee02",
+      "size_bytes": 590641
+    }
+  },
+  {
+    "system_id": "5eo2__3__1.E_1.F__1.L",
+    "split": "validation",
+    "cluster": "c5274",
+    "release_year": 2015,
+    "file": "encoded/5eo2__3__1.E_1.F__1.L.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5eo2__3__1.E_1.F__1.L.pt",
+      "sha256": "cb0bd2ebb9c7d418320c3b3b8d73eee40ec9903d6b305809848890d766768f7f",
+      "size_bytes": 616129
+    }
+  },
+  {
+    "system_id": "1jlx__1__1.A_1.B__1.D_1.H",
+    "split": "validation",
+    "cluster": "c12579",
+    "release_year": 1997,
+    "file": "encoded/1jlx__1__1.A_1.B__1.D_1.H.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/1jlx__1__1.A_1.B__1.D_1.H.pt",
+      "sha256": "672d2532b785f35df93a65691872b7d93782e22bf351ed928df3897ea4206dbb",
+      "size_bytes": 335129
+    }
+  },
+  {
+    "system_id": "6s2g__1__1.A__1.I_1.P",
+    "split": "validation",
+    "cluster": "c804",
+    "release_year": 2019,
+    "file": "encoded/6s2g__1__1.A__1.I_1.P.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6s2g__1__1.A__1.I_1.P.pt",
+      "sha256": "e826ed13656dac9da6ab6218b54b39ab8f9c7196f2fde1c94a51689a1d4f89f2",
+      "size_bytes": 477889
+    }
+  },
+  {
+    "system_id": "4b14__1__1.A__1.E",
+    "split": "validation",
+    "cluster": "c118",
+    "release_year": 2012,
+    "file": "encoded/4b14__1__1.A__1.E.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4b14__1__1.A__1.E.pt",
+      "sha256": "ecbfcf3b75212aa91329e3dfeea9f3d366c11241285156258a1661ecd630b0c9",
+      "size_bytes": 440041
+    }
+  },
+  {
+    "system_id": "6ggi__1__1.A__1.C_1.D_1.E_1.H_1.I",
+    "split": "validation",
+    "cluster": "c3463",
+    "release_year": 2018,
+    "file": "encoded/6ggi__1__1.A__1.C_1.D_1.E_1.H_1.I.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6ggi__1__1.A__1.C_1.D_1.E_1.H_1.I.pt",
+      "sha256": "9e82ebe6844e38b4e66aa8164122ddaf1b0cfc336422daf815b294860fa73c38",
+      "size_bytes": 392137
+    }
+  },
+  {
+    "system_id": "1i31__1__1.A__1.B",
+    "split": "validation",
+    "cluster": "c1500",
+    "release_year": 2001,
+    "file": "encoded/1i31__1__1.A__1.B.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/1i31__1__1.A__1.B.pt",
+      "sha256": "dad85fc60b7f6ddacd9652137102efe883017612c9cbe8172d0a932e8105c7b3",
+      "size_bytes": 537129
+    }
+  },
+  {
+    "system_id": "5ndf__3__1.B__1.O_1.P_1.Q",
+    "split": "validation",
+    "cluster": "c186",
+    "release_year": 2017,
+    "file": "encoded/5ndf__3__1.B__1.O_1.P_1.Q.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5ndf__3__1.B__1.O_1.P_1.Q.pt",
+      "sha256": "edcb2f83967c4c9736099d32a2637ace57d9b622ca32ca266fc8f1be707cd3a4",
+      "size_bytes": 490841
+    }
+  },
+  {
+    "system_id": "2dcl__1__2.B_2.C__2.F",
+    "split": "validation",
+    "cluster": "c4257",
+    "release_year": 2006,
+    "file": "encoded/2dcl__1__2.B_2.C__2.F.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/2dcl__1__2.B_2.C__2.F.pt",
+      "sha256": "ff41fd7ed1dfd7fb9462004f42b43a5225551b31dda8f840074c34d6d83b344d",
+      "size_bytes": 378049
+    }
+  },
+  {
+    "system_id": "1jof__1__1.A_1.B__1.M",
+    "split": "validation",
+    "cluster": "c6112",
+    "release_year": 2001,
+    "file": "encoded/1jof__1__1.A_1.B__1.M.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/1jof__1__1.A_1.B__1.M.pt",
+      "sha256": "6870cee02d305df36cb8aa14c3fb61aaf9941a9b344983ae87ba09ad8ef07b86",
+      "size_bytes": 215873
+    }
+  },
+  {
+    "system_id": "4kgz__1__1.C_3.C__1.J",
+    "split": "validation",
+    "cluster": "c103",
+    "release_year": 2013,
+    "file": "encoded/4kgz__1__1.C_3.C__1.J.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4kgz__1__1.C_3.C__1.J.pt",
+      "sha256": "fbfb088f62df67c100d6be7b64e3284af99cb774c99bedeb8565ab4b5a04c5ff",
+      "size_bytes": 411457
+    }
+  },
+  {
+    "system_id": "5tsx__1__1.A__1.S",
+    "split": "validation",
+    "cluster": "c1996",
+    "release_year": 2016,
+    "file": "encoded/5tsx__1__1.A__1.S.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5tsx__1__1.A__1.S.pt",
+      "sha256": "97a9b96a22383b71b9311814709a314ed6b609cc589c20f86249a6b3337d0391",
+      "size_bytes": 231081
+    }
+  },
+  {
+    "system_id": "3mqr__1__1.A__1.B",
+    "split": "validation",
+    "cluster": "c2776",
+    "release_year": 2010,
+    "file": "encoded/3mqr__1__1.A__1.B.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3mqr__1__1.A__1.B.pt",
+      "sha256": "c3feef3cc417c255a2fe1e01884ab25f9d0bc096f2ed862be4cd8b13a0009bb8",
+      "size_bytes": 331817
+    }
+  },
+  {
+    "system_id": "5m0i__1__1.C__1.G",
+    "split": "validation",
+    "cluster": "c4053",
+    "release_year": 2016,
+    "file": "encoded/5m0i__1__1.C__1.G.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5m0i__1__1.C__1.G.pt",
+      "sha256": "4b99ae5bbb90778294424f1f995a0c4f8e3dba98dac730f5e5e29ded83729986",
+      "size_bytes": 468777
+    }
+  },
+  {
+    "system_id": "5d21__1__1.D__1.K_1.L",
+    "split": "validation",
+    "cluster": "c225",
+    "release_year": 2015,
+    "file": "encoded/5d21__1__1.D__1.K_1.L.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5d21__1__1.D__1.K_1.L.pt",
+      "sha256": "fdab966c13823047bd723be9db8374941bd275e05a5b0eb3342cd543b9d8a1b3",
+      "size_bytes": 255745
+    }
+  },
+  {
+    "system_id": "1xms__1__2.A__2.B_2.C",
+    "split": "validation",
+    "cluster": "c124",
+    "release_year": 2004,
+    "file": "encoded/1xms__1__2.A__2.B_2.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/1xms__1__2.A__2.B_2.C.pt",
+      "sha256": "7dd8b7f2ff591ed1635346a87e39748ff404f258583dde226ed050d2f6df6bc9",
+      "size_bytes": 518209
+    }
+  },
+  {
+    "system_id": "6ybu__1__1.A_1.B__1.M_1.N",
+    "split": "validation",
+    "cluster": "c92",
+    "release_year": 2020,
+    "file": "encoded/6ybu__1__1.A_1.B__1.M_1.N.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6ybu__1__1.A_1.B__1.M_1.N.pt",
+      "sha256": "7ab0720c6278010ed769c566d1ce256a9de9560c078e8561b330c6415a5007ab",
+      "size_bytes": 566489
+    }
+  },
+  {
+    "system_id": "3e7j__1__1.A__1.C_1.I",
+    "split": "validation",
+    "cluster": "c3318",
+    "release_year": 2008,
+    "file": "encoded/3e7j__1__1.A__1.C_1.I.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/3e7j__1__1.A__1.C_1.I.pt",
+      "sha256": "288fb52a88161c5e0a6bd1984bc0bc7a8ec22f5a1504f7eb8e00b35c7ab3a6b9",
+      "size_bytes": 643777
+    }
+  },
+  {
+    "system_id": "1yzx__1__1.A_1.B__1.C",
+    "split": "validation",
+    "cluster": "c1556",
+    "release_year": 2005,
+    "file": "encoded/1yzx__1__1.A_1.B__1.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/1yzx__1__1.A_1.B__1.C.pt",
+      "sha256": "241e62bbb618df1967a38b4d06eb5408adbdb7f920768b047e3c2687078dd3ff",
+      "size_bytes": 465793
+    }
+  },
+  {
+    "system_id": "6kcp__2__1.E__2.D",
+    "split": "validation",
+    "cluster": "c10810",
+    "release_year": 2019,
+    "file": "encoded/6kcp__2__1.E__2.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/6kcp__2__1.E__2.D.pt",
+      "sha256": "babaf34fb846bee807fb4f03f77eee3997e3bdbaae00f97ff6bf3acdc86e96ca",
+      "size_bytes": 287657
+    }
+  },
+  {
+    "system_id": "4s1b__2__1.B__1.F_1.G_1.H",
+    "split": "validation",
+    "cluster": "c4417",
+    "release_year": 2015,
+    "file": "encoded/4s1b__2__1.B__1.F_1.G_1.H.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4s1b__2__1.B__1.F_1.G_1.H.pt",
+      "sha256": "23530d591aa4d8df738506032bc35036f4d22d0c9797a8e4435d6223f8e48876",
+      "size_bytes": 638937
+    }
+  },
+  {
+    "system_id": "5mld__2__1.E_1.F_1.G_1.H__1.N",
+    "split": "validation",
+    "cluster": "c5311",
+    "release_year": 2016,
+    "file": "encoded/5mld__2__1.E_1.F_1.G_1.H__1.N.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5mld__2__1.E_1.F_1.G_1.H__1.N.pt",
+      "sha256": "33117a71d4497e92da12e5a37393e9538163958d3352bb122ba84801df7e4d8b",
+      "size_bytes": 554161
+    }
+  },
+  {
+    "system_id": "5m5q__1__1.A__1.B_1.C",
+    "split": "validation",
+    "cluster": "c5724",
+    "release_year": 2016,
+    "file": "encoded/5m5q__1__1.A__1.B_1.C.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/5m5q__1__1.A__1.B_1.C.pt",
+      "sha256": "7da21adae3bf2c444212d240df9172a59026dfceef146f5f281083c45409da2f",
+      "size_bytes": 380545
+    }
+  },
+  {
+    "system_id": "4dyn__2__1.B__1.D",
+    "split": "validation",
+    "cluster": "c822",
+    "release_year": 2012,
+    "file": "encoded/4dyn__2__1.B__1.D.pt",
+    "identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/encoded/4dyn__2__1.B__1.D.pt",
+      "sha256": "5a1a26787929939bc96b5fb3bb03d992520b78c52034381434e8c596f85a3ab1",
+      "size_bytes": 489641
+    }
+  }
+]

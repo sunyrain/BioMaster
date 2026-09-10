@@ -1,0 +1,132 @@
+{
+  "status": "COMPLETE_READ_ONLY_LOG_SUMMARY",
+  "utc": "2026-09-07T03:46:00.446881+00:00",
+  "last_logged_update": 9460,
+  "source": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/program_logs/train_biomaster_pocket_precision_--cutoff.log",
+  "snapshot_sha256": "13f6f5c81646c47864d171145f0ca0f4393a1eca4f3802b7e2e820b2ff738fcd",
+  "windows": [
+    {
+      "lower_exclusive": 0,
+      "upper_inclusive": 1000,
+      "kind": "bce_only",
+      "observations": 40,
+      "mean": 0.0691960630287383,
+      "median": 0.057954748056715744,
+      "q10": 0.009039411654725882,
+      "q90": 0.1496713464671302
+    },
+    {
+      "lower_exclusive": 0,
+      "upper_inclusive": 1000,
+      "kind": "bce_plus_weighted_ranking",
+      "observations": 10,
+      "mean": 0.7161281013391545,
+      "median": 0.7424454377718632,
+      "q10": 0.546033827599041,
+      "q90": 0.9133367835433773
+    },
+    {
+      "lower_exclusive": 1000,
+      "upper_inclusive": 3000,
+      "kind": "bce_only",
+      "observations": 80,
+      "mean": 0.04780782202000964,
+      "median": 0.03789333138593065,
+      "q10": 0.008168948285003808,
+      "q90": 0.09712649750812265
+    },
+    {
+      "lower_exclusive": 1000,
+      "upper_inclusive": 3000,
+      "kind": "bce_plus_weighted_ranking",
+      "observations": 20,
+      "mean": 0.7417992644277632,
+      "median": 0.6840360199490192,
+      "q10": 0.2855680253729133,
+      "q90": 1.1587008307990465
+    },
+    {
+      "lower_exclusive": 3000,
+      "upper_inclusive": 6000,
+      "kind": "bce_only",
+      "observations": 120,
+      "mean": 0.04203179155135596,
+      "median": 0.026328921897629698,
+      "q10": 0.004520565210759742,
+      "q90": 0.10672147575708096
+    },
+    {
+      "lower_exclusive": 3000,
+      "upper_inclusive": 6000,
+      "kind": "bce_plus_weighted_ranking",
+      "observations": 30,
+      "mean": 0.8052131843010765,
+      "median": 0.8804624339421139,
+      "q10": 0.24906316783492458,
+      "q90": 1.2229425556237516
+    },
+    {
+      "lower_exclusive": 6000,
+      "upper_inclusive": 9138,
+      "kind": "bce_only",
+      "observations": 125,
+      "mean": 0.049046616874378744,
+      "median": 0.02825113967787729,
+      "q10": 0.005109794478835283,
+      "q90": 0.1266189248078832
+    },
+    {
+      "lower_exclusive": 6000,
+      "upper_inclusive": 9138,
+      "kind": "bce_plus_weighted_ranking",
+      "observations": 31,
+      "mean": 0.8352408811721169,
+      "median": 0.7353718929746265,
+      "q10": 0.30965921988308764,
+      "q90": 1.5281674498128268
+    },
+    {
+      "lower_exclusive": 8138,
+      "upper_inclusive": 9138,
+      "kind": "bce_only",
+      "observations": 40,
+      "mean": 0.04108568552553464,
+      "median": 0.02515564037855711,
+      "q10": 0.002430863731075306,
+      "q90": 0.09490358886862396
+    },
+    {
+      "lower_exclusive": 8138,
+      "upper_inclusive": 9138,
+      "kind": "bce_plus_weighted_ranking",
+      "observations": 10,
+      "mean": 0.6293317940288603,
+      "median": 0.6712426077044711,
+      "q10": 0.2935626020869108,
+      "q90": 0.8830089715486223
+    },
+    {
+      "lower_exclusive": 9138,
+      "upper_inclusive": 9460,
+      "kind": "bce_only",
+      "observations": 14,
+      "mean": 0.026686035325115296,
+      "median": 0.024215331440643695,
+      "q10": 0.0051429453689820544,
+      "q90": 0.047501539275697266
+    },
+    {
+      "lower_exclusive": 9138,
+      "upper_inclusive": 9460,
+      "kind": "bce_plus_weighted_ranking",
+      "observations": 3,
+      "mean": 0.8648317204842897,
+      "median": 0.7387690123084667,
+      "q10": 0.592668094899409,
+      "q90": 1.1874204293394997
+    }
+  ],
+  "interpretation": "One minibatch observation every 20 updates, not full-epoch or fixed-panel loss. Ranking steps contain combined BCE and weighted query loss; pure query loss cannot be recovered.",
+  "training_modified": false,
+  "used_for_selection": false
+}

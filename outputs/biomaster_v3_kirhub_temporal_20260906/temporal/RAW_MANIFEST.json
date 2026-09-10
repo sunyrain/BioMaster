@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE",
+  "annual_rows": 483764,
+  "activity_rows": 549356,
+  "parent_molecules": 309649,
+  "missing_year_activity_rows": 11753,
+  "seconds": 34.390077703632414,
+  "database": "downloads/chembl_37/chembl_37/chembl_37_sqlite/chembl_37.db",
+  "database_size": 30480314368,
+  "database_mtime_ns": 1778704560758950000,
+  "sql_sha256": "d136913eb0c6132d9872c4b635e6b287307e14b0ac48bc78a5ef669a3954b182",
+  "label_rules": "numeric equality Ki/Kd/IC50; B, confidence9, direct human single protein, wildtype; explicit inactivity separate",
+  "files": {
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/ANNUAL_RAW.csv.gz": "2f48cab215cb4036f295cfb8b8be4efe892e8b3ddc8f610d0fb7f2c6cd7319b4",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/PARENT_MOLECULES.csv.gz": "62a8b9c4d1b40b3b013382829fa43aaf53d51bd6ba2eb7cc43177393b496b76f",
+    "outputs/biomaster_old_drug_bidirectional_20260906/TARGETS_384.csv.gz": "69bf9e9cf19a4d3df7e19f42606bb56ba9487e0bdc75e05944c1f4dbc5b67206"
+  }
+}

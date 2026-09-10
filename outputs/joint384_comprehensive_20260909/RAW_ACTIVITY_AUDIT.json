@@ -1,0 +1,14 @@
+{
+  "source574_sha256": "1b0946bed87419c2bb07f193e6705bf482e8e27546d3d2d9b5a6e363e3771b59",
+  "database_path": "/root/autodl-tmp/BioMaster/downloads/chembl_37/chembl_37/chembl_37_sqlite/chembl_37.db",
+  "database_bytes": 30480314368,
+  "database_mtime_ns": 1778704560758950000,
+  "database_version": "ChEMBL37",
+  "database_modified": false,
+  "sql": "SELECT p.pair_id,p.ligand_inchikey,p.target_chembl_id,m.entity_scope,md.chembl_id molecule_chembl_id,\n a.activity_id,a.standard_type,a.standard_relation,a.standard_value,a.standard_units,a.pchembl_value,\n a.activity_comment,a.data_validity_comment,a.potential_duplicate,s.chembl_id assay_chembl_id,s.description assay_description,\n s.assay_type,s.assay_organism,s.assay_cell_type,s.assay_subcellular_fraction,s.confidence_score,s.relationship_type,\n d.chembl_id doc_chembl_id,d.title doc_title,d.doi,d.pubmed_id,d.year\n FROM drug_mols m JOIN project_pairs p ON p.ligand_inchikey=m.ligand_inchikey\n JOIN target_dictionary t ON t.chembl_id=p.target_chembl_id\n JOIN activities a ON a.molregno=m.molregno\n JOIN assays s ON s.assay_id=a.assay_id AND s.tid=t.tid\n JOIN molecule_dictionary md ON md.molregno=m.molregno\n LEFT JOIN docs d ON d.doc_id=a.doc_id",
+  "candidate_pairs": 574,
+  "pairs_with_raw_activities": 69,
+  "pairs_high_confidence_direct_target_annotation": 17,
+  "activity_records": 131,
+  "meaning": "Prior endpoint records include percent inhibition, cell/function and negative records; do not interpret as binding-positive or direct measured affinity."
+}

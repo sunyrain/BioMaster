@@ -1,0 +1,22 @@
+{
+  "all_pass": true,
+  "checks": {
+    "exactly384_unique": true,
+    "original384_unchanged": true,
+    "original512_unchanged": true,
+    "all574_accounted": true,
+    "all_old_gates_retained": true,
+    "no_prior_hold_or_exclusion": true,
+    "no_new_identity_or_disease_hold": true,
+    "no_raw_prior_activity": true,
+    "no_deep_review_investment_hold": true,
+    "cross_area_has_reviewed_origin": true,
+    "cross_area_best_disease_exact": true,
+    "no_cancer_to_cancer_as_cross": true,
+    "one_reference_per_target": true,
+    "no_reference_candidate_overlap": true,
+    "drug_and_target_caps": true,
+    "priority_counts_match": true
+  },
+  "experimental_validation": false
+}

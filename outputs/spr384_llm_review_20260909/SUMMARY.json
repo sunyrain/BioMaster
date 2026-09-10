@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-09-09T16:03:57.489218+00:00",
+  "baseline_sha256": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+  "reviewed": 384,
+  "pending": 0,
+  "verdict_counts": {
+    "PRIORITIZE": 1,
+    "CONDITIONAL": 101,
+    "DEFER": 275,
+    "INSUFFICIENT": 7
+  },
+  "all_complete": true,
+  "experimental_release": false
+}

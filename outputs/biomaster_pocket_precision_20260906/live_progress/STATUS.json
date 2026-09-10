@@ -1,0 +1,1229 @@
+{
+  "utc": "2026-09-07T05:11:25.914288+00:00",
+  "beijing": "2026-09-07 13:08:47 (stopped)",
+  "reporter_pid": null,
+  "program": {
+    "status": "STOPPED_BY_USER",
+    "utc": "2026-09-07T05:11:25.914288+00:00",
+    "source_identities": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/fetch_biomaster_structural_complexes.py",
+        "sha256": "6d6abed9fed8c949320bd523fbfbe4cb7a57263c71cab4a99d6fb46b0e763658",
+        "size_bytes": 7931
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_structural_training.py",
+        "sha256": "e82a71ef1f18a1d307e22958a6652cdb5cdd6782698b1433d480fab6b1431504",
+        "size_bytes": 20003
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/encode_biomaster_structural_online.py",
+        "sha256": "956f06668fd6ccb8d93c378cb13af5c37444cf5c6e144788e7027fbe3ee20921",
+        "size_bytes": 2139
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/pretrain_biomaster_structural_interaction.py",
+        "sha256": "8cb13e7531da449522fccff1780c8db4fcc2053b1298fa72310489b2065bf798",
+        "size_bytes": 11338
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_pocket_precision.py",
+        "sha256": "a59d0ce3aed6df69cc060ec62936201e99bfae1f7bfe33e4667f3e3dd53da740",
+        "size_bytes": 11620
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/structural_complex.py",
+        "sha256": "57806a68a646e1021e6d40779f649f45fae262d3a772f342a4fa3a5a5f309f60",
+        "size_bytes": 10512
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/structural_encoding.py",
+        "sha256": "7e8c64fbf1597544e6fa9373e117609eb6494866dbd95142614f37b81c7fbc79",
+        "size_bytes": 4935
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/structural_training.py",
+        "sha256": "9ba81818dffbb65e84f383afaa780f0ded8d505786d23f7bb71e8ee1306c3c9a",
+        "size_bytes": 4685
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+        "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+        "size_bytes": 12551
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/configs/biomaster_structural_pretraining_20260906.json",
+        "sha256": "a68c6be525b34605336ef275100615d8fea334ff7c68ab6a8140da86a804b00f",
+        "size_bytes": 1104
+      }
+    ],
+    "downstream_ranking_complete": false,
+    "checkpoint": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+      "sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+      "size_bytes": 134792539
+    },
+    "status_before_user_stop": "DOWNSTREAM_2020_DEVELOPMENT_RUNNING",
+    "utc_before_user_stop": "2026-09-06T14:35:11.562233+00:00",
+    "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+    "closure": {
+      "status": "STOPPED_BY_USER",
+      "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+      "updated_utc": "2026-09-07T05:11:25.914288+00:00",
+      "reason": "User requested stopping current work and closing out with a retrospective.",
+      "automatic_continuation_enabled": false,
+      "training_complete": false,
+      "structural_pretraining_complete": true,
+      "completed_downstream_epochs": 1,
+      "last_saved_updates": 10400,
+      "last_logged_updates": 10480,
+      "last_log_loss": 0.05849192723769647,
+      "last_log_loss_scope": "one sampled minibatch; not epoch mean or validation loss",
+      "known_logged_updates_after_checkpoint": 80,
+      "exact_in_memory_step_at_signal_unknown": true,
+      "ranking_gain_confirmed": false,
+      "promotion_eligible": false,
+      "new_2023_2025_or_kirhub_test_completed": false,
+      "selected_bundle_manifest_unchanged": true,
+      "evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/closure_20260907/EVIDENCE.json",
+      "report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_STOP_AND_RETROSPECTIVE_20260907_ZH.md",
+      "pending_experiments_cancelled": true,
+      "status_note": "Terminated by user, not converged or completed. Existing checkpoint payloads retain their historical saved status and were not rewritten."
+    },
+    "automatic_continuation_enabled": false,
+    "promotion_eligible": false,
+    "supervisor_pid_before_user_stop": 957523,
+    "supervisor_pid": null,
+    "elapsed_seconds_at_previous_transition": 7651.099013535306,
+    "last_saved_updates": 10400,
+    "last_logged_updates": 10480
+  },
+  "structural": {
+    "status": "STRUCTURAL_PRETRAINING_COMPLETE",
+    "epoch": 6,
+    "updates": 3714,
+    "train_complexes": 9903,
+    "validation_complexes": 1223,
+    "best_macro_contact_ap": 0.5664865752614067,
+    "downstream_dti_ranking_measured": false
+  },
+  "downstream": {
+    "status": "STOPPED_BY_USER",
+    "mode": "structurally_pretrained",
+    "epoch": 1,
+    "updates": 10400,
+    "best": 0.43543200103127677,
+    "training_rows": 292408,
+    "promotion_eligible": false,
+    "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+    "last_logged_updates": 10480
+  },
+  "downstream_log_latest": {
+    "epoch": 1,
+    "updates": 10480,
+    "loss": 0.05849192723769647,
+    "seconds": 52380.58782657795
+  },
+  "downstream_seconds_per_update": 4.735023397820648,
+  "downstream_updates_per_epoch": 9138,
+  "structural_history": [
+    {
+      "epoch": 0,
+      "updates": 0,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.0940854149850938,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 8.444946312066092,
+        "pocket_assignment_accuracy": 0.9787408013082584,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 0,
+      "updates": 200,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.38910628144234843,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 3.628376809671485,
+        "pocket_assignment_accuracy": 0.9975470155355682,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 0,
+      "updates": 400,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.45994894283499643,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.935026877548299,
+        "pocket_assignment_accuracy": 0.9983646770237122,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 0,
+      "updates": 600,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.4847948817722232,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.8589703566893534,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 0,
+      "updates": 619,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.4962884698522985,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.744219612217495,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 1,
+      "updates": 800,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.511474071526618,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.7583876873563766,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 1,
+      "updates": 1000,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5175505639020065,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.6473661689415198,
+        "pocket_assignment_accuracy": 0.9983646770237122,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 1,
+      "updates": 1200,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5387406994208406,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.629596961295127,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 1,
+      "updates": 1238,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5388148852413129,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.656210706356794,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 2,
+      "updates": 1400,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5431908108068453,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.566087154121742,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 2,
+      "updates": 1600,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5558032091109036,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.5676840860533696,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 2,
+      "updates": 1800,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5578185933523517,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.4937173290907704,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 2,
+      "updates": 1857,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5550546960438677,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.4977309381191786,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 3,
+      "updates": 2000,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5562018001352143,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.464967246827588,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 3,
+      "updates": 2200,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5650501408936901,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.439111560266328,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 3,
+      "updates": 2400,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5655953310318673,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.4516018093460814,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 3,
+      "updates": 2476,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5654495487552553,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.4494384939516554,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 4,
+      "updates": 2600,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5647356028534072,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.4631580568588083,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 4,
+      "updates": 2800,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5621185310082389,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.478295943041074,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 4,
+      "updates": 3000,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5664865752614067,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.505196169908185,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 4,
+      "updates": 3095,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5638983894795497,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.477091818000095,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 5,
+      "updates": 3200,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.563962593038999,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.5172421132455765,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 5,
+      "updates": 3400,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5649333757334098,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.556674761208763,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 5,
+      "updates": 3600,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5626280258409558,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.5342981510735494,
+        "pocket_assignment_accuracy": 1.0,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    },
+    {
+      "epoch": 5,
+      "updates": 3714,
+      "metrics": {
+        "complexes": 1223,
+        "macro_contact_ap": 0.5650774167558132,
+        "macro_contact_prevalence": 0.08395209547622129,
+        "macro_distance_mae_capped32_A": 2.477339729264634,
+        "pocket_assignment_accuracy": 0.9991823385118561,
+        "multi_region_complexes": 1223,
+        "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+      }
+    }
+  ],
+  "downstream_history": [
+    {
+      "epoch": 1,
+      "metrics": {
+        "d2t": {
+          "all_queries": 34,
+          "positive_queries": 34,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.4787038220831325,
+          "macro_mrr": 0.5103344944512421,
+          "macro_recall_5": 0.5318627450980392,
+          "macro_recall_10": 0.571078431372549,
+          "macro_recall_20": 0.6627450980392157,
+          "macro_ndcg_20": 0.5277645288980406,
+          "min_candidates": 291.0,
+          "median_candidates": 381.0,
+          "max_candidates": 384.0
+        },
+        "t2d": {
+          "all_queries": 39,
+          "positive_queries": 39,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.21029172492715192,
+          "macro_mrr": 0.27138583043130554,
+          "macro_recall_5": 0.21367521367521364,
+          "macro_recall_10": 0.34188034188034183,
+          "macro_recall_20": 0.6324786324786325,
+          "macro_ndcg_20": 0.3104972514896457,
+          "min_candidates": 657.0,
+          "median_candidates": 708.0,
+          "max_candidates": 720.0
+        }
+      },
+      "composite": 0.43543200103127677
+    }
+  ],
+  "parent_precision_audit": {
+    "status": "COMPLETE_READ_ONLY_PARENT_PRECISION_AUDIT",
+    "utc": "2026-09-07T03:36:28.049817+00:00",
+    "scope": "cutoff 2020, validation 2021-2022, seed 20260921; first downstream epoch only",
+    "parent": {
+      "cutoff": 2020,
+      "seed": 20260921,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+        "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+        "size_bytes": 4956393
+      },
+      "config": {
+        "variant": "global",
+        "width": 192,
+        "pair_width": 32,
+        "blocks": 2,
+        "dropout": 0.1,
+        "capacity_hidden": 768,
+        "drug_representation": "drugclip_morgan"
+      },
+      "selected_epoch": 6,
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+        "sha256": "21f6f6f7bc0d3c3468bdf38565cdfa780cfd1d52b861a2250dcaf43d6912b84f",
+        "size_bytes": 6839
+      }
+    },
+    "evaluation_precision": "BF16 autocast, microbatch=1, TF32 disabled; exact frozen-parent path of current ranker",
+    "parent_metrics": {
+      "d2t": {
+        "all_queries": 34,
+        "positive_queries": 34,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.477443969891659,
+        "macro_mrr": 0.5097626391053688,
+        "macro_recall_5": 0.534313725490196,
+        "macro_recall_10": 0.571078431372549,
+        "macro_recall_20": 0.6627450980392157,
+        "macro_ndcg_20": 0.5274591200509028,
+        "min_candidates": 291.0,
+        "median_candidates": 381.0,
+        "max_candidates": 384.0
+      },
+      "t2d": {
+        "all_queries": 39,
+        "positive_queries": 39,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.20383246147517825,
+        "macro_mrr": 0.2589886109004325,
+        "macro_recall_5": 0.2393162393162393,
+        "macro_recall_10": 0.3803418803418803,
+        "macro_recall_20": 0.5555555555555555,
+        "macro_ndcg_20": 0.2876822508707552,
+        "min_candidates": 657.0,
+        "median_candidates": 708.0,
+        "max_candidates": 720.0
+      }
+    },
+    "downstream_first_epoch": {
+      "epoch": 1,
+      "metrics": {
+        "d2t": {
+          "all_queries": 34,
+          "positive_queries": 34,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.4787038220831325,
+          "macro_mrr": 0.5103344944512421,
+          "macro_recall_5": 0.5318627450980392,
+          "macro_recall_10": 0.571078431372549,
+          "macro_recall_20": 0.6627450980392157,
+          "macro_ndcg_20": 0.5277645288980406,
+          "min_candidates": 291.0,
+          "median_candidates": 381.0,
+          "max_candidates": 384.0
+        },
+        "t2d": {
+          "all_queries": 39,
+          "positive_queries": 39,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.21029172492715192,
+          "macro_mrr": 0.27138583043130554,
+          "macro_recall_5": 0.21367521367521364,
+          "macro_recall_10": 0.34188034188034183,
+          "macro_recall_20": 0.6324786324786325,
+          "macro_ndcg_20": 0.3104972514896457,
+          "min_candidates": 657.0,
+          "median_candidates": 708.0,
+          "max_candidates": 720.0
+        }
+      },
+      "composite": 0.43543200103127677
+    },
+    "downstream_minus_matched_parent": {
+      "d2t": {
+        "macro_ap": 0.0012598521914735095,
+        "macro_recall_20": 0.0
+      },
+      "t2d": {
+        "macro_ap": 0.006459263451973674,
+        "macro_recall_20": 0.07692307692307698
+      }
+    },
+    "parent_composite": 0.4211918490176087,
+    "validation_identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+      "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+      "size_bytes": 458291
+    },
+    "risk_identity": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+      "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+      "size_bytes": 276608
+    },
+    "source_identity": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_parent_precision.py",
+      "sha256": "320ded832e4a2f08aa9af12dae0a98e171e035f3df9ffbd8dbc0679b203c45cb",
+      "size_bytes": 4834
+    },
+    "seconds": 55.44620086904615,
+    "used_for_selection": false,
+    "training_modified": false,
+    "new_model_rescored": false,
+    "uncertainty": "No paired query confidence interval: current trainer stores aggregate validation only."
+  },
+  "fp32_audit_status": {
+    "status": "COMPLETE_READ_ONLY_FP32_RANKING_AUDIT",
+    "utc": "2026-09-07T03:50:55.941004+00:00",
+    "pid": 49092,
+    "seconds": 738.1363835670054,
+    "used_for_selection": false,
+    "result": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/RESULT.json",
+    "completed_pairs": 41136,
+    "total_pairs": 41136
+  },
+  "fp32_audit_result": {
+    "status": "COMPLETE_READ_ONLY_FP32_RANKING_AUDIT",
+    "utc": "2026-09-07T03:50:55.824347+00:00",
+    "snapshot": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/EPOCH1_SNAPSHOT.pt",
+      "sha256": "e170fde45439d7014d2db106cf28e18f6a990b52e01370f507551ff35de6a0c9",
+      "size_bytes": 139717267
+    },
+    "parent": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+      "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+      "size_bytes": 4956393
+    },
+    "validation": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+      "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+      "size_bytes": 458291
+    },
+    "risk": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+      "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+      "size_bytes": 276608
+    },
+    "source": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_ranking_fp32.py",
+      "sha256": "37ebb834c36ce49df300d12cf207cfe08a1e5bc9ac10fe289f1be31357838cdc",
+      "size_bytes": 7747
+    },
+    "evaluation": "FP32 weights/inputs/operations, TF32 disabled, microbatch=1, fixed epoch 1",
+    "scope": "cutoff 2020, validation 2021-2022, seed 20260921; all risk-set candidates, unknown background not inactivity",
+    "metrics": {
+      "d2t": {
+        "parent": {
+          "all_queries": 34,
+          "positive_queries": 34,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.4764840284179942,
+          "macro_mrr": 0.5097983519598345,
+          "macro_recall_5": 0.5245098039215685,
+          "macro_recall_10": 0.571078431372549,
+          "macro_recall_20": 0.6627450980392157,
+          "macro_ndcg_20": 0.5267969250460204,
+          "min_candidates": 291.0,
+          "median_candidates": 381.0,
+          "max_candidates": 384.0
+        },
+        "new": {
+          "all_queries": 34,
+          "positive_queries": 34,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.47858142818767674,
+          "macro_mrr": 0.5103943928248614,
+          "macro_recall_5": 0.5318627450980392,
+          "macro_recall_10": 0.571078431372549,
+          "macro_recall_20": 0.6627450980392157,
+          "macro_ndcg_20": 0.5276276777016871,
+          "min_candidates": 291.0,
+          "median_candidates": 381.0,
+          "max_candidates": 384.0
+        }
+      },
+      "t2d": {
+        "parent": {
+          "all_queries": 39,
+          "positive_queries": 39,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.20256771015121797,
+          "macro_mrr": 0.2577542796342111,
+          "macro_recall_5": 0.2393162393162393,
+          "macro_recall_10": 0.3803418803418803,
+          "macro_recall_20": 0.5811965811965811,
+          "macro_ndcg_20": 0.2923962636363476,
+          "min_candidates": 657.0,
+          "median_candidates": 708.0,
+          "max_candidates": 720.0
+        },
+        "new": {
+          "all_queries": 39,
+          "positive_queries": 39,
+          "positive_pairs": 53,
+          "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+          "macro_ap": 0.20972170058526737,
+          "macro_mrr": 0.2707718531718953,
+          "macro_recall_5": 0.21367521367521364,
+          "macro_recall_10": 0.34188034188034183,
+          "macro_recall_20": 0.6068376068376068,
+          "macro_ndcg_20": 0.3041063112407389,
+          "min_candidates": 657.0,
+          "median_candidates": 708.0,
+          "max_candidates": 720.0
+        }
+      }
+    },
+    "paired_query_ap_intervals": {
+      "d2t": {
+        "queries": 34,
+        "delta_ap": 0.002097399769682686,
+        "ci_low": -0.0007838801918553875,
+        "ci_high": 0.006391254354648491,
+        "confidence": 0.95
+      },
+      "t2d": {
+        "queries": 39,
+        "delta_ap": 0.007153990434049416,
+        "ci_low": -0.004919593832406429,
+        "ci_high": 0.022960627232170683,
+        "confidence": 0.95
+      }
+    },
+    "seconds": 738.1360622206703,
+    "used_for_selection": false,
+    "promotion_eligible": false,
+    "training_modified": false,
+    "uncertainty": "Query bootstrap on one development window and seed; not multi-seed or external confirmation."
+  },
+  "system_audit": {
+    "status": "COMPLETE_READ_ONLY_SYSTEM_AUDIT",
+    "utc": "2026-09-07T03:57:11.861160+00:00",
+    "data": {
+      "all_training": {
+        "rows": 292408,
+        "molecules": 209659,
+        "targets": 358,
+        "positives": 235138,
+        "negatives": 57270,
+        "positive_fraction": 0.8041435254849388,
+        "local_available_rows": 275076,
+        "positive_drug_queries": 182228,
+        "positive_target_queries": 346
+      },
+      "old_drug_training": {
+        "rows": 4782,
+        "molecules": 307,
+        "targets": 240,
+        "positives": 770,
+        "negatives": 4012,
+        "positive_fraction": 0.16102049351735676,
+        "local_available_rows": 4759,
+        "positive_drug_queries": 234,
+        "positive_target_queries": 188
+      },
+      "all_validation": {
+        "rows": 59319,
+        "molecules": 34811,
+        "targets": 312,
+        "positives": 41469,
+        "negatives": 17850,
+        "positive_fraction": 0.6990846103272139,
+        "local_available_rows": 57928,
+        "positive_drug_queries": 31472,
+        "positive_target_queries": 280
+      },
+      "old_drug_validation": {
+        "rows": 116,
+        "molecules": 49,
+        "targets": 77,
+        "positives": 53,
+        "negatives": 63,
+        "positive_fraction": 0.45689655172413796,
+        "local_available_rows": 116,
+        "positive_drug_queries": 34,
+        "positive_target_queries": 39
+      }
+    },
+    "old_drug_training_fraction": 0.016353861727449317,
+    "single_target_training_molecules": 167607,
+    "structural_clusters": {
+      "train": {
+        "complexes": 9903,
+        "clusters": 489,
+        "largest_cluster": "c0",
+        "largest_cluster_complexes": 5279,
+        "largest_cluster_fraction": 0.533070786630314
+      },
+      "validation": {
+        "complexes": 1223,
+        "clusters": 162,
+        "largest_cluster": "c89",
+        "largest_cluster_complexes": 144,
+        "largest_cluster_fraction": 0.11774325429272281
+      }
+    },
+    "features": {
+      "targets": 384,
+      "targets_with_pockets": 352,
+      "pockets": 1187,
+      "single_pocket_targets": 104,
+      "old_drugs_with_molecule_features": 719,
+      "old_drug_total": 720
+    },
+    "local_parameters": 33652451,
+    "frozen_parent_parameters": 1235604,
+    "parameter_drift": {
+      "blocks.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": false,
+          "l2_change": 28.12546742845615,
+          "relative_l2_change": 0.1374643525635435
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": false,
+          "l2_change": 8.669571355728777,
+          "relative_l2_change": 0.04188856659962472
+        }
+      },
+      "pool_attention.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": false,
+          "l2_change": 0.025131711816437644,
+          "relative_l2_change": 0.04435342223330367
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": false,
+          "l2_change": 0.013375674588247982,
+          "relative_l2_change": 0.02376687840463124
+        }
+      },
+      "local_output.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": false,
+          "l2_change": 2.789857313986228,
+          "relative_l2_change": 0.05809041066572038
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": false,
+          "l2_change": 6.736947937370033,
+          "relative_l2_change": 0.14015238258869445
+        }
+      },
+      "pocket_gate.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": false,
+          "l2_change": 0.7622104718753691,
+          "relative_l2_change": 0.11633309128288832
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": false,
+          "l2_change": 0.5633186776054163,
+          "relative_l2_change": 0.0849701488396001
+        }
+      },
+      "refine.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": true,
+          "l2_change": 0.0,
+          "relative_l2_change": 0.0
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": false,
+          "l2_change": 1.9113688994386715,
+          "relative_l2_change": 0.09030739276706325
+        }
+      },
+      "distance_head.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": false,
+          "l2_change": 3.128877826863989,
+          "relative_l2_change": 0.2562058294004332
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": true,
+          "l2_change": 0.0,
+          "relative_l2_change": 0.0
+        }
+      },
+      "contact_head.": {
+        "pretraining_vs_initial": {
+          "exactly_unchanged": false,
+          "l2_change": 0.9247369101923567,
+          "relative_l2_change": 0.08162417699424573
+        },
+        "epoch1_vs_pretraining": {
+          "exactly_unchanged": true,
+          "l2_change": 0.0,
+          "relative_l2_change": 0.0
+        }
+      }
+    },
+    "structural_retention": {
+      "native_contact_ap": {
+        "before": 0.5671258218557094,
+        "after": 0.3555245520873743,
+        "after_minus_before": {
+          "mean_difference": -0.2116012697683351,
+          "ci95": [
+            -0.23520593520745112,
+            -0.18820074298989353
+          ],
+          "clusters": 162,
+          "resampling_unit": "whole internal structural cluster",
+          "iterations": 5000
+        }
+      },
+      "all_regions_contact_ap": {
+        "before": 0.5664301986207653,
+        "after": 0.25708955516147436,
+        "after_minus_before": {
+          "mean_difference": -0.3093406434592909,
+          "ci95": [
+            -0.3406284656408862,
+            -0.27366659608122473
+          ],
+          "clusters": 162,
+          "resampling_unit": "whole internal structural cluster",
+          "iterations": 5000
+        }
+      },
+      "native_distance_mae_capped32_A": {
+        "before": 1.2478746529105054,
+        "after": 2.4592761054744705,
+        "after_minus_before": {
+          "mean_difference": 1.211401452563965,
+          "ci95": [
+            1.056005652578639,
+            1.3912350922924472
+          ],
+          "clusters": 162,
+          "resampling_unit": "whole internal structural cluster",
+          "iterations": 5000
+        }
+      }
+    },
+    "retrieval_query_exposure": {
+      "drug_feature_index": {
+        "eligible_queries": 234,
+        "draws_first_epoch": 91,
+        "expected_distinct_queries": 75.52467669238312,
+        "interpretation": "expectation under uniform random draws with replacement, not reconstructed actual sampled IDs"
+      },
+      "target_feature_index": {
+        "eligible_queries": 188,
+        "draws_first_epoch": 91,
+        "expected_distinct_queries": 72.28763738784346,
+        "interpretation": "expectation under uniform random draws with replacement, not reconstructed actual sampled IDs"
+      }
+    },
+    "fp32_ranking": {
+      "metrics": {
+        "d2t": {
+          "parent": {
+            "all_queries": 34,
+            "positive_queries": 34,
+            "positive_pairs": 53,
+            "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+            "macro_ap": 0.4764840284179942,
+            "macro_mrr": 0.5097983519598345,
+            "macro_recall_5": 0.5245098039215685,
+            "macro_recall_10": 0.571078431372549,
+            "macro_recall_20": 0.6627450980392157,
+            "macro_ndcg_20": 0.5267969250460204,
+            "min_candidates": 291.0,
+            "median_candidates": 381.0,
+            "max_candidates": 384.0
+          },
+          "new": {
+            "all_queries": 34,
+            "positive_queries": 34,
+            "positive_pairs": 53,
+            "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+            "macro_ap": 0.47858142818767674,
+            "macro_mrr": 0.5103943928248614,
+            "macro_recall_5": 0.5318627450980392,
+            "macro_recall_10": 0.571078431372549,
+            "macro_recall_20": 0.6627450980392157,
+            "macro_ndcg_20": 0.5276276777016871,
+            "min_candidates": 291.0,
+            "median_candidates": 381.0,
+            "max_candidates": 384.0
+          }
+        },
+        "t2d": {
+          "parent": {
+            "all_queries": 39,
+            "positive_queries": 39,
+            "positive_pairs": 53,
+            "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+            "macro_ap": 0.20256771015121797,
+            "macro_mrr": 0.2577542796342111,
+            "macro_recall_5": 0.2393162393162393,
+            "macro_recall_10": 0.3803418803418803,
+            "macro_recall_20": 0.5811965811965811,
+            "macro_ndcg_20": 0.2923962636363476,
+            "min_candidates": 657.0,
+            "median_candidates": 708.0,
+            "max_candidates": 720.0
+          },
+          "new": {
+            "all_queries": 39,
+            "positive_queries": 39,
+            "positive_pairs": 53,
+            "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+            "macro_ap": 0.20972170058526737,
+            "macro_mrr": 0.2707718531718953,
+            "macro_recall_5": 0.21367521367521364,
+            "macro_recall_10": 0.34188034188034183,
+            "macro_recall_20": 0.6068376068376068,
+            "macro_ndcg_20": 0.3041063112407389,
+            "min_candidates": 657.0,
+            "median_candidates": 708.0,
+            "max_candidates": 720.0
+          }
+        }
+      },
+      "paired_query_ap_intervals": {
+        "d2t": {
+          "queries": 34,
+          "delta_ap": 0.002097399769682686,
+          "ci_low": -0.0007838801918553875,
+          "ci_high": 0.006391254354648491,
+          "confidence": 0.95
+        },
+        "t2d": {
+          "queries": 39,
+          "delta_ap": 0.007153990434049416,
+          "ci_low": -0.004919593832406429,
+          "ci_high": 0.022960627232170683,
+          "confidence": 0.95
+        }
+      }
+    },
+    "prepared_assay_data_not_consumed_by_current_trainer": {
+      "rows": 58923,
+      "groups": 3291,
+      "targets": 310,
+      "drugs": 49736,
+      "old_rows": 388,
+      "positives": 46104
+    },
+    "identities": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_data_training_20260907.py",
+        "sha256": "55a54e903ad22d634d0f1d6fdc186c9b79535859fd35255e0da234f6c7e57290",
+        "size_bytes": 8286
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/TRAIN.csv.gz",
+        "sha256": "125303c22875744a9e6adb980e9788add1d08c10f26b198bd51e3988b16f1eb2",
+        "size_bytes": 2712317
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+        "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+        "size_bytes": 458291
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+        "sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+        "size_bytes": 134792539
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/EPOCH1_SNAPSHOT.pt",
+        "sha256": "e170fde45439d7014d2db106cf28e18f6a990b52e01370f507551ff35de6a0c9",
+        "size_bytes": 139717267
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/contact_diagnostics/completed_pretraining/COMPLEX_METRICS.csv",
+        "sha256": "b5f23640bba554ed7a2f7f6191a220d4286e7fd774965d28eedf9a98081ed626",
+        "size_bytes": 262657
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_contact_retention_20260907/COMPLEX_METRICS.csv",
+        "sha256": "d089c41e37a8e92bca54989d857982942360e6b775843383fa9b8d9fb8a27b81",
+        "size_bytes": 264092
+      }
+    ],
+    "running_training_sources_unchanged": true,
+    "training_modified": false,
+    "used_for_selection": false,
+    "caveat": "Observed degradation with unchanged structural heads establishes lost original readout performance, not complete erasure of all latent geometric information."
+  },
+  "final_contact_diagnostic": {
+    "status": "COMPLETE_READ_ONLY_DIAGNOSTIC",
+    "scope": "cluster-held-out experimental structural contacts; NOT old-drug ranking",
+    "source_checkpoint": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+    "checkpoint_sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+    "checkpoint_status": "STRUCTURAL_PRETRAINING_COMPLETE",
+    "progress": null,
+    "data": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/MANIFEST.json",
+      "sha256": "521906f711acb9269cb2e4139bc9f751e26db0df594eeb846111ab636728ea3a",
+      "size_bytes": 5335515
+    },
+    "script": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/diagnose_biomaster_structural_contact_learning.py",
+      "sha256": "4b33f96a4367ab15253cbc816d15ac658b9d7e68c27933f6c7421f8ff24fecfe",
+      "size_bytes": 8463
+    },
+    "complexes": 1223,
+    "means": {
+      "native_contact_ap": 0.5671258218557094,
+      "native_contact_prevalence": 0.1381478116575339,
+      "native_residue_only_score_ap": 0.31930360561272636,
+      "native_atom_permuted_score_ap": 0.2587065074187084,
+      "native_atom_to_residue_macro_ap": 0.6599122575938455,
+      "native_residue_to_atom_macro_ap": 0.6321252235611629,
+      "native_contact_pairs": 76.556827473426,
+      "native_pair_candidates": 644.1054783319705,
+      "all_regions_contact_ap": 0.5664301986207653,
+      "all_regions_contact_prevalence": 0.08395209547622129,
+      "native_distance_mae_capped32_A": 1.2478746529105054,
+      "native_region_selected": 0.9991823385118561,
+      "regions": 2.0
+    },
+    "seconds": 54.899336855858564,
+    "native_vs_atom_permuted": {
+      "mean_difference": 0.30841931443700105,
+      "ci95": [
+        0.2765250126166506,
+        0.3394536075886703
+      ],
+      "clusters": 162,
+      "resampling_unit": "whole internal structural cluster",
+      "iterations": 5000
+    },
+    "native_vs_residue_only": {
+      "mean_difference": 0.24782221624298306,
+      "ci95": [
+        0.21490127078364588,
+        0.27968496642251317
+      ],
+      "clusters": 162,
+      "resampling_unit": "whole internal structural cluster",
+      "iterations": 5000
+    },
+    "native_vs_constant": {
+      "mean_difference": 0.4289780101981755,
+      "ci95": [
+        0.3950000276540863,
+        0.4565333086716202
+      ],
+      "clusters": 162,
+      "resampling_unit": "whole internal structural cluster",
+      "iterations": 5000
+    },
+    "used_for_checkpoint_selection": false,
+    "fitted_or_modified_model": false
+  },
+  "diagnostics": {
+    "status": "ALL_STRUCTURAL_CONTACT_DIAGNOSTICS_COMPLETE",
+    "utc": "2026-09-06T14:36:23.291352+00:00",
+    "pid": 972602,
+    "elapsed_seconds": 4558.110693839379,
+    "used_for_selection": false
+  },
+  "processes": [],
+  "last_monitor_sample_utc": "2026-09-07T05:08:41.495486+00:00",
+  "status": "STOPPED_BY_USER",
+  "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+  "reporter_pid_before_user_stop": 52057,
+  "auto_refresh": false,
+  "automatic_continuation_enabled": false,
+  "processes_before_user_stop": [
+    {
+      "pid": 957523,
+      "script": "run_biomaster_structural_followup.py",
+      "started_utc": "2026-09-06T12:27:38.370000+00:00"
+    },
+    {
+      "pid": 979323,
+      "script": "train_biomaster_pocket_precision.py",
+      "started_utc": "2026-09-06T14:35:11.110000+00:00"
+    }
+  ],
+  "gpu_utilization_used_total_at_last_monitor_sample": "18, 24999, 49140",
+  "gpu_compute_processes_raw_at_stop_verification": "",
+  "closure": {
+    "status": "STOPPED_BY_USER",
+    "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+    "updated_utc": "2026-09-07T05:11:25.914288+00:00",
+    "reason": "User requested stopping current work and closing out with a retrospective.",
+    "automatic_continuation_enabled": false,
+    "training_complete": false,
+    "structural_pretraining_complete": true,
+    "completed_downstream_epochs": 1,
+    "last_saved_updates": 10400,
+    "last_logged_updates": 10480,
+    "last_log_loss": 0.05849192723769647,
+    "last_log_loss_scope": "one sampled minibatch; not epoch mean or validation loss",
+    "known_logged_updates_after_checkpoint": 80,
+    "exact_in_memory_step_at_signal_unknown": true,
+    "ranking_gain_confirmed": false,
+    "promotion_eligible": false,
+    "new_2023_2025_or_kirhub_test_completed": false,
+    "selected_bundle_manifest_unchanged": true,
+    "evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/closure_20260907/EVIDENCE.json",
+    "report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_STOP_AND_RETROSPECTIVE_20260907_ZH.md",
+    "pending_experiments_cancelled": true,
+    "status_note": "Terminated by user, not converged or completed. Existing checkpoint payloads retain their historical saved status and were not rewritten."
+  },
+  "structural_max_epochs": 8,
+  "structural_max_updates": 4952,
+  "structural_recent_seconds_per_update": 1.139631896098305,
+  "structural_status_age_seconds_at_last_monitor_sample": 52410.778577804565
+}

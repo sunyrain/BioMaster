@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "files": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/BERMOL.npy",
+      "sha256": "e7d9116c5b2f97c84d7223e807f468308c46bd04a009123bea3be3010090b1e1",
+      "size_bytes": 950968448
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/BERMOL_DONE.npy",
+      "sha256": "1d3c9e3563eebfcb36c4a2afd418f14323d29d6c2d9442291cf24c91439077f0",
+      "size_bytes": 309688
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MORGAN.npy",
+      "sha256": "293ff4c036234e32a2c627076ac2d8405f8e6cee9a758245939f8eea01999535",
+      "size_bytes": 633979008
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MOLECULES.csv.gz",
+      "sha256": "aeaed335a7e8df4b8f17cab8f79712768f717c1fcbff7eadb7c4908ea2279ff4",
+      "size_bytes": 18722803
+    }
+  ],
+  "parent": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/DATA_MANIFEST.json",
+    "sha256": "a6bf76fc6e924078969b605075025c6bf26bf3363423c6628e205b2e4a0f89a7",
+    "size_bytes": 9939
+  },
+  "labels_used": false
+}

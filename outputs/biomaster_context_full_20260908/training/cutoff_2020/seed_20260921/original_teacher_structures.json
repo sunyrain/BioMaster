@@ -1,0 +1,11 @@
+{
+  "experimental_native": {
+    "complexes": 1223,
+    "available": 1223,
+    "contact_positive_complexes": 1223,
+    "contact_ap": 0.5671258218557094,
+    "distance_mae": 1.2478746625115806,
+    "site_hit_1": 0.9991823385118561,
+    "predicted_residue_coverage": 0.7597891950266494
+  }
+}

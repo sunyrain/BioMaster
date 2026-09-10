@@ -1,0 +1,59 @@
+{
+  "architecture": "ContextPocketRanker",
+  "status": "TRAINING_PREPARATION_NOT_SELECTED",
+  "cutoff": 2020,
+  "seed": 20260921,
+  "model": {
+    "width": 384, "pair_width": 128, "heads": 8, "blocks": 6,
+    "outer_width": 16, "dropout": 0.1, "distance_bins": 64,
+    "distance_max": 32.0, "parent_width": 192, "checkpoint_blocks": true
+  },
+  "training": {
+    "primary_unit": "one complete old-drug or target query per optimizer update",
+    "query_order": "each eligible query exactly once per cycle, shuffled within direction and interleaved",
+    "query_loss_weight": 1.0,
+    "old_observed_bce_weight": 0.25,
+    "general_observed_bce_weight": 0.05,
+    "same_assay_pair_weight": 0.1,
+    "structural_replay_weight": 0.2,
+    "predicted_pocket_teacher_weight": 0.1,
+    "old_observed_batch": 8,
+    "general_observed_batch": 4,
+    "assay_rows_per_class": 2,
+    "structural_complexes_per_update": 1,
+    "candidate_microbatch": 4,
+    "global_lr": 0.00001,
+    "structural_lr": 0.000001,
+    "new_lr": 0.0001,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "initial_phase": "adaptation",
+    "phase_definition": "structural trunk frozen initially; global task encoder, context projections, pocket gate and new readout train; later joint phase is explicit",
+    "precision": "BF16 training with FP32 losses; FP32 ranking validation and TF32 disabled",
+    "checkpoint_every_updates": 1,
+    "maximum_minutes_between_structural_checks": 15,
+    "maximum_updates_between_structural_checks": 10
+  },
+  "preflight": {
+    "optimizer_updates": 2,
+    "structural_validation_complexes": 64,
+    "maximum_wall_seconds": 1800,
+    "maximum_absolute_native_contact_ap_drop": 0.03,
+    "maximum_native_distance_mae_increase_A": 0.25,
+    "structural_baseline": "measure original teacher and migrated architecture on identical fixed complexes",
+    "claim": "engineering and short-transfer validation only; not a quality benchmark"
+  },
+  "formal_training_requirements": [
+    "data audit and real full-width preflight pass",
+    "full 1223-complex structural retention baseline and paired comparison",
+    "fixed FP32 ranking evaluation and matching old-parent scores",
+    "explicit handling or controlled study of holo versus predicted-pocket transfer"
+  ],
+  "selection": {
+    "primary_metrics": ["d2t_macro_ap", "t2d_macro_ap"],
+    "guard_metrics": ["d2t_recall_5", "d2t_recall_10", "t2d_recall_5", "t2d_recall_10", "native_contact_ap", "native_distance_mae"],
+    "requirement": "predeclare practical margins and use paired intervals across development windows and seeds before promotion",
+    "test_labels_used_for_preparation": false,
+    "frozen_spr_candidates_used_as_supervised_labels": false
+  }
+}

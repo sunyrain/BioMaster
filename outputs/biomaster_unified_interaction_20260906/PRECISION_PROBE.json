@@ -1,0 +1,34 @@
+{
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/development/global/seed_20260921/BEST.pt",
+    "sha256": "ed2bbd11588da3d1e16b4e48f9964dd35ca85565a712d3e6bb139393e30bed26",
+    "size_bytes": 3364521
+  },
+  "validation": "2021-2022 only",
+  "results": {
+    "bf16_autocast": {
+      "d2t": {
+        "ap": 0.4026410042780202,
+        "r20": 0.6803921568627451
+      },
+      "t2d": {
+        "ap": 0.3025522093200235,
+        "r20": 0.6324786324786325
+      }
+    },
+    "fp32": {
+      "d2t": {
+        "ap": 0.4028092914837057,
+        "r20": 0.6803921568627451
+      },
+      "t2d": {
+        "ap": 0.30201759756545055,
+        "r20": 0.6324786324786325
+      }
+    }
+  },
+  "max_logit_difference": 0.19825506210327148,
+  "inference_precision_in_primary_experiment": "bf16 autocast, float32 stored scores",
+  "selected_epochs_changed": false,
+  "test_labels_used": false
+}

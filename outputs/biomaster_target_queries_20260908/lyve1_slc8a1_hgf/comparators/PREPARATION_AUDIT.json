@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "drugs": 720,
+  "pocket_counts": {
+    "LYVE1": {
+      "retained": 0,
+      "predicted": 3,
+      "max_probability": 0.013
+    },
+    "SLC8A1": {
+      "retained": 6,
+      "predicted": 24,
+      "max_probability": 0.54
+    },
+    "HGF": {
+      "retained": 3,
+      "predicted": 18,
+      "max_probability": 0.608
+    }
+  },
+  "sequence_checks": "all AlphaFold chains equal queried full human sequence",
+  "inputs": {
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/LYVE1_AF.pdb": "4dc182af73fbd754c4c8343e1b3dba0d616b0e651e717a8e3cc2f6cb177ea82d",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/lyve1_p2rank/LYVE1_AF.pdb_predictions.csv": "2f8586e0399512d27563e77234a73f357731b5225cd85cfc8b3caac89df3a870",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/SLC8A1_AF.pdb": "bbbf6f76c3e2d9eb2f6b0dc1a82f094b99beb3e49401472c02c1d60241e498fc",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/slc8a1_p2rank/SLC8A1_AF.pdb_predictions.csv": "8949d5c1aa0856655306ebbec5469e9a7f25b48c6a6b1c1d7962825ba4956455",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/HGF_AF.pdb": "5c4587f1e6a807488b67d4e50933b908c144300ce9dc3414998079c353c18d75",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/hgf_p2rank/HGF_AF.pdb_predictions.csv": "4c81a86438a16afb7c876e5e59522a555e126fce59a85401a853201982c58c01",
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/QUINIDINE_PUBCHEM_3D.sdf": "89f4cf652035a5b7e302e9189737469aafa77d5778b5b3fc204ed063ab391caa"
+  },
+  "pocket_policy": "all P2Rank probability >= 0.2; no ligand or score-dependent selection",
+  "inputs_sha256": {
+    "pockets.lmdb": "a0ce7969c1fab4fdad4d65043c576d62966b4df89371cbf6574ffa5495555048",
+    "molecules.lmdb": "e262b78dd141f620c74183770a30963a3e6aa0248fd6f264a8dda8a275739ee7",
+    "P2RANK_POCKET_MANIFEST.csv": "69296fdd8f45f696119d2330b6cc139cec1986304e73ec47b67add9acd3a096b",
+    "DRUGCLIP_MOLECULE_MANIFEST.csv": "3f9eaa8b5fce16cbcad308f363941e8636ed4e2848a3854914c860c84d0aa2d1"
+  },
+  "p2rank_jar_sha256": "4d73a85b796bd5ec5563d840abb5b1005f37b4651fd7f8aaad4b01a936ea1ece",
+  "p2rank_config_sha256": "bc3be625000100ccf3d57907b67c726159c797b9bb421d07fc4a7b6fca0aaa9f"
+}

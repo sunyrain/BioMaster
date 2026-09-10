@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "identity": {
+    "selection": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/FINAL_ARCHITECTURE_SELECTION.json",
+      "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+      "size_bytes": 17515
+    },
+    "prediction_release": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/regression/PREDICTION_RELEASE.json",
+      "sha256": "9229fff8f36dd2536361c14c50c222b8bcff33079e754c9cb203b124fe56e7ec",
+      "size_bytes": 8953
+    },
+    "annual": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/ANNUAL_STANDARDIZED.csv.gz",
+      "sha256": "cea655c378911c91f65425c1b8fa7cfde67555c8e89ed2dae7f5512552a4be68",
+      "size_bytes": 3195481
+    },
+    "producer": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_selected_fullfit.py",
+      "sha256": "968d718e6821543fd5d1e5c76015811320b12426e81a809cbb893ee2befe1020",
+      "size_bytes": 3784
+    }
+  },
+  "train": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/fullfit_2025/TRAIN.csv.gz",
+    "sha256": "32ffa41c74c53b01cb0442caee553e8b26c0517262768ff7f017657e21910065",
+    "size_bytes": 3533209
+  },
+  "rows": 383638,
+  "positives": 301637,
+  "molecules": 266135,
+  "old_rows": 5014,
+  "old_positives": 875,
+  "train_max_year": 2025,
+  "date_before_label": true,
+  "undated_measurements_excluded": true,
+  "no_rows_dropped_for_features": true,
+  "role": "deployment full fit includes 2023-2025; these weights have no independent test score",
+  "architecture_or_seed_reselected": false
+}

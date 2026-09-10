@@ -1,0 +1,27 @@
+{
+  "baseline_candidates": 384,
+  "baseline_reason_reviewed": 384,
+  "baseline_action_counts": {
+    "EXPLORABLE": 223,
+    "FIRST_RESOLVE": 149,
+    "EVIDENCE_DEPRIORITIZE": 12
+  },
+  "old_defer_count": 275,
+  "old_defer_reclassified": {
+    "EXPLORABLE": 166,
+    "EVIDENCE_DEPRIORITIZE": 12,
+    "FIRST_RESOLVE": 97
+  },
+  "expanded_queue": 384,
+  "expanded_reviewed": 384,
+  "expanded_pending": 0,
+  "expanded_action_counts": {
+    "EXPLORABLE": 286,
+    "FIRST_RESOLVE": 94,
+    "EVIDENCE_DEPRIORITIZE": 4
+  },
+  "combined_pairs": 768,
+  "remaining_outside_review_queue": 607,
+  "experimental_release": false,
+  "all_complete": true
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "candidate_id": "EXP-260",
+    "reason": "限制反对证据到实际细胞实验范围，避免把间接无变化当直接结合反证。",
+    "before": {
+      "candidate_id": "EXP-260",
+      "pair_id": "PJMPHNIQZUBGLI-UHFFFAOYSA-N__CHEMBL220",
+      "verdict": "DEFER",
+      "action_class": "EVIDENCE_DEPRIORITIZE",
+      "reason_tags": [
+        "ADVERSE_ACTIVITY",
+        "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+      ],
+      "summary": "fentanyl–AChE已有细胞体系未见酶变化的反向线索，建议后置。",
+      "support": "本地预测仍可提出二元结合问题，文献提供可核对功能观察。",
+      "concern": "2024神经元研究AChE未变，BChE下降；该结果非纯酶阴性，但削弱依据胆碱表型推断AChE的理由。",
+      "next_step": "先核浓度/细胞体系并做低成本纯AChE复核；不能将BChE效应移给AChE。",
+      "evidence_scope": "LOCAL_RECORD_AND_TARGETED_WEB_REVIEW",
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853584/"
+      ],
+      "source_notes": "原始研究摘要/讨论摘录：神经元培养AChE无变化，BChE抑制可能直接或间接，不是SPR阴性。",
+      "search_log": [
+        {
+          "query": "\"fentanyl\" \"acetylcholinesterase\" inhibition",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853584/",
+          "outcome": "原始研究摘要/讨论摘录：神经元培养AChE无变化，BChE抑制可能直接或间接，不是SPR阴性。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS_NOT_FULL_TEXT"
+        },
+        {
+          "query": "site:pmc.ncbi.nlm.nih.gov/articles/PMC10853584 fentanyl acetylcholinesterase activity unchanged",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853584/",
+          "outcome": "主审复核摘要及结果3.4检索摘录：细胞培养酶活未变，不是纯酶SPR阴性。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS_NOT_FULL_TEXT"
+        }
+      ],
+      "reason_detail": "fentanyl–AChE已有细胞体系未见酶变化的反向线索，建议后置。 2024神经元研究AChE未变，BChE下降；该结果非纯酶阴性，但削弱依据胆碱表型推断AChE的理由。",
+      "can_test": "可保留档案或作机制复核；已有线索使首批投入后置。",
+      "critical_condition": "先核浓度/细胞体系并做低成本纯AChE复核；不能将BChE效应移给AChE。"
+    },
+    "after": {
+      "candidate_id": "EXP-260",
+      "pair_id": "PJMPHNIQZUBGLI-UHFFFAOYSA-N__CHEMBL220",
+      "verdict": "CONDITIONAL",
+      "action_class": "EXPLORABLE",
+      "reason_tags": [
+        "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+      ],
+      "summary": "fentanyl–AChE仍可作为直接结合探索；细胞体系AChE活性未变化不能替代纯酶结合阴性。",
+      "support": "本地预测仍可提出二元结合问题，文献提供可核对功能观察。",
+      "concern": "2024神经元研究AChE未变，BChE下降；该结果非纯酶阴性，但削弱依据胆碱表型推断AChE的理由。",
+      "next_step": "先核浓度/细胞体系并做低成本纯AChE复核；不能将BChE效应移给AChE。",
+      "evidence_scope": "LOCAL_RECORD_AND_TARGETED_WEB_REVIEW",
+      "source_urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853584/"
+      ],
+      "source_notes": "原始研究摘要/讨论摘录：神经元培养AChE无变化，BChE抑制可能直接或间接，不是SPR阴性。",
+      "search_log": [
+        {
+          "query": "\"fentanyl\" \"acetylcholinesterase\" inhibition",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853584/",
+          "outcome": "原始研究摘要/讨论摘录：神经元培养AChE无变化，BChE抑制可能直接或间接，不是SPR阴性。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS_NOT_FULL_TEXT"
+        },
+        {
+          "query": "site:pmc.ncbi.nlm.nih.gov/articles/PMC10853584 fentanyl acetylcholinesterase activity unchanged",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10853584/",
+          "outcome": "主审复核摘要及结果3.4检索摘录：细胞培养酶活未变，不是纯酶SPR阴性。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS_NOT_FULL_TEXT"
+        }
+      ],
+      "reason_detail": "神经元培养AChE活性未显著变化、BChE下降，不支持借BChE现象宣称AChE机制；但尚不是匹配纯酶或SPR的反对证据，不能仅凭此降低直接结合探索优先级。",
+      "can_test": "可探索直接结合；需匹配AChE参考对照，并用纯酶活性区分是否具有功能效应。",
+      "critical_condition": "先核浓度/细胞体系并做低成本纯AChE复核；不能将BChE效应移给AChE。"
+    }
+  }
+]

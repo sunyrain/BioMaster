@@ -1,0 +1,12 @@
+{
+  "drugs": 266,
+  "with_usable_single_drug_label": 232,
+  "http_statuses": {
+    "200": 245,
+    "404": 14,
+    "400": 7
+  },
+  "records": 3432,
+  "max_results_per_drug": 30,
+  "not_complete_approval_registry": true
+}

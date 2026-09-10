@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_DOWNLOAD_SELECTION",
+  "source": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/CANDIDATE_INDEX_LE_2020.parquet",
+    "sha256": "202b00f52d65438f902c454aa706c85841a2bbc869bd5918b0e9fc5a8fc7afa2",
+    "size_bytes": 971809
+  },
+  "selected": 14724,
+  "exclusions": {
+    "metal_or_unsupported_element_special_system": 1674,
+    "project_target_uniprot_overlap": 3353,
+    "project_drug_connectivity_overlap": 263,
+    "multiple_disconnected_ligand_fragments": 2
+  },
+  "splits": {
+    "train": 13252,
+    "validation": 1472
+  },
+  "cluster_partition": "whole clusters ordered by sha256(20260906:cluster); fill a 10% system budget without splitting clusters",
+  "partition_amendment": "metadata size balance before any structural training or model evaluation; original hash-modulo gave 52% validation",
+  "project_drug_exclusion": "InChIKey connectivity block, conservative across stereoisomers",
+  "project_target_exclusion": "exact UniProt now; sequence search after fetching chains",
+  "atom_types": "organic small molecules only; metal/special systems excluded explicitly",
+  "max_release_year": 2020,
+  "downstream_test_labels_used": false,
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/fetch_biomaster_structural_complexes.py",
+    "sha256": "6d6abed9fed8c949320bd523fbfbe4cb7a57263c71cab4a99d6fb46b0e763658",
+    "size_bytes": 7931
+  }
+}

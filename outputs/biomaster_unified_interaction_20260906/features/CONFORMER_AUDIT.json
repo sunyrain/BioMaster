@@ -1,0 +1,15 @@
+{
+  "required": 266747,
+  "counts": {
+    "etkdg3d_uff_1": 947,
+    "etkdg3d_uff_0": 11,
+    "etkdg3d_mmff_0": 171,
+    "etkdg3d_mmff_1": 262908,
+    "embedding_failed_graph_fallback": 2042,
+    "oversized_global_graph_fallback": 663,
+    "etkdg3d_none_-1": 5
+  },
+  "local_atom_limit": 128,
+  "no_truncation": true,
+  "coordinates_are_ligand_only": true
+}

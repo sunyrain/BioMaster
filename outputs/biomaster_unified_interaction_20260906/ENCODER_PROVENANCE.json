@@ -1,0 +1,33 @@
+{
+  "files": {
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/dict/dict_mol.txt": "94135cb9a9198f988de684cb61e2c372882a3bd59b8320effbae704c38057127",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/dict/dict_pkt.txt": "5775af31a33d78c5f5f2555c4506debbd2d47c6b29bf8a889237220b34b2c7d5",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/unimol/models/drugclip.py": "ab95e715e310d94d1f4ff344bad781d4ed025d60de3b490b8dcbd5653391c5f9",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/unimol/models/unimol.py": "a3680a35070b7e40fa8e3645649a68825a8814a68a22405d2c77714616463b87",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/unimol/models/transformer_encoder_with_pair.py": "780d736055811a68431d84f0c2ddfaf9424381d3c15d95b416e491ec94c6ca3e",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/unimol/tasks/drugclip.py": "ac9ec53e772daf65b6fd913a081697b6c70206c4490cdbf396a8debbb8f588f7",
+    "third_party/sota_dti_2026/Drug-The-Whole-Genome/README.md": "26292fac4c23e6caadab3b481040e43ee2c3b5b3e26b57f0f5b04a88abcafd10"
+  },
+  "release": "DTWG six-fold release, fold_0, downloaded 2026-07-19; not certified original 2023 checkpoint",
+  "frozen_component_used": "mol_model, CLS512 and true atom512 states",
+  "components_not_used_for_main_features": [
+    "pocket_model",
+    "mol_project",
+    "pocket_project",
+    "cross_distance_project",
+    "holo_distance_project"
+  ],
+  "checkpoint_args_subset": {
+    "data": "/drug/drugclip_tmp/yaoming1201/6_folds/fold_0/",
+    "train_subset": "train",
+    "valid_subset": "valid",
+    "arch": "binding_affinity",
+    "finetune_mol_model": "/data/protein/molecule/pretrain/mol_pre_no_h_220816.pt",
+    "finetune_pocket_model": "/data/protein/molecule/pretrain/pocket_pre_220816.pt",
+    "seed": 1,
+    "max_pocket_atoms": 256,
+    "max_seq_len": 512
+  },
+  "checkpoint_training_relation_manifest_available": false,
+  "license_metadata": "CC BY-NC 4.0 weights and outputs, as stated in local release manifest; research branch only"
+}

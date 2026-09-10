@@ -1,0 +1,28 @@
+[
+  {
+    "gene_symbol": "SLC8A1",
+    "chembl_target": "CHEMBL4076",
+    "activity_rows": 427,
+    "unique_molecules": 388,
+    "assays": 9,
+    "kd_rows": 0,
+    "ki_rows": 0,
+    "evidence_categories": {
+      "FUNCTIONAL_TRANSPORT_OR_OTHER_ACTIVITY": 427
+    }
+  },
+  {
+    "gene_symbol": "HGF",
+    "chembl_target": "CHEMBL5479",
+    "activity_rows": 10,
+    "unique_molecules": 6,
+    "assays": 4,
+    "kd_rows": 1,
+    "ki_rows": 0,
+    "evidence_categories": {
+      "HGF_STIMULATED_MET_SIGNALING_NOT_DIRECT_HGF_BINDING": 8,
+      "DIRECT_HGF_SPR_BINDING_ORIGIN_UNSPECIFIED": 1,
+      "MET_SIGNALING_ACTIVATION_NOT_DIRECT_BINDING": 1
+    }
+  }
+]

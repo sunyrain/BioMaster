@@ -1,0 +1,18 @@
+{
+  "required_molecules": 266747,
+  "oov_heavy_atom_counts": {
+    "Te": 24
+  },
+  "molecules_with_oov": 24,
+  "old_molecules_with_oov": [],
+  "geometry_residue_quality_quantiles": {
+    "0": 0.23690000176429749,
+    "0.1": 0.7311999797821045,
+    "0.5": 0.9287999868392944,
+    "0.9": 0.9830999970436096,
+    "1": 0.9894000291824341
+  },
+  "quality_below_50_percent": 542,
+  "geometry_residue_count": 17196,
+  "source": "all prepared conformer records, official mol dictionary and mapped CA pLDDT; no evaluation labels read"
+}

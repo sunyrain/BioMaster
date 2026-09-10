@@ -1,0 +1,12 @@
+{
+  "status": "ALL_STRUCTURAL_CONTACT_DIAGNOSTICS_COMPLETE",
+  "utc": "2026-09-06T14:36:23.291352+00:00",
+  "pid": 972602,
+  "elapsed_seconds": 4558.110693839379,
+  "diagnostic_script": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/diagnose_biomaster_structural_contact_learning.py",
+    "sha256": "4b33f96a4367ab15253cbc816d15ac658b9d7e68c27933f6c7421f8ff24fecfe",
+    "size_bytes": 8463
+  },
+  "used_for_selection": false
+}

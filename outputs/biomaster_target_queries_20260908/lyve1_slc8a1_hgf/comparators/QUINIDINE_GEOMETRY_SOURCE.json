@@ -1,0 +1,6 @@
+{
+  "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LOUPRKONTZGTKE-LHHVKLHASA-N/SDF?record_type=3d",
+  "sha256": "89f4cf652035a5b7e302e9189737469aafa77d5778b5b3fc204ed063ab391caa",
+  "inchikey_match": true,
+  "reason": "cached geometry absent; ETKDG retries failed; use independent PubChem3D with exact full InChIKey"
+}

@@ -1,0 +1,109 @@
+[
+  {
+    "candidate_id": "C384-156",
+    "reason": "交叉审查补齐同药同家族证据，保留后置而非绝不结合判断",
+    "before": {
+      "candidate_id": "C384-156",
+      "verdict": "DEFER",
+      "summary": "morphine–CA7即使排名第1，仍缺少足以优先消耗实验的化学/机制桥梁。",
+      "support": "本地：结合排序1/384；阳性/阴性近邻相似度 0.202/0.145。检索获得其他CA7抑制剂研究，未找到morphine直接配对实验。",
+      "concern": "阿片镇痛不说明CA7直接结合，十二指肠溃疡关联不确定疗效方向；其他带金属结合基团阿片衍生物不能迁移。",
+      "next_step": "先CA7酶学及非特异反筛，仅出现重复、非聚集依赖信号再做梯度。",
+      "source_urls": [],
+      "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+      "search_log": [
+        {
+          "query": "morphine carbonic anhydrase VII inhibition",
+          "source": "web search",
+          "outcome": "检索获得其他CA7抑制剂研究，未找到morphine直接配对实验。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS"
+        },
+        {
+          "query": "morphine carbonic anhydrase II 2007 92.3 inhibition",
+          "source": "跨批复核：PubMed及JStage原始论文摘要",
+          "outcome": "母药CA2 IC50约92.3μM，非CA7/Kd",
+          "access_scope": "PRIMARY_ARTICLE_ABSTRACT"
+        }
+      ],
+      "pair_id": "BQJCRHHNABKAKU-KBQPJGBKSA-N__CHEMBL2326",
+      "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+    },
+    "after": {
+      "candidate_id": "C384-156",
+      "verdict": "DEFER",
+      "summary": "morphine–CA7有母药在CA2的弱酶活线索，但仍建议后置，不能把家族线索当作CA7实测。",
+      "support": "本地结合排序1/384，阳性/阴性近邻0.202/0.145。跨批复核补入2007原始研究摘要：母药morphine抑制人CA2的IC50约92.3μM；这是弱同家族酶活支持，不是CA7数据或Kd。",
+      "concern": "已知同家族活性较弱、CA7选择性和十二指肠溃疡的作用方向均未明确；不能据原镇痛用途、CA2活性或其他阿片衍生物推断CA7强结合。",
+      "next_step": "先CA7酶学及非特异反筛，仅出现重复、非聚集依赖信号再做梯度。",
+      "source_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/18057708/",
+        "https://www.jstage.jst.go.jp/article/bpb/30/12/30_12_2257/_article"
+      ],
+      "source_notes": "原直接CA7检索未找到本对实验；跨批审查复用已核原始论文摘要，补充CA2弱酶活。不是全文核实或CA7阴性结论。",
+      "search_log": [
+        {
+          "query": "morphine carbonic anhydrase VII inhibition",
+          "source": "web search",
+          "outcome": "检索获得其他CA7抑制剂研究，未找到morphine直接配对实验。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS"
+        },
+        {
+          "query": "morphine carbonic anhydrase II 2007 92.3 inhibition",
+          "source": "跨批复核：PubMed及JStage原始论文摘要",
+          "outcome": "母药CA2 IC50约92.3μM，非CA7/Kd",
+          "access_scope": "PRIMARY_ARTICLE_ABSTRACT"
+        }
+      ],
+      "pair_id": "BQJCRHHNABKAKU-KBQPJGBKSA-N__CHEMBL2326",
+      "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+    }
+  },
+  {
+    "candidate_id": "C384-225",
+    "reason": "明确IC50与部分抑制标记，避免误解为某浓度下的抑制率",
+    "before": {
+      "candidate_id": "C384-225",
+      "verdict": "DEFER",
+      "summary": "氟伏沙明–MAOB已有弱酶抑制线索，优先级低于强结合验证。",
+      "support": "本地：结合排序6/384；阳性/阴性近邻相似度 0.306/0.212。命中SSRIs对MAO研究，表格摘录列MAOB IC50 39.04±2.63 µM、部分抑制；全文打开429，未读方法。",
+      "concern": "原始研究检索表格为约39 µM部分抑制，不是Kd；蛋白来源和体系未核实，且已报道活动降低新发现价值。",
+      "next_step": "先取原文核对物种与测定体系；如保留，仅作为弱活动复核。",
+      "source_urls": [
+        "https://www.mdpi.com/2076-3921/12/6/1208"
+      ],
+      "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+      "search_log": [
+        {
+          "query": "fluvoxamine monoamine oxidase B inhibition IC50",
+          "source": "web search",
+          "outcome": "命中SSRIs对MAO研究，表格摘录列MAOB IC50 39.04±2.63 µM、部分抑制；全文打开429，未读方法。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS"
+        }
+      ],
+      "pair_id": "CJOFXWAVKWHTFT-XSFVSMFZSA-N__CHEMBL2039",
+      "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+    },
+    "after": {
+      "candidate_id": "C384-225",
+      "verdict": "DEFER",
+      "summary": "fluvoxamine–MAOB已有弱酶活线索，建议后置；检索表格列IC50约39µM并标注部分抑制，拟合定义和实验体系仍待核。",
+      "support": "本地：结合排序6/384；阳性/阴性近邻相似度 0.306/0.212。命中SSRIs对MAO研究，表格摘录列MAOB IC50 39.04±2.63 µM、部分抑制；全文打开429，未读方法。",
+      "concern": "原始研究检索表格为约39 µM部分抑制，不是Kd；蛋白来源和体系未核实，且已报道活动降低新发现价值。",
+      "next_step": "先取原文核对物种与测定体系；如保留，仅作为弱活动复核。",
+      "source_urls": [
+        "https://www.mdpi.com/2076-3921/12/6/1208"
+      ],
+      "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+      "search_log": [
+        {
+          "query": "fluvoxamine monoamine oxidase B inhibition IC50",
+          "source": "web search",
+          "outcome": "命中SSRIs对MAO研究，表格摘录列MAOB IC50 39.04±2.63 µM、部分抑制；全文打开429，未读方法。",
+          "access_scope": "SEARCH_RESULT_EXCERPTS"
+        }
+      ],
+      "pair_id": "CJOFXWAVKWHTFT-XSFVSMFZSA-N__CHEMBL2039",
+      "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+    }
+  }
+]

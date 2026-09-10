@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "smoke_only": false,
+  "bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+    "size_bytes": 3709
+  },
+  "source_checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+    "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+    "size_bytes": 4956687
+  },
+  "all_weight_tensors_exact": 28,
+  "all_catalog_input_values_exact": true,
+  "drug_axis_count": 720,
+  "target_axis_count": 384,
+  "compared_input_fields": [
+    "drug_global",
+    "drug_graph_mean",
+    "pretrained_available",
+    "target_global"
+  ],
+  "atom_padding_comparison": "bond/stereo beyond true atom length excluded; masks/tokens/neighbors fully compared",
+  "fp32_forward_pairs": 276480,
+  "all_catalog_forward_pairs_compared": true,
+  "fp32_max_abs_error": 0.0,
+  "independent_and_input_checks": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1_VALIDATION.json",
+    "sha256": "fd3c68232d06dbdd9f0cce7852cb10a479c29f97904d774df01751a189540f1e",
+    "size_bytes": 1012
+  },
+  "verifier": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_selected_release.py",
+    "sha256": "39888cf7f15dc1817aa28b93baa15a83c7b4e553bdd949d542c46cba5ed7c22a",
+    "size_bytes": 6065
+  }
+}

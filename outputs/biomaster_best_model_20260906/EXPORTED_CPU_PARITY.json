@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+    "size_bytes": 3709
+  },
+  "source_checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+    "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+    "size_bytes": 4956687
+  },
+  "pairs": 720,
+  "all_drugs_covered": true,
+  "all_targets_covered": true,
+  "all_cross_pairs_tested": false,
+  "cpu_max_abs_error": 0.0,
+  "exported_code_imported_without_research_repository": true,
+  "verifier": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_exported_cpu_scores.py",
+    "sha256": "0dcd8a7a59e1ef3396e6bf56cb40a2e0d104362cc266c044da07d568c6cead43",
+    "size_bytes": 3697
+  }
+}

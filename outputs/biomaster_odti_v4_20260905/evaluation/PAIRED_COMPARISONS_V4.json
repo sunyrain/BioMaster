@@ -1,0 +1,38 @@
+{
+  "bermol_minus_morgan": {
+    "mean_ap_difference": -0.006838610426526603,
+    "paired_drug_bootstrap_95_CI": [
+      -0.0207234300181009,
+      0.006797314776314524
+    ],
+    "queries": 1024,
+    "resamples": 5000
+  },
+  "signed_minus_bermol": {
+    "mean_ap_difference": 0.08507070128985186,
+    "paired_drug_bootstrap_95_CI": [
+      0.0767948521715929,
+      0.09353440903357362
+    ],
+    "queries": 1024,
+    "resamples": 5000
+  },
+  "signed_minus_positive_nearest": {
+    "mean_ap_difference": -0.6899710070314219,
+    "paired_drug_bootstrap_95_CI": [
+      -0.707725839872815,
+      -0.6710324203914828
+    ],
+    "queries": 1024,
+    "resamples": 5000
+  },
+  "signed_minus_positive_negative_logistic": {
+    "mean_ap_difference": -0.6564446940932236,
+    "paired_drug_bootstrap_95_CI": [
+      -0.6747426201845798,
+      -0.6364472418427313
+    ],
+    "queries": 1024,
+    "resamples": 5000
+  }
+}

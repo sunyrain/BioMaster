@@ -1,0 +1,532 @@
+{
+  "comparisons": [
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 10,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_query",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_query",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 9,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_query",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 12,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_query",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_query",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_query",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_assay",
+      "second": "global_query",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 12,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_assay",
+      "second": "global_query",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 9,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_assay",
+      "second": "global_query",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 9,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_assay",
+      "second": "global_query",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 9,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_assay",
+      "second": "global_query",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "global_assay",
+      "second": "global_query",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 9,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "bermol",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 12,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "bermol",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "bermol",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 9,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "bermol",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 12,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "bermol",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "bermol",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 12,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "morgan",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "morgan",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 12,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "morgan",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "morgan",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 10,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "morgan",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "bermol_morgan",
+      "second": "morgan",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 10,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "morgan",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "morgan",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 10,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "morgan",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "morgan",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 10,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "morgan",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "drugclip_morgan",
+      "second": "morgan",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260921,
+      "common_epochs": 8,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260922,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "morgan",
+      "second": "global_ema",
+      "cutoff": 2018,
+      "seed": 20260923,
+      "common_epochs": 11,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260921,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260922,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    },
+    {
+      "first": "morgan",
+      "second": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260923,
+      "common_epochs": 7,
+      "observed_and_retrieval_exposure_identical": true
+    }
+  ]
+}

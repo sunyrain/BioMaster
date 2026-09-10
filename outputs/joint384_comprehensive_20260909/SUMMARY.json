@@ -1,0 +1,52 @@
+{
+  "candidate_pairs": 384,
+  "drugs": 229,
+  "targets": 112,
+  "extra_controls": 112,
+  "total_pairs_including_controls": 496,
+  "origin_review_drugs": 266,
+  "origin_status_counts": {
+    "LABEL_REVIEWED": 217,
+    "EXTERNAL_REVIEWED": 48,
+    "UNRESOLVED": 1
+  },
+  "eligible_pairs": 449,
+  "cross_area_pairs": 195,
+  "cross_area_germline_pairs": 63,
+  "cross_area_somatic_pairs": 14,
+  "chemical_support_ge04": 20,
+  "raw_chemical_similarity_ge04": 22,
+  "exact_genetic_or_somatic_pairs": 126,
+  "priority_pairs": 1,
+  "priority_names": [
+    "tecovirimat–AR"
+  ],
+  "bands": {
+    "EXPLORATORY_LIMITED_INDEPENDENT_SUPPORT": 240,
+    "ADDITIONAL_SOURCE_OR_CHEMICAL_SUPPORT": 143,
+    "PRIORITY_CROSS_AREA_MECHANISM_REVIEW": 1
+  },
+  "legacy_agent_decisions": {
+    "LOW_PRIORITY": 224,
+    "KEEP_REVIEW": 160
+  },
+  "same_old_pairs": 301,
+  "replaced_pairs": 83,
+  "stable_in_three_weight_settings": 375,
+  "reference_categories": {
+    "Kd_RECORD_PRESENT": 90,
+    "Ki_NO_Kd_RECORD": 18,
+    "FUNCTIONAL_OR_OTHER_ONLY": 4
+  },
+  "dispositions_574": {
+    "SELECTED": 384,
+    "RESERVE_NOT_SELECTED_BY_COMPREHENSIVE_POLICY": 65,
+    "RAW_PRIOR_ACTIVITY_NOT_NOVEL": 61,
+    "PRIOR_HOLD": 44,
+    "DEEP_REVIEW_INVESTMENT_HOLD": 12,
+    "PRIOR_EXCLUSION": 3,
+    "MODEL_APPROVED_ENTITY_IDENTITY_HOLD": 3,
+    "DISEASE_INVESTMENT_HOLD": 2
+  },
+  "chosen_resource_policy": "Smallest feasible target-budget scenario retaining max integrated-priority and usable-chemical-support counts and >=95% of best declared utility, then lower per-target cap; not measured performance."
+}

@@ -1,0 +1,10 @@
+{
+  "stage": "mapping",
+  "processed": 14724,
+  "expected": 14724,
+  "counts": {
+    "MAPPED": 12603,
+    "REJECTED": 2121
+  },
+  "seconds": 3560.5923761175945
+}

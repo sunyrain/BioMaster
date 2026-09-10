@@ -1,0 +1,12 @@
+{
+  "status": "BOUNDED_PREFLIGHT_COMPLETE",
+  "utc": "2026-09-08T03:17:27.945305+00:00",
+  "updates": 2,
+  "elapsed_seconds": 138.47640856914222,
+  "automatic_continuation": false,
+  "training_complete": false,
+  "promotion_eligible": false,
+  "phase": "joint",
+  "model_parameters": 36153229,
+  "trainable_parameters": 36153229
+}

@@ -1,0 +1,165 @@
+{
+  "Morgan全局对照": {
+    "seeds": 3,
+    "members": [
+      "morgan_20260905",
+      "morgan_20260906",
+      "morgan_20260907"
+    ],
+    "micro_ap": {
+      "mean": 0.9742252697886354,
+      "seed_sample_std": 0.0033051318860905328
+    },
+    "micro_auroc": {
+      "mean": 0.9292895774137316,
+      "seed_sample_std": 0.006609538815930064
+    },
+    "drug_macro_ap": {
+      "mean": 0.9303565217206139,
+      "seed_sample_std": 0.0033475941709812094
+    },
+    "macro_positive_retrieval_ap": {
+      "mean": 0.19384908052595543,
+      "seed_sample_std": 0.009923313751554261
+    },
+    "macro_recall_at_20": {
+      "mean": 0.47767818390376987,
+      "seed_sample_std": 0.0165835202687679
+    }
+  },
+  "BerMol全局 R1": {
+    "seeds": 3,
+    "members": [
+      "bermol_20260905",
+      "bermol_20260906",
+      "bermol_20260907"
+    ],
+    "micro_ap": {
+      "mean": 0.9764974268666498,
+      "seed_sample_std": 0.004138092545565739
+    },
+    "micro_auroc": {
+      "mean": 0.9349976019075216,
+      "seed_sample_std": 0.01053041433789009
+    },
+    "drug_macro_ap": {
+      "mean": 0.9304326258083964,
+      "seed_sample_std": 0.006890467415699283
+    },
+    "macro_positive_retrieval_ap": {
+      "mean": 0.1870104700994288,
+      "seed_sample_std": 0.0155694551856983
+    },
+    "macro_recall_at_20": {
+      "mean": 0.4731484064980158,
+      "seed_sample_std": 0.024269164104845378
+    }
+  },
+  "BerMol＋有符号证据": {
+    "seeds": 3,
+    "members": [
+      "signed_20260905",
+      "signed_20260906",
+      "signed_20260907"
+    ],
+    "micro_ap": {
+      "mean": 0.9837890839057865,
+      "seed_sample_std": 0.00045656688913070254
+    },
+    "micro_auroc": {
+      "mean": 0.9535965245418421,
+      "seed_sample_std": 0.0014914067131517198
+    },
+    "drug_macro_ap": {
+      "mean": 0.9420993322976438,
+      "seed_sample_std": 0.004929922022626568
+    },
+    "macro_positive_retrieval_ap": {
+      "mean": 0.2720811713892807,
+      "seed_sample_std": 0.03823717508607504
+    },
+    "macro_recall_at_20": {
+      "mean": 0.5861820281498016,
+      "seed_sample_std": 0.04302108996574888
+    }
+  },
+  "旧版 V3 B 支持模型": {
+    "seeds": 2,
+    "members": [
+      "v3_B_support_20260905",
+      "v3_B_support_20260906"
+    ],
+    "micro_ap": {
+      "mean": 0.9925467126806702,
+      "seed_sample_std": 0.00025610385485994025
+    },
+    "micro_auroc": {
+      "mean": 0.9772839327555864,
+      "seed_sample_std": 0.0006793216712598421
+    },
+    "drug_macro_ap": {
+      "mean": 0.9495773142538894,
+      "seed_sample_std": 0.0052051942679731565
+    },
+    "macro_positive_retrieval_ap": {
+      "mean": 0.6613701696690233,
+      "seed_sample_std": 0.011958433298413361
+    },
+    "macro_recall_at_20": {
+      "mean": 0.8889404296875,
+      "seed_sample_std": 0.0007250606643025809
+    }
+  },
+  "正近邻基线": {
+    "seeds": 1,
+    "members": [
+      "positive_nearest"
+    ],
+    "micro_ap": {
+      "mean": 0.9801713545254981,
+      "seed_sample_std": 0.0
+    },
+    "micro_auroc": {
+      "mean": 0.9540678941830419,
+      "seed_sample_std": 0.0
+    },
+    "drug_macro_ap": {
+      "mean": 0.9209318426475667,
+      "seed_sample_std": 0.0
+    },
+    "macro_positive_retrieval_ap": {
+      "mean": 0.9620521784207026,
+      "seed_sample_std": 0.0
+    },
+    "macro_recall_at_20": {
+      "mean": 0.9935546875,
+      "seed_sample_std": 0.0
+    }
+  },
+  "PN逻辑回归基线": {
+    "seeds": 1,
+    "members": [
+      "positive_negative_logistic"
+    ],
+    "micro_ap": {
+      "mean": 0.9953716953828581,
+      "seed_sample_std": 0.0
+    },
+    "micro_auroc": {
+      "mean": 0.9856090181321279,
+      "seed_sample_std": 0.0
+    },
+    "drug_macro_ap": {
+      "mean": 0.9574360934805962,
+      "seed_sample_std": 0.0
+    },
+    "macro_positive_retrieval_ap": {
+      "mean": 0.9285258654825043,
+      "seed_sample_std": 0.0
+    },
+    "macro_recall_at_20": {
+      "mean": 0.9712646484375,
+      "seed_sample_std": 0.0
+    }
+  }
+}

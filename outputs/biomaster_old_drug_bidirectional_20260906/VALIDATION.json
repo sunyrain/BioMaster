@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "score_artifacts_checked": 22,
+  "source_and_artifact_hashes_checked": 48,
+  "cached_support_references_checked": 7479350,
+  "support_pool_identical_to_original_train": true,
+  "query_entity_present_in_own_support": false,
+  "known_pairs": 807,
+  "summary_rows": 66,
+  "top20_rows": 220800,
+  "known_relation_rank_rows": 28576,
+  "no_new_fitting": true,
+  "code_sha256": "37490b86deb26e072eb7db8abb95caab5d65139b0b59751751fda81dbe7c78e0"
+}

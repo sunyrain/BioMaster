@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE",
+  "model_card": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MODEL_CARD.md",
+    "sha256": "7b976ff30368da6bfac477aab2d06624332ae40daa4931b555b169e5d0681178",
+    "size_bytes": 12334
+  },
+  "manifest": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+    "size_bytes": 3709
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/document_biomaster_selected_model.py",
+    "sha256": "1c2629f94e758193b6c340ae628a1de8df5e8ce1f238aba4035fecb29d7fdf7a",
+    "size_bytes": 14031
+  }
+}

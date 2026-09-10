@@ -1,0 +1,10 @@
+{
+  "url": "https://storage.googleapis.com/plinder/2024-06/v2/splits/split.parquet",
+  "release": "2024-06",
+  "iteration": "v2",
+  "identity": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/split.parquet",
+    "sha256": "2959fb4b32f8c5cc2d3e12fc810b8905e904496f5538e8d058f47eecee73eb40",
+    "size_bytes": 10651188
+  }
+}

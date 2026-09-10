@@ -1,0 +1,48 @@
+[
+  {
+    "endpoint_group": "Kd_only",
+    "slice": "REFRESH_NO_LOCAL_TRAIN_PAIR",
+    "model": "SPR_current",
+    "valid_bootstrap_replicates": 1000,
+    "auroc_ci95": [
+      0.6697357130997212,
+      0.8764228940254566
+    ],
+    "ap_ci95": [
+      0.5190867386366461,
+      0.7642980976513003
+    ]
+  },
+  {
+    "endpoint_group": "Kd_only",
+    "slice": "REFRESH_NO_PRIOR_RELATION",
+    "model": "SPR_current",
+    "valid_bootstrap_replicates": 0,
+    "auroc_ci95": null,
+    "ap_ci95": null,
+    "reason": "Too few positives or negatives (<10); bootstrap interval suppressed."
+  },
+  {
+    "endpoint_group": "Kd_Ki",
+    "slice": "REFRESH_NO_LOCAL_TRAIN_PAIR",
+    "model": "SPR_current",
+    "valid_bootstrap_replicates": 1000,
+    "auroc_ci95": [
+      0.6786228115746684,
+      0.8229144774714466
+    ],
+    "ap_ci95": [
+      0.5337400892095342,
+      0.7522481801516648
+    ]
+  },
+  {
+    "endpoint_group": "Kd_Ki",
+    "slice": "REFRESH_NO_PRIOR_RELATION",
+    "model": "SPR_current",
+    "valid_bootstrap_replicates": 0,
+    "auroc_ci95": null,
+    "ap_ci95": null,
+    "reason": "Too few positives or negatives (<10); bootstrap interval suppressed."
+  }
+]

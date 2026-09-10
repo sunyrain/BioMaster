@@ -1,0 +1,71 @@
+{
+  "status": "EXPLORATORY_COLD_TARGET_PREDICTIONS_COMPLETE",
+  "model": "selected_global_fullfit_2025",
+  "model_sha256": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+  "bundle_manifest_sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+  "candidate_count": 720,
+  "targets": [
+    {
+      "gene_symbol": "LYVE1",
+      "uniprot_accession": "Q9Y5Y7",
+      "length": 322,
+      "sequence_sha256": "595c55357fe40f506fb9e1e6ecc3b226e94bd0b0ce13e11ea62d9da482367dca",
+      "source": "https://rest.uniprot.org/uniprotkb/Q9Y5Y7.json",
+      "protein_name": "Lymphatic vessel endothelial hyaluronic acid receptor 1"
+    },
+    {
+      "gene_symbol": "SLC8A1",
+      "uniprot_accession": "P32418",
+      "length": 973,
+      "sequence_sha256": "db3ee956b37e2f9f15f16872fcd12398306394b24c9d1f51beb1850864591861",
+      "source": "https://rest.uniprot.org/uniprotkb/P32418.json",
+      "protein_name": "Sodium/calcium exchanger 1"
+    },
+    {
+      "gene_symbol": "HGF",
+      "uniprot_accession": "P14210",
+      "length": 728,
+      "sequence_sha256": "6b792f9f0f9499b4fd5f139e373266d8937f5ebb0da7814b0700fdac917414c6",
+      "source": "https://rest.uniprot.org/uniprotkb/P14210.json",
+      "protein_name": "Hepatocyte growth factor"
+    }
+  ],
+  "feature_protocol": "ESM2 t33 650M layer33; overlapping 1022/128 windows; FP16 residue cache; full-chain FP32 mean",
+  "control_gene": "BCL2A1",
+  "control_feature_max_abs_difference": 0.0,
+  "scoring": "CPU FP32, batch=1, directional target-to-drug logit; neither binding probability nor Kd",
+  "not_in_downstream_training_target_catalog": true,
+  "public_encoder_exposure_unknown": true,
+  "external_target_performance_validated": false,
+  "context_full_training_model_used": false,
+  "catalog_modified": false,
+  "rank_diagnostics": [
+    {
+      "target_a": "LYVE1",
+      "target_b": "SLC8A1",
+      "rank_spearman": 0.5988867648278642,
+      "top20_overlap": 2
+    },
+    {
+      "target_a": "LYVE1",
+      "target_b": "HGF",
+      "rank_spearman": 0.6065711289309329,
+      "top20_overlap": 4
+    },
+    {
+      "target_a": "SLC8A1",
+      "target_b": "HGF",
+      "rank_spearman": 0.5567051955475737,
+      "top20_overlap": 3
+    }
+  ],
+  "feature_identities": {
+    "LYVE1_ESM2_RESIDUES.npy": "f080b99b6b23e78591bac3a36c058ae2d69a3a5f3b2d2febb77faac8439bc185",
+    "SLC8A1_ESM2_RESIDUES.npy": "ff06334243fbd662a0d3eefe9a75ebbffe21dfdbdb18bb765bb3cc7021e2aedb",
+    "HGF_ESM2_RESIDUES.npy": "fcce12aa0fefadcfc4a5abf9f59d055392a34ad3ef6d510449239c22326ac3b6",
+    "CONTROL_BCL2A1_ESM2_RESIDUES.npy": "edf1bf01715494d4622c8e35b56c19c9992ecf8b0dfde75cb5b13e42a3db7a58"
+  },
+  "target_input_sha256": "d03dd031c61061d3d580a34924368979e53c74caa65276500c1b3a9852bb8ca6",
+  "producer_sha256": "49e17fc56e6365bbdd058e818b59833f3d7651f566fa7f7d675cac824b249d13",
+  "seconds": 23.00166580732912
+}

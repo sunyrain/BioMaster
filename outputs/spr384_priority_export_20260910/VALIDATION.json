@@ -1,0 +1,15 @@
+{
+  "384_unique_pairs": true,
+  "same_frozen_pairs": true,
+  "four_requested_fields_present": true,
+  "all112_reference_targets": true,
+  "priority_counts": {
+    "P3 先解决具体问题": 149,
+    "P2 第11–20排名且仍可探索": 123,
+    "P1 前10排名且仍可探索": 100,
+    "P4 降低投入／暂缓首批": 12
+  },
+  "baseline_sha_unchanged": true,
+  "known_drug_targets": 80,
+  "candidate_rows_with_known_drug": 289
+}

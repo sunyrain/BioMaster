@@ -1,0 +1,100 @@
+{
+  "status": "COMPLETE",
+  "single_seed": true,
+  "promoted": false,
+  "early_validation_winner": "capacity",
+  "best_local": "geometry",
+  "files": {
+    "VALIDATION.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/VALIDATION.json",
+      "sha256": "57d2556672f2ec04e1a4236343ac6f53a94d670a40fd2f351f55e56638030d8d",
+      "size_bytes": 4011
+    },
+    "VALIDATION_TESTS.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/VALIDATION_TESTS.json",
+      "sha256": "4b9c766af5afcd8d39b6fc50e81b0e3a163c7455cd30f299958b4cc62ede17f1",
+      "size_bytes": 817
+    },
+    "DEVELOPMENT_ABLATION.csv": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/DEVELOPMENT_ABLATION.csv",
+      "sha256": "a3a9c8358ded44e479f466535fe0a6290d0f56b09e97a1a1e5b0b84c0128eb98",
+      "size_bytes": 978
+    },
+    "DEVELOPMENT_MATCHED_EPOCH.csv": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/DEVELOPMENT_MATCHED_EPOCH.csv",
+      "sha256": "72e2d6801eb0f843e2dd20f595a2408ebaf971ff0d227e5fec77e681266a5fd3",
+      "size_bytes": 924
+    },
+    "SELECTION.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/SELECTION.json",
+      "sha256": "b664bb592dfbdd807fe3935ad0d74adee62f7a43cf7fb816457f9ba55db195ea",
+      "size_bytes": 22463
+    },
+    "TEST_RELEASE.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/TEST_RELEASE.json",
+      "sha256": "d794935c6b75e0bb19fd0085444fc0b01e79e8126394d35a0ea906adcdde1338",
+      "size_bytes": 4787
+    },
+    "TEST_RESULT.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/TEST_RESULT.json",
+      "sha256": "e2bf5a28c7281634bbe87261b31e5614e87757c8d03b2a4330132cd884e1767a",
+      "size_bytes": 692
+    },
+    "TEST_METRICS.csv": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/TEST_METRICS.csv",
+      "sha256": "4fbd68fadf7b4fe04bef171be561f1fd81fd606dfa494dc3786f7eac49503cf8",
+      "size_bytes": 41472
+    },
+    "TEST_PAIRED_COMPARISONS.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/TEST_PAIRED_COMPARISONS.json",
+      "sha256": "baafe353184c4116da66a958a2a01ee7b380cd99487db9fda73cb0933241eb97",
+      "size_bytes": 96670
+    },
+    "GEOMETRY_PROBE.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/GEOMETRY_PROBE.json",
+      "sha256": "8f456611285838612c0880c80bf915a8cf469c135944369dccf8d2c0b26881d8",
+      "size_bytes": 1368
+    },
+    "PRECISION_PROBE.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/PRECISION_PROBE.json",
+      "sha256": "d3d7a86bc81acb3e177faf7cab72f798a76d79007774f5b7bbe09deca8306c76",
+      "size_bytes": 934
+    },
+    "BASELINE_REPRODUCTION.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/BASELINE_REPRODUCTION.json",
+      "sha256": "f4b8c2e1bc025b7ae70991a2208f8061a03d687c93046151ad262c9890cc5827",
+      "size_bytes": 1113
+    },
+    "FEATURE_QUALITY.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/FEATURE_QUALITY.json",
+      "sha256": "eb1774aa0c45f1cbb9b102ed024ac9f82737869b0cfe6fcfe1678df01f467434",
+      "size_bytes": 528
+    },
+    "ATOM_GRAPH_COORDINATE_CHECK.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/ATOM_GRAPH_COORDINATE_CHECK.json",
+      "sha256": "32cc8a698a62014c6bae8cce72f75f4b241fce370a47ad4e04535cedeab49067",
+      "size_bytes": 536
+    },
+    "ESM2_ALIGNMENT_CHECK.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/ESM2_ALIGNMENT_CHECK.json",
+      "sha256": "9358111ffceda88fb3dd7fedcb61a4ebe461176edba941df5315eab6133c67be",
+      "size_bytes": 328
+    },
+    "ENCODER_PROVENANCE.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/ENCODER_PROVENANCE.json",
+      "sha256": "fd62da9c359e5ccbb7838f52ba9072e90f5b2365b16e92c57d467b62cd1520ca",
+      "size_bytes": 1999
+    },
+    "ENVIRONMENT.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/ENVIRONMENT.json",
+      "sha256": "9824df84799c01f21748e3658ce92f42310b96592da62275b1ef490cce38ed5b",
+      "size_bytes": 728
+    }
+  },
+  "report": {
+    "path": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_UNIFIED_INTERACTION_FIRST_ROUND_20260906_ZH.md",
+    "sha256": "1ddc0fccf24a92b9b86969495322846f91fb040a04db7b085689b6ed6adcabb0",
+    "size_bytes": 14634
+  },
+  "matched_exposure_all_common_epochs": true
+}

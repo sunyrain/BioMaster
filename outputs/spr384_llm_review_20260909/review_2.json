@@ -1,0 +1,2783 @@
+[
+  {
+    "candidate_id": "C384-129",
+    "verdict": "CONDITIONAL",
+    "summary": "darunavir–FKBP1A可保留少量跨领域侦察，但HIV蛋白酶药理不能直接迁移到FKBP12。",
+    "support": "本地：结合排序4/384；阳性/阴性近邻相似度 0.336/0.224。排名靠前；检索获得FKBP12参考配体SLF的竞争结合数据库记录，可帮助核验对照。",
+    "concern": "本轮未找到darunavir直接结合FKBP1A的可核实记录；cancer过宽且没有本地遗传支持。",
+    "next_step": "先确认FKBP12参考配体响应及darunavir可溶浓度；若重复SPR响应成立，再做竞争结合并细化癌症机制。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/LigandActivityRangeVisForward?ligandId=11480"
+    ],
+    "source_notes": "GtoPdb检索摘录仅支持SLF–FKBP12竞争结合，不支持darunavir–FKBP12；未读原始论文全文。",
+    "search_log": [
+      {
+        "query": "darunavir FKBP12 FKBP1A binding",
+        "source": "web search",
+        "outcome": "返回FKBP12参考配体及其他药物资料，未获得本配对直接证据",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CJBJHOAVZSMMDJ-HEXNFIEUSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-130",
+    "verdict": "CONDITIONAL",
+    "summary": "vemurafenib–PIK3CA存在独立计算论文线索，值得有条件验证，但仍不是已证实的PI3Kα抑制剂。",
+    "support": "本地：结合排序20/384；阳性/阴性近邻相似度 0.379/0.257。检索命中2026原始计算研究，明确将vemurafenib列为PI3Kα虚拟筛选候选；本地乳癌体细胞证据支持疾病研究问题。",
+    "concern": "论文命中的高分来自计算对接而非实测Kd；原BRAF用途和目标乳癌同属肿瘤，跨领域价值有限。",
+    "next_step": "核对PI3Kα构建/调节亚基和阳性参考，测溶解度；SPR信号成立后用脂质激酶活性验证。",
+    "source_urls": [
+      "https://doi.org/10.1016/j.aichem.2026.100111"
+    ],
+    "source_notes": "读取原始计算研究搜索摘录，仅支持计算预测，不称实验验证。",
+    "search_log": [
+      {
+        "query": "vemurafenib PIK3CA PI3K alpha inhibition binding",
+        "source": "web search",
+        "outcome": "命中直接配对计算论文，未取得本配对实测亲和记录",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "GPXBXXGIAQBQNI-UHFFFAOYSA-N__CHEMBL4005",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-131",
+    "verdict": "DEFER",
+    "summary": "selinexor–BRAF建议后置：现有原机制与检索命中均指向XPO1，尚无BRAF直接结合桥梁。",
+    "support": "本地：结合排序6/384；阳性/阴性近邻相似度 0.259/0.263。本地结合排序靠前，结肠肿瘤关联可产生后续机制问题。",
+    "concern": "阳性近邻不优于阴性近邻；XPO1抑制导致下游癌蛋白变化不能当BRAF靶向。",
+    "next_step": "先取得BRAF生化或直接结合证据；若只有细胞通路变化，保持后置并区分BRAF野生型与突变构建。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f6dd2682-75a6-4863-90a8-a3197f6f78a8&type=display",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6089403/"
+    ],
+    "source_notes": "官方标签和原始论文搜索摘录支持XPO1及下游表达作用，不支持BRAF直接结合。",
+    "search_log": [
+      {
+        "query": "selinexor BRAF direct binding inhibition",
+        "source": "web search",
+        "outcome": "命中XPO1机制及下游效应，未获本配对直接测量",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DEVSOMFAQLZNKR-RJRFIUFISA-N__CHEMBL5145",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-132",
+    "verdict": "DEFER",
+    "summary": "diltiazem–MMP12有卒中疾病关联，但现阶段直接结合依据薄，建议在MMP12体系成熟后作为补充。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.241/0.257。本地存在MMP12–卒中遗传关联；原始MMP12研究提供钙条件影响活性的实验背景。",
+    "concern": "钙通道阻断不等于直接MMP12抑制；阳性近邻略低于阴性近邻。",
+    "next_step": "核对活性MMP12构建及钙/金属条件，用配套酶学先检验；避免把改变酶环境解释为特异结合。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/16737445/"
+    ],
+    "source_notes": "原始研究摘要摘录支持MMP12钙依赖背景，并非diltiazem活性证据。",
+    "search_log": [
+      {
+        "query": "diltiazem MMP12 direct inhibition binding",
+        "source": "web search",
+        "outcome": "获得MMP12条件研究，未获diltiazem直接关系记录",
+        "access_scope": "SEARCH_RESULT_ABSTRACT_EXCERPT"
+      }
+    ],
+    "pair_id": "HSUGRBWQSSZJOP-RTWAWAEBSA-N__CHEMBL4393",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-133",
+    "verdict": "CONDITIONAL",
+    "summary": "hydroxychloroquine–TYK2有免疫疾病研究意义，可在构建匹配后少量探索。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.22/0.284。命中其他TYK2抑制剂JH2结合研究及联合用药专利；未获得羟氯喹直接TYK2数据。",
+    "concern": "羟氯喹既有抗炎机制不证明直接TYK2抑制；阴性近邻更近，JH1/JH2不能混用。",
+    "next_step": "先明确所测域及域匹配对照，SPR后验证相应细胞信号方向。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37845748/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "hydroxychloroquine TYK2 direct binding inhibitor",
+        "source": "web search",
+        "outcome": "命中其他TYK2抑制剂JH2结合研究及联合用药专利；未获得羟氯喹直接TYK2数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N__CHEMBL3553",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-134",
+    "verdict": "DEFER",
+    "summary": "varenicline–PDE9A缺少直接桥梁，建议后置。",
+    "support": "本地：结合排序8/384；阳性/阴性近邻相似度 0.178/0.113。检索获得PDE9A其他配体结构及varenicline烟碱受体原始研究，未获本配对实测记录。",
+    "concern": "烟碱受体作用与PDE9A遗传关联是两条独立证据；低近邻相似性不构成阳性支持。",
+    "next_step": "若PDE9A体系已成熟，可先廉价测cGMP水解抑制，出现可重复效应才提高SPR优先级。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20121115/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2874855/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "varenicline PDE9A binding inhibition",
+        "source": "web search",
+        "outcome": "检索获得PDE9A其他配体结构及varenicline烟碱受体原始研究，未获本配对实测记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL3535",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-135",
+    "verdict": "DEFER",
+    "summary": "sotalol–ALDH2的卒中假设有疾病依据，但缺少可支持首批投入的直接酶学线索。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.274/0.183。检索命中sotalol原β受体结合研究及ALDH2一般抑制研究，未获本配对直接数据。",
+    "concern": "原β受体/通道药理不能确定ALDH2作用；即使结合也不能推断所需激活或抑制方向。",
+    "next_step": "明确ALDH2参考物、辅因子及活性方向，优先用酶学筛查后决定SPR。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/2160616/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "sotalol ALDH2 binding inhibition",
+        "source": "web search",
+        "outcome": "检索命中sotalol原β受体结合研究及ALDH2一般抑制研究，未获本配对直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ZBMZVLHSJCTVON-UHFFFAOYSA-N__CHEMBL1935",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-136",
+    "verdict": "DEFER",
+    "summary": "enasidenib–BRAF应后置，IDH2原机制与BRAF靶向尚未衔接。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.286/0.382。本轮返回其他RAF抑制剂研究，未找到可归属于enasidenib–BRAF的直接记录。",
+    "concern": "阴性近邻明显更近；目标BCR-ABL1阳性白血病不能仅凭BRAF疾病分数认定适用。",
+    "next_step": "先查具体BRAF构建与配对活性，若只见下游通路变化则不升级。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "enasidenib BRAF kinase inhibition binding",
+        "source": "web search",
+        "outcome": "本轮返回其他RAF抑制剂研究，未找到可归属于enasidenib–BRAF的直接记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DYLUUSLLRIQKOE-UHFFFAOYSA-N__CHEMBL5145",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-137",
+    "verdict": "DEFER",
+    "summary": "desoximetasone–PRKCB主要是原皮肤抗炎用途附近的机制探索，首批价值有限。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.158/0.142。检索返回其他PKC抑制剂专利及药物一般资料，没有获得本配对直接实验数据。",
+    "concern": "糖皮质激素作用不能迁移为PKCβ结合，化学近邻非常弱。",
+    "next_step": "先用域匹配PKCβ活性检测寻找可重复线索，只有直接效应才增加SPR投入。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "desoximetasone PRKCB PKC beta inhibition",
+        "source": "web search",
+        "outcome": "检索返回其他PKC抑制剂专利及药物一般资料，没有获得本配对直接实验数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "VWVSBHGCDBMOOT-IIEHVVJPSA-N__CHEMBL3045",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-138",
+    "verdict": "DEFER",
+    "summary": "carbinoxamine–FAAH的咽炎连接更像症状/疾病邻接，建议后置。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.343/0.343。官方标签摘录支持H1竞争作用；未获得carbinoxamine–FAAH直接证据。",
+    "concern": "阳阴近邻相同；H1抗组胺作用不提供FAAH直接抑制依据。",
+    "next_step": "在成熟FAAH体系下先检测酶活并校正非特异效应，不因咽炎图谱分高直接做梯度。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=163db29b-f035-6696-e063-6294a90a7e06"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "carbinoxamine FAAH inhibition",
+        "source": "web search",
+        "outcome": "官方标签摘录支持H1竞争作用；未获得carbinoxamine–FAAH直接证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "OJFSXZCBGQGRNV-UHFFFAOYSA-N__CHEMBL2243",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-139",
+    "verdict": "CONDITIONAL",
+    "summary": "ranolazine–KDR可作跨领域小规模侦察，但不宜宣称已具抗肥大细胞病机制。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.365/0.263。原始研究命中ranolazine–钠通道结构；未获KDR直接配对记录。",
+    "concern": "既有钠通道结构证据不能迁移为KDR激酶结合；TxGNN疾病排名47，疾病链较弱。",
+    "next_step": "只在KDR激酶域和对照已测通时保留，SPR后核对酶活及具体疾病细胞依赖。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11343317/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ranolazine KDR VEGFR2 binding inhibition",
+        "source": "web search",
+        "outcome": "原始研究命中ranolazine–钠通道结构；未获KDR直接配对记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N__CHEMBL279",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-140",
+    "verdict": "CONDITIONAL",
+    "summary": "dolutegravir–MAPK8有抗病毒到肿瘤的新机制侦察价值，保留条件性低成本验证。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.33/0.245。检索出现含MAPK8百分比抑制的补充表，但摘录未确认受测化合物身份，因此未采为本配对阴阳性。",
+    "concern": "cancer过于宽泛；整合酶原机制与JNK1无已核实直接衔接。",
+    "next_step": "先核实检索命中的激酶补充表化合物身份，不将未知化合物的MAPK8结果归给本药；再决定酶学或SPR。",
+    "source_urls": [
+      "https://www.frontiersin.org/api/v4/articles/775602/file/Data_Sheet_1.PDF/775602_supplementary-materials_datasheets_1_pdf/1"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "dolutegravir MAPK8 JNK1 direct inhibition",
+        "source": "web search",
+        "outcome": "检索出现含MAPK8百分比抑制的补充表，但摘录未确认受测化合物身份，因此未采为本配对阴阳性。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "RHWKPHLQXYSBKR-BMIGLBTASA-N__CHEMBL2276",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-141",
+    "verdict": "CONDITIONAL",
+    "summary": "pemigatinib–PDE3A可作跨家族验证，需先排查监管文件中的离靶筛查。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.304/0.2。检索命中EMA离靶评估资料但摘录未含PDE3A结果，尚未确认本配对。",
+    "concern": "原FGFR药理不提供PDE3A直接证据；血栓疾病关联不说明药物作用方向。",
+    "next_step": "核对监管完整离靶面板是否实际测试PDE3A，随后配套酶活和SPR验证。",
+    "source_urls": [
+      "https://www.ema.europa.eu/en/documents/assessment-report/pemazyre-epar-public-assessment-report_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "pemigatinib PDE3A inhibition",
+        "source": "web search",
+        "outcome": "检索命中EMA离靶评估资料但摘录未含PDE3A结果，尚未确认本配对。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HCDMJFOHIXMBOV-UHFFFAOYSA-N__CHEMBL241",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-142",
+    "verdict": "CONDITIONAL",
+    "summary": "vibegron–NR3C2可在成熟核受体平台有条件保留。",
+    "support": "本地：结合排序12/384；阳性/阴性近邻相似度 0.321/0.233。命中vibegron其他受体离靶组织研究，未获得NR3C2直接结合数据。",
+    "concern": "β3受体激动和MR结合属于不同机制；心衰关联不确定MR激动/拮抗方向。",
+    "next_step": "用MR配体结合域匹配对照；若SPR可重复，再以转录报告确定方向。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13046687/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "vibegron mineralocorticoid NR3C2 binding",
+        "source": "web search",
+        "outcome": "命中vibegron其他受体离靶组织研究，未获得NR3C2直接结合数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DJXRIQMCROIRCZ-XOEOCAAJSA-N__CHEMBL1994",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-143",
+    "verdict": "DEFER",
+    "summary": "palbociclib–REN从CDK机制跨到肾素，但目前缺少可优先投入的配对证据。",
+    "support": "本地：结合排序12/384；阳性/阴性近邻相似度 0.33/0.22。检索命中CDK4/6机制与RAAS联用资料，未获REN直接配对结果。",
+    "concern": "与RAAS药物联用的临床资料不能解释为palbociclib直接抑制肾素。",
+    "next_step": "先用肾素底物活性读出寻找作用，排除仅CDK通路解释后再升级。",
+    "source_urls": [
+      "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/palbociclib"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "palbociclib renin REN inhibition",
+        "source": "web search",
+        "outcome": "检索命中CDK4/6机制与RAAS联用资料，未获REN直接配对结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "AHJRHEGDXFFMBM-UHFFFAOYSA-N__CHEMBL286",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-144",
+    "verdict": "CONDITIONAL",
+    "summary": "levamlodipine–CA1获得amlodipine近身份原始活性线索，是值得核实的机制验证候选。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.385/0.258。原始研究摘要报告amlodipine对CA1体内外活性影响；非levamlodipine直接Kd。",
+    "concern": "研究为amlodipine，不能未经核对把结果量化转移至左旋实体；CA1活性也不能直接推出青光眼效益。",
+    "next_step": "核对论文受测立体实体和端点；若匹配则重审新颖性，同时做CA1/CA2选择性验证。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/11061585/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "levamlodipine carbonic anhydrase I inhibition",
+        "source": "web search",
+        "outcome": "原始研究摘要报告amlodipine对CA1体内外活性影响；非levamlodipine直接Kd。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HTIQEAQVCYTUBX-KRWDZBQOSA-N__CHEMBL261",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-145",
+    "verdict": "CONDITIONAL",
+    "summary": "vorinostat–ECE1具有金属酶跨家族侦察意义，可在对照合格后保留。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.306/0.184。检索未获得vorinostat–ECE1直接实验记录，主要返回靶点背景。",
+    "concern": "HDAC抑制机制不能证明ECE1直接结合；多发性硬化共同疾病分数较弱，金属相关非特异效应需排查。",
+    "next_step": "先核对ECE1催化构建与金属条件，配套酶活及其他金属酶反筛解释SPR信号。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "vorinostat ECE1 endothelin converting enzyme inhibition",
+        "source": "web search",
+        "outcome": "检索未获得vorinostat–ECE1直接实验记录，主要返回靶点背景。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WAEXFXRVDQXREF-UHFFFAOYSA-N__CHEMBL4791",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-146",
+    "verdict": "CONDITIONAL",
+    "summary": "labetalol–CA1可作为眼病跨领域的补充验证，不属于高置信直接结合。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.349/0.284。本轮未取得本药–CA1可归属直接记录；其他CA抑制剂研究不作本药证据。",
+    "concern": "邻近降压药的CA活性不能替代本药数据；青光眼疾病链也未证明CA1选择性价值。",
+    "next_step": "在CA1参考对照测通后小规模初筛，并与CA2/CA7比较；信号缺乏选择性则后置。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "labetalol carbonic anhydrase I inhibition",
+        "source": "web search",
+        "outcome": "本轮未取得本药–CA1可归属直接记录；其他CA抑制剂研究不作本药证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SGUAFYQXFOLMHL-UHFFFAOYSA-N__CHEMBL261",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-147",
+    "verdict": "DEFER",
+    "summary": "rilpivirine–MAPK9主要依赖计算癌症桥接，建议后置至直接酶学线索出现。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.319/0.253。检索未获得rilpivirine–MAPK9直接实验命中。",
+    "concern": "逆转录酶药理不能解释JNK2结合，cancer未细分且同药多个MAPK候选可能重复消耗。",
+    "next_step": "先以JNK1/JNK2活性小面板区分，再选择一个有重复效应的构建做梯度。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "rilpivirine JNK2 MAPK9 inhibition",
+        "source": "web search",
+        "outcome": "检索未获得rilpivirine–MAPK9直接实验命中。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "YIBOMRUWOWDFLG-ONEGZZNKSA-N__CHEMBL4179",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-148",
+    "verdict": "DEFER",
+    "summary": "avanafil–PDE9A有明确的既有选择性反向线索，应从首批优先对象后置。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.313/0.229。官方标签有针对PDE9的>10000倍选择性信息；原始研究摘要确认11种PDE选择性检测，非Kd。",
+    "concern": "官方标签记载PDE5效力比PDE9高超过10000倍；同PDE家族并不意味着有效PDE9抑制，也不等同绝对不结合。",
+    "next_step": "先核验原始11种PDE面板的PDE9条件；仅在提出不同位点/非催化结合假设时再投入SPR。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d04e17d-7399-430a-a8bb-fa1912b155e9",
+      "https://pubmed.ncbi.nlm.nih.gov/22704456/"
+    ],
+    "source_notes": "本轮主审打开并核对官方标签12.1全文段落；原始11种PDE研究仍仅摘要，不把选择性解释为PDE9绝对阴性。",
+    "search_log": [
+      {
+        "query": "avanafil PDE9 inhibition selectivity",
+        "source": "web search",
+        "outcome": "官方标签有针对PDE9的>10000倍选择性信息；原始研究摘要确认11种PDE选择性检测，非Kd。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      },
+      {
+        "query": "open DailyMed avanafil label; find 10,000",
+        "source": "主审复核 DailyMed",
+        "outcome": "12.1段落确认PDE5效力相对PDE9超过10000倍，非绝对无结合",
+        "access_scope": "REGULATORY_FULL_TEXT_SECTION_12_1"
+      }
+    ],
+    "pair_id": "WEAJZXNPAWBCOA-INIZCTEOSA-N__CHEMBL3535",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-149",
+    "verdict": "CONDITIONAL",
+    "summary": "guanfacine–ROCK2可作高血压/ADHD到眼病的机制侦察，但仍需直接验证。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.345/0.246。检索得到guanfacine原α2机制及其他ROCK研究，未获得本配对直接数据。",
+    "concern": "α2受体激动不能解释为ROCK2抑制；命中ROCK再利用论文尚未证实包含本药。",
+    "next_step": "先核查ROCK1/2选择性活性；结合后需确定眼部研究可实现的作用方向。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/18496673/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "guanfacine ROCK2 inhibition binding",
+        "source": "web search",
+        "outcome": "检索得到guanfacine原α2机制及其他ROCK研究，未获得本配对直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "INJOMKTZOLKMBF-UHFFFAOYSA-N__CHEMBL2973",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-150",
+    "verdict": "CONDITIONAL",
+    "summary": "methocarbamol–CA7有同家族原始活性线索，可保留作选择性机制验证。",
+    "support": "本地：结合排序17/384；阳性/阴性近邻相似度 0.316/0.269。原始研究报告methocarbamol与CA1/2相互作用及明显同工酶差异，未获CA7直接数据。",
+    "concern": "原研究CA1/2抑制较弱且同工酶差异大，不能从CA1直接推出CA7强结合。",
+    "next_step": "先用CA1作机制参照、CA7作新靶点测相同条件酶活，匹配pH并核对SPR动力学。",
+    "source_urls": [
+      "https://www.sciencedirect.com/science/article/pii/S0021925819740034"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "methocarbamol carbonic anhydrase VII inhibition",
+        "source": "web search",
+        "outcome": "原始研究报告methocarbamol与CA1/2相互作用及明显同工酶差异，未获CA7直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "GNXFOGHNGIVQEH-UHFFFAOYSA-N__CHEMBL2326",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-151",
+    "verdict": "CONDITIONAL",
+    "summary": "ranolazine–CA7可在CA平台追加小规模验证，疾病用途仍需重建。",
+    "support": "本地：结合排序19/384；阳性/阴性近邻相似度 0.348/0.221。原始论文检索表含ranolazine的CA1/2活性记录；摘录单位不完整，本轮不赋予数值效力或CA7活性。",
+    "concern": "命中的CA1/2活性不能转移为CA7；十二指肠溃疡与CA7机制尚未形成解释闭环。",
+    "next_step": "核实CA1/2论文浓度单位和方法，再同条件检测CA7；若仅高浓度普遍抑制则后置。",
+    "source_urls": [
+      "https://www.tandfonline.com/doi/pdf/10.1080/14756366.2020.1781844"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ranolazine carbonic anhydrase VII CA7 inhibition",
+        "source": "web search",
+        "outcome": "原始论文检索表含ranolazine的CA1/2活性记录；摘录单位不完整，本轮不赋予数值效力或CA7活性。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N__CHEMBL2326",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-152",
+    "verdict": "DEFER",
+    "summary": "rilpivirine–MAPK8可保留总库，但不宜与同药MAPK9同时作为高优先梯度实验。",
+    "support": "本地：结合排序19/384；阳性/阴性近邻相似度 0.343/0.253。命中其他JNK抑制研究，未获得rilpivirine–JNK1直接记录。",
+    "concern": "直接证据仍缺，癌症共同节点过宽，原抗病毒作用不能确定JNK1结合。",
+    "next_step": "用JNK1/2并行酶学先作区分，有重复浓度依赖后选择最可解释者。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "rilpivirine JNK1 MAPK8 direct inhibition",
+        "source": "web search",
+        "outcome": "命中其他JNK抑制研究，未获得rilpivirine–JNK1直接记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "YIBOMRUWOWDFLG-ONEGZZNKSA-N__CHEMBL2276",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-153",
+    "verdict": "DEFER",
+    "summary": "dasabuvir–NR3C1是全新核受体假设，目前不宜先投入梯度实验。",
+    "support": "本地：结合排序19/384；阳性/阴性近邻相似度 0.301/0.227。检索只返回GR一般资料，未获得dasabuvir直接关系。",
+    "concern": "HCV聚合酶抑制和泛癌症图谱关联均不确定GR结合及激动/拮抗。",
+    "next_step": "先在GR配体域和功能报告平台取得配对证据，明确癌种后再考虑疾病验证。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "dasabuvir glucocorticoid receptor NR3C1 binding",
+        "source": "web search",
+        "outcome": "检索只返回GR一般资料，未获得dasabuvir直接关系。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "NBRBXGKOEOGLOI-UHFFFAOYSA-N__CHEMBL2034",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-154",
+    "verdict": "DEFER",
+    "summary": "bempedoic acid–MMP3排名虽高，仍应先解决母体/活性形式与金属酶效应解释。",
+    "support": "本地：结合排序3/384；阳性/阴性近邻相似度 0.28/0.277。检索命中原始临床研究的CoA活化/ACLY机制说明，未获MMP3直接数据。",
+    "concern": "已知降脂机制需CoA活化；不能用该机制为母体MMP3结合背书，阳阴近邻几乎相等。",
+    "next_step": "核对实际受测为母体；检查溶解度、金属依赖及MMP3活性，出现特异效应再升级。",
+    "source_urls": [
+      "https://www.nejm.org/doi/full/10.1056/NEJMoa1803917"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bempedoic acid MMP3 inhibition",
+        "source": "web search",
+        "outcome": "检索命中原始临床研究的CoA活化/ACLY机制说明，未获MMP3直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HYHMLYSLQUKXKP-UHFFFAOYSA-N__CHEMBL283",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-155",
+    "verdict": "DEFER",
+    "summary": "bempedoic acid–HMGCR有明显通路混淆风险，建议后置。",
+    "support": "本地：结合排序4/384；阳性/阴性近邻相似度 0.258/0.242。原始研究明确已知作用在HMGCR上游ACLY且需活化；未获得直接HMGCR抑制数据。",
+    "concern": "原始资料区分ACLY与下游HMGCR；同一胆固醇通路并非直接同靶点，母体与CoA形式也不同。",
+    "next_step": "除非有独立HMGCR酶学/结合证据，不以降脂疗效作为SPR支持；核对物种、构建和受测形式。",
+    "source_urls": [
+      "https://www.nejm.org/doi/full/10.1056/NEJMoa1803917"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bempedoic acid HMG CoA reductase directly inhibitor",
+        "source": "web search",
+        "outcome": "原始研究明确已知作用在HMGCR上游ACLY且需活化；未获得直接HMGCR抑制数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HYHMLYSLQUKXKP-UHFFFAOYSA-N__CHEMBL402",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-156",
+    "verdict": "DEFER",
+    "summary": "morphine–CA7有母药在CA2的弱酶活线索，但仍建议后置，不能把家族线索当作CA7实测。",
+    "support": "本地结合排序1/384，阳性/阴性近邻0.202/0.145。跨批复核补入2007原始研究摘要：母药morphine抑制人CA2的IC50约92.3μM；这是弱同家族酶活支持，不是CA7数据或Kd。",
+    "concern": "已知同家族活性较弱、CA7选择性和十二指肠溃疡的作用方向均未明确；不能据原镇痛用途、CA2活性或其他阿片衍生物推断CA7强结合。",
+    "next_step": "先CA7酶学及非特异反筛，仅出现重复、非聚集依赖信号再做梯度。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/18057708/",
+      "https://www.jstage.jst.go.jp/article/bpb/30/12/30_12_2257/_article"
+    ],
+    "source_notes": "原直接CA7检索未找到本对实验；跨批审查复用已核原始论文摘要，补充CA2弱酶活。不是全文核实或CA7阴性结论。",
+    "search_log": [
+      {
+        "query": "morphine carbonic anhydrase VII inhibition",
+        "source": "web search",
+        "outcome": "检索获得其他CA7抑制剂研究，未找到morphine直接配对实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      },
+      {
+        "query": "morphine carbonic anhydrase II 2007 92.3 inhibition",
+        "source": "跨批复核：PubMed及JStage原始论文摘要",
+        "outcome": "母药CA2 IC50约92.3μM，非CA7/Kd",
+        "access_scope": "PRIMARY_ARTICLE_ABSTRACT"
+      }
+    ],
+    "pair_id": "BQJCRHHNABKAKU-KBQPJGBKSA-N__CHEMBL2326",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-157",
+    "verdict": "DEFER",
+    "summary": "oxycodone–CA7适合保留探索库，但排序第2并未得到独立结合线索支持。",
+    "support": "本地：结合排序2/384；阳性/阴性近邻相似度 0.281/0.197。检索返回其他CA7配体资料，未获oxycodone直接配对数据。",
+    "concern": "现有CA7研究为其他药效团；阿片镇痛与青光眼不是本配对直接证据。",
+    "next_step": "先CA7酶学并与morphine比较，避免同骨架多对直接占用梯度容量。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "oxycodone carbonic anhydrase VII inhibition",
+        "source": "web search",
+        "outcome": "检索返回其他CA7配体资料，未获oxycodone直接配对数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "BRUQQQPBMZOVGD-XFKAJCMBSA-N__CHEMBL2326",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-158",
+    "verdict": "DEFER",
+    "summary": "methylnaltrexone–FKBP1A的外周动脉病假设目前过于间接。",
+    "support": "本地：结合排序2/384；阳性/阴性近邻相似度 0.179/0.149。仅取得其他FKBP12参考配体数据库信息，没有本配对直接记录。",
+    "concern": "μ受体拮抗与FKBP12无已核实桥梁；本地化学近邻很弱，不能用癌痛姑息背景作为抗癌证据。",
+    "next_step": "先用FKBP12竞争结合验证，检测实际盐形与非特异吸附，重复效应后再考虑疾病方向。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/LigandActivityRangeVisForward?ligandId=11480"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "methylnaltrexone FKBP12 FKBP1A binding",
+        "source": "web search",
+        "outcome": "仅取得其他FKBP12参考配体数据库信息，没有本配对直接记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JVLBPIPGETUEET-WIXLDOGYSA-O__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-159",
+    "verdict": "CONDITIONAL",
+    "summary": "bictegravir–EZH2可作抗病毒到表观遗传的新机制侦察，但成本取决于PRC2体系是否成熟。",
+    "support": "本地：结合排序3/384；阳性/阴性近邻相似度 0.271/0.232。命中原始bictegravir整合酶研究，未获得EZH2直接实测证据。",
+    "concern": "整合酶原机制不能代替EZH2直接证据；单独蛋白与功能复合物结果可能不同，cancer方向过宽。",
+    "next_step": "先确认EZH2/PRC2构建和参考抑制剂活性，SPR后用甲基转移活性确认。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5118987/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bictegravir EZH2 direct inhibitor",
+        "source": "web search",
+        "outcome": "命中原始bictegravir整合酶研究，未获得EZH2直接实测证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL2189110",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-160",
+    "verdict": "DEFER",
+    "summary": "baricitinib–HDAC1应后置，旧化学支持已被混合药效团问题削弱。",
+    "support": "本地：结合排序3/384；阳性/阴性近邻相似度 0.417/0.167。原始研究将baricitinib与HDAC抑制剂比较，不能把后者活性转给baricitinib。",
+    "concern": "本地深核指出近邻是JAK骨架与HDAC药效团拼接物；网络命中baricitinib作为对照而非HDAC1结合物。",
+    "next_step": "先核查关键HDAC药效团，采用活性复合物酶学；只有母药出现独立效应才做SPR梯度。",
+    "source_urls": [
+      "https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/bph.17306"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "baricitinib HDAC1 inhibition hybrid",
+        "source": "web search",
+        "outcome": "原始研究将baricitinib与HDAC抑制剂比较，不能把后者活性转给baricitinib。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XUZMWHLSFXCVMG-UHFFFAOYSA-N__CHEMBL325",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-161",
+    "verdict": "DEFER",
+    "summary": "articaine–MME虽模型排名靠前，局麻到心衰的直接机制链仍缺失。",
+    "support": "本地：结合排序3/384；阳性/阴性近邻相似度 0.222/0.19。未获得articaine–MME直接实验命中。",
+    "concern": "牙科含肾上腺素制剂不能直接用作单实体SPR样品；钠通道作用不支持MME结合。",
+    "next_step": "确认纯articaine身份及稳定性，先用MME酶活筛查；无直接效应则后置。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "articaine neprilysin MME inhibition",
+        "source": "web search",
+        "outcome": "未获得articaine–MME直接实验命中。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "QTGIAADRBBLJGA-UHFFFAOYSA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-162",
+    "verdict": "DEFER",
+    "summary": "bupivacaine–CTSC的肺病靶点方向有意义，但现有药物配对线索不足。",
+    "support": "本地：结合排序4/384；阳性/阴性近邻相似度 0.227/0.174。原始研究为肌毒性相关cathepsin B/L变化；GtoPdb支持CTSC肺病靶点背景而非本药作用。",
+    "concern": "检索中的cathepsin变化是大鼠肌损伤后的B/L变化，不能当作CTSC直接抑制。",
+    "next_step": "在成熟活性CTSC上先酶学检验，并区分局麻引起的细胞损伤与靶点效应。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/3543032/",
+      "https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=728"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bupivacaine cathepsin C CTSC inhibition",
+        "source": "web search",
+        "outcome": "原始研究为肌毒性相关cathepsin B/L变化；GtoPdb支持CTSC肺病靶点背景而非本药作用。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "LEBVLXFERQHONN-UHFFFAOYSA-N__CHEMBL2252",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-163",
+    "verdict": "CONDITIONAL",
+    "summary": "belzutifan–PGR是可小规模验证的核受体新机制假设，尚无直接证据。",
+    "support": "本地：结合排序4/384；阳性/阴性近邻相似度 0.25/0.167。数据库命中明确HIF-2α原靶点，未获得PGR直接配对数据。",
+    "concern": "HIF-2α结合机制不能代替PGR；骨质疏松所需激动/拮抗方向未知。",
+    "next_step": "确认PGR域与配体竞争对照，SPR阳性后用功能报告区分方向再讨论骨病价值。",
+    "source_urls": [
+      "https://www.guidetoimmunopharmacology.org/GRAC/LigandDisplayForward?ligandId=11251"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "belzutifan progesterone receptor PGR binding",
+        "source": "web search",
+        "outcome": "数据库命中明确HIF-2α原靶点，未获得PGR直接配对数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "LOMMPXLFBTZENJ-ZACQAIPSSA-N__CHEMBL208",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-164",
+    "verdict": "DEFER",
+    "summary": "pacritinib–CA7建议后置，不应以多激酶药理代替碳酸酐酶结合依据。",
+    "support": "本地：结合排序5/384；阳性/阴性近邻相似度 0.21/0.143。原始研究命中ACVR1抑制及贫血机制，未获得CA7直接结果。",
+    "concern": "已知ACVR1/JAK药理与CA7差异大；目标眼病TxGNN排名50且近邻弱。",
+    "next_step": "仅在CA7体系成熟且可低成本追加时先酶学测试，不直接安排全梯度。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/37552106/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "pacritinib carbonic anhydrase VII inhibition",
+        "source": "web search",
+        "outcome": "原始研究命中ACVR1抑制及贫血机制，未获得CA7直接结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HWXVIOGONBBTBY-ONEGZZNKSA-N__CHEMBL2326",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-165",
+    "verdict": "DEFER",
+    "summary": "baricitinib–HDAC11存在近邻药效团不可迁移问题，应后置。",
+    "support": "本地：结合排序5/384；阳性/阴性近邻相似度 0.411/0.173。专利摘录为HDAC11抑制剂与JAK抑制剂联用，并非本药直接HDAC11证据。",
+    "concern": "本地深核指出HDAC近邻为拼接物；专利把baricitinib列为联合JAK药物而非HDAC11抑制剂。",
+    "next_step": "先用匹配长链去酰化读出和活性HDAC11体系检测母药，不能以普通去乙酰化阴性/阳性替代。",
+    "source_urls": [
+      "https://patents.google.com/patent/US20200079744A1/en"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "baricitinib HDAC11 inhibitor hybrid",
+        "source": "web search",
+        "outcome": "专利摘录为HDAC11抑制剂与JAK抑制剂联用，并非本药直接HDAC11证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XUZMWHLSFXCVMG-UHFFFAOYSA-N__CHEMBL3310",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-166",
+    "verdict": "CONDITIONAL",
+    "summary": "bictegravir–MET可保留为抗病毒药新激酶侦察，但泛癌症分数不确定具体人群。",
+    "support": "本地：结合排序5/384；阳性/阴性近邻相似度 0.273/0.19。命中整合酶机制和MET作为其他药物缩写的资料，没有可采纳本配对直接测量。",
+    "concern": "检索中的MET也可能指metformin缩写；必须避免假共现，本轮未获MET激酶结合证据。",
+    "next_step": "明确人MET激酶域及参考对照，先小规模活性筛查后用SPR和细胞MET信号复核。",
+    "source_urls": [
+      "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/bictegravir"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bictegravir MET kinase inhibitor",
+        "source": "web search",
+        "outcome": "命中整合酶机制和MET作为其他药物缩写的资料，没有可采纳本配对直接测量。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL3717",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-167",
+    "verdict": "CONDITIONAL",
+    "summary": "rimegepant–REN可在成熟肾素体系作单靶点侦察，不应直接推成心血管再利用方案。",
+    "support": "本地：结合排序5/384；阳性/阴性近邻相似度 0.295/0.162。FDA评估摘录有其他离靶转运体数据，未获得肾素直接结合记录。",
+    "concern": "CGRP受体机制不能支持肾素抑制；本地近邻较弱且真实受测浓度未知。",
+    "next_step": "先核对肾素催化活性、样品溶解度和竞争效应；只有重复直接效应才追加疾病验证。",
+    "source_urls": [
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2020/212728Orig1s000ClinPharmR.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "rimegepant renin inhibition binding",
+        "source": "web search",
+        "outcome": "FDA评估摘录有其他离靶转运体数据，未获得肾素直接结合记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "KRNAOFGYEFKHPB-ANJVHQHFSA-N__CHEMBL286",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-168",
+    "verdict": "DEFER",
+    "summary": "aripiprazole–MAOB不宜因阳性近邻超过0.5而优先，阴性近邻更接近。",
+    "support": "本地：结合排序8/384；阳性/阴性近邻相似度 0.525/0.656。检索主要命中受体/其他单胺系统资料，未获得可采纳MAOB直接抑制证据。",
+    "concern": "既有精神疾病用途与抑郁共同节点重叠，且有合并疾病节点限制；D2/5HT药理不等于MAOB抑制。",
+    "next_step": "先复核阴性近邻受测条件及MAOB酶活，使用aripiprazole实体而非lauroxil前药；有一致效应再SPR。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "aripiprazole monoamine oxidase B inhibition",
+        "source": "web search",
+        "outcome": "检索主要命中受体/其他单胺系统资料，未获得可采纳MAOB直接抑制证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CEUORZQYGODEFX-UHFFFAOYSA-N__CHEMBL2039",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-169",
+    "verdict": "DEFER",
+    "summary": "varenicline–ESRRG的ADHD关联可生成假设，但核受体直接结合支持很薄。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.185/0.097。取得ERRγ身份及参考配体数据库记录，未获varenicline直接数据。",
+    "concern": "ERRγ不能按雌激素受体处理；原烟碱受体机制与该孤儿核受体无直接桥梁。",
+    "next_step": "使用ERRγ域和专用对照，先功能/竞争检测；无配对线索时不优先开发体系。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?familyId=97&objectId=624"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "varenicline ESRRG estrogen related receptor gamma",
+        "source": "web search",
+        "outcome": "取得ERRγ身份及参考配体数据库记录，未获varenicline直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL4245",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-170",
+    "verdict": "DEFER",
+    "summary": "anastrozole–ALK的肿瘤机制转换缺少配对依据，应后置。",
+    "support": "本地：结合排序12/384；阳性/阴性近邻相似度 0.2/0.213。NCI资料支持芳香化酶机制，没有取得ALK直接抑制证据。",
+    "concern": "芳香化酶抑制不能当作ALK抑制；阴性近邻略更近，骨髓瘤疾病分数不足以弥补。",
+    "next_step": "先核对ALK野生型/融合构建及酶活线索，只有直接效应才安排梯度。",
+    "source_urls": [
+      "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/anastrozole"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "anastrozole ALK kinase inhibition",
+        "source": "web search",
+        "outcome": "NCI资料支持芳香化酶机制，没有取得ALK直接抑制证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "YBBLVLTVTVSKRW-UHFFFAOYSA-N__CHEMBL4247",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-171",
+    "verdict": "DEFER",
+    "summary": "aripiprazole–PTK2在不宁腿疾病关联之外，直接结合支撑不足。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.274/0.247。检索返回PTK2靶点背景和其他抑制剂，未获本药直接配对测量。",
+    "concern": "原D2/5HT机制不能转为FAK抑制；合并药名必须落实aripiprazole而非lauroxil。",
+    "next_step": "先做FAK酶学/结合竞争，查明构建；若仅细胞黏附或信号改变不升级。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "aripiprazole PTK2 FAK direct inhibitor",
+        "source": "web search",
+        "outcome": "检索返回PTK2靶点背景和其他抑制剂，未获本药直接配对测量。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CEUORZQYGODEFX-UHFFFAOYSA-N__CHEMBL2695",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-172",
+    "verdict": "CONDITIONAL",
+    "summary": "brexanolone–ESR1有核受体离靶核查价值，但不能由神经类固醇身份推定ERα结合。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.345/0.404。FDA摘要摘录提供其他受体结合范围，但尚未获得ESR1直接亲和数据。",
+    "concern": "FDA摘录列出的显著结合包括AR/PGR而非ESR1；本地阴性近邻更近，PTSD遗传关联不确定方向。",
+    "next_step": "先核实监管完整ERα面板与受测条件，确认样品可溶性；ERα竞争效应成立后再SPR。",
+    "source_urls": [
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2019/211371Orig1s000MultidisciplineR.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "brexanolone estrogen receptor alpha binding",
+        "source": "web search",
+        "outcome": "FDA摘要摘录提供其他受体结合范围，但尚未获得ESR1直接亲和数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "AURFZBICLPNKBZ-SYBPFIFISA-N__CHEMBL206",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-173",
+    "verdict": "DEFER",
+    "summary": "quetiapine–ESRRG应后置，精神疾病场景重叠没有形成新的直接机制依据。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.271/0.169。取得ERRγ参考配体背景，未获得quetiapine直接关系。",
+    "concern": "ERRγ身份不同于ER；D2/5HT药理及ADHD遗传分数不确定ERRγ结合。",
+    "next_step": "先核查ERRγ竞争/转录报告，若仅原受体介导细胞效应则不升级。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?familyId=97&objectId=624"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "quetiapine ESRRG ERRgamma binding",
+        "source": "web search",
+        "outcome": "取得ERRγ参考配体背景，未获得quetiapine直接关系。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "URKOMYMAXPYINW-UHFFFAOYSA-N__CHEMBL4245",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-174",
+    "verdict": "DEFER",
+    "summary": "naltrexone–PDE9A的神经疾病桥接仍主要来自图谱，建议后置。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.169/0.148。检索未获得naltrexone–PDE9直接实验数据。",
+    "concern": "阿片受体拮抗不能推导PDE9A抑制；低相似性虽不证明阴性，也没有提供首批支持。",
+    "next_step": "如PDE9A平台已准备好，先测cGMP水解；出现重复效应再SPR复测。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "naltrexone PDE9 inhibition",
+        "source": "web search",
+        "outcome": "检索未获得naltrexone–PDE9直接实验数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DQCKKXVULJGBQN-XFWGSAIBSA-N__CHEMBL3535",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-175",
+    "verdict": "DEFER",
+    "summary": "ozanimod–PRKCB属于免疫方向内的机制扩展，直接激酶线索不够。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.241/0.2。NCI支持原S1P机制，未取得PRKCB直接配对数据。",
+    "concern": "S1P受体调节与PKCβ直接抑制不同；母药和活性代谢物不能混合解释。",
+    "next_step": "核对纯母药身份并先做PKCβ活性，若只有免疫细胞下游变化则继续后置。",
+    "source_urls": [
+      "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/ozanimod-hydrochloride"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ozanimod PRKCB PKC beta inhibitor",
+        "source": "web search",
+        "outcome": "NCI支持原S1P机制，未取得PRKCB直接配对数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XRVDGNKRPOAQTN-FQEVSTJZSA-N__CHEMBL3045",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-176",
+    "verdict": "DEFER",
+    "summary": "dexmethylphenidate–AKT3应后置，失眠预测尤其需要区分治疗与不良反应关联。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.241/0.254。原始睡眠研究摘录讨论失眠影响，未取得AKT3结合数据，疾病方向不可从图谱分推出。",
+    "concern": "原ADHD兴奋剂机制不支持AKT3；原始睡眠研究提到失眠相关风险，不能把共现当改善失眠。",
+    "next_step": "先核实疾病边类型与所需方向，使用dexmethylphenidate而非前药；无直接AKT3证据不优先。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10327472/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "dexmethylphenidate AKT3 insomnia binding",
+        "source": "web search",
+        "outcome": "原始睡眠研究摘录讨论失眠影响，未取得AKT3结合数据，疾病方向不可从图谱分推出。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DUGOZIWVEXMGBE-CHWSQXEVSA-N__CHEMBL4816",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-177",
+    "verdict": "DEFER",
+    "summary": "varenicline–MAPKAPK2虽偏头痛TxGNN排名高，仍建议后置至直接激酶线索出现。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.193/0.172。返回其他MK2抑制剂及varenicline一般资料，未获本配对直接测量。",
+    "concern": "烟碱受体效应不能推导MK2结合；一般Protein Kinase离靶记录不能精确归给MK2。",
+    "next_step": "核对MK2专用酶学与原监管面板是否覆盖该酶，得到重复效应再SPR。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "varenicline MAPKAPK2 MK2 inhibitor",
+        "source": "web search",
+        "outcome": "返回其他MK2抑制剂及varenicline一般资料，未获本配对直接测量。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL2208",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-178",
+    "verdict": "DEFER",
+    "summary": "copanlisib–NTRK3建议先核查既有激酶面板，不应以多激酶直觉优先。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.284/0.195。原始论文摘录给出220激酶面板10微摩尔下<50%抑制，NTRK3是否在面板尚未确认。",
+    "concern": "原始发现论文报告220激酶面板低抑制，但尚未确认是否含NTRK3；不能直接判其阴性，亦不能忽略该线索。",
+    "next_step": "取得面板具体靶点/浓度，确认TRKC构建与融合背景；有明确反证则停，缺失则小额酶学。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5094563/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "copanlisib NTRK3 kinase IC50",
+        "source": "web search",
+        "outcome": "原始论文摘录给出220激酶面板10微摩尔下<50%抑制，NTRK3是否在面板尚未确认。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "PZBCKZWLPGJMAO-UHFFFAOYSA-N__CHEMBL5608",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-179",
+    "verdict": "DEFER",
+    "summary": "rucaparib–PIK3CB目前缺少PARP之外的直接靶向依据，建议后置。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.276/0.222。检索未获得rucaparib–PIK3CB直接实验记录。",
+    "concern": "卵巢癌疾病关联接近原用途；PARP–PI3K通路联系或联用不能当直接PI3Kβ结合。",
+    "next_step": "先核对PI3Kβ生化活性和构建，避免以DNA修复细胞表型作直接结合替代。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "rucaparib PIK3CB PI3K beta inhibition",
+        "source": "web search",
+        "outcome": "检索未获得rucaparib–PIK3CB直接实验记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HMABYWSNWIZPAG-UHFFFAOYSA-N__CHEMBL3145",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-180",
+    "verdict": "DEFER",
+    "summary": "benoxinate–PPARD的眼部炎症假设不能由眼用麻醉场景支持，建议后置。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.28/0.303。取得PPARD身份/结构域背景，没有本药直接配对证据。",
+    "concern": "眼科操作麻醉不是虹膜睫状体炎治疗；阴性近邻更近且PPARδ作用方向未知。",
+    "next_step": "确认受测单药而非荧光素复方，先PPARδ竞争/报告验证；不因给药部位相同升级。",
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/gene/5467/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "benoxinate PPARD PPAR delta binding",
+        "source": "web search",
+        "outcome": "取得PPARD身份/结构域背景，没有本药直接配对证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CMHHMUWAYWTMGS-UHFFFAOYSA-N__CHEMBL3979",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-181",
+    "verdict": "DEFER",
+    "summary": "migalastat–UMPS疾病遗传关联很强，但治疗方向是关键缺口，建议后置。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.163/0.103。NCBI确认UMPS双功能及缺陷致病，未获得migalastat直接配对或伴侣修复证据。",
+    "concern": "UMPS缺陷导致乳清酸尿症；结合甚至抑制可能不符合所需功能恢复，GLA伴侣作用不能自动迁移。",
+    "next_step": "先提出可检验的UMPS稳定/功能恢复假设，核对双功能结构域；只见抑制不作为该病正向候选。",
+    "source_urls": [
+      "https://www.ncbi.nlm.nih.gov/gene/7372"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "migalastat UMPS orotate phosphoribosyltransferase",
+        "source": "web search",
+        "outcome": "NCBI确认UMPS双功能及缺陷致病，未获得migalastat直接配对或伴侣修复证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "LXBIFEVIBLOUGU-DPYQTVNSSA-N__CHEMBL5216",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-182",
+    "verdict": "DEFER",
+    "summary": "remimazolam–PDE9A的神经疾病用途不能由镇静背景推导，建议后置。",
+    "support": "本地：结合排序17/384；阳性/阴性近邻相似度 0.229/0.16。EMA摘录涉及其他酶/转运体离靶及代谢物，没有PDE9直接结果。",
+    "concern": "GABA作用与PDE9不同；母药/水解产物身份及受测稳定性尚需确认。",
+    "next_step": "先核对样品稳定性，用PDE9酶活检测，只有直接作用才安排SPR复测。",
+    "source_urls": [
+      "https://www.ema.europa.eu/en/documents/product-information/byfavo-epar-product-information_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "remimazolam PDE9 inhibition",
+        "source": "web search",
+        "outcome": "EMA摘录涉及其他酶/转运体离靶及代谢物，没有PDE9直接结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CYHWMBVXXDIZNZ-KRWDZBQOSA-N__CHEMBL3535",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-183",
+    "verdict": "DEFER",
+    "summary": "pantoprazole–NOS2存在NO通路与直接结合混淆风险，应后置。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.274/0.27。检索返回PPI/NO通路及其他NOS亚型讨论，未获得NOS2直接配对亲和或活性数据。",
+    "concern": "PPI对NO/内皮通路的影响不能区分NOS2直接抑制；原抑酸机制也涉及不同化学环境。",
+    "next_step": "核对母药和活化形式、NOS2辅因子/构建，用酶学区分直接作用与间接NO变化。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "pantoprazole NOS2 nitric oxide synthase direct inhibition",
+        "source": "web search",
+        "outcome": "检索返回PPI/NO通路及其他NOS亚型讨论，未获得NOS2直接配对亲和或活性数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "IQPSEEYGBUAQFF-UHFFFAOYSA-N__CHEMBL4481",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-184",
+    "verdict": "DEFER",
+    "summary": "asenapine–NR3C2可保留为未知离靶，但自闭症图谱关联不足以支持首批投入。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.229/0.194。检索命中原始人受体谱研究，摘要没有确认NR3C2测试或结果。",
+    "concern": "已知神经递质受体谱不等于MR结合，疾病方向和功能效应均未明。",
+    "next_step": "先核查原始受体面板是否含MR，再做配体竞争/报告验证；缺乏配对证据不升级。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/18308814/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "asenapine mineralocorticoid receptor binding",
+        "source": "web search",
+        "outcome": "检索命中原始人受体谱研究，摘要没有确认NR3C2测试或结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "VSWBSWWIRNCQIJ-HUUCEWRRSA-N__CHEMBL1994",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-185",
+    "verdict": "DEFER",
+    "summary": "loxapine–NTRK3应后置，精神疾病关联不能直接支持新激酶结合。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.234/0.221。检索主要返回LOXO-195和其他TRK抑制剂，非loxapine直接证据。",
+    "concern": "检索易混入LOXO命名的其他TRK药物；本药低化学支持不能由这些命中补足。",
+    "next_step": "核对精确loxapine结构并做TRKC酶活，避免将LOXO-195/larotrectinib资料误归本药。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "loxapine NTRK3 TRKC inhibitor",
+        "source": "web search",
+        "outcome": "检索主要返回LOXO-195和其他TRK抑制剂，非loxapine直接证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XJGVXQDUIWGIRW-UHFFFAOYSA-N__CHEMBL5608",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-186",
+    "verdict": "DEFER",
+    "summary": "brivaracetam–PDE9A需要先跨过直接酶学证据缺口，不因不宁腿TxGNN排名2而优先。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.182/0.188。官方资料命中其他离靶信息，未确认PDE9直接测试或活性。",
+    "concern": "SV2A机制与PDE9不同，阴性近邻略更接近；同骨架多个候选增加重复投入。",
+    "next_step": "先与levetiracetam同批PDE9酶活比较，再选可重复且有选择性的一个做SPR梯度。",
+    "source_urls": [
+      "https://www.ema.europa.eu/en/documents/product-information/briviact-epar-product-information_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "brivaracetam PDE9 inhibition",
+        "source": "web search",
+        "outcome": "官方资料命中其他离靶信息，未确认PDE9直接测试或活性。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "MSYKRHVOOPPJKU-BDAKNGLRSA-N__CHEMBL3535",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-187",
+    "verdict": "DEFER",
+    "summary": "levetiracetam–PDE9A可保留低成本对比，但缺乏新靶点直接依据。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.197/0.162。检索未获得levetiracetam–PDE9直接实验记录。",
+    "concern": "抗癫痫用途和不宁腿关联不等于PDE9介导作用；低相似性不能提供高置信支持。",
+    "next_step": "与brivaracetam共用PDE9酶学预筛，阳性后排除检测干扰再做结合验证。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "levetiracetam PDE9 inhibition",
+        "source": "web search",
+        "outcome": "检索未获得levetiracetam–PDE9直接实验记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HPHUVLMMVZITSG-LURJTMIESA-N__CHEMBL3535",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-188",
+    "verdict": "DEFER",
+    "summary": "selinexor–ABL1存在明确的联合机制混淆，建议后置。",
+    "support": "本地：结合排序19/384；阳性/阴性近邻相似度 0.297/0.242。原始论文研究selinexor/imatinib协同与核输出依赖，未提供本药直接ABL1结合确认。",
+    "concern": "原始研究是XPO1抑制与BCR-ABL1抑制联用，不证明selinexor直接结合ABL1；肺鳞癌用途仍间接。",
+    "next_step": "先取得单药ABL1生化证据并区分ABL1与融合构建，不能把联用增效当直接结合。",
+    "source_urls": [
+      "https://www.nature.com/articles/s41375-020-0708-1"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "selinexor ABL1 direct kinase inhibitor",
+        "source": "web search",
+        "outcome": "原始论文研究selinexor/imatinib协同与核输出依赖，未提供本药直接ABL1结合确认。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DEVSOMFAQLZNKR-RJRFIUFISA-N__CHEMBL1862",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-189",
+    "verdict": "DEFER",
+    "summary": "copanlisib–NTRK2需先排除既有选择性面板反证，再考虑肿瘤机制研究。",
+    "support": "本地：结合排序19/384；阳性/阴性近邻相似度 0.284/0.211。本次检索未取得TRKB直接数据；复用本轮已读取原始copanlisib面板摘要，覆盖待核实。",
+    "concern": "同药PI3K作用可影响TRK下游，不能直接证明TRKB结合；本地原用途仍属癌症。",
+    "next_step": "核查原始220激酶面板是否含TRKB及构建；若未测则先低成本酶学，不直接全梯度。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5094563/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "copanlisib NTRK2 TRKB inhibition",
+        "source": "web search",
+        "outcome": "本次检索未取得TRKB直接数据；复用本轮已读取原始copanlisib面板摘要，覆盖待核实。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "PZBCKZWLPGJMAO-UHFFFAOYSA-N__CHEMBL4898",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-190",
+    "verdict": "DEFER",
+    "summary": "metformin–FLT3不宜被联用抗白血病研究提升为直接结合候选。",
+    "support": "本地：结合排序20/384；阳性/阴性近邻相似度 0.118/0.185。命中原始协同研究，数据为表达/磷酸化及联合疗效，非本药FLT3亲和。",
+    "concern": "原始研究指向与gilteritinib协同及PLK1/下游信号，未确认metformin直接结合FLT3；肥胖方向更间接。",
+    "next_step": "先检验FLT3酶学并区分野生型/ITD构建，只有直接作用才复测SPR。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC11293342/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "metformin FLT3 direct binding inhibitor",
+        "source": "web search",
+        "outcome": "命中原始协同研究，数据为表达/磷酸化及联合疗效，非本药FLT3亲和。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XZWYZXLIPXDOLR-UHFFFAOYSA-N__CHEMBL1974",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-191",
+    "verdict": "DEFER",
+    "summary": "alpelisib–MMP12的动脉粥样硬化遗传依据不能弥补配对结合缺口。",
+    "support": "本地：结合排序20/384；阳性/阴性近邻相似度 0.243/0.198。EMA摘录支持原PI3K机制，未获得MMP12直接实验关系。",
+    "concern": "PI3Kα药理不等于金属蛋白酶结合，本地化学支持弱且排名处于门槛末端。",
+    "next_step": "若MMP12体系已经成熟可先酶学，否则不为此配对单独开发蛋白体系。",
+    "source_urls": [
+      "https://www.ema.europa.eu/en/documents/assessment-report/piqray-epar-public-assessment-report_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "alpelisib MMP12 inhibitor",
+        "source": "web search",
+        "outcome": "EMA摘录支持原PI3K机制，未获得MMP12直接实验关系。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "STUWGJZDJHPWGZ-LBPRGKRZSA-N__CHEMBL4393",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-192",
+    "verdict": "CONDITIONAL",
+    "summary": "calcipotriene–AR可保留核受体选择性探索，但VDR强结合不能直接迁移。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.39/0.192。数据库明确VDR亲和记录；未获得本配对AR直接亲和证据。",
+    "concern": "原皮肤药到乳腺纤维囊性疾病的作用方向不清，且有本地理化风险标记。",
+    "next_step": "核对纯calcipotriene而非复方，先AR/VDR竞争对比并测实际溶解度；阳性后用功能报告。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/LigandActivityRangeVisForward?ligandId=2778"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "calcipotriene androgen receptor binding calcipotriol",
+        "source": "web search",
+        "outcome": "数据库明确VDR亲和记录；未获得本配对AR直接亲和证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "LWQQLNNNIPYSNX-UROSTWAQSA-N__CHEMBL1871",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-193",
+    "verdict": "CONDITIONAL",
+    "summary": "roflumilast–ACHE可作为PDE4之外的跨领域侦察，但需明确母药身份。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.353/0.299。标签支持母药及N-oxide的PDE4作用，未取得ACHE直接配对数据。",
+    "concern": "PDE4抗炎机制及青光眼疾病分数不证明ACHE直接结合；N-oxide与母药不可互换，理化风险待实测。",
+    "next_step": "先ACHE功能检测并做干扰对照，确认纯母药、溶解度；作用可重复再用SPR。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93d72a99-64dc-4fde-a5b8-78331fa60787"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "roflumilast acetylcholinesterase inhibition direct",
+        "source": "web search",
+        "outcome": "标签支持母药及N-oxide的PDE4作用，未取得ACHE直接配对数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "MNDBXUUTURYVHR-UHFFFAOYSA-N__CHEMBL220",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-194",
+    "verdict": "CONDITIONAL",
+    "summary": "labetalol–MME排名第1，可在成熟MME体系小规模保留，但并非已证实双机制心血管药。",
+    "support": "本地：结合排序1/384；阳性/阴性近邻相似度 0.304/0.256。检索出现心血管药物类别共现，未取得labetalol直接MME活性记录。",
+    "concern": "原肾上腺素受体作用不能当成脑啡肽酶抑制；疾病重叠导致图谱加分独立性有限。",
+    "next_step": "以MME底物活性及参考抑制剂先核验，再对重复SPR信号做竞争与反筛。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "labetalol neprilysin inhibition",
+        "source": "web search",
+        "outcome": "检索出现心血管药物类别共现，未取得labetalol直接MME活性记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SGUAFYQXFOLMHL-UHFFFAOYSA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-195",
+    "verdict": "CONDITIONAL",
+    "summary": "gemcitabine–DNMT1命中原始直接酶学线索，适合机制确认，但必须重审“新关系”标签。",
+    "support": "本地：结合排序2/384；阳性/阴性近邻相似度 0.393/0.297。原始摘要和图4检索摘录报告gemcitabine抑制重组DNMT活性并使DNMT1失稳，非实测Kd。",
+    "concern": "2012研究报告重组DNMT活性抑制及DNMT1失稳，尚不能等同纯DNMT1的Kd；核苷母体/代谢体与DNA依赖条件需核对。",
+    "next_step": "先复核重组蛋白身份和试剂盒方法，验证直接DNMT1结合；若既有关系成立，归类机制确认而非全新发现。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/23007409/",
+      "https://www.spandidos-publications.com/10.3892/ijmm.2012.1138/download"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "gemcitabine DNMT1 direct inhibitor methyltransferase",
+        "source": "web search",
+        "outcome": "原始摘要和图4检索摘录报告gemcitabine抑制重组DNMT活性并使DNMT1失稳，非实测Kd。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SDUQYLNIPVEERB-QPPQHZFASA-N__CHEMBL1993",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-196",
+    "verdict": "DEFER",
+    "summary": "thalidomide–MIF虽模型排名第2，仍需排除免疫调节与直接MIF结合混淆。",
+    "support": "本地：结合排序2/384；阳性/阴性近邻相似度 0.354/0.245。命中其他MIF配体原始机制研究，未取得thalidomide直接结合证据。",
+    "concern": "CRBN配体相关嵌合物可因另一端结合MIF；不能由母药骨架或一般抗炎效应推定直接作用。",
+    "next_step": "先追溯阳性近邻完整结构和结合端，采用MIF竞争/功能检测，母药无独立线索则后置。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2746060/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "thalidomide macrophage migration inhibitory factor MIF binding",
+        "source": "web search",
+        "outcome": "命中其他MIF配体原始机制研究，未取得thalidomide直接结合证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "UEJJHQNACJXSKW-UHFFFAOYSA-N__CHEMBL2085",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-197",
+    "verdict": "CONDITIONAL",
+    "summary": "armodafinil–NR3C2可保留单靶点侦察，模型高排名尚未有独立MR结合支持。",
+    "support": "本地：结合排序2/384；阳性/阴性近邻相似度 0.319/0.2。官方标签摘录支持DAT原机制，未获得MR直接结合证据。",
+    "concern": "促醒/DAT作用不是MR机制，Duchenne疾病关联不确定MR方向及组织适用性。",
+    "next_step": "先以MR配体竞争和转录报告寻找直接作用，再决定SPR梯度；保持R实体身份。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?name=ARMODAFINIL&setid=de0799f7-7644-4057-a7da-75436f978c61"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "armodafinil mineralocorticoid receptor binding",
+        "source": "web search",
+        "outcome": "官方标签摘录支持DAT原机制，未获得MR直接结合证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "YFGHCGITMMYXAQ-LJQANCHMSA-N__CHEMBL1994",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-198",
+    "verdict": "CONDITIONAL",
+    "summary": "oxaprozin–FAAH可作为镇痛机制确认探索，但不能依赖供应商推测文档提高置信度。",
+    "support": "本地：结合排序4/384；阳性/阴性近邻相似度 0.345/0.3。出现BenchChem声称FAAH的技术页，但无本轮核实原始实测依据，未将其作为肯定证据。",
+    "concern": "搜索命中FAAH供应商技术页，尚未追溯到本药原始实验；关节病与原用途重叠。",
+    "next_step": "先查供应商所引原始数据并做FAAH酶学及干扰对照；有独立配对结果再SPR。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "oxaprozin FAAH inhibition",
+        "source": "web search",
+        "outcome": "出现BenchChem声称FAAH的技术页，但无本轮核实原始实测依据，未将其作为肯定证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "OFPXSFXSNFPTHF-UHFFFAOYSA-N__CHEMBL2243",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-199",
+    "verdict": "DEFER",
+    "summary": "bupivacaine–FKBP1A的湿疹假设缺乏直接桥梁，应后置。",
+    "support": "本地：结合排序6/384；阳性/阴性近邻相似度 0.286/0.242。检索返回一般局麻资料及FKBP背景，未取得本配对直接测量。",
+    "concern": "局麻药作用与FKBP12免疫机制不同；膜/通道效应不能当纯蛋白结合。",
+    "next_step": "先FKBP12竞争检测和非特异吸附反筛，若仅高浓度非选择性响应则暂停。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bupivacaine FKBP12 binding",
+        "source": "web search",
+        "outcome": "检索返回一般局麻资料及FKBP背景，未取得本配对直接测量。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "LEBVLXFERQHONN-UHFFFAOYSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-200",
+    "verdict": "DEFER",
+    "summary": "sotagliflozin–REN建议后置：既有心肾获益不能证明直接肾素抑制。",
+    "support": "本地：结合排序6/384；阳性/阴性近邻相似度 0.226/0.17。原始临床生物标志研究涉及肾素变化，NCI记录SGLT机制，均非REN直接结合。",
+    "concern": "SGLT作用引起RAAS生理变化与REN结合不同；糖尿病方向与原研究场景重叠。",
+    "next_step": "先纯肾素酶学确认；不以血浆肾素变化或联用RAAS药物当直接作用。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12992165/",
+      "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/sotagliflozin"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "sotagliflozin renin direct inhibition",
+        "source": "web search",
+        "outcome": "原始临床生物标志研究涉及肾素变化，NCI记录SGLT机制，均非REN直接结合。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "QKDRXGFQVGOQKS-CRSSMBPESA-N__CHEMBL286",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-201",
+    "verdict": "DEFER",
+    "summary": "methocarbamol–CA4虽有CA家族背景，但阴性近邻更近，建议排在CA7验证之后。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.309/0.406。取得CA1/2原始研究，未获CA4直接数据；同家族证据仅作线索。",
+    "concern": "CA1/2原始活性弱且存在巨大同工酶差异，不能量化迁移到CA4。",
+    "next_step": "先同条件比较CA1/CA4酶活，核对膜外催化构建；若无选择性重复效应不追加梯度。",
+    "source_urls": [
+      "https://www.sciencedirect.com/science/article/pii/S0021925819740034"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "methocarbamol carbonic anhydrase IV inhibition",
+        "source": "web search",
+        "outcome": "取得CA1/2原始研究，未获CA4直接数据；同家族证据仅作线索。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "GNXFOGHNGIVQEH-UHFFFAOYSA-N__CHEMBL3729",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-202",
+    "verdict": "DEFER",
+    "summary": "ivabradine–CYP11B2的内分泌新用途需先解决实验体系成本，建议后置。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.267/0.07。原始研究为其他CYP11B2抑制剂，提示物种差异；没有ivabradine直接记录。",
+    "concern": "原HCN通道作用与醛固酮合成酶不同；该靶点参考物目前只有非Kd活性依据。",
+    "next_step": "先确认活性CYP11B2、电子供体体系和参考物可测，再比较CYP11B1选择性；否则暂停该配对。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/19427380/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ivabradine CYP11B2 aldosterone synthase inhibition",
+        "source": "web search",
+        "outcome": "原始研究为其他CYP11B2抑制剂，提示物种差异；没有ivabradine直接记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ACRHBAYQBXXRTO-OAQYLSRUSA-N__CHEMBL2722",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-203",
+    "verdict": "DEFER",
+    "summary": "epinephrine–FAAH的咽炎连接和化学解释都较弱，应后置。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.288/0.188。原始研究提示epinephrine氧化产物可影响其他酶；不是FAAH直接作用证据。",
+    "concern": "氧化产物可能造成非特异效应；原升压/过敏急救不能推出FAAH治疗方向，疾病节点合并进一步削弱解释。",
+    "next_step": "先确认新鲜样品稳定性及酶学干扰，若信号随氧化改变则不归母药直接结合。",
+    "source_urls": [
+      "https://molpharm.aspetjournals.org/article/S0026-895X%2825%2911195-4/fulltext"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "epinephrine FAAH inhibition",
+        "source": "web search",
+        "outcome": "原始研究提示epinephrine氧化产物可影响其他酶；不是FAAH直接作用证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "UCTWMZQNUQWSLP-VIFPVBQESA-N__CHEMBL2243",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-204",
+    "verdict": "DEFER",
+    "summary": "avanafil–FKBP1A缺少PDE5之外的直接机制证据，建议后置。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.286/0.246。FDA命中为血浆蛋白结合，不能作为FKBP12记录；未获本配对直接证据。",
+    "concern": "血浆蛋白结合记录不是FKBP12亲和，外周动脉病关联不足以建立新用途。",
+    "next_step": "先FKBP12竞争检测并确认可溶浓度；本配对有独立信号再开展梯度。",
+    "source_urls": [
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/202276Orig1s000ClinPharmR.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "avanafil FKBP12 binding",
+        "source": "web search",
+        "outcome": "FDA命中为血浆蛋白结合，不能作为FKBP12记录；未获本配对直接证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WEAJZXNPAWBCOA-INIZCTEOSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-205",
+    "verdict": "DEFER",
+    "summary": "indacaterol–JAK3有炎症场景交集，但直接激酶结合证据不足，建议后置。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.218/0.195。命中其他通路原始研究和联用专利，无本配对JAK3直接数据。",
+    "concern": "原始论文中的EGFR/IKK/NFκB变化不等于JAK3直接抑制；呼吸局部给药也不能直接外推湿疹。",
+    "next_step": "先核对JAK3活性与JAK1/2反筛，纯配对效应成立后再结合验证。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4145369/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5712561/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "indacaterol JAK3 inhibition",
+        "source": "web search",
+        "outcome": "命中其他通路原始研究和联用专利，无本配对JAK3直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "QZZUEBNBZAPZLX-QFIPXVFZSA-N__CHEMBL2148",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-206",
+    "verdict": "DEFER",
+    "summary": "eltrombopag–LCK的HIV假设需先确定免疫方向，不宜直接优先。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.25/0.276。检索没有取得eltrombopag–LCK直接实验记录，其他Src相关文献不能归给本药。",
+    "concern": "血小板生成素受体药理与LCK抑制不同；HIV背景血小板改善也不代表抗病毒，阴性近邻更近。",
+    "next_step": "先LCK酶学及其他激酶反筛，只有选择性效应才讨论感染相关机制。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "eltrombopag LCK kinase inhibition",
+        "source": "web search",
+        "outcome": "检索没有取得eltrombopag–LCK直接实验记录，其他Src相关文献不能归给本药。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XDXWLKQMMKQXPV-QYQHSDTDSA-N__CHEMBL258",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-207",
+    "verdict": "CONDITIONAL",
+    "summary": "etravirine–MAPK9可作为抗病毒药JNK机制侦察，在共享JNK体系中有条件保留。",
+    "support": "本地：结合排序7/384；阳性/阴性近邻相似度 0.296/0.228。检索返回其他JNK抑制剂研究，未获得etravirine直接MAPK9结果。",
+    "concern": "泛癌症关联不确定癌种，逆转录酶原机制不能证明JNK2结合。",
+    "next_step": "先与rilpivirine等同批JNK1/2酶学比较，选择有重复直接效应者进入SPR梯度。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "etravirine JNK2 MAPK9 inhibition",
+        "source": "web search",
+        "outcome": "检索返回其他JNK抑制剂研究，未获得etravirine直接MAPK9结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "PYGWGZALEOIKDF-UHFFFAOYSA-N__CHEMBL4179",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-208",
+    "verdict": "DEFER",
+    "summary": "imipenem–FAAH的鼻窦炎链有抗感染共现风险，建议后置。",
+    "support": "本地：结合排序8/384；阳性/阴性近邻相似度 0.207/0.181。取得FAAH一般数据库记录，没有imipenem直接配对证据。",
+    "concern": "细菌PBP作用与宿主FAAH不同；原抗菌获益不能为宿主酶结合背书，复方cilastatin需分开。",
+    "next_step": "确认纯imipenem及检测期间稳定性，先FAAH酶活/时间依赖反筛再决定SPR。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?familyId=799&familyType=ENZYME&objectId=1400"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "imipenem FAAH inhibition",
+        "source": "web search",
+        "outcome": "取得FAAH一般数据库记录，没有imipenem直接配对证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ZSKVGTPCRGIANV-ZXFLCMHBSA-N__CHEMBL2243",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-209",
+    "verdict": "CONDITIONAL",
+    "summary": "indacaterol–CA2可在成熟CA体系作呼吸到眼病的补充侦察。",
+    "support": "本地：结合排序9/384；阳性/阴性近邻相似度 0.299/0.254。本次检索没有取得indacaterol–CA2直接记录。",
+    "concern": "原β2药理不能解释CA2结合，近邻仅弱支持，不能由含氮/羟基结构直接断定金属结合。",
+    "next_step": "确认纯实体及CA2参考物响应，先酶活和同工酶反筛，再做SPR梯度。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "indacaterol carbonic anhydrase II inhibition",
+        "source": "web search",
+        "outcome": "本次检索没有取得indacaterol–CA2直接记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "QZZUEBNBZAPZLX-QFIPXVFZSA-N__CHEMBL205",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-210",
+    "verdict": "DEFER",
+    "summary": "ivabradine–CYP11B1需先解决构建和对照问题，建议后置。",
+    "support": "本地：结合排序9/384；阳性/阴性近邻相似度 0.267/0.191。原始命中为心脏通道药理，未取得CYP11B1直接实验关系。",
+    "concern": "HCN机制与CYP11B1不同；CYP3A4代谢资料不是CYP11B1作用证据，现有参考物未有Kd依据。",
+    "next_step": "先确认活性CYP11B1及电子供体/参考物，并与CYP11B2比较；体系未测通不解释候选阴性。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31169990/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ivabradine CYP11B1 inhibition",
+        "source": "web search",
+        "outcome": "原始命中为心脏通道药理，未取得CYP11B1直接实验关系。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ACRHBAYQBXXRTO-OAQYLSRUSA-N__CHEMBL1908",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-211",
+    "verdict": "DEFER",
+    "summary": "elvitegravir–MAPK8直接机制仍缺，建议在抗病毒药JNK小面板中后置。",
+    "support": "本地：结合排序9/384；阳性/阴性近邻相似度 0.278/0.283。官方标签命中为整合酶原用途，未取得JNK1直接配对结果。",
+    "concern": "阳阴近邻相近，整合酶机制及泛癌症分数不能形成额外结合支持。",
+    "next_step": "使用单一elvitegravir而非复方，先JNK酶活并与dolutegravir对比再选梯度对象。",
+    "source_urls": [
+      "https://clinicalinfo.hiv.gov/en/drugs/elvitegravir-cobicistat-emtricitabine-tenofovir-alafenamide/fda-label"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "elvitegravir MAPK8 JNK1 inhibitor",
+        "source": "web search",
+        "outcome": "官方标签命中为整合酶原用途，未取得JNK1直接配对结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JUZYLCPPVHEVSV-LJQANCHMSA-N__CHEMBL2276",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-212",
+    "verdict": "CONDITIONAL",
+    "summary": "glimepiride–CA4可作为降糖药的新酶学机制侦察，但心衰用途仍待证明。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.298/0.195。取得CA4参考配体数据库背景，未得到glimepiride直接配对证据。",
+    "concern": "磺酰脲结构不能等同典型CA抑制药效团；原SUR1作用不支持CA4方向。",
+    "next_step": "先核对CA4催化构建与金属条件，用CA1/2反筛判断选择性，功能效应成立后SPR。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?objectId=2599"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "glimepiride carbonic anhydrase IV inhibition",
+        "source": "web search",
+        "outcome": "取得CA4参考配体数据库背景，未得到glimepiride直接配对证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WIGIZIANZCJQQY-RUCARUNLSA-N__CHEMBL3729",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-213",
+    "verdict": "DEFER",
+    "summary": "aprepitant–HMGCR跨领域价值取决于新酶学作用，目前支撑不足。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.207/0.19。官方标签命中CYP相互作用而非HMGCR，未获得本配对直接证据。",
+    "concern": "止吐用途不是抗癌；CYP药物相互作用也不是HMGCR抑制，原fosaprepitant别名需排除。",
+    "next_step": "使用aprepitant实体，先HMGCR催化活性验证并查聚集/非特异，阳性再做SPR。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d72e0e10-4557-41b0-b65d-d395468cad19"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "aprepitant HMG CoA reductase inhibition",
+        "source": "web search",
+        "outcome": "官方标签命中CYP相互作用而非HMGCR，未获得本配对直接证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ATALOFNDEOCMKK-OITMNORJSA-N__CHEMBL402",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-214",
+    "verdict": "DEFER",
+    "summary": "vaborbactam–MME的抗菌辅助药到心衰链尚不够，应后置。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.222/0.17。原始研究涉及β内酰胺酶与部分金属β内酰胺酶，未获得MME直接结果。",
+    "concern": "丝氨酸β内酰胺酶机制不能转为MME金属酶结合；含硼结构也不足以自动建立泛蛋白酶活性。",
+    "next_step": "先纯vaborbactam测MME酶活及金属酶反筛，避免meropenem复方混入。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6985712/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6593178/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "vaborbactam neprilysin MME inhibition",
+        "source": "web search",
+        "outcome": "原始研究涉及β内酰胺酶与部分金属β内酰胺酶，未获得MME直接结果。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "IOOWNWLVCOUUEX-WPRPVWTQSA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-215",
+    "verdict": "DEFER",
+    "summary": "memantine–NR3C2信息不足以支持首批MR验证，建议后置。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.125/0.102。检索主要返回NMDA原机制与综述，没有本配对直接数据。",
+    "concern": "NMDA原机制不支持MR作用；心衰/高血压来源为合并节点，不能作精确适应症预测。",
+    "next_step": "先核查MR竞争/报告活动及实际盐形，明确作用方向后再考虑心血管用途。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "memantine mineralocorticoid receptor binding",
+        "source": "web search",
+        "outcome": "检索主要返回NMDA原机制与综述，没有本配对直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "BUGYDGFZZOZRHP-UHFFFAOYSA-N__CHEMBL1994",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-216",
+    "verdict": "DEFER",
+    "summary": "aclidinium–PPARG属于新的核受体假设，但现有结合证据薄弱。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.264/0.243。取得PPARγ数据库背景和其他配体研究，未获得aclidinium直接记录。",
+    "concern": "原吸入抗胆碱用途不支持IBS方向，母体与降解物可能影响结果解释。",
+    "next_step": "核对纯母药及检测期间稳定性，先PPARγ竞争与功能报告，配对效应成立再SPR。",
+    "source_urls": [
+      "https://www.guidetopharmacology.org/GRAC/ObjectDisplayForward?familyId=86&familyType=NHR&objectId=595"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "aclidinium PPAR gamma PPARG binding",
+        "source": "web search",
+        "outcome": "取得PPARγ数据库背景和其他配体研究，未获得aclidinium直接记录。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ASMXXROZKSBQIH-VITNCHFBSA-N__CHEMBL235",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-217",
+    "verdict": "DEFER",
+    "summary": "calcipotriene–NR3C2比同药AR候选化学支撑更弱，建议后置。",
+    "support": "本地：结合排序5/384；阳性/阴性近邻相似度 0.167/0.186。检索未取得calcipotriol–MR直接记录，VDR资料不作本配对证据。",
+    "concern": "VDR作用不能自动转到MR，阴性近邻更近，肾病综合征方向需功能确认。",
+    "next_step": "先核对MR竞争及溶解性，避免和同药AR重复开展无直接线索梯度。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "calcipotriol mineralocorticoid receptor binding NR3C2",
+        "source": "web search",
+        "outcome": "检索未取得calcipotriol–MR直接记录，VDR资料不作本配对证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "LWQQLNNNIPYSNX-UROSTWAQSA-N__CHEMBL1994",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-218",
+    "verdict": "DEFER",
+    "summary": "bazedoxifene–THRB需区分ERβ与甲状腺受体β，建议后置。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.274/0.319。取得ER机制与复方甲状腺指标背景，未获得THRB直接结合数据。",
+    "concern": "命中雌激素受体作用和复方甲状腺结合球蛋白变化，均不能证明THRB结合；阴性近邻更近。",
+    "next_step": "使用单一bazedoxifene核查THRB/THRA竞争和报告方向，非直接证据不升级肥胖用途。",
+    "source_urls": [
+      "https://www.cancer.gov/publications/dictionaries/cancer-drug/def/bazedoxifene",
+      "https://www.ema.europa.eu/en/documents/product-information/duavive-epar-product-information_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bazedoxifene thyroid receptor beta binding",
+        "source": "web search",
+        "outcome": "取得ER机制与复方甲状腺指标背景，未获得THRB直接结合数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "UCJGJABZCDBEDK-UHFFFAOYSA-N__CHEMBL1947",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-219",
+    "verdict": "DEFER",
+    "summary": "ivosidenib–AKT1建议后置，IDH1已知结合与AKT1靶向没有现成桥梁。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.237/0.248。原始结构研究明确IDH1结合位点，未获得AKT1直接配对数据。",
+    "concern": "阴性近邻更近且有理化风险；肺癌疾病体细胞支持不属于药物直接结合支持。",
+    "next_step": "先AKT1活性/结合筛查并明确激活状态，实际可溶浓度达标才考虑SPR。",
+    "source_urls": [
+      "https://www.nature.com/articles/s41467-024-51692-0"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ivosidenib AKT1 inhibitor direct binding",
+        "source": "web search",
+        "outcome": "原始结构研究明确IDH1结合位点，未获得AKT1直接配对数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WIJZXSAJMHAVGX-DHLKQENFSA-N__CHEMBL4282",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-220",
+    "verdict": "DEFER",
+    "summary": "bempedoic acid–MMP12虽有动脉粥样硬化遗传关联，母体直接金属酶证据仍薄。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.235/0.18。EMA支持CoA活化/ACLY机制，未获得MMP12直接数据；MMP项目缩写不采为靶点证据。",
+    "concern": "ACLY活化形式与母体分离；MMP检索易命中管理项目缩写，不能误当MMP12研究。",
+    "next_step": "核对纯母体、溶解性和MMP12活性，优先与同药MMP3共享预筛，再决定是否需要SPR。",
+    "source_urls": [
+      "https://www.ema.europa.eu/en/documents/assessment-report/nilemdo-epar-public-assessment-report_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bempedoic acid MMP12 inhibitor",
+        "source": "web search",
+        "outcome": "EMA支持CoA活化/ACLY机制，未获得MMP12直接数据；MMP项目缩写不采为靶点证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "HYHMLYSLQUKXKP-UHFFFAOYSA-N__CHEMBL4393",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-221",
+    "verdict": "DEFER",
+    "summary": "rosuvastatin–NR3C2虽房颤遗传关联较强，直接药物证据仍不足，建议后置。",
+    "support": "本地：结合排序19/384；阳性/阴性近邻相似度 0.224/0.184。取得MR参考拮抗剂背景，未获得rosuvastatin直接配对数据。",
+    "concern": "HMGCR作用引起心血管获益不是MR结合，理化条件及功能方向未确认。",
+    "next_step": "先MR竞争/报告检测并核对纯实体，若无独立效应不因疾病分数高投入梯度。",
+    "source_urls": [
+      "https://reactome.org/content/detail/R-HSA-9725855"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "rosuvastatin mineralocorticoid receptor binding NR3C2",
+        "source": "web search",
+        "outcome": "取得MR参考拮抗剂背景，未获得rosuvastatin直接配对数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "BPRHUIZQVSMCRT-VEUZHWNKSA-N__CHEMBL1994",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-222",
+    "verdict": "DEFER",
+    "summary": "lenalidomide–AXL应后置，需避免CRBN分子胶与直接激酶抑制混淆。",
+    "support": "本地：结合排序3/384；阳性/阴性近邻相似度 0.365/0.398。原始命中为CRBN/lenalidomide联合招募CK1α结构，不是AXL直接作用。",
+    "concern": "原始研究的CRBN依赖招募不意味着lenalidomide单独结合AXL；阴性近邻更近且AML为合并节点。",
+    "next_step": "核对近邻是否嵌合物，先纯AXL酶学/竞争测量；只有依赖细胞降解不算本配对SPR验证。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26909574/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "lenalidomide AXL kinase binding inhibition",
+        "source": "web search",
+        "outcome": "原始命中为CRBN/lenalidomide联合招募CK1α结构，不是AXL直接作用。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "GOTYRUGSSMKFNF-UHFFFAOYSA-N__CHEMBL4895",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-223",
+    "verdict": "CONDITIONAL",
+    "summary": "olmesartan–MME可作高排名双机制侦察，但须先固定活性体身份。",
+    "support": "本地：结合排序3/384；阳性/阴性近邻相似度 0.371/0.176。原始比较研究把olmesartan作为ARB对照，非MME抑制证据；未获本配对直接数据。",
+    "concern": "临床与ARNI比较不证明olmesartan抑制MME；标签常为medoxomil前药，模型实体是olmesartan。",
+    "next_step": "采购/配制按模型活性体核对，先MME酶活；若测试前药需独立标记，不混用预测。",
+    "source_urls": [
+      "https://www.ahajournals.org/doi/pdf/10.1161/HYPERTENSIONAHA.116.08556"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "olmesartan neprilysin MME inhibition",
+        "source": "web search",
+        "outcome": "原始比较研究把olmesartan作为ARB对照，非MME抑制证据；未获本配对直接数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "VTRAEEWXHOVJFV-UHFFFAOYSA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-224",
+    "verdict": "DEFER",
+    "summary": "thalidomide–HDAC11缺乏直接依据且读出易选错，建议后置。",
+    "support": "本地：结合排序4/384；阳性/阴性近邻相似度 0.304/0.217。原始研究支持HDAC11去脂酰化检测条件；本药直接配对未获证实。",
+    "concern": "CRBN相关结构不能转移为HDAC11抑制；AML合并节点和普通去乙酰化检测不足以解释。",
+    "next_step": "先确认近邻母药与衍生物，使用长链去酰化底物和匹配参考物，再决定SPR。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6893910/",
+      "https://pubmed.ncbi.nlm.nih.gov/29731425/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "thalidomide HDAC11 inhibitor",
+        "source": "web search",
+        "outcome": "原始研究支持HDAC11去脂酰化检测条件；本药直接配对未获证实。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "UEJJHQNACJXSKW-UHFFFAOYSA-N__CHEMBL3310",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-225",
+    "verdict": "DEFER",
+    "summary": "fluvoxamine–MAOB已有弱酶活线索，建议后置；检索表格列IC50约39µM并标注部分抑制，拟合定义和实验体系仍待核。",
+    "support": "本地：结合排序6/384；阳性/阴性近邻相似度 0.306/0.212。命中SSRIs对MAO研究，表格摘录列MAOB IC50 39.04±2.63 µM、部分抑制；全文打开429，未读方法。",
+    "concern": "原始研究检索表格为约39 µM部分抑制，不是Kd；蛋白来源和体系未核实，且已报道活动降低新发现价值。",
+    "next_step": "先取原文核对物种与测定体系；如保留，仅作为弱活动复核。",
+    "source_urls": [
+      "https://www.mdpi.com/2076-3921/12/6/1208"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "fluvoxamine monoamine oxidase B inhibition IC50",
+        "source": "web search",
+        "outcome": "命中SSRIs对MAO研究，表格摘录列MAOB IC50 39.04±2.63 µM、部分抑制；全文打开429，未读方法。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CJOFXWAVKWHTFT-XSFVSMFZSA-N__CHEMBL2039",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-226",
+    "verdict": "DEFER",
+    "summary": "尼莫地平–CA12缺少直接证据，心衰图谱关联不能证明该新靶点。",
+    "support": "本地：结合排序10/384；阳性/阴性近邻相似度 0.312/0.231。未找到本配对直接实验；命中其他阴离子CA12/14抑制论文，仅说明旁支命中。",
+    "concern": "本轮命中其他化合物的CA12抑制研究，不能移植到尼莫地平；原钙通道药理与CA12之间尚缺实验桥梁。",
+    "next_step": "优先补CA12酶活筛查与溶解度，再决定是否占用SPR。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/17257840/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "nimodipine carbonic anhydrase XII inhibition",
+        "source": "web search",
+        "outcome": "未找到本配对直接实验；命中其他阴离子CA12/14抑制论文，仅说明旁支命中。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "UIAGMCDKSXEBJQ-UHFFFAOYSA-N__CHEMBL3242",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-227",
+    "verdict": "DEFER",
+    "summary": "丁卡因–CTSC目前属于较弱跨机制探索。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.217/0.229。检索未找到可用于本配对的直接原始实验证据；这不代表不存在。",
+    "concern": "阴性近邻略近于阳性近邻；局麻和支气管扩张症靶点关联不能支持直接CTSC结合，未找到配对实验。",
+    "next_step": "需成熟活化CTSC及酶活预筛，避免把局麻药非特异响应当结合。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "tetracaine cathepsin C inhibition",
+        "source": "web search",
+        "outcome": "检索未找到可用于本配对的直接原始实验证据；这不代表不存在。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "GKCBAIGFKIBETG-UHFFFAOYSA-N__CHEMBL2252",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-228",
+    "verdict": "DEFER",
+    "summary": "环苯扎林–MAOB不宜凭MAOI合用禁忌提升优先级。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.254/0.236。命中环苯扎林血清素综合征药理论文，摘录支持血清素药理；未找到直接MAOB结合证据。",
+    "concern": "检索中的MAOI相互作用并非该药直接抑制MAOB；醛氧化酶也不是单胺氧化酶，忧郁症图谱关系不补足结合证据。",
+    "next_step": "若保留先做MAOB功能筛查，核对MAOA选择性及底物干扰。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3809033/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "cyclobenzaprine monoamine oxidase B inhibitor",
+        "source": "web search",
+        "outcome": "命中环苯扎林血清素综合征药理论文，摘录支持血清素药理；未找到直接MAOB结合证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JURKNVYFZMSNLP-UHFFFAOYSA-N__CHEMBL2039",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-229",
+    "verdict": "DEFER",
+    "summary": "氨己烯酸–MMP8与疟疾之间缺少可检验的直接机制。",
+    "support": "本地：结合排序11/384；阳性/阴性近邻相似度 0.24/0.143。未找到本配对直接实验；命中氨己烯酸原GABA通路资料，不能支持新靶点。",
+    "concern": "GABA转氨酶机制不能迁移为MMP8结合；宿主人MMP8疾病关联也不是寄生虫靶点命中。",
+    "next_step": "先明确目标是宿主炎症调节还是抗寄生虫，再用MMP8酶活补证。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "vigabatrin MMP8 inhibition",
+        "source": "web search",
+        "outcome": "未找到本配对直接实验；命中氨己烯酸原GABA通路资料，不能支持新靶点。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "PJDFLNIOAUIZSL-UHFFFAOYSA-N__CHEMBL4588",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-230",
+    "verdict": "DEFER",
+    "summary": "昂丹司琼–FAAH暂无足够证据支撑感冒方向投入。",
+    "support": "本地：结合排序12/384；阳性/阴性近邻相似度 0.241/0.215。命中FAAH止吐专利合用药列表；未找到昂丹司琼直接FAAH测定。",
+    "concern": "FAAH专利中的昂丹司琼是可合用的5HT3药列表，不是该药FAAH活性；支持治疗标签不能误当抗癌起点。",
+    "next_step": "若保留先做FAAH酶活和构建确认，再重新明确感冒疾病获益方向。",
+    "source_urls": [
+      "https://patents.google.com/patent/WO2016144860A1/en"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ondansetron FAAH inhibition",
+        "source": "web search",
+        "outcome": "命中FAAH止吐专利合用药列表；未找到昂丹司琼直接FAAH测定。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "FELGMEQIXOGIFQ-UHFFFAOYSA-N__CHEMBL2243",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-231",
+    "verdict": "DEFER",
+    "summary": "利伐沙班–LCK的跨适应症新颖，但直接结合依据不足。",
+    "support": "本地：结合排序12/384；阳性/阴性近邻相似度 0.242/0.213。本轮检索未获得该药直接LCK结合或抑制的原始证据。",
+    "concern": "凝血因子X原机制与LCK不同；HIV关联不说明抑制免疫激酶会有利，可能方向不一致。",
+    "next_step": "优先做LCK功能反筛及凝血机制区分，再保留SPR名额。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "rivaroxaban LCK kinase inhibition",
+        "source": "web search",
+        "outcome": "本轮检索未获得该药直接LCK结合或抑制的原始证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "KGFYHTZWPPHNLQ-AWEZNQCLSA-N__CHEMBL258",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-232",
+    "verdict": "DEFER",
+    "summary": "格列美脲–REN不能由肾血流或心衰关联推断直接肾素抑制。",
+    "support": "本地：结合排序12/384；阳性/阴性近邻相似度 0.23/0.165。命中RENALIS临床肾血流研究，未命中直接REN结合实验。",
+    "concern": "命中的临床比较研究测了肾素等指标，并非格列美脲对纯化REN活性；降糖机制并未补足新结合证据。",
+    "next_step": "用人REN酶活与已知抑制剂对照预筛，保留心衰假说为待验证。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/34580975/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "glimepiride renin inhibition",
+        "source": "web search",
+        "outcome": "命中RENALIS临床肾血流研究，未命中直接REN结合实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WIGIZIANZCJQQY-RUCARUNLSA-N__CHEMBL286",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-233",
+    "verdict": "DEFER",
+    "summary": "去甲肾上腺素–CTSC不适合作为肺病首批探索重点。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.154/0.133。未命中本配对直接实验；命中BI1291583对CTSC原始研究，仅支持靶点路线。",
+    "concern": "CTSC肺病方向有其他专用抑制剂研究，但不能外推到升压药；小分子响应偏小且需关注儿茶酚氧化，身份须与屈昔多巴区分。",
+    "next_step": "先核对实际库存为去甲肾上腺素及稳定性，做CTSC酶活再决定。",
+    "source_urls": [
+      "https://link.springer.com/article/10.1007/s00011-023-01774-4"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "norepinephrine cathepsin C inhibition",
+        "source": "web search",
+        "outcome": "未命中本配对直接实验；命中BI1291583对CTSC原始研究，仅支持靶点路线。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SFLSHLFXELFNJZ-QMMMGPOBSA-N__CHEMBL2252",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-234",
+    "verdict": "DEFER",
+    "summary": "帕洛诺司琼–FKBP1A缺少直接配对证据，外周动脉病假说较远。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.232/0.182。命中5HT3模拟结合蛋白原始晶体研究；无本配对直接实验。",
+    "concern": "检索有帕洛诺司琼结合蛋白晶体，但该蛋白是模拟5HT3的AChBP，不是FKBP12；不能把标题中binding protein误读成FKBP。",
+    "next_step": "如保留需FKBP12已验证配体竞争与PPIase读出，先确认化合物身份。",
+    "source_urls": [
+      "https://pubs.acs.org/doi/10.1021/acschemneuro.6b00132"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "palonosetron FKBP12 binding",
+        "source": "web search",
+        "outcome": "命中5HT3模拟结合蛋白原始晶体研究；无本配对直接实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "CPZBLNMUGSZIPR-NVXWUHKLSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-235",
+    "verdict": "DEFER",
+    "summary": "布瑞哌唑–PDE5A的胎儿生长受限方向目前不值得优先消耗实验名额。",
+    "support": "本地：结合排序13/384；阳性/阴性近邻相似度 0.267/0.316。官方标签摘录支持原单胺受体药理；本轮未找到直接PDE5抑制数据。",
+    "concern": "阴性近邻更近；官方药理为多种单胺受体，未证实PDE5；即便结合成立，也必须独立核对胎盘获益方向和暴露可行性。",
+    "next_step": "先补PDE5功能测定；目标疾病选择须重新论证，勿直接从图谱分进入转化。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=993b584c-7fe6-4551-899f-39146c8508ac"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "brexpiprazole PDE5 inhibition",
+        "source": "web search",
+        "outcome": "官方标签摘录支持原单胺受体药理；本轮未找到直接PDE5抑制数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ZKIAIYBUSXZPLP-UHFFFAOYSA-N__CHEMBL1827",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-236",
+    "verdict": "DEFER",
+    "summary": "呫诺美林–CA4青光眼假说可检验，但暂缺足够优先理由。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.216/0.2。本轮未获得呫诺美林–CA4原始结合或酶抑制证据。",
+    "concern": "M1/M4原机制不是CA4抑制；须区别呫诺美林单体与含曲司氯铵复方，当前未检得CA4直接证据。",
+    "next_step": "先做CA4酶活，并平行CA2区分亚型，再决定SPR。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "xanomeline carbonic anhydrase IV inhibition",
+        "source": "web search",
+        "outcome": "本轮未获得呫诺美林–CA4原始结合或酶抑制证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "JOLJIIDDOBNFHW-UHFFFAOYSA-N__CHEMBL3729",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-237",
+    "verdict": "DEFER",
+    "summary": "格列美脲–MME心衰方向虽有靶点背景，配对支持仍薄弱。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.198/0.189。标签摘录证实原磺脲受体机制；未找到格列美脲直接MME实验。",
+    "concern": "MME影响代谢不意味着降糖药格列美脲直接结合MME；阳阴近邻均弱且相近，与同药REN假说不能互相验证。",
+    "next_step": "先做MME酶活，若无效应不继续占SPR梯度资源。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dbed06f9-7758-4c96-9af0-1ed6103db7df"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "glimepiride neprilysin inhibition",
+        "source": "web search",
+        "outcome": "标签摘录证实原磺脲受体机制；未找到格列美脲直接MME实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WIGIZIANZCJQQY-RUCARUNLSA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-238",
+    "verdict": "DEFER",
+    "summary": "匹伐他汀–MME尚不能从心血管保护表型提升为新靶点机制。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.234/0.226。命中心血管重塑动物研究，未命中直接MME抑制数据。",
+    "concern": "原始动物研究命中为氧化应激及TGFβ–Smad通路，不是纯化MME结合；已有心血管用途使跨领域价值也有限。",
+    "next_step": "优先用MME功能反筛区分直接作用与原降脂通路。",
+    "source_urls": [
+      "https://www.ahajournals.org/doi/pdf/10.1161/CIRCRESAHA.107.163493"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "pitavastatin neprilysin inhibition",
+        "source": "web search",
+        "outcome": "命中心血管重塑动物研究，未命中直接MME抑制数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "VGYFMXBACGZSIL-MCBHFWOFSA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-239",
+    "verdict": "DEFER",
+    "summary": "右雷佐生–MMP7应先排除金属相关非特异作用，再谈莱姆病探索。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.15/0.121。命中血栓反应蛋白1介导的抗血管生成研究，未找到本配对直接实验。",
+    "concern": "螯合相关机制不等于母体对MMP7特异结合；需区分开环代谢物；莱姆病宿主靶点效应不能视为杀菌。",
+    "next_step": "先核对母体和代谢物身份，以金属条件和其他MMP反筛验证特异性。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2743367/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "dexrazoxane MMP7 inhibition",
+        "source": "web search",
+        "outcome": "命中血栓反应蛋白1介导的抗血管生成研究，未找到本配对直接实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "BMKDZUISNHGIBY-ZETCQYMHSA-N__CHEMBL4073",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-240",
+    "verdict": "DEFER",
+    "summary": "阿法替尼–REN的动脉粥样硬化设想证据不足。",
+    "support": "本地：结合排序14/384；阳性/阴性近邻相似度 0.2/0.195。命中标签和肾功能药代资料；未获得直接肾素结合或抑制证据。",
+    "concern": "不可逆ErbB机制不能迁移到肾素；肾功能影响药代的检索命中也不是REN作用，慢病转化还需暴露与耐受窗口。",
+    "next_step": "先用REN酶活和非特异蛋白结合反筛，勿直接推进高成本SPR梯度。",
+    "source_urls": [
+      "https://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=ec5b9e00-3eab-4dbd-9bb3-75865b1af485&type=display"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "afatinib renin inhibition",
+        "source": "web search",
+        "outcome": "命中标签和肾功能药代资料；未获得直接肾素结合或抑制证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "ULXXDDBFHOBEHA-CWDCEQMOSA-N__CHEMBL286",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-241",
+    "verdict": "DEFER",
+    "summary": "拉罗替尼–FKBP1A尚缺直接支持，动脉粥样硬化关联较弱。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.227/0.173。本轮未找到该配对的直接原始实验。",
+    "concern": "TRK激酶原机制与FKBP12结合不同；FKBP参与信号复合体不等于该药直接结合它。",
+    "next_step": "先做FKBP12配体竞争或PPIase预筛，仅阳性再进入SPR梯度。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "larotrectinib FKBP12 binding",
+        "source": "web search",
+        "outcome": "本轮未找到该配对的直接原始实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "NYNZQNWKBKUAII-KBXCAEBGSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-242",
+    "verdict": "DEFER",
+    "summary": "多替拉韦–MAPK9暂属于证据较弱的抗HIV药转肿瘤探索。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.232/0.245。未命中直接多替拉韦–JNK2证据；检索中的其他PI3K化合物激酶表不可移植。",
+    "concern": "整合酶结合机制不能外推JNK2；阴性近邻更近，泛癌关联未给出具体依赖背景或作用方向。",
+    "next_step": "先测人JNK2酶活并区分JNK1/3，再选明确癌种。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "dolutegravir JNK2 MAPK9 inhibition",
+        "source": "web search",
+        "outcome": "未命中直接多替拉韦–JNK2证据；检索中的其他PI3K化合物激酶表不可移植。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "RHWKPHLQXYSBKR-BMIGLBTASA-N__CHEMBL4179",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-243",
+    "verdict": "DEFER",
+    "summary": "瑞博西利–REN不能用CDK4/6药与RAAS药合用结果当直接结合依据。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.293/0.237。命中CDK4/6抑制剂与RAAS药合用研究；未找到该药直接REN实验。",
+    "concern": "本轮命中为联合用药临床研究，不是瑞博西利抑制肾素；泛心血管疾病标签也不足以确定新用途。",
+    "next_step": "先做纯化REN功能筛查，再评估特定疾病和暴露窗口。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12711125/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ribociclib renin inhibition",
+        "source": "web search",
+        "outcome": "命中CDK4/6抑制剂与RAAS药合用研究；未找到该药直接REN实验。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "RHXHGRAEPCAFML-UHFFFAOYSA-N__CHEMBL286",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-244",
+    "verdict": "DEFER",
+    "summary": "依曲韦林–TYMS的抗肿瘤新机制尚未获得直接证据。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.265/0.238。命中依曲韦林原始代谢研究，未检得直接TYMS结合或抑制数据。",
+    "concern": "非核苷逆转录酶抑制不等于胸苷酸合酶抑制；不能把同属核酸代谢泛概念作为结合验证。",
+    "next_step": "先做TYMS催化测定并注意辅因子条件，阳性后再补SPR。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/22269145/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "etravirine thymidylate synthase inhibition",
+        "source": "web search",
+        "outcome": "命中依曲韦林原始代谢研究，未检得直接TYMS结合或抑制数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "PYGWGZALEOIKDF-UHFFFAOYSA-N__CHEMBL1952",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-245",
+    "verdict": "DEFER",
+    "summary": "依托孕烯–VDR不能仅凭甾体外观和骨质疏松关联优先安排。",
+    "support": "本地：结合排序15/384；阳性/阴性近邻相似度 0.158/0.2。PubChem摘录支持PGR原机制；未获得直接VDR结合证据。",
+    "concern": "原孕激素受体作用不能外推VDR，阴性近邻更近；结合即使成立也需区分激动与拮抗。",
+    "next_step": "先做VDR配体竞争和转录方向测定，明确是依托孕烯本体而非去氧孕烯。",
+    "source_urls": [
+      "https://pubchem.ncbi.nlm.nih.gov/compound/Etonogestrel"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "etonogestrel vitamin D receptor binding",
+        "source": "web search",
+        "outcome": "PubChem摘录支持PGR原机制；未获得直接VDR结合证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "GCKFUYQCUCGESZ-BPIQYHPVSA-N__CHEMBL1977",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-246",
+    "verdict": "CONDITIONAL",
+    "summary": "拉贝洛尔–ACE已有直接配对计算论文，可作有条件的计算假说验证。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.282/0.247。命中2019原始计算论文；打开PDF读取摘要及建模方法，包含拉贝洛尔，未提供本次所见湿实验支持。",
+    "concern": "2019论文是MOE建模而非湿实验；论文术语混淆β阻断剂与ACE抑制剂，不能当实测；原降压到肾病跨领域价值有限。",
+    "next_step": "若ACE平台已测通，先酶活；保留少量SPR验证，核对混合立体异构体与模型实体。",
+    "source_urls": [
+      "https://actascientific.com/ASMS/pdf/ASMS-03-0329.pdf"
+    ],
+    "source_notes": "本轮读取PDF摘要及方法段/化合物表；来源仅支持曾有该配对建模，不能支持实测结合。",
+    "search_log": [
+      {
+        "query": "labetalol angiotensin converting enzyme inhibition",
+        "source": "web search",
+        "outcome": "命中2019原始计算论文；打开PDF读取摘要及建模方法，包含拉贝洛尔，未提供本次所见湿实验支持。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      },
+      {
+        "query": "open ASMS-03-0329.pdf",
+        "source": "https://actascientific.com/ASMS/pdf/ASMS-03-0329.pdf",
+        "outcome": "阅读PDF摘要、化合物表与建模方法段，拉贝洛尔为第10个化合物；研究性质为分子建模。",
+        "access_scope": "FULL_TEXT_SELECTED_SECTIONS"
+      }
+    ],
+    "pair_id": "SGUAFYQXFOLMHL-UHFFFAOYSA-N__CHEMBL1808",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-247",
+    "verdict": "DEFER",
+    "summary": "乌布吉泮–JAK3的类风湿方向尚缺配对实验桥梁。",
+    "support": "本地：结合排序16/384；阳性/阴性近邻相似度 0.241/0.21。命中CGRP受体原始药理研究，未找到直接JAK3抑制数据。",
+    "concern": "CGRP受体高效力不能转成JAK3高效力；JAK3疾病背景合理也不能抵消化学近邻支持弱。",
+    "next_step": "先用JAK3功能面板与JAK1/2反筛，避免直接大量SPR梯度。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/31992609/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ubrogepant JAK3 inhibition",
+        "source": "web search",
+        "outcome": "命中CGRP受体原始药理研究，未找到直接JAK3抑制数据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DDOOFTLHJSMHLN-ZQHRPCGSSA-N__CHEMBL2148",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-248",
+    "verdict": "DEFER",
+    "summary": "依非韦伦–AR有前列腺癌研究背景，但不能据此认定直接AR拮抗作用。",
+    "support": "本地：结合排序17/384；阳性/阴性近邻相似度 0.225/0.213。前列腺癌II期研究检索摘录报告主要终点未达到，讨论AR表达变化；另命中ER直接作用论文；PMC全文打开验证码。",
+    "concern": "已有人体II期试验未达主要终点；AR表达变化不是AR结合，另有雌激素受体直接研究亦不能移植。",
+    "next_step": "重新审核疾病新颖性；若保留仅作AR机制探测，需配体竞争和激动/拮抗报告基因。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4257751/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2943013/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "efavirenz androgen receptor prostate cancer binding",
+        "source": "web search",
+        "outcome": "前列腺癌II期研究检索摘录报告主要终点未达到，讨论AR表达变化；另命中ER直接作用论文；PMC全文打开验证码。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XPOQHMRABVBWPR-ZDUSSCGKSA-N__CHEMBL1871",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-249",
+    "verdict": "DEFER",
+    "summary": "比克替拉韦–MAPK8缺少直接实验，泛癌方向尚不足以提升优先级。",
+    "support": "本地：结合排序17/384；阳性/阴性近邻相似度 0.247/0.19。本轮未找到比克替拉韦直接JNK1原始实验；命中其他激酶面板资料不能使用。",
+    "concern": "整合酶药理不能替代JNK1结合；其他化合物的JNK面板命中与本药无关，需避免资料误归属。",
+    "next_step": "先做JNK1酶活及JNK2/3选择性，明确具体癌种依赖后再验证结合。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "bictegravir JNK1 MAPK8 inhibition",
+        "source": "web search",
+        "outcome": "本轮未找到比克替拉韦直接JNK1原始实验；命中其他激酶面板资料不能使用。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL2276",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-250",
+    "verdict": "DEFER",
+    "summary": "阿伐那非–PDE4D有家族选择性反向证据，应降低首批优先级。",
+    "support": "本地：结合排序17/384；阳性/阴性近邻相似度 0.295/0.284。官方标签摘录明确PDE5对PDE4>1000倍选择性；原始研究摘要支持广泛PDE选择性，未核实PDE4D具体测定。",
+    "concern": "官方标签PDE5效力较PDE4超过1000倍；标签未细分PDE4D构建，不能据此断言绝对不结合，也不能把卒中图谱关系当有效性。",
+    "next_step": "先核对原11种PDE实验中PDE4亚型和浓度范围，再决定是否值得弱活动复核。",
+    "source_urls": [
+      "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d04e17d-7399-430a-a8bb-fa1912b155e9",
+      "https://www.auajournals.org/doi/10.1016/j.juro.2012.03.115"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "avanafil PDE4D inhibition selectivity",
+        "source": "web search",
+        "outcome": "官方标签摘录明确PDE5对PDE4>1000倍选择性；原始研究摘要支持广泛PDE选择性，未核实PDE4D具体测定。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WEAJZXNPAWBCOA-INIZCTEOSA-N__CHEMBL288",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-251",
+    "verdict": "DEFER",
+    "summary": "格拉斯吉布–FAAH的关节病探索目前缺少直接依据。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.296/0.384。命中格拉斯吉布原始药代研究，未找到直接FAAH结合或活性测定。",
+    "concern": "阴性近邻明显更近；原SMO药理及AML用途不能迁移到FAAH，Hedgehog与炎症共通路也不是二元结合。",
+    "next_step": "先做FAAH酶活和非特异反筛；只有可重复效应再做SPR梯度。",
+    "source_urls": [
+      "https://accp1.onlinelibrary.wiley.com/doi/10.1002/cpdd.692"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "glasdegib FAAH inhibition",
+        "source": "web search",
+        "outcome": "命中格拉斯吉布原始药代研究，未找到直接FAAH结合或活性测定。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "SFNSLLSYNZWZQG-VQIMIIECSA-N__CHEMBL2243",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-252",
+    "verdict": "DEFER",
+    "summary": "鲁比前列酮–FKBP1A对外周动脉病的解释链过长。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.164/0.146。本轮未找到鲁比前列酮直接FKBP12结合原始证据。",
+    "concern": "原肠道分泌机制与FKBP12没有直接桥梁，阳性近邻很弱；母体及活性代谢物不能混同。",
+    "next_step": "先核对母体库存与可测浓度，再做FKBP12配体竞争，暂不优先SPR。",
+    "source_urls": [],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "lubiprostone FKBP12 binding",
+        "source": "web search",
+        "outcome": "本轮未找到鲁比前列酮直接FKBP12结合原始证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "WGFOBBZOWHGYQH-MXHNKVEKSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-253",
+    "verdict": "DEFER",
+    "summary": "伐硼巴坦–FKBP1A不应由抗菌复方背景或RA图谱排名提升。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.172/0.2。命中伐硼巴坦–细菌PBP3原始结构研究，未命中人FKBP12直接证据。",
+    "concern": "检索有PBP3结合晶体但PBP3不是FKBP12；硼酸原β内酰胺酶共价机制不能迁移，阴性近邻更近。",
+    "next_step": "确认检测单独伐硼巴坦而非美罗培南复方，先FKBP12竞争实验再考虑SPR。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8519428/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "vaborbactam FKBP12 binding",
+        "source": "web search",
+        "outcome": "命中伐硼巴坦–细菌PBP3原始结构研究，未命中人FKBP12直接证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "IOOWNWLVCOUUEX-WPRPVWTQSA-N__CHEMBL1902",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-254",
+    "verdict": "DEFER",
+    "summary": "乌布吉泮–METAP2肥胖方向目前属于支持较弱的跨机制探索。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.252/0.178。未找到乌布吉泮直接METAP2实验；命中AGM1470/ovalicin原始研究，仅为其他化合物。",
+    "concern": "本轮仅命中其他经典MetAP2化合物研究；CGRP拮抗不能等同MetAP2作用，肥胖图谱排名及关联也较弱。",
+    "next_step": "先做金属条件明确的METAP2酶活与METAP1反筛，避免高浓度金属或读出干扰。",
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/9224570/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ubrogepant methionine aminopeptidase 2 inhibition",
+        "source": "web search",
+        "outcome": "未找到乌布吉泮直接METAP2实验；命中AGM1470/ovalicin原始研究，仅为其他化合物。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "DDOOFTLHJSMHLN-ZQHRPCGSSA-N__CHEMBL3922",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-255",
+    "verdict": "DEFER",
+    "summary": "米拉贝隆–MME虽有心衰图谱推荐，仍缺直接结合依据。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.229/0.222。检索命中药品产品信息，无本配对直接结合或酶抑制证据。",
+    "concern": "原β3受体作用可以产生心血管表型，不能据表型反推MME；阳阴近邻相近，需把原机制贡献分开。",
+    "next_step": "优先MME酶活并核对浓度暴露，只有可重复直接作用再占用SPR梯度。",
+    "source_urls": [
+      "https://ec.europa.eu/health/documents/community-register/2019/20190402143971/anx_143971_en.pdf"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "mirabegron neprilysin inhibition",
+        "source": "web search",
+        "outcome": "检索命中药品产品信息，无本配对直接结合或酶抑制证据。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "PBAPPPCECJKMCM-IBGZPJMESA-N__CHEMBL1944",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  },
+  {
+    "candidate_id": "C384-256",
+    "verdict": "DEFER",
+    "summary": "雷诺嗪–PDGFRA尚不足以支撑系统性肥大细胞增多症首批投入。",
+    "support": "本地：结合排序18/384；阳性/阴性近邻相似度 0.289/0.228。未找到雷诺嗪直接PDGFRA实验；命中DCC2618对KIT/PDGFRA及肥大细胞肿瘤研究，仅支持其他药路线。",
+    "concern": "命中为其他KIT/PDGFRA多靶点抑制剂，不能把其疾病效果归因PDGFRA后迁移给雷诺嗪；野生型构建与疾病驱动也须匹配。",
+    "next_step": "先核对疾病驱动基因和PDGFRA构建，做激酶活性预筛再决定SPR。",
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5927976/"
+    ],
+    "source_notes": "本轮仅读取检索结果摘录/摘要；所列来源仅支持上述命中内容，不代表已经阅读全文或证实本配对。",
+    "search_log": [
+      {
+        "query": "ranolazine PDGFRA inhibition mastocytosis",
+        "source": "web search",
+        "outcome": "未找到雷诺嗪直接PDGFRA实验；命中DCC2618对KIT/PDGFRA及肥大细胞肿瘤研究，仅支持其他药路线。",
+        "access_scope": "SEARCH_RESULT_EXCERPTS"
+      }
+    ],
+    "pair_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N__CHEMBL2007",
+    "evidence_scope": "LOCAL_RECORD_AND_WEB_SEARCH_REVIEW"
+  }
+]

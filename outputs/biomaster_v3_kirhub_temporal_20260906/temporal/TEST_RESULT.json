@@ -1,0 +1,139 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-06T03:02:06.095299+00:00",
+  "test_release_sha256": "fb83f2ff4c9b784076e8efef046be9c264e53805330d1e01d0cbf51b25cdf30e",
+  "evaluation_source_sha256": "ea2fc3e7b4b8403196a719d7778f84a906e1b9b178783b96ccb30ff897ddaea4",
+  "test_used_for_selection": false,
+  "labels": "publication-year-qualified experimental binary activities; positive-only dense retrieval",
+  "counts": {
+    "development_train": {
+      "all_pairs": 350694,
+      "conflicting": 2540,
+      "grey_or_unresolved": 55746,
+      "rows": 292408,
+      "positives": 235138,
+      "drugs": 209659,
+      "old_drug_rows": 4782,
+      "old_drug_positives": 770,
+      "min_used_year": 1976,
+      "max_used_year": 2020
+    },
+    "final_train": {
+      "all_pairs": 419038,
+      "conflicting": 2922,
+      "grey_or_unresolved": 64496,
+      "rows": 351620,
+      "positives": 276530,
+      "drugs": 243933,
+      "old_drug_rows": 4889,
+      "old_drug_positives": 815,
+      "min_used_year": 1976,
+      "max_used_year": 2022
+    },
+    "development_validation_all": {
+      "all_pairs": 71063,
+      "conflicting": 320,
+      "grey_or_unresolved": 9126,
+      "rows": 61617,
+      "positives": 43549,
+      "drugs": 36315,
+      "old_drug_rows": 406,
+      "old_drug_positives": 269,
+      "min_used_year": 2021,
+      "max_used_year": 2022
+    },
+    "test_2023_2025_all": {
+      "all_pairs": 41989,
+      "conflicting": 315,
+      "grey_or_unresolved": 7609,
+      "rows": 34065,
+      "positives": 26942,
+      "drugs": 23836,
+      "old_drug_rows": 458,
+      "old_drug_positives": 358,
+      "min_used_year": 2023,
+      "max_used_year": 2025
+    },
+    "development_validation_new": {
+      "all_pairs": 68343,
+      "conflicting": 254,
+      "grey_or_unresolved": 8770,
+      "rows": 59319,
+      "positives": 41469,
+      "drugs": 34811,
+      "old_drug_rows": 116,
+      "old_drug_positives": 53,
+      "min_used_year": 2021,
+      "max_used_year": 2022
+    },
+    "test_2023_2025_new": {
+      "all_pairs": 39668,
+      "conflicting": 243,
+      "grey_or_unresolved": 7283,
+      "rows": 32142,
+      "positives": 25154,
+      "drugs": 22738,
+      "old_drug_rows": 156,
+      "old_drug_positives": 71,
+      "min_used_year": 2023,
+      "max_used_year": 2025
+    },
+    "test_2023_new": {
+      "all_pairs": 19049,
+      "conflicting": 82,
+      "grey_or_unresolved": 3790,
+      "rows": 15177,
+      "positives": 11805,
+      "drugs": 11128,
+      "old_drug_rows": 35,
+      "old_drug_positives": 28,
+      "min_used_year": 2023,
+      "max_used_year": 2023
+    },
+    "test_2024_new": {
+      "all_pairs": 14164,
+      "conflicting": 99,
+      "grey_or_unresolved": 2344,
+      "rows": 11721,
+      "positives": 9377,
+      "drugs": 8007,
+      "old_drug_rows": 108,
+      "old_drug_positives": 34,
+      "min_used_year": 2024,
+      "max_used_year": 2024
+    },
+    "test_2025_new": {
+      "all_pairs": 6455,
+      "conflicting": 55,
+      "grey_or_unresolved": 1152,
+      "rows": 5248,
+      "positives": 3974,
+      "drugs": 3637,
+      "old_drug_rows": 13,
+      "old_drug_positives": 9,
+      "min_used_year": 2025,
+      "max_used_year": 2025
+    }
+  },
+  "metrics_sha256": "2001e4b4b22bd79c49d5c7eaf5eb8d70cd6fd91f9620a57fbf4ceabb5b5f1da7",
+  "approval_sensitivity": {
+    "status": "FROZEN_BEFORE_TEST",
+    "cutoff": 2022,
+    "method": "exact full InChIKey match to ChEMBL37 molecule_dictionary.first_approval; missing dates excluded from conservative sensitivity",
+    "no_activity_labels_read": true,
+    "primary_scope_unchanged": "current 720 registry",
+    "sensitivity": "both query drugs and target-to-drug candidate drugs restricted to confirmed approval <=2022",
+    "drugs": 720,
+    "exact_matches": 710,
+    "dated_drugs": 642,
+    "confirmed_approved_by_2022": 594,
+    "approved_after_2022": 48,
+    "files": {
+      "REGISTRY_APPROVAL_AUDIT.csv": "7dcaf9b00ce464ef83f26a8195e7b04ba6d1e5c5c9c08dc4c6c6a63a48ba8f96",
+      "REGISTRY_APPROVAL_SOURCE.csv": "60b49c4e4f206f10c0b2ce754a60c1e9127066381385a3171dd5aec70fe1ed49"
+    },
+    "source_sha256": "4dd361774e763790bbd60ce2fa2424aa0222f517ec4fb76383bd582353767c05"
+  },
+  "limitation": "current project 720/384 registry and current public pretrained feature banks; not all entities proven approved before 2023",
+  "not_a_prospective_experiment": true
+}

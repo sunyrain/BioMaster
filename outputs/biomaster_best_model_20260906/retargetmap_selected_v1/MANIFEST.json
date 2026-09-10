@@ -1,0 +1,105 @@
+{
+  "format_version": 2,
+  "files": {
+    "MODEL_CARD.md": {
+      "sha256": "7b976ff30368da6bfac477aab2d06624332ae40daa4931b555b169e5d0681178",
+      "size_bytes": 12334
+    },
+    "README.md": {
+      "sha256": "64f4de17f1dd8760acf48ec690ae7e0217ae398ce56be1ebf7bea31726b91d34",
+      "size_bytes": 1628
+    },
+    "architecture_selection.json": {
+      "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+      "size_bytes": 17515
+    },
+    "development.csv": {
+      "sha256": "7e93e3caa8e6df66fa2c73664ce566560e0b48f9c0f2725bebd022b66f0adfa8",
+      "size_bytes": 3143
+    },
+    "drugs.csv.gz": {
+      "sha256": "2b7cc97dc8f81599e89e418d1eadc7eb517551949f004476477eebe49c7350bb",
+      "size_bytes": 30971
+    },
+    "evaluation.csv": {
+      "sha256": "5826595f2259193081e9da7759e56060fab7589fb0b1873072bda3b3962fb56a",
+      "size_bytes": 21078
+    },
+    "features/drug_global.npy": {
+      "sha256": "4fbf84e535baedce514e2056aa147ebb823a08e7d933d81d2e797bc739a82707",
+      "size_bytes": 7372928
+    },
+    "features/drug_graph_mean.npy": {
+      "sha256": "58cdd3ab20dec41c00d433f571e1680847ec489d0f744eda3b63882d66bbaec8",
+      "size_bytes": 115328
+    },
+    "features/pretrained_available.npy": {
+      "sha256": "a4816c3907069fe14baf43e7f7ddb8782b594b350d79cd1681bc61ebcc0799a5",
+      "size_bytes": 3008
+    },
+    "features/target_global.npy": {
+      "sha256": "89de0c2edba1bd2b85f216216285505d8b3e3d18b7a21277f3a8de03c734b888",
+      "size_bytes": 1966208
+    },
+    "infer.py": {
+      "sha256": "58e7e597f823dc75c760582497a072ec954cc4ed61e640cab2870358e4b01e32",
+      "size_bytes": 722
+    },
+    "metadata.json": {
+      "sha256": "5bd9844f320bdc2fadc4148991e40f4fcad6762088f324bb0adfd055d7ea93cd",
+      "size_bytes": 2948
+    },
+    "model.pt": {
+      "sha256": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+      "size_bytes": 4950923
+    },
+    "paired_regression.json": {
+      "sha256": "5a53dd4eb64bc2653919754c8776e501f71327c236bc781688bc514812334be7",
+      "size_bytes": 52562
+    },
+    "provenance.json": {
+      "sha256": "618e40a55f3bc6e71950ab94580c151335e75e279a909ff62f8551a7ab86670f",
+      "size_bytes": 5650
+    },
+    "refinement.csv": {
+      "sha256": "d5e529cbb87220316fbf5526fabea4cfed7ab859f81ea1f399cf034e7f8ea25e",
+      "size_bytes": 1725
+    },
+    "representative_precision.csv": {
+      "sha256": "e1daa8d67bd72d7be8a43c9a4f0155110a2ace228050d94188738c5548808dba",
+      "size_bytes": 15883
+    },
+    "requirements.txt": {
+      "sha256": "5956a1b1085d04e8696ae37421862ffb9c8d693c10deea42bc97d707bb73be8d",
+      "size_bytes": 35
+    },
+    "retargetmap/__init__.py": {
+      "sha256": "c9edf09b41d9f5fec2233053e7721f08c3840107ea47a8a95d9f89e556083c7b",
+      "size_bytes": 70
+    },
+    "retargetmap/model_registry.py": {
+      "sha256": "492b2ea9e3817de6d6fce4f0e63d7e9290ed3705ddd1a376da53e213189d8bbe",
+      "size_bytes": 304
+    },
+    "retargetmap/molecular_controls.py": {
+      "sha256": "4063beef9f8dd9ef5b7044882d3326027bb76db7166be5c3b5c6fd6d7746774e",
+      "size_bytes": 805
+    },
+    "retargetmap/portable_ranker.py": {
+      "sha256": "83c57cbfb18f3bb583ae4398751e5e19cd7922025435c2d5c49a827e9983a4bc",
+      "size_bytes": 9430
+    },
+    "retargetmap/unified_interaction.py": {
+      "sha256": "92acb4ad6971900f3d21eee7d11af1e21449052ec1c7e047322dbbba6d614dd4",
+      "size_bytes": 9753
+    },
+    "targets.csv.gz": {
+      "sha256": "18e6059e0a0cb818cdc6a91d7751ff532b1a470c4c338546bad23267b66f7838",
+      "size_bytes": 4830
+    },
+    "training_data.json": {
+      "sha256": "1ec5f0b0325ff412071c35c8c873cf4253f5a5f2797ed952af6810da1f4cb9f0",
+      "size_bytes": 1668
+    }
+  }
+}

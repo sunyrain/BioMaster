@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "passed": 20,
+  "command": "OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 pytest -q tests/test_unified_interaction.py tests/test_temporal_relations.py tests/test_ranking_audit.py tests/test_old_relation_retrieval.py",
+  "output": "....................                                                     [100%]\n20 passed in 2.70s\n",
+  "test_source_sha256": {
+    "tests/test_unified_interaction.py": "e4a70552b2a441bd3d94d484ab546db9f2f2e839dd425569dacff76956e39133",
+    "tests/test_temporal_relations.py": "8830e0c079f00338963f1bb42a0ef1835e9f1dafda372dc462cba440393f31e0",
+    "tests/test_ranking_audit.py": "c08985e071ccc7c575a109d4056b429a16a98924fdb050cba96f467d1fda68e8",
+    "tests/test_old_relation_retrieval.py": "fab6d7ed2e71fdce6766154bec1a6ede062f3529045419b69bf8d612d99207d0"
+  }
+}

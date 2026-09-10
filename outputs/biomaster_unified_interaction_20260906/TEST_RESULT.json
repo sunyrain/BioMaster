@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "models": [
+    "global",
+    "capacity",
+    "geometry",
+    "temporal_v3",
+    "temporal_J",
+    "positive_nearest"
+  ],
+  "release": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/TEST_RELEASE.json",
+    "sha256": "d794935c6b75e0bb19fd0085444fc0b01e79e8126394d35a0ea906adcdde1338",
+    "size_bytes": 4787
+  },
+  "metrics": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/TEST_METRICS.csv",
+    "sha256": "4fbd68fadf7b4fe04bef171be561f1fd81fd606dfa494dc3786f7eac49503cf8",
+    "size_bytes": 41472
+  },
+  "selection_used_test": false,
+  "single_seed": true,
+  "promoted": false
+}

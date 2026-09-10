@@ -1,0 +1,11 @@
+{
+  "original": {
+    "native_contact_ap": 0.5671258218557094,
+    "native_distance_mae": 1.2478746625115806
+  },
+  "migrated": {
+    "native_contact_ap": 0.567114397234237,
+    "native_distance_mae": 1.2478639483939207
+  },
+  "probe": 1223
+}

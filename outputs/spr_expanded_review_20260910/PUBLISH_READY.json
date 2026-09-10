@@ -1,0 +1,8 @@
+{
+  "new_candidate_pairs": 384,
+  "baseline_overlap": 0,
+  "identity_and_known_guards_pass": true,
+  "raw_activity_exclusion_pass": true,
+  "review_status": "PENDING",
+  "baseline_unchanged": true
+}

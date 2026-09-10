@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETE",
+  "plan_sha256": "fe5112323cb03ba9b46194a57f53010983992e5ee357ccd34c40e1add8956903",
+  "deleted_files": 272487,
+  "deduplicated_files": 7,
+  "empty_directories_removed": 23739,
+  "group_counts": {
+    "A1_DUPLICATE_BOLTZ_CACHE": 3,
+    "A2_DOWNLOAD_SEGMENTS": 8,
+    "A3_OFFLINE_UNPACKED": 6986,
+    "B2_BOLTZ_PROCESSED": 108327,
+    "B1_BOLTZ_ERROR_MATRICES": 62648,
+    "B4_UNPROMOTED_ATOM_TOKENS": 1,
+    "B5_CONTEXT_DERIVED_INPUTS": 77882,
+    "C1_OLD_TRIAL_CHECKPOINTS": 133,
+    "C2_ENGINEERING_CHECKPOINTS": 5,
+    "C3_STOPPED_STRUCTURE_DERIVED_FEATURES": 16497,
+    "C4_EXACT_DUPLICATES_KEEP_PATHS": 4
+  },
+  "group_allocated_bytes": {
+    "A1_DUPLICATE_BOLTZ_CACHE": 6204379136,
+    "A2_DOWNLOAD_SEGMENTS": 593035264,
+    "A3_OFFLINE_UNPACKED": 2413608960,
+    "B2_BOLTZ_PROCESSED": 2770477056,
+    "B1_BOLTZ_ERROR_MATRICES": 54492745728,
+    "B4_UNPROMOTED_ATOM_TOKENS": 8613019648,
+    "B5_CONTEXT_DERIVED_INPUTS": 9767464960,
+    "C1_OLD_TRIAL_CHECKPOINTS": 4476436480,
+    "C2_ENGINEERING_CHECKPOINTS": 1863204864,
+    "C3_STOPPED_STRUCTURE_DERIVED_FEATURES": 9517805568,
+    "C4_EXACT_DUPLICATES_KEEP_PATHS": 934912000
+  },
+  "planned_file_bytes": 101647089664,
+  "free_before_bytes": 17874964480,
+  "free_after_bytes": 119486865408,
+  "observed_free_gain_bytes": 101611900928,
+  "protected_snapshot_unchanged": true,
+  "elapsed_seconds": 39.67341685295105,
+  "note": "Observed free-space gain also includes removed directory metadata and concurrent filesystem activity.",
+  "post_cleanup_verification": "PASS",
+  "spr_regression_tests": {
+    "passed": 23,
+    "command": "python -m pytest -q tests/test_explorer_spr_final.py tests/test_explorer_spr_results.py tests/test_explorer_comprehensive_spr.py"
+  }
+}

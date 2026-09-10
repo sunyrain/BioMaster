@@ -1,0 +1,41 @@
+{
+  "status": "FULL_DATA_READY",
+  "base": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020",
+  "identity": {
+    "base_manifest_sha256": "521906f711acb9269cb2e4139bc9f751e26db0df594eeb846111ab636728ea3a",
+    "producer_sha256": "ce4d3e0663d73841a2aa12140bdc6661160cf3dd1c37f25c8612e1a8bf9117ed",
+    "p2rank_jar_sha256": "4d73a85b796bd5ec5563d840abb5b1005f37b4651fd7f8aaad4b01a936ea1ece",
+    "p2rank_config_sha256": "bc3be625000100ccf3d57907b67c726159c797b9bb421d07fc4a7b6fca0aaa9f",
+    "min_probability": 0.2,
+    "jaccard": 0.5,
+    "max_residues": 256,
+    "max_atoms": 2048,
+    "limit": 0,
+    "dependencies": {
+      "/root/autodl-tmp/BioMaster/biomaster/structural_complex.py": "57806a68a646e1021e6d40779f649f45fae262d3a772f342a4fa3a5a5f309f60",
+      "/root/autodl-tmp/BioMaster/biomaster/odti_local_features_v3.py": "46828e50f239c54f3ae7bfd0e7f488836b44776f60d61bba5794b651e5038942",
+      "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_unified_interaction.py": "1eb76a08fffcc7a1fee85c23497f7e91a0a385253b7cbbc3309ae82e4c609f6c",
+      "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_pocket_precision.py": "91c0ecb083cd8d8b9a455a2bc303e2b2f73e12f8e315dcc579ec7cdf81b20004",
+      "/root/autodl-tmp/BioMaster/third_party/sota_dti_2026/Drug-The-Whole-Genome/data/model_weights/6_folds/fold_0.pt": "129196ea9eb211c6b931d8dc5cd4edccbc4c6fd382aae7200b455d3bc3847e5c"
+    }
+  },
+  "counts": {
+    "train": 9903,
+    "validation": 1223
+  },
+  "real_global_context_required": true,
+  "global_sequence_pooling": "residue-weighted distinct full receptor chains",
+  "pocket_selection": "P2Rank alphafold configuration; probability >= .2; all diverse pockets; no ligand input",
+  "source_axes": [
+    "experimental_native",
+    "experimental_p2rank",
+    "alphafold_p2rank"
+  ],
+  "structural_supervision_receptor": "experimental_holo",
+  "actual_apo_or_AF_contact_supervision": false,
+  "no_prediction_count": 684,
+  "predicted_pockets": 23380,
+  "rejected_pockets": 1198,
+  "seconds": 12887.878117574379,
+  "full_data": true
+}

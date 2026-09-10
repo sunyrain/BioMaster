@@ -1,8 +1,11 @@
 {
   "status": "FROZEN",
-  "frozen_utc": "2026-08-04T05:29:47.246889+00:00",
+  "frozen_utc": "2026-08-31T07:58:33.860227+00:00",
   "target_count": 338,
   "definition": "ChEMBL 37 human SINGLE PROTEIN small-molecule direct MoA; non-GPCR; supported target class; preferred druglike experimental holo pocket",
+  "scope_role": "STRUCTURE_READY_DOCKING_CORE_NOT_GLOBAL_TARGET_DISCOVERY_UNIVERSE",
+  "complete_non_gpcr_registry": "outputs/target_discovery_scope_ch37_v3/TARGET_REGISTRY_NON_GPCR_745_V3.csv.gz",
+  "primary_drug_to_target_scope": "outputs/target_discovery_scope_ch37_v3/TARGET_PRIMARY_DIRECT_SM_ASSAYABLE_450_V3.csv.gz",
   "explicitly_removed_after_preferred_pocket_gate": [
     "DNMT3A",
     "ODC1",
@@ -18,5 +21,5 @@
     "outputs/chembl37_known_pocket_atlas/final_atlas/KNOWN_POCKET_INSTANCES_ANNOTATED_FULL.csv.gz": "97b87ea63de7a7cb54d208be718da1b16388c54a61ada6da8e8472f64b873d77",
     "configs/pdbe_experiment_metadata_corrections_ch37.csv": "eb28cc4ba54070a7b7c2175ec36259f2bad39272b3eaaa60f1f1294046e8750f"
   },
-  "usage_rule": "New pair-space construction must read the frozen 338 target CSV; legacy 341/463 target manifests are not production inputs."
+  "usage_rule": "Docking or experimental-holo workflows must read the frozen 338 target CSV. Drug-to-target production ranking must read the routed 450-target V3 primary manifest. The 745-target file is a lossless registry, not a global rank denominator. Special systems and no-direct-evidence targets must follow their separate V3 routes; structure or pocket readiness remains optional within a route."
 }

@@ -1,0 +1,11 @@
+{
+  "status": "READY_FOR_EXPORT",
+  "utc": "2026-09-06T09:33:18.369940+00:00",
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+    "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+    "size_bytes": 4956687
+  },
+  "selected_seed": 20260921,
+  "final_package_delivered": false
+}

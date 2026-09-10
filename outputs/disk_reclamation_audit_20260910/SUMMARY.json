@@ -1,0 +1,108 @@
+{
+  "status": "AUDIT_ONLY_NO_DELETIONS",
+  "size_unit": "GiB = 2^30 bytes; GB = 10^9 bytes",
+  "disk_total_GiB": 550.0,
+  "disk_used_GiB": 533.3267021179199,
+  "disk_free_GiB": 16.673297882080078,
+  "candidate_total_GiB": 98.07154846191406,
+  "candidate_total_decimal_GB": 105.303523328,
+  "duplicate_or_archived_GiB": 8.578433990478516,
+  "conditional_historical_GiB": 89.49311447143555,
+  "candidates": [
+    {
+      "group": "A1_DUPLICATE_BOLTZ_CACHE",
+      "risk": "A_内容重复_须保持引用路径",
+      "files": 3,
+      "allocated_bytes": 6204379136,
+      "GiB": 5.778278350830078,
+      "decimal_GB": 6.204379136,
+      "reason": "三份Boltz缓存与共享缓存SHA256相同；保留共享实体，原路径需安全重定向，不能直接删断引用。"
+    },
+    {
+      "group": "A2_DOWNLOAD_SEGMENTS",
+      "risk": "A_重复下载分片",
+      "files": 8,
+      "allocated_bytes": 593035264,
+      "GiB": 0.55230712890625,
+      "decimal_GB": 0.593035264,
+      "reason": "已组装完整zip；分片拼接SHA256相同后可移除分片，保留zip。"
+    },
+    {
+      "group": "A3_OFFLINE_UNPACKED",
+      "risk": "A_有完整归档的展开副本",
+      "files": 6986,
+      "allocated_bytes": 2413608960,
+      "GiB": 2.2478485107421875,
+      "decimal_GB": 2.41360896,
+      "reason": "保留旧版zip及校验文件；CRC与目录覆盖验证通过后可移除展开目录。"
+    },
+    {
+      "group": "B1_BOLTZ_ERROR_MATRICES",
+      "risk": "B_历史预测细节_有信息损失",
+      "files": 62648,
+      "allocated_bytes": 54492745728,
+      "GiB": 50.75032424926758,
+      "decimal_GB": 54.492745728,
+      "reason": "PAE/PDE逐残基误差矩阵；保留CIF、affinity/confidence JSON和汇总CSV；失去精细误差重分析，恢复需重推理。"
+    },
+    {
+      "group": "B2_BOLTZ_PROCESSED",
+      "risk": "B_可重建预处理",
+      "files": 108327,
+      "allocated_bytes": 2770477056,
+      "GiB": 2.5802078247070312,
+      "decimal_GB": 2.770477056,
+      "reason": "历史Boltz processed中间文件；保留输入、源结构、模型、环境和预测结果；重跑需要重新预处理。"
+    },
+    {
+      "group": "B3_DTIAM_OLD_FOLD_PREDICTORS",
+      "risk": "B_历史折模型_复现成本高",
+      "files": 576,
+      "allocated_bytes": 20448792576,
+      "GiB": 19.044422149658203,
+      "decimal_GB": 20.448792576,
+      "reason": "仅非S5折的predictor目录；保留折级预测、汇总和训练输入；S5部署模型整套保留。删除将失去旧折模型的直接再推理能力，重训未必位级一致。"
+    },
+    {
+      "group": "B4_UNPROMOTED_ATOM_TOKENS",
+      "risk": "B_未晋升模型特征_可重建",
+      "files": 1,
+      "allocated_bytes": 8613019648,
+      "GiB": 8.021499633789062,
+      "decimal_GB": 8.613019648,
+      "reason": "旧unified轮ATOM_TOKENS.npy；保留LMDB、索引、特征清单、checkpoint和日志；旧轮复训/审计需重算特征。"
+    },
+    {
+      "group": "B5_CONTEXT_DERIVED_INPUTS",
+      "risk": "B_后续训练可能复用",
+      "files": 77882,
+      "allocated_bytes": 9767464960,
+      "GiB": 9.096660614013672,
+      "decimal_GB": 9.76746496,
+      "reason": "未晋升context模型predicted与p2rank派生输入；保留原始结构、索引、全局特征、模型和训练记录；恢复需重做口袋和编码，不能称永远无用。"
+    }
+  ],
+  "hardlinked_candidate_files": [],
+  "open_candidate_fds": [],
+  "inaccessible_proc_fd_directories": 0,
+  "wetlab_boltz_protection": {
+    "wetlab_and_historical_control_unique_pairs": 527,
+    "protected_provenance_rows": 126,
+    "unresolved_calibration_manifest_rows": 0,
+    "matches_by_run": {
+      "outputs/boltz2_calibration_338_v1/formal_screen_run": 90,
+      "outputs/boltz2_discovery_conditional_v1/screen_run": 36
+    }
+  },
+  "protected_excluded_bytes": {
+    "protected_processed_bytes": 1118920704,
+    "protected_matrix_bytes": 167313408
+  },
+  "caveats": [
+    "No claim of permanent future uselessness; B groups trade stored artifacts for recomputation or lost historical detail.",
+    "Allocated bytes exclude directory metadata; not a guarantee of post-delete free space.",
+    "Open descriptor scan is a momentary check, not proof of no runtime or future dependencies.",
+    "No deletion or link replacement performed; full-file hashes are only computed for stated duplicate proofs.",
+    "Keep source inputs, versioned models, environment definitions and metrics before reclaiming derived outputs."
+  ]
+}

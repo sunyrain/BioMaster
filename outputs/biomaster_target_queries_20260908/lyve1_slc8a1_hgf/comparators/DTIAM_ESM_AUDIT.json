@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "control_target_index": 18,
+  "control_max_abs_diff": 0.0,
+  "pooling": "FP32 final layer mean residues plus EOS; BOS excluded",
+  "truncate_at": 1022,
+  "actual_truncated_queries": 0,
+  "targets_sha256": "d03dd031c61061d3d580a34924368979e53c74caa65276500c1b3a9852bb8ca6",
+  "feature_sha256": "2ebc81f4e8d0bd04fd7afe9a447ef61009aa7bb808c51d65e6d5165072bf3eba"
+}

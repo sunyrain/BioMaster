@@ -1,0 +1,55 @@
+{
+  "scope": "R1 historical general-compound known-positive retrieval; unsuitable as primary old-drug novel-target benchmark",
+  "data_files": {
+    "outputs/biomaster_v3_20260905/data/RELATIONS_V3.csv.gz": "05c01b9b61b3b15302b15e400e30f232922b0f01126d0b59251dfa183733e9a2",
+    "outputs/retrain_20260901/comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz": "dabda92e4d18bd76a9c10322d394eb19d5aeecc8988c6ae2733ef1543faa25b1",
+    "outputs/biomaster_odti_v4_20260905/protocol/test_panel.npz": "7de683b655bc48fbdfe39affd3b67d162f16903b7564f1d6b31287e8c29218a9",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_OLD_DRUG720_BERMOL_INDEX_V1.csv.gz": "14116cfc4f9dd6f9739a5ddb18e0120986c24a22c6cb5180e33f44e76c118b9f"
+  },
+  "test_observed": {
+    "rows": 42032,
+    "compounds": 28874,
+    "positive": 32649,
+    "negative": 9383,
+    "sources": {
+      "chembl37_comprehensive": 42016,
+      "chembl37_recovered": 16
+    }
+  },
+  "scored_panel": {
+    "compounds": 1024,
+    "targets": 495,
+    "scored_pairs": 506880,
+    "observed_pairs": 1365,
+    "known_positive": 1322,
+    "known_negative": 43,
+    "unobserved": 505515,
+    "unobserved_fraction": 0.9973070549242424,
+    "compounds_one_observed_pair": 823,
+    "compounds_one_known_positive": 847,
+    "compounds_with_positive_and_negative": 29,
+    "observed_sources": {
+      "chembl37_comprehensive": 1365
+    },
+    "matched_project720_inchikey": 0,
+    "matched_project720_model_smiles": 0,
+    "old_drug_matching_limit": "exact current identifiers; no assertion about all approved drugs or untested alias normalization"
+  },
+  "overlap": {
+    "queries_with_train_scaffold": 768,
+    "queries_similarity_ge_0_7": 912,
+    "queries_similarity_lt_0_4": 3,
+    "queries_identical_morgan_to_train_positive": 90,
+    "among_identical_morgan_exact_smiles": 0,
+    "among_identical_morgan_same_structure_without_stereo": 80,
+    "known_positive_pairs_shared_doc_with_top_same_target_positive_reference": 1197,
+    "known_positive_pairs_shared_assay_with_top_same_target_positive_reference": 1192
+  },
+  "direct_support_leakage_check": {
+    "valid_support_entries_checked": 12680192,
+    "nontraining_or_wrong_target_or_wrong_label": 0,
+    "same_entity_support": 0,
+    "nearest_predictions_equal_cached_max_positive_similarity": true
+  },
+  "interpretation": "No direct support-label leak found. Chemical series/assay overlap and sparse positive-unlabeled evaluation limit the claim. This audit does not establish a corrected model ranking."
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "files": 272494,
+  "allocated_bytes": 101647089664,
+  "plan_sha256": "fe5112323cb03ba9b46194a57f53010983992e5ee357ccd34c40e1add8956903",
+  "protected_hashed_files": 372,
+  "protected_DTIAM_metadata_files": 682,
+  "duplicates": {
+    "outputs/boltz2_structure_affinity_v1/boltz_cache/boltz2_aff.ckpt": {
+      "keep": "/root/autodl-tmp/boltz_cache/boltz2_aff.ckpt",
+      "sha256": "dcc5cd3722b1c9eaa34267e4ae32f55cbbf1963f4c19319381ccfa30fdd2ca9e"
+    },
+    "outputs/boltz2_structure_affinity_v1/boltz_cache/boltz2_conf.ckpt": {
+      "keep": "/root/autodl-tmp/boltz_cache/boltz2_conf.ckpt",
+      "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1"
+    },
+    "outputs/boltz2_structure_affinity_v1/boltz_cache/mols.tar": {
+      "keep": "/root/autodl-tmp/boltz_cache/mols.tar",
+      "sha256": "39e076d96dbec6b4e86982bbda16f3a53a2a60c9bdc17828d88f6f9a0c7d1fd7"
+    },
+    "outputs/retrain_20260901/comprehensive_training_v1/MORGAN2048_UINT8_COMPREHENSIVE_V1.npy": {
+      "keep": "/root/autodl-tmp/BioMaster/outputs/biomaster_comprehensive_training_v1/MORGAN2048_UINT8_COMPREHENSIVE_V1.npy",
+      "sha256": "86d2f43583a4979442d4e1cb107669fd3e062af8138d5ec9ce9ffa951effc05e"
+    },
+    "outputs/biomaster_best_model_20260906/package_smoke_geometry_v1/features/residue_tokens.npy": {
+      "keep": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SITE_TOKENS.npy",
+      "sha256": "af568b63f10d053cfa82d5172b270814eae44d976793a36a0b3ad2cfacc5366c"
+    },
+    "outputs/biomaster_best_model_20260906/package_smoke_anchored_v2/features/residue_tokens.npy": {
+      "keep": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_SITE_TOKENS.npy",
+      "sha256": "af568b63f10d053cfa82d5172b270814eae44d976793a36a0b3ad2cfacc5366c"
+    },
+    "outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/EPOCH1_SNAPSHOT.pt": {
+      "keep": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/training/structurally_pretrained/cutoff_2020/seed_20260921/BEST.pt",
+      "sha256": "e170fde45439d7014d2db106cf28e18f6a990b52e01370f507551ff35de6a0c9"
+    }
+  },
+  "open_selected_fds": [],
+  "inaccessible_proc_fd_directories": [],
+  "offline_archive_sha256": "087fb6dd5bcca95693e3cd952494934f66060268401da05f2364df2b4651f19e",
+  "bindingdb_archive_sha256": "8dc30541d668e5e403ba1fe9a682b76c42a50e1711aac44329c62ba24ccd57db"
+}

@@ -1,0 +1,43 @@
+{
+  "status": "STRUCTURAL_PRETRAINING_COMPLETE",
+  "epoch": 6,
+  "updates": 3714,
+  "train_complexes": 9903,
+  "validation_complexes": 1223,
+  "best_macro_contact_ap": 0.5664865752614067,
+  "identity": {
+    "protocol": {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_structural_pretraining_20260906.json",
+      "sha256": "a68c6be525b34605336ef275100615d8fea334ff7c68ab6a8140da86a804b00f",
+      "size_bytes": 1104
+    },
+    "data": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/MANIFEST.json",
+      "sha256": "521906f711acb9269cb2e4139bc9f751e26db0df594eeb846111ab636728ea3a",
+      "size_bytes": 5335515
+    },
+    "model_config": {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_pocket_precision_20260906.json",
+      "sha256": "25469f751967a073424bb945e58d69fa6118a3c1f4078a1de6e0faca23380543",
+      "size_bytes": 2127
+    },
+    "sources": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+        "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+        "size_bytes": 12551
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/structural_training.py",
+        "sha256": "9ba81818dffbb65e84f383afaa780f0ded8d505786d23f7bb71e8ee1306c3c9a",
+        "size_bytes": 4685
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/pretrain_biomaster_structural_interaction.py",
+        "sha256": "8cb13e7531da449522fccff1780c8db4fcc2053b1298fa72310489b2065bf798",
+        "size_bytes": 11338
+      }
+    ]
+  },
+  "downstream_dti_ranking_measured": false
+}

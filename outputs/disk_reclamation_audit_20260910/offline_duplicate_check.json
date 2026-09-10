@@ -1,0 +1,11 @@
+{
+  "zip": "outputs/offline_release_20260909/BioMaster_Offline_Windows_x64_20260909.zip",
+  "unpacked": "outputs/offline_release_20260909/BioMaster_Offline_Windows_x64",
+  "entries": 6985,
+  "crc_matches": 6985,
+  "mismatches": [],
+  "unarchived_files": [
+    "outputs/offline_release_20260909/BioMaster_Offline_Windows_x64/runtime/Lib/site-packages/numpy/distutils/__pycache__/conv_template.cpython-311.pyc"
+  ],
+  "archive_crc_test_error": null
+}

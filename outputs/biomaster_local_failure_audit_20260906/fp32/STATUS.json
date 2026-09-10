@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "runs": 18,
+  "protocol": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_local_failure_audit_20260906/fp32/PROTOCOL.json",
+    "sha256": "5a587dcdc32838c713e2c0be6019172a636b103ab4a5b55b7cfb639edf87104b",
+    "size_bytes": 807
+  }
+}

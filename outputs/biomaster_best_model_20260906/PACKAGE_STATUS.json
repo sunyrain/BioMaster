@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-06T09:33:37.680774+00:00",
+  "delivered": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/DELIVERED_MODEL.json",
+    "sha256": "4df97b4d733ebd55d7417b99e68d285951809508beb76ee0b55d9a2cc5f2bc12",
+    "size_bytes": 2135
+  }
+}

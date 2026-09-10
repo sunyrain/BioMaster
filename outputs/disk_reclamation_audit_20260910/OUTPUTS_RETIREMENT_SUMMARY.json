@@ -1,0 +1,30 @@
+{
+  "status": "AUDIT_ONLY_NO_DELETION",
+  "additional_groups_GiB": {
+    "C1_OLD_TRIAL_CHECKPOINTS": 4.16900634765625,
+    "C2_ENGINEERING_CHECKPOINTS": 1.7352447509765625,
+    "C3_STOPPED_STRUCTURE_DERIVED_FEATURES": 8.864147186279297,
+    "C4_EXACT_DUPLICATES_KEEP_PATHS": 0.8707046508789062
+  },
+  "additional_total_GiB": 15.639102935791016,
+  "expanded_union_GiB": 113.71065139770508,
+  "recommended_without_DTIAM_fold_deletion_GiB": 94.66622924804688,
+  "recommended_without_DTIAM_fold_deletion_GB": 101.647089664,
+  "selected_open_fds": [],
+  "inaccessible_proc_fd_directories": 0,
+  "already_shared_duplicate_pairs": [
+    {
+      "keep": "outputs/biomaster_odti_local_graph_features_v1/LIGAND_ATOM_FEATURES_FLOAT16_V1.npy",
+      "alias": "outputs/biomaster_odti_experimental_template_graph_features_v1/LIGAND_ATOM_FEATURES_FLOAT16_V1.npy",
+      "reason": "ALREADY_HARDLINKED_ZERO_RECLAIM"
+    }
+  ],
+  "live_entrypoint_static_references": [],
+  "caveats": [
+    "Static references do not cover every dynamically constructed path.",
+    "The plan preserves structures, labels, splits, source weights, formal checkpoint snapshots and result tables.",
+    "Retiring derived structural features prevents immediate resumption of the stopped structural/context training branches.",
+    "Original and additional candidate lists are disjoint; duplicate groups overlapping old trial weights are not double-counted.",
+    "Deduplication requires keeping both paths usable and rechecking hashes immediately before any later mutation."
+  ]
+}

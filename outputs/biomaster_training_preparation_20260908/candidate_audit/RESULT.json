@@ -1,0 +1,94 @@
+{
+  "status": "AUDITED_PROSPECTIVE_CANDIDATES_NOT_MEASURED",
+  "utc": "2026-09-08T02:59:53.334390+00:00",
+  "checks": {
+    "rows_512": true,
+    "candidates_480": true,
+    "controls_32": true,
+    "unique_pairs": true,
+    "targets_32": true,
+    "candidates_per_target_15": true,
+    "per_target_roles_correct": true,
+    "declared_rank_intervals": true,
+    "candidate_drugs_120": true,
+    "drug_degrees_2_to_6": true,
+    "no_duplicate_connectivity": true,
+    "no_exact_candidate_in_historical_fullfit": true
+  },
+  "all_design_checks_pass": true,
+  "candidate_counts": {
+    "OUR_FROZEN_MODEL_HIGH": 320,
+    "OUR_FROZEN_MODEL_INTERMEDIATE": 96,
+    "OUR_FROZEN_MODEL_LOW_BACKGROUND": 64
+  },
+  "candidate_drugs": 120,
+  "targets": 32,
+  "controls": 32,
+  "core_high_pairs": 200,
+  "extension_high_pairs": 120,
+  "rule_flagged_drugs": 7,
+  "rule_flagged_pairs": 15,
+  "control_evidence": {
+    "includes_Kd": 14,
+    "Ki_without_Kd": 15,
+    "IC50_only": 3
+  },
+  "ic50_only_controls": [
+    {
+      "gene_symbol": "AKR1B1",
+      "positive_control_drug": "Zopolrestat"
+    },
+    {
+      "gene_symbol": "TPH1",
+      "positive_control_drug": "Telotristat"
+    },
+    {
+      "gene_symbol": "NT5E",
+      "positive_control_drug": "Quemliclustat"
+    }
+  ],
+  "historical_training_exact_overlap": 0,
+  "inherited_external_snapshot_exclusions": {
+    "bindingdb_evidence_rows": 6,
+    "bindingdb_exact_pairs_excluded": 6,
+    "gtopdb_evidence_rows": 7,
+    "gtopdb_exact_pairs_excluded": 6
+  },
+  "external_novelty_researched_again": false,
+  "structure_mask_counts": {
+    "1.0": 390,
+    "0.0": 90
+  },
+  "risk_scale": "Original heuristic only; zero does not establish solubility, specificity or SPR validity.",
+  "known_measured_outcomes_in_frozen_package": false,
+  "empirical_hit_rate": null,
+  "selection_changed": false,
+  "evidence_limit": "S5 observed-pair AP is not the prospective SPR hit rate. 384 and 367 rankings are separate protocols.",
+  "inputs": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/retargetmap_spr512_ours_frozen_20260904/RETARGETMAP_SPR512_OURS_FROZEN_INTERNAL_MASTER_V2.csv",
+      "sha256": "e85f111b3748488e757d7df6abce4be0a24d3538e535a6c6b20f982f12b15348",
+      "size_bytes": 551632
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/retargetmap_spr512_ours_frozen_20260904/RETARGETMAP_SPR512_OURS_FROZEN_TARGET_ROSTER_V2.csv",
+      "sha256": "b9b24793ec8d4d68f3c2a308598ecd98e8f7ad1ca8cab0b41b44c09884d6235c",
+      "size_bytes": 62691
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/retargetmap_spr512_ours_frozen_20260904/RETARGETMAP_SPR512_OURS_FROZEN_SUMMARY_V2.json",
+      "sha256": "b9a1dcbd1c724a9ef4c22747de9c4ee4cc8f511f879275851613b3517552b78d",
+      "size_bytes": 4336
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/retrain_20260901/comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+      "sha256": "dabda92e4d18bd76a9c10322d394eb19d5aeecc8988c6ae2733ef1543faa25b1",
+      "size_bytes": 29463300
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_spr_candidates_20260908.py",
+      "sha256": "746e5003f8b7a95c7b6773be2923473c681f3139dbdefc15e666d16df205a6d5",
+      "size_bytes": 6886
+    }
+  ]
+}

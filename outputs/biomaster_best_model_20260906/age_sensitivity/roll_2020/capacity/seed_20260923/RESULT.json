@@ -1,0 +1,51 @@
+{
+  "cutoff": 2020,
+  "variant": "capacity",
+  "seed": 20260923,
+  "identity": {
+    "checkpoint": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260923/BEST.pt",
+      "sha256": "84b5704c9c17e31ee2595c7705111871e54fa0d84a18277687fceb870f03a121",
+      "size_bytes": 10859077
+    },
+    "protocol": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/EARLY_AGE_PROTOCOL.json",
+      "sha256": "6a8b8d01e52ccb7d70bca59e1a5ff210ae4f0a98339f0f0ce171728bb33da3b8",
+      "size_bytes": 876
+    }
+  },
+  "metrics": {
+    "d2t": {
+      "all_queries": 25,
+      "positive_queries": 25,
+      "positive_pairs": 36,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.288598377897897,
+      "macro_mrr": 0.30064711316794296,
+      "macro_recall_5": 0.4133333333333333,
+      "macro_recall_10": 0.5133333333333333,
+      "macro_recall_20": 0.6066666666666667,
+      "macro_ndcg_20": 0.36473095045969783,
+      "min_candidates": 291.0,
+      "median_candidates": 380.0,
+      "max_candidates": 384.0
+    },
+    "t2d": {
+      "all_queries": 30,
+      "positive_queries": 30,
+      "positive_pairs": 36,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.3208860233794371,
+      "macro_mrr": 0.3446229586391009,
+      "macro_recall_5": 0.4,
+      "macro_recall_10": 0.45,
+      "macro_recall_20": 0.5333333333333333,
+      "macro_ndcg_20": 0.3704964866216583,
+      "min_candidates": 509.0,
+      "median_candidates": 548.5,
+      "max_candidates": 560.0
+    }
+  },
+  "approved_candidate_drugs": 560,
+  "architecture_selection_use": false
+}

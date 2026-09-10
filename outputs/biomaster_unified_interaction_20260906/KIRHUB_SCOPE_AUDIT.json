@@ -1,0 +1,22 @@
+{
+  "source": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/old_drug_innovation_v7/OLD_DRUG_KIRHUB_PAIR_BENCHMARK_V7.csv",
+    "sha256": "8295ac18c4b8a3e6048c2079f643909fa9ae1ddea0f26b8c847a0025e25fde86",
+    "size_bytes": 2237728
+  },
+  "scopes": {
+    "kirhub_historical_strict_2823": {
+      "rows": 2823,
+      "positives": 202,
+      "previously_measured_through2022": 0
+    },
+    "kirhub_single_construct_unseen_through2022": {
+      "rows": 3914,
+      "positives": 322,
+      "previously_measured_through2022": 0
+    }
+  },
+  "threshold": "residual activity <=30 percent at 1uM",
+  "all_new_models_and_V3_J_NN_downstream_cutoff": 2022,
+  "role": "previously inspected retrospective regression, not new confirmation"
+}

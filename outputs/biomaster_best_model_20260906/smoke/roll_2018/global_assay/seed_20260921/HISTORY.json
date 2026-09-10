@@ -1,0 +1,20 @@
+[
+  {
+    "epoch": 1,
+    "validation": null,
+    "selected_epoch": 1,
+    "learning_rate": 0.0003,
+    "mean_losses": {
+      "bce": 0.6765161275863647,
+      "retrieval": 4.1436232924461365,
+      "query": 0.7010320127010345,
+      "assay": 0.7023038119077682
+    },
+    "gradient_norm": 1.826913595199585,
+    "exposure_sha256": "862b4d3a74b1eb6bd49c576e09e606e45a226826c485f151bae8e913722fb397",
+    "query_exposure_sha256": "d5a5c6f9b67e0a0cda1ff8b6846764fb8fffa284255dff9304976d9ed62a68d8",
+    "assay_exposure_sha256": "fa524b1898966d5b5bbae8b2b1c6647c64200c8bdd2dcc869f951d7baa6801bd",
+    "coverage_rows": 1280,
+    "epoch_seconds": 0.5491144796833396
+  }
+]

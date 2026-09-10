@@ -1,0 +1,130 @@
+{
+  "comparisons": [
+    {
+      "cutoff": 2018,
+      "seed": 20260921,
+      "variant": "capacity",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260921,
+      "variant": "site",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260921,
+      "variant": "geometry",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260922,
+      "variant": "capacity",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260922,
+      "variant": "site",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260922,
+      "variant": "geometry",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260923,
+      "variant": "capacity",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260923,
+      "variant": "site",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2018,
+      "seed": 20260923,
+      "variant": "geometry",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260921,
+      "variant": "capacity",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260921,
+      "variant": "site",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260921,
+      "variant": "geometry",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260922,
+      "variant": "capacity",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260922,
+      "variant": "site",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260922,
+      "variant": "geometry",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260923,
+      "variant": "capacity",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260923,
+      "variant": "site",
+      "epochs": 4,
+      "all_exposures_identical": true
+    },
+    {
+      "cutoff": 2020,
+      "seed": 20260923,
+      "variant": "geometry",
+      "epochs": 4,
+      "all_exposures_identical": true
+    }
+  ]
+}

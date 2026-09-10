@@ -1,0 +1,38 @@
+{
+  "d2t": {
+    "query": 26,
+    "metrics": {
+      "all_queries": 1,
+      "positive_queries": 1,
+      "positive_pairs": 2,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 1.0,
+      "macro_mrr": 1.0,
+      "macro_recall_5": 1.0,
+      "macro_recall_10": 1.0,
+      "macro_recall_20": 1.0,
+      "macro_ndcg_20": 1.0,
+      "min_candidates": 384.0,
+      "median_candidates": 384.0,
+      "max_candidates": 384.0
+    }
+  },
+  "t2d": {
+    "query": 25,
+    "metrics": {
+      "all_queries": 1,
+      "positive_queries": 1,
+      "positive_pairs": 3,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.3793825222396651,
+      "macro_mrr": 1.0,
+      "macro_recall_5": 0.3333333333333333,
+      "macro_recall_10": 0.3333333333333333,
+      "macro_recall_20": 0.3333333333333333,
+      "macro_ndcg_20": 0.46927872602275644,
+      "min_candidates": 707.0,
+      "median_candidates": 707.0,
+      "max_candidates": 707.0
+    }
+  }
+}

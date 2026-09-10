@@ -1,0 +1,38 @@
+[
+  {
+    "epoch": 1,
+    "metrics": {
+      "d2t": {
+        "all_queries": 34,
+        "positive_queries": 34,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.4787038220831325,
+        "macro_mrr": 0.5103344944512421,
+        "macro_recall_5": 0.5318627450980392,
+        "macro_recall_10": 0.571078431372549,
+        "macro_recall_20": 0.6627450980392157,
+        "macro_ndcg_20": 0.5277645288980406,
+        "min_candidates": 291.0,
+        "median_candidates": 381.0,
+        "max_candidates": 384.0
+      },
+      "t2d": {
+        "all_queries": 39,
+        "positive_queries": 39,
+        "positive_pairs": 53,
+        "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+        "macro_ap": 0.21029172492715192,
+        "macro_mrr": 0.27138583043130554,
+        "macro_recall_5": 0.21367521367521364,
+        "macro_recall_10": 0.34188034188034183,
+        "macro_recall_20": 0.6324786324786325,
+        "macro_ndcg_20": 0.3104972514896457,
+        "min_candidates": 657.0,
+        "median_candidates": 708.0,
+        "max_candidates": 720.0
+      }
+    },
+    "composite": 0.43543200103127677
+  }
+]

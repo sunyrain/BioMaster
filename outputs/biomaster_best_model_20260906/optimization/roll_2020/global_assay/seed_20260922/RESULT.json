@@ -1,0 +1,144 @@
+{
+  "cutoff": 2020,
+  "variant": "global_assay",
+  "refinement": null,
+  "seed": 20260922,
+  "identity": {
+    "original": {
+      "config": {
+        "path": "/root/autodl-tmp/BioMaster/configs/biomaster_unified_interaction_20260906.json",
+        "sha256": "01390142149cb14bf46da32f14ef54bbdffc1d82d7deadcf094b23112b15b8c9",
+        "size_bytes": 1613
+      },
+      "sources": [
+        {
+          "path": "/root/autodl-tmp/BioMaster/biomaster/unified_interaction.py",
+          "sha256": "92acb4ad6971900f3d21eee7d11af1e21449052ec1c7e047322dbbba6d614dd4",
+          "size_bytes": 9753
+        },
+        {
+          "path": "/root/autodl-tmp/BioMaster/biomaster/unified_features.py",
+          "sha256": "3def49b80c390f35343f5bcfa1fa913b4083e3adfb5da8f84bc8f70d8100ceed",
+          "size_bytes": 3681
+        },
+        {
+          "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_unified_interaction.py",
+          "sha256": "a6156f43bd1225b12b3375c83a60079364b2f4570390f665b8ff15fca3d66c4a",
+          "size_bytes": 15768
+        },
+        {
+          "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_unified_interaction.py",
+          "sha256": "1eb76a08fffcc7a1fee85c23497f7e91a0a385253b7cbbc3309ae82e4c609f6c",
+          "size_bytes": 21524
+        },
+        {
+          "path": "/root/autodl-tmp/BioMaster/biomaster/ranking_audit.py",
+          "sha256": "007db4793f3cb5684f6dd46ecb41b61c1d2cba9dc6dd29972df95e93ba75a225",
+          "size_bytes": 5414
+        },
+        {
+          "path": "/root/autodl-tmp/BioMaster/biomaster/odti_local_features_v3.py",
+          "sha256": "46828e50f239c54f3ae7bfd0e7f488836b44776f60d61bba5794b651e5038942",
+          "size_bytes": 19930
+        },
+        {
+          "path": "/root/autodl-tmp/BioMaster/biomaster/odti_pockets_v3.py",
+          "sha256": "40e062c670b7fad51ecbb995163c91f008b144bde416e8a7abf9d65e3353630e",
+          "size_bytes": 10234
+        }
+      ],
+      "atoms": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_MANIFEST.json",
+        "sha256": "d7315cec995b6186c3705e2828dc3cce888a8f39bc052150dc9b265985e050bd",
+        "size_bytes": 3503
+      },
+      "targets": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/TARGET_MANIFEST.json",
+        "sha256": "6bbc6ee51aa9326e226ad1facabd687bb35b0bfe0ebfd0648098f8a17f43a580",
+        "size_bytes": 4502
+      },
+      "temporal_data": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/DATA_MANIFEST.json",
+        "sha256": "a6bf76fc6e924078969b605075025c6bf26bf3363423c6628e205b2e4a0f89a7",
+        "size_bytes": 9939
+      }
+    },
+    "protocol": {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_best_model_optimization_20260906.json",
+      "sha256": "60dcae71ea4ee6051a712bc6ff8b6de3294a73ccad94788eca726e469f7a6959",
+      "size_bytes": 1668
+    },
+    "cutoff": 2020,
+    "sources": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/best_model_training.py",
+        "sha256": "9777da87b5bb1385ddae729b75c73b7dac473e228306d1b59d12fcb80225789c",
+        "size_bytes": 8659
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/refined_interaction.py",
+        "sha256": "c8ca1942ea3b8d534ef86141aade700ab13a1748a642b3552b216f4cd4ca966d",
+        "size_bytes": 4168
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_best_model.py",
+        "sha256": "d7091bb9541a70761046f8167f4ea3aa74e100b548ae84e4ef9fcfa2077c4865",
+        "size_bytes": 12495
+      }
+    ],
+    "data": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ROLL_MANIFEST.json",
+        "sha256": "f58b31c3d7848c202480bcee1670a09460f17c07067c36e65e91aa9409b0b459",
+        "size_bytes": 3514
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_MANIFEST.json",
+        "sha256": "550250d656cf3cb4bf1fd0d93ed104a064ac267dcdca29834c416039d2bdbb34",
+        "size_bytes": 3172
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/supplemental_features/ATOM_MANIFEST.json",
+        "sha256": "5466fd2b8c42e4ed8a85c93e0d14b5b884ec7348ab1a75e634664560325431df",
+        "size_bytes": 3559
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/supplemental_features/SUPPLEMENT_PROVENANCE.json",
+        "sha256": "eae79763d42c0adaf77e06a510e3323e5f9ea0d3fa37e31e51c4e9998f2412d3",
+        "size_bytes": 986
+      }
+    ],
+    "parent": null
+  },
+  "selected_epoch": 7,
+  "trained_epochs": 11,
+  "validation": {
+    "d2t": {
+      "ap": 0.35401848202963,
+      "r20": 0.6950980392156862,
+      "queries": 34,
+      "positive_pairs": 53,
+      "measured_ap": 0.8468457066953602
+    },
+    "t2d": {
+      "ap": 0.3250934845519964,
+      "r20": 0.6837606837606837,
+      "queries": 39,
+      "positive_pairs": 53,
+      "measured_ap": 0.7549673069337363
+    },
+    "selection": 0.4445179967500247
+  },
+  "train_rows": 292408,
+  "train_max_year": 2020,
+  "trainable_parameters": 838292,
+  "seconds": 148.97655574977398,
+  "test_labels_used": false,
+  "smoke_only": false,
+  "ema_checkpoint": true,
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_assay/seed_20260922/BEST.pt",
+    "sha256": "e6c818a79f95ba67f700a705829a57e6292fe8782eac91f7f56c1c889239c05d",
+    "size_bytes": 3366249
+  }
+}

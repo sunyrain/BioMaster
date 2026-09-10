@@ -1,0 +1,2170 @@
+[
+  {
+    "candidate_id": "C384-001",
+    "pair_id": "CSKDFZIMJXRJGH-VWLPUNTISA-N__CHEMBL1871",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "tecovirimat–AR可直接探索；尚无本轮新增AR实测不是排除理由，乳癌方向需在结合后区分。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认AR配体结合域对照后做可重复结合和竞争；阳性再做激动/拮抗功能区分。"
+  },
+  {
+    "candidate_id": "C384-002",
+    "pair_id": "XFALPSLJIHVRKE-GFCCVEGCSA-N__CHEMBL4898",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "tedizolid–NTRK2先查20µM旧panel是否覆盖TrkB，不能把未明确靶点的广谱阴性当本对阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "优先查论文补充panel靶点及构建；若包含匹配TrkB且高浓度阴性则后置，否则以成熟激酶域对照后侦察。"
+  },
+  {
+    "candidate_id": "C384-003",
+    "pair_id": "LCQLHJZYVOQKHU-VKHMYHEASA-N__CHEMBL4393",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "carglumic acid–MMP12不能借用疏水取代伪二肽效力，但母药酶学与结合探索仍可开展。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认成熟含锌MMP12与参照响应；结合和正交酶活一致后继续，不把其他伪二肽效力移植给本药。"
+  },
+  {
+    "candidate_id": "C384-004",
+    "pair_id": "QNZCBYKSOIHPEH-UHFFFAOYSA-N__CHEMBL1974",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "apixaban–FLT3缺直接记录且近邻不占优，仅降低把握；不是FXa药就不能结合FLT3。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先以FLT3激酶域和匹配对照验证结合，阳性再测酶活；细胞抗炎现象需排除原抗凝通路解释。"
+  },
+  {
+    "candidate_id": "C384-005",
+    "pair_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N__CHEMBL1957",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "ranolazine–IGF1R先明确胞外域还是激酶域，否则结合结果不能回答同一个预测问题。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "明确使用激酶域还是胞外域；仅在匹配构建对照通过后测结合并补酶活。"
+  },
+  {
+    "candidate_id": "C384-006",
+    "pair_id": "AYXYPKUFHZROOJ-ZETCQYMHSA-N__CHEMBL1944",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "pregabalin–MME缺直接证据且分子小，属于需适当信号控制的探索，不构成不能测。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先测可溶MME对照及正交酶活；直接结合和酶抑制一致才升级。"
+  },
+  {
+    "candidate_id": "C384-007",
+    "pair_id": "BPQMGSKTAYIVFO-UHFFFAOYSA-N__CHEMBL2815",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "NOVELTY_ONLY"
+    ],
+    "reason_detail": "vismodegib–NTRK1同属肿瘤削弱跨领域新颖性，不削弱研究新靶点结合的资格。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核对TrkA催化域及参照；控制非特异响应，阳性后证明激酶功能效应。"
+  },
+  {
+    "candidate_id": "C384-008",
+    "pair_id": "WGFOBBZOWHGYQH-MXHNKVEKSA-N__CHEMBL1871",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "lubiprostone–AR的母药系统暴露影响再利用解释，不妨碍纯母药结合探索；毛囊用途另证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "如做，仅先验证纯母药AR结合；证据阳性后另审局部给药与激动/拮抗，不能直接按系统再利用推进。"
+  },
+  {
+    "candidate_id": "C384-009",
+    "pair_id": "STUWGJZDJHPWGZ-LBPRGKRZSA-N__CHEMBL284",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "alpelisib–DPP4不能用其他激酶药对接或PI3K通路代证，仍可在成熟酶体系探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "使用活性DPP4胞外域及参照，同时测酶活；若只见细胞通路变化不升级直接结合结论。"
+  },
+  {
+    "candidate_id": "C384-010",
+    "pair_id": "XEDHVZKDSYZQBF-UHFFFAOYSA-N__CHEMBL1974",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "lasmiditan–FLT3主要是没有直接线索及化学支持有限，不能因此判定无结合可能。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若已有FLT3体系可留一次侦察；否则先补直接药理线索再单独投入蛋白。"
+  },
+  {
+    "candidate_id": "C384-011",
+    "pair_id": "MQOBSOSZFYZQOK-UHFFFAOYSA-N__CHEMBL1978",
+    "action_class": "EVIDENCE_DEPRIORITIZE",
+    "reason_tags": [
+      "DISEASE_DIRECTION",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "choline fenofibrate–CYP19A1有PPARα依赖表达下降并伴骨密度下降的动物线索，降低骨质疏松投资理由；不证明酸实体直接不结合。",
+    "can_test": "并非绝对不能结合；已有证据降低首批投入理由，需提出独立假设或解决反向线索。",
+    "critical_condition": "先核实际药物结构与CYP19A1构建，若研究直接抑制则明确属于机制探索，不以治疗骨质疏松为理由放行。"
+  },
+  {
+    "candidate_id": "C384-012",
+    "pair_id": "WCWSTNLSLKSJPK-LKFCYVNXSA-N__CHEMBL235",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "cabotegravir–PPARG可探新受体作用；眼病意义须由激动或拮抗功能补齐，缺方向不等于结合不能测。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认纯cabotegravir实体及PPARG配体域；结合阳性后做共调节因子或报告基因，不直接推进眼病应用。"
+  },
+  {
+    "candidate_id": "C384-013",
+    "pair_id": "VGYFMXBACGZSIL-MCBHFWOFSA-N__CHEMBL4393",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "pitavastatin–MMP12不能挪用Mcl-1的SPR，移除误支持后仍是可测未知配对。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "验证MMP12催化域结合和酶活，区别HMGCR介导的间接表达变化。"
+  },
+  {
+    "candidate_id": "C384-014",
+    "pair_id": "XEDHVZKDSYZQBF-UHFFFAOYSA-N__CHEMBL4898",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "lasmiditan–NTRK2没有直接文献不是反证，可在现有TrkB体系探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有TrkB体系时可少量侦察，否则先取得独立作用线索；阳性必须再区分受体激活与抑制。"
+  },
+  {
+    "candidate_id": "C384-015",
+    "pair_id": "KBOPZPXVLCULAV-UHFFFAOYSA-N__CHEMBL1929",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "mesalamine–XDH先区分5-ASA与olsalazine并核XO/XDH状态；当前阳性线索药物实体不同。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "按精确结构查5-ASA原始XO测量，明确XDH/XO状态和物种；先酶活再用匹配人蛋白确认结合。"
+  },
+  {
+    "candidate_id": "C384-016",
+    "pair_id": "ZBMZVLHSJCTVON-UHFFFAOYSA-N__CHEMBL5141",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "sotalol–CYP26A1的实际血红素构建及参照待核，优先解决可解释体系而不是因无文献删除。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先查42化合物筛查是否有本药及有效浓度；若无额外支持，只在CYP26A1对照已测通时追加。"
+  },
+  {
+    "candidate_id": "C384-017",
+    "pair_id": "XPIJWUTXQAGSLK-UHFFFAOYSA-N__CHEMBL3553",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "ozenoxacin–TYK2需对齐催化域与假激酶域；外用用途不排除体外结合。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核TYK2预测位点与蛋白域，已有匹配体系才侦察；直接作用阳性后另查给药暴露。"
+  },
+  {
+    "candidate_id": "C384-018",
+    "pair_id": "VCKUSRYTPJJLNI-UHFFFAOYSA-N__CHEMBL4005",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "terazosin–PIK3CA的tersolisib同名近似命中应丢弃，但尚未发现母药反证，可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认terazosin精确结构及PI3Kα催化/调节构建；阳性后补脂质激酶活性，另界定疾病意义。"
+  },
+  {
+    "candidate_id": "C384-019",
+    "pair_id": "NBRBXGKOEOGLOI-UHFFFAOYSA-N__CHEMBL1871",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "dasabuvir–AR泛癌症假设不成熟，但纯受体新机制测试仍有探索资格。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若AR体系已有则候补；先验证结合，再确定AR/ER状态及功能方向，不能挪用NS5B活性。"
+  },
+  {
+    "candidate_id": "C384-020",
+    "pair_id": "GCKFUYQCUCGESZ-BPIQYHPVSA-N__CHEMBL1978",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "DISEASE_DIRECTION",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "etonogestrel–CYP19A1先区分底物代谢与抑制，并明确骨质疏松是否需要该方向，避免阳性被错误解释。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对含血红素构建并区分底物代谢与抑制；先取得直接酶证据，再决定疾病方向。"
+  },
+  {
+    "candidate_id": "C384-021",
+    "pair_id": "XFALPSLJIHVRKE-GFCCVEGCSA-N__CHEMBL4409",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "tedizolid–PDE10A需核既有20µM panel覆盖，当前无法据其判阴性或新关系。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先查panel；未覆盖时可用成熟PDE10A酶活候补，再确认SPR。"
+  },
+  {
+    "candidate_id": "C384-022",
+    "pair_id": "XFALPSLJIHVRKE-GFCCVEGCSA-N__CHEMBL5608",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "tedizolid–NTRK3先查旧panel与TrkB/TrkC覆盖，同药多个Trk预测不能累加为独立支持。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核旧panel，若TrkB确有信号再考虑TrkC交叉验证。"
+  },
+  {
+    "candidate_id": "C384-023",
+    "pair_id": "ZISJNXNHJRQYJO-CMDGGOBGSA-N__CHEMBL206",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "tapinarof–ESR1需以直接受体测试区分AHR间接调节；缺已知ER亲和正是可探索问题。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先验证ER-LBD结合及竞争，再区分激动拮抗；同时控制AHR解释。"
+  },
+  {
+    "candidate_id": "C384-024",
+    "pair_id": "YALNUENQHAQXEA-UHFFFAOYSA-N__CHEMBL1868",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "givinostat–FLT1的HDAC表达效应不是直接结合证据，但没有具体反向活性阻止探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认FLT1使用域并用匹配参照；结合阳性再做激酶/受体功能。"
+  },
+  {
+    "candidate_id": "C384-025",
+    "pair_id": "XRVDGNKRPOAQTN-FQEVSTJZSA-N__CHEMBL2971",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "ozanimod–JAK2的S1P/JAK并列资料不算支持；可作为未知直接作用检验。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先测纯母药JAK2作用，不能将S1P免疫细胞效应当激酶抑制。"
+  },
+  {
+    "candidate_id": "C384-026",
+    "pair_id": "JJVAPHYEOZSKJZ-JGCGQSQUSA-N__CHEMBL1981",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "zavegepant–INSR先明确胞外或激酶域，较大分子量本身不等于不可结合。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "明确INSR胞外/激酶域；有成熟对照体系才追加，功能方向单独判定。"
+  },
+  {
+    "candidate_id": "C384-027",
+    "pair_id": "WCWSTNLSLKSJPK-LKFCYVNXSA-N__CHEMBL1935",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "cabotegravir–ALDH2目前只有证据缺口；成熟辅因子酶体系可低成本探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核对ALDH2辅因子和酶活，结合与功能一致才考虑升级。"
+  },
+  {
+    "candidate_id": "C384-028",
+    "pair_id": "UIAGMCDKSXEBJQ-UHFFFAOYSA-N__CHEMBL3991",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "nimodipine–F7病例共现非结合；必须先明确活性F7a还是酶原，避免测量对象错位。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先明确F7a而非酶原体系，对照未通过不投入候选。"
+  },
+  {
+    "candidate_id": "C384-029",
+    "pair_id": "QTGIAADRBBLJGA-UHFFFAOYSA-N__CHEMBL1929",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "articaine–XDH的ROS下降可能为清除效应，先换不依赖ROS的尿酸生成读出解决机制歧义。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "补尿酸生成等不依赖ROS读出的酶活，再验证匹配人XDH/XO结合。"
+  },
+  {
+    "candidate_id": "C384-030",
+    "pair_id": "UPNUIXSCZBYVBB-JVFUWBCBSA-N__CHEMBL5705",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "alvimopan–EGLN3要先确认所需辅因子及羟化酶活性；原机制差异不构成反对。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "只有含所需辅因子的EGLN3体系成熟时再侦察，并补羟化酶功能。"
+  },
+  {
+    "candidate_id": "C384-031",
+    "pair_id": "MOTJMGVDPWRKOC-QPVYNBJUSA-N__CHEMBL5705",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "atrasentan–EGLN3名单未提供端点，仅说明缺证据；已有有效体系时仍可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "查名单对应原始数据，未证成直接作用前不单独建体系。"
+  },
+  {
+    "candidate_id": "C384-032",
+    "pair_id": "WBGKWQHBNHJJPZ-LECWWXJVSA-N__CHEMBL1994",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "desonide–NR3C2不能用GR数据或局部用药推断MR肾病效应，MR交叉结合与方向仍值得测。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认MR-LBD与GR选择性，结合阳性后分别测激动拮抗；再论肾病方向。"
+  },
+  {
+    "candidate_id": "C384-033",
+    "pair_id": "AYXYPKUFHZROOJ-ZETCQYMHSA-N__CHEMBL1808",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "pregabalin–ACE联用信息和较近阴性邻居均非母药ACE阴性；可做酶学探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先查直接酶活；不因联用不良反应推定ACE作用。"
+  },
+  {
+    "candidate_id": "C384-034",
+    "pair_id": "PYGWGZALEOIKDF-UHFFFAOYSA-N__CHEMBL267",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "etravirine–SRC检索中SRC共激活因子与激酶混淆应去除，未显示真实SRC激酶反证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "按SRC UniProt/激酶名称重新核数据，匹配激酶域有直接响应再升级。"
+  },
+  {
+    "candidate_id": "C384-035",
+    "pair_id": "VTRAEEWXHOVJFV-UHFFFAOYSA-N__CHEMBL5705",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "olmesartan–EGLN3先核实际采购是否酸实体而非medoxomil前药，解决实体后仍可探索。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认采购酸实体及EGLN3辅因子体系，已有体系时才追加探索。"
+  },
+  {
+    "candidate_id": "C384-036",
+    "pair_id": "MOTJMGVDPWRKOC-QPVYNBJUSA-N__CHEMBL1824",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "atrasentan–ERBB2的较近阴性近邻需要核原端点浓度；不能把邻居阴性直接归给母药。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核近邻实验物种构建浓度，解释后才决定投入；若做需明确ERBB2激酶域。"
+  },
+  {
+    "candidate_id": "C384-037",
+    "pair_id": "VCKUSRYTPJJLNI-UHFFFAOYSA-N__CHEMBL5608",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "terazosin–NTRK3近邻弱和无直接记录仅表明不确定，不能证明TrkC不结合。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "优先核疾病具体机制；已有TrkC体系才少量侦察。"
+  },
+  {
+    "candidate_id": "C384-038",
+    "pair_id": "GGCSSNBKKAUURC-UHFFFAOYSA-N__CHEMBL2007",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "sufentanil–PDGFRA作为纯生化脱靶可探索；长期息肉治疗价值不能由麻醉用途或图谱直接推出。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若要保留只作生化脱靶研究，先证PDGFRA域结合及抑制再评疾病投入。"
+  },
+  {
+    "candidate_id": "C384-039",
+    "pair_id": "XRVDGNKRPOAQTN-FQEVSTJZSA-N__CHEMBL2189110",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "ozanimod–EZH2先落实PRC2/活性构建；原S1P机制不同不是不能测的理由。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核EZH2/PRC2活性构建及参照，已有成熟体系才候补。"
+  },
+  {
+    "candidate_id": "C384-040",
+    "pair_id": "IVBHGBMCVLDMKU-GXNBUGAJSA-N__CHEMBL261",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY"
+    ],
+    "reason_detail": "piperacillin–CA1有CA7毫摩尔弱效家族线索，不能外推CA1强效或阴性，适合受控探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先验证CA1活性与含锌构建；若仅高浓度弱响应且无酶活则后置。"
+  },
+  {
+    "candidate_id": "C384-041",
+    "pair_id": "WMDSZGFJQKSLLH-RBBKRZOGSA-N__CHEMBL5141",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "landiolol–CYP26A1先核溶液稳定性与血红素构建，确保实际测的是可用母药和活性体系。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核药物稳定性和血红素构建；对照可靠后才追加。"
+  },
+  {
+    "candidate_id": "C384-042",
+    "pair_id": "ANGKOCUUWGHLCE-HKUYNNGSSA-N__CHEMBL5141",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "glycopyrronium–CYP26A1应核盐形模型一致及P450参照，未检索到作用本身不排除。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核实际盐及模型结构，在CYP26A1已有有效参照时才侦察。"
+  },
+  {
+    "candidate_id": "C384-043",
+    "pair_id": "QZZUEBNBZAPZLX-QFIPXVFZSA-N__CHEMBL2835",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "indacaterol–JAK1联用专利并非直接依据；移除共现后仍是未知配对，可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "优先查原安全panel，匹配JAK1域直接结合/酶活阳性才升级。"
+  },
+  {
+    "candidate_id": "C384-044",
+    "pair_id": "KRNAOFGYEFKHPB-ANJVHQHFSA-N__CHEMBL2971",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "rimegepant–JAK2的JAK3下游变化不能跨亚型证明结合，暂无直接反证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核JAK2构建，先直接结合再功能；不移用其他JAK亚型细胞结论。"
+  },
+  {
+    "candidate_id": "C384-045",
+    "pair_id": "BPZSYCZIITTYBL-YJYMSZOUSA-N__CHEMBL4393",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "arformoterol–MMP12不能用COPD共现当抑酶证据，单一异构体配对仍可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有MMP12体系才候补，先核单一异构体及酶活而非支气管舒张效应。"
+  },
+  {
+    "candidate_id": "C384-046",
+    "pair_id": "JUZYLCPPVHEVSV-LJQANCHMSA-N__CHEMBL1824",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "elvitegravir–ERBB2缺实测仅是知识缺口；使用纯药而非复方是常规解释要求。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认纯elvitegravir而非复方及ERBB2激酶域，已有体系才补测。"
+  },
+  {
+    "candidate_id": "C384-047",
+    "pair_id": "ACRHBAYQBXXRTO-OAQYLSRUSA-N__CHEMBL4142",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "ivabradine–FGFR2没有直接证据与较弱近邻不代表不可能，已有体系可以侦察。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先找FGFR2直接证据，若已有蛋白则少量侦察并复核激酶功能。"
+  },
+  {
+    "candidate_id": "C384-048",
+    "pair_id": "DHSUYTOATWAVLW-WFVMDLQDSA-N__CHEMBL235",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "cilastatin–PPARG不能由复方抗感染或表格并列推直接作用，单体受体探索仍成立。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "精确单体核对后，仅在PPARG体系成熟时候补；功能方向与鼻窦炎价值另证。"
+  },
+  {
+    "candidate_id": "C384-049",
+    "pair_id": "AYXYPKUFHZROOJ-ZETCQYMHSA-N__CHEMBL3439",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "pregabalin–ENPEP无直接证据，可以探索；同药多条降压链不能当多次验证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若ENPEP已有活性体系可候补，先测氨肽酶活性，确认结合再升级。"
+  },
+  {
+    "candidate_id": "C384-050",
+    "pair_id": "GGCSSNBKKAUURC-UHFFFAOYSA-N__CHEMBL2821",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "sufentanil–F12先明确激活态F12a与实验问题；溃疡治疗方向要另证，不能由结合自动推出。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "明确F12a活性构建和参照；只作脱靶侦察，不作溃疡治疗依据。"
+  },
+  {
+    "candidate_id": "C384-051",
+    "pair_id": "RUOKEQAAGRXIBM-GFCCVEGCSA-N__CHEMBL2179",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "rasagiline–GBA1患者用药不证明酶作用，仍可测试激活/抑制/伴侣机制并区分变体。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先酶活区分抑制、激活或伴侣效应；阳性后核具体GBA1变体，不能直接外推Gaucher亚型。"
+  },
+  {
+    "candidate_id": "C384-052",
+    "pair_id": "BUGYDGFZZOZRHP-UHFFFAOYSA-N__CHEMBL1871",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "memantine–AR的NMDAR癌症研究不是AR证据，但弱近邻与缺文献不是硬反对。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "仅在AR成熟体系中低成本侦察，先证直接结合与功能方向。"
+  },
+  {
+    "candidate_id": "C384-053",
+    "pair_id": "DKNWSYNQZKUICI-UHFFFAOYSA-N__CHEMBL2179",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "amantadine–GBA1基因携带者服药并非作用证明；直接酶活探索可弥补该缺口。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先找直接酶效应，若做需区分野生型/变体及活性方向。"
+  },
+  {
+    "candidate_id": "C384-054",
+    "pair_id": "LEBVLXFERQHONN-UHFFFAOYSA-N__CHEMBL4393",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "bupivacaine–MMP12主要是直接关系未知，可以做结合及酶活探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有MMP12体系可候补，核药物异构体与非特异吸附，结合需酶活复核。"
+  },
+  {
+    "candidate_id": "C384-055",
+    "pair_id": "AYXYPKUFHZROOJ-ZETCQYMHSA-N__CHEMBL286",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "pregabalin–REN联用RAS药不能证明抑制肾素，也不证明无作用，适合酶活侦察。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有成熟活性肾素体系才候补，先低成本酶活。"
+  },
+  {
+    "candidate_id": "C384-056",
+    "pair_id": "QZZUEBNBZAPZLX-QFIPXVFZSA-N__CHEMBL3553",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "indacaterol–TYK2先核JH1/JH2域匹配，阴性近邻略高不能替代本药数据。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核催化域/假激酶域，避免以不匹配构建浪费测试。"
+  },
+  {
+    "candidate_id": "C384-057",
+    "pair_id": "LOUPRKONTZGTKE-LHHVKLHASA-N__CHEMBL5311",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "quinidine–ACVRL1表格其他药行不能归给本药，移除错配仍可探索新关系。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "按精确药物与ACVRL1标识核panel，有独立线索再投入激酶体系。"
+  },
+  {
+    "candidate_id": "C384-058",
+    "pair_id": "OYYDSUSKLWTMMQ-JKHIJQBDSA-N__CHEMBL5141",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "trospium–CYP26A1的功能参照及血红素构建待明确；排名或相似性网站不能替代该步骤。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先解决血红素构建和功能参照，不凭图谱排名8升级。"
+  },
+  {
+    "candidate_id": "C384-059",
+    "pair_id": "NDCUAPJVLWFHHB-UHNVWZDZSA-N__CHEMBL284",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "avibactam–DPP4不同共价药分类共现非证据，单体直接酶活仍可作为探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先用单体avibactam测DPP4酶活，勿用复方或共价机制泛化替代证据。"
+  },
+  {
+    "candidate_id": "C384-060",
+    "pair_id": "SGUAFYQXFOLMHL-UHFFFAOYSA-N__CHEMBL5705",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "labetalol–EGLN3表达数据库共现不能证结合，尚无母药硬反证；核常规立体实体后可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有活性EGLN3才候补，核模型立体化学与采购物一致。"
+  },
+  {
+    "candidate_id": "C384-061",
+    "pair_id": "OPXLLQIJSORQAM-UHFFFAOYSA-N__CHEMBL4142",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "mebendazole–FGFR2细胞信号可能由微管间接导致，直接酶学恰可检验新靶点假说。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先测激酶域结合和酶活；不能只用肿瘤细胞抑制认定靶点。"
+  },
+  {
+    "candidate_id": "C384-062",
+    "pair_id": "NQDJXKOVJZTUJA-UHFFFAOYSA-N__CHEMBL4282",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ADVERSE_ACTIVITY"
+    ],
+    "reason_detail": "nevirapine–AKT1有特定甲状腺癌细胞未抑制Akt磷酸化记录，只反对泛化细胞机制，不足以降低纯AKT1探索资格。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核细胞条件与直接酶活，若只做SPR须匹配AKT1激活状态。"
+  },
+  {
+    "candidate_id": "C384-063",
+    "pair_id": "NBRBXGKOEOGLOI-UHFFFAOYSA-N__CHEMBL4247",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "dasabuvir–ALK联用相互作用不能算ALK结合；暂无母药反证，属于可探索缺口。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先取得纯药直接作用线索，不能把联用限制当新靶点证据。"
+  },
+  {
+    "candidate_id": "C384-064",
+    "pair_id": "ZZUFCTLCJUWOSV-UHFFFAOYSA-N__CHEMBL3991",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "furosemide–F7先对齐F7a激活态与参照，临床共同出现不能代替该配对数据。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认F7a活性构建和对照；已有体系才低成本追加。"
+  },
+  {
+    "candidate_id": "C384-065",
+    "pair_id": "XZWYZXLIPXDOLR-UHFFFAOYSA-N__CHEMBL2971",
+    "action_class": "EVIDENCE_DEPRIORITIZE",
+    "reason_tags": [
+      "ADVERSE_ACTIVITY",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "metformin–JAK2已有直接数据库100µM剩余85±3%、250µM剩余73±5%活性，不支持强抑酶投入；仍不能据此否定非抑制性SPR结合。",
+    "can_test": "并非绝对不能结合；已有证据降低首批投入理由，需提出独立假设或解决反向线索。",
+    "critical_condition": "将本对后置；先核MRC构建与本次是否一致，若只追直接抑制且条件相近，避免重复投入。"
+  },
+  {
+    "candidate_id": "C384-066",
+    "pair_id": "ZIAOVIPSKUPPQW-UHFFFAOYSA-N__CHEMBL2034",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "doravirine–NR3C1药代相互作用不是GR结合，但当前没有直接反证，可测试受体作用。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有GR-LBD体系才候补，先证结合及功能，勿将激素联用信息当新靶点。"
+  },
+  {
+    "candidate_id": "C384-067",
+    "pair_id": "FNKQXYHWGSIFBK-RPDRRWSUSA-N__CHEMBL2527",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "sapropterin–CHEK2原辅因子机制不同与近邻弱只表示缺支持，不能拒绝新机制探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认样品状态与CHEK2活性构建，已有独立作用线索再投入。"
+  },
+  {
+    "candidate_id": "C384-068",
+    "pair_id": "GKCBAIGFKIBETG-UHFFFAOYSA-N__CHEMBL2821",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "tetracaine–F12需先保证F12a激活构建和可解释参照，非因为局麻用途就不能作用。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "F12a对照已测通才做脱靶候补，先排非特异响应。"
+  },
+  {
+    "candidate_id": "C384-069",
+    "pair_id": "XFALPSLJIHVRKE-GFCCVEGCSA-N__CHEMBL402",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "tedizolid–HMGCR应查原安全panel；rosuvastatin转运相互作用不能解释为HMGCR抑制。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先查旧安全panel与HMGCR酶活；不要将他汀联用研究作为直接支持。"
+  },
+  {
+    "candidate_id": "C384-070",
+    "pair_id": "WGFOBBZOWHGYQH-MXHNKVEKSA-N__CHEMBL1994",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "lubiprostone–NR3C2的GR肠道资料不可迁移到MR；可做母药受体探索，系统疾病用途另论。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若做需MR-LBD直接竞争和功能区分，另审局部母药到系统用途的暴露。"
+  },
+  {
+    "candidate_id": "C384-071",
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL5608",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "varenicline–NTRK3排名末端和无测量仅增加不确定，成熟体系仍可小规模探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先取得直接药理线索，已有TrkC体系才低成本探索。"
+  },
+  {
+    "candidate_id": "C384-072",
+    "pair_id": "LWQQLNNNIPYSNX-UROSTWAQSA-N__CHEMBL5705",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "calcipotriene–EGLN3需先核实际可溶浓度及活性羟化酶，计算logP不等于已证不溶。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先确认工作液和成熟羟化酶体系，有直接活性才升级。"
+  },
+  {
+    "candidate_id": "C384-073",
+    "pair_id": "JJVAPHYEOZSKJZ-JGCGQSQUSA-N__CHEMBL2695",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "zavegepant–PTK2缺证据且分子较大，并非结合不可能；用常规非特异控制可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有PTK2激酶体系才少量侦察，先控制非特异响应。"
+  },
+  {
+    "candidate_id": "C384-074",
+    "pair_id": "ZBMZVLHSJCTVON-UHFFFAOYSA-N__CHEMBL1994",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "sotalol–NR3C2可探索MR竞争和方向，不能把原心律药获益归给新受体机制。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "验证MR-LBD竞争及激动/拮抗，阳性后另核疾病方向。"
+  },
+  {
+    "candidate_id": "C384-075",
+    "pair_id": "LIOLIMKSCNQPLV-UHFFFAOYSA-N__CHEMBL2189110",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "capmatinib–EZH2联用文章并非双靶点证明，先确认PRC2活性构建再测母药。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认PRC2/催化构建和甲基转移酶活性，结合阳性后区分MET间接影响。"
+  },
+  {
+    "candidate_id": "C384-076",
+    "pair_id": "FVTWTVQXNAJTQP-UHFFFAOYSA-N__CHEMBL5705",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "umeclidinium–EGLN3先确认可溶工作液和羟化酶体系，近邻低本身不作排除。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核可溶工作液和活性羟化酶，已有体系才候补。"
+  },
+  {
+    "candidate_id": "C384-077",
+    "pair_id": "MVRHVFSOIWFBTE-INIZCTEOSA-N__CHEMBL3267",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "elexacaftor–PIK3CG的PI3Kγ联用增强并非母药作用，但纯母药新机制酶学可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核纯母药与PI3Kγ构建，再直接测脂质激酶活性；无额外支持不单独建体系。"
+  },
+  {
+    "candidate_id": "C384-078",
+    "pair_id": "AOMXMOCNKJTRQP-UHFFFAOYSA-N__CHEMBL1868",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "relugolix–FLT1表达变化不是亲和，暂无直接反证，可在匹配域开展探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有匹配FLT1构建才追加，结合与酶/受体功能需一致。"
+  },
+  {
+    "candidate_id": "C384-079",
+    "pair_id": "IFSDAJWBUCMOAH-HNNXBMFYSA-N__CHEMBL3310",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "idelalisib–HDAC11需核高相似近邻是否新增HDAC药效团，先解决计算支持来源；不能据衍生物判断母药阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "查本地最近邻是否加锌结合基团，确认后测纯母药HDAC11功能及结合。"
+  },
+  {
+    "candidate_id": "C384-080",
+    "pair_id": "HEFNNWSXXWATRW-UHFFFAOYSA-N__CHEMBL3729",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "NOVELTY_ONLY"
+    ],
+    "reason_detail": "ibuprofen–CA4偏头痛仍接近原镇痛领域，影响跨领域新颖性而非是否值得研究新靶点。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "用含锌CA4胞外域及参照，酶活与结合一致再升级；先核是否已有未收录文献。"
+  },
+  {
+    "candidate_id": "C384-081",
+    "pair_id": "SJVQHLPISAIATJ-ZDUSSCGKSA-N__CHEMBL3310",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "duvelisib–HDAC11先核近邻HDAC药效团和母药端点，衍生物证据不可迁移但也不是反证。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核近邻结构有无新增HDAC药效团，再测纯母药酶活及结合。"
+  },
+  {
+    "candidate_id": "C384-082",
+    "pair_id": "RLAWWYSOJDYHDC-BZSNNMDCSA-N__CHEMBL286",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "lisinopril–REN的肾素反馈增加既不是直接作用也不是纯酶阴性，可检验直接交叉机制。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "用成熟活性肾素直接测酶活，先排ACE反馈解释，阳性再SPR复测。"
+  },
+  {
+    "candidate_id": "C384-083",
+    "pair_id": "AHOUBRCZNHFOSL-YOEHRIQHSA-N__CHEMBL2039",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "paroxetine–MAOB已定位可能含本药的原始酶研究，需核原表数值与物种，避免重复或误报新关系。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核论文paroxetine对应MAOB数值、物种与浓度；若弱效则后置，若可靠直接作用则作为机制确认。"
+  },
+  {
+    "candidate_id": "C384-084",
+    "pair_id": "SFNSLLSYNZWZQG-VQIMIIECSA-N__CHEMBL1936",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "glasdegib–KIT暂无精确作用资料，可做生化探索；CML应用需额外KIT依赖依据。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核KIT活性域及突变状态，阳性再做酶活；不直接把AML原用途移到CML。"
+  },
+  {
+    "candidate_id": "C384-085",
+    "pair_id": "DOUYETYNHWVLEO-UHFFFAOYSA-N__CHEMBL1782",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "imiquimod–FDPS缺直接证据不排除新机制，直接酶测有助区别TLR7间接效应。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先直接测FDPS酶活与结合，阳性后再区分原免疫机制。"
+  },
+  {
+    "candidate_id": "C384-086",
+    "pair_id": "LOMMPXLFBTZENJ-ZACQAIPSSA-N__CHEMBL1871",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "belzutifan–AR的ARNT或不同药列表不算AR证据；去除错支持后仍能探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有AR体系才候补，先证受体结合与功能方向，不用HIF2α文章挪补。"
+  },
+  {
+    "candidate_id": "C384-087",
+    "pair_id": "BFSMGDJOXZAERB-UHFFFAOYSA-N__CHEMBL4005",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "dabrafenib–PIK3CA耐药突变研究非直接结合，先核工作液及PI3Kα构建，避免理化因素歪曲读数。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认PI3Kα构建/突变、直接酶活与结合，若仅细胞间接变化不升级。"
+  },
+  {
+    "candidate_id": "C384-088",
+    "pair_id": "AQNDDEOPVVGCPG-UHFFFAOYSA-N__CHEMBL3729",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "esmolol–CA4先确认实验期间母药稳定性，Tourette疾病链不能替代酶测。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认样品稳定性及含锌CA4胞外域，酶活与SPR一致再考虑机制意义。"
+  },
+  {
+    "candidate_id": "C384-089",
+    "pair_id": "DRHKJLXJIQTDTD-OAHLLOKOSA-N__CHEMBL3729",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "tamsulosin–CA4预测CA2值不是CA4实验，没有已知直接阴性，可按未知关系探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认含锌CA4域，先酶活再结合，同工酶选择性后续核对。"
+  },
+  {
+    "candidate_id": "C384-090",
+    "pair_id": "HTIQEAQVCYTUBX-KRWDZBQOSA-N__CHEMBL2326",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "levamlodipine–CA7需明确左旋实体，不能挪用消旋amlodipine或其他CA亚型结果。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核单一左旋实体，含锌CA7对照和酶活通过后复测结合。"
+  },
+  {
+    "candidate_id": "C384-091",
+    "pair_id": "NQDJXKOVJZTUJA-UHFFFAOYSA-N__CHEMBL3522",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "nevirapine–CYP17A1先确认血红素构建及代谢/抑制读出，避免仅有底物结合却宣称抑制。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认含血红素构建，分别做结合和类固醇代谢抑制验证。"
+  },
+  {
+    "candidate_id": "C384-092",
+    "pair_id": "UVSMNLNDYGZFPF-UHFFFAOYSA-N__CHEMBL1937",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "pomalidomide–HDAC2先解开CRBN端与HDAC药效团、近邻端点归属；母药仍可探索，不能由衍生物判阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核最近邻具体结构/端点；纯母药酶活证成后再SPR，若支持全来自衍生物则后置。"
+  },
+  {
+    "candidate_id": "C384-093",
+    "pair_id": "IUBSYMUCCVWXPE-UHFFFAOYSA-N__CHEMBL3729",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "metoprolol–CA4没有直接测量只表明未知，可先单靶点探索再扩同药CA7。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先确认CA4酶活和结合，同药CA7仅在有信号后扩展可节省复测。"
+  },
+  {
+    "candidate_id": "C384-094",
+    "pair_id": "FBOUYBDGKBSUES-VXKWHMMOSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "solifenacin–CA7的眼病治疗方向未定，但纯酶结合探索可先进行，不从抗胆碱用途推疗效。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认纯药与含锌CA7，结合及酶抑制一致后另审眼部用途。"
+  },
+  {
+    "candidate_id": "C384-095",
+    "pair_id": "GPNHMOZDMYNCPO-PDUMRIMRSA-N__CHEMBL3522",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "clascoterone–CYP17A1先确认酯母药未被代谢物替代，并丢弃galeterone错配数据。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认酯母体未以代谢物替代，测含血红素酶的结合与代谢/抑制功能。"
+  },
+  {
+    "candidate_id": "C384-096",
+    "pair_id": "HTIQEAQVCYTUBX-KRWDZBQOSA-N__CHEMBL202",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "levamlodipine–DHFR需明确左旋实体及人源而非微生物酶，身份匹配后可酶学探索。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核左旋实体与人DHFR辅因子体系，酶活阳性再SPR复测。"
+  },
+  {
+    "candidate_id": "C384-097",
+    "pair_id": "XHOLNRLADUSQLD-UHFFFAOYSA-N__CHEMBL3991",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "DISEASE_DIRECTION",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "betrixaban–F7先明确F7a构建及Glanzmann疾病节点方向，抗凝不能自动当血小板无力症治疗。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核活性F7a及参考体系，优先纯酶活；若确有作用，按脱靶机制而非自动新适应症推进。"
+  },
+  {
+    "candidate_id": "C384-098",
+    "pair_id": "HGVDHZBSSITLCT-JLJPHGGASA-N__CHEMBL3991",
+    "action_class": "EVIDENCE_DEPRIORITIZE",
+    "reason_tags": [
+      "ADVERSE_ACTIVITY",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "edoxaban–F7原始研究片段明确FVIIa/sTF无活性影响，支持降低直接抑酶投入；需核浓度构建，不能等同所有结合阴性。",
+    "can_test": "并非绝对不能结合；已有证据降低首批投入理由，需提出独立假设或解决反向线索。",
+    "critical_condition": "查原始F7a选择性panel；若匹配条件已有高浓度阴性，避免重复SPR投入。"
+  },
+  {
+    "candidate_id": "C384-099",
+    "pair_id": "RZVAJINKPMORJF-UHFFFAOYSA-N__CHEMBL2085",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "acetaminophen–MIF目前文献支持NAPQI/bi-APAP而非母药，需核母药对照；代谢物阳性不证明母药不能结合。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先查母药自身直接对照结果；若只支持代谢物，不以母药占首批资源。"
+  },
+  {
+    "candidate_id": "C384-100",
+    "pair_id": "GCKFUYQCUCGESZ-BPIQYHPVSA-N__CHEMBL242",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ADVERSE_ACTIVITY",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "etonogestrel–ESR2本地旧ER无亲和记录亚型不明，应先核ESR2及条件，不以混合ER信息硬降级。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "若要测需明确ESR2与参照，区分PR作用和ER功能方向。"
+  },
+  {
+    "candidate_id": "C384-101",
+    "pair_id": "UEJJHQNACJXSKW-UHFFFAOYSA-N__CHEMBL1937",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "thalidomide–HDAC2需核PROTAC中真正识别HDAC的端点和近邻结构，再决定母药探索。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核近邻是哪一端识别HDAC2，纯母药酶活可靠后再SPR。"
+  },
+  {
+    "candidate_id": "C384-102",
+    "pair_id": "UIAGMCDKSXEBJQ-UHFFFAOYSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "nimodipine–CA7无直接实测仅是证据缺口，可在实际可溶浓度内做酶活结合探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认含锌CA7及实际可溶浓度，结合和酶活一致再升级。"
+  },
+  {
+    "candidate_id": "C384-103",
+    "pair_id": "PYGWGZALEOIKDF-UHFFFAOYSA-N__CHEMBL1974",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "etravirine–FLT3临床相互作用名单非结合资料，仍可直接检验这一未知关系。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "匹配FLT3活性域及参照，直接结合/酶活后再核疾病亚型。"
+  },
+  {
+    "candidate_id": "C384-104",
+    "pair_id": "YIBOMRUWOWDFLG-ONEGZZNKSA-N__CHEMBL2073",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "rilpivirine–YES1需先查已知激酶panel的YES1列，避免把AURKA结果外推或重复现有测量。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先查原始激酶panel的YES1列和浓度，缺失时再直接结合/酶活。"
+  },
+  {
+    "candidate_id": "C384-105",
+    "pair_id": "HCDMJFOHIXMBOV-UHFFFAOYSA-N__CHEMBL3116",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "pemigatinib–CDK9要先明确CDK9/cyclin活性构建；HIV功能方向可在直接作用后再辨。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "用CDK9/cyclin匹配构建与酶活，阳性后再评病毒与宿主效应。"
+  },
+  {
+    "candidate_id": "C384-106",
+    "pair_id": "YIBOMRUWOWDFLG-ONEGZZNKSA-N__CHEMBL1841",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "rilpivirine–FYN先追已有激酶panel覆盖，与YES1共用审计但不相互代证。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先追已发现原药激酶panel，缺FYN时才配合YES1验证，避免两对都作独立强证据。"
+  },
+  {
+    "candidate_id": "C384-107",
+    "pair_id": "GOTYRUGSSMKFNF-UHFFFAOYSA-N__CHEMBL1937",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "lenalidomide–HDAC2需核近邻和母药端点；CRBN/HDAC网络或联用不是直接作用，也不是反证。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核近邻结构和母药酶活，避免将蛋白互作或衍生物当结合。"
+  },
+  {
+    "candidate_id": "C384-108",
+    "pair_id": "UTNUDOFZCWSZMS-YFHOEESVSA-N__CHEMBL1929",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "teriflunomide–XDH需确认不是leflunomide实体并明确XO/XDH状态，匹配后可探索。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认模型是teriflunomide而非leflunomide，核XDH/XO状态，直接酶活后再SPR。"
+  },
+  {
+    "candidate_id": "C384-109",
+    "pair_id": "HFNKQEVNSGCOJV-OAHLLOKOSA-N__CHEMBL3310",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "ruxolitinib–HDAC11先核混合药效团近邻来源，ruxolitinib/vorinostat衍生物不能代替母药，但不证明母药阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "查最近邻是否新增HDAC锌结合端，纯母药酶活阳性后再投入SPR。"
+  },
+  {
+    "candidate_id": "C384-110",
+    "pair_id": "NTJOBXMMWNYJFB-UHFFFAOYSA-N__CHEMBL205",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "amisulpride–CA2阳阴近邻都较高且接近，需核两端点条件，不能仅报阳性或把邻居阴性当本药。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核两个近邻身份端点浓度，含锌CA2活性与SPR一致才升级。"
+  },
+  {
+    "candidate_id": "C384-111",
+    "pair_id": "RLAWWYSOJDYHDC-BZSNNMDCSA-N__CHEMBL1994",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "lisinopril–NR3C2的ACE/MR联用不能证结合，依然是可探索的直接受体假说。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有MR-LBD体系才追加，竞争及功能必须独立确认。"
+  },
+  {
+    "candidate_id": "C384-112",
+    "pair_id": "SFNSLLSYNZWZQG-VQIMIIECSA-N__CHEMBL1974",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "glasdegib–FLT3聚合页面Kd归属不明，先核原panel药物和突变，不能把待核数值当已知新关系。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "优先核原始FLT3 panel的药物身份和突变；确认已有直接记录则改为机制确认而非全新关系。"
+  },
+  {
+    "candidate_id": "C384-113",
+    "pair_id": "HTIQEAQVCYTUBX-UHFFFAOYSA-N__CHEMBL3242",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "amlodipine–CA12缺精确资料，可探索；不得移植左旋实体或其他CA亚型数值。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核混合/单异构体身份及CA12胞外域，阳性后补同工酶选择性。"
+  },
+  {
+    "candidate_id": "C384-114",
+    "pair_id": "SFNSLLSYNZWZQG-VQIMIIECSA-N__CHEMBL2007",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "glasdegib–PDGFRA排名靠后不是反证，在匹配野生型或突变构建可做少量探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "已有PDGFRA域与参照才少量追加，核野生型/突变以避免错配。"
+  },
+  {
+    "candidate_id": "C384-115",
+    "pair_id": "DKYWVDODHFEZIM-UHFFFAOYSA-N__CHEMBL235",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "ketoprofen–PPARG动物镇痛辅助用药不是受体激动证据，纯受体探索本身仍有资格。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先取得纯受体结合和转录方向，不能以镇痛效果作为新机制证明。"
+  },
+  {
+    "candidate_id": "C384-116",
+    "pair_id": "BFSMGDJOXZAERB-UHFFFAOYSA-N__CHEMBL325",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "dabrafenib–HDAC1先核高相似近邻是否HDAC改造物与母药实际溶解度；衍生物证据失效不等于母药不能结合。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核本地最近邻是否即改造物；无纯母药酶活支持前不当高置信首批。"
+  },
+  {
+    "candidate_id": "C384-117",
+    "pair_id": "RMMXLENWKUUMAY-UHFFFAOYSA-N__CHEMBL1944",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "telmisartan–MME计算logP较高，须先确认工作液浓度及背景响应；联用thiorphan非直接支持。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先测工作液与参考表面背景，再用MME酶活和SPR交叉验证。"
+  },
+  {
+    "candidate_id": "C384-118",
+    "pair_id": "HHZIURLSWUIHRB-UHFFFAOYSA-N__CHEMBL3972",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "nilotinib–GART先解决多功能域定位与实际可溶浓度，阴性近邻相似不能直接断言无作用。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先确认预测对应GART哪一催化域及可溶浓度，酶活有支持再测结合。"
+  },
+  {
+    "candidate_id": "C384-119",
+    "pair_id": "UCJGJABZCDBEDK-UHFFFAOYSA-N__CHEMBL2041",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "bazedoxifene–RET先核单体而非复方、可溶浓度及RET域，计算理化风险尚非实测失败。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先确认纯母体工作液及RET域；直接作用与肥胖方向均需验证。"
+  },
+  {
+    "candidate_id": "C384-120",
+    "pair_id": "GZUITABIAKMVPG-UHFFFAOYSA-N__CHEMBL2041",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "raloxifene–RET需先保证工作液可测；对接和mRNA变化不是直接结合，不能据此上调也不能判阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核工作液及RET激酶域，直接酶活/结合阳性才追加疾病验证。"
+  },
+  {
+    "candidate_id": "C384-121",
+    "pair_id": "GDLBFKVLRPITMI-UHFFFAOYSA-N__CHEMBL1844",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "diazoxide–CSF1R的GFP报告标记非药物靶点测量，去掉误支持后可生化探索，低血糖控制不作抗肿瘤证据。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若保留，先确认纯CSF1R构建及激酶活性筛查，再考虑SPR；不得把纠正低血糖解释为肿瘤抑制。"
+  },
+  {
+    "candidate_id": "C384-122",
+    "pair_id": "KVWDHTXUZHCGIO-UHFFFAOYSA-N__CHEMBL2292",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "olanzapine–DYRK1A专利联用不是母药抑制证明，仍可探索；自闭症功能方向另证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核对DYRK1A直接筛选数据及自闭症相关方向；有匹配构建的活性支持后再提升顺位。"
+  },
+  {
+    "candidate_id": "C384-123",
+    "pair_id": "AQNDDEOPVVGCPG-UHFFFAOYSA-N__CHEMBL2326",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "esmolol–CA7先核母药缓冲液稳定性，以确保测量实体明确，而不是因无文献拒绝。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先确认化合物在实验缓冲液中的稳定性，用CA7酶活与阳性对照验证；初步支持后再配置浓度梯度SPR。"
+  },
+  {
+    "candidate_id": "C384-124",
+    "pair_id": "NBRBXGKOEOGLOI-UHFFFAOYSA-N__CHEMBL208",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "dasabuvir–PGR试验限制名单不能证明结合，可做PGR探索，泛癌症用途留待功能方向后讨论。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先定位具体PGR相关疾病及需要激动还是拮抗，核对PGR配体结合域和直接结合资料，再决定是否占用首批实验。"
+  },
+  {
+    "candidate_id": "C384-125",
+    "pair_id": "IOOWNWLVCOUUEX-WPRPVWTQSA-N__CHEMBL261",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "vaborbactam–CA1文献测试不同硼化合物，仅保留化学启发而非母药实测；纯单体仍可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认使用单独vaborbactam而非meropenem复方，先做CA1酶活和干扰检查，再考虑SPR复测。"
+  },
+  {
+    "candidate_id": "C384-126",
+    "pair_id": "IUBSYMUCCVWXPE-UHFFFAOYSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "metoprolol–CA7缺证据和同药多CA重复只影响资源排序，不构成不能测。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "与该药其他CA候选合并比较优先级，先做小规模酶活；有清晰信号再分配CA7浓度梯度SPR。"
+  },
+  {
+    "candidate_id": "C384-127",
+    "pair_id": "IAKHMKGGTNLKSZ-INIZCTEOSA-N__CHEMBL1902",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "colchicine–FKBP1A需消歧合并疾病节点及表格错行，不能把podophyllotoxin列转移；校正后母药仍可探索。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先消歧疾病节点并核对FKBP1A的直接结合证据；如仍保留，采用FKBP1A配体竞争或功能读出辅助SPR。"
+  },
+  {
+    "candidate_id": "C384-128",
+    "pair_id": "UJVDJAPJQWZRFR-DHIUTWEWSA-N__CHEMBL1808",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "macimorelin–ACE诊断用途和不同肽药列表不证明CAD机制，纯ACE酶活探索仍可成立。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核对ACE结构域和廉价酶活结果；仅在有母药直接作用支持时考虑SPR，并单独评价疾病干预方向。"
+  },
+  {
+    "candidate_id": "C384-129",
+    "pair_id": "CJBJHOAVZSMMDJ-HEXNFIEUSA-N__CHEMBL1902",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "darunavir–FKBP1A缺直接记录及癌症节点宽，只影响把握，FKBP12竞争结合可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先确认FKBP12参考配体响应及darunavir可溶浓度；若重复SPR响应成立，再做竞争结合并细化癌症机制。"
+  },
+  {
+    "candidate_id": "C384-130",
+    "pair_id": "GPXBXXGIAQBQNI-UHFFFAOYSA-N__CHEMBL4005",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "NOVELTY_ONLY"
+    ],
+    "reason_detail": "vemurafenib–PIK3CA已有计算线索仍需实测；同属肿瘤降低跨领域新颖性，不排除新机制价值。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核对PI3Kα构建/调节亚基和阳性参考，测溶解度；SPR信号成立后用脂质激酶活性验证。"
+  },
+  {
+    "candidate_id": "C384-131",
+    "pair_id": "DEVSOMFAQLZNKR-RJRFIUFISA-N__CHEMBL5145",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "selinexor–BRAF的XPO1下游变化不能证BRAF结合，也未构成直接反证，可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先取得BRAF生化或直接结合证据；若只有细胞通路变化，保持后置并区分BRAF野生型与突变构建。"
+  },
+  {
+    "candidate_id": "C384-132",
+    "pair_id": "HSUGRBWQSSZJOP-RTWAWAEBSA-N__CHEMBL4393",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "diltiazem–MMP12证据薄及近邻弱不是硬反对，常规金属条件控制后可酶学侦察。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核对活性MMP12构建及钙/金属条件，用配套酶学先检验；避免把改变酶环境解释为特异结合。"
+  },
+  {
+    "candidate_id": "C384-133",
+    "pair_id": "XXSMGPRMXLTPCZ-UHFFFAOYSA-N__CHEMBL3553",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "hydroxychloroquine–TYK2要先匹配JH1/JH2域，既有抗炎效应不能代替域特异结合。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先明确所测域及域匹配对照，SPR后验证相应细胞信号方向。"
+  },
+  {
+    "candidate_id": "C384-134",
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL3535",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "varenicline–PDE9A低近邻与缺文献仅表示未知，可用cGMP水解测试直接探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若PDE9A体系已成熟，可先廉价测cGMP水解抑制，出现可重复效应才提高SPR优先级。"
+  },
+  {
+    "candidate_id": "C384-135",
+    "pair_id": "ZBMZVLHSJCTVON-UHFFFAOYSA-N__CHEMBL1935",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "sotalol–ALDH2可探索直接酶作用，卒中意义需区分激活和抑制，不自动从疾病关联推出。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "明确ALDH2参考物、辅因子及活性方向，优先用酶学筛查后决定SPR。"
+  },
+  {
+    "candidate_id": "C384-136",
+    "pair_id": "DYLUUSLLRIQKOE-UHFFFAOYSA-N__CHEMBL5145",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "enasidenib–BRAF阴性近邻更近不是本药阴性，白血病方向薄弱也不阻止纯激酶探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先查具体BRAF构建与配对活性，若只见下游通路变化则不升级。"
+  },
+  {
+    "candidate_id": "C384-137",
+    "pair_id": "VWVSBHGCDBMOOT-IIEHVVJPSA-N__CHEMBL3045",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "NOVELTY_ONLY"
+    ],
+    "reason_detail": "desoximetasone–PRKCB原皮肤用途附近的新机制仍可研究，同领域及近邻弱不构成硬排除。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先用域匹配PKCβ活性检测寻找可重复线索，只有直接效应才增加SPR投入。"
+  },
+  {
+    "candidate_id": "C384-138",
+    "pair_id": "OJFSXZCBGQGRNV-UHFFFAOYSA-N__CHEMBL2243",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "carbinoxamine–FAAH咽炎与H1背景未证明FAAH，但新靶点酶学可直接检验。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "在成熟FAAH体系下先检测酶活并校正非特异效应，不因咽炎图谱分高直接做梯度。"
+  },
+  {
+    "candidate_id": "C384-139",
+    "pair_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N__CHEMBL279",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "ranolazine–KDR缺独立结合依据，仍可在成熟KDR体系探索，疾病排名不作阳性保证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "只在KDR激酶域和对照已测通时保留，SPR后核对酶活及具体疾病细胞依赖。"
+  },
+  {
+    "candidate_id": "C384-140",
+    "pair_id": "RHWKPHLQXYSBKR-BMIGLBTASA-N__CHEMBL2276",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "dolutegravir–MAPK8检索激酶补表化合物身份待核，先确认是否本药再决定重复测试。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核实检索命中的激酶补充表化合物身份，不将未知化合物的MAPK8结果归给本药；再决定酶学或SPR。"
+  },
+  {
+    "candidate_id": "C384-141",
+    "pair_id": "HCDMJFOHIXMBOV-UHFFFAOYSA-N__CHEMBL241",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "pemigatinib–PDE3A需查监管离靶panel是否覆盖，不能忽略潜在已有结果也不能假定阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对监管完整离靶面板是否实际测试PDE3A，随后配套酶活和SPR验证。"
+  },
+  {
+    "candidate_id": "C384-142",
+    "pair_id": "DJXRIQMCROIRCZ-XOEOCAAJSA-N__CHEMBL1994",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "vibegron–NR3C2可探索未知MR作用，心衰方向在结合后用转录功能确认。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "用MR配体结合域匹配对照；若SPR可重复，再以转录报告确定方向。"
+  },
+  {
+    "candidate_id": "C384-143",
+    "pair_id": "AHJRHEGDXFFMBM-UHFFFAOYSA-N__CHEMBL286",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "palbociclib–REN与RAAS联用不是肾素抑制证据，但没有直接反证，酶活探索可行。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先用肾素底物活性读出寻找作用，排除仅CDK通路解释后再升级。"
+  },
+  {
+    "candidate_id": "C384-144",
+    "pair_id": "HTIQEAQVCYTUBX-KRWDZBQOSA-N__CHEMBL261",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "levamlodipine–CA1已有amlodipine近身份实测，先核立体实体及端点；匹配时需重标新颖性而非丢弃活性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对论文受测立体实体和端点；若匹配则重审新颖性，同时做CA1/CA2选择性验证。"
+  },
+  {
+    "candidate_id": "C384-145",
+    "pair_id": "WAEXFXRVDQXREF-UHFFFAOYSA-N__CHEMBL4791",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "vorinostat–ECE1有金属酶跨家族探索问题，HDAC药理不可直接迁移，常规金属反筛可补解释。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核对ECE1催化构建与金属条件，配套酶活及其他金属酶反筛解释SPR信号。"
+  },
+  {
+    "candidate_id": "C384-146",
+    "pair_id": "SGUAFYQXFOLMHL-UHFFFAOYSA-N__CHEMBL261",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "labetalol–CA1邻药活性不能代替本药，未知关系仍可在CA平台探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "在CA1参考对照测通后小规模初筛，并与CA2/CA7比较；信号缺乏选择性则后置。"
+  },
+  {
+    "candidate_id": "C384-147",
+    "pair_id": "YIBOMRUWOWDFLG-ONEGZZNKSA-N__CHEMBL4179",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "rilpivirine–MAPK9直接证据不足但可探索，与MAPK8共用酶学节省资源不代表两者都不可能。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先以JNK1/JNK2活性小面板区分，再选择一个有重复效应的构建做梯度。"
+  },
+  {
+    "candidate_id": "C384-148",
+    "pair_id": "WEAJZXNPAWBCOA-INIZCTEOSA-N__CHEMBL3535",
+    "action_class": "EVIDENCE_DEPRIORITIZE",
+    "reason_tags": [
+      "ADVERSE_ACTIVITY"
+    ],
+    "reason_detail": "avanafil–PDE9A标签记录PDE5相对PDE9超过10000倍选择性，支持降低有效PDE9抑酶投入；不等于绝对无结合。",
+    "can_test": "并非绝对不能结合；已有证据降低首批投入理由，需提出独立假设或解决反向线索。",
+    "critical_condition": "先核验原始11种PDE面板的PDE9条件；仅在提出不同位点/非催化结合假设时再投入SPR。"
+  },
+  {
+    "candidate_id": "C384-149",
+    "pair_id": "INJOMKTZOLKMBF-UHFFFAOYSA-N__CHEMBL2973",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "guanfacine–ROCK2尚未确认直接测量，可用ROCK1/2酶活探索，新旧机制不同不是反对。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核查ROCK1/2选择性活性；结合后需确定眼部研究可实现的作用方向。"
+  },
+  {
+    "candidate_id": "C384-150",
+    "pair_id": "GNXFOGHNGIVQEH-UHFFFAOYSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY"
+    ],
+    "reason_detail": "methocarbamol–CA7有CA1/2弱活性家族线索，可做选择性研究，不把其他同工酶弱效等同CA7阴性。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先用CA1作机制参照、CA7作新靶点测相同条件酶活，匹配pH并核对SPR动力学。"
+  },
+  {
+    "candidate_id": "C384-151",
+    "pair_id": "XKLMZUWKNUAPSZ-UHFFFAOYSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY"
+    ],
+    "reason_detail": "ranolazine–CA7的CA1/2活性线索不能转移效力，但支持设计同条件CA7探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核实CA1/2论文浓度单位和方法，再同条件检测CA7；若仅高浓度普遍抑制则后置。"
+  },
+  {
+    "candidate_id": "C384-152",
+    "pair_id": "YIBOMRUWOWDFLG-ONEGZZNKSA-N__CHEMBL2276",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "rilpivirine–MAPK8证据缺口与同药候选冗余可通过小面板解决，不应作不可测判断。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "用JNK1/2并行酶学先作区分，有重复浓度依赖后选择最可解释者。"
+  },
+  {
+    "candidate_id": "C384-153",
+    "pair_id": "NBRBXGKOEOGLOI-UHFFFAOYSA-N__CHEMBL2034",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "dasabuvir–NR3C1可做未知GR机制探索，泛癌症和方向未定主要限制疾病投资解读。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先在GR配体域和功能报告平台取得配对证据，明确癌种后再考虑疾病验证。"
+  },
+  {
+    "candidate_id": "C384-154",
+    "pair_id": "HYHMLYSLQUKXKP-UHFFFAOYSA-N__CHEMBL283",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "bempedoic acid–MMP3先明确母体而非CoA活化形式并检查金属效应，不用降脂机制替母药背书。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对实际受测为母体；检查溶解度、金属依赖及MMP3活性，出现特异效应再升级。"
+  },
+  {
+    "candidate_id": "C384-155",
+    "pair_id": "HYHMLYSLQUKXKP-UHFFFAOYSA-N__CHEMBL402",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "bempedoic acid–HMGCR的ACLY下游通路和CoA形式需分清，错误支持应移除但不构成母药直接阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "除非有独立HMGCR酶学/结合证据，不以降脂疗效作为SPR支持；核对物种、构建和受测形式。"
+  },
+  {
+    "candidate_id": "C384-156",
+    "pair_id": "BQJCRHHNABKAKU-KBQPJGBKSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "PRIOR_ACTIVITY",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "morphine–CA7已知CA2弱效仅是家族线索，仍可低成本测试CA7；溃疡方向另证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先CA7酶学及非特异反筛，仅出现重复、非聚集依赖信号再做梯度。"
+  },
+  {
+    "candidate_id": "C384-157",
+    "pair_id": "BRUQQQPBMZOVGD-XFKAJCMBSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "oxycodone–CA7缺独立线索不代表不可结合，可与morphine同条件比较减少重复投入。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先CA7酶学并与morphine比较，避免同骨架多对直接占用梯度容量。"
+  },
+  {
+    "candidate_id": "C384-158",
+    "pair_id": "JVLBPIPGETUEET-WIXLDOGYSA-O__CHEMBL1902",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "methylnaltrexone–FKBP1A化学支持薄和原受体机制不同，仅属证据缺口，可探索竞争结合。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先用FKBP12竞争结合验证，检测实际盐形与非特异吸附，重复效应后再考虑疾病方向。"
+  },
+  {
+    "candidate_id": "C384-159",
+    "pair_id": "SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL2189110",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "bictegravir–EZH2先落实PRC2复合物及活性构建，不能让单蛋白和功能体系混用。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先确认EZH2/PRC2构建和参考抑制剂活性，SPR后用甲基转移活性确认。"
+  },
+  {
+    "candidate_id": "C384-160",
+    "pair_id": "XUZMWHLSFXCVMG-UHFFFAOYSA-N__CHEMBL325",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "baricitinib–HDAC1近邻为JAK/HDAC拼接物，先核母药活性复合物读出；失去近邻支持不等于母药阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核查关键HDAC药效团，采用活性复合物酶学；只有母药出现独立效应才做SPR梯度。"
+  },
+  {
+    "candidate_id": "C384-161",
+    "pair_id": "QTGIAADRBBLJGA-UHFFFAOYSA-N__CHEMBL1944",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "articaine–MME需确认纯母药而非含肾上腺素牙科制剂及稳定性，实体合格后仍可探索。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认纯articaine身份及稳定性，先用MME酶活筛查；无直接效应则后置。"
+  },
+  {
+    "candidate_id": "C384-162",
+    "pair_id": "LEBVLXFERQHONN-UHFFFAOYSA-N__CHEMBL2252",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "bupivacaine–CTSC的大鼠B/L变化不属于CTSC直接抑制，去掉错支持后酶活探索仍有资格。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "在成熟活性CTSC上先酶学检验，并区分局麻引起的细胞损伤与靶点效应。"
+  },
+  {
+    "candidate_id": "C384-163",
+    "pair_id": "LOMMPXLFBTZENJ-ZACQAIPSSA-N__CHEMBL208",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "belzutifan–PGR可探索新核受体作用，骨质疏松意义在明确激动/拮抗后再判断。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "确认PGR域与配体竞争对照，SPR阳性后用功能报告区分方向再讨论骨病价值。"
+  },
+  {
+    "candidate_id": "C384-164",
+    "pair_id": "HWXVIOGONBBTBY-ONEGZZNKSA-N__CHEMBL2326",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "pacritinib–CA7多激酶药理没有提供CA证据，但靶点家族不同并非不可能结合。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "仅在CA7体系成熟且可低成本追加时先酶学测试，不直接安排全梯度。"
+  },
+  {
+    "candidate_id": "C384-165",
+    "pair_id": "XUZMWHLSFXCVMG-UHFFFAOYSA-N__CHEMBL3310",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "baricitinib–HDAC11先核拼接物近邻并使用长链去酰化读出，普通去乙酰化不能代替HDAC11功能。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先用匹配长链去酰化读出和活性HDAC11体系检测母药，不能以普通去乙酰化阴性/阳性替代。"
+  },
+  {
+    "candidate_id": "C384-166",
+    "pair_id": "SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL3717",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "bictegravir–MET应剔除metformin缩写误共现，仍可探索人MET激酶新作用。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "明确人MET激酶域及参考对照，先小规模活性筛查后用SPR和细胞MET信号复核。"
+  },
+  {
+    "candidate_id": "C384-167",
+    "pair_id": "KRNAOFGYEFKHPB-ANJVHQHFSA-N__CHEMBL286",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "rimegepant–REN直接依据不足，可在活性肾素体系探索，不把CGRP疾病链当实测。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核对肾素催化活性、样品溶解度和竞争效应；只有重复直接效应才追加疾病验证。"
+  },
+  {
+    "candidate_id": "C384-168",
+    "pair_id": "CEUORZQYGODEFX-UHFFFAOYSA-N__CHEMBL2039",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "aripiprazole–MAOB需核较近阴性近邻条件及母药而非lauroxil前药，不能仅凭近邻阴性排除。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先复核阴性近邻受测条件及MAOB酶活，使用aripiprazole实体而非lauroxil前药；有一致效应再SPR。"
+  },
+  {
+    "candidate_id": "C384-169",
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL4245",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "varenicline–ESRRG属于ERRγ未知作用，使用专用受体对照即可探索，不以ER类比保证阳性。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "使用ERRγ域和专用对照，先功能/竞争检测；无配对线索时不优先开发体系。"
+  },
+  {
+    "candidate_id": "C384-170",
+    "pair_id": "YBBLVLTVTVSKRW-UHFFFAOYSA-N__CHEMBL4247",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "anastrozole–ALK缺配对资料且阴性近邻略近，仍非直接反证，可在匹配ALK构建探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核对ALK野生型/融合构建及酶活线索，只有直接效应才安排梯度。"
+  },
+  {
+    "candidate_id": "C384-171",
+    "pair_id": "CEUORZQYGODEFX-UHFFFAOYSA-N__CHEMBL2695",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "aripiprazole–PTK2合并药名须落实母药而非lauroxil，避免采购前药却解释母药FAK作用。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先做FAK酶学/结合竞争，查明构建；若仅细胞黏附或信号改变不升级。"
+  },
+  {
+    "candidate_id": "C384-172",
+    "pair_id": "AURFZBICLPNKBZ-SYBPFIFISA-N__CHEMBL206",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "brexanolone–ESR1监管片段列AR/PGR而未列ESR1，需查完整ERα panel；未被列出不是确定阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核实监管完整ERα面板与受测条件，确认样品可溶性；ERα竞争效应成立后再SPR。"
+  },
+  {
+    "candidate_id": "C384-173",
+    "pair_id": "URKOMYMAXPYINW-UHFFFAOYSA-N__CHEMBL4245",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "NOVELTY_ONLY"
+    ],
+    "reason_detail": "quetiapine–ESRRG精神疾病场景重叠只限制跨领域新颖性，ERRγ直接机制仍可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核查ERRγ竞争/转录报告，若仅原受体介导细胞效应则不升级。"
+  },
+  {
+    "candidate_id": "C384-174",
+    "pair_id": "DQCKKXVULJGBQN-XFWGSAIBSA-N__CHEMBL3535",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "naltrexone–PDE9A缺配对记录与低相似性仅表示未知，成熟酶学可检验。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "如PDE9A平台已准备好，先测cGMP水解；出现重复效应再SPR复测。"
+  },
+  {
+    "candidate_id": "C384-175",
+    "pair_id": "XRVDGNKRPOAQTN-FQEVSTJZSA-N__CHEMBL3045",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "ozanimod–PRKCB需区分母药与活性代谢物，匹配后可测直接激酶作用，不靠下游免疫变化代证。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对纯母药身份并先做PKCβ活性，若只有免疫细胞下游变化则继续后置。"
+  },
+  {
+    "candidate_id": "C384-176",
+    "pair_id": "DUGOZIWVEXMGBE-CHWSQXEVSA-N__CHEMBL4816",
+    "action_class": "EVIDENCE_DEPRIORITIZE",
+    "reason_tags": [
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "dexmethylphenidate–AKT3失眠治疗解释有原睡眠研究风险线索相冲突，降低该疾病用途投入；并非证明纯AKT3不能结合。",
+    "can_test": "并非绝对不能结合；已有证据降低首批投入理由，需提出独立假设或解决反向线索。",
+    "critical_condition": "先核实疾病边类型与所需方向，使用dexmethylphenidate而非前药；无直接AKT3证据不优先。"
+  },
+  {
+    "candidate_id": "C384-177",
+    "pair_id": "JQSHBVHOMNKWFT-DTORHVGOSA-N__CHEMBL2208",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "varenicline–MAPKAPK2一般Protein Kinase记录不等于MK2，先核监管panel是否精确覆盖。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对MK2专用酶学与原监管面板是否覆盖该酶，得到重复效应再SPR。"
+  },
+  {
+    "candidate_id": "C384-178",
+    "pair_id": "PZBCKZWLPGJMAO-UHFFFAOYSA-N__CHEMBL5608",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "copanlisib–NTRK3已有220激酶低抑制线索，必须查TRKC覆盖及浓度，不可直接认定本对阴性。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "取得面板具体靶点/浓度，确认TRKC构建与融合背景；有明确反证则停，缺失则小额酶学。"
+  },
+  {
+    "candidate_id": "C384-179",
+    "pair_id": "HMABYWSNWIZPAG-UHFFFAOYSA-N__CHEMBL3145",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "NOVELTY_ONLY",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "rucaparib–PIK3CB同卵巢癌及PARP/PI3K联用不能证结合，但新机制测试仍可探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先核对PI3Kβ生化活性和构建，避免以DNA修复细胞表型作直接结合替代。"
+  },
+  {
+    "candidate_id": "C384-180",
+    "pair_id": "CMHHMUWAYWTMGS-UHFFFAOYSA-N__CHEMBL3979",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "DISEASE_DIRECTION"
+    ],
+    "reason_detail": "benoxinate–PPARD先确认单药而非荧光素复方；眼科麻醉场景不能自动支持治疗虹膜睫状体炎。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "确认受测单药而非荧光素复方，先PPARδ竞争/报告验证；不因给药部位相同升级。"
+  },
+  {
+    "candidate_id": "C384-181",
+    "pair_id": "LXBIFEVIBLOUGU-DPYQTVNSSA-N__CHEMBL5216",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "DISEASE_DIRECTION",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "migalastat–UMPS缺陷疾病需要恢复功能，先提出稳定/恢复而非默认抑制假设并明确双功能域；结合本身仍可研究。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先提出可检验的UMPS稳定/功能恢复假设，核对双功能结构域；只见抑制不作为该病正向候选。"
+  },
+  {
+    "candidate_id": "C384-182",
+    "pair_id": "CYHWMBVXXDIZNZ-KRWDZBQOSA-N__CHEMBL3535",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "remimazolam–PDE9A先确认母药/水解产物及缓冲液稳定性，保证测量实体可解释。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核对样品稳定性，用PDE9酶活检测，只有直接作用才安排SPR复测。"
+  },
+  {
+    "candidate_id": "C384-183",
+    "pair_id": "IQPSEEYGBUAQFF-UHFFFAOYSA-N__CHEMBL4481",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ENTITY_MISMATCH",
+      "ASSAY_UNRESOLVED",
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "pantoprazole–NOS2先区分母药活化形式与NOS2辅因子体系，NO通路变化不能直接归为靶点结合。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对母药和活化形式、NOS2辅因子/构建，用酶学区分直接作用与间接NO变化。"
+  },
+  {
+    "candidate_id": "C384-184",
+    "pair_id": "VSWBSWWIRNCQIJ-HUUCEWRRSA-N__CHEMBL1994",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "asenapine–NR3C2先查既有受体panel是否含MR，避免重复或误用未知覆盖结果。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "先核查原始受体面板是否含MR，再做配体竞争/报告验证；缺乏配对证据不升级。"
+  },
+  {
+    "candidate_id": "C384-185",
+    "pair_id": "XJGVXQDUIWGIRW-UHFFFAOYSA-N__CHEMBL5608",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "loxapine–NTRK3的LOXO其他药名命中必须剔除，剩余证据缺口并不否决本药探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "核对精确loxapine结构并做TRKC酶活，避免将LOXO-195/larotrectinib资料误归本药。"
+  },
+  {
+    "candidate_id": "C384-186",
+    "pair_id": "MSYKRHVOOPPJKU-BDAKNGLRSA-N__CHEMBL3535",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "brivaracetam–PDE9A近邻弱和同骨架重复影响排序，可与levetiracetam共测酶活探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先与levetiracetam同批PDE9酶活比较，再选可重复且有选择性的一个做SPR梯度。"
+  },
+  {
+    "candidate_id": "C384-187",
+    "pair_id": "HPHUVLMMVZITSG-LURJTMIESA-N__CHEMBL3535",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "levetiracetam–PDE9A没有直接证据并非不可测，与brivaracetam共用预筛可减少资源消耗。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "与brivaracetam共用PDE9酶学预筛，阳性后排除检测干扰再做结合验证。"
+  },
+  {
+    "candidate_id": "C384-188",
+    "pair_id": "DEVSOMFAQLZNKR-RJRFIUFISA-N__CHEMBL1862",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "selinexor–ABL1联用XPO1/BCR-ABL1研究不是单药直接作用，仍可检验新ABL1结合。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先取得单药ABL1生化证据并区分ABL1与融合构建，不能把联用增效当直接结合。"
+  },
+  {
+    "candidate_id": "C384-189",
+    "pair_id": "PZBCKZWLPGJMAO-UHFFFAOYSA-N__CHEMBL4898",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED"
+    ],
+    "reason_detail": "copanlisib–NTRK2先核220激酶panel中TRKB和具体构建，再决定是否重复测试。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核查原始220激酶面板是否含TRKB及构建；若未测则先低成本酶学，不直接全梯度。"
+  },
+  {
+    "candidate_id": "C384-190",
+    "pair_id": "XZWYZXLIPXDOLR-UHFFFAOYSA-N__CHEMBL1974",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "INDIRECT_OR_WRONG_ENTITY_EVIDENCE"
+    ],
+    "reason_detail": "metformin–FLT3与gilteritinib协同及PLK1变化不能证FLT3结合；不能把另一靶点JAK2弱活性搬作FLT3反证。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "先检验FLT3酶学并区分野生型/ITD构建，只有直接作用才复测SPR。"
+  },
+  {
+    "candidate_id": "C384-191",
+    "pair_id": "STUWGJZDJHPWGZ-LBPRGKRZSA-N__CHEMBL4393",
+    "action_class": "EXPLORABLE",
+    "reason_tags": [
+      "ONLY_EVIDENCE_GAP"
+    ],
+    "reason_detail": "alpelisib–MMP12遗传疾病支持不能填补结合缺口，但排名末端与家族差异不构成不能探索。",
+    "can_test": "可以作为探索性配对测试；常规样品、构建及对照合格后小规模起步。",
+    "critical_condition": "若MMP12体系已经成熟可先酶学，否则不为此配对单独开发蛋白体系。"
+  },
+  {
+    "candidate_id": "C384-192",
+    "pair_id": "LWQQLNNNIPYSNX-UROSTWAQSA-N__CHEMBL1871",
+    "action_class": "FIRST_RESOLVE",
+    "reason_tags": [
+      "ASSAY_UNRESOLVED",
+      "ENTITY_MISMATCH"
+    ],
+    "reason_detail": "calcipotriene–AR先核纯实体、实际溶解度和AR/VDR区分，不把VDR强结合转为AR效力。",
+    "can_test": "可以保留；先解决下述具体问题，再决定可解释的测量方案。",
+    "critical_condition": "核对纯calcipotriene而非复方，先AR/VDR竞争对比并测实际溶解度；阳性后用功能报告。"
+  }
+]

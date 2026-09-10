@@ -1,0 +1,18 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "cutoff": 2022,
+  "method": "exact full InChIKey match to ChEMBL37 molecule_dictionary.first_approval; missing dates excluded from conservative sensitivity",
+  "no_activity_labels_read": true,
+  "primary_scope_unchanged": "current 720 registry",
+  "sensitivity": "both query drugs and target-to-drug candidate drugs restricted to confirmed approval <=2022",
+  "drugs": 720,
+  "exact_matches": 710,
+  "dated_drugs": 642,
+  "confirmed_approved_by_2022": 594,
+  "approved_after_2022": 48,
+  "files": {
+    "REGISTRY_APPROVAL_AUDIT.csv": "7dcaf9b00ce464ef83f26a8195e7b04ba6d1e5c5c9c08dc4c6c6a63a48ba8f96",
+    "REGISTRY_APPROVAL_SOURCE.csv": "60b49c4e4f206f10c0b2ce754a60c1e9127066381385a3171dd5aec70fe1ed49"
+  },
+  "source_sha256": "4dd361774e763790bbd60ce2fa2424aa0222f517ec4fb76383bd582353767c05"
+}

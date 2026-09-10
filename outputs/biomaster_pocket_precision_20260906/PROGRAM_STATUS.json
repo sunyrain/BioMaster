@@ -1,0 +1,96 @@
+{
+  "status": "STOPPED_BY_USER",
+  "utc": "2026-09-07T05:11:25.914288+00:00",
+  "source_identities": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/fetch_biomaster_structural_complexes.py",
+      "sha256": "6d6abed9fed8c949320bd523fbfbe4cb7a57263c71cab4a99d6fb46b0e763658",
+      "size_bytes": 7931
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_structural_training.py",
+      "sha256": "e82a71ef1f18a1d307e22958a6652cdb5cdd6782698b1433d480fab6b1431504",
+      "size_bytes": 20003
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/encode_biomaster_structural_online.py",
+      "sha256": "956f06668fd6ccb8d93c378cb13af5c37444cf5c6e144788e7027fbe3ee20921",
+      "size_bytes": 2139
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/pretrain_biomaster_structural_interaction.py",
+      "sha256": "8cb13e7531da449522fccff1780c8db4fcc2053b1298fa72310489b2065bf798",
+      "size_bytes": 11338
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_pocket_precision.py",
+      "sha256": "a59d0ce3aed6df69cc060ec62936201e99bfae1f7bfe33e4667f3e3dd53da740",
+      "size_bytes": 11620
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/structural_complex.py",
+      "sha256": "57806a68a646e1021e6d40779f649f45fae262d3a772f342a4fa3a5a5f309f60",
+      "size_bytes": 10512
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/structural_encoding.py",
+      "sha256": "7e8c64fbf1597544e6fa9373e117609eb6494866dbd95142614f37b81c7fbc79",
+      "size_bytes": 4935
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/structural_training.py",
+      "sha256": "9ba81818dffbb65e84f383afaa780f0ded8d505786d23f7bb71e8ee1306c3c9a",
+      "size_bytes": 4685
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+      "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+      "size_bytes": 12551
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_structural_pretraining_20260906.json",
+      "sha256": "a68c6be525b34605336ef275100615d8fea334ff7c68ab6a8140da86a804b00f",
+      "size_bytes": 1104
+    }
+  ],
+  "downstream_ranking_complete": false,
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+    "sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+    "size_bytes": 134792539
+  },
+  "status_before_user_stop": "DOWNSTREAM_2020_DEVELOPMENT_RUNNING",
+  "utc_before_user_stop": "2026-09-06T14:35:11.562233+00:00",
+  "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+  "closure": {
+    "status": "STOPPED_BY_USER",
+    "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+    "updated_utc": "2026-09-07T05:11:25.914288+00:00",
+    "reason": "User requested stopping current work and closing out with a retrospective.",
+    "automatic_continuation_enabled": false,
+    "training_complete": false,
+    "structural_pretraining_complete": true,
+    "completed_downstream_epochs": 1,
+    "last_saved_updates": 10400,
+    "last_logged_updates": 10480,
+    "last_log_loss": 0.05849192723769647,
+    "last_log_loss_scope": "one sampled minibatch; not epoch mean or validation loss",
+    "known_logged_updates_after_checkpoint": 80,
+    "exact_in_memory_step_at_signal_unknown": true,
+    "ranking_gain_confirmed": false,
+    "promotion_eligible": false,
+    "new_2023_2025_or_kirhub_test_completed": false,
+    "selected_bundle_manifest_unchanged": true,
+    "evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/closure_20260907/EVIDENCE.json",
+    "report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_STOP_AND_RETROSPECTIVE_20260907_ZH.md",
+    "pending_experiments_cancelled": true,
+    "status_note": "Terminated by user, not converged or completed. Existing checkpoint payloads retain their historical saved status and were not rewritten."
+  },
+  "automatic_continuation_enabled": false,
+  "promotion_eligible": false,
+  "supervisor_pid_before_user_stop": 957523,
+  "supervisor_pid": null,
+  "elapsed_seconds_at_previous_transition": 7651.099013535306,
+  "last_saved_updates": 10400,
+  "last_logged_updates": 10480
+}

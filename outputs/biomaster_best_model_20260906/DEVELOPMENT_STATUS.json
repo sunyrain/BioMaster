@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "jobs": 24,
+  "driver": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_best_model_development.py",
+    "sha256": "979e39ebe6e665e5dc94589c151d0f08a9f75cd60192ac30f5d2f2aa9300ae34",
+    "size_bytes": 3712
+  },
+  "configuration": {
+    "path": "/root/autodl-tmp/BioMaster/configs/biomaster_best_model_optimization_20260906.json",
+    "sha256": "60dcae71ea4ee6051a712bc6ff8b6de3294a73ccad94788eca726e469f7a6959",
+    "size_bytes": 1668
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "status": "COMPLETE",
+  "protocol_sha256": "62faa27571066bf614adbde53a9fca7870d935711ce573d912eedcbe0289411a",
+  "counts": {
+    "development_train": {
+      "all_pairs": 350694,
+      "conflicting": 2540,
+      "grey_or_unresolved": 55746,
+      "rows": 292408,
+      "positives": 235138,
+      "drugs": 209659,
+      "old_drug_rows": 4782,
+      "old_drug_positives": 770,
+      "min_used_year": 1976,
+      "max_used_year": 2020
+    },
+    "final_train": {
+      "all_pairs": 419038,
+      "conflicting": 2922,
+      "grey_or_unresolved": 64496,
+      "rows": 351620,
+      "positives": 276530,
+      "drugs": 243933,
+      "old_drug_rows": 4889,
+      "old_drug_positives": 815,
+      "min_used_year": 1976,
+      "max_used_year": 2022
+    },
+    "development_validation_all": {
+      "all_pairs": 71063,
+      "conflicting": 320,
+      "grey_or_unresolved": 9126,
+      "rows": 61617,
+      "positives": 43549,
+      "drugs": 36315,
+      "old_drug_rows": 406,
+      "old_drug_positives": 269,
+      "min_used_year": 2021,
+      "max_used_year": 2022
+    },
+    "test_2023_2025_all": {
+      "all_pairs": 41989,
+      "conflicting": 315,
+      "grey_or_unresolved": 7609,
+      "rows": 34065,
+      "positives": 26942,
+      "drugs": 23836,
+      "old_drug_rows": 458,
+      "old_drug_positives": 358,
+      "min_used_year": 2023,
+      "max_used_year": 2025
+    },
+    "development_validation_new": {
+      "all_pairs": 68343,
+      "conflicting": 254,
+      "grey_or_unresolved": 8770,
+      "rows": 59319,
+      "positives": 41469,
+      "drugs": 34811,
+      "old_drug_rows": 116,
+      "old_drug_positives": 53,
+      "min_used_year": 2021,
+      "max_used_year": 2022
+    },
+    "test_2023_2025_new": {
+      "all_pairs": 39668,
+      "conflicting": 243,
+      "grey_or_unresolved": 7283,
+      "rows": 32142,
+      "positives": 25154,
+      "drugs": 22738,
+      "old_drug_rows": 156,
+      "old_drug_positives": 71,
+      "min_used_year": 2023,
+      "max_used_year": 2025
+    },
+    "test_2023_new": {
+      "all_pairs": 19049,
+      "conflicting": 82,
+      "grey_or_unresolved": 3790,
+      "rows": 15177,
+      "positives": 11805,
+      "drugs": 11128,
+      "old_drug_rows": 35,
+      "old_drug_positives": 28,
+      "min_used_year": 2023,
+      "max_used_year": 2023
+    },
+    "test_2024_new": {
+      "all_pairs": 14164,
+      "conflicting": 99,
+      "grey_or_unresolved": 2344,
+      "rows": 11721,
+      "positives": 9377,
+      "drugs": 8007,
+      "old_drug_rows": 108,
+      "old_drug_positives": 34,
+      "min_used_year": 2024,
+      "max_used_year": 2024
+    },
+    "test_2025_new": {
+      "all_pairs": 6455,
+      "conflicting": 55,
+      "grey_or_unresolved": 1152,
+      "rows": 5248,
+      "positives": 3974,
+      "drugs": 3637,
+      "old_drug_rows": 13,
+      "old_drug_positives": 9,
+      "min_used_year": 2025,
+      "max_used_year": 2025
+    }
+  },
+  "molecules": 309560,
+  "query_pairs": 384410,
+  "unresolved_structure_activity_rows": 803,
+  "supports": {
+    "development": {
+      "store_hash": "3eccff6c50c4c4364f502bf6f9e272f539261a3808293de6cef416a10b313f6a",
+      "training_rows": 292408,
+      "training_max_year": 2020,
+      "pool": {
+        "indices": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/development/pool_support/d78c300524dbbcc900249e1b3a2be40310ecf0985abd97917777663a7609af44/indices.npy",
+        "similarities": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/development/pool_support/d78c300524dbbcc900249e1b3a2be40310ecf0985abd97917777663a7609af44/similarities.npy",
+        "mask": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/development/pool_support/d78c300524dbbcc900249e1b3a2be40310ecf0985abd97917777663a7609af44/mask.npy"
+      },
+      "old": {
+        "indices": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/development/old_support/5141a426e609b52e7c529e9eff820ba6b1fb9c0301bc3395947c8d5ccebd7c68/indices.npy",
+        "similarities": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/development/old_support/5141a426e609b52e7c529e9eff820ba6b1fb9c0301bc3395947c8d5ccebd7c68/similarities.npy",
+        "mask": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/development/old_support/5141a426e609b52e7c529e9eff820ba6b1fb9c0301bc3395947c8d5ccebd7c68/mask.npy"
+      }
+    },
+    "final": {
+      "store_hash": "8082e0e371c3d918b9d3be30aabde46e914d1d05cdf2bdc1e8d223403bda0eab",
+      "training_rows": 351620,
+      "training_max_year": 2022,
+      "pool": {
+        "indices": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/pool_support/e7b079be52fee3c354e3b6123afe66a25167651a2153c2f9f98adf0124eb6e09/indices.npy",
+        "similarities": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/pool_support/e7b079be52fee3c354e3b6123afe66a25167651a2153c2f9f98adf0124eb6e09/similarities.npy",
+        "mask": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/pool_support/e7b079be52fee3c354e3b6123afe66a25167651a2153c2f9f98adf0124eb6e09/mask.npy"
+      },
+      "old": {
+        "indices": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/old_support/0950e46986ab1cc8828fa6831c62d2db29b1878e14891cbb13cc58861dc682d5/indices.npy",
+        "similarities": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/old_support/0950e46986ab1cc8828fa6831c62d2db29b1878e14891cbb13cc58861dc682d5/similarities.npy",
+        "mask": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/old_support/0950e46986ab1cc8828fa6831c62d2db29b1878e14891cbb13cc58861dc682d5/mask.npy"
+      }
+    }
+  },
+  "files": {
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/ANNUAL_RAW.csv.gz": "2f48cab215cb4036f295cfb8b8be4efe892e8b3ddc8f610d0fb7f2c6cd7319b4",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/PARENT_MOLECULES.csv.gz": "62a8b9c4d1b40b3b013382829fa43aaf53d51bd6ba2eb7cc43177393b496b76f",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/UNRESOLVED_MOLECULES.csv.gz": "5beb83750a03eae726d2cd6441af934449c0f0493001800184bdc20a7612b27f",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MORGAN.npy": "293ff4c036234e32a2c627076ac2d8405f8e6cee9a758245939f8eea01999535",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MOLECULES.csv.gz": "aeaed335a7e8df4b8f17cab8f79712768f717c1fcbff7eadb7c4908ea2279ff4",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/PARENT_MAPPING.csv.gz": "4e52e54735f3e97806751b94e517e6a80cab97b89bba757c0744564a609106fd",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/OLD_DRUG_INDEX.csv": "08c2e88d51e9ec7afe8d9bb721cd18f1bc1e8b404ce4d61f26d4801963d91af5",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TARGET_INDEX.csv.gz": "2c1f57cd5b80503d25383db7193c78e9020f7b5129090bc159958ec154e3d154",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/ANNUAL_STANDARDIZED.csv.gz": "cea655c378911c91f65425c1b8fa7cfde67555c8e89ed2dae7f5512552a4be68",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/FIRST_OBSERVATIONS.csv.gz": "46f370a9cfb4247c2d981ba66321e489d13cb0636d372077ff43ceb1a58208a5",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/DEVELOPMENT_TRAIN.csv.gz": "0304696d89ba12911eba449302d9b391ebed772cab9b933c78fbb087b0cf6a7f",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/FINAL_TRAIN.csv.gz": "4362504bba30a21fae238fafcc08403c4d7621a2d5cf3ea7b20c160e34afb394",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/DEVELOPMENT_VALIDATION_ALL.csv.gz": "2384dc99eaacb52d74f2246eb23c9b5daeaa79d6a11724db764db31be7340170",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2023_2025_ALL.csv.gz": "314b017ef1e0da5a052446712960d5fbefa3368f2f578f524718f3aefa151600",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/DEVELOPMENT_VALIDATION_NEW.csv.gz": "aa3852f830948c01f3de258ddf5c66e653e14685731f2a0d7af74f453bc01930",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2023_2025_NEW.csv.gz": "616d8906e65dc3ee267ad74955645578d2b7f8282138429ebc289039820c3fd5",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2023_NEW.csv.gz": "d90158525ecea920326b9003f52eb9af22d65b0fd49b96af25d8926ef2e08ea1",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2024_NEW.csv.gz": "6068cdd32eae9af709ab2cf82d137895eb13eb2743e677e1bba8cb2205c68a7a",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2025_NEW.csv.gz": "4749d4ac62f62e21fef5d6b3f1e77401bac369a231d61f699eb7db2731ea1e72",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/QUERY_POOL.csv.gz": "59e3a1cfb72e63a6ed69eca577d3c88aa4b67c6913af79f7205e84418d057a48",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/RISK_SETS.npz": "7cf91676748303070bed61fd59b5886a5c17088459364324b5107dad4b31a0a9",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/PROTBERT.npy": "cc32ddea4c431abc0aee82c09377fd6bef4cf46ba8639d11aaeba3e670b222bb",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/ESM2_LEGACY.npy": "069b75459b164018fdb602875f96a8a98552f9d9ca625ada53c8fd807f831f05",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/ESM2_COMPLETE.npy": "89de0c2edba1bd2b85f216216285505d8b3e3d18b7a21277f3a8de03c734b888",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/BERMOL.npy": "e7d9116c5b2f97c84d7223e807f468308c46bd04a009123bea3be3010090b1e1",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/BERMOL_DONE.npy": "1d3c9e3563eebfcb36c4a2afd418f14323d29d6c2d9442291cf24c91439077f0"
+  },
+  "no_current_V3_or_J_checkpoint_reused": true,
+  "time_filter_before_label_aggregation": true
+}

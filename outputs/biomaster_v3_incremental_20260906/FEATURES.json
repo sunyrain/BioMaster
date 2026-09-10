@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "old_score_max_abs_error": 0.0,
+  "no_label_dependent_feature_extension": true,
+  "hidden": "concatenated independent 192-wide frozen V3 query states; never averaged across feature bases",
+  "sources": {
+    "configs/biomaster_v3_incremental_ablation_20260906.json": "fd1e208e92c055773861a4222df8708573c89bc175f1defe310d664e8cfecba2",
+    "outputs/biomaster_v3_20260905/data/DATA_MANIFEST_V3.json": "8cf02e63dab59909888b2874f43b14394f9b305742da969667ff54160cc0e5a5",
+    "outputs/biomaster_v3_20260905/data/RELATIONS_V3.csv.gz": "05c01b9b61b3b15302b15e400e30f232922b0f01126d0b59251dfa183733e9a2",
+    "outputs/biomaster_old_drug_bidirectional_20260906/PROTOCOL.json": "4c939d9323775ac4fd5f58cca538d334aa7e1cac3b5efbbaa84766ebc0b9474c",
+    "outputs/biomaster_old_drug_bidirectional_20260906/FEATURE_MANIFEST.json": "920c3c95f8ab68693e95102bbd89c60586ee0434c9a0793b2d1f08c31e0476bf",
+    "outputs/biomaster_old_drug_bidirectional_20260906/LABELS_AND_SCOPES.npz": "9e80148d6ac2f8999fe347305a0193b78493aa4bf9543f3aa921fc9ab4f4d676",
+    "outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/PROJECT384_PROTBERT1024_FLOAT32_V1.npy": "cc32ddea4c431abc0aee82c09377fd6bef4cf46ba8639d11aaeba3e670b222bb",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_PROJECT384_ESM2_T33_650M_1280_FLOAT32_V1.npy": "069b75459b164018fdb602875f96a8a98552f9d9ca625ada53c8fd807f831f05",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260905/BEST_MODEL_V3.pt": "46beadd92ee39ec373d2502385eb5ac24b02d274d45c4d6c07b5a0b80ef746d1",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260906/BEST_MODEL_V3.pt": "8e3215eae696ecc778d2981ccb9986c0bb961666e9bce790f9ac6197605134f9"
+  },
+  "files": {
+    "outputs/biomaster_v3_incremental_20260906/RELATION_SUPPORT.npy": "45dde014d65febacc3a47033617889a87aab94fc76b04dafa9235d94b5a7be30",
+    "outputs/biomaster_v3_incremental_20260906/OLD_SUPPORT.npy": "3cf7ba5b367732f7166025b5a9c8cbfaab7a3fce4fc75eb8abbb329c5115106c",
+    "outputs/biomaster_v3_incremental_20260906/RELATION_HIDDEN.npy": "a5149f2e346d786ee58218c6d5c1b28c1f5c59524832cde414f8ae80a06ff85e",
+    "outputs/biomaster_v3_incremental_20260906/OLD_HIDDEN.npy": "e4c65baa569add9730cb916f375edb289cb90e6844beb11396ff3a6edc7d593b",
+    "outputs/biomaster_v3_incremental_20260906/RELATION_BASE.npy": "a3b4b1bc3bc58e5c81fef2bf64afaa652a4404bb075438da8216569caeb1e1a7",
+    "outputs/biomaster_v3_incremental_20260906/OLD_BASE.npy": "261f49b6d86746fb7e9835ad73c8a71426a2b93aa944a353d044e0ec1efa8cb1",
+    "outputs/biomaster_v3_incremental_20260906/ROW_AXES.npz": "fb0d05bf21bb2f2c75dbaa76794941c8222bcf5c10aab39a82cdb2d45b507b98"
+  }
+}

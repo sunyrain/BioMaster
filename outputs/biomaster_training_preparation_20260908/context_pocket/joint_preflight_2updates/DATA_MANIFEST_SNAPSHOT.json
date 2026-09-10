@@ -1,0 +1,137 @@
+{
+  "status": "DATA_PREPARED_PREFLIGHT_REQUIRED",
+  "utc": "2026-09-08T03:10:53.033382+00:00",
+  "cutoff": 2020,
+  "validation_years": [
+    2021,
+    2022
+  ],
+  "seed": 20260921,
+  "paths": {
+    "data": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data",
+    "source": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal",
+    "global_features": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features",
+    "supplemental_features": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/supplemental_features",
+    "pocket_features": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/features",
+    "structural_data": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020",
+    "structural_checkpoint": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+    "parent_checkpoint": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt"
+  },
+  "training_rows": 292408,
+  "old_observed_rows": 4782,
+  "general_observed_rows": 287626,
+  "query_cycle_updates": 422,
+  "d2t_queries": 234,
+  "t2d_queries": 188,
+  "full_candidate_counts": {
+    "d2t": 384,
+    "t2d": 720
+  },
+  "assay_source_rows": 58923,
+  "assay_consumed_rows": 58923,
+  "assay_consumed_groups": 3291,
+  "assay_missing_molecular_sources": 0,
+  "assay_rows_lost_with_single_class_groups": 0,
+  "structural_train": 9903,
+  "structural_validation": 1223,
+  "structural_probe": 64,
+  "structural_sampling": "uniform cluster, then uniform complex within cluster",
+  "prospective_pairs_mapped": 390,
+  "prospective_pairs_outside_current_registry": 90,
+  "prospective_supervised_training_overlap": 0,
+  "prospective_labels_used": false,
+  "validation_scope": "retrospective development; public encoder chronology not certified",
+  "quality_protocol": "occupancy/pLDDT/P2Rank separate fields; legacy quality-product geometry channel replaced by valid-pair indicator",
+  "unresolved_domain_shift": "experimental ligand-cropped structural pockets versus AlphaFold/P2Rank deployment pockets; apo/predicted paired augmentation not prepared",
+  "long_training_ready": false,
+  "model_selected": false,
+  "identities": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_context_pocket_20260908.json",
+      "sha256": "6b0b1eebf6c48d5238e8387b8d195d55b31995552944c81523f5003461be7945",
+      "size_bytes": 2717
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/TRAIN.csv.gz",
+      "sha256": "125303c22875744a9e6adb980e9788add1d08c10f26b198bd51e3988b16f1eb2",
+      "size_bytes": 2712317
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+      "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+      "size_bytes": 458291
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+      "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+      "size_bytes": 276608
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_CONTRASTS_2020.csv.gz",
+      "sha256": "fc24c1d2c244e252e1aeaa5523f844e6a006e14f5eca23f9c1ea48f140b495bc",
+      "size_bytes": 390436
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/OLD_DRUG_INDEX.csv",
+      "sha256": "08c2e88d51e9ec7afe8d9bb721cd18f1bc1e8b404ce4d61f26d4801963d91af5",
+      "size_bytes": 179337
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TARGET_INDEX.csv.gz",
+      "sha256": "2c1f57cd5b80503d25383db7193c78e9020f7b5129090bc159958ec154e3d154",
+      "size_bytes": 203287
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/features/MANIFEST.json",
+      "sha256": "03bde6c21701dce8009dc7ce4e5c4e4890f49cc909007f7d7882282cf33aa49b",
+      "size_bytes": 1151480
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/MANIFEST.json",
+      "sha256": "521906f711acb9269cb2e4139bc9f751e26db0df594eeb846111ab636728ea3a",
+      "size_bytes": 5335515
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+      "sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+      "size_bytes": 134792539
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/retargetmap_spr512_ours_frozen_20260904/RETARGETMAP_SPR512_OURS_FROZEN_INTERNAL_MASTER_V2.csv",
+      "sha256": "e85f111b3748488e757d7df6abce4be0a24d3538e535a6c6b20f982f12b15348",
+      "size_bytes": 551632
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/biomaster/context_pocket.py",
+      "sha256": "2c86e85aee06bfdd6422f1a1ff4bb28d2b553fc1503f97884d3ca617b54d954a",
+      "size_bytes": 9900
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_context_pocket_20260908.py",
+      "sha256": "e9d196f9864f91e8011ed3baf5496c2856f0863cfcecc60f7ddb29d96cbaeaf4",
+      "size_bytes": 9202
+    }
+  ],
+  "prepared_artifacts": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_training_preparation_20260908/context_pocket/TRAINING_INDICES.npz",
+      "sha256": "69a7778a8ee88728816c67b6397b6972582b9a652f11c8bbaf54abb2f38358b5",
+      "size_bytes": 451391
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_training_preparation_20260908/context_pocket/QUERY_CYCLE.csv",
+      "sha256": "4608706fc47ade23040197e2cd6fee0503a4d1dc0ccce9689b3f7f2f470a094e",
+      "size_bytes": 5738
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_training_preparation_20260908/context_pocket/ASSAY_TRAIN.csv.gz",
+      "sha256": "0b426270f94912d1175109b9721473c151c623067b1014c997042747c546badc",
+      "size_bytes": 390427
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_training_preparation_20260908/context_pocket/STRUCTURAL_PROBE.json",
+      "sha256": "ff620ffa66f42ed267bba6cb94c39106072cb084a2481e806feab3b928ab9e16",
+      "size_bytes": 29569
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "selection_sha256": "f841db517ce2bc5199ad0805afd1d0510969ce9dac661910cf3ff44e56e81f60",
+  "identity": {
+    "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+    "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+    "source_sha256": {
+      "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+      "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+      "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+      "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+    }
+  },
+  "stage2_selection_sha256": "b3a1c92cc161353f038cb37297198b58f376dea70b26fd6fb391d33d72d3652a",
+  "winner": "J_old_relation_pretrained",
+  "claim": "historical development regression; test reviewed in previous rounds, not untouched external confirmation"
+}

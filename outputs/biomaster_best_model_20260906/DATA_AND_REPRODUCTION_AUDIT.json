@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "first_round_immutable_artifacts": 18,
+  "exact_original_reproductions": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260922/RESULT.json",
+      "sha256": "769463142794b03ecae6b00cbf700b1b8ae4331a3ab110c8e59f86ebceeb1bd6",
+      "size_bytes": 3574
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260923/RESULT.json",
+      "sha256": "552a6e0a639b08d6639005a6c7eca0807a1d21341ca915b4debfd3efdc09cf51",
+      "size_bytes": 3572
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/global/seed_20260922/RESULT.json",
+      "sha256": "bff60428674ca075aaa148b44b9088d16b980fc9721cda3a070d5ed9269eb2fb",
+      "size_bytes": 3568
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/global/seed_20260923/RESULT.json",
+      "sha256": "b45eca67686a0159034c4ba2f154c13af6139c20f2725920c6a798be323af1bf",
+      "size_bytes": 3569
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/final/capacity/seed_20260922/RESULT.json",
+      "sha256": "5a90cf192972992b93e3526054f9315a35302eaed74697feafff5b2d9a8bd86f",
+      "size_bytes": 3174
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/final/capacity/seed_20260923/RESULT.json",
+      "sha256": "f3b15bcdfaf89e3b25d7b27dfac1d41e7caa5cea100dd59a5f9f908888099422",
+      "size_bytes": 3176
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/final/global/seed_20260922/RESULT.json",
+      "sha256": "58755facf88c111e9f861d085928c9205bb89547db5a367e42afeeb3cd96e6f5",
+      "size_bytes": 3169
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/final/global/seed_20260923/RESULT.json",
+      "sha256": "b2821c95f356c24ade938848dd6b19f95fa3956cd717556a2bdbcd484b79066c",
+      "size_bytes": 3170
+    }
+  ],
+  "rolls": [
+    {
+      "cutoff": 2018,
+      "train_rows": 242684,
+      "validation_rows": 49889,
+      "prior_or_undated_old_pairs": 5959,
+      "all_training_and_validation_features_prepared": true,
+      "exact_date_risk_mask": true,
+      "pair_disjoint": true
+    },
+    {
+      "cutoff": 2020,
+      "train_rows": 292408,
+      "validation_rows": 59319,
+      "prior_or_undated_old_pairs": 6080,
+      "all_training_and_validation_features_prepared": true,
+      "exact_date_risk_mask": true,
+      "pair_disjoint": true
+    }
+  ],
+  "assay_supervision": [
+    {
+      "cutoff": 2018,
+      "groups": 2916,
+      "rows": 50208,
+      "exact_assay_endpoint_groups": true,
+      "replicate_threshold_gap": true,
+      "only_cutoff_observed_binary_pairs": true
+    },
+    {
+      "cutoff": 2020,
+      "groups": 3291,
+      "rows": 58923,
+      "exact_assay_endpoint_groups": true,
+      "replicate_threshold_gap": true,
+      "only_cutoff_observed_binary_pairs": true
+    },
+    {
+      "cutoff": 2022,
+      "groups": 3729,
+      "rows": 66864,
+      "exact_assay_endpoint_groups": true,
+      "replicate_threshold_gap": true,
+      "only_cutoff_observed_binary_pairs": true
+    }
+  ],
+  "supplemental_molecules": 109,
+  "supplemental_features_hashes_verified": true,
+  "standalone_smoke_packages": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/package_smoke_geometry_v1_VALIDATION.json",
+      "sha256": "e9a4c079087e437c140550edf3f65b96f66f1d7d87b52a6912b4b2bca5189ee4",
+      "size_bytes": 1021
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/package_smoke_global_v1_VALIDATION.json",
+      "sha256": "09b958d5886c97eb23dd409a85641effbaa587c8c50de90d0ea8006d36e66bc8",
+      "size_bytes": 1003
+    }
+  ],
+  "model_selection_complete": false,
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_best_model_development.py",
+    "sha256": "89f6c53ff7a8fef9f1d0a4f6a751ca56e49a7a637650c2d1ea2affb158b26ea3",
+    "size_bytes": 5652
+  }
+}

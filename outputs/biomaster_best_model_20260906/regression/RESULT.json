@@ -1,0 +1,79 @@
+{
+  "status": "COMPLETE",
+  "selection": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/FINAL_ARCHITECTURE_SELECTION.json",
+    "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+    "size_bytes": 17515
+  },
+  "release": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/regression/PREDICTION_RELEASE.json",
+    "sha256": "9229fff8f36dd2536361c14c50c222b8bcff33079e754c9cb203b124fe56e7ec",
+    "size_bytes": 8953
+  },
+  "label_sources": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2023_2025_NEW.csv.gz",
+      "sha256": "616d8906e65dc3ee267ad74955645578d2b7f8282138429ebc289039820c3fd5",
+      "size_bytes": 1474261
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2023_NEW.csv.gz",
+      "sha256": "d90158525ecea920326b9003f52eb9af22d65b0fd49b96af25d8926ef2e08ea1",
+      "size_bytes": 690459
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2024_NEW.csv.gz",
+      "sha256": "6068cdd32eae9af709ab2cf82d137895eb13eb2743e677e1bba8cb2205c68a7a",
+      "size_bytes": 524269
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_2025_NEW.csv.gz",
+      "sha256": "4749d4ac62f62e21fef5d6b3f1e77401bac369a231d61f699eb7db2731ea1e72",
+      "size_bytes": 234930
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/evidence_routing_compute_execution_20260808_v1/old_drug_innovation_v7/OLD_DRUG_KIRHUB_PAIR_BENCHMARK_V7.csv",
+      "sha256": "8295ac18c4b8a3e6048c2079f643909fa9ae1ddea0f26b8c847a0025e25fde86",
+      "size_bytes": 2237728
+    }
+  ],
+  "kirhub_scopes": {
+    "kirhub_historical_strict_2823": {
+      "rows": 2823,
+      "positives": 202,
+      "prior_overlap": 0
+    },
+    "kirhub_single_construct_unseen_through2022": {
+      "rows": 3914,
+      "positives": 322,
+      "prior_overlap": 0
+    }
+  },
+  "legacy_baseline_reproduction": "PASS at absolute tolerance 1e-12",
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "representative_seed": 20260921,
+  "precision_sensitivity": "bf16 and fp32 for preselected representative; no reselection",
+  "no_prediction_ensemble": true,
+  "tests_previously_inspected": true,
+  "tests_used_for_selection": false,
+  "pretraining_cutoff_certified": false,
+  "scope": [
+    720,
+    384
+  ],
+  "fullfit_checkpoint_evaluated": false,
+  "metrics": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/regression/METRICS_BY_SEED.csv",
+    "sha256": "fc5dac5bdb13f97d1f4a93ac78e4c3a6d529191989dd1b9131a3ea1b7abed943",
+    "size_bytes": 100416
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/evaluate_biomaster_selected_regressions.py",
+    "sha256": "206340d75c74a2970c3bb6079d079ac6500df411c4da878a85b7ec9e9c639da4",
+    "size_bytes": 16674
+  }
+}

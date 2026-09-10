@@ -1,0 +1,47 @@
+{
+  "cutoff": 2020,
+  "seed": 20260923,
+  "condition": "coordinates_shuffled",
+  "d2t_ap": 0.39202033984871426,
+  "d2t_r20": 0.6328431372549019,
+  "t2d_ap": 0.19877967793974433,
+  "t2d_r20": 0.4786324786324786,
+  "composite": 0.3735013486090676,
+  "metrics": {
+    "d2t": {
+      "all_queries": 720,
+      "positive_queries": 34,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.39202033984871426,
+      "macro_mrr": 0.42240817566866457,
+      "macro_recall_5": 0.46911764705882353,
+      "macro_recall_10": 0.5598039215686273,
+      "macro_recall_20": 0.6328431372549019,
+      "macro_ndcg_20": 0.45659288188809755,
+      "min_candidates": 291.0,
+      "median_candidates": 381.0,
+      "max_candidates": 384.0
+    },
+    "t2d": {
+      "all_queries": 384,
+      "positive_queries": 39,
+      "positive_pairs": 53,
+      "candidate_scope": "all registry candidates minus prior/undated measurements; unknown background, not inactive",
+      "macro_ap": 0.19877967793974433,
+      "macro_mrr": 0.25974509962919246,
+      "macro_recall_5": 0.2735042735042735,
+      "macro_recall_10": 0.40170940170940167,
+      "macro_recall_20": 0.4786324786324786,
+      "macro_ndcg_20": 0.27515992543931916,
+      "min_candidates": 657.0,
+      "median_candidates": 708.0,
+      "max_candidates": 720.0
+    }
+  },
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/geometry/seed_20260923/BEST.pt",
+    "sha256": "7d4d9995af08f2c927114dd7738005226906b1b2fcbd19ca2a20ca0163c018ea",
+    "size_bytes": 9828163
+  }
+}

@@ -1,0 +1,385 @@
+﻿小分子药物名称,旧靶点名称,新靶点名称,新靶点的已知药物名称
+tecovirimat,Envelope phospholipase OPG057,AR — Androgen receptor,TESTOSTERONE
+piperacillin,Bacterial penicillin-binding protein,CA1 — Carbonic anhydrase 1,ETHOXZOLAMIDE
+tamsulosin,Adrenergic receptor alpha-1,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+morphine,Mu-type opioid receptor,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+sotalol,Beta-1 adrenergic receptor; Beta-2 adrenergic receptor; Voltage-gated inwardly rectifying potassium channel KCNH2,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+labetalol,Adrenergic receptor,MME — Neprilysin,OMAPATRILAT
+arformoterol,Beta-2 adrenergic receptor,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+relebactam,Beta-lactamase; Beta-lactamase CTX-M; Beta-lactamase SHV-1; Beta-lactamase TEM; Carbapenem-hydrolyzing beta-lactamase KPC,MMP7 — Matrilysin,PRINOMASTAT
+vismodegib,Protein smoothened,NTRK1 — High affinity nerve growth factor receptor,STAUROSPORINE
+metoprolol,Beta-1 adrenergic receptor,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+solifenacin,Muscarinic acetylcholine receptor M2; Muscarinic acetylcholine receptor M3,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+macimorelin,Growth hormone secretagogue receptor type 1,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+oxycodone,Mu-type opioid receptor,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+methylnaltrexone,Mu-type opioid receptor,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+thalidomide,CRL4(CRBN) E3 ubiquitin ligase,MIF — Macrophage migration inhibitory factor,BTZO-1
+armodafinil,Sodium-dependent dopamine transporter,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+diltiazem,Voltage-gated L-type calcium channel,REN — Renin,REMIKIREN
+upadacitinib,Non-receptor tyrosine-protein kinase TYK2; Tyrosine-protein kinase JAK1; Tyrosine-protein kinase JAK2; Tyrosine-protein kinase JAK3,PRKCB — Protein kinase C beta type,ENZASTAURIN
+carglumic acid,"Carbamoyl-phosphate synthase [ammonia], mitochondrial",MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+diazoxide,ATP-sensitive inward rectifier potassium channel 11; ATP-sensitive inward rectifier potassium channel 8,CSF1R — Macrophage colony-stimulating factor 1 receptor,DASATINIB ANHYDROUS
+lenalidomide,CRL4(CRBN) E3 ubiquitin ligase,AXL — Tyrosine-protein kinase receptor UFO,SUNITINIB
+ixabepilone,Tubulin,CSF1R — Macrophage colony-stimulating factor 1 receptor,DASATINIB ANHYDROUS
+esketamine,Glutamate [NMDA] receptor,GSK3A — Glycogen synthase kinase-3 alpha,ABEMACICLIB
+ibuprofen,Cyclooxygenase,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+lisinopril,Angiotensin-converting enzyme,REN — Renin,REMIKIREN
+apixaban,Coagulation factor X,FLT3 — Receptor-type tyrosine-protein kinase FLT3,SUNITINIB
+nimodipine,Mineralocorticoid receptor; Voltage-gated L-type calcium channel,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+etravirine,Human immunodeficiency virus type 1 reverse transcriptase,FLT3 — Receptor-type tyrosine-protein kinase FLT3,SUNITINIB
+darunavir,Human immunodeficiency virus type 1 protease,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+bupivacaine,Sodium channel protein type 4 subunit alpha,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+belzutifan,Endothelial PAS domain-containing protein 1,PGR — Progesterone receptor,NORETHINDRONE
+oxaprozin,Cyclooxygenase,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+cobimetinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,PARP2 — Poly [ADP-ribose] polymerase 2,TALAZOPARIB
+lumateperone,5-hydroxytryptamine receptor 2A; D(2) dopamine receptor; Sodium-dependent serotonin transporter,COMT — Catechol O-methyltransferase,OPICAPONE
+tafamidis,Transthyretin,RARB — Retinoic acid receptor beta,TRETINOIN
+pregabalin,Voltage-gated calcium channel,MME — Neprilysin,OMAPATRILAT
+cabotegravir,Human immunodeficiency virus type 1 integrase,"ALDH2 — Aldehyde dehydrogenase, mitochondrial",PRUNETIN
+pacritinib,Activin receptor type-1; Interleukin-1 receptor-associated kinase 1; Receptor-type tyrosine-protein kinase FLT3; Tyrosine-protein kinase JAK2,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+bictegravir,Human immunodeficiency virus type 1 integrase,MET — Hepatocyte growth factor receptor,TEPOTINIB
+rimegepant,Calcitonin gene-related peptide type 1 receptor,REN — Renin,REMIKIREN
+calcipotriene,Vitamin D3 receptor,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+olanzapine,5-hydroxytryptamine receptor 2A; 5-hydroxytryptamine receptor 2C; D2-like dopamine receptor,DYRK1A — Dual specificity tyrosine-phosphorylation-regulated kinase 1A,ABEMACICLIB
+avibactam,Beta-lactamase TEM,MMP8 — Neutrophil collagenase,CIPEMASTAT
+tapentadol,Mu-type opioid receptor; Sodium-dependent noradrenaline transporter,ESR1 — Estrogen receptor,RALOXIFENE
+lubiprostone,Chloride channel protein 2,AR — Androgen receptor,TESTOSTERONE
+bupivacaine,Sodium channel protein type 4 subunit alpha,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+sotagliflozin,Sodium/glucose cotransporter 1; Sodium/glucose cotransporter 2,REN — Renin,REMIKIREN
+glasdegib,Protein smoothened,KIT — Mast/stem cell growth factor receptor Kit,SUNITINIB
+selinexor,Exportin-1,BRAF — Serine/threonine-protein kinase B-raf,SORAFENIB
+avibactam,Beta-lactamase TEM,MMP7 — Matrilysin,PRINOMASTAT
+fluocinonide,Glucocorticoid receptor,PRKCB — Protein kinase C beta type,ENZASTAURIN
+desonide,Glucocorticoid receptor,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+alpelisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",DPP4 — Dipeptidyl peptidase 4,LINAGLIPTIN
+atrasentan,Endothelin-1 receptor,EGLN3 — Prolyl hydroxylase EGLN3,研究化合物 CHEMBL3133890（无通用名称）
+methocarbamol,Carbonic anhydrase 1,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+avanafil,"cGMP-specific 3',5'-cyclic phosphodiesterase",FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+indacaterol,Beta-2 adrenergic receptor,JAK3 — Tyrosine-protein kinase JAK3,TOFACITINIB
+etravirine,Human immunodeficiency virus type 1 reverse transcriptase,MAPK9 — Mitogen-activated protein kinase 9,TANZISERTIB
+diltiazem,Voltage-gated L-type calcium channel,MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+ozanimod,Sphingosine 1-phosphate receptor 1; Sphingosine 1-phosphate receptor 5,"PDE4D — 3',5'-cyclic-AMP phosphodiesterase 4D",ROLIPRAM
+furosemide,Solute carrier family 12 member 1,REN — Renin,REMIKIREN
+guanfacine,Adrenergic receptor alpha-2,GSK3A — Glycogen synthase kinase-3 alpha,ABEMACICLIB
+lasmiditan,5-hydroxytryptamine receptor 1F,FLT3 — Receptor-type tyrosine-protein kinase FLT3,SUNITINIB
+pregabalin,Voltage-gated calcium channel,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+etravirine,Human immunodeficiency virus type 1 reverse transcriptase,SRC — Proto-oncogene tyrosine-protein kinase Src,DASATINIB ANHYDROUS
+zavegepant,"Calcitonin gene-related peptide type 1 receptor; Calcitonin-gene-related peptide receptor, CALCRL/RAMP1",PTK2 — Focal adhesion kinase 1,STAUROSPORINE
+dasabuvir,RNA-directed RNA polymerase,PGR — Progesterone receptor,NORETHINDRONE
+imiquimod,Toll-like receptor 7,FDPS — Farnesyl pyrophosphate synthase,METHYL CARNOSATE
+varenicline,Neuronal acetylcholine receptor; alpha4/beta2,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+lacosamide,Sodium channel alpha subunit,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+indomethacin,Cyclooxygenase,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+tofacitinib,Janus Kinase (JAK),PARP2 — Poly [ADP-ribose] polymerase 2,TALAZOPARIB
+guanfacine,Adrenergic receptor alpha-2,THRB — Thyroid hormone receptor beta,LIOTHYRONINE
+cabotegravir,Human immunodeficiency virus type 1 integrase,PPARG — Peroxisome proliferator-activated receptor gamma,PIOGLITAZONE
+terazosin,Adrenergic receptor alpha-1,NTRK3 — NT-3 growth factor receptor,STAUROSPORINE
+sufentanil,Mu-type opioid receptor,PDGFRA — Platelet-derived growth factor receptor alpha,SUNITINIB
+vaborbactam,Carbapenem-hydrolyzing beta-lactamase KPC,CA1 — Carbonic anhydrase 1,ETHOXZOLAMIDE
+metoprolol,Beta-1 adrenergic receptor,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+indacaterol,Beta-2 adrenergic receptor,CA2 — Carbonic anhydrase 2,DORZOLAMIDE
+elvitegravir,Human immunodeficiency virus type 1 integrase,MAPK8 — Mitogen-activated protein kinase 8,STAUROSPORINE
+brexanolone,GABA-A receptor; anion channel,ESR2 — Estrogen receptor beta,RALOXIFENE
+bumetanide,Solute carrier family 12 member 1,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+selegiline,Amine oxidase [flavin-containing] B,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+tizanidine,Adrenergic receptor alpha-2,GSK3A — Glycogen synthase kinase-3 alpha,ABEMACICLIB
+pitavastatin,3-hydroxy-3-methylglutaryl-coenzyme A reductase,MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+lasmiditan,5-hydroxytryptamine receptor 1F,NTRK2 — BDNF/NT-3 growth factors receptor,MIDOSTAURIN
+glimepiride,"Sulfonylurea receptor 1, Kir6.2",CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+aprepitant,Substance-P receptor,HMGCR — 3-hydroxy-3-methylglutaryl-coenzyme A reductase,ATORVASTATIN
+vaborbactam,Carbapenem-hydrolyzing beta-lactamase KPC,MME — Neprilysin,OMAPATRILAT
+memantine,Glutamate [NMDA] receptor,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+sotalol,Beta-1 adrenergic receptor; Beta-2 adrenergic receptor; Voltage-gated inwardly rectifying potassium channel KCNH2,"ALDH2 — Aldehyde dehydrogenase, mitochondrial",PRUNETIN
+enasidenib,"Isocitrate dehydrogenase [NADP], mitochondrial",BRAF — Serine/threonine-protein kinase B-raf,SORAFENIB
+desoximetasone,Glucocorticoid receptor,PRKCB — Protein kinase C beta type,ENZASTAURIN
+nimodipine,Mineralocorticoid receptor; Voltage-gated L-type calcium channel,CA12 — Carbonic anhydrase 12,INDAPAMIDE
+thalidomide,CRL4(CRBN) E3 ubiquitin ligase,CDK9 — Cyclin-dependent kinase 9,DINACICLIB
+binimetinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,PARP2 — Poly [ADP-ribose] polymerase 2,TALAZOPARIB
+ticagrelor,P2Y purinoceptor 12,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+ixabepilone,Tubulin,PRKCB — Protein kinase C beta type,ENZASTAURIN
+lumateperone,5-hydroxytryptamine receptor 2A; D(2) dopamine receptor; Sodium-dependent serotonin transporter,ACHE — Acetylcholinesterase,DONEPEZIL
+alprazolam,GABA-A receptor; anion channel,GSK3A — Glycogen synthase kinase-3 alpha,ABEMACICLIB
+indacaterol,Beta-2 adrenergic receptor,JAK1 — Tyrosine-protein kinase JAK1,RUXOLITINIB
+rimegepant,Calcitonin gene-related peptide type 1 receptor,JAK2 — Tyrosine-protein kinase JAK2,RUXOLITINIB
+arformoterol,Beta-2 adrenergic receptor,MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+carbinoxamine,Histamine H1 receptor,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+ranolazine,Sodium channel protein type 4 subunit alpha; Sodium channel protein type 5 subunit alpha,KDR — Vascular endothelial growth factor receptor 2,SUNITINIB
+tetracaine,Sodium channel alpha subunit,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+cyclobenzaprine,5-hydroxytryptamine receptor 2A; 5-hydroxytryptamine receptor 2C,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+piperacillin,Bacterial penicillin-binding protein,MME — Neprilysin,OMAPATRILAT
+lisinopril,Angiotensin-converting enzyme,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+varenicline,Neuronal acetylcholine receptor; alpha4/beta2,ESRRG — Estrogen-related receptor gamma,BISPHENOL A
+bazedoxifene,Estrogen receptor,THRB — Thyroid hormone receptor beta,LIOTHYRONINE
+talazoparib,Poly [ADP-ribose] polymerase 1; Poly [ADP-ribose] polymerase 2,MET — Hepatocyte growth factor receptor,TEPOTINIB
+relebactam,Beta-lactamase; Beta-lactamase CTX-M; Beta-lactamase SHV-1; Beta-lactamase TEM; Carbapenem-hydrolyzing beta-lactamase KPC,MMP8 — Neutrophil collagenase,CIPEMASTAT
+elvitegravir,Human immunodeficiency virus type 1 integrase,ERBB2 — Receptor tyrosine-protein kinase erbB-2,IBRUTINIB
+ivabradine,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4,FGFR2 — Fibroblast growth factor receptor 2,PAZOPANIB
+cilastatin,Dipeptidase 1,PPARG — Peroxisome proliferator-activated receptor gamma,PIOGLITAZONE
+vibegron,Beta-3 adrenergic receptor,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+palbociclib,CDK6/cyclin D1; Cyclin-dependent kinase 4/cyclin D1,REN — Renin,REMIKIREN
+ondansetron,5-hydroxytryptamine receptor 3A,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+glimepiride,"Sulfonylurea receptor 1, Kir6.2",REN — Renin,REMIKIREN
+anastrozole,Aromatase,ALK — ALK tyrosine kinase receptor,CERITINIB
+tapinarof,Aryl hydrocarbon receptor,ALOX5 — Polyunsaturated fatty acid 5-lipoxygenase,研究化合物 CHEMBL3113617（无通用名称）
+benoxinate,Sodium channel alpha subunit,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+donepezil,Acetylcholinesterase,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+dextromethorphan,"Glutamate receptor ionotropic, NMDA 2A; Sigma non-opioid intracellular receptor 1",CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+mirdametinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+apremilast,Phosphodiesterase 4,JAK3 — Tyrosine-protein kinase JAK3,TOFACITINIB
+cabotegravir,Human immunodeficiency virus type 1 integrase,"PDE4D — 3',5'-cyclic-AMP phosphodiesterase 4D",ROLIPRAM
+ivosidenib,Isocitrate dehydrogenase [NADP] cytoplasmic,GSK3B — Glycogen synthase kinase-3 beta,ABEMACICLIB
+pregabalin,Voltage-gated calcium channel,ENPEP — Glutamyl aminopeptidase,研究化合物 CHEMBL4217064（无通用名称）
+rasagiline,Amine oxidase [flavin-containing] B,GBA1 — Lysosomal acid glucosylceramidase,研究化合物 CHEMBL5951426（无通用名称）
+vorinostat,Histone deacetylase 1; Histone deacetylase 2; Histone deacetylase 3; Protein deacetylase HDAC6,ECE1 — Endothelin-converting enzyme 1,研究化合物 CHEMBL571153（无通用名称）
+palonosetron,5-hydroxytryptamine receptor 3A,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+apixaban,Coagulation factor X,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+pomalidomide,CRL4(CRBN) E3 ubiquitin ligase,NTRK2 — BDNF/NT-3 growth factors receptor,MIDOSTAURIN
+pramipexole,D2-like dopamine receptor,CA2 — Carbonic anhydrase 2,DORZOLAMIDE
+enzalutamide,Androgen receptor,BRAF — Serine/threonine-protein kinase B-raf,SORAFENIB
+donepezil,Acetylcholinesterase,COMT — Catechol O-methyltransferase,OPICAPONE
+memantine,Glutamate [NMDA] receptor,AR — Androgen receptor,TESTOSTERONE
+amantadine,Glutamate [NMDA] receptor; Matrix protein 2,GBA1 — Lysosomal acid glucosylceramidase,研究化合物 CHEMBL5951426（无通用名称）
+labetalol,Adrenergic receptor,CA1 — Carbonic anhydrase 1,ETHOXZOLAMIDE
+xanomeline,Muscarinic acetylcholine receptor M1; Muscarinic acetylcholine receptor M4,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+glimepiride,"Sulfonylurea receptor 1, Kir6.2",MME — Neprilysin,OMAPATRILAT
+pitavastatin,3-hydroxy-3-methylglutaryl-coenzyme A reductase,MME — Neprilysin,OMAPATRILAT
+afatinib,Epidermal growth factor receptor; Receptor tyrosine-protein kinase erbB-2; Receptor tyrosine-protein kinase erbB-4,REN — Renin,REMIKIREN
+metoclopramide,5-hydroxytryptamine receptor 3A; 5-hydroxytryptamine receptor 4; D(2) dopamine receptor,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+rasagiline,Amine oxidase [flavin-containing] B,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+lofexidine,Adrenergic receptor alpha-2,GSK3A — Glycogen synthase kinase-3 alpha,ABEMACICLIB
+lenalidomide,CRL4(CRBN) E3 ubiquitin ligase,PRKCB — Protein kinase C beta type,ENZASTAURIN
+terazosin,Adrenergic receptor alpha-1,"PIK3CA — Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",GEDATOLISIB
+bupivacaine,Sodium channel protein type 4 subunit alpha,MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+pregabalin,Voltage-gated calcium channel,REN — Renin,REMIKIREN
+rilpivirine,Human immunodeficiency virus type 1 reverse transcriptase,MAPK9 — Mitogen-activated protein kinase 9,TANZISERTIB
+guanfacine,Adrenergic receptor alpha-2,ROCK2 — Rho-associated protein kinase 2,Y-39983
+larotrectinib,Neurotrophic tyrosine kinase receptor,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+dolutegravir,Human immunodeficiency virus type 1 integrase,MAPK9 — Mitogen-activated protein kinase 9,TANZISERTIB
+ribociclib,Cyclin-dependent kinase 4; Cyclin-dependent kinase 6,REN — Renin,REMIKIREN
+etravirine,Human immunodeficiency virus type 1 reverse transcriptase,TYMS — Thymidylate synthase,5-FLUORODEOXYURIDYLATE
+etonogestrel,Progesterone receptor,VDR — Vitamin D3 receptor,研究化合物 CHEMBL4066573（无通用名称）
+quetiapine,5-hydroxytryptamine receptor 2A; 5-hydroxytryptamine receptor 2C; D(2) dopamine receptor,ESRRG — Estrogen-related receptor gamma,BISPHENOL A
+naltrexone,Opioid receptors; mu/kappa/delta,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+nicardipine,Voltage-gated L-type calcium channel,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+panobinostat,Histone deacetylase,PARP2 — Poly [ADP-ribose] polymerase 2,TALAZOPARIB
+enasidenib,"Isocitrate dehydrogenase [NADP], mitochondrial",GSK3B — Glycogen synthase kinase-3 beta,ABEMACICLIB
+tipiracil,Thymidine phosphorylase,TYMS — Thymidylate synthase,5-FLUORODEOXYURIDYLATE
+dasabuvir,RNA-directed RNA polymerase,AR — Androgen receptor,TESTOSTERONE
+elexacaftor,Cystic fibrosis transmembrane conductance regulator,"PIK3CG — Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform",GEDATOLISIB
+labetalol,Adrenergic receptor,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+ubrogepant,Calcitonin gene-related peptide type 1 receptor,JAK3 — Tyrosine-protein kinase JAK3,TOFACITINIB
+amlodipine,Voltage-gated L-type calcium channel,CA12 — Carbonic anhydrase 12,INDAPAMIDE
+rucaparib,"PARP 1, 2 and 3","PIK3CB — Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform",GEDATOLISIB
+binimetinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,HDAC1 — Histone deacetylase 1,VORINOSTAT
+albuterol,Beta-2 adrenergic receptor,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+mebendazole,Tubulin,HCK — Tyrosine-protein kinase HCK,STAUROSPORINE
+quinidine,Sodium channel alpha subunit,ACVRL1 — Activin receptor type-1-like,VANDETANIB
+avibactam,Beta-lactamase TEM,DPP4 — Dipeptidyl peptidase 4,LINAGLIPTIN
+labetalol,Adrenergic receptor,EGLN3 — Prolyl hydroxylase EGLN3,研究化合物 CHEMBL3133890（无通用名称）
+mebendazole,Tubulin,FGFR2 — Fibroblast growth factor receptor 2,PAZOPANIB
+methocarbamol,Carbonic anhydrase 1,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+bictegravir,Human immunodeficiency virus type 1 integrase,MAPK8 — Mitogen-activated protein kinase 8,STAUROSPORINE
+glasdegib,Protein smoothened,PDGFRA — Platelet-derived growth factor receptor alpha,SUNITINIB
+asenapine,5-hydroxytryptamine receptor 2A; D(2) dopamine receptor,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+binimetinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+esketamine,Glutamate [NMDA] receptor,GSK3B — Glycogen synthase kinase-3 beta,ABEMACICLIB
+nevirapine,Human immunodeficiency virus type 1 reverse transcriptase,AKT1 — RAC-alpha serine/threonine-protein kinase,IPATASERTIB
+dasabuvir,RNA-directed RNA polymerase,ALK — ALK tyrosine kinase receptor,CERITINIB
+doravirine,Human immunodeficiency virus type 1 reverse transcriptase,NR3C1 — Glucocorticoid receptor,PREDNISONE
+relugolix,Gonadotropin-releasing hormone receptor,FLT1 — Vascular endothelial growth factor receptor 1,SUNITINIB
+roflumilast,Phosphodiesterase 4,ACHE — Acetylcholinesterase,DONEPEZIL
+glasdegib,Protein smoothened,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+lubiprostone,Chloride channel protein 2,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+vaborbactam,Carbapenem-hydrolyzing beta-lactamase KPC,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+ubrogepant,Calcitonin gene-related peptide type 1 receptor,METAP2 — Methionine aminopeptidase 2,WM-1119
+mirabegron,Beta-3 adrenergic receptor,MME — Neprilysin,OMAPATRILAT
+silodosin,Alpha-1A adrenergic receptor,CSF1R — Macrophage colony-stimulating factor 1 receptor,DASATINIB ANHYDROUS
+loxapine,5-hydroxytryptamine receptor 2A; 5-hydroxytryptamine receptor 2C; D2-like dopamine receptor,NTRK3 — NT-3 growth factor receptor,STAUROSPORINE
+brivaracetam,Synaptic vesicle glycoprotein 2A,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+levetiracetam,Synaptic vesicle glycoprotein 2A; Voltage-dependent N-type calcium channel subunit alpha-1B,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+enasidenib,"Isocitrate dehydrogenase [NADP], mitochondrial",LCK — Tyrosine-protein kinase Lck,DASATINIB ANHYDROUS
+duvelisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform; Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform",PARP2 — Poly [ADP-ribose] polymerase 2,TALAZOPARIB
+desoximetasone,Glucocorticoid receptor,RARB — Retinoic acid receptor beta,TRETINOIN
+gepirone,5-hydroxytryptamine receptor 1A,GSK3B — Glycogen synthase kinase-3 beta,ABEMACICLIB
+tapinarof,Aryl hydrocarbon receptor,ESR1 — Estrogen receptor,RALOXIFENE
+givinostat,Histone deacetylase,FLT1 — Vascular endothelial growth factor receptor 1,SUNITINIB
+ozanimod,Sphingosine 1-phosphate receptor 1; Sphingosine 1-phosphate receptor 5,JAK2 — Tyrosine-protein kinase JAK2,RUXOLITINIB
+ranolazine,Sodium channel protein type 4 subunit alpha; Sodium channel protein type 5 subunit alpha,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+rilpivirine,Human immunodeficiency virus type 1 reverse transcriptase,MAPK8 — Mitogen-activated protein kinase 8,STAUROSPORINE
+dasabuvir,RNA-directed RNA polymerase,NR3C1 — Glucocorticoid receptor,PREDNISONE
+indapamide,Solute carrier family 12 member 3,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+vibegron,Beta-3 adrenergic receptor,ROCK2 — Rho-associated protein kinase 2,Y-39983
+nalmefene,Delta-type opioid receptor; Kappa-type opioid receptor; Mu-type opioid receptor,VDR — Vitamin D3 receptor,研究化合物 CHEMBL4066573（无通用名称）
+selinexor,Exportin-1,ABL1 — Tyrosine-protein kinase ABL1,PONATINIB
+rosuvastatin,3-hydroxy-3-methylglutaryl-coenzyme A reductase,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+tasimelteon,Melatonin receptor,NR3C1 — Glucocorticoid receptor,PREDNISONE
+sapropterin,Phenylalanine-4-hydroxylase,CHEK2 — Serine/threonine-protein kinase Chk2,研究化合物 CHEMBL4465866（无通用名称）
+lubiprostone,Chloride channel protein 2,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+varenicline,Neuronal acetylcholine receptor; alpha4/beta2,NTRK3 — NT-3 growth factor receptor,STAUROSPORINE
+belzutifan,Endothelial PAS domain-containing protein 1,AR — Androgen receptor,TESTOSTERONE
+bictegravir,Human immunodeficiency virus type 1 integrase,PARP2 — Poly [ADP-ribose] polymerase 2,TALAZOPARIB
+ketoprofen,Cyclooxygenase,PPARG — Peroxisome proliferator-activated receptor gamma,PIOGLITAZONE
+vemurafenib,Serine/threonine-protein kinase B-raf,"PIK3CA — Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",GEDATOLISIB
+metformin,"Glycerol-3-phosphate dehydrogenase, mitochondrial; Mitochondrial complex I (NADH dehydrogenase)",FLT3 — Receptor-type tyrosine-protein kinase FLT3,SUNITINIB
+alpelisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+pomalidomide,CRL4(CRBN) E3 ubiquitin ligase,HDAC2 — Histone deacetylase 2,VORINOSTAT
+dabrafenib,Serine/threonine-protein kinase B-raf,HDAC1 — Histone deacetylase 1,VORINOSTAT
+telmisartan,Type-1 angiotensin II receptor,MME — Neprilysin,OMAPATRILAT
+esmolol,Beta-1 adrenergic receptor; Beta-2 adrenergic receptor,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+levamlodipine,Voltage-gated L-type calcium channel,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+nevirapine,Human immunodeficiency virus type 1 reverse transcriptase,"CYP17A1 — Steroid 17-alpha-hydroxylase/17,20 lyase",BIFONAZOLE
+pilocarpine,Muscarinic acetylcholine receptor M1; Muscarinic acetylcholine receptor M3,"CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+idelalisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+betrixaban,Coagulation factor X,F7 — Coagulation factor VII,研究化合物 CHEMBL3127491（无通用名称）
+tedizolid,Bacterial 70S ribosome,NTRK2 — BDNF/NT-3 growth factors receptor,MIDOSTAURIN
+clascoterone,Androgen receptor,"CYP17A1 — Steroid 17-alpha-hydroxylase/17,20 lyase",BIFONAZOLE
+levamlodipine,Voltage-gated L-type calcium channel,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+acetaminophen,Cyclooxygenase; Fatty-acid amide hydrolase 1; Transient receptor potential cation channel subfamily V member 1,MIF — Macrophage migration inhibitory factor,BTZO-1
+gemcitabine,DNA polymerase (alpha/delta/epsilon); Ribonucleoside-diphosphate reductase RR1,DNMT1 — DNA (cytosine-5)-methyltransferase 1,研究化合物 CHEMBL5592841（无通用名称）
+pilocarpine,Muscarinic acetylcholine receptor M1; Muscarinic acetylcholine receptor M3,"CYP11B1 — Cytochrome P450 11B1, mitochondrial",KETOCONAZOLE
+thalidomide,CRL4(CRBN) E3 ubiquitin ligase,HDAC2 — Histone deacetylase 2,VORINOSTAT
+etonogestrel,Progesterone receptor,ESR2 — Estrogen receptor beta,RALOXIFENE
+bictegravir,Human immunodeficiency virus type 1 integrase,EZH2 — Histone-lysine N-methyltransferase EZH2,GSK2816126
+baricitinib,Tyrosine-protein kinase JAK1; Tyrosine-protein kinase JAK2,HDAC1 — Histone deacetylase 1,VORINOSTAT
+articaine,Sodium channel alpha subunit,MME — Neprilysin,OMAPATRILAT
+oxycodone,Mu-type opioid receptor,CA2 — Carbonic anhydrase 2,DORZOLAMIDE
+bempedoic acid,ATP-citrate synthase,MMP3 — Stromelysin-1,ILOMASTAT
+olmesartan,Type-1 angiotensin II receptor,MME — Neprilysin,OMAPATRILAT
+duvelisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform; Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform",HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+nilotinib,Bcr/Abl fusion protein; Tyrosine-protein kinase ABL1,GART — Trifunctional purine biosynthetic protein adenosine-3,研究化合物 CHEMBL5653589（无通用名称）
+landiolol,Beta-1 adrenergic receptor,CYP26A1 — Cytochrome P450 26A1,TALAROZOLE
+rilpivirine,Human immunodeficiency virus type 1 reverse transcriptase,YES1 — Tyrosine-protein kinase Yes,STAUROSPORINE
+capmatinib,Hepatocyte growth factor receptor,EZH2 — Histone-lysine N-methyltransferase EZH2,GSK2816126
+bempedoic acid,ATP-citrate synthase,HMGCR — 3-hydroxy-3-methylglutaryl-coenzyme A reductase,ATORVASTATIN
+thalidomide,CRL4(CRBN) E3 ubiquitin ligase,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+nicotine,Neuronal acetylcholine receptor; alpha4/beta2,CYP46A1 — Cholesterol 24-hydroxylase,VORICONAZOLE
+hydroxychloroquine,Ferriprotoporphyrin IX; Toll-like receptor 7; Toll-like receptor 9,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+paroxetine,Sodium-dependent serotonin transporter,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+lenalidomide,CRL4(CRBN) E3 ubiquitin ligase,HDAC2 — Histone deacetylase 2,VORINOSTAT
+ranolazine,Sodium channel protein type 4 subunit alpha; Sodium channel protein type 5 subunit alpha,IGF1R — Insulin-like growth factor 1 receptor,LINSITINIB
+nimodipine,Mineralocorticoid receptor; Voltage-gated L-type calcium channel,F7 — Coagulation factor VII,研究化合物 CHEMBL3127491（无通用名称）
+articaine,Sodium channel alpha subunit,XDH — Xanthine dehydrogenase/oxidase,FEBUXOSTAT
+pemigatinib,Fibroblast growth factor receptor 1; Fibroblast growth factor receptor 2; Fibroblast growth factor receptor 3,CDK9 — Cyclin-dependent kinase 9,DINACICLIB
+rilpivirine,Human immunodeficiency virus type 1 reverse transcriptase,FYN — Tyrosine-protein kinase Fyn,DASATINIB ANHYDROUS
+teriflunomide,"Dihydroorotate dehydrogenase (quinone), mitochondrial",XDH — Xanthine dehydrogenase/oxidase,FEBUXOSTAT
+baricitinib,Tyrosine-protein kinase JAK1; Tyrosine-protein kinase JAK2,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+dabrafenib,Serine/threonine-protein kinase B-raf,"PIK3CA — Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",GEDATOLISIB
+ruxolitinib,Non-receptor tyrosine-protein kinase TYK2; Tyrosine-protein kinase JAK1; Tyrosine-protein kinase JAK2; Tyrosine-protein kinase JAK3,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+alvimopan,Mu-type opioid receptor,EGLN3 — Prolyl hydroxylase EGLN3,研究化合物 CHEMBL3133890（无通用名称）
+retapamulin,70S ribosome,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+pomalidomide,CRL4(CRBN) E3 ubiquitin ligase,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+brivaracetam,Synaptic vesicle glycoprotein 2A,CYP46A1 — Cholesterol 24-hydroxylase,VORICONAZOLE
+meropenem,Bacterial penicillin-binding protein,MMP7 — Matrilysin,PRINOMASTAT
+mirdametinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+esmolol,Beta-1 adrenergic receptor; Beta-2 adrenergic receptor,CA7 — Carbonic anhydrase 7,ETHOXZOLAMIDE
+ivabradine,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4,"CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+epinephrine,Adrenergic receptor,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+eltrombopag,Thrombopoietin receptor,LCK — Tyrosine-protein kinase Lck,DASATINIB ANHYDROUS
+vorapaxar,Proteinase-activated receptor 1,DPP4 — Dipeptidyl peptidase 4,LINAGLIPTIN
+bazedoxifene,Estrogen receptor,RET — Proto-oncogene tyrosine-protein kinase receptor Ret,VANDETANIB
+hydroxychloroquine,Ferriprotoporphyrin IX; Toll-like receptor 7; Toll-like receptor 9,TYK2 — Non-receptor tyrosine-protein kinase TYK2,TOFACITINIB
+perampanel,Glutamate receptor ionotropic AMPA,CYP46A1 — Cholesterol 24-hydroxylase,VORICONAZOLE
+aripiprazole,5-hydroxytryptamine receptor 1A; 5-hydroxytryptamine receptor 2A; D(2) dopamine receptor,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+calcipotriene,Vitamin D3 receptor,EGLN3 — Prolyl hydroxylase EGLN3,研究化合物 CHEMBL3133890（无通用名称）
+imipenem,Bacterial penicillin-binding protein,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+meloxicam,Prostaglandin G/H synthase 2,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+crisaborole,Phosphodiesterase 4,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+deutetrabenazine,Synaptic vesicular amine transporter,UGCG — Ceramide glucosyltransferase,ELIGLUSTAT
+tazemetostat,Histone-lysine N-methyltransferase EZH2,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+zavegepant,"Calcitonin gene-related peptide type 1 receptor; Calcitonin-gene-related peptide receptor, CALCRL/RAMP1",INSR — Insulin receptor,STAUROSPORINE
+olmesartan,Type-1 angiotensin II receptor,EGLN3 — Prolyl hydroxylase EGLN3,研究化合物 CHEMBL3133890（无通用名称）
+atrasentan,Endothelin-1 receptor,ERBB2 — Receptor tyrosine-protein kinase erbB-2,IBRUTINIB
+colchicine,Tubulin,FKBP1A — Peptidyl-prolyl cis-trans isomerase FKBP1A,SIROLIMUS
+ivabradine,Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 4,"CYP11B1 — Cytochrome P450 11B1, mitochondrial",KETOCONAZOLE
+methylnaltrexone,Mu-type opioid receptor,CA2 — Carbonic anhydrase 2,DORZOLAMIDE
+raloxifene,Estrogen receptor; Estrogen receptor beta,RET — Proto-oncogene tyrosine-protein kinase receptor Ret,VANDETANIB
+olopatadine,Histamine H1 receptor,NR3C1 — Glucocorticoid receptor,PREDNISONE
+amisulpride,Dopamine receptors; D2 & D3; Serotonin (5-HT) receptor,CA2 — Carbonic anhydrase 2,DORZOLAMIDE
+ozanimod,Sphingosine 1-phosphate receptor 1; Sphingosine 1-phosphate receptor 5,EZH2 — Histone-lysine N-methyltransferase EZH2,GSK2816126
+aclidinium,Muscarinic acetylcholine receptor M3,PPARG — Peroxisome proliferator-activated receptor gamma,PIOGLITAZONE
+enzalutamide,Androgen receptor,NTRK1 — High affinity nerve growth factor receptor,STAUROSPORINE
+glycopyrronium,Muscarinic acetylcholine receptor; Muscarinic acetylcholine receptor M1; Muscarinic acetylcholine receptor M3,CYP26A1 — Cytochrome P450 26A1,TALAROZOLE
+dolutegravir,Human immunodeficiency virus type 1 integrase,MAPK8 — Mitogen-activated protein kinase 8,STAUROSPORINE
+pemigatinib,Fibroblast growth factor receptor 1; Fibroblast growth factor receptor 2; Fibroblast growth factor receptor 3,"PDE3A — cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A",研究化合物 CHEMBL4247714（无通用名称）
+vigabatrin,"4-aminobutyrate aminotransferase, mitochondrial",MMP8 — Neutrophil collagenase,CIPEMASTAT
+vardenafil,"cGMP-specific 3',5'-cyclic phosphodiesterase","CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+trametinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2; Dual specificity mitogen-activated protein kinase kinase; MEK1/2,DHFR — Dihydrofolate reductase,研究化合物 CHEMBL310759（无通用名称）
+mesalamine,Cyclooxygenase; Peroxisome proliferator-activated receptor gamma; Polyunsaturated fatty acid 5-lipoxygenase,XDH — Xanthine dehydrogenase/oxidase,FEBUXOSTAT
+rivaroxaban,Coagulation factor X,LCK — Tyrosine-protein kinase Lck,DASATINIB ANHYDROUS
+selumetinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,UGCG — Ceramide glucosyltransferase,ELIGLUSTAT
+sotalol,Beta-1 adrenergic receptor; Beta-2 adrenergic receptor; Voltage-gated inwardly rectifying potassium channel KCNH2,CYP26A1 — Cytochrome P450 26A1,TALAROZOLE
+sufentanil,Mu-type opioid receptor,F12 — Coagulation factor XII,SEPIMOSTAT
+levamlodipine,Voltage-gated L-type calcium channel,CA1 — Carbonic anhydrase 1,ETHOXZOLAMIDE
+calcipotriene,Vitamin D3 receptor,AR — Androgen receptor,TESTOSTERONE
+norephinephrine,Adrenergic receptor,CTSC — Dipeptidyl peptidase 1,BRENSOCATIB
+brexpiprazole,5-hydroxytryptamine receptor 1A; 5-hydroxytryptamine receptor 2A; D(2) dopamine receptor,"PDE5A — cGMP-specific 3',5'-cyclic phosphodiesterase",TADALAFIL
+aripiprazole,5-hydroxytryptamine receptor 1A; 5-hydroxytryptamine receptor 2A; D(2) dopamine receptor,PTK2 — Focal adhesion kinase 1,STAUROSPORINE
+ivosidenib,Isocitrate dehydrogenase [NADP] cytoplasmic,AKT1 — RAC-alpha serine/threonine-protein kinase,IPATASERTIB
+afatinib,Epidermal growth factor receptor; Receptor tyrosine-protein kinase erbB-2; Receptor tyrosine-protein kinase erbB-4,"CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+baclofen,GABA-B receptor,CYP46A1 — Cholesterol 24-hydroxylase,VORICONAZOLE
+clobazam,GABA-A receptor; anion channel,CYP46A1 — Cholesterol 24-hydroxylase,VORICONAZOLE
+esmolol,Beta-1 adrenergic receptor; Beta-2 adrenergic receptor,ACE — Angiotensin-converting enzyme,LISINOPRIL ANHYDROUS
+ozenoxacin,DNA gyrase; DNA topoisomerase IV; Topoisomerase IV,TYK2 — Non-receptor tyrosine-protein kinase TYK2,TOFACITINIB
+dexrazoxane,DNA topoisomerase II; Iron,MMP7 — Matrilysin,PRINOMASTAT
+rolapitant,Substance-P receptor,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+glasdegib,Protein smoothened,FLT3 — Receptor-type tyrosine-protein kinase FLT3,SUNITINIB
+bempedoic acid,ATP-citrate synthase,MMP12 — Macrophage metalloelastase,研究化合物 CHEMBL2385479（无通用名称）
+pomalidomide,CRL4(CRBN) E3 ubiquitin ligase,"PIK3CA — Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform",GEDATOLISIB
+relugolix,Gonadotropin-releasing hormone receptor,KDR — Vascular endothelial growth factor receptor 2,SUNITINIB
+oliceridine,Mu-type opioid receptor,"CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+diazepam,GABA-A receptor; anion channel,CYP46A1 — Cholesterol 24-hydroxylase,VORICONAZOLE
+dimethyl fumarate,Kelch-like ECH-associated protein 1,HMGCR — 3-hydroxy-3-methylglutaryl-coenzyme A reductase,ATORVASTATIN
+linagliptin,Dipeptidyl peptidase 4,"PDE5A — cGMP-specific 3',5'-cyclic phosphodiesterase",TADALAFIL
+colchicine,Tubulin,UGCG — Ceramide glucosyltransferase,ELIGLUSTAT
+umeclidinium,Muscarinic acetylcholine receptor M3,"CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+brexanolone,GABA-A receptor; anion channel,ESR1 — Estrogen receptor,RALOXIFENE
+ozanimod,Sphingosine 1-phosphate receptor 1; Sphingosine 1-phosphate receptor 5,PRKCB — Protein kinase C beta type,ENZASTAURIN
+chloroprocaine,Sodium channel alpha subunit,ACHE — Acetylcholinesterase,DONEPEZIL
+cobimetinib,Dual specificity mitogen-activated protein kinase kinase 1; Dual specificity mitogen-activated protein kinase kinase 2,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+etonogestrel,Progesterone receptor,CYP19A1 — Aromatase,ANASTROZOLE
+indacaterol,Beta-2 adrenergic receptor,TYK2 — Non-receptor tyrosine-protein kinase TYK2,TOFACITINIB
+umeclidinium,Muscarinic acetylcholine receptor M3,EGLN3 — Prolyl hydroxylase EGLN3,研究化合物 CHEMBL3133890（无通用名称）
+varenicline,Neuronal acetylcholine receptor; alpha4/beta2,MAPKAPK2 — MAP kinase-activated protein kinase 2,STAUROSPORINE
+copanlisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform; Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",NTRK3 — NT-3 growth factor receptor,STAUROSPORINE
+benoxinate,Sodium channel alpha subunit,PPARD — Peroxisome proliferator-activated receptor delta,GW 0742
+migalastat,Alpha-galactosidase A,UMPS — Uridine 5'-monophosphate synthase,研究化合物 CHEMBL5653589（无通用名称）
+sonidegib,Protein smoothened,NTRK2 — BDNF/NT-3 growth factors receptor,MIDOSTAURIN
+pilocarpine,Muscarinic acetylcholine receptor M1; Muscarinic acetylcholine receptor M3,"CYP17A1 — Steroid 17-alpha-hydroxylase/17,20 lyase",BIFONAZOLE
+lesinurad,Solute carrier family 22 member 12,UGCG — Ceramide glucosyltransferase,ELIGLUSTAT
+tedizolid,Bacterial 70S ribosome,"PDE10A — cAMP and cAMP-inhibited cGMP 3',5'-cyclic phosphodiesterase 10A",研究化合物 CHEMBL248380（无通用名称）
+trospium,Muscarinic acetylcholine receptor M2; Muscarinic acetylcholine receptor M3,CYP26A1 — Cytochrome P450 26A1,TALAROZOLE
+remimazolam,GABA-A receptor; anion channel,"PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+epinephrine,Adrenergic receptor,ALOX5 — Polyunsaturated fatty acid 5-lipoxygenase,研究化合物 CHEMBL3113617（无通用名称）
+imipenem,Bacterial penicillin-binding protein,MMP8 — Neutrophil collagenase,CIPEMASTAT
+osilodrostat,"Cytochrome P450 11B1, mitochondrial",UGCG — Ceramide glucosyltransferase,ELIGLUSTAT
+tedizolid,Bacterial 70S ribosome,NTRK3 — NT-3 growth factor receptor,STAUROSPORINE
+furosemide,Solute carrier family 12 member 1,F7 — Coagulation factor VII,研究化合物 CHEMBL3127491（无通用名称）
+ranolazine,Sodium channel protein type 4 subunit alpha; Sodium channel protein type 5 subunit alpha,PDGFRA — Platelet-derived growth factor receptor alpha,SUNITINIB
+bempedoic acid,ATP-citrate synthase,CA4 — Carbonic anhydrase 4,ACETAZOLAMIDE
+macimorelin,Growth hormone secretagogue receptor type 1,MMP3 — Stromelysin-1,ILOMASTAT
+pantoprazole,Potassium-transporting ATPase,"NOS2 — Nitric oxide synthase, inducible",1400W
+asenapine,5-hydroxytryptamine receptor 2A; D(2) dopamine receptor,NR3C2 — Mineralocorticoid receptor,ALDOSTERONE
+palonosetron,5-hydroxytryptamine receptor 3A,"CYP11B2 — Cytochrome P450 11B2, mitochondrial",OSILODROSTAT
+remimazolam,GABA-A receptor; anion channel,ACHE — Acetylcholinesterase,DONEPEZIL
+lifitegrast,Integrin alpha-L/beta-2 (LFA-1),TYMS — Thymidylate synthase,5-FLUORODEOXYURIDYLATE
+copanlisib,"Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform; Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform",NTRK2 — BDNF/NT-3 growth factors receptor,MIDOSTAURIN
+sonidegib,Protein smoothened,LCK — Tyrosine-protein kinase Lck,DASATINIB ANHYDROUS
+oliceridine,Mu-type opioid receptor,"CYP11B1 — Cytochrome P450 11B1, mitochondrial",KETOCONAZOLE
+tetracaine,Sodium channel alpha subunit,F12 — Coagulation factor XII,SEPIMOSTAT
+tedizolid,Bacterial 70S ribosome,HMGCR — 3-hydroxy-3-methylglutaryl-coenzyme A reductase,ATORVASTATIN
+eltrombopag,Thrombopoietin receptor,HCK — Tyrosine-protein kinase HCK,STAUROSPORINE
+dexrazoxane,DNA topoisomerase II; Iron,MMP8 — Neutrophil collagenase,CIPEMASTAT
+remimazolam,GABA-A receptor; anion channel,FAAH — Fatty-acid amide hydrolase 1,MK-3168
+lenalidomide,CRL4(CRBN) E3 ubiquitin ligase,HDAC11 — Histone deacetylase 11,PANOBINOSTAT
+edoxaban,Coagulation factor X,F7 — Coagulation factor VII,研究化合物 CHEMBL3127491（无通用名称）
+fluvoxamine,Sodium-dependent serotonin transporter,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+fenofibric acid,Peroxisome proliferator-activated receptor alpha,CYP19A1 — Aromatase,ANASTROZOLE
+avanafil,"cGMP-specific 3',5'-cyclic phosphodiesterase","PDE9A — High affinity cGMP-specific 3',5'-cyclic phosphodiesterase 9A",研究化合物 CHEMBL5810180（无通用名称）
+riluzole,Sodium channel alpha subunit,MAOB — Amine oxidase [flavin-containing] B,SAFINAMIDE
+dexmethylphenidate,Sodium-dependent dopamine transporter; Sodium-dependent noradrenaline transporter,AKT3 — RAC-gamma serine/threonine-protein kinase,STAUROSPORINE
+efavirenz,Human immunodeficiency virus type 1 reverse transcriptase,AR — Androgen receptor,TESTOSTERONE
+avanafil,"cGMP-specific 3',5'-cyclic phosphodiesterase","PDE4D — 3',5'-cyclic-AMP phosphodiesterase 4D",ROLIPRAM
+metformin,"Glycerol-3-phosphate dehydrogenase, mitochondrial; Mitochondrial complex I (NADH dehydrogenase)",JAK2 — Tyrosine-protein kinase JAK2,RUXOLITINIB
+deutetrabenazine,Synaptic vesicular amine transporter,COMT — Catechol O-methyltransferase,OPICAPONE
+morphine,Mu-type opioid receptor,CA2 — Carbonic anhydrase 2,DORZOLAMIDE
+duloxetine,Sodium-dependent noradrenaline transporter; Sodium-dependent serotonin transporter,ACHE — Acetylcholinesterase,DONEPEZIL

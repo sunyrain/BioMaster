@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "files_checked": 1187,
+  "max_residues_per_pocket": 99,
+  "max_heavy_atoms_per_pocket": 803,
+  "native_drugclip_pairs": 3,
+  "max_native_cached_cosine_error": 0.0001383572816848755,
+  "max_rigid_motion_embedding_error": 2.1365704014897346e-06,
+  "feature_manifest": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/features/MANIFEST.json",
+    "sha256": "03bde6c21701dce8009dc7ce4e5c4e4890f49cc909007f7d7882282cf33aa49b",
+    "size_bytes": 1151480
+  },
+  "script": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_pocket_precision_assets.py",
+    "sha256": "88652bfa7c4ba62ab44d6c8fdf965d0c0f0c879a8469d4f1842d4c77a70b082e",
+    "size_bytes": 4348
+  }
+}

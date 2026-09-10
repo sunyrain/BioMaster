@@ -1,0 +1,19 @@
+[
+  {
+    "epoch": 1,
+    "validation": null,
+    "mean_losses": {
+      "bce": 0.05921579524874687,
+      "retrieval": 1.2943562443833798,
+      "query": null,
+      "assay": null
+    },
+    "exposure_sha256": "862b4d3a74b1eb6bd49c576e09e606e45a226826c485f151bae8e913722fb397",
+    "query_exposure_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "assay_exposure_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "coverage_rows": 1280,
+    "learning_rate": 0.0001,
+    "gradient_norm": 2.3053765296936035,
+    "epoch_seconds": 0.8443668568506837
+  }
+]

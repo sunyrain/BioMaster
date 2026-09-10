@@ -1,0 +1,29 @@
+{
+  "precision": "fp32, TF32 disabled",
+  "cutoffs": [
+    2018,
+    2020
+  ],
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "conditions": [
+    "full",
+    "geometry_off",
+    "coordinates_shuffled"
+  ],
+  "variant": "geometry",
+  "role": "post-selection development-only precision sensitivity; no training/reselection or test labels",
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_local_geometry_fp32_20260906.py",
+    "sha256": "a2d92cc7d781b37557017ecbe8523832769bd8d6284a76aa9b4f4c912796343e",
+    "size_bytes": 4786
+  },
+  "original_diagnostic": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_local_failure_audit_20260906/PROTOCOL.json",
+    "sha256": "10464e9c36ac75e33de5ef403155833e7466c1352a8cfc45be263b4c9d04188a",
+    "size_bytes": 1261
+  }
+}

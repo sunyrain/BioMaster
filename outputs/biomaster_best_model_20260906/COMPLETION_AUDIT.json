@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "checks": [
+    "54 global development runs and 24 matched local refinements",
+    "all retained components eligible under frozen rules",
+    "same-parent initialization and matched extra exposure",
+    "development-only architecture/epoch/median-seed selection",
+    "three fixed <=2022 refits",
+    "predictions frozen before opened regression labels",
+    "temporal/full-candidate and KIRHub/measured scopes kept distinct",
+    "seed metric means and paired-query uncertainty, no score ensemble",
+    "historical approval and representative FP32 sensitivity reported",
+    "dated <=2025 deployment labels and fixed training recipe",
+    "full-fit score boundary explicitly documented",
+    "one standalone checkpoint/configuration/CLI/model card/archive",
+    "all catalog feature axes and weights checked",
+    "FP32 parity, reload, invalid input and independent CPU inference",
+    "active documentation links actual delivery and respects registry scope"
+  ],
+  "evidence": {
+    "DATA_AND_REPRODUCTION_AUDIT.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/DATA_AND_REPRODUCTION_AUDIT.json",
+      "sha256": "10c9a2ac766cd7ab037bead506c4bf66c4f437e8cd98ad5e3ec23b4d6939cc79",
+      "size_bytes": 4242
+    },
+    "GLOBAL_PARENT_SELECTION.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/GLOBAL_PARENT_SELECTION.json",
+      "sha256": "989785b916e49047141e3395da1efe415b048b87e40152534cd2082b060d5310",
+      "size_bytes": 31960
+    },
+    "FINAL_ARCHITECTURE_SELECTION.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/FINAL_ARCHITECTURE_SELECTION.json",
+      "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+      "size_bytes": 17515
+    },
+    "ANCHORED_EXPOSURE_AUDIT.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/ANCHORED_EXPOSURE_AUDIT.json",
+      "sha256": "a81b92c3dbdeb1614689787b520083b56eed4bf6658f0ec058cf30f9808e95c3",
+      "size_bytes": 2612
+    },
+    "regression/RESULT.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/regression/RESULT.json",
+      "sha256": "cce3e189a63ff846c5f5394901cb60528c4329a373741628f9edaf38bbe33ab1",
+      "size_bytes": 3008
+    },
+    "DEPLOYMENT_SELECTION.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/DEPLOYMENT_SELECTION.json",
+      "sha256": "c449b7c8580bc3be8e9936cac07500d1e246be4cbf2d646660295f29c0321457",
+      "size_bytes": 1703
+    },
+    "DELIVERED_MODEL.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/DELIVERED_MODEL.json",
+      "sha256": "4df97b4d733ebd55d7417b99e68d285951809508beb76ee0b55d9a2cc5f2bc12",
+      "size_bytes": 2135
+    },
+    "EXPORTED_CPU_PARITY.json": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/EXPORTED_CPU_PARITY.json",
+      "sha256": "fdfa1392d04272b1890f571451fe895f621396419dd4d4c0d324054e0b24de69",
+      "size_bytes": 957
+    }
+  },
+  "scope": "best among declared development candidates for 720 old drugs / 384 targets; no universal or SOTA claim",
+  "retrospective_tests_previously_inspected": true,
+  "pretraining_cutoff_certified": false,
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_biomaster_selected_completion.py",
+    "sha256": "ecd631fcf7e71c2c6904a900115fe9014d8675b232b25388df0a9b1e62ed37da",
+    "size_bytes": 8695
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "STOPPED_STRUCTURAL_RETENTION_GATE",
+  "utc": "2026-09-08T07:58:18.436545+00:00",
+  "updates": 25,
+  "elapsed_seconds": 1342.2247865321115,
+  "formal": true,
+  "training_complete": false,
+  "promotion_eligible": false
+}

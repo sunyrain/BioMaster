@@ -1,0 +1,321 @@
+{
+  "status": "COMPLETE",
+  "completed": 30,
+  "expected": 30,
+  "missing": [],
+  "candidates": {
+    "capacity": {
+      "variant": "capacity",
+      "parameters": 2447390,
+      "mean": {
+        "selection": 0.39800973562230624,
+        "d2t_ap": 0.3836431002200416,
+        "t2d_ap": 0.25702019381110114,
+        "d2t_r20": 0.6356442577030812,
+        "t2d_r20": 0.5228729603729604,
+        "d2t_measured_ap": 0.8571166075956403,
+        "t2d_measured_ap": 0.7757333004725523
+      },
+      "seed_sd": {
+        "selection": 0.012634239883690185,
+        "d2t_ap": 0.01390325478012002,
+        "t2d_ap": 0.020824509580744922,
+        "d2t_r20": 0.02416505350420649,
+        "t2d_r20": 0.004519448997980741,
+        "d2t_measured_ap": 0.013963002767206696,
+        "t2d_measured_ap": 0.003309091295661197
+      },
+      "seed_composites": {
+        "20260921": 0.4053579494031594,
+        "20260922": 0.4052501526844754,
+        "20260923": 0.3834211047792838
+      },
+      "window_composites": {
+        "2018": 0.4178810311960837,
+        "2020": 0.3781384400485286
+      }
+    },
+    "geometry": {
+      "variant": "geometry",
+      "parameters": 2447205,
+      "mean": {
+        "selection": 0.393675242286331,
+        "d2t_ap": 0.3892295123026364,
+        "t2d_ap": 0.24590350373601141,
+        "d2t_r20": 0.6356286959228136,
+        "t2d_r20": 0.5068958818958819,
+        "d2t_measured_ap": 0.8598032608931735,
+        "t2d_measured_ap": 0.7771331444544766
+      },
+      "seed_sd": {
+        "selection": 0.004547023382176623,
+        "d2t_ap": 0.009981152251323778,
+        "t2d_ap": 0.00765532260217303,
+        "d2t_r20": 0.003991056262485176,
+        "t2d_r20": 0.009385646962426535,
+        "d2t_measured_ap": 0.012159574543342815,
+        "t2d_measured_ap": 0.003783064345587255
+      },
+      "seed_composites": {
+        "20260921": 0.39798475704666314,
+        "20260922": 0.394117884285529,
+        "20260923": 0.38892308552680094
+      },
+      "window_composites": {
+        "2018": 0.4120861100572258,
+        "2020": 0.3752643745154362
+      }
+    },
+    "global": {
+      "variant": "global",
+      "parameters": 1235604,
+      "mean": {
+        "selection": 0.40017365696904655,
+        "d2t_ap": 0.3866667881245236,
+        "t2d_ap": 0.2588793876563787,
+        "d2t_r20": 0.6429505135387488,
+        "t2d_r20": 0.5185994560994561,
+        "d2t_measured_ap": 0.8586670793772839,
+        "t2d_measured_ap": 0.7774954148084291
+      },
+      "seed_sd": {
+        "selection": 0.012586423366251133,
+        "d2t_ap": 0.01850940873738652,
+        "t2d_ap": 0.01670227693316281,
+        "d2t_r20": 0.017300808775150358,
+        "t2d_r20": 0.025103972534792567,
+        "d2t_measured_ap": 0.00835405370603943,
+        "t2d_measured_ap": 0.003551794332729401
+      },
+      "seed_composites": {
+        "20260921": 0.40360062241293687,
+        "20260922": 0.4106916902626776,
+        "20260923": 0.3862286582315251
+      },
+      "window_composites": {
+        "2018": 0.4193121098409482,
+        "2020": 0.3810352040971448
+      }
+    },
+    "parent": {
+      "variant": "parent",
+      "parameters": 1235604,
+      "mean": {
+        "selection": 0.4374925072801877,
+        "d2t_ap": 0.42110932913068794,
+        "t2d_ap": 0.28668768184120835,
+        "d2t_r20": 0.6673825085589792,
+        "t2d_r20": 0.5977078477078477,
+        "d2t_measured_ap": 0.8680426161651335,
+        "t2d_measured_ap": 0.7892721049536968
+      },
+      "seed_sd": {
+        "selection": 0.013383204542563918,
+        "d2t_ap": 0.017382921931468308,
+        "t2d_ap": 0.01696282592323203,
+        "d2t_r20": 0.01582723139134588,
+        "t2d_r20": 0.01706785331273309,
+        "d2t_measured_ap": 0.008970092162788133,
+        "t2d_measured_ap": 0.003177474569954375
+      },
+      "seed_composites": {
+        "20260921": 0.4415600027667761,
+        "20260922": 0.4483700636607239,
+        "20260923": 0.42254745541306304
+      },
+      "window_composites": {
+        "2018": 0.43872237504523,
+        "2020": 0.43626263951514543
+      }
+    },
+    "site": {
+      "variant": "site",
+      "parameters": 2372516,
+      "mean": {
+        "selection": 0.3954658009013439,
+        "d2t_ap": 0.3847174022483011,
+        "t2d_ap": 0.25064624307824035,
+        "d2t_r20": 0.6289137877373171,
+        "t2d_r20": 0.5250097125097124,
+        "d2t_measured_ap": 0.8604050292514059,
+        "t2d_measured_ap": 0.7773928107630498
+      },
+      "seed_sd": {
+        "selection": 0.011311195722743615,
+        "d2t_ap": 0.01126836909999384,
+        "t2d_ap": 0.016212714233700118,
+        "d2t_r20": 0.020964155905459452,
+        "t2d_r20": 0.004814309918956372,
+        "d2t_measured_ap": 0.0122600479440584,
+        "t2d_measured_ap": 0.005181153901650559
+      },
+      "seed_composites": {
+        "20260921": 0.39980973347008053,
+        "20260922": 0.40396111337291496,
+        "20260923": 0.3826265558610362
+      },
+      "window_composites": {
+        "2018": 0.41027652891967686,
+        "2020": 0.3806550728830109
+      }
+    }
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/select_biomaster_final_architecture.py",
+    "sha256": "982a743912c6d22ab763f37ea7e1028a330e12a9de800bd68f2cf46bc01c0d65",
+    "size_bytes": 9439
+  },
+  "results": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "74147d5e1c280c5d0a15f0f0344c955a19856cfb95da57cb86fd85ff747bb623",
+      "size_bytes": 6837
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "39ad44c8c6272b0defed41bc8ff27d0a386e43005eb97a6c0c6cef4f091e085a",
+      "size_bytes": 6836
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "9fc368c2847146711796fc25a040318563233303db2153f07d99b1220a4670b9",
+      "size_bytes": 6836
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "21f6f6f7bc0d3c3468bdf38565cdfa780cfd1d52b861a2250dcaf43d6912b84f",
+      "size_bytes": 6839
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "7283517a8f36bc467c00cc205017f539bf8e112917632cffa58bd6654abeac0d",
+      "size_bytes": 6837
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260923/RESULT.json",
+      "sha256": "c4319f7dcbd920aef9b0e9398e6035ed6f196fa83a873dcc265c5098dac1acbe",
+      "size_bytes": 6838
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/global/seed_20260921/RESULT.json",
+      "sha256": "c42ee39a96ca720ade115f9d2c345475539cc652062ae2da012b0a675631e6a5",
+      "size_bytes": 5698
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/capacity/seed_20260921/RESULT.json",
+      "sha256": "27f86db2817b32e903dbabaa426b5e923b967f96c130aa6d8f01f9ded514cacf",
+      "size_bytes": 5703
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/site/seed_20260921/RESULT.json",
+      "sha256": "28461540fa81e287976e0152f1fa1d40c5bc4d4cfa5ba7e378ca2b6c169fd56d",
+      "size_bytes": 5699
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/geometry/seed_20260921/RESULT.json",
+      "sha256": "498ddc0924d9a422dd3922a8d15c0fd6fff0bd9ae9e5e53422db38e7c87305c8",
+      "size_bytes": 5706
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/global/seed_20260922/RESULT.json",
+      "sha256": "c84f8b390c32b5cfab2a3aa6e40e86a36667356c127ddf766df204b991ac2967",
+      "size_bytes": 5697
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/capacity/seed_20260922/RESULT.json",
+      "sha256": "dbb5f000ccb7bc5df74e927b7db7712f6a961d77f68349bde0f1b73e79b620fd",
+      "size_bytes": 5705
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/site/seed_20260922/RESULT.json",
+      "sha256": "75a403dd97aae2cb64d1bb8098528fba2d4efe9eb9f0632dc5890b28cce2ea54",
+      "size_bytes": 5698
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/geometry/seed_20260922/RESULT.json",
+      "sha256": "72e760bc15b3aa940d287b9a470b6703962866abaef42f40989cfd7dae0cfc69",
+      "size_bytes": 5707
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/global/seed_20260923/RESULT.json",
+      "sha256": "f0a8cf14fe65a1d3d241c20fbc331451d96cab1c29190102214abb22526bad0f",
+      "size_bytes": 5697
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/capacity/seed_20260923/RESULT.json",
+      "sha256": "9abef152a222e5b626d3bd14f4309911afd8d602722f4885b275414a7094d35b",
+      "size_bytes": 5703
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/site/seed_20260923/RESULT.json",
+      "sha256": "9f54cb4afadeddb5ab525a55e6ccff697206600d62a331e037876676dbeb2ea6",
+      "size_bytes": 5699
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2018/geometry/seed_20260923/RESULT.json",
+      "sha256": "5c3f4c3fdc57733fadc02324c5a24eb60df1bae419c3c7af5ebc9e1b30fc6bb1",
+      "size_bytes": 5705
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/global/seed_20260921/RESULT.json",
+      "sha256": "e9b4263d3bc17070448450d347beab479df1a61250ab9b6520ff6a9ebc3bf72a",
+      "size_bytes": 5703
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/capacity/seed_20260921/RESULT.json",
+      "sha256": "cb2244b2345eac2f7bfc7115b313794ec344a9ab373c6f2bf42046bd4083c4cb",
+      "size_bytes": 5704
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/site/seed_20260921/RESULT.json",
+      "sha256": "73bf4f335c31c24ba3fa729b489d41d40c26ff7ce07d6ba40bb0b630932b0c76",
+      "size_bytes": 5695
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/geometry/seed_20260921/RESULT.json",
+      "sha256": "75f57bd3716ed56503aeef575378ac9ef9f5417e118dfb750ca25b983cbf3b90",
+      "size_bytes": 5706
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/global/seed_20260922/RESULT.json",
+      "sha256": "a7b90eed0b80e3f8448070ddff73c65a9492ed2010ec343b117f1723f77e411f",
+      "size_bytes": 5698
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/capacity/seed_20260922/RESULT.json",
+      "sha256": "a182bbff3959702a478d8de34b05255e49ef6d636251e0a5932a079495d87a89",
+      "size_bytes": 5706
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/site/seed_20260922/RESULT.json",
+      "sha256": "6b299574ccce1539b5d6444c6cce42daaf143896dd9efd7d6f8d93c75bb09e95",
+      "size_bytes": 5700
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/geometry/seed_20260922/RESULT.json",
+      "sha256": "80530f6599a224711e137bb055b7c09dcb38b5dba38bed3c8266be0ca76a060a",
+      "size_bytes": 5706
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/global/seed_20260923/RESULT.json",
+      "sha256": "8cd1b1c1b8a12620c1848c24c5a12b914091edfa05479d96bf52e2fb758b00e2",
+      "size_bytes": 5699
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/capacity/seed_20260923/RESULT.json",
+      "sha256": "4c3b4b9a8ca805ebc1b5c58f37a411814a8c787f3d2b45876ae20aa92ca7fdbb",
+      "size_bytes": 5703
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/site/seed_20260923/RESULT.json",
+      "sha256": "b89cfb59953d5a67edead97be46d3109a4de5dcb63e446a0c9a994b4d24d1d76",
+      "size_bytes": 5696
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/anchored/cutoff_2020/geometry/seed_20260923/RESULT.json",
+      "sha256": "a1ec362c041e92a70cde3f5ce35e725dcb4d14f5c71d1ac717656bdec9a77b1e",
+      "size_bytes": 5705
+    }
+  ],
+  "final_model_selected": false
+}

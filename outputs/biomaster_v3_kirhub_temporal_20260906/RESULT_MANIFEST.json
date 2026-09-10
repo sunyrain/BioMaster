@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "files": {
+    "outputs/biomaster_v3_kirhub_temporal_20260906/kirhub/PROTOCOL.json": "b4a7ee36efba1e845257baf6ae3621cc5145e4c45af5afa33982070f3390872b",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/kirhub/METRICS.csv": "b27a1b6dd432c1269d61c006d18791ea68864f6af1cddcdb18ee3baaf1e6dd1a",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/kirhub/PAIRED_COMPARISONS.json": "3ca94d03c3d25affcd6f5922807cfcd3cbe572db80a9f513896cdd2c216f8eb6",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/DATA_MANIFEST.json": "a6bf76fc6e924078969b605075025c6bf26bf3363423c6628e205b2e4a0f89a7",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/SELECTION.json": "22e1b479fbab13811b236579947f8e4f8d09e12ae6996db913ff39ea53a05901",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_RELEASE.json": "fb83f2ff4c9b784076e8efef046be9c264e53805330d1e01d0cbf51b25cdf30e",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_RESULT.json": "149baa7cc464387f2aac8cd749e0be3228b75c330d0fc108a21553a925cf98a7",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_METRICS.csv": "2001e4b4b22bd79c49d5c7eaf5eb8d70cd6fd91f9620a57fbf4ceabb5b5f1da7",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_PAIRED_COMPARISONS.json": "98f2fffd937fe7190ffd008b3605f555761f212dad7a9239d0932e647d9ecedd",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_POSITIVE_RANKS_NAMED.csv.gz": "d4ecd692acd388ba7658547483e2d42dee4674a59db14f33d48c1a3ccf82935a",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/VALIDATION.json": "72d33e06c1bbafde2060efd16062bfc3292a21a8be3272b37dadd88ce5a70525",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/VALIDATION_TESTS.json": "aa010b2f57669cf0444ac89a03bbf20de9b4755b07d7b64058cb725675bfd751",
+    "docs/BIOMASTER_V3_KIRHUB_TEMPORAL_20260906_ZH.md": "f08e4754b3ef9102b1eaf8b4b990a3911e754840a84ae6ed9a654541a21dd2d6"
+  },
+  "report_source_sha256": "f1e3c8ceefce56bb1720ab773672b3cfb1ca6a35cb32e849b4c5e84dc3b71cae",
+  "production_changed": false
+}

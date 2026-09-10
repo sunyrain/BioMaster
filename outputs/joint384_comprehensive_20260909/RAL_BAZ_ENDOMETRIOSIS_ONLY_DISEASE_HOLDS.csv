@@ -1,0 +1,3 @@
+pair_id,drug_names,gene_symbol,qualifying_diseases,decision,reason,sources
+UCJGJABZCDBEDK-UHFFFAOYSA-N__CHEMBL279,bazedoxifene,KDR,endometriosis;ovarian endometriosis;endometriosis of rectovaginal septum and vagina,DISEASE_INVESTMENT_HOLD,仅内异症/亚型，非清晰跨原雌激素相关领域。已有与结合雌激素联用的内异症病例；本轮跨大类目标不优先，非单体无效结论。,https://pubmed.ncbi.nlm.nih.gov/29995747/
+GZUITABIAKMVPG-UHFFFAOYSA-N__CHEMBL279,raloxifene,KDR,endometriosis;ovarian endometriosis;endometriosis of rectovaginal septum and vagina,DISEASE_INVESTMENT_HOLD,仅内异症/亚型，非清晰跨原雌激素相关领域。原RCT报告较安慰剂更早疼痛复发；疾病投资HOLD，不推断KDR不能结合。,https://pmc.ncbi.nlm.nih.gov/articles/PMC2755201/

@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "label_free_encoder_extension": true,
+  "files": {
+    "outputs/biomaster_old_drug_bidirectional_20260906/features/OLD720_MORGAN2048.npy": "297fe943b0d7c0518e55170c2076163980e8c630d17e213bb7ae14f8222b1fa0",
+    "outputs/biomaster_old_drug_bidirectional_20260906/features/OLD720_BERMOL768.npy": "a33fd7ed479015d9cbd35f516bf03f08ce167dc0a801651c8a1c71339785fbe7",
+    "outputs/biomaster_old_drug_bidirectional_20260906/features/ADDED_FULL_ESM2_MEANS.npy": "acc44ee38f09c95de4766bb11a421228db36070f15dcac1ff27a3857e184a32e",
+    "outputs/biomaster_old_drug_bidirectional_20260906/features/SUPPORT_MORGAN_EXTENDED.npy": "009e1b6180e9309f5af7e338a34094530893cb7a4857fdd2387dc1ee80bde9ca",
+    "outputs/biomaster_old_drug_bidirectional_20260906/OLD_DRUGS_720.csv": "46d1c7a78132118d2cd447c8462e4b001433461ca84480962b7d100a91930252",
+    "outputs/biomaster_old_drug_bidirectional_20260906/TARGETS_384.csv.gz": "69bf9e9cf19a4d3df7e19f42606bb56ba9487e0bdc75e05944c1f4dbc5b67206",
+    "outputs/biomaster_old_drug_bidirectional_20260906/LABELS_AND_SCOPES.npz": "9e80148d6ac2f8999fe347305a0193b78493aa4bf9543f3aa921fc9ab4f4d676"
+  }
+}

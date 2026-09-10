@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "62faa27571066bf614adbde53a9fca7870d935711ce573d912eedcbe0289411a",
+  "data_manifest_sha256": "a6bf76fc6e924078969b605075025c6bf26bf3363423c6628e205b2e4a0f89a7",
+  "source_sha256": {
+    "scripts/train_v3_temporal_20260906.py": "27e8042ee545b6427737855069fdcb1447cdfe48139c5275025bc83e6d5d5131",
+    "scripts/train_biomaster_selectivity_v3.py": "4dad92757209b6027c3bd6cebaed6deb655767097c1077d09567a039f76aba7d",
+    "biomaster/odti_v2.py": "ca9276ac48e2d678c48fd687349e4f71c71d7a03513ebe6801559898c7cc92d7",
+    "biomaster/odti_support_v3.py": "5401308b86f43ca225911f91d5d5f6c2f2806dc859ac311c4a62f7609f8297d5",
+    "biomaster/odti_support_data_v3.py": "7bff5d72d83c9ae7c48665b82e76c3e4161e3e481ac81e10a98ebfb400de88f1",
+    "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+    "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+    "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee",
+    "biomaster/ranking_audit.py": "007db4793f3cb5684f6dd46ecb41b61c1d2cba9dc6dd29972df95e93ba75a225"
+  }
+}

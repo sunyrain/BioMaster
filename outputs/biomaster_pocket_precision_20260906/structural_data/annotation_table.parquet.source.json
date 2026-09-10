@@ -1,0 +1,10 @@
+{
+  "url": "https://storage.googleapis.com/plinder/2024-06/v2/index/annotation_table.parquet",
+  "release": "2024-06",
+  "iteration": "v2",
+  "identity": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/annotation_table.parquet",
+    "sha256": "d7ff7a087b3d336859afd5e57775fa1a4e9a23c90a7bb4ccbb6a278540ae31e9",
+    "size_bytes": 1018256581
+  }
+}

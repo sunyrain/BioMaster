@@ -1,0 +1,67 @@
+{
+  "status": "COMPLETE_READ_ONLY_DIAGNOSTIC",
+  "scope": "cluster-held-out experimental structural contacts; NOT old-drug ranking",
+  "source_checkpoint": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/LATEST.pt",
+  "checkpoint_sha256": "95d8e8ddc3b00fe6d6a52e652391009dfc6f371632c51a17b8f32d277677b1d0",
+  "checkpoint_status": "STRUCTURAL_PRETRAINING_RUNNING",
+  "progress": 200,
+  "data": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/training_2020/MANIFEST.json",
+    "sha256": "521906f711acb9269cb2e4139bc9f751e26db0df594eeb846111ab636728ea3a",
+    "size_bytes": 5335515
+  },
+  "script": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/diagnose_biomaster_structural_contact_learning.py",
+    "sha256": "4b33f96a4367ab15253cbc816d15ac658b9d7e68c27933f6c7421f8ff24fecfe",
+    "size_bytes": 8463
+  },
+  "complexes": 1223,
+  "means": {
+    "native_contact_ap": 0.39159922522807666,
+    "native_contact_prevalence": 0.1381478116575339,
+    "native_residue_only_score_ap": 0.28831314743401504,
+    "native_atom_permuted_score_ap": 0.27116260951852744,
+    "native_atom_to_residue_macro_ap": 0.5276070128331218,
+    "native_residue_to_atom_macro_ap": 0.48872740582108526,
+    "native_contact_pairs": 76.556827473426,
+    "native_pair_candidates": 644.1054783319705,
+    "all_regions_contact_ap": 0.38911885389291306,
+    "all_regions_contact_prevalence": 0.08395209547622129,
+    "native_distance_mae_capped32_A": 2.7990492152465922,
+    "native_region_selected": 0.9975470155355682,
+    "regions": 2.0
+  },
+  "seconds": 55.06873451825231,
+  "native_vs_atom_permuted": {
+    "mean_difference": 0.1204366157095492,
+    "ci95": [
+      0.09305152481425723,
+      0.15008884697624023
+    ],
+    "clusters": 162,
+    "resampling_unit": "whole internal structural cluster",
+    "iterations": 5000
+  },
+  "native_vs_residue_only": {
+    "mean_difference": 0.10328607779406163,
+    "ci95": [
+      0.07744126354012523,
+      0.1332292865140319
+    ],
+    "clusters": 162,
+    "resampling_unit": "whole internal structural cluster",
+    "iterations": 5000
+  },
+  "native_vs_constant": {
+    "mean_difference": 0.25345141357054274,
+    "ci95": [
+      0.21994121021207105,
+      0.28282417289074274
+    ],
+    "clusters": 162,
+    "resampling_unit": "whole internal structural cluster",
+    "iterations": 5000
+  },
+  "used_for_checkpoint_selection": false,
+  "fitted_or_modified_model": false
+}

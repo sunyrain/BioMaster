@@ -1,0 +1,34 @@
+{
+  "identity": {
+    "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+    "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+    "source_sha256": {
+      "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+      "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+      "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+      "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+    }
+  },
+  "validation_queries": 52,
+  "baseline_validation": {
+    "d2t": {
+      "ap": 0.4750240352434873,
+      "r20": 0.6641414141414141,
+      "queries": 33,
+      "candidates": 384,
+      "measured_ap": 0.9526726648146191,
+      "measured_queries": 807
+    },
+    "t2d": {
+      "ap": 0.5267185283028403,
+      "r20": 0.7283950617283951,
+      "queries": 54,
+      "candidates": 52,
+      "measured_ap": 0.9409487565664669,
+      "measured_queries": 379
+    },
+    "selection": 0.559490368621686
+  },
+  "test_used_for_selection": false,
+  "base_training_predictions": "in-sample frozen V3 features used for adapter fitting; validation entities excluded from backbone fitting"
+}

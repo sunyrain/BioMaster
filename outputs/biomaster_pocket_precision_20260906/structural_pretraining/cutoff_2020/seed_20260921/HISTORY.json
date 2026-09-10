@@ -1,0 +1,327 @@
+[
+  {
+    "epoch": 0,
+    "updates": 0,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.0940854149850938,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 8.444946312066092,
+      "pocket_assignment_accuracy": 0.9787408013082584,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 0,
+    "updates": 200,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.38910628144234843,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 3.628376809671485,
+      "pocket_assignment_accuracy": 0.9975470155355682,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 0,
+    "updates": 400,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.45994894283499643,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.935026877548299,
+      "pocket_assignment_accuracy": 0.9983646770237122,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 0,
+    "updates": 600,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.4847948817722232,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.8589703566893534,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 0,
+    "updates": 619,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.4962884698522985,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.744219612217495,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 1,
+    "updates": 800,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.511474071526618,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.7583876873563766,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 1,
+    "updates": 1000,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5175505639020065,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.6473661689415198,
+      "pocket_assignment_accuracy": 0.9983646770237122,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 1,
+    "updates": 1200,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5387406994208406,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.629596961295127,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 1,
+    "updates": 1238,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5388148852413129,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.656210706356794,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 2,
+    "updates": 1400,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5431908108068453,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.566087154121742,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 2,
+    "updates": 1600,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5558032091109036,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.5676840860533696,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 2,
+    "updates": 1800,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5578185933523517,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.4937173290907704,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 2,
+    "updates": 1857,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5550546960438677,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.4977309381191786,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 3,
+    "updates": 2000,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5562018001352143,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.464967246827588,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 3,
+    "updates": 2200,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5650501408936901,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.439111560266328,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 3,
+    "updates": 2400,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5655953310318673,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.4516018093460814,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 3,
+    "updates": 2476,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5654495487552553,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.4494384939516554,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 4,
+    "updates": 2600,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5647356028534072,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.4631580568588083,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 4,
+    "updates": 2800,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5621185310082389,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.478295943041074,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 4,
+    "updates": 3000,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5664865752614067,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.505196169908185,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 4,
+    "updates": 3095,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5638983894795497,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.477091818000095,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 5,
+    "updates": 3200,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.563962593038999,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.5172421132455765,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 5,
+    "updates": 3400,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5649333757334098,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.556674761208763,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 5,
+    "updates": 3600,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5626280258409558,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.5342981510735494,
+      "pocket_assignment_accuracy": 1.0,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  },
+  {
+    "epoch": 5,
+    "updates": 3714,
+    "metrics": {
+      "complexes": 1223,
+      "macro_contact_ap": 0.5650774167558132,
+      "macro_contact_prevalence": 0.08395209547622129,
+      "macro_distance_mae_capped32_A": 2.477339729264634,
+      "pocket_assignment_accuracy": 0.9991823385118561,
+      "multi_region_complexes": 1223,
+      "scope": "internal cluster-held-out structural contacts, not DTI ranking"
+    }
+  }
+]

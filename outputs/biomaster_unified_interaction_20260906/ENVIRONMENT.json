@@ -1,0 +1,19 @@
+{
+  "python": "3.12.3 | packaged by Anaconda, Inc. | (main, May  6 2024, 19:46:43) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-25-generic-x86_64-with-glibc2.35",
+  "packages": {
+    "torch": "2.10.0",
+    "rdkit": "2026.3.1",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "fair-esm": "2.0.0",
+    "lmdb": "2.2.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "pytest": "9.0.2"
+  },
+  "gpu": "NVIDIA RTX4090 48GB",
+  "training_precision": "bf16 autocast; FP32 parameters and reductions; TF32 matmul enabled",
+  "pretrained_atom_inference": "FP32, FP16 atom-state cache",
+  "determinism_scope": "seeded downstream sample exposure; frozen exact feature/cache hashes; numerical equality across hardware not asserted"
+}

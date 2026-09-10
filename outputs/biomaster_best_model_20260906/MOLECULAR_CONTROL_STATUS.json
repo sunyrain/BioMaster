@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "jobs": 12,
+  "driver": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_molecular_controls.py",
+    "sha256": "9be5777b309e1ed114969f4db6211681dd6c00c3943e9dcb724189b0a8b7043a",
+    "size_bytes": 4076
+  }
+}

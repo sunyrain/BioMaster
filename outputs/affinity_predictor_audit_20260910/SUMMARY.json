@@ -1,0 +1,110 @@
+{
+  "status": "COMPLETED_RETROSPECTIVE_FROZEN_SCORE_AUDIT",
+  "targeted_source_qc_excluded_rows": 2,
+  "qc_overrides_sha256": "510878e2bd395bb96c121b35737523f8223edaea8254ea4e6038ad17311d0f44",
+  "training_run_performed": false,
+  "baseline_unchanged": true,
+  "baseline_sha256": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+  "inputs": {
+    "outputs/affinity_evidence_refresh_20260910/PROJECT_EXACT_NUMERIC_EVIDENCE.csv.gz": "7b5472c6bcab969d3e42bc23998cda53ff11d4da5996ff1bd404342728a82c9b",
+    "outputs/joint_screen_720x384_20260909/FULL_276480_PAIR_AUDIT.parquet": "2f174a3a6dd4fef374bd5307ee24df8fc8d2fb5301eab0017f5df7966efd1c7a"
+  },
+  "training_membership_audited": [
+    {
+      "path": "outputs/retrain_20260901/comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+      "rows": 437631,
+      "unique_pairs": 437248,
+      "sha256": "dabda92e4d18bd76a9c10322d394eb19d5aeecc8988c6ae2733ef1543faa25b1"
+    },
+    {
+      "path": "outputs/biomaster_comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+      "rows": 437631,
+      "unique_pairs": 437248,
+      "sha256": "715f13ded9c5b34bc1c44952d7c37f08f128e00baecb69626bfc33fb0acb3ee2"
+    },
+    {
+      "path": "outputs/old_drug_target_sota_v1/feature_store_v1/CHEMBL37_86674_INDEXED_PAIRS_V1.csv.gz",
+      "rows": 86674,
+      "unique_pairs": 86674,
+      "sha256": "a01a41fc230fe481466ac71187e89cb8d77a2b5fc6aea20de9b8103e015ae4f8"
+    },
+    {
+      "path": "outputs/biomaster_bindingdb_affinity_feature_package_v1/BINDINGDB_DIRECT_KI_KD_AFFINITY_PAIRS_V1.csv.gz",
+      "rows": 9778,
+      "unique_pairs": 9778,
+      "sha256": "9ac81285932a43ede830ff318368c8cc9b55d885e18c3ad7a8aebb80ad9172f5"
+    }
+  ],
+  "label_rule": {
+    "positive_nM_le": 1000,
+    "weak_negative_nM_ge": 10000,
+    "conflict_policy": "any decisive positive and negative -> exclude",
+    "unknown_policy": "never negative",
+    "approximate_values": "excluded as unresolved",
+    "Kd_app_and_response": "excluded"
+  },
+  "models": {
+    "SPR_current": "independent_validation_rank_score",
+    "contract_primary": "biomaster_independent_borda_score",
+    "neural_full_fit": "ensemble_drug_to_target_logit",
+    "graph_ranker": "old_drug_leakage_safe_score_v10",
+    "DTIAM_comparator": "dtiam_probability"
+  },
+  "ci": [
+    {
+      "endpoint_group": "Kd_only",
+      "slice": "REFRESH_NO_LOCAL_TRAIN_PAIR",
+      "model": "SPR_current",
+      "valid_bootstrap_replicates": 1000,
+      "auroc_ci95": [
+        0.6697357130997212,
+        0.8764228940254566
+      ],
+      "ap_ci95": [
+        0.5190867386366461,
+        0.7642980976513003
+      ]
+    },
+    {
+      "endpoint_group": "Kd_only",
+      "slice": "REFRESH_NO_PRIOR_RELATION",
+      "model": "SPR_current",
+      "valid_bootstrap_replicates": 0,
+      "auroc_ci95": null,
+      "ap_ci95": null,
+      "reason": "Too few positives or negatives (<10); bootstrap interval suppressed."
+    },
+    {
+      "endpoint_group": "Kd_Ki",
+      "slice": "REFRESH_NO_LOCAL_TRAIN_PAIR",
+      "model": "SPR_current",
+      "valid_bootstrap_replicates": 1000,
+      "auroc_ci95": [
+        0.6786228115746684,
+        0.8229144774714466
+      ],
+      "ap_ci95": [
+        0.5337400892095342,
+        0.7522481801516648
+      ]
+    },
+    {
+      "endpoint_group": "Kd_Ki",
+      "slice": "REFRESH_NO_PRIOR_RELATION",
+      "model": "SPR_current",
+      "valid_bootstrap_replicates": 0,
+      "auroc_ci95": null,
+      "ap_ci95": null,
+      "reason": "Too few positives or negatives (<10); bootstrap interval suppressed."
+    }
+  ],
+  "limitations": [
+    "Retrospective audit; candidate/target universe already selected using historical evidence.",
+    "Local training-table absence is not proof of unseen data in pretraining or external model checkpoints.",
+    "Drug/target/structural-neighbor leakage is not equivalent to pair overlap; drug-seen flags provided.",
+    "Exact accession does not validate construct, assay method or SPR transfer.",
+    "Scores are rankings, not calibrated probabilities or predicted Kd.",
+    "720x888 includes targets lacking current scores; model evaluation restricted to 720x384.",
+    "TopK recall uses observed positives only; observed precision excludes unknowns and is not prospective hit rate."
+  ]
+}

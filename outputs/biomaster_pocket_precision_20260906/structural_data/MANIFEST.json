@@ -1,0 +1,127 @@
+{
+  "status": "CANDIDATE_INDEX_COMPLETE_NOT_TRAINING_READY",
+  "official_release": "2024-06/v2",
+  "annotation_rows": 1357906,
+  "official_split_systems": 409726,
+  "official_split_counts": {
+    "train": 309140,
+    "removed": 98718,
+    "test": 1036,
+    "val": 832
+  },
+  "quality_filter_cascade": [
+    {
+      "filter": "official_train_split",
+      "remaining_ligand_rows": 418381,
+      "remaining_systems": 309140
+    },
+    {
+      "filter": "official_quality",
+      "remaining_ligand_rows": 92938,
+      "remaining_systems": 64657
+    },
+    {
+      "filter": "official_statistics",
+      "remaining_ligand_rows": 72797,
+      "remaining_systems": 49712
+    },
+    {
+      "filter": "known_release_date",
+      "remaining_ligand_rows": 72797,
+      "remaining_systems": 49712
+    },
+    {
+      "filter": "resolution_at_most_2_5A",
+      "remaining_ligand_rows": 55332,
+      "remaining_systems": 37098
+    },
+    {
+      "filter": "noncovalent",
+      "remaining_ligand_rows": 49754,
+      "remaining_systems": 32363
+    },
+    {
+      "filter": "nonartifact_valid_ligand",
+      "remaining_ligand_rows": 44519,
+      "remaining_systems": 32363
+    },
+    {
+      "filter": "resolved_atom_count_matches",
+      "remaining_ligand_rows": 43263,
+      "remaining_systems": 31552
+    },
+    {
+      "filter": "one_proper_ligand",
+      "remaining_ligand_rows": 34719,
+      "remaining_systems": 27810
+    },
+    {
+      "filter": "small_molecule_5_to_128_heavy_atoms",
+      "remaining_ligand_rows": 27609,
+      "remaining_systems": 27609
+    },
+    {
+      "filter": "density_rscc_at_least_0_8",
+      "remaining_ligand_rows": 27609,
+      "remaining_systems": 27609
+    },
+    {
+      "filter": "occupancy_at_least_0_9",
+      "remaining_ligand_rows": 26924,
+      "remaining_systems": 26924
+    },
+    {
+      "filter": "no_unresolved_ligand_heavy_atoms",
+      "remaining_ligand_rows": 26463,
+      "remaining_systems": 26463
+    }
+  ],
+  "candidate_counts": {
+    "2018": {
+      "systems": 17556,
+      "protein_clusters": 998,
+      "project_exact_uniprot_overlap": 2887,
+      "multiple_protein_chains": 5955
+    },
+    "2020": {
+      "systems": 20016,
+      "protein_clusters": 1108,
+      "project_exact_uniprot_overlap": 3353,
+      "multiple_protein_chains": 6719
+    },
+    "2022": {
+      "systems": 22938,
+      "protein_clusters": 1212,
+      "project_exact_uniprot_overlap": 4116,
+      "multiple_protein_chains": 7596
+    }
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_structural_pretraining_index.py",
+    "sha256": "2dea1a973a8c22de6ff46e30304feddb48750e47c903e1bb3cd5d0dbc9b00237",
+    "size_bytes": 7114
+  },
+  "annotation": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/annotation_table.parquet",
+    "sha256": "d7ff7a087b3d336859afd5e57775fa1a4e9a23c90a7bb4ccbb6a278540ae31e9",
+    "size_bytes": 1018256581
+  },
+  "split": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/split.parquet",
+    "sha256": "2959fb4b32f8c5cc2d3e12fc810b8905e904496f5538e8d058f47eecee73eb40",
+    "size_bytes": 10651188
+  },
+  "project_accession_columns": [
+    "uniprot_accession"
+  ],
+  "pending": [
+    "download selected system structures",
+    "experimental ligand atom/bond/stereo identity mapping",
+    "protein residue mapping and alternate conformer policy",
+    "project pair/pocket/sequence/scaffold overlap audit",
+    "encode paired molecules/pockets and map observed contact labels",
+    "structural pretraining"
+  ],
+  "structure_files_downloaded": false,
+  "structural_training_performed": false
+}

@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "jobs": 12,
+  "driver": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_best_model_representations.py",
+    "sha256": "5d7b867feecbaf80c74e52d02a176f51bd9f1491175206ef9c2707bc65575225",
+    "size_bytes": 4724
+  }
+}

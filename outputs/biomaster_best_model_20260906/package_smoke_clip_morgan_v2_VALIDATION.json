@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/package_smoke_clip_morgan_v2/MANIFEST.json",
+    "sha256": "def02b8cfc0ad3e1b9df6c07d3c76942d25fbc216c249601bbf0eca41127cf96",
+    "size_bytes": 2545
+  },
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/smoke/roll_2018/global_ema/seed_20260921/BEST.pt",
+    "sha256": "8062b73326221175c194cb95aa433d7ea91083612b5af79a81c2d9281a18dc14",
+    "size_bytes": 4956137
+  },
+  "tested_pairs": 19,
+  "fp32_max_abs_error": 0.0,
+  "complete_registry_axes_match": true,
+  "reload_bitwise_equal": true,
+  "invalid_inputs_rejected": 6,
+  "missing_geometry_max_abs_error": null,
+  "independent_import": true,
+  "cpu_bidirectional_inference": true,
+  "verifier": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_catalog_model_v2.py",
+    "sha256": "f1cea15a8e6ea0b0a0bf77a8742228148ab29a3fe381173a80b6916ed1d7fd04",
+    "size_bytes": 6499
+  }
+}

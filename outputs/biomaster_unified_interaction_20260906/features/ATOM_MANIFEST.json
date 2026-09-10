@@ -1,0 +1,74 @@
+{
+  "status": "COMPLETE",
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/third_party/sota_dti_2026/Drug-The-Whole-Genome/data/model_weights/6_folds/fold_0.pt",
+    "sha256": "129196ea9eb211c6b931d8dc5cd4edccbc4c6fd382aae7200b455d3bc3847e5c",
+    "size_bytes": 1199477971
+  },
+  "molecule_index": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MOLECULES.csv.gz",
+    "sha256": "aeaed335a7e8df4b8f17cab8f79712768f717c1fcbff7eadb7c4908ea2279ff4",
+    "size_bytes": 18722803
+  },
+  "atom_count": 8542254,
+  "required_molecules": 266747,
+  "pretrained_available": 264042,
+  "source": "DrugCLIP fold_0 mol_model:512 CLS and true heavy-atom states",
+  "precision": "fp32 inference, fp16 atom cache",
+  "temporal_scope": "Downstream label cutoffs only; public pretraining overlap/time NOT certified",
+  "files": {
+    "ATOM_INDEX.npz": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_INDEX.npz",
+      "sha256": "6c8a1d87e1727eb7544cfe1ea097c28f79874c024095cb9b5f02b6763e51e8b5",
+      "size_bytes": 53245094
+    },
+    "ATOM_TOKENS.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_TOKENS.npy",
+      "sha256": "2f7ccc175c83b683c5ff71d5c7256cda12b1de4c222972cb3704227d4da3dba8",
+      "size_bytes": 8747268224
+    },
+    "ATOM_CHEMISTRY.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_CHEMISTRY.npy",
+      "sha256": "ae0199d765a97f97e9887c0b8527a4acf6a13c8de04ffaa619a403348eee7e5c",
+      "size_bytes": 683380448
+    },
+    "ATOM_NEIGHBORS.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_NEIGHBORS.npy",
+      "sha256": "5239dda992a174247fc59aaf3235d65c9e069c276c18af956c1925de27e0318a",
+      "size_bytes": 136676192
+    },
+    "ATOM_BOND.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_BOND.npy",
+      "sha256": "8dc3f9e2fad0b67c52e7aeed0247444b026f404598c76dd51d602b0ff1bba153",
+      "size_bytes": 68338160
+    },
+    "ATOM_STEREO.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_STEREO.npy",
+      "sha256": "30d8b1cde8f45367bd5b6fd8123782677a604dfc3b2c1e3fa95d052fe8e52b4e",
+      "size_bytes": 68338160
+    },
+    "ATOM_DONE.npy": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_DONE.npy",
+      "sha256": "8f439828241eff70c50c9f448b408016b507104d1a377dbeaf5299799bdf002e",
+      "size_bytes": 309688
+    }
+  },
+  "globals": {
+    "MOLECULE_GLOBAL": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/MOLECULE_GLOBAL.npy",
+      "sha256": "45e630d9b4d53048458dd3693902adcc537f56d7fc742c58a076832106b2060e",
+      "size_bytes": 633979008
+    },
+    "PRETRAINED_AVAILABLE": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/PRETRAINED_AVAILABLE.npy",
+      "sha256": "5995b57a49ba30ef10a8e087c4ddeedcc55339241f9965bb10140e55205550a7",
+      "size_bytes": 309688
+    }
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_unified_interaction.py",
+    "sha256": "1eb76a08fffcc7a1fee85c23497f7e91a0a385253b7cbbc3309ae82e4c609f6c",
+    "size_bytes": 21524
+  },
+  "labels_used": false
+}

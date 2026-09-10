@@ -1,0 +1,1202 @@
+[
+  {
+    "contrast": "ranking_without_evidence",
+    "added": "B_residual_rank",
+    "control": "A_residual_bce",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": -2.356295621207802e-05,
+    "ci_low": -8.59270216450858e-05,
+    "ci_high": 2.953536015489705e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -7.068886863623407e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_without_evidence",
+    "added": "B_residual_rank",
+    "control": "A_residual_bce",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": -5.402267539352157e-06,
+    "ci_low": -5.954138656230891e-05,
+    "ci_high": 5.750615802149808e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -1.620680261805647e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_without_evidence",
+    "added": "B_residual_rank",
+    "control": "A_residual_bce",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": -0.00011324513829920064,
+    "ci_low": -0.000408170767866435,
+    "ci_high": 5.5148418308866354e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.0003397354148976019
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_without_evidence",
+    "added": "B_residual_rank",
+    "control": "A_residual_bce",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 4.680234666966193e-06,
+    "ci_low": 0.0,
+    "ci_high": 1.4040704000898582e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      1.4040704000898582e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_without_evidence",
+    "added": "B_residual_rank",
+    "control": "A_residual_bce",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 8.353259410519203e-05,
+    "ci_low": -6.1780180110842774e-06,
+    "ci_high": 0.00023342454054829252,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0002505977823155761
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_without_evidence",
+    "added": "B_residual_rank",
+    "control": "A_residual_bce",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": -5.891357850532405e-05,
+    "ci_low": -0.00016289592050077362,
+    "ci_high": 6.636794251536359e-06,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.00017674073551597212
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_without_ranking",
+    "added": "C_evidence_bce",
+    "control": "A_residual_bce",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 0.00017960757959750248,
+    "ci_low": 9.983474167347108e-07,
+    "ci_high": 0.0005254278578264813,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0005388227387925074
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_without_ranking",
+    "added": "C_evidence_bce",
+    "control": "A_residual_bce",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": 1.6181239194716815e-05,
+    "ci_low": 0.0,
+    "ci_high": 4.439530393752883e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      4.854371758415045e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_without_ranking",
+    "added": "C_evidence_bce",
+    "control": "A_residual_bce",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": -0.00014599497789353436,
+    "ci_low": -0.0004367578613824209,
+    "ci_high": 1.244273097386321e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.000437984933680603
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_without_ranking",
+    "added": "C_evidence_bce",
+    "control": "A_residual_bce",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_without_ranking",
+    "added": "C_evidence_bce",
+    "control": "A_residual_bce",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 4.506706164816622e-06,
+    "ci_low": -2.5502622717740755e-06,
+    "ci_high": 1.3605056729721743e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      1.3520118494449868e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_without_ranking",
+    "added": "C_evidence_bce",
+    "control": "A_residual_bce",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": -3.883314152855769e-05,
+    "ci_low": -0.00012451203169221219,
+    "ci_high": 6.367066039864993e-06,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.00011649942458567308
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_with_evidence",
+    "added": "D_evidence_rank",
+    "control": "C_evidence_bce",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": -0.00017455324437983506,
+    "ci_low": -0.0005335975934590855,
+    "ci_high": 3.199941240423741e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.0005236597331395052
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_with_evidence",
+    "added": "D_evidence_rank",
+    "control": "C_evidence_bce",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": -1.880670083835467e-05,
+    "ci_low": -9.450415146356603e-05,
+    "ci_high": 5.294386207477654e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -5.642010251506401e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_with_evidence",
+    "added": "D_evidence_rank",
+    "control": "C_evidence_bce",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": 4.035810752140573e-05,
+    "ci_low": 7.054770582299839e-06,
+    "ci_high": 8.303250063121655e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.00012107432256421718
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_with_evidence",
+    "added": "D_evidence_rank",
+    "control": "C_evidence_bce",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 4.680234666966193e-06,
+    "ci_low": 0.0,
+    "ci_high": 1.4040704000898582e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      1.4040704000898582e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_with_evidence",
+    "added": "D_evidence_rank",
+    "control": "C_evidence_bce",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 7.169870005882358e-05,
+    "ci_low": -1.9020309562599134e-05,
+    "ci_high": 0.00022324156262846213,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.00021509610017647076
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "ranking_with_evidence",
+    "added": "D_evidence_rank",
+    "control": "C_evidence_bce",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": -2.419945035152958e-05,
+    "ci_low": -6.597085535960338e-05,
+    "ci_high": 9.749048139194943e-06,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -7.259835105458874e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_with_ranking",
+    "added": "D_evidence_rank",
+    "control": "B_residual_rank",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 2.861729142974543e-05,
+    "ci_low": 1.7106105958749179e-06,
+    "ci_high": 6.88852281468928e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      8.585187428923629e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_with_ranking",
+    "added": "D_evidence_rank",
+    "control": "B_residual_rank",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": 2.7768058957143043e-06,
+    "ci_low": 0.0,
+    "ci_high": 8.330417687142912e-06,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      8.330417687142912e-06
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_with_ranking",
+    "added": "D_evidence_rank",
+    "control": "B_residual_rank",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": 7.608267927072047e-06,
+    "ci_low": 1.6077141985763114e-07,
+    "ci_high": 1.9222206573299868e-05,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      2.2824803781216143e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_with_ranking",
+    "added": "D_evidence_rank",
+    "control": "B_residual_rank",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_with_ranking",
+    "added": "D_evidence_rank",
+    "control": "B_residual_rank",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": -7.327187881551829e-06,
+    "ci_low": -2.006890831857366e-05,
+    "ci_high": 1.6558618252340875e-06,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -2.198156364465549e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "evidence_with_ranking",
+    "added": "D_evidence_rank",
+    "control": "B_residual_rank",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": -4.119013374763227e-06,
+    "ci_low": -2.4049448688786022e-05,
+    "ci_high": 9.966456119886294e-06,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -1.235704012428968e-05
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "pretrained_increment",
+    "added": "E_pretrained_rank",
+    "control": "D_evidence_rank",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 0.00014169133916612972,
+    "ci_low": -0.012995839905240947,
+    "ci_high": 0.010510653214944946,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0004250740174983849
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "pretrained_increment",
+    "added": "E_pretrained_rank",
+    "control": "D_evidence_rank",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": 0.0008680940953740305,
+    "ci_low": -0.0005348460908117704,
+    "ci_high": 0.0032045489655431847,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0026042822861220925
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "pretrained_increment",
+    "added": "E_pretrained_rank",
+    "control": "D_evidence_rank",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": -0.005209202097691256,
+    "ci_low": -0.012756273496166284,
+    "ci_high": 0.0008715329095389753,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.015627606293073772
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "pretrained_increment",
+    "added": "E_pretrained_rank",
+    "control": "D_evidence_rank",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.00038669044569363675,
+    "ci_low": -0.0016021908061949455,
+    "ci_high": 0.0028672700155881257,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.00116007133708091
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "pretrained_increment",
+    "added": "E_pretrained_rank",
+    "control": "D_evidence_rank",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 0.00032774905861779086,
+    "ci_low": -0.0012496039781855436,
+    "ci_high": 0.0020969443353667334,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      0.0009832471758533731
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "pretrained_increment",
+    "added": "E_pretrained_rank",
+    "control": "D_evidence_rank",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": -0.0025503131934706824,
+    "ci_low": -0.008044888513583386,
+    "ci_high": 0.001042826039553636,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      0.0,
+      -0.007650939580412051
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "teacher_increment",
+    "added": "F_teacher_rank",
+    "control": "D_evidence_rank",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 0.004636368408714562,
+    "ci_low": -0.0014099583408910298,
+    "ci_high": 0.012057273437614997,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 2,
+    "seed_deltas": [
+      0.0,
+      0.0026030558305220105,
+      0.011306049395621678
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "teacher_increment",
+    "added": "F_teacher_rank",
+    "control": "D_evidence_rank",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": -5.170633112149872e-07,
+    "ci_low": -0.0004509831708327154,
+    "ci_high": 0.00042636771417033515,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      -0.0003011526852498004,
+      0.0002996014953161554
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "teacher_increment",
+    "added": "F_teacher_rank",
+    "control": "D_evidence_rank",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": 0.007198616666512067,
+    "ci_low": -0.0030874689938368955,
+    "ci_high": 0.020025204156264582,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 2,
+    "seed_deltas": [
+      0.0,
+      0.02069831887388451,
+      0.0008975311256516943
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "teacher_increment",
+    "added": "F_teacher_rank",
+    "control": "D_evidence_rank",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": -0.004290192359888862,
+    "ci_low": -0.017232844190176344,
+    "ci_high": 0.003117604049195426,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      0.0,
+      -0.0029151534937793774,
+      -0.009955423585887212
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "teacher_increment",
+    "added": "F_teacher_rank",
+    "control": "D_evidence_rank",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": -0.0038696502602895504,
+    "ci_low": -0.010965272675559211,
+    "ci_high": 0.0026182240384638677,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      -0.011744642320002996,
+      0.00013569153913434233
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "teacher_increment",
+    "added": "F_teacher_rank",
+    "control": "D_evidence_rank",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": -0.0005474586870546473,
+    "ci_low": -0.0023896209534764626,
+    "ci_high": 0.0011386042615149786,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      0.0,
+      -0.0040313907779558015,
+      0.002389014716791859
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_known_relation_supervision",
+    "added": "H_old_relation",
+    "control": "G_matched_control",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": -0.018409387012867998,
+    "ci_low": -0.08831312762786507,
+    "ci_high": 0.045049898476685044,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 0,
+    "seed_deltas": [
+      -0.01590975554664825,
+      -0.017220931575255772,
+      -0.022097473916699972
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_known_relation_supervision",
+    "added": "H_old_relation",
+    "control": "G_matched_control",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": 0.048258283858862,
+    "ci_low": -0.00591385119145047,
+    "ci_high": 0.1115745434257212,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.06396580122027219,
+      0.049962593517611814,
+      0.03084645683870198
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_known_relation_supervision",
+    "added": "H_old_relation",
+    "control": "G_matched_control",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": 0.10237798893939522,
+    "ci_low": 0.025503426462658137,
+    "ci_high": 0.19107404151245047,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.09862708036636357,
+      0.11622531964330209,
+      0.09228156680852
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_known_relation_supervision",
+    "added": "H_old_relation",
+    "control": "G_matched_control",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.04187580421736886,
+    "ci_low": 0.011839082445030005,
+    "ci_high": 0.07397644331420986,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.039054991567659174,
+      0.037962975798490624,
+      0.048609445285956794
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_known_relation_supervision",
+    "added": "H_old_relation",
+    "control": "G_matched_control",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 0.11191558464026213,
+    "ci_low": 0.05737163249602687,
+    "ci_high": 0.16952968562336101,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.11795996268543806,
+      0.10938851531866361,
+      0.10839827591668477
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_known_relation_supervision",
+    "added": "H_old_relation",
+    "control": "G_matched_control",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": 0.01599098648881933,
+    "ci_low": -0.02833488135673984,
+    "ci_high": 0.058929228520112176,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.019128658902567843,
+      0.022694613473770046,
+      0.006149687090120103
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_direct_evidence",
+    "added": "I_old_relation_evidence",
+    "control": "H_old_relation",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 0.09753469541149014,
+    "ci_low": 0.03268009771042429,
+    "ci_high": 0.17716521865130946,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.07869261651173787,
+      0.10035791127657022,
+      0.11355355844616231
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_direct_evidence",
+    "added": "I_old_relation_evidence",
+    "control": "H_old_relation",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": 0.04274527679643301,
+    "ci_low": 0.004769810724776277,
+    "ci_high": 0.0928141539183406,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.037054197977722705,
+      0.04002581179562619,
+      0.05115582061595014
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_direct_evidence",
+    "added": "I_old_relation_evidence",
+    "control": "H_old_relation",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": 0.05578026800256878,
+    "ci_low": 0.025712872022382312,
+    "ci_high": 0.09221143473847095,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.06776809261311867,
+      0.02965104656034137,
+      0.06992166483424628
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_direct_evidence",
+    "added": "I_old_relation_evidence",
+    "control": "H_old_relation",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.03360281628352732,
+    "ci_low": 0.006992021065336902,
+    "ci_high": 0.06370382789670431,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.038863501375855265,
+      0.033654600594923555,
+      0.028290346879803144
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_direct_evidence",
+    "added": "I_old_relation_evidence",
+    "control": "H_old_relation",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 0.04214254305109818,
+    "ci_low": 0.017659293450984968,
+    "ci_high": 0.07203999433881578,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.05057906342953075,
+      0.035304136989456995,
+      0.040544428734306796
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_direct_evidence",
+    "added": "I_old_relation_evidence",
+    "control": "H_old_relation",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": 0.03776726895724422,
+    "ci_low": 0.018493406552906946,
+    "ci_high": 0.061397873777712386,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.022200610532532212,
+      0.035849871554732106,
+      0.05525132478446835
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_pretrained_interaction",
+    "added": "J_old_relation_pretrained",
+    "control": "I_old_relation_evidence",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 0.060860672627332225,
+    "ci_low": 0.012506665451849126,
+    "ci_high": 0.11421179027768534,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.09355777612354856,
+      0.07882809616815172,
+      0.010196145590296394
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_pretrained_interaction",
+    "added": "J_old_relation_pretrained",
+    "control": "I_old_relation_evidence",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": -0.002909376439271091,
+    "ci_low": -0.07398492353631193,
+    "ci_high": 0.05973550101206976,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      -0.012626599954926232,
+      -0.03752076558209071,
+      0.041419236219203674
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_pretrained_interaction",
+    "added": "J_old_relation_pretrained",
+    "control": "I_old_relation_evidence",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": 0.045216337811975274,
+    "ci_low": -0.004067074224796298,
+    "ci_high": 0.09798216761648995,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.022951048432980962,
+      0.05117526271304974,
+      0.0615227022898951
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_pretrained_interaction",
+    "added": "J_old_relation_pretrained",
+    "control": "I_old_relation_evidence",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.04922821661189569,
+    "ci_low": 0.0027584123962159837,
+    "ci_high": 0.09676653858261232,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.004245094014899486,
+      0.07745425205035254,
+      0.06598530377043504
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_pretrained_interaction",
+    "added": "J_old_relation_pretrained",
+    "control": "I_old_relation_evidence",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 0.011119398392369632,
+    "ci_low": -0.02078243271125725,
+    "ci_high": 0.04435344817843742,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.008888625246760208,
+      0.008801479334467864,
+      0.015668090595880813
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_pretrained_interaction",
+    "added": "J_old_relation_pretrained",
+    "control": "I_old_relation_evidence",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": 0.06762257588134805,
+    "ci_low": 0.021129372615464864,
+    "ci_high": 0.1190191219784371,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.08627383854775392,
+      0.06896964450126053,
+      0.047624244595029716
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_teacher_prior",
+    "added": "K_old_relation_teacher",
+    "control": "I_old_relation_evidence",
+    "scope": "old_validation_52",
+    "direction": "d2t",
+    "queries": 33,
+    "delta_ap": 0.0026811350156580108,
+    "ci_low": -0.00496726725683407,
+    "ci_high": 0.014248951620095103,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 2,
+    "seed_deltas": [
+      -0.0002654361154546384,
+      0.004343998585487135,
+      0.003964842576941533
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_teacher_prior",
+    "added": "K_old_relation_teacher",
+    "control": "I_old_relation_evidence",
+    "scope": "old_validation_52",
+    "direction": "t2d",
+    "queries": 54,
+    "delta_ap": 0.004621416476628339,
+    "ci_low": -0.009404357168317067,
+    "ci_high": 0.01957842328916885,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 2,
+    "seed_deltas": [
+      -0.010131432989393459,
+      0.021882670164821823,
+      0.0021130122544566468
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_teacher_prior",
+    "added": "K_old_relation_teacher",
+    "control": "I_old_relation_evidence",
+    "scope": "historical_test_54",
+    "direction": "d2t",
+    "queries": 34,
+    "delta_ap": -0.0018948493122440957,
+    "ci_low": -0.012231138075380307,
+    "ci_high": 0.006224614704018197,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      -0.006746559625606358,
+      0.012457299460589955,
+      -0.011395287771715883
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_teacher_prior",
+    "added": "K_old_relation_teacher",
+    "control": "I_old_relation_evidence",
+    "scope": "historical_test_54",
+    "direction": "t2d",
+    "queries": 57,
+    "delta_ap": 0.009729220569276217,
+    "ci_low": 6.252964154090662e-05,
+    "ci_high": 0.021198759265901368,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 3,
+    "seed_deltas": [
+      0.00014798926726578655,
+      0.018520148421342038,
+      0.01051952401922083
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_teacher_prior",
+    "added": "K_old_relation_teacher",
+    "control": "I_old_relation_evidence",
+    "scope": "absent_old_drugs_223",
+    "direction": "d2t",
+    "queries": 91,
+    "delta_ap": 0.005168338167444369,
+    "ci_low": 0.0002596812151459123,
+    "ci_high": 0.011944197612441962,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 2,
+    "seed_deltas": [
+      -0.002151922057886871,
+      0.015978304652307113,
+      0.0016786319079128648
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  },
+  {
+    "contrast": "oldtask_teacher_prior",
+    "added": "K_old_relation_teacher",
+    "control": "I_old_relation_evidence",
+    "scope": "absent_old_drugs_223",
+    "direction": "t2d",
+    "queries": 72,
+    "delta_ap": 0.0029030606460254734,
+    "ci_low": -0.011437386831223036,
+    "ci_high": 0.02338530711124774,
+    "confidence": 0.95,
+    "bootstrap": "10000 paired query resamples; seed variability reported separately",
+    "positive_seeds": 1,
+    "seed_deltas": [
+      -0.00020990593792297632,
+      0.010646002112084718,
+      -0.00172691423608532
+    ],
+    "interpretation": "mean per-query AP across 3 individually validation-selected seeds; exploratory contrasts, unadjusted intervals"
+  }
+]

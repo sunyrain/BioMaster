@@ -1,0 +1,8 @@
+{
+  "prompt_path": "docs/prompts/SPR384_RESOURCE_AWARE_REVIEW_ZH.md",
+  "prompt_sha256": "0233ccbd74ffb0f0fa8c83c606ba0e2a173d5c5193ca0c420d7dc20ae75f6bc3",
+  "review_mode": "LLM_PER_PAIR_WITH_TARGETED_WEB_SEARCH",
+  "publish_mode": "VALIDATED_ATOMIC_PARTIAL_BATCHES",
+  "scope": "384 baseline candidates; controls remain separate",
+  "interpretation": "Review opinions, not experimental validation or release"
+}

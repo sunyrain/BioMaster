@@ -1,0 +1,41 @@
+{
+  "role": "post-selection diagnosis on previously used 2019-2020/2021-2022 development labels",
+  "conditions": {
+    "site": [
+      "full",
+      "local_off"
+    ],
+    "geometry": [
+      "full",
+      "local_off",
+      "geometry_off",
+      "coordinates_shuffled"
+    ]
+  },
+  "cutoffs": [
+    2018,
+    2020
+  ],
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "precision": "bf16 autocast",
+  "batch_size": 256,
+  "local_off": "bypass the correction but retain the final jointly-trained global weights and shared readout",
+  "coordinates_shuffled": "one deterministic permutation of CA rows within each target geometry mask; residue identities/masks/quality unchanged",
+  "no_training": true,
+  "changes_selection": false,
+  "uses_2023_2025_or_kirhub_labels": false,
+  "selected_bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+    "size_bytes": 3709
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/audit_local_interaction_failure_20260906.py",
+    "sha256": "98a6d8f515f2f7527022b6dd2cd2e785c39a8aeda70dc54f66c7ae68734b31e6",
+    "size_bytes": 12130
+  }
+}

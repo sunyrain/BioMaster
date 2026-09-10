@@ -1,0 +1,48 @@
+{
+  "status": "COMPLETE",
+  "bundle": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1",
+  "archive": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1.zip",
+    "sha256": "f3881e027089174504a36d631a480d4354bf296b873002821520c042b436242c",
+    "size_bytes": 7999613
+  },
+  "model": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt",
+    "sha256": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+    "size_bytes": 4950923
+  },
+  "manifest": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+    "size_bytes": 3709
+  },
+  "validation": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1_RELEASE_VALIDATION.json",
+    "sha256": "62a9a88460ec7fe79b87c7fe323f97b8e7afd258421c2f8af2cce360c7dae303",
+    "size_bytes": 1519
+  },
+  "selection": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/DEPLOYMENT_SELECTION.json",
+    "sha256": "c449b7c8580bc3be8e9936cac07500d1e246be4cbf2d646660295f29c0321457",
+    "size_bytes": 1703
+  },
+  "configuration": {
+    "path": "/root/autodl-tmp/BioMaster/configs/biomaster_selected_catalog_20260906.json",
+    "sha256": "ef7df8ff32a7597131fd7cfdddaccbcc594905ff0d86d5fed22907076ce2309e",
+    "size_bytes": 956
+  },
+  "uncompressed_bytes": 14601449,
+  "model_card": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MODEL_CARD.md",
+    "sha256": "7b976ff30368da6bfac477aab2d06624332ae40daa4931b555b169e5d0681178",
+    "size_bytes": 12334
+  },
+  "archive_crc": "PASS",
+  "one_checkpoint": true,
+  "independent_inference": true,
+  "driver": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/package_biomaster_selected_model.py",
+    "sha256": "3818ad3cfd8bf1e37cd8caebcdb46af89bb6a4879728260fb21a5fdc934ebf5e",
+    "size_bytes": 5055
+  }
+}

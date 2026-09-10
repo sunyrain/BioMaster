@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "purpose": "full-size real-data optimizer/invariance/reload integration; NOT model-quality evaluation",
+  "config": {
+    "path": "/root/autodl-tmp/BioMaster/configs/biomaster_pocket_precision_20260906.json",
+    "sha256": "25469f751967a073424bb945e58d69fa6118a3c1f4078a1de6e0faca23380543",
+    "size_bytes": 2127
+  },
+  "model_source": {
+    "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+    "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+    "size_bytes": 12551
+  },
+  "feature_manifest": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/features/MANIFEST.json",
+    "sha256": "03bde6c21701dce8009dc7ce4e5c4e4890f49cc909007f7d7882282cf33aa49b",
+    "size_bytes": 1151480
+  },
+  "parent": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+    "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+    "size_bytes": 4956393
+  },
+  "local_parameters": 33652451,
+  "frozen_global_parameters": 1235604,
+  "steps": 12,
+  "measured_training_year_max": 2020,
+  "losses": [
+    0.0005166906048543751,
+    0.007007122039794922,
+    0.0003991127014160156,
+    0.0052645206451416016,
+    0.00848245620727539,
+    0.028460396453738213,
+    0.004553079605102539,
+    0.0204567052423954,
+    0.0006395374657586217,
+    0.012718915939331055,
+    0.00014273203851189464,
+    0.0002727508544921875
+  ],
+  "first_step_gradient_norms": {
+    "atom_input.1.weight": 2.0382993170642294e-05,
+    "residue_input.1.weight": 5.455127393361181e-05,
+    "atom_bias.net.0.weight": 1.260777260370105e-08,
+    "residue_bias.net.0.weight": 1.0665202054838119e-08,
+    "blocks.0.outer_out.weight": 2.1785569970234064e-06,
+    "blocks.5.pair_bias.weight": 3.074535470659612e-07
+  },
+  "median_step_seconds": 0.13477547513321042,
+  "batch_shapes": [
+    {
+      "pockets": 12,
+      "atoms": 20,
+      "residues": 34
+    },
+    {
+      "pockets": 2,
+      "atoms": 1,
+      "residues": 24
+    },
+    {
+      "pockets": 1,
+      "atoms": 25,
+      "residues": 42
+    },
+    {
+      "pockets": 2,
+      "atoms": 24,
+      "residues": 12
+    },
+    {
+      "pockets": 4,
+      "atoms": 28,
+      "residues": 45
+    },
+    {
+      "pockets": 1,
+      "atoms": 25,
+      "residues": 42
+    },
+    {
+      "pockets": 2,
+      "atoms": 1,
+      "residues": 18
+    },
+    {
+      "pockets": 1,
+      "atoms": 12,
+      "residues": 16
+    },
+    {
+      "pockets": 10,
+      "atoms": 20,
+      "residues": 41
+    },
+    {
+      "pockets": 1,
+      "atoms": 19,
+      "residues": 20
+    },
+    {
+      "pockets": 8,
+      "atoms": 20,
+      "residues": 47
+    },
+    {
+      "pockets": 1,
+      "atoms": 16,
+      "residues": 29
+    }
+  ],
+  "peak_gpu_allocated_gb": 2.031217575073242,
+  "frozen_parent_unchanged": true,
+  "parent_exact_forward": true,
+  "missing_pocket_exact_parent": true,
+  "full_checkpoint_exact_reload": true,
+  "last_example_geometry_and_pocket_token_score_change": 0.0029754638671875,
+  "experimental_contact_training_performed": false,
+  "ranking_quality_measured": false
+}

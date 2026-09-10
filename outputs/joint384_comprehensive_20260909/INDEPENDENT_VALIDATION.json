@@ -1,0 +1,12 @@
+{
+  "all_pass": true,
+  "checks": {
+    "not_in_any_raw_activity_record": true,
+    "no_deep_DO_NOT_PRIORITIZE": true,
+    "all_selected_source_ranks_and_scores_retained": true,
+    "one_actual_qualifying_cross_disease_per_cross_pair": true,
+    "isotope_and_covalent_form_holds_absent": true,
+    "case_mebendazole_ESR1_absent": true,
+    "case_baricitinib_HDAC6_absent": true
+  }
+}

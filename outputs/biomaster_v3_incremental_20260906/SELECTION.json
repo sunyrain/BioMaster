@@ -1,0 +1,1262 @@
+{
+  "status": "FROZEN_BEFORE_TEST",
+  "winner": "F_teacher_rank",
+  "validation_scores": {
+    "A_residual_bce": 0.5603145700010649,
+    "B_residual_rank": 0.5603044321727519,
+    "C_evidence_bce": 0.5603830960876423,
+    "D_evidence_rank": 0.5603154201068158,
+    "E_pretrained_rank": 0.5599281042681642,
+    "F_teacher_rank": 0.5605322441719831
+  },
+  "results": [
+    {
+      "status": "COMPLETE",
+      "variant": "A_residual_bce",
+      "seed": 20260908,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "4b9b8af839e760e5e98cc5d2606932fa71cd01507f80920a23ab0b9facba92a5",
+      "seconds": 10.832522634416819,
+      "trainable_parameters": 38020,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "ffa7107a30bca528140ae1bd1748aa31fcda9bb180de42143e18d1f47d65c951",
+        "023534e67a104ad349d55436250d702d538bb349b28bada0ce9c7d3fdae1131b",
+        "7068827415b6a4bd8171e8b200cab5711182c91e0adf37f2367fb768610103cb",
+        "73c0bc8bbb89e2b2500054252171ede5f10872fea30aed85e5dc59cd638f45ea",
+        "67d275900c1b829b6d80f2ddd3004923dd1d118a15b4425dd83059b6916b3ef6",
+        "1f762db28bd17c153265412864d221b0cdabd598261453bff3ed18b280541e3e",
+        "14454e52554c269129f679548af1077ecc28e1664db42a0dc4b0782a3cd44b27",
+        "e9c22b08e6096175757bcc69b1c32b0b28a070e02880b52c1e1f26d9e0e0a449"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "A_residual_bce",
+      "seed": 20260909,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "416f0c95776c727927d127701933c494d2142d9ef1cd05d129aa856a70d3eb43",
+      "seconds": 10.400269139558077,
+      "trainable_parameters": 38020,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "0f6951029ec6c49eef60984e5a3379af946c9ea80e92a7fefd12f1b76829ca64",
+        "c72c646075b79e85d875be5885cc2f81e69f418baa213e65475e8c913afd6446",
+        "72815c504b749a30a74db96998c39b4305535239b148cdf0f9d3337725d43d58",
+        "6d5bcc447a701e10a2eca5d1f1db51c570dae06553dcdec894b9f12156e0d08b",
+        "c9417ff3a3fbf8bde3038cb92e9200bf3741e518e5e7ff010b50bb3103789030",
+        "5ffe324416d9be25eba0af5acdffc6e9bda6d3da63448e8e044b339bcd46788d",
+        "2e0d2e4cecc7922702dc064829b6cb212ea1938f4930267f2fc9aa256038b3ac",
+        "c04b762b12950a4a2070f950808e794d79ed350b7229a7271e48fe6d54c60f77"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "A_residual_bce",
+      "seed": 20260910,
+      "selected_epoch": 8,
+      "validation": {
+        "d2t": {
+          "ap": 0.48697234579347115,
+          "r20": 0.6525252525252525,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9499273875112851,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5281359073057821,
+          "r20": 0.7253086419753088,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9437812988437171,
+          "measured_queries": 379
+        },
+        "selection": 0.5619629727598228
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "10832f6f721169a7029395b976dc7d83c5607ebb3c8f6850b66347f9efaf24d7",
+      "seconds": 10.293774727731943,
+      "trainable_parameters": 38020,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "b16a3972a5492549ad20f0f90920666bb43f0e06d1c3ce7537f379c3dcf9ab4d",
+        "5cf0390c50af551f3ffea2715bc06291123ae61ac23d77ee5561076109168356",
+        "7c92bfde8773994ce89c6477b7e90daba3412ec7663cbcbb6cfffdf7f094d399",
+        "89469b32b8814a035667c6214f99431d478edd3de21e5061bfc129656b1a4d44",
+        "830181a52431afe175c0358bfe082b4394eb54e7d838ec0b10bafa94c28df04b",
+        "3d7334b6bf02b8f2ee218d9c9264b1f8ee804836c4498e957553c2716ba5ee93",
+        "89205da497f8d109072cd3fbce72efdb44d087c19ac6613f7009a84df3d31623",
+        "06a2b7b57686e0718b0fe91ea53653830e3d7a0fcd93edee9aca0b73745890f6"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "B_residual_rank",
+      "seed": 20260908,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "d49e4f138e4a3d8de500ca702dbc9db5edd837809988726f5b2bee9e05dccce6",
+      "seconds": 10.169991049915552,
+      "trainable_parameters": 38020,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "ffa7107a30bca528140ae1bd1748aa31fcda9bb180de42143e18d1f47d65c951",
+        "023534e67a104ad349d55436250d702d538bb349b28bada0ce9c7d3fdae1131b",
+        "7068827415b6a4bd8171e8b200cab5711182c91e0adf37f2367fb768610103cb",
+        "73c0bc8bbb89e2b2500054252171ede5f10872fea30aed85e5dc59cd638f45ea",
+        "67d275900c1b829b6d80f2ddd3004923dd1d118a15b4425dd83059b6916b3ef6",
+        "1f762db28bd17c153265412864d221b0cdabd598261453bff3ed18b280541e3e",
+        "14454e52554c269129f679548af1077ecc28e1664db42a0dc4b0782a3cd44b27",
+        "e9c22b08e6096175757bcc69b1c32b0b28a070e02880b52c1e1f26d9e0e0a449"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "B_residual_rank",
+      "seed": 20260909,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "314d0e0d44276ff01cbee08332ccdb581441ca1086999a36045713c9b9204f75",
+      "seconds": 9.46929716039449,
+      "trainable_parameters": 38020,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "0f6951029ec6c49eef60984e5a3379af946c9ea80e92a7fefd12f1b76829ca64",
+        "c72c646075b79e85d875be5885cc2f81e69f418baa213e65475e8c913afd6446",
+        "72815c504b749a30a74db96998c39b4305535239b148cdf0f9d3337725d43d58",
+        "6d5bcc447a701e10a2eca5d1f1db51c570dae06553dcdec894b9f12156e0d08b",
+        "c9417ff3a3fbf8bde3038cb92e9200bf3741e518e5e7ff010b50bb3103789030",
+        "5ffe324416d9be25eba0af5acdffc6e9bda6d3da63448e8e044b339bcd46788d",
+        "2e0d2e4cecc7922702dc064829b6cb212ea1938f4930267f2fc9aa256038b3ac",
+        "c04b762b12950a4a2070f950808e794d79ed350b7229a7271e48fe6d54c60f77"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "B_residual_rank",
+      "seed": 20260910,
+      "selected_epoch": 8,
+      "validation": {
+        "d2t": {
+          "ap": 0.486901656924835,
+          "r20": 0.6525252525252525,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.94993175467638,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.528119700503164,
+          "r20": 0.7253086419753088,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9434977341596524,
+          "measured_queries": 379
+        },
+        "selection": 0.5619325592748838
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "37c546367c6e48a091d4e07a26616b7198dc7c9998b4dd976615332bbaff3850",
+      "seconds": 9.437494940124452,
+      "trainable_parameters": 38020,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "b16a3972a5492549ad20f0f90920666bb43f0e06d1c3ce7537f379c3dcf9ab4d",
+        "5cf0390c50af551f3ffea2715bc06291123ae61ac23d77ee5561076109168356",
+        "7c92bfde8773994ce89c6477b7e90daba3412ec7663cbcbb6cfffdf7f094d399",
+        "89469b32b8814a035667c6214f99431d478edd3de21e5061bfc129656b1a4d44",
+        "830181a52431afe175c0358bfe082b4394eb54e7d838ec0b10bafa94c28df04b",
+        "3d7334b6bf02b8f2ee218d9c9264b1f8ee804836c4498e957553c2716ba5ee93",
+        "89205da497f8d109072cd3fbce72efdb44d087c19ac6613f7009a84df3d31623",
+        "06a2b7b57686e0718b0fe91ea53653830e3d7a0fcd93edee9aca0b73745890f6"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "C_evidence_bce",
+      "seed": 20260908,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "f61e753620889db7b22b9a1587a62ff85d4da2c3d182ee3a83dd1b99c97a2ae0",
+      "seconds": 10.120244563557208,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "ffa7107a30bca528140ae1bd1748aa31fcda9bb180de42143e18d1f47d65c951",
+        "023534e67a104ad349d55436250d702d538bb349b28bada0ce9c7d3fdae1131b",
+        "7068827415b6a4bd8171e8b200cab5711182c91e0adf37f2367fb768610103cb",
+        "73c0bc8bbb89e2b2500054252171ede5f10872fea30aed85e5dc59cd638f45ea",
+        "67d275900c1b829b6d80f2ddd3004923dd1d118a15b4425dd83059b6916b3ef6",
+        "1f762db28bd17c153265412864d221b0cdabd598261453bff3ed18b280541e3e",
+        "14454e52554c269129f679548af1077ecc28e1664db42a0dc4b0782a3cd44b27",
+        "e9c22b08e6096175757bcc69b1c32b0b28a070e02880b52c1e1f26d9e0e0a449"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "C_evidence_bce",
+      "seed": 20260909,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "2752350db7cedee9412c8b46fdcb0cc5966b6e3fd1b94509f5ef876b38f7fe1b",
+      "seconds": 10.101777935400605,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "0f6951029ec6c49eef60984e5a3379af946c9ea80e92a7fefd12f1b76829ca64",
+        "c72c646075b79e85d875be5885cc2f81e69f418baa213e65475e8c913afd6446",
+        "72815c504b749a30a74db96998c39b4305535239b148cdf0f9d3337725d43d58",
+        "6d5bcc447a701e10a2eca5d1f1db51c570dae06553dcdec894b9f12156e0d08b",
+        "c9417ff3a3fbf8bde3038cb92e9200bf3741e518e5e7ff010b50bb3103789030",
+        "5ffe324416d9be25eba0af5acdffc6e9bda6d3da63448e8e044b339bcd46788d",
+        "2e0d2e4cecc7922702dc064829b6cb212ea1938f4930267f2fc9aa256038b3ac",
+        "c04b762b12950a4a2070f950808e794d79ed350b7229a7271e48fe6d54c60f77"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "C_evidence_bce",
+      "seed": 20260910,
+      "selected_epoch": 8,
+      "validation": {
+        "d2t": {
+          "ap": 0.4875111685322638,
+          "r20": 0.6525252525252525,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9499284243868209,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5281844510233662,
+          "r20": 0.7253086419753088,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9437795085945245,
+          "measured_queries": 379
+        },
+        "selection": 0.5621685510195547
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "34ed03c7d8d12f3f7f1469bd440a29c7925b4e161abe78dc48f9e3c00f1b978c",
+      "seconds": 10.164585310965776,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "b16a3972a5492549ad20f0f90920666bb43f0e06d1c3ce7537f379c3dcf9ab4d",
+        "5cf0390c50af551f3ffea2715bc06291123ae61ac23d77ee5561076109168356",
+        "7c92bfde8773994ce89c6477b7e90daba3412ec7663cbcbb6cfffdf7f094d399",
+        "89469b32b8814a035667c6214f99431d478edd3de21e5061bfc129656b1a4d44",
+        "830181a52431afe175c0358bfe082b4394eb54e7d838ec0b10bafa94c28df04b",
+        "3d7334b6bf02b8f2ee218d9c9264b1f8ee804836c4498e957553c2716ba5ee93",
+        "89205da497f8d109072cd3fbce72efdb44d087c19ac6613f7009a84df3d31623",
+        "06a2b7b57686e0718b0fe91ea53653830e3d7a0fcd93edee9aca0b73745890f6"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "D_evidence_rank",
+      "seed": 20260908,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "5f13587c22a50c5a011dd599c9b37063430fe8bc94942275399d7bbdbcb9072b",
+      "seconds": 10.191534915938973,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "ffa7107a30bca528140ae1bd1748aa31fcda9bb180de42143e18d1f47d65c951",
+        "023534e67a104ad349d55436250d702d538bb349b28bada0ce9c7d3fdae1131b",
+        "7068827415b6a4bd8171e8b200cab5711182c91e0adf37f2367fb768610103cb",
+        "73c0bc8bbb89e2b2500054252171ede5f10872fea30aed85e5dc59cd638f45ea",
+        "67d275900c1b829b6d80f2ddd3004923dd1d118a15b4425dd83059b6916b3ef6",
+        "1f762db28bd17c153265412864d221b0cdabd598261453bff3ed18b280541e3e",
+        "14454e52554c269129f679548af1077ecc28e1664db42a0dc4b0782a3cd44b27",
+        "e9c22b08e6096175757bcc69b1c32b0b28a070e02880b52c1e1f26d9e0e0a449"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "D_evidence_rank",
+      "seed": 20260909,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "ca102ade2577cb72452dfe99f9d9d088aa9753e9b8f8a9c2eef6661cb0835c21",
+      "seconds": 10.029554756358266,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "0f6951029ec6c49eef60984e5a3379af946c9ea80e92a7fefd12f1b76829ca64",
+        "c72c646075b79e85d875be5885cc2f81e69f418baa213e65475e8c913afd6446",
+        "72815c504b749a30a74db96998c39b4305535239b148cdf0f9d3337725d43d58",
+        "6d5bcc447a701e10a2eca5d1f1db51c570dae06553dcdec894b9f12156e0d08b",
+        "c9417ff3a3fbf8bde3038cb92e9200bf3741e518e5e7ff010b50bb3103789030",
+        "5ffe324416d9be25eba0af5acdffc6e9bda6d3da63448e8e044b339bcd46788d",
+        "2e0d2e4cecc7922702dc064829b6cb212ea1938f4930267f2fc9aa256038b3ac",
+        "c04b762b12950a4a2070f950808e794d79ed350b7229a7271e48fe6d54c60f77"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "D_evidence_rank",
+      "seed": 20260910,
+      "selected_epoch": 8,
+      "validation": {
+        "d2t": {
+          "ap": 0.4869875087991242,
+          "r20": 0.6525252525252525,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9499326218768219,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5281280309208513,
+          "r20": 0.7253086419753088,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9435079063411561,
+          "measured_queries": 379
+        },
+        "selection": 0.5619655230770756
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "48202f0037aafe24f3147dd0b89990dce8270f74d6c96204582326960f028487",
+      "seconds": 10.031530564650893,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "b16a3972a5492549ad20f0f90920666bb43f0e06d1c3ce7537f379c3dcf9ab4d",
+        "5cf0390c50af551f3ffea2715bc06291123ae61ac23d77ee5561076109168356",
+        "7c92bfde8773994ce89c6477b7e90daba3412ec7663cbcbb6cfffdf7f094d399",
+        "89469b32b8814a035667c6214f99431d478edd3de21e5061bfc129656b1a4d44",
+        "830181a52431afe175c0358bfe082b4394eb54e7d838ec0b10bafa94c28df04b",
+        "3d7334b6bf02b8f2ee218d9c9264b1f8ee804836c4498e957553c2716ba5ee93",
+        "89205da497f8d109072cd3fbce72efdb44d087c19ac6613f7009a84df3d31623",
+        "06a2b7b57686e0718b0fe91ea53653830e3d7a0fcd93edee9aca0b73745890f6"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "E_pretrained_rank",
+      "seed": 20260908,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "c9b2c9d64432abf80441a26677483c84ef78a18eb691c9d0a82248e8fa32e7ec",
+      "seconds": 11.216393645852804,
+      "trainable_parameters": 153006,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "ffa7107a30bca528140ae1bd1748aa31fcda9bb180de42143e18d1f47d65c951",
+        "023534e67a104ad349d55436250d702d538bb349b28bada0ce9c7d3fdae1131b",
+        "7068827415b6a4bd8171e8b200cab5711182c91e0adf37f2367fb768610103cb",
+        "73c0bc8bbb89e2b2500054252171ede5f10872fea30aed85e5dc59cd638f45ea",
+        "67d275900c1b829b6d80f2ddd3004923dd1d118a15b4425dd83059b6916b3ef6",
+        "1f762db28bd17c153265412864d221b0cdabd598261453bff3ed18b280541e3e",
+        "14454e52554c269129f679548af1077ecc28e1664db42a0dc4b0782a3cd44b27",
+        "e9c22b08e6096175757bcc69b1c32b0b28a070e02880b52c1e1f26d9e0e0a449"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "E_pretrained_rank",
+      "seed": 20260909,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "21e3336894851552a268a55ac2ebd19856099dff7f62e624b82f29919fc4d23b",
+      "seconds": 11.199840540997684,
+      "trainable_parameters": 153006,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "0f6951029ec6c49eef60984e5a3379af946c9ea80e92a7fefd12f1b76829ca64",
+        "c72c646075b79e85d875be5885cc2f81e69f418baa213e65475e8c913afd6446",
+        "72815c504b749a30a74db96998c39b4305535239b148cdf0f9d3337725d43d58",
+        "6d5bcc447a701e10a2eca5d1f1db51c570dae06553dcdec894b9f12156e0d08b",
+        "c9417ff3a3fbf8bde3038cb92e9200bf3741e518e5e7ff010b50bb3103789030",
+        "5ffe324416d9be25eba0af5acdffc6e9bda6d3da63448e8e044b339bcd46788d",
+        "2e0d2e4cecc7922702dc064829b6cb212ea1938f4930267f2fc9aa256038b3ac",
+        "c04b762b12950a4a2070f950808e794d79ed350b7229a7271e48fe6d54c60f77"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "E_pretrained_rank",
+      "seed": 20260910,
+      "selected_epoch": 8,
+      "validation": {
+        "d2t": {
+          "ap": 0.48741258281662253,
+          "r20": 0.646969696969697,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9513818357343778,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5307323132069732,
+          "r20": 0.7160493827160495,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9425992591356325,
+          "measured_queries": 379
+        },
+        "selection": 0.5608035755611205
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "cdc6e1d4a890857fffd29263d39a6a042783b4c38dbb50d76bc9af6b1966aab7",
+      "seconds": 11.167767305858433,
+      "trainable_parameters": 153006,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "b16a3972a5492549ad20f0f90920666bb43f0e06d1c3ce7537f379c3dcf9ab4d",
+        "5cf0390c50af551f3ffea2715bc06291123ae61ac23d77ee5561076109168356",
+        "7c92bfde8773994ce89c6477b7e90daba3412ec7663cbcbb6cfffdf7f094d399",
+        "89469b32b8814a035667c6214f99431d478edd3de21e5061bfc129656b1a4d44",
+        "830181a52431afe175c0358bfe082b4394eb54e7d838ec0b10bafa94c28df04b",
+        "3d7334b6bf02b8f2ee218d9c9264b1f8ee804836c4498e957553c2716ba5ee93",
+        "89205da497f8d109072cd3fbce72efdb44d087c19ac6613f7009a84df3d31623",
+        "06a2b7b57686e0718b0fe91ea53653830e3d7a0fcd93edee9aca0b73745890f6"
+      ],
+      "teacher_pairs_sha256": null
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "F_teacher_rank",
+      "seed": 20260908,
+      "selected_epoch": 0,
+      "validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "f9a9ff8b15c5612f9508c61f1d1126ae0262e8fee0ac7700993bfed407c7ebd5",
+      "seconds": 10.367960460484028,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "ffa7107a30bca528140ae1bd1748aa31fcda9bb180de42143e18d1f47d65c951",
+        "023534e67a104ad349d55436250d702d538bb349b28bada0ce9c7d3fdae1131b",
+        "7068827415b6a4bd8171e8b200cab5711182c91e0adf37f2367fb768610103cb",
+        "73c0bc8bbb89e2b2500054252171ede5f10872fea30aed85e5dc59cd638f45ea",
+        "67d275900c1b829b6d80f2ddd3004923dd1d118a15b4425dd83059b6916b3ef6",
+        "1f762db28bd17c153265412864d221b0cdabd598261453bff3ed18b280541e3e",
+        "14454e52554c269129f679548af1077ecc28e1664db42a0dc4b0782a3cd44b27",
+        "e9c22b08e6096175757bcc69b1c32b0b28a070e02880b52c1e1f26d9e0e0a449"
+      ],
+      "teacher_pairs_sha256": "71de46b79338e66d294aacf5280a7473ead6c2e57950cb6c72ca580dd8cae8e3"
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "F_teacher_rank",
+      "seed": 20260909,
+      "selected_epoch": 1,
+      "validation": {
+        "d2t": {
+          "ap": 0.47762709107400936,
+          "r20": 0.6621212121212121,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9520335967993276,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5264173756175904,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9404940285181345,
+          "measured_queries": 379
+        },
+        "selection": 0.559993004419501
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "5b34ff709d57a358074bea3bbca94cc7b18a2bc942474c0a60da2fbcc5a66c59",
+      "seconds": 10.349889448843896,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "0f6951029ec6c49eef60984e5a3379af946c9ea80e92a7fefd12f1b76829ca64",
+        "c72c646075b79e85d875be5885cc2f81e69f418baa213e65475e8c913afd6446",
+        "72815c504b749a30a74db96998c39b4305535239b148cdf0f9d3337725d43d58",
+        "6d5bcc447a701e10a2eca5d1f1db51c570dae06553dcdec894b9f12156e0d08b",
+        "c9417ff3a3fbf8bde3038cb92e9200bf3741e518e5e7ff010b50bb3103789030",
+        "5ffe324416d9be25eba0af5acdffc6e9bda6d3da63448e8e044b339bcd46788d",
+        "2e0d2e4cecc7922702dc064829b6cb212ea1938f4930267f2fc9aa256038b3ac",
+        "c04b762b12950a4a2070f950808e794d79ed350b7229a7271e48fe6d54c60f77"
+      ],
+      "teacher_pairs_sha256": "7ee9e24200225ad61d8f981cb4d88b4db1b36edaf667ede753ac61cdc0097e6a"
+    },
+    {
+      "status": "COMPLETE",
+      "variant": "F_teacher_rank",
+      "seed": 20260910,
+      "selected_epoch": 8,
+      "validation": {
+        "d2t": {
+          "ap": 0.49829355819474586,
+          "r20": 0.6449494949494949,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9499355798629319,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5284276324161672,
+          "r20": 0.7067901234567903,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9436190991186291,
+          "measured_queries": 379
+        },
+        "selection": 0.5621133594747623
+      },
+      "baseline_validation": {
+        "d2t": {
+          "ap": 0.4750240352434873,
+          "r20": 0.6641414141414141,
+          "queries": 33,
+          "candidates": 384,
+          "measured_ap": 0.9526726648146191,
+          "measured_queries": 807
+        },
+        "t2d": {
+          "ap": 0.5267185283028403,
+          "r20": 0.7283950617283951,
+          "queries": 54,
+          "candidates": 52,
+          "measured_ap": 0.9409487565664669,
+          "measured_queries": 379
+        },
+        "selection": 0.559490368621686
+      },
+      "identity": {
+        "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+        "features_sha256": "fc9b72e5b251601321760f277dd2aec0d581c957d616fa9ef8900247a3264e5d",
+        "source_sha256": {
+          "scripts/train_biomaster_v3_incremental_ablation.py": "dd6904aa9cda9a3e9e3cfcf69a8a25581d61ba1a56b35ba5ece7710bd34e6595",
+          "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+          "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+          "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587"
+        }
+      },
+      "checkpoint_sha256": "b317aa737ac9729fbd7292390a121b5b33c5301b632bc1e7221fc72ed5894719",
+      "seconds": 10.402926562353969,
+      "trainable_parameters": 38028,
+      "test_metrics_computed": false,
+      "observed_exposure_sha256": [
+        "b16a3972a5492549ad20f0f90920666bb43f0e06d1c3ce7537f379c3dcf9ab4d",
+        "5cf0390c50af551f3ffea2715bc06291123ae61ac23d77ee5561076109168356",
+        "7c92bfde8773994ce89c6477b7e90daba3412ec7663cbcbb6cfffdf7f094d399",
+        "89469b32b8814a035667c6214f99431d478edd3de21e5061bfc129656b1a4d44",
+        "830181a52431afe175c0358bfe082b4394eb54e7d838ec0b10bafa94c28df04b",
+        "3d7334b6bf02b8f2ee218d9c9264b1f8ee804836c4498e957553c2716ba5ee93",
+        "89205da497f8d109072cd3fbce72efdb44d087c19ac6613f7009a84df3d31623",
+        "06a2b7b57686e0718b0fe91ea53653830e3d7a0fcd93edee9aca0b73745890f6"
+      ],
+      "teacher_pairs_sha256": "87b31da73fc62095c9f1a85709240ff575c5d15dce4fc31aa55c9d58adf860da"
+    }
+  ],
+  "protocol_sha256": "c2371ec9d88938f6a074d91956115105d7815c1c737e72aad4e84b3ad43b63c7",
+  "training_manifest_sha256": "ad302bb717368bdf3a8dd22c04d5780217daf6e7299f3efc5cf569ec83e8bac3",
+  "selection_used_test": false,
+  "same_observed_exposure_verified": true,
+  "baseline_selection": 0.559490368621686,
+  "production_promotion": false
+}

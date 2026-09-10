@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "completed_training_runs": 33,
+  "score_matrices_verified": 47,
+  "checkpoint_hashes_verified": 33,
+  "all_matched_exposures_identical_within_stage_and_seed": true,
+  "selected_checkpoints_pass_all_four_validation_AP_guards": true,
+  "old_v3_matches_previous_720x384_metrics": true,
+  "teacher_pairs_audited": 98304,
+  "teacher_drugs_all_original_train": true,
+  "winner_frozen_before_test": "J_old_relation_pretrained",
+  "test_used_for_selection": false,
+  "production_promotion": false,
+  "selected_epoch_zero_runs": 11,
+  "summary_rows": 376,
+  "report_code_sha256": "0eacca5f429076b38a7b0513873b744e517105c7dee1d6d223b68a29eb6e2bde"
+}

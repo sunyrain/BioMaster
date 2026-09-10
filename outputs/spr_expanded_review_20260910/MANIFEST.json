@@ -1,0 +1,33 @@
+{
+  "status": "COMPLETE",
+  "baseline_unchanged": true,
+  "new_reviewed": 384,
+  "combined_review_records": 768,
+  "experimental_release": false,
+  "files": {
+    "outputs/spr_expanded_review_20260910/ALL_NEW_ELIGIBLE_POOL.csv": "3eb3e54690fd1407da821e6d661bb92a0b0801b91be16bed563a668ff00a1ca4",
+    "outputs/spr_expanded_review_20260910/BASELINE_REASON_1.json": "0cd308e8c9b40f9c16c1ac6bfa5eee074a23f883ae4d80567742882c24852669",
+    "outputs/spr_expanded_review_20260910/BASELINE_REASON_2.json": "2d0e05742e5387496b5a27d26b685ed8e0c98995d0bdaa8e1501eabb40f88e17",
+    "outputs/spr_expanded_review_20260910/CHEMISTRY_CACHE_IDENTITY.json": "cc3f850b9b3354c6c1bb1afbbafdb1a3d09dc087b1bad9d8ab39552b9d410c3c",
+    "outputs/spr_expanded_review_20260910/COMBINED_REVIEWS.csv": "7677cb27e2d81411e6dc3782edb0e62e691f7a9b5296f88894a1f71762a3ade8",
+    "outputs/spr_expanded_review_20260910/COMBINED_REVIEWS.json": "b86cf03c739e2a25ef41e0ff35b855aed06a1e995ced351c3e6e6eff58710394",
+    "outputs/spr_expanded_review_20260910/CROSS_REVIEW_CORRECTIONS.json": "2b2a6c50aabdf231dc0f360903f7680140bc3ddde255d17250c045469de8678c",
+    "outputs/spr_expanded_review_20260910/EXPANDED_REVIEW_1.json": "f5730976a8335d675e3ed7f2961021582eab795be4c9e0c62110f1246d8e98e0",
+    "outputs/spr_expanded_review_20260910/EXPANDED_REVIEW_2.json": "3ac242567337963fe851acf77e8b0b8d597e90c9e0b52e54cccd2868bedd1fa0",
+    "outputs/spr_expanded_review_20260910/EXPANDED_REVIEW_3.json": "e7d988add621bb39bfda1f942d7b1ed241ac74ede2b664c28c9da049dbfaa044",
+    "outputs/spr_expanded_review_20260910/FENOFIBRIC_ACID_NAME_RESOLUTION.json": "77074ad974156dc2148e9965f6be2f7f78b4ce625946ad88ab776a82f138ddb0",
+    "outputs/spr_expanded_review_20260910/FULL_EXPANDED_SCOPE_AUDIT.csv": "3065eaf7b8307f7f715c2db71c5c63a18669d954c36b2b01fe31b4cb255d6328",
+    "outputs/spr_expanded_review_20260910/INPUT_MANIFEST.json": "3cc3447bc3c9979247dd593f5079e8a99bd13f5d2e9fb101a4fd938b908d32ec",
+    "outputs/spr_expanded_review_20260910/MODELED_NAME_CORRECTIONS.csv": "308020825d4e5c88bb8fd72db16ec87d41011915d9d9d48d3b6a44fa70ed3924",
+    "outputs/spr_expanded_review_20260910/NEW_CANDIDATES_FOR_LLM.csv": "ad4ac7e047e6c7f3b32c1a42841b8fa7e2f355474fecf3238e996cd9e6a46b17",
+    "outputs/spr_expanded_review_20260910/PRE_CHEMISTRY_SCOPE.csv": "ccf67d47c23dedf8d48f899405f473a59ed4557cbca0db3b5a246ac5d43f4aed",
+    "outputs/spr_expanded_review_20260910/PROMPT_USED.md": "efd0dacc42b180141e4308f87503107c95d62f9952418c333383aef890fc6964",
+    "outputs/spr_expanded_review_20260910/PUBLISH_READY.json": "028e70f3c611ff62ba381c49bfd14e4ffcb21941c0b5e5683d9800596f3f63a5",
+    "outputs/spr_expanded_review_20260910/REVIEW_SUMMARY.json": "5e6ff08fd525b6e018d0275c87960c6eb128febd14dba419b321b13d35b5d3a8",
+    "outputs/spr_expanded_review_20260910/SCOPE_SUMMARY.json": "bd7ec741eb0400c5a4bf88ad2bc8c65254c6159bbf29b17506f5832721347fa9",
+    "outputs/spr_expanded_review_20260910/VALIDATION.json": "73fe1ca0d00be7f8376d98e022304d4ca61531fded51f303d6f9e54555f6920f",
+    "outputs/spr_expanded_review_20260910/expanded_batch_1.json": "2d79ea6f24416bfa50c886d1c4c5f3b60523638151f47cb8c5a3ac29af710b01",
+    "outputs/spr_expanded_review_20260910/expanded_batch_2.json": "9a57c98cc11a66745553915c0cb4a9c085f6859dd157da108a4e8ddf1f9509ac",
+    "outputs/spr_expanded_review_20260910/expanded_batch_3.json": "87d44aa5b4063c0b514199728c30f3140e7c99badae738108ad6a07c44873ba2"
+  }
+}

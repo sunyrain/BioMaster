@@ -1,0 +1,100 @@
+{
+  "status": "STOPPED_BY_USER",
+  "mode": "structurally_pretrained",
+  "epoch": 1,
+  "updates": 10400,
+  "best": 0.43543200103127677,
+  "training_rows": 292408,
+  "source_identity": {
+    "config": {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_pocket_precision_20260906.json",
+      "sha256": "25469f751967a073424bb945e58d69fa6118a3c1f4078a1de6e0faca23380543",
+      "size_bytes": 2127
+    },
+    "parent": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+      "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+      "size_bytes": 4956393
+    },
+    "features": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/features/MANIFEST.json",
+      "sha256": "03bde6c21701dce8009dc7ce4e5c4e4890f49cc909007f7d7882282cf33aa49b",
+      "size_bytes": 1151480
+    },
+    "train": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/TRAIN.csv.gz",
+      "sha256": "125303c22875744a9e6adb980e9788add1d08c10f26b198bd51e3988b16f1eb2",
+      "size_bytes": 2712317
+    },
+    "validation": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+      "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+      "size_bytes": 458291
+    },
+    "risk": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+      "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+      "size_bytes": 276608
+    },
+    "structural": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+      "sha256": "d395406d8a9765cec0cce8b36a8a57e3f94e7a64cdcc84333abc96e6d7045af9",
+      "size_bytes": 134792539
+    },
+    "sources": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+        "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+        "size_bytes": 12551
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_features.py",
+        "sha256": "cb0585066011c975975408a039d65e4580b644f23e3e5371a51ab11c43a66df1",
+        "size_bytes": 6732
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_training.py",
+        "sha256": "619c7cdfc6b7ac94d2cafe786ec8466ae9978f123c0a3e7c6ec118b2b527f1f3",
+        "size_bytes": 3593
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_pocket_precision.py",
+        "sha256": "a59d0ce3aed6df69cc060ec62936201e99bfae1f7bfe33e4667f3e3dd53da740",
+        "size_bytes": 11620
+      }
+    ]
+  },
+  "promotion_eligible": false,
+  "status_before_user_stop": "TRAINING",
+  "utc_before_user_stop": null,
+  "utc": "2026-09-07T05:11:25.914288+00:00",
+  "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+  "closure": {
+    "status": "STOPPED_BY_USER",
+    "stopped_utc": "2026-09-07T05:08:47.863374+00:00",
+    "updated_utc": "2026-09-07T05:11:25.914288+00:00",
+    "reason": "User requested stopping current work and closing out with a retrospective.",
+    "automatic_continuation_enabled": false,
+    "training_complete": false,
+    "structural_pretraining_complete": true,
+    "completed_downstream_epochs": 1,
+    "last_saved_updates": 10400,
+    "last_logged_updates": 10480,
+    "last_log_loss": 0.05849192723769647,
+    "last_log_loss_scope": "one sampled minibatch; not epoch mean or validation loss",
+    "known_logged_updates_after_checkpoint": 80,
+    "exact_in_memory_step_at_signal_unknown": true,
+    "ranking_gain_confirmed": false,
+    "promotion_eligible": false,
+    "new_2023_2025_or_kirhub_test_completed": false,
+    "selected_bundle_manifest_unchanged": true,
+    "evidence": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/closure_20260907/EVIDENCE.json",
+    "report": "/root/autodl-tmp/BioMaster/docs/BIOMASTER_STOP_AND_RETROSPECTIVE_20260907_ZH.md",
+    "pending_experiments_cancelled": true,
+    "status_note": "Terminated by user, not converged or completed. Existing checkpoint payloads retain their historical saved status and were not rewritten."
+  },
+  "automatic_continuation_enabled": false,
+  "last_saved_updates": 10400,
+  "last_logged_updates": 10480,
+  "downstream_ranking_complete": false
+}

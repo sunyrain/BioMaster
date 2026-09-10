@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE",
+  "groups_completed": 926,
+  "groups": 926,
+  "records": 14724,
+  "expected": 14724,
+  "counts": {
+    "CACHED": 680,
+    "DOWNLOADED": 14044
+  },
+  "seconds": 4274.2,
+  "failed": 0
+}

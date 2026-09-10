@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "bundle": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/package_smoke_bermol_morgan_v2/MANIFEST.json",
+    "sha256": "951254bacb4c892a1d8e8f77c4da64a8686421b0d565831a7dc29d5b867c5610",
+    "size_bytes": 2550
+  },
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/bermol_morgan/smoke/roll_2018/global_ema/seed_20260921/BEST.pt",
+    "sha256": "3f44269c3bee4f33cbfb89a04bbc0e6d6d1a1c67317f96c5a20572fc312657e7",
+    "size_bytes": 5154793
+  },
+  "tested_pairs": 19,
+  "fp32_max_abs_error": 0.0,
+  "complete_registry_axes_match": true,
+  "reload_bitwise_equal": true,
+  "invalid_inputs_rejected": 6,
+  "missing_geometry_max_abs_error": null,
+  "independent_import": true,
+  "cpu_bidirectional_inference": true,
+  "verifier": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_catalog_model_v2.py",
+    "sha256": "f1cea15a8e6ea0b0a0bf77a8742228148ab29a3fe381173a80b6916ed1d7fd04",
+    "size_bytes": 6499
+  }
+}

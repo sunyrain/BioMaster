@@ -1,0 +1,65 @@
+{
+  "candidate_pairs": 384,
+  "drugs": 229,
+  "targets": 112,
+  "current_rank_top10": 179,
+  "current_rank_11_20": 205,
+  "action_counts": {
+    "仍可探索": 223,
+    "先解决具体问题": 149,
+    "有证据支持降低投入": 12
+  },
+  "cross_area": 195,
+  "usable_chemical_support_ge04": 20,
+  "neural_full_fit_top20": 78,
+  "exact_evidence_overlap": 0,
+  "bdb_validation_shared_drugs": 23,
+  "bdb_validation_shared_targets": 46,
+  "bdb_strict_no_prior_relation": {
+    "pairs": 78,
+    "positive": 0,
+    "weak_negative": 78
+  },
+  "bindingdb_spr_cluster_bootstrap": {
+    "valid_bootstrap_replicates": 1000,
+    "auroc_ci95": [
+      0.6673963542058156,
+      0.8146806593705509
+    ],
+    "ap_ci95": [
+      0.4944582229735649,
+      0.7130838410920675
+    ]
+  },
+  "dates": {
+    "publication_date": {
+      "dated_rows": 1236,
+      "earliest": "1993-12-28",
+      "latest": "2025-07-08",
+      "september_or_later_rows": 0,
+      "pairs_with_september_or_later_record": 0
+    },
+    "bindingdb_date": {
+      "dated_rows": 1278,
+      "earliest": "2006-05-02",
+      "latest": "2026-06-06",
+      "september_or_later_rows": 0,
+      "pairs_with_september_or_later_record": 0
+    }
+  },
+  "models_retrained": false,
+  "baseline_modified": false,
+  "input_sha256": {
+    "outputs/joint384_comprehensive_20260909/RECOMMENDED_CANDIDATES_384.csv": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/affinity_predictor_audit_20260910/PAIR_LABELS_AND_FROZEN_SCORES.csv.gz": "2d2f66b5f25c3ba85b8df5902176529303d445f66853cd4a2dd6e8fc8fe40d00",
+    "outputs/affinity_predictor_audit_20260910/LABELED_OBSERVATIONS.csv.gz": "9147bcef219876ef93bb1a56b2779dff8b098a5e61d993562f6692a94a9ccc18"
+  },
+  "limitations": [
+    "BindingDB-covered cohorts retain existing cross-source labels/QC; not exclusively BindingDB-derived labels.",
+    "September release is a cumulative snapshot, not a prospectively isolated September experimental dataset.",
+    "Rank-band outcomes describe measured pairs only; not estimated hit rates for the frozen384.",
+    "No local training pair does not imply cold drug, cold target, cold scaffold or pretraining-leakage-free.",
+    "Neural agreement is descriptive; not independently calibrated or used to reselect candidates."
+  ]
+}

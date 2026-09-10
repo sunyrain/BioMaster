@@ -1,0 +1,69 @@
+{
+  "format_version": 2,
+  "status": "SELECTED_CATALOG_MODEL",
+  "drugs": 720,
+  "targets": 384,
+  "training_cutoff": 2025,
+  "seed": 20260921,
+  "epoch": 5,
+  "family": "molecular_control",
+  "variant": "global",
+  "drug_representation": "drugclip_morgan",
+  "local_interactions": false,
+  "pretrained_inputs": {
+    "esm2": true,
+    "drugclip": true,
+    "bermol": false
+  },
+  "morgan_fingerprints": true,
+  "scores": "two directional logits; not calibrated probabilities or measured affinities",
+  "scope": "packaged 720-drug / 384-target core; new entities require validated feature extension",
+  "default_rank_denominator": {
+    "drug_to_target": 384,
+    "target_to_drug": 720
+  },
+  "temporal_scope": "downstream training cutoff only; encoder training overlap/chronology not certified",
+  "structure_fallback": "global model has no receptor structure dependency",
+  "selection_record": {
+    "status": "SELECTED",
+    "checkpoint_sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+    "checkpoint": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+      "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+      "size_bytes": 4956687
+    },
+    "architecture_selection": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/FINAL_ARCHITECTURE_SELECTION.json",
+      "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+      "size_bytes": 17515
+    },
+    "result": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/RESULT.json",
+      "sha256": "f2b7ed34ddbbd3d1f564bc3e1ad1b3f434f03b1856cb29128a9ab6e0fb45489c",
+      "size_bytes": 5292
+    },
+    "training_data": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/fullfit_2025/MANIFEST.json",
+      "sha256": "1ec5f0b0325ff412071c35c8c873cf4253f5a5f2797ed952af6810da1f4cb9f0",
+      "size_bytes": 1668
+    },
+    "regression_result": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/regression/RESULT.json",
+      "sha256": "cce3e189a63ff846c5f5394901cb60528c4329a373741628f9edaf38bbe33ab1",
+      "size_bytes": 3008
+    },
+    "seed": 20260921,
+    "downstream_cutoff": 2025,
+    "fullfit_weights_have_no_independent_test_score": true,
+    "driver": {
+      "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_selected_delivery.py",
+      "sha256": "bbfdb5a785d1a05660efe7b57c3aa17cc12563057298c8188bf3a88acdc8c54d",
+      "size_bytes": 3589
+    }
+  },
+  "source_checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2025/global_refit/seed_20260921/BEST.pt",
+    "sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+    "size_bytes": 4956687
+  }
+}

@@ -1,0 +1,13 @@
+# SPR384 最终实验表 · FDA优先修订版
+
+版本：20260910_FDA_V2。384候选及其优先顺序保持原基线；本次将31个靶点的拟用对照替换为精确身份匹配FDA注册表且有选定Kd/Ki记录的药物，涉及84行候选。FDA药物身份主要依据2026-08-03官方产品快照及项目精确结构注册表；不以ChEMBL max_phase代替FDA审批。
+
+本次选定证据：{'Kd': 20, 'Ki': 11}。Kd可能来自竞争结合或ITC，Ki可能为酶学或竞争结合；这些不等于本批SPR实测结果。表中构建条件是使用要求，当前未收到实验室实际蛋白边界、亚型和批次活性确认，因此不能称为已测通或已放行。
+
+使用SPR384_FINAL_EXPERIMENT_TABLE.csv或Excel（384候选、112另计对照、31项替换记录）。第四列为本行新靶点拟用对照。仅四列CSV不包含确认条件，采购和实验安排应使用主表。仍保留原对照的靶点不代表已确认FDA身份或已验证SPR适用性。
+
+替换对照使用新的CTRL-FDA-编号及精确pair_id；原编号、原pair_id和替换前名称保留在对照表，旧版完整归档于outputs/spr384_final_experiment_table_before_fda_v2_20260910。历史实测记录不重写。网站及新结果模板使用新编号；之前下载的对照模板应重新下载。
+
+每项替换只采用人工选定的activity及其真实ChEMBL assay/document编号，见CONTROL_SOURCE_ACTIVITY_EVIDENCE.csv和FDA_CONTROL_REPLACEMENTS.csv。没有将同药其他靶点、细胞裂解液Kinobeads、JH2域或含前药活化条件的活性直接移用。本次JAK1选择ruxolitinib的JH1构建837–1142酶学Ki；TYK2同样要求JH1；PPARG使用配体竞争Ki，未移用共激活肽结合读数。
+
+生成脚本：scripts/finalize_spr384_fda_controls_20260910.py。人工选择：data/curation/spr112_fda_control_replacements_20260910.json。

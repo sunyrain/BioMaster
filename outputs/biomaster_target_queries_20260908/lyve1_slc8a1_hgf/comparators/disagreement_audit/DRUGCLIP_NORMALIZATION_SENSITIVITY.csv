@@ -1,0 +1,4 @@
+gene,raw_cosine_vs_robust_z_rank_spearman,top20_overlap,mean_fold_top20_count_for_ensemble_top20
+LYVE1,0.9983815233697081,19,3.15
+SLC8A1,0.864218198723377,12,3.95
+HGF,0.991814927626532,13,3.05

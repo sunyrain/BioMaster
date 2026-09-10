@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETE",
+  "base_manifest": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/features/ATOM_MANIFEST.json",
+    "sha256": "d7315cec995b6186c3705e2828dc3cce888a8f39bc052150dc9b265985e050bd",
+    "size_bytes": 3503
+  },
+  "requested_ids": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/SUPPLEMENTAL_MOLECULE_IDS.npy",
+    "sha256": "af573d2d978f113c60f6f4ac08ba5d8177a1a9d22be4f4bb7d2021945dc59088",
+    "size_bytes": 1000
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_best_model_data.py",
+    "sha256": "4f7c59b6c6e015fe258b6387eb19b1f9c297e7018fbf78befad31988df8673ff",
+    "size_bytes": 11923
+  },
+  "original_producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_unified_interaction.py",
+    "sha256": "1eb76a08fffcc7a1fee85c23497f7e91a0a385253b7cbbc3309ae82e4c609f6c",
+    "size_bytes": 21524
+  },
+  "labels_used": false
+}

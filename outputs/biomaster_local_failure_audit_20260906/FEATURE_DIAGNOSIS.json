@@ -1,0 +1,35 @@
+{
+  "targets": 384,
+  "geometry_targets": 352,
+  "selected_residue_tokens": 36864,
+  "pocket_residue_tokens": 17196,
+  "non_pocket_fill_tokens": 19668,
+  "targets_with_union_over_96": 18,
+  "mean_selected_pocket_fraction": 0.4664713541666667,
+  "geometry_neighbor_degree_quantiles": {
+    "0": 8.0,
+    "0.1": 19.0,
+    "0.5": 34.0,
+    "0.9": 57.0,
+    "1": 90.0
+  },
+  "old_validation": [
+    {
+      "cutoff": 2018,
+      "positive_pairs": 60,
+      "target_queries": 44,
+      "positive_pairs_with_geometry": 57,
+      "positive_pairs_in_truncated_pocket_unions": 3,
+      "selected_pocket_fraction_on_positive_targets": 0.537326388888889
+    },
+    {
+      "cutoff": 2020,
+      "positive_pairs": 53,
+      "target_queries": 39,
+      "positive_pairs_with_geometry": 53,
+      "positive_pairs_in_truncated_pocket_unions": 2,
+      "selected_pocket_fraction_on_positive_targets": 0.5239779874213836
+    }
+  ],
+  "site_member_feature_passed_to_network": false
+}

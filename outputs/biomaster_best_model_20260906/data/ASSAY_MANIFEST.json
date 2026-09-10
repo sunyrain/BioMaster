@@ -1,0 +1,89 @@
+{
+  "status": "COMPLETE",
+  "counts": {
+    "2018": {
+      "rows": 50208,
+      "groups": 2916,
+      "targets": 294,
+      "drugs": 41846,
+      "old_rows": 385,
+      "positives": 39060
+    },
+    "2020": {
+      "rows": 58923,
+      "groups": 3291,
+      "targets": 310,
+      "drugs": 49736,
+      "old_rows": 388,
+      "positives": 46104
+    },
+    "2022": {
+      "rows": 66864,
+      "groups": 3729,
+      "targets": 315,
+      "drugs": 56749,
+      "old_rows": 404,
+      "positives": 52184
+    }
+  },
+  "max_extracted_year": 2022,
+  "target_to_drug_only": true,
+  "group_definition": "exact assay_id + target + standard_type + standard_units",
+  "eligibility": "cutoff-only observed binary pairs, every replicate >=6 for positives or <=5 for negatives",
+  "no_cross_assay_potency_comparison": true,
+  "unknown_as_inactive": false,
+  "database": {
+    "path": "/root/autodl-tmp/BioMaster/downloads/chembl_37/chembl_37/chembl_37_sqlite/chembl_37.db",
+    "size": 30480314368,
+    "mtime_ns": 1778704560758950000
+  },
+  "sources": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/PARENT_MAPPING.csv.gz",
+      "sha256": "4e52e54735f3e97806751b94e517e6a80cab97b89bba757c0744564a609106fd",
+      "size_bytes": 12886680
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/EXTRACTION.sql",
+      "sha256": "d136913eb0c6132d9872c4b635e6b287307e14b0ac48bc78a5ef669a3954b182",
+      "size_bytes": 2387
+    }
+  ],
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/prepare_biomaster_best_model_data.py",
+    "sha256": "4f7c59b6c6e015fe258b6387eb19b1f9c297e7018fbf78befad31988df8673ff",
+    "size_bytes": 11923
+  },
+  "files": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_ANNUAL.csv.gz",
+      "sha256": "7e5a77c104e09b9affa4f97dab904aaefe75168f6cc8b81631a23e7e7576d580",
+      "size_bytes": 4413065
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_CONTRASTS_2018.csv.gz",
+      "sha256": "d63f4479a1bf6ce9dd97d51077466d90e02f2c3c3d591142629cedae7b8280e7",
+      "size_bytes": 335909
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_CONTRASTS_2020.csv.gz",
+      "sha256": "fc24c1d2c244e252e1aeaa5523f844e6a006e14f5eca23f9c1ea48f140b495bc",
+      "size_bytes": 390436
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_CONTRASTS_2022.csv.gz",
+      "sha256": "f57dfe0745b4bed8f6482b3750e999d58b410f691ffe53d7c6fb3f848a1d298c",
+      "size_bytes": 443763
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_UNRESOLVED.csv.gz",
+      "sha256": "fb7e7f01ce247adbe324581817218abc5a2a010ce55828aa23eeac1200affcd9",
+      "size_bytes": 3927
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/ASSAY_EXTRACTION.sql",
+      "sha256": "1b4331b533d6422e7a7faeda59b4f05c28e0a3aaaf09a8b1cc34a2052fee4825",
+      "size_bytes": 1713
+    }
+  ]
+}

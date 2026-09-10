@@ -1,0 +1,10 @@
+{
+  "tests_passed": 18,
+  "query_cycle_has_each_query_once": true,
+  "candidate_audit_pass": true,
+  "both_finite_runs_completed": true,
+  "old_run_still_stopped": true,
+  "new_report_links_exist": true,
+  "selected_manifest_and_original_structural_weights_unchanged": true,
+  "gpu_training_processes_absent": true
+}

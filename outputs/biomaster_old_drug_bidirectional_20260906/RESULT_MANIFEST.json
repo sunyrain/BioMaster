@@ -1,0 +1,20 @@
+{
+  "outputs/biomaster_old_drug_bidirectional_20260906/PROTOCOL.json": "4c939d9323775ac4fd5f58cca538d334aa7e1cac3b5efbbaa84766ebc0b9474c",
+  "outputs/biomaster_old_drug_bidirectional_20260906/STATUS.json": "8b7211e1ae24de5cd88cb1fa1d46b31eb07e3a9bbd0a982e257c52551d7384f9",
+  "outputs/biomaster_old_drug_bidirectional_20260906/FEATURE_MANIFEST.json": "920c3c95f8ab68693e95102bbd89c60586ee0434c9a0793b2d1f08c31e0476bf",
+  "outputs/biomaster_old_drug_bidirectional_20260906/VALIDATION.json": "81ce132f4639161d6478359f09758ee209456c6bea913ddfc8898be605c2025f",
+  "docs/BIOMASTER_OLD_DRUG_BIDIRECTIONAL_TEST_20260906_ZH.md": "569137989b6132df28aed85ab84746db1239f5c3d935832cd28dc0014a42f879",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/project_720x384__METRICS.json": "252485d51de905dc5ae2a7abeac4db4d111609d09ae2791f0bb3f226a35018f2",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/drugclip_common__METRICS.json": "7a1a48c424dbdfbaa9d83770a24ab3ace3513fb0cb3117d954504acf9a1f803a",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/original_test_old_drugs__METRICS.json": "e55c68b0da2a303f696bfc32e101b609ee550eb6b9bdce31a34ffc3724a58a26",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/old_drugs_absent_from_binary_relations__METRICS.json": "45555f4e8b7f506dd554a8f1448ef4fad4e9442b7ee233a63a989c7cc58ec422",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/SUMMARY.csv": "4f37d96dc624c4344bb1418685ce5e8968b7a9c451f677dc07a2fbe5384cfe86",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/KNOWN_RELATION_RANKS.csv.gz": "5df7a2844c87f6d9b93337b3ced25c4a3d13e892ae5e4653ee7852d058ca35de",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/TOP20_DRUG_TO_TARGET.csv.gz": "8edcf044f910d99377b56152e677397ab9d91be472ed21e0b155909fe77c677b",
+  "outputs/biomaster_old_drug_bidirectional_20260906/evaluation/TOP20_TARGET_TO_OLD_DRUG.csv.gz": "81461c6f28c87c8a1e75855de1480c2c7639d505029be63357101607bfa80e21",
+  "scripts/prepare_old_drug_bidirectional_20260906.py": "f900f2477e7f727283f5234e10db88d4b316c06e9773a8ef67f420155d325f81",
+  "scripts/evaluate_old_drug_bidirectional_20260906.py": "f404f7620e23d37988848da0e40f4e633727393e9bb868856dfa3f78c2e3068f",
+  "scripts/summarize_old_drug_bidirectional_20260906.py": "37490b86deb26e072eb7db8abb95caab5d65139b0b59751751fda81dbe7c78e0",
+  "biomaster/old_drug_ranking.py": "64a609da860924bb71982ae59f24cbbaf200875a9ef21635f2ddbaa78a7de587",
+  "outputs/biomaster_old_drug_bidirectional_20260906/VALIDATION_TESTS.json": "e09c9b944c54613b90967dd39dd7458010785ee1934ce1274bfc0e9bf4d78fa3"
+}

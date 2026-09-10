@@ -1,0 +1,118 @@
+{
+  "status": "BOUNDED_PREFLIGHT_COMPLETE",
+  "updates": 2,
+  "phase": "joint",
+  "elapsed_seconds": 138.06801096443087,
+  "original_structural": {
+    "native_contact_ap": 0.5671258218557094,
+    "native_distance_mae": 1.2478746625115806
+  },
+  "migrated_before": {
+    "native_contact_ap": 0.567114397234237,
+    "native_distance_mae": 1.2478639483939207
+  },
+  "migrated_after": {
+    "native_contact_ap": 0.5671519365773331,
+    "native_distance_mae": 1.2467708197755103
+  },
+  "retention_gate_pass": true,
+  "ranking_probe_before": null,
+  "ranking_probe_after": null,
+  "unique_queries_seen": [
+    1,
+    1
+  ],
+  "history": [
+    {
+      "update": 1,
+      "head": 0,
+      "query": 267,
+      "candidates": 384,
+      "loss_rank": 5.9909234046936035,
+      "loss_old_observed": 0.6958436071872711,
+      "loss_general_observed": 0.6929194927215576,
+      "loss_same_assay": 0.6912198662757874,
+      "loss_structural_replay": 2.424576759338379,
+      "loss_distance": 2.009882688522339,
+      "loss_contact": 0.2749629616737366,
+      "loss_site": 0.6986554265022278,
+      "loss_teacher_consistency": 0.03304864466190338,
+      "gradient_norm": 5.845649242401123,
+      "gradient_norm_by_group": {
+        "global": 0.917259931564331,
+        "structural": 2.6383111476898193,
+        "new": 5.135130882263184
+      },
+      "old_observed_rows": [
+        190516,
+        73245,
+        115127,
+        16007,
+        81419,
+        132768,
+        92649,
+        65860
+      ],
+      "general_observed_rows": [
+        201533,
+        155040,
+        267694,
+        134026
+      ],
+      "assay_group": 12910,
+      "replay_system": "5l44__2__1.B__1.H_1.K_1.L",
+      "replay_cluster": "c2737",
+      "elapsed_seconds": 86.82926249410957
+    },
+    {
+      "update": 2,
+      "head": 1,
+      "query": 79,
+      "candidates": 720,
+      "loss_rank": 6.521722316741943,
+      "loss_old_observed": 0.6749440133571625,
+      "loss_general_observed": 0.6565358638763428,
+      "loss_same_assay": 0.6883796453475952,
+      "loss_structural_replay": 2.2872397899627686,
+      "loss_distance": 2.065021276473999,
+      "loss_contact": 0.10343866050243378,
+      "loss_site": 0.5938993692398071,
+      "loss_teacher_consistency": 0.3208501935005188,
+      "gradient_norm": 6.2823333740234375,
+      "gradient_norm_by_group": {
+        "global": 0.8849202990531921,
+        "structural": 4.354299068450928,
+        "new": 4.441251277923584
+      },
+      "old_observed_rows": [
+        273242,
+        73228,
+        53522,
+        81393,
+        181898,
+        146355,
+        160827,
+        132590
+      ],
+      "general_observed_rows": [
+        290733,
+        183081,
+        261701,
+        246571
+      ],
+      "assay_group": 26634,
+      "replay_system": "2zfu__1__1.A__1.C",
+      "replay_cluster": "c6139",
+      "elapsed_seconds": 106.7900497848168
+    }
+  ],
+  "model_parameters": 36153229,
+  "trainable_parameters": 36153229,
+  "full_training_complete": false,
+  "full_ranking_benchmark_complete": false,
+  "structural_validation_complexes": 1223,
+  "full_structural_retention_measured": true,
+  "long_training_ready": false,
+  "promotion_eligible": false,
+  "limitation": "A bounded optimization check, not a full ranking benchmark; any ranking probe has one query per direction. Holo/predicted domain-transfer work remains."
+}

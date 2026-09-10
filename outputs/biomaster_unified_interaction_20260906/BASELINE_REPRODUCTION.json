@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "tolerance": 1e-12,
+  "values": [
+    {
+      "model": "temporal_v3",
+      "direction": "d2t",
+      "ap": 0.1527253949588093,
+      "r20": 0.4055555555555555
+    },
+    {
+      "model": "temporal_v3",
+      "direction": "t2d",
+      "ap": 0.08149132040966472,
+      "r20": 0.28741496598639454
+    },
+    {
+      "model": "temporal_J",
+      "direction": "d2t",
+      "ap": 0.28061430025845086,
+      "r20": 0.5444444444444444
+    },
+    {
+      "model": "temporal_J",
+      "direction": "t2d",
+      "ap": 0.1564679574403238,
+      "r20": 0.4472789115646258
+    },
+    {
+      "model": "positive_nearest",
+      "direction": "d2t",
+      "ap": 0.27286467713151696,
+      "r20": 0.6833333333333333
+    },
+    {
+      "model": "positive_nearest",
+      "direction": "t2d",
+      "ap": 0.15349304470980837,
+      "r20": 0.4829931972789115
+    }
+  ],
+  "source": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TEST_METRICS.csv",
+    "sha256": "2001e4b4b22bd79c49d5c7eaf5eb8d70cd6fd91f9620a57fbf4ceabb5b5f1da7",
+    "size_bytes": 53376
+  }
+}

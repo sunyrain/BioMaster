@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "full_model_parameters": 33652451,
+  "real_complexes": 12,
+  "optimizer_updates": 6,
+  "losses_distance_contact_site": [
+    [
+      4.245802879333496,
+      0.7814069390296936,
+      7.212124728539493e-06
+    ],
+    [
+      3.965984582901001,
+      0.7138400673866272,
+      0.010900605469942093
+    ],
+    [
+      3.9884567260742188,
+      0.7179965972900391,
+      2.831153142324183e-05
+    ],
+    [
+      4.287088394165039,
+      0.6716545224189758,
+      1.3449662923812866
+    ],
+    [
+      4.172514915466309,
+      0.6745965480804443,
+      0.05433909595012665
+    ],
+    [
+      4.195981979370117,
+      0.6805248260498047,
+      0.0001415464503224939
+    ]
+  ],
+  "first_step_gradient_norms": {
+    "distance_head.1.weight": 2.201171875,
+    "contact_head.1.weight": 1.396129846572876,
+    "atom_input.1.weight": 2.3899974822998047,
+    "residue_input.1.weight": 6.122650146484375,
+    "residue_bias.net.0.weight": 0.0028458181768655777,
+    "blocks.5.outer_out.weight": 0.44856441020965576
+  },
+  "median_update_seconds": 0.2857009554281831,
+  "weights_discarded": true,
+  "qualification": "engineering only; sampled before final overlap admission, never used to initialize formal training",
+  "downstream_ranking_evaluated": false,
+  "script": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/verify_biomaster_structural_supervision.py",
+    "sha256": "ea1b10a2047ee42d0f9690c8be5db8755562964ae6c80b2de53da1f0cf628b66",
+    "size_bytes": 3148
+  }
+}

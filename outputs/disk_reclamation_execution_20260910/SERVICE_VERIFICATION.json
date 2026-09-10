@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "production_bundle_verified": true,
+  "fresh_cpu_inference": true,
+  "fresh_explorer_load": true,
+  "drugs": 720,
+  "targets": 888,
+  "scored_pairs": 276480,
+  "final_candidates": 384,
+  "final_controls": 112,
+  "warnings": [],
+  "spr_results_database_quick_check": "ok",
+  "live_homepage_status": 200,
+  "live_unauthenticated_api_status": 401
+}

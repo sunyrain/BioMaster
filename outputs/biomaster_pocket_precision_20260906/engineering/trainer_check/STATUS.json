@@ -1,0 +1,64 @@
+{
+  "status": "INTERRUPTED_ENGINEERING_LIMIT",
+  "mode": "relation_only_control",
+  "epoch": 0,
+  "updates": 3,
+  "best": null,
+  "training_rows": 292408,
+  "source_identity": {
+    "config": {
+      "path": "/root/autodl-tmp/BioMaster/configs/biomaster_pocket_precision_20260906.json",
+      "sha256": "25469f751967a073424bb945e58d69fa6118a3c1f4078a1de6e0faca23380543",
+      "size_bytes": 2127
+    },
+    "parent": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/BEST.pt",
+      "sha256": "87d7a4b7bc50cf746e1d467baa1759b691a54e89727e28590e2aa9d466309497",
+      "size_bytes": 4956393
+    },
+    "features": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/features/MANIFEST.json",
+      "sha256": "03bde6c21701dce8009dc7ce4e5c4e4890f49cc909007f7d7882282cf33aa49b",
+      "size_bytes": 1151480
+    },
+    "train": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/TRAIN.csv.gz",
+      "sha256": "125303c22875744a9e6adb980e9788add1d08c10f26b198bd51e3988b16f1eb2",
+      "size_bytes": 2712317
+    },
+    "validation": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/VALIDATION.csv.gz",
+      "sha256": "9e27f0a1e4e5b3fa0aef90aa499d4ad5fdc93a9f5fdb8bb84388880bb9643e87",
+      "size_bytes": 458291
+    },
+    "risk": {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/data/roll_2020/RISK.npy",
+      "sha256": "96172f1b1b94a92b068663a08534537ea80f2518f82f69a84234c8dd8f2249c9",
+      "size_bytes": 276608
+    },
+    "structural": null,
+    "sources": [
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision.py",
+        "sha256": "cebd204d9e63aeb0bfa08178d152157fb14941e3d733818099506ef675d69024",
+        "size_bytes": 12551
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_features.py",
+        "sha256": "cb0585066011c975975408a039d65e4580b644f23e3e5371a51ab11c43a66df1",
+        "size_bytes": 6732
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/biomaster/pocket_precision_training.py",
+        "sha256": "619c7cdfc6b7ac94d2cafe786ec8466ae9978f123c0a3e7c6ec118b2b527f1f3",
+        "size_bytes": 3593
+      },
+      {
+        "path": "/root/autodl-tmp/BioMaster/scripts/train_biomaster_pocket_precision.py",
+        "sha256": "a59d0ce3aed6df69cc060ec62936201e99bfae1f7bfe33e4667f3e3dd53da740",
+        "size_bytes": 11620
+      }
+    ]
+  },
+  "promotion_eligible": false
+}

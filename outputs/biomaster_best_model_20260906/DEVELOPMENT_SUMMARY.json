@@ -1,0 +1,166 @@
+{
+  "status": "PARTIAL",
+  "utc": "2026-09-06T07:54:43.367270+00:00",
+  "completed_primary_runs": 25,
+  "expected_primary_runs": 30,
+  "missing": [
+    {
+      "variant": "global_assay",
+      "cutoff": 2018,
+      "seed": 20260923
+    },
+    {
+      "variant": "global_assay",
+      "cutoff": 2020,
+      "seed": 20260923
+    },
+    {
+      "variant": "global_ema",
+      "cutoff": 2020,
+      "seed": 20260923
+    },
+    {
+      "variant": "global_query",
+      "cutoff": 2018,
+      "seed": 20260923
+    },
+    {
+      "variant": "global_query",
+      "cutoff": 2020,
+      "seed": 20260923
+    }
+  ],
+  "final_model_selected": false,
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/summarize_biomaster_best_model_development.py",
+    "sha256": "d94039e406a13b5a4c843444c41e7a48cfe2da5dc71f24b3c52e234fae3336ee",
+    "size_bytes": 6253
+  },
+  "runs": [
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/global/seed_20260921/RESULT.json",
+      "sha256": "08bc6e8ae835cc959a5458cd550f44fca432cbd56d0818a0f243277a1577bd6b",
+      "size_bytes": 4957
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/development/global/seed_20260921/RESULT.json",
+      "sha256": "c39c083293f52cbbdb6b77d4172a03f1d0cb1d871929324aec51487a60b3fb12",
+      "size_bytes": 3563
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/global/seed_20260922/RESULT.json",
+      "sha256": "e6e02c06bf45786c165cc376b77b8676af068f0eb9d5ace24c8527b39d705530",
+      "size_bytes": 4959
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/global/seed_20260922/RESULT.json",
+      "sha256": "bff60428674ca075aaa148b44b9088d16b980fc9721cda3a070d5ed9269eb2fb",
+      "size_bytes": 3568
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/global/seed_20260923/RESULT.json",
+      "sha256": "dfdf7b7fd6e2b306c3e8c29c00a97a50e52b66688dd37fe7aea772e1fc228d64",
+      "size_bytes": 4960
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/global/seed_20260923/RESULT.json",
+      "sha256": "b45eca67686a0159034c4ba2f154c13af6139c20f2725920c6a798be323af1bf",
+      "size_bytes": 3569
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/capacity/seed_20260921/RESULT.json",
+      "sha256": "4ec108d61d6c2b144dd248fa73f5500c33e2d9a4b304ac2240df23be61f62800",
+      "size_bytes": 4966
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/development/capacity/seed_20260921/RESULT.json",
+      "sha256": "be9bc419c487b885477099b61bc2dea5e0c816c84c781c7648696b71ae4d10e4",
+      "size_bytes": 3569
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/capacity/seed_20260922/RESULT.json",
+      "sha256": "8ff1a4d5c799c0386410cdd9f6e77df38022c198168e803c16719e3c9dead0ad",
+      "size_bytes": 4964
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260922/RESULT.json",
+      "sha256": "769463142794b03ecae6b00cbf700b1b8ae4331a3ab110c8e59f86ebceeb1bd6",
+      "size_bytes": 3574
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/rolling_original/roll_2018/development/capacity/seed_20260923/RESULT.json",
+      "sha256": "f002b3fc1ab712fcbbb7a95a5fb32933bb891888f4457a1794990f917b944358",
+      "size_bytes": 4963
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/reproduction/development/capacity/seed_20260923/RESULT.json",
+      "sha256": "552a6e0a639b08d6639005a6c7eca0807a1d21341ca915b4debfd3efdc09cf51",
+      "size_bytes": 3572
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_assay/seed_20260921/RESULT.json",
+      "sha256": "a00734d3aff962b5f62ca28a784166dac0aa35a967398150b71ab0d551ba4f5f",
+      "size_bytes": 5625
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_assay/seed_20260922/RESULT.json",
+      "sha256": "dd1f4e80d65589a497fa50269dad6b8508f9089dc081afbcf189e35ebc7bc769",
+      "size_bytes": 5623
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_ema/seed_20260921/RESULT.json",
+      "sha256": "a58596f529ddbe01e6edbea981c4e564dc1fdf7f301a2b3df8ea03506873326e",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_ema/seed_20260922/RESULT.json",
+      "sha256": "e58008d5332ad21fdf14802dc9e076f394681e83a81011b764d27c0f57207c64",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_ema/seed_20260923/RESULT.json",
+      "sha256": "b26fb7c5927d327346e128ab559f3a98874a749987ec24dc14d88711798af199",
+      "size_bytes": 5618
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_query/seed_20260921/RESULT.json",
+      "sha256": "8b9b6b1e7c2314a65449784261a245aaa3e664f03936812dc8c8851aa7472290",
+      "size_bytes": 5622
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2018/global_query/seed_20260922/RESULT.json",
+      "sha256": "7c4bce822a37a1eee492557f8cdc690257bc57d5816b50f49d0c62f82fdab6e0",
+      "size_bytes": 5618
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_assay/seed_20260921/RESULT.json",
+      "sha256": "74221e124d06ef567c68784d44bd8b57efde2a44ce9b5c1fba7ada78d88aef26",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_assay/seed_20260922/RESULT.json",
+      "sha256": "005b019a4a9aaab7e9a547ec3255358706f5b2401496f01e7a4a4a9ff22510a7",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_ema/seed_20260921/RESULT.json",
+      "sha256": "53578e69fdfd204dbda3d7e1ddad278d08b94f675fd738b581eb7562f6900e88",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_ema/seed_20260922/RESULT.json",
+      "sha256": "055f8945c1ce53fc23a7584df1f1736f8b14d0c05bf292c8717be20f98a0c9f8",
+      "size_bytes": 5617
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_query/seed_20260921/RESULT.json",
+      "sha256": "e7d64a18a4ab84e38578f0f0321b4ad1343f205eb949060f8fd2f62d931c9451",
+      "size_bytes": 5619
+    },
+    {
+      "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/optimization/roll_2020/global_query/seed_20260922/RESULT.json",
+      "sha256": "dfec8296c5145f9a08ccf6d31463fd8535b151f6d1705652e700672abb25e577",
+      "size_bytes": 5617
+    }
+  ]
+}

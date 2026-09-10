@@ -1,0 +1,10 @@
+gene_symbol,model_a,model_b,spearman,top20_overlap
+LYVE1,ours,dtiam,0.05223425070907415,3
+LYVE1,ours,drugclip,-0.13027140613054164,0
+LYVE1,dtiam,drugclip,-0.28575190152758784,0
+SLC8A1,ours,dtiam,0.034094426622479336,1
+SLC8A1,ours,drugclip,0.08640143338753867,0
+SLC8A1,dtiam,drugclip,-0.46142118972708923,0
+HGF,ours,dtiam,-0.01957520494188196,4
+HGF,ours,drugclip,0.10191805282546197,1
+HGF,dtiam,drugclip,-0.3232043914693765,0

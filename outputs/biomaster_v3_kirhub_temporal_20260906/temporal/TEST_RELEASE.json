@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_MODELS_TEST_MAY_BE_EVALUATED",
+  "utc": "2026-09-06T02:59:38.382491+00:00",
+  "identity": {
+    "protocol_sha256": "62faa27571066bf614adbde53a9fca7870d935711ce573d912eedcbe0289411a",
+    "data_manifest_sha256": "a6bf76fc6e924078969b605075025c6bf26bf3363423c6628e205b2e4a0f89a7",
+    "source_sha256": {
+      "scripts/train_v3_temporal_20260906.py": "27e8042ee545b6427737855069fdcb1447cdfe48139c5275025bc83e6d5d5131",
+      "scripts/train_biomaster_selectivity_v3.py": "4dad92757209b6027c3bd6cebaed6deb655767097c1077d09567a039f76aba7d",
+      "biomaster/odti_v2.py": "ca9276ac48e2d678c48fd687349e4f71c71d7a03513ebe6801559898c7cc92d7",
+      "biomaster/odti_support_v3.py": "5401308b86f43ca225911f91d5d5f6c2f2806dc859ac311c4a62f7609f8297d5",
+      "biomaster/odti_support_data_v3.py": "7bff5d72d83c9ae7c48665b82e76c3e4161e3e481ac81e10a98ebfb400de88f1",
+      "biomaster/selectivity_training_v3.py": "5fdbcda0837eb2242a1bdc992cf98220d19e86fe34200674c99cf18afc7ca447",
+      "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+      "biomaster/old_relation_retrieval.py": "8ecfb2dcca7fc1836333440d38666b6a51559b0d743f0fc74714b6c134ba42ee",
+      "biomaster/ranking_audit.py": "007db4793f3cb5684f6dd46ecb41b61c1d2cba9dc6dd29972df95e93ba75a225"
+    }
+  },
+  "selection_sha256": "22e1b479fbab13811b236579947f8e4f8d09e12ae6996db913ff39ea53a05901",
+  "scores_manifest_sha256": "dce2fe536f4e9f5b6e458910c0d7d0e63bf0815bfa3583e103472e62b98c4c8a",
+  "checkpoints": {
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/base/seed_20260911/BEST.pt": "5d66808ef00b8023b1b766e4a8c8e0b6fd06d59e51178c1b9240b63234ed5d65",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/base/seed_20260912/BEST.pt": "db81e05d0ed62263f148773d9ec9567875b09c14b8a501ef4d9673fd9bac2cf6",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/adapter/seed_20260913/BEST.pt": "0588f9db1bf047a2b33112aab895d60d9136eec1957c6e0067fd2e2c0e1c3334",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/adapter/seed_20260914/BEST.pt": "623b426d9a137e070783780f3dfb91743cde6eb872005dd2752ad42765ce3d69",
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/final/adapter/seed_20260915/BEST.pt": "7287bf22b61322069471acb51f96ec8b2cdf1f37a032ade59645a267b8676c5c"
+  },
+  "test_labels_read": false,
+  "train_max_year": 2022,
+  "fresh_base_and_adapter_refit": true
+}

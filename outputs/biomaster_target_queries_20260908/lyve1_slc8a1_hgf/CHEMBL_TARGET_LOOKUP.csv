@@ -1,0 +1,3 @@
+tid,chembl_id,pref_name,organism,target_type,accession,component_id,seq_length
+11071,CHEMBL4076,Sodium/calcium exchanger 1,Homo sapiens,SINGLE PROTEIN,P32418,2395,973
+101207,CHEMBL5479,Hepatocyte growth factor,Homo sapiens,SINGLE PROTEIN,P14210,3771,728

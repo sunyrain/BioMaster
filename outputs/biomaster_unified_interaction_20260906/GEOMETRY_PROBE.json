@@ -1,0 +1,46 @@
+{
+  "checkpoint": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_unified_interaction_20260906/development/geometry/seed_20260921/BEST.pt",
+    "sha256": "155f74dc508de02cd01aee854a138c0635735b9e4d76335d74a640551ec1ceb5",
+    "size_bytes": 10891229
+  },
+  "cutoff": 2020,
+  "validation": "2021-2022",
+  "original": {
+    "d2t": {
+      "ap": 0.4026413729428839,
+      "r20": 0.6980392156862746,
+      "queries": 34,
+      "positive_pairs": 53,
+      "measured_ap": 0.8346987497890971
+    },
+    "t2d": {
+      "ap": 0.28854424680584134,
+      "r20": 0.5811965811965811,
+      "queries": 39,
+      "positive_pairs": 53,
+      "measured_ap": 0.7347181472708433
+    },
+    "selection": 0.4338003364444822
+  },
+  "shuffled": {
+    "d2t": {
+      "ap": 0.41407709864858644,
+      "r20": 0.6833333333333333,
+      "queries": 34,
+      "positive_pairs": 53,
+      "measured_ap": 0.827167949010229
+    },
+    "t2d": {
+      "ap": 0.2902493302307204,
+      "r20": 0.6068376068376068,
+      "queries": 39,
+      "positive_pairs": 53,
+      "measured_ap": 0.7344888549129666
+    },
+    "selection": 0.44003989113339836
+  },
+  "perturbation": "reverse coordinates among structure-bearing residues; keep sequence, site selection, masks and quality",
+  "used_for_selection": false,
+  "interpretation": "sensitivity diagnostic, not proof of true atom-residue contacts"
+}

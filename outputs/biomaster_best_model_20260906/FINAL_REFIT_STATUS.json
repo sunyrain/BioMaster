@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETE",
+  "jobs": 3,
+  "files": [
+    {
+      "mode": "global_refit",
+      "variant": "global",
+      "seed": 20260921,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260921/BEST.pt",
+        "sha256": "53ad2e11e25d453d8803f2f923943aff6077db02e84441cf7bceb6ea3744971a",
+        "size_bytes": 4956687
+      },
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260921/RESULT.json",
+        "sha256": "cdf6c058fffa05b94b290c56f564e742d40b806f554b8cb709bde7c3bd0c1c23",
+        "size_bytes": 5295
+      }
+    },
+    {
+      "mode": "global_refit",
+      "variant": "global",
+      "seed": 20260922,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260922/BEST.pt",
+        "sha256": "e891b668dd7a6496ef92f0c6efa22a69496a4cb81c250454d444cc4e4615f1aa",
+        "size_bytes": 4956687
+      },
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260922/RESULT.json",
+        "sha256": "203a015d47ade715bfa410881d082852a46e7649320a83fed03a3f17d4d119ae",
+        "size_bytes": 5295
+      }
+    },
+    {
+      "mode": "global_refit",
+      "variant": "global",
+      "seed": 20260923,
+      "checkpoint": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260923/BEST.pt",
+        "sha256": "73399d5167bb8eea69d67206eef49aeab5baeae2aece928b06a1da4474a5bea3",
+        "size_bytes": 4956687
+      },
+      "result": {
+        "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/final_fit/cutoff_2022/global_refit/seed_20260923/RESULT.json",
+        "sha256": "9bb09a948b790bc9d4345d9c2294b7efd08757f5949f97345ebf471bc4451ee0",
+        "size_bytes": 5295
+      }
+    }
+  ],
+  "final_selection": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/FINAL_ARCHITECTURE_SELECTION.json",
+    "sha256": "165412efccbfff715aa42dc1b109130a54bbff8346b77ddcfbdf814611ae586a",
+    "size_bytes": 17515
+  },
+  "driver": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_final_refits.py",
+    "sha256": "af0ba058a0c209e215cd3881f59f1ad058a6c19ba3d504d12debd3b6f9f32852",
+    "size_bytes": 3544
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-06T09:28:07.044304+00:00",
+  "jobs": 24,
+  "completed": 24,
+  "finished": [
+    {
+      "seed": 20260921,
+      "cutoff": 2018,
+      "variant": "global"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2018,
+      "variant": "capacity"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2018,
+      "variant": "site"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2018,
+      "variant": "geometry"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2020,
+      "variant": "global"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2020,
+      "variant": "capacity"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2020,
+      "variant": "site"
+    },
+    {
+      "seed": 20260921,
+      "cutoff": 2020,
+      "variant": "geometry"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2018,
+      "variant": "global"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2018,
+      "variant": "capacity"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2018,
+      "variant": "site"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2018,
+      "variant": "geometry"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2020,
+      "variant": "global"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2020,
+      "variant": "capacity"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2020,
+      "variant": "site"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2018,
+      "variant": "global"
+    },
+    {
+      "seed": 20260922,
+      "cutoff": 2020,
+      "variant": "geometry"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2018,
+      "variant": "capacity"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2018,
+      "variant": "site"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2018,
+      "variant": "geometry"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2020,
+      "variant": "global"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2020,
+      "variant": "capacity"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2020,
+      "variant": "site"
+    },
+    {
+      "seed": 20260923,
+      "cutoff": 2020,
+      "variant": "geometry"
+    }
+  ],
+  "running": [],
+  "driver": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/run_biomaster_anchored_round.py",
+    "sha256": "9d7a87556691006fbb8b069ac5977d5fa6a2070f16c06051b5b0aaa79541c8d1",
+    "size_bytes": 5092
+  },
+  "configuration": {
+    "path": "/root/autodl-tmp/BioMaster/configs/biomaster_best_model_refinement_20260906.json",
+    "sha256": "cd5947ed250d0cbfd89974ae6ceef36c533e3020599086a4346ddd069927f875",
+    "size_bytes": 2736
+  }
+}

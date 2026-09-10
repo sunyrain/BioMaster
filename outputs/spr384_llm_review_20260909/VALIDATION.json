@@ -1,0 +1,18 @@
+{
+  "all_pass": true,
+  "checks": {
+    "384_unique_complete": true,
+    "exact_baseline_mapping": true,
+    "baseline_unchanged": true,
+    "every_pair_has_search_log": true,
+    "every_pair_has_evaluation": true,
+    "csv_matches_json": true,
+    "web_api_and_browser_counts_verified": true,
+    "web_pending_zero_verified": true,
+    "112_controls_separate_verified": true
+  },
+  "backend_tests_passed": 20,
+  "frontend_build_passed": true,
+  "experimental_validation": false,
+  "literature_full_text_review_for_every_pair": false
+}

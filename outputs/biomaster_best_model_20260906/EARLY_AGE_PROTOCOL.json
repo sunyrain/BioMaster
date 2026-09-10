@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_BEFORE_AGE_SENSITIVITY",
+  "role": "development sensitivity; not architecture selection",
+  "approval_definition": "ChEMBL37 first_approval metadata matched by exact full InChIKey; not independently certified FDA dates",
+  "scope": "both drug queries and target-to-drug candidate drugs approved by the training cutoff; missing dates excluded",
+  "source": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_kirhub_temporal_20260906/temporal/REGISTRY_APPROVAL_AUDIT.csv",
+    "sha256": "7dcaf9b00ce464ef83f26a8195e7b04ba6d1e5c5c9c08dc4c6c6a63a48ba8f96",
+    "size_bytes": 187684
+  },
+  "cutoffs": [
+    2018,
+    2020
+  ],
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/evaluate_biomaster_best_model_early_age.py",
+    "sha256": "914805a8b4c0606107d339fa3b13539b9c76f47eff9bc2f7602c9a8ce131d6a4",
+    "size_bytes": 5920
+  }
+}

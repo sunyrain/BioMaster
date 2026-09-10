@@ -1,0 +1,88 @@
+{
+  "comparisons": [
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "direction": "d2t",
+      "seeds_averaged": 3,
+      "interval_scope": "paired queries within this roll; not seed or prospective uncertainty",
+      "multiple_testing_corrected": false,
+      "queries": 42,
+      "delta_ap": -0.02376744852741858,
+      "ci_low": -0.07565585102394368,
+      "ci_high": 0.027883818536335533,
+      "confidence": 0.95
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2018,
+      "direction": "t2d",
+      "seeds_averaged": 3,
+      "interval_scope": "paired queries within this roll; not seed or prospective uncertainty",
+      "multiple_testing_corrected": false,
+      "queries": 44,
+      "delta_ap": -0.03368747711378061,
+      "ci_low": -0.08936343300110211,
+      "ci_high": 0.01200136500518285,
+      "confidence": 0.95
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "direction": "d2t",
+      "seeds_averaged": 3,
+      "interval_scope": "paired queries within this roll; not seed or prospective uncertainty",
+      "multiple_testing_corrected": false,
+      "queries": 34,
+      "delta_ap": 0.009739835333876455,
+      "ci_low": -0.037337432089260415,
+      "ci_high": 0.05903795467963026,
+      "confidence": 0.95
+    },
+    {
+      "first": "capacity",
+      "second": "global",
+      "cutoff": 2020,
+      "direction": "t2d",
+      "seeds_averaged": 3,
+      "interval_scope": "paired queries within this roll; not seed or prospective uncertainty",
+      "multiple_testing_corrected": false,
+      "queries": 39,
+      "delta_ap": 0.04158317997594611,
+      "ci_low": 0.0002369959470144255,
+      "ci_high": 0.09681430705041225,
+      "confidence": 0.95
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "direction": "d2t",
+      "seeds_averaged": 3,
+      "interval_scope": "paired queries within this roll; not seed or prospective uncertainty",
+      "multiple_testing_corrected": false,
+      "queries": 42,
+      "delta_ap": -0.010662209126452306,
+      "ci_low": -0.041770413739464496,
+      "ci_high": 0.021837142136219467,
+      "confidence": 0.95
+    },
+    {
+      "first": "global_ema",
+      "second": "global",
+      "cutoff": 2018,
+      "direction": "t2d",
+      "seeds_averaged": 3,
+      "interval_scope": "paired queries within this roll; not seed or prospective uncertainty",
+      "multiple_testing_corrected": false,
+      "queries": 44,
+      "delta_ap": 0.009424454852883025,
+      "ci_low": -0.012273370462205797,
+      "ci_high": 0.030443627358118473,
+      "confidence": 0.95
+    }
+  ]
+}

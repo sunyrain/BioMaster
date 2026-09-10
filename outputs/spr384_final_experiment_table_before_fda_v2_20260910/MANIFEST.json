@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "candidate_rows": 384,
+    "candidate_pairs": 384,
+    "targets": 112,
+    "control_rows": 112,
+    "same_frozen_candidate_set": true,
+    "same_frozen_control_set": true,
+    "four_fields_complete": true,
+    "priority_unchanged": true,
+    "unnamed_research_controls": 22,
+    "control_endpoint_categories": {
+      "Kd_RECORD_PRESENT": 90,
+      "Ki_NO_Kd_RECORD": 18,
+      "FUNCTIONAL_OR_OTHER_ONLY": 4
+    },
+    "unique_control_compounds": 86,
+    "exact_control_activity_unresolved": 1
+  },
+  "baseline_sha256": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+  "control_baseline_sha256": "8f3c2cd44faa25293d13e694d52fd34bd20319c1ad4545c01f25b1e71224c1a9",
+  "priority_source_sha256": "26fe12d85c2312bb8e077fed4c384aacaeef03171850381c12ef0929650966b6",
+  "output_sha256": {
+    "SPR112_REFERENCE_CONTROLS.csv": "ec8f126d6be0bc45062b55573348c4a4e03141c4785d4d589c0fc5aa092ed058",
+    "CONTROL_SOURCE_ACTIVITY_EVIDENCE.csv": "43c5bb85ea611ac7ba222ec2d09c661dc0e7119a63749be38d308e4d85733122",
+    "SPR384_FINAL_EXPERIMENT_TABLE.csv": "6b2c99379cc7eb6a564dbaa86ac6533b889d59de77d1b16e9a6041457934e120",
+    "SPR384_FINAL_FOUR_COLUMNS.csv": "30471f216b989b9545d6e63f03ba878f7f5f0a7cfdc6ea296b232f0a57b5aa59",
+    "SPR384_FINAL_DETAILED.csv": "4ca481f5211c5739ade978e81955f08cc657c5016bdf707529162a4b0cea5730",
+    "SPR384_FINAL_EXPERIMENT_TABLE.xlsx": "689ae972e21259e9d56e4e7bc41e79d6e6ba459b3347d2340574ff855096bf4a",
+    "README.md": "d2d4ff0db1319a94aea51fa169aa4fc1cb1d966461ed34372337b3d4ac2ff002"
+  }
+}

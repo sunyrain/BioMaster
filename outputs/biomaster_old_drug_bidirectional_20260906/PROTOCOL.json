@@ -1,0 +1,127 @@
+{
+  "status": "FROZEN",
+  "task": "known old-drug to target ranking AND target to known old-drug ranking",
+  "old_drugs": 720,
+  "targets": 384,
+  "known_relationships": 807,
+  "known_drug_queries": 398,
+  "known_target_queries": 185,
+  "known_label_source": "frozen project relationships (791) plus ChEMBL37 MoA additions (16)",
+  "unknown_is_negative": false,
+  "main_claim": "known-relationship recovery, with training-exposure audit; not independent novel-target validation",
+  "selection": "all project old drugs and all current 384 target-core entries; no score-based sampling or model selection",
+  "directions": {
+    "drug_to_target": "720 queries x 384 target candidates",
+    "target_to_drug": "384 queries x 720 old-drug candidates"
+  },
+  "public_features": {
+    "bermol_old_drugs": 720,
+    "full_esm_existing_exact_sequences": 360,
+    "full_esm_new_sequences": 24
+  },
+  "old_drug_training_roles": {
+    "train": 391,
+    "absent_from_binary_relations": 223,
+    "test": 54,
+    "validation": 52
+  },
+  "known_pairs_seen_binary_training": 291,
+  "known_pairs_with_biochemical_positive": 319,
+  "known_pairs_with_biochemical_negative": 40,
+  "observed_binary_pairs": 5996,
+  "observed_positive_pairs": 894,
+  "observed_negative_pairs": 5102,
+  "v3_data_manifest": {
+    "identity": {
+      "protocol": "COMPREHENSIVE_DRUG_ENTITY_HOLDOUT_V3_20260905",
+      "relations_path": "/root/autodl-tmp/BioMaster/outputs/retrain_20260901/comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+      "relations_sha256": "dabda92e4d18bd76a9c10322d394eb19d5aeecc8988c6ae2733ef1543faa25b1",
+      "features_path": "/root/autodl-tmp/BioMaster/outputs/retrain_20260901/comprehensive_training_v1/MORGAN2048_UINT8_COMPREHENSIVE_V1.npy",
+      "features_sha256": "86d2f43583a4979442d4e1cb107669fd3e062af8138d5ec9ce9ffa951effc05e",
+      "max_entities": 0,
+      "support_k": 16,
+      "prepare_relations_code_sha256": "1307f0bfb3e7f19e8ff003ddbd595828a12ff032acf3389b7d62c4e26d733621"
+    },
+    "audit": {
+      "protocol": "COMPREHENSIVE_DRUG_ENTITY_HOLDOUT_V3_20260905",
+      "raw_rows": 437631,
+      "binary_unique_rows": 427394,
+      "conflicting_observed_rows_excluded": 0,
+      "max_entities": 0,
+      "aliased_feature_indices_collapsed": 3,
+      "source_feature_entity_conflicts_merged": 52,
+      "families": [
+        "enzyme",
+        "ion_channel",
+        "kinase",
+        "nuclear_epigenetic",
+        "other_assayable",
+        "transporter"
+      ],
+      "split_method": "SHA256(InChI/standardized-feature connected component), buckets 0..79/80..89/90..99",
+      "temporal_claim": false,
+      "affinity_only_training": false,
+      "label_scope": "existing explicit binary activity labels; quantitative and functional-specialist heads not trained in this run",
+      "test": {
+        "rows": 42032,
+        "drugs": 28874,
+        "targets": 411,
+        "positive_rows": 32649,
+        "two_class_drugs": 772
+      },
+      "train": {
+        "rows": 342031,
+        "drugs": 233730,
+        "targets": 492,
+        "positive_rows": 265284,
+        "two_class_drugs": 6450
+      },
+      "validation": {
+        "rows": 43331,
+        "drugs": 29437,
+        "targets": 438,
+        "positive_rows": 33405,
+        "two_class_drugs": 807
+      },
+      "entity_overlap": 0,
+      "assignment_sha256": "7c2c5e4e3ed5c7c943778ac7329df66050108e638236675293ff5aae86ecf2f6",
+      "features_shape": [
+        296110,
+        2048
+      ],
+      "scaffold_conflicting_feature_rows": 0
+    },
+    "assignment_sha256": "7c2c5e4e3ed5c7c943778ac7329df66050108e638236675293ff5aae86ecf2f6",
+    "prepared_relations_path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_20260905/data/RELATIONS_V3.csv.gz",
+    "prepared_relations_sha256": "05c01b9b61b3b15302b15e400e30f232922b0f01126d0b59251dfa183733e9a2",
+    "store_hash": "1dee8437031a60c96fb14e741fd15621871a88ba5460a371c8c7dac5d89d871f",
+    "support_indices_path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_20260905/data/support_normal/c90abe69ff758e9365e5ba73cba11c316219c6a899cfd5d90e00dcf232ddd92b/indices.npy",
+    "support_similarities_path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_20260905/data/support_normal/c90abe69ff758e9365e5ba73cba11c316219c6a899cfd5d90e00dcf232ddd92b/similarities.npy",
+    "support_mask_path": "/root/autodl-tmp/BioMaster/outputs/biomaster_v3_20260905/data/support_normal/c90abe69ff758e9365e5ba73cba11c316219c6a899cfd5d90e00dcf232ddd92b/mask.npy",
+    "support_shape": [
+      427394,
+      2,
+      16
+    ],
+    "label_axis": [
+      "negative",
+      "positive"
+    ],
+    "status": "COMPLETE"
+  },
+  "support_training_rows": 342031,
+  "support_pool_unchanged_from_original": true,
+  "support": {
+    "indices": "/root/autodl-tmp/BioMaster/outputs/biomaster_old_drug_bidirectional_20260906/support_cache/2accfc3a7d5d4f94c1216984a5bdb36f8fd11430ab4b01790399bc4d1aab173b/indices.npy",
+    "similarities": "/root/autodl-tmp/BioMaster/outputs/biomaster_old_drug_bidirectional_20260906/support_cache/2accfc3a7d5d4f94c1216984a5bdb36f8fd11430ab4b01790399bc4d1aab173b/similarities.npy",
+    "mask": "/root/autodl-tmp/BioMaster/outputs/biomaster_old_drug_bidirectional_20260906/support_cache/2accfc3a7d5d4f94c1216984a5bdb36f8fd11430ab4b01790399bc4d1aab173b/mask.npy"
+  },
+  "baseline_reverse_borda": "rerank each raw constituent within target before averaging; never transpose row-normalized scores as a calibrated score",
+  "drugclip": "native six-fold mean cosine; compare every model again on identical rectangular coverage subset",
+  "input_sha256": {
+    "outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/OLD_DRUG_FEATURE_INDEX_720_V1.csv.gz": "9790e0dbffe6cb30a7107b447c22ac0b34d6f88ef347959d4c71f5a86673d660",
+    "outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/PROJECT_TARGET_FEATURE_INDEX_384_V1.csv.gz": "19cbef4c15848454138cb293836a9a6c0574ba14da63e7095a229b95e4bc6d8f",
+    "outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/OLD_DRUG_TARGET_INDEXED_PAIRS_276480_V1.csv.gz": "db0bea2e09b0b875d7f91accf31031d1e3f4fa4dbc12570a53118d8e1b7f0e92",
+    "outputs/biomaster_v3_20260905/data/RELATIONS_V3.csv.gz": "05c01b9b61b3b15302b15e400e30f232922b0f01126d0b59251dfa183733e9a2"
+  }
+}

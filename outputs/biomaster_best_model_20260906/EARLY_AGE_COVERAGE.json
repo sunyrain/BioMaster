@@ -1,0 +1,27 @@
+{
+  "counts": [
+    {
+      "cutoff": 2018,
+      "approved_drugs": 517,
+      "excluded_later": 125,
+      "excluded_missing": 78,
+      "validation_positive_pairs": 33,
+      "positive_drug_queries": 25,
+      "positive_target_queries": 23
+    },
+    {
+      "cutoff": 2020,
+      "approved_drugs": 560,
+      "excluded_later": 82,
+      "excluded_missing": 78,
+      "validation_positive_pairs": 36,
+      "positive_drug_queries": 25,
+      "positive_target_queries": 30
+    }
+  ],
+  "protocol": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_best_model_20260906/EARLY_AGE_PROTOCOL.json",
+    "sha256": "6a8b8d01e52ccb7d70bca59e1a5ff210ae4f0a98339f0f0ce171728bb33da3b8",
+    "size_bytes": 876
+  }
+}

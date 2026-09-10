@@ -1,0 +1,115 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-06T13:21:50.604717+00:00",
+  "selected": 24,
+  "results": [
+    {
+      "system_id": "5s5x__1__1.C_1.D__1.P_1.Q",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5y__1__1.A_1.B__1.G_1.H",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5x__1__1.D__1.S_1.T",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5y__1__1.F__1.U_1.V",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5y__1__1.C_1.D__1.P_1.Q",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5x__1__1.F__1.U_1.V",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5y__1__1.D__1.S_1.T",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5y__1__1.B_1.C__1.K_1.L",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5x__1__1.B_1.C__1.O",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5w__1__1.D__1.T_1.U",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5w__1__1.F__1.V_1.W",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5w__1__1.B_1.C__1.K_1.L",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5x__1__1.A_1.B__1.G_1.H",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5w__1__1.C_1.D__1.P_1.Q",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5x__1__1.B_1.C__1.K_1.L",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5u__1__1.C_1.D__1.O_1.P",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5u__1__1.F__1.U_1.V",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5u__1__1.D__1.R_1.S",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5u__1__1.B_1.C__1.J_1.K",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5u__1__1.A_1.B__1.G_1.H",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5s__1__1.F__1.U_1.V",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5w__1__1.A_1.B__1.G_1.H",
+      "status": "PUBLISHED_ATOMICALLY"
+    },
+    {
+      "system_id": "5s5s__1__1.C_1.D__1.P_1.Q",
+      "status": "ORIGINAL_WORKER_STARTED_RETAINED_ORIGINAL"
+    },
+    {
+      "system_id": "5s5s__1__1.D__1.S_1.T",
+      "status": "ORIGINAL_WORKER_STARTED_RETAINED_ORIGINAL"
+    }
+  ],
+  "selection": {
+    "path": "/root/autodl-tmp/BioMaster/outputs/biomaster_pocket_precision_20260906/structural_data/complexes_2020/SELECTED.parquet",
+    "sha256": "92ce4711c1dcd519f9dd88ed90470ec20d7ff1073f9ac2e1c5ac7b8897759622",
+    "size_bytes": 778514
+  },
+  "producer": {
+    "path": "/root/autodl-tmp/BioMaster/scripts/assist_biomaster_structural_download_tail.py",
+    "sha256": "5d8b707685e7d6900239641a549bc8bea14fb3d06c71f1d58e5a00886f334c8f",
+    "size_bytes": 3264
+  },
+  "seconds": 147.29746624547988,
+  "original_sources_or_selection_modified": false
+}

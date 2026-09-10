@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": {
+    "LYVE1_complete_unique_720": true,
+    "LYVE1_finite_sorted": true,
+    "SLC8A1_complete_unique_720": true,
+    "SLC8A1_finite_sorted": true,
+    "HGF_complete_unique_720": true,
+    "HGF_finite_sorted": true,
+    "all_2160": true,
+    "feature_protocol_control_exact": true,
+    "released_bundle_unchanged": true,
+    "producer_identity_matches": true,
+    "LYVE1_ESM2_RESIDUES.npy_hash": true,
+    "SLC8A1_ESM2_RESIDUES.npy_hash": true,
+    "HGF_ESM2_RESIDUES.npy_hash": true,
+    "CONTROL_BCL2A1_ESM2_RESIDUES.npy_hash": true,
+    "report_links_resolve": true
+  }
+}

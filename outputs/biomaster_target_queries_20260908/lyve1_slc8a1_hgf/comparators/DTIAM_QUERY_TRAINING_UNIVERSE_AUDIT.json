@@ -1,0 +1,24 @@
+{
+  "targets": [
+    {
+      "gene": "LYVE1",
+      "all_original_86674_rows": 0,
+      "target_ids": [],
+      "exact_sequence_matches_in_original_training_universe": 0
+    },
+    {
+      "gene": "SLC8A1",
+      "all_original_86674_rows": 0,
+      "target_ids": [],
+      "exact_sequence_matches_in_original_training_universe": 0
+    },
+    {
+      "gene": "HGF",
+      "all_original_86674_rows": 0,
+      "target_ids": [],
+      "exact_sequence_matches_in_original_training_universe": 0
+    }
+  ],
+  "target_index_sha256": "cff5da8b3529bddb75d776b7bf889c20b907db0bd93035a64f5358cd2c9e714e",
+  "public_pretrained_encoder_exposure_unknown": true
+}

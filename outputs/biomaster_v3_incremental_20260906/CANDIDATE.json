@@ -1,0 +1,48 @@
+{
+  "status": "VALIDATION_SELECTED_AND_RETROSPECTIVELY_EVALUATED",
+  "name": "J_old_relation_pretrained",
+  "base_checkpoints": {
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260905/BEST_MODEL_V3.pt": "46beadd92ee39ec373d2502385eb5ac24b02d274d45c4d6c07b5a0b80ef746d1",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260906/BEST_MODEL_V3.pt": "8e3215eae696ecc778d2981ccb9986c0bb961666e9bce790f9ac6197605134f9"
+  },
+  "adapter_checkpoints": [
+    {
+      "path": "outputs/biomaster_v3_incremental_20260906/old_relation_stage/runs/J_old_relation_pretrained/seed_20260908/BEST.pt",
+      "sha256": "a7ca54229c27ff27870e757b8ca44e92c75e6dc4be2089a7db4c86548fda297d",
+      "seed": 20260908,
+      "epoch": 10
+    },
+    {
+      "path": "outputs/biomaster_v3_incremental_20260906/old_relation_stage/runs/J_old_relation_pretrained/seed_20260909/BEST.pt",
+      "sha256": "2b92466e600840530d42f4c125a3a78801d531da05beaec24bb73477143ba45d",
+      "seed": 20260909,
+      "epoch": 12
+    },
+    {
+      "path": "outputs/biomaster_v3_incremental_20260906/old_relation_stage/runs/J_old_relation_pretrained/seed_20260910/BEST.pt",
+      "sha256": "50cfed70b446b0fd77b825575363bc528ca3a63015f8d3796c64e7e2dc4d69cc",
+      "seed": 20260910,
+      "epoch": 5
+    }
+  ],
+  "combination": "mean frozen V3 logits + mean of 3 selected adapter residuals",
+  "current_scores": "outputs/biomaster_v3_incremental_20260906/scores/J_old_relation_pretrained.npz",
+  "scores_sha256": "607fca45fd851f2f762dad7ca8721157b7dee9d3af3fad8bd0350cd32eabf8f6",
+  "old_score_array": "old",
+  "old_score_shape": [
+    720,
+    384,
+    2
+  ],
+  "direction_axis": [
+    "drug_to_target",
+    "target_to_drug"
+  ],
+  "drug_axis": "outputs/biomaster_old_drug_bidirectional_20260906/OLD_DRUGS_720.csv",
+  "target_axis": "outputs/biomaster_old_drug_bidirectional_20260906/TARGETS_384.csv.gz",
+  "score_semantics": "ranking logits, not calibrated probabilities",
+  "known_training_pairs": 471,
+  "test_claim": "retrospective entity holdout, not new external confirmation",
+  "selection_sha256": "b3a1c92cc161353f038cb37297198b58f376dea70b26fd6fb391d33d72d3652a",
+  "production_default_replaced": false
+}
