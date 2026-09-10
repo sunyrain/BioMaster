@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "scanned": 46169,
+    "structure_attached_label_requires_construct_and_primary_source_review": 16212,
+    "unresolved_human_accession": 14446,
+    "auxiliary_context_or_construct_unverified": 5030,
+    "manual_source_qc_exclusion": 1,
+    "noncomparable_endpoint": 10480
+  }
+}

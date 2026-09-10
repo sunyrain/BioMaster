@@ -768,3 +768,26 @@
 !/biomaster_bindingdb_incremental_20260910/bindingdb_increment_seed_20260921/MATRIX_MANIFEST.json
 !/biomaster_bindingdb_incremental_20260910/bindingdb_increment_seed_20260922/MATRIX_MANIFEST.json
 !/biomaster_bindingdb_incremental_20260910/bindingdb_increment_seed_20260923/MATRIX_MANIFEST.json
+
+# Full human single-protein training release: compact audit only, no raw data.
+!/training_dataset_full_20260910_v1/PROTOCOL.json
+!/training_dataset_full_20260910_v1/PROTOCOL_CLARIFICATION.json
+!/training_dataset_full_20260910_v1/INPUT_MANIFEST.json
+!/training_dataset_full_20260910_v1/CHEMBL_EXTRACTION.sql
+!/training_dataset_full_20260910_v1/ChEMBL37_IMPORT.json
+!/training_dataset_full_20260910_v1/BindingDB_All_IMPORT.json
+!/training_dataset_full_20260910_v1/BindingDB_BindingDB_Articles_IMPORT.json
+!/training_dataset_full_20260910_v1/BindingDB_ChEMBL_IMPORT.json
+!/training_dataset_full_20260910_v1/BindingDB_PDSPKi_IMPORT.json
+!/training_dataset_full_20260910_v1/BindingDB_Patents_IMPORT.json
+!/training_dataset_full_20260910_v1/BindingDB_PubChem_IMPORT.json
+!/training_dataset_full_20260910_v1/Auxiliary_collected_sources_IMPORT.json
+!/training_dataset_full_20260910_v1/SUMMARY.json
+!/training_dataset_full_20260910_v1/VALIDATION.json
+!/training_dataset_full_20260910_v1/MANIFEST.json
+!/training_dataset_full_20260910_v1/LABEL_COUNTS.csv
+!/training_dataset_full_20260910_v1/SPLIT_TASK_COUNTS.csv
+!/training_dataset_full_20260910_v1/SOURCE_COUNTS.csv
+!/training_dataset_full_20260910_v1/TARGET_SUPERVISION_COVERAGE.csv
+!/training_dataset_full_20260910_v1/WETLAB384_HISTORICAL_COVERAGE.csv
+!/training_dataset_full_20260910_v1/RELEASE_VERIFICATION.json

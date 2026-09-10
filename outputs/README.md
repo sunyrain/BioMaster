@@ -49,3 +49,12 @@ Wet-lab preparation artifacts are written under `retargetmap_experiment_20260901
 - `RETARGETMAP_TARGET_ASSAY_FEASIBILITY_ROSTER_V1.csv` is the 268-target lab handoff table for assay availability, reference-control, orthogonal-method, cost and lead-time review.
 
 Summary files may contain paths to untracked artifacts together with their SHA-256 hashes. This is intentional: the hash records the audited local input/output without publishing the large artifact itself.
+
+Full human single-protein training data, without the project drug/target allowlists,
+is released locally at `data/processed/biomaster_training_full_20260910_v1/`.
+The `training_dataset_full_20260910_v1/` output directory tracks its protocol,
+source and artifact hashes, split/task counts, exclusions summary and validation.
+See [the dataset guide](../docs/BIOMASTER_FULL_TRAINING_DATASET_20260911_ZH.md)
+for the task-specific training files and frozen wet-lab holdouts, and
+[the scale comparison](../docs/BIOMASTER_TRAINING_SCALE_COMPARISON_20260911_ZH.md)
+for why measurement counts differ from DrugCLIP/DTIAM benchmark sizes.

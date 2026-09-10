@@ -1,0 +1,62 @@
+{
+  "downloads/chembl_37/chembl_37/chembl_37_sqlite/chembl_37.db": {
+    "bytes": 30480314368,
+    "mtime_ns": 1778704560758950000,
+    "sha256": "4be13df3b68e25dcd0bff44bf094033b5aebe98f415acdc8c1cdf380e0c15142"
+  },
+  "data/processed/biomaster_affinity_evidence_20260910.sqlite": {
+    "bytes": 548147200,
+    "mtime_ns": 1789010778098489032,
+    "sha256": "f77313f1afe787ee670c4e021b98c184370c3e17d9116718baa9fda4dfef971f"
+  },
+  "data/external/affinity_refresh_20260910/SOURCE_RECORD_QC_OVERRIDES_20260910.csv": {
+    "bytes": 578,
+    "mtime_ns": 1789010778094489143,
+    "sha256": "510878e2bd395bb96c121b35737523f8223edaea8254ea4e6038ad17311d0f44"
+  },
+  "outputs/biomaster_bindingdb_incremental_20260910/FROZEN_SPLIT.csv": {
+    "bytes": 512928,
+    "mtime_ns": 1789052369822889169,
+    "sha256": "8026a73a384c51ac95783d481e4709a564da6c37b16383ecf136c13321b746bb"
+  },
+  "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": {
+    "bytes": 804356,
+    "mtime_ns": 1789017006377111786,
+    "sha256": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c"
+  },
+  "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": {
+    "bytes": 127571,
+    "mtime_ns": 1789017006333112032,
+    "sha256": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+  },
+  "data/external/affinity_refresh_20260910/BindingDB_All_202609_tsv.zip": {
+    "bytes": 593578299,
+    "mtime_ns": 1789008694853629406,
+    "sha256": "4c04e0fec46fadab8a48465a7ac2344cf4e2b3887c6b69acc968676130b73e16"
+  },
+  "data/external/affinity_refresh_20260910/BindingDB_BindingDB_Articles_202609_tsv.zip": {
+    "bytes": 18272073,
+    "mtime_ns": 1789008642674968934,
+    "sha256": "1203194f366623ae9b4caee34f2477d412ebddbda267593df9d1d92d0c66fb74"
+  },
+  "data/external/affinity_refresh_20260910/BindingDB_PubChem_202609_tsv.zip": {
+    "bytes": 23095044,
+    "mtime_ns": 1789008643858937960,
+    "sha256": "649e2e0d335b308568d97e57e37b07c637296b7ff68bd5ea8c0dea8099a88b45"
+  },
+  "data/external/affinity_refresh_20260910/BindingDB_ChEMBL_202609_tsv.zip": {
+    "bytes": 345131119,
+    "mtime_ns": 1789009878095667652,
+    "sha256": "22aa01f8181574cad2112040e5e882d071fcec3b3dfa539c0c6a9d0b36f1e1d1"
+  },
+  "data/external/affinity_refresh_20260910/BindingDB_Patents_202609_tsv.zip": {
+    "bytes": 171664189,
+    "mtime_ns": 1789009870000100323,
+    "sha256": "faa056a2fef36482caa77225486655a91e6a0ddef560467175538f2298fbce0a"
+  },
+  "data/external/affinity_refresh_20260910/BindingDB_PDSPKi_202609_tsv.zip": {
+    "bytes": 5590095,
+    "mtime_ns": 1789009755346690949,
+    "sha256": "5a212e99f495e5c11befb09baba264435201dfced1cada926be13df73f971ac3"
+  }
+}

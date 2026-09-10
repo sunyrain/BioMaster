@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "scanned": 3397502,
+    "low_confidence_or_indirect": 742254,
+    "assay_type_outside_task": 833842,
+    "accepted_observation_attempts": 1427612,
+    "potential_duplicate_flag": 202542,
+    "unusable_numeric_value_or_unit": 35668,
+    "source_validity_flag": 33589,
+    "annotated_variant": 39304,
+    "assay_mutation_or_fusion_review": 43020,
+    "reported_inchikey_smiles_mismatch": 758,
+    "missing_computable_inchikey": 1445,
+    "multiple_or_no_organic_components": 466,
+    "missing_or_future_document_year": 37002
+  },
+  "seconds": 319.2855922272429
+}

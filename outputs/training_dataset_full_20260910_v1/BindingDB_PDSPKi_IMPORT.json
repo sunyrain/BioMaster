@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "scanned_rows": 27715,
+    "nonhuman_target": 14492,
+    "reported_inchikey_smiles_mismatch": 4864,
+    "accepted_observation_attempts": 7164,
+    "rows_with_accepted_endpoint": 7164,
+    "invalid_smiles": 26,
+    "unresolved_human_sequence_identity": 43,
+    "ambiguous_accession": 680,
+    "sequence_mismatch_or_mutant": 423,
+    "multichain_or_unknown_chain_count": 21,
+    "multiple_or_no_organic_components": 2
+  },
+  "seconds": 2.5671867029741406
+}

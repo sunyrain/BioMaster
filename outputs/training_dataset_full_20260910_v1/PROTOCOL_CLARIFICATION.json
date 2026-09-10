@@ -1,0 +1,7 @@
+{
+  "field": "chemistry",
+  "previous_wording": "RDKit sanitized single organic component; preserve stereo, isotope, formal charge and tautomer; verify reported full InChIKey; no metabolite/prodrug replacement",
+  "clarified_wording": "RDKit sanitized single organic component; preserve stereo, isotope and formal charge; no additional neutralization or tautomer canonicalization beyond standard InChI identity; verify reported full InChIKey; fixed source-order representative SMILES; no metabolite/prodrug replacement",
+  "algorithm_changed": false,
+  "reason": "Standard InChI has intrinsic normalization; clarify that no separate tautomer normalization is applied. No label or identity algorithm changed."
+}

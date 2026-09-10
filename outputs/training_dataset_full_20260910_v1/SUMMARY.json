@@ -1,0 +1,68 @@
+{
+  "status": "FINAL_DATASET_READY_NOT_TRAINED",
+  "data_directory": "data/processed/biomaster_training_full_20260910_v1",
+  "imported_unique_source_observations": 2898928,
+  "record_qc_counts": {
+    "ACCEPTED": 2897915,
+    "SOURCE_IDENTITY_REJECTED_IN_ANOTHER_VARIANT": 999,
+    "SOURCE_RECORD_VARIANT_CONFLICT": 14
+  },
+  "accepted_source_observations": 2897915,
+  "source_occurrences": 4362588,
+  "cross_source_repeated_numeric_groups": 618321,
+  "all_pair_task_rows": 1768510,
+  "binary_pair_task_rows": 1457138,
+  "binary_unique_drug_target_pairs": 1409474,
+  "binary_positive_task_rows": 1008120,
+  "binary_negative_task_rows": 449018,
+  "supervised_molecules": 867739,
+  "supervised_exact_sequences": 4777,
+  "molecules_exceeding_128_heavy_atoms": 6261,
+  "targets_with_U_or_O": 4,
+  "train_task_rows": 1158103,
+  "train_unique_pairs": 1120319,
+  "train_positive_task_rows": 802849,
+  "train_negative_task_rows": 355254,
+  "document_purged_train_rows": 172500,
+  "source_purged_validation_rows": 38139,
+  "regression_eligible_rows": 1238023,
+  "wetlab_candidate_connectivity_related_pairs_reserved": 0,
+  "wetlab_candidate_exact_pairs_with_historical_observations": 0,
+  "wetlab_candidate_binary_pairs_reserved": 0,
+  "split_counts": {
+    "previous_benchmark_scaffold_holdout": 21501,
+    "reference_control_holdout": 234,
+    "test": 136955,
+    "train": 1158103,
+    "validation": 140345
+  },
+  "source_counts": [
+    {
+      "source": "BindingDB_202609",
+      "records": 1470303,
+      "molecules": 703200,
+      "targets": 4440,
+      "unique_pairs": 1101122
+    },
+    {
+      "source": "ChEMBL37",
+      "records": 1427612,
+      "molecules": 680912,
+      "targets": 4717,
+      "unique_pairs": 1206658
+    }
+  ],
+  "tests_passed": true,
+  "features_generated": false,
+  "training_performed": false,
+  "website_modified": false,
+  "limitations": [
+    "Counts are separate tasks, not all pure affinity. Never discard task column when pooling rows.",
+    "Sequence-resolved identifiers do not certify every experimental construct or therapeutic mechanism.",
+    "BindingDB outside ChEMBL human coverage can use source-reported human sequence identity; tier is retained.",
+    "Primary scaffold split is not document-independent. TRAIN_DOCUMENT_PURGED provides a stricter option.",
+    "Held-out data are retrospective; old-model seen flags and prior benchmark reserves are provided.",
+    "Full molecular/protein feature preparation and model fitting are separate future stages."
+  ],
+  "seconds": 251.9
+}

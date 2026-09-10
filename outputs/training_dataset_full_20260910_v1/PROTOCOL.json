@@ -1,0 +1,25 @@
+{
+  "version": "20260910_v1",
+  "scope": "human single protein; no project drug/target allowlist",
+  "endpoints": {
+    "Kd": "AFFINITY_KD_KI",
+    "Ki": "AFFINITY_KD_KI",
+    "IC50": "ACTIVITY_IC50",
+    "EC50": "ACTIVITY_EC50",
+    "INACTIVE": "ANNOTATED_INACTIVITY"
+  },
+  "positive_max_nM": 1000,
+  "negative_min_nM": 10000,
+  "conflict": "any decisive positive and negative within pair/task is quarantined; no majority vote",
+  "units": "nM; exact and censored measurements separate; no conversion of censored values to regression targets",
+  "chemistry": "RDKit sanitized single organic component; preserve stereo, isotope and formal charge; no additional neutralization or tautomer canonicalization beyond standard InChI identity; verify reported full InChIKey; fixed source-order representative SMILES; no metabolite/prodrug replacement",
+  "target_identity": "canonical human amino-acid sequence SHA256; exact accession or exact sequence; wildtype exact fragments may map to canonical; mutant/mismatched constructs quarantined",
+  "dedup": "source record ID plus normalized value identity; conflicting record-ID variants and rejected identity variants quarantined; one label per molecule/sequence/task",
+  "split": "80/10/10 deterministic scaffold groups; connectivity links unite scaffold groups; reserve prior holdout scaffolds and wetlab exact connectivity/sequence pairs",
+  "documents": "shared DOI/PMID/patent reported; additional strict source-purged training subset",
+  "temporal": "source release <=2026-09; missing publication year retained with flag for BindingDB, not an independent temporal benchmark",
+  "source_limits": "HiQBind structure-attached labels and auxiliary domain/lysate/nonhuman measurements remain review-only until primary construct identity is established",
+  "rdkit_version": "2026.03.1",
+  "unknowns_are_negative": false,
+  "training_started": false
+}

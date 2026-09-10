@@ -1,0 +1,19 @@
+{
+  "all_pass": true,
+  "checks": {
+    "unique_pair_task_labels": true,
+    "binary_labels_only": true,
+    "no_scaffold_split_overlap": true,
+    "no_connectivity_split_overlap": true,
+    "no_pair_task_split_overlap": true,
+    "no_wetlab_candidates_in_main": true,
+    "no_controls_in_main": true,
+    "no_previous_holdout_scaffolds_in_main": true,
+    "no_conflicts_in_main": true,
+    "molecule_index_complete": true,
+    "target_index_complete": true,
+    "strict_train_no_holdout_documents": true,
+    "database_integrity": true,
+    "frozen_experiment_files_unchanged": true
+  }
+}

@@ -320,3 +320,5 @@ Thumbs.db
 !/scripts/extend_biomaster_matrix_20260910.py
 !/scripts/retrain_biomaster_bindingdb_20260910.py
 !/scripts/export_biomaster_incremental_matrices_20260910.py
+!/scripts/build_final_training_dataset_20260910.py
+!/scripts/finalize_training_dataset_20260910.py

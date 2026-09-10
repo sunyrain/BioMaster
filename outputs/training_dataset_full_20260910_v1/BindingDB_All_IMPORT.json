@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "scanned_rows": 3237052,
+    "nonhuman_target": 509257,
+    "ambiguous_accession": 127336,
+    "accepted_observation_attempts": 1471098,
+    "rows_with_accepted_endpoint": 1468641,
+    "reported_inchikey_smiles_mismatch": 829187,
+    "mutant_or_fusion_target": 87383,
+    "multichain_or_unknown_chain_count": 154797,
+    "invalid_smiles": 3216,
+    "sequence_mismatch_or_mutant": 43090,
+    "multiple_or_no_organic_components": 1274,
+    "unresolved_human_sequence_identity": 11147,
+    "unspecified_atom": 8,
+    "manual_source_qc_exclusion": 1,
+    "unusable_endpoint": 100,
+    "missing_computable_inchikey": 205,
+    "malformed_rows": 6,
+    "ambiguous_or_invalid_amino_acids": 3
+  },
+  "seconds": 476.3688130090013
+}

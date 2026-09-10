@@ -1,0 +1,115 @@
+{
+  "all_pass": true,
+  "checks": {
+    "parquet_csv_counts_and_entity_joins": true,
+    "independent_main_split_disjointness": true,
+    "all_task_summary_and_frozen_pair_reserves": true,
+    "manual_qc_and_all_numeric_censoring_labels": true,
+    "frozen_experiment_hashes_unchanged": true,
+    "repository_tests_384_passed": true,
+    "independent_split_task_counts_match": true
+  },
+  "additional_old_model_membership_input_hashes": {
+    "outputs/biomaster_best_model_20260906/data/fullfit_2025/TRAIN.csv.gz": {
+      "bytes": 3533209,
+      "sha256": "32ffa41c74c53b01cb0442caee553e8b26c0517262768ff7f017657e21910065"
+    },
+    "outputs/biomaster_bindingdb_incremental_20260910/PARENT_MOLECULE_KEYS.csv.gz": {
+      "bytes": 3744227,
+      "sha256": "21effd15a0db9a57efb10fee16c8d90d6527ae11f180002da78bab8a6f9474f5"
+    },
+    "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/TARGET_INDEX.csv.gz": {
+      "bytes": 203287,
+      "sha256": "2c1f57cd5b80503d25383db7193c78e9020f7b5129090bc159958ec154e3d154"
+    }
+  },
+  "test_result": "384 passed, 1 warning in 13.56s",
+  "verified_split_task_counts": [
+    {
+      "split": "train",
+      "task": "ACTIVITY_EC50",
+      "rows": 102821,
+      "positive": 72224,
+      "negative": 30597
+    },
+    {
+      "split": "train",
+      "task": "ACTIVITY_IC50",
+      "rows": 721383,
+      "positive": 541497,
+      "negative": 179886
+    },
+    {
+      "split": "train",
+      "task": "AFFINITY_KD_KI",
+      "rows": 287296,
+      "positive": 189128,
+      "negative": 98168
+    },
+    {
+      "split": "train",
+      "task": "ANNOTATED_INACTIVITY",
+      "rows": 46603,
+      "positive": 0,
+      "negative": 46603
+    },
+    {
+      "split": "validation",
+      "task": "ACTIVITY_EC50",
+      "rows": 13033,
+      "positive": 9178,
+      "negative": 3855
+    },
+    {
+      "split": "validation",
+      "task": "ACTIVITY_IC50",
+      "rows": 85842,
+      "positive": 64502,
+      "negative": 21340
+    },
+    {
+      "split": "validation",
+      "task": "AFFINITY_KD_KI",
+      "rows": 34745,
+      "positive": 24471,
+      "negative": 10274
+    },
+    {
+      "split": "validation",
+      "task": "ANNOTATED_INACTIVITY",
+      "rows": 6725,
+      "positive": 0,
+      "negative": 6725
+    },
+    {
+      "split": "test",
+      "task": "ACTIVITY_EC50",
+      "rows": 11985,
+      "positive": 8551,
+      "negative": 3434
+    },
+    {
+      "split": "test",
+      "task": "ACTIVITY_IC50",
+      "rows": 85763,
+      "positive": 65227,
+      "negative": 20536
+    },
+    {
+      "split": "test",
+      "task": "AFFINITY_KD_KI",
+      "rows": 34385,
+      "positive": 23216,
+      "negative": 11169
+    },
+    {
+      "split": "test",
+      "task": "ANNOTATED_INACTIVITY",
+      "rows": 4822,
+      "positive": 0,
+      "negative": 4822
+    }
+  ],
+  "dataset_bytes": 4676923116,
+  "clarification": "No new model training or feature generation. Pair/task rows are not independent experimental replicates."
+}
