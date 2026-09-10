@@ -1,5 +1,7 @@
 # BioMaster ODTI：模型与数据下一阶段推进路线
 
+> **历史快照**：本文件冻结于2026-08-17，其中“当前训练池86,674”只指当时的capped benchmark。2026-09-01通用模型训练合同已更新为437,248条综合关系；当前口径以`CURRENT_PROJECT_CONTRACT_ZH.md`为准。
+
 更新时间：2026-08-17
 状态：E0 已完成；E1 BERMOL768 screen 不晋级；默认 champion 不变
 

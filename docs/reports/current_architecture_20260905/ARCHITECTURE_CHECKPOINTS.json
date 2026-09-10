@@ -1,0 +1,167 @@
+[
+  {
+    "suite": "biomaster_odti_v2_v21_s1_formal",
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "runs": 25,
+    "representative_checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_v21_s1_formal/S1_SCAFFOLD_COLD_DRUG__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+    "config": {
+      "drug_input_dim": 2048,
+      "target_input_dim": 1024,
+      "structure_input_dim": 19,
+      "embedding_dim": 192,
+      "hidden_dim": 256,
+      "family_dim": 24,
+      "expert_count": 6,
+      "dropout": 0.12,
+      "rank_weight": 0.12,
+      "affinity_weight": 0.06,
+      "observation_weight": 0.1,
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "rank_max_pairs": 4096,
+      "affinity_min_log_variance": -6.0,
+      "affinity_max_log_variance": 4.0
+    },
+    "state_tensor_elements": 9627099
+  },
+  {
+    "suite": "biomaster_odti_v2_v21_s2_formal",
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "runs": 25,
+    "representative_checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_v21_s2_formal/S2_HOMOLOGY_COLD_TARGET__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+    "config": {
+      "drug_input_dim": 2048,
+      "target_input_dim": 1024,
+      "structure_input_dim": 19,
+      "embedding_dim": 192,
+      "hidden_dim": 256,
+      "family_dim": 24,
+      "expert_count": 6,
+      "dropout": 0.12,
+      "rank_weight": 0.12,
+      "affinity_weight": 0.06,
+      "observation_weight": 0.1,
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "rank_max_pairs": 4096,
+      "affinity_min_log_variance": -6.0,
+      "affinity_max_log_variance": 4.0
+    },
+    "state_tensor_elements": 9627099
+  },
+  {
+    "suite": "biomaster_odti_v2_v21_s3_formal",
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "runs": 25,
+    "representative_checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_v21_s3_formal/S3_STRICT_DOUBLE_COLD__fold_0__seed_20260816/BEST_MODEL_V2.pt",
+    "config": {
+      "drug_input_dim": 2048,
+      "target_input_dim": 1024,
+      "structure_input_dim": 19,
+      "embedding_dim": 192,
+      "hidden_dim": 256,
+      "family_dim": 24,
+      "expert_count": 6,
+      "dropout": 0.12,
+      "rank_weight": 0.12,
+      "affinity_weight": 0.06,
+      "observation_weight": 0.1,
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "rank_max_pairs": 4096,
+      "affinity_min_log_variance": -6.0,
+      "affinity_max_log_variance": 4.0
+    },
+    "state_tensor_elements": 9627099
+  },
+  {
+    "suite": "biomaster_odti_v2_s4_esm2_formal",
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "runs": 5,
+    "representative_checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s4_esm2_formal/S4_FIRST_SEEN_TEMPORAL_2023_2025__fold_-1__seed_20260816/BEST_MODEL_V2.pt",
+    "config": {
+      "drug_input_dim": 2048,
+      "target_input_dim": 1024,
+      "target_aux_input_dim": 1280,
+      "target_token_input_dim": 0,
+      "target_token_heads": 4,
+      "target_token_max_len": 1022,
+      "structure_input_dim": 19,
+      "embedding_dim": 192,
+      "hidden_dim": 256,
+      "family_dim": 24,
+      "expert_count": 6,
+      "dropout": 0.12,
+      "rank_weight": 0.12,
+      "listwise_weight": 0.0,
+      "affinity_weight": 0.06,
+      "observation_weight": 0.1,
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "rank_max_pairs": 4096,
+      "affinity_min_log_variance": -6.0,
+      "affinity_max_log_variance": 4.0
+    },
+    "state_tensor_elements": 10419932
+  },
+  {
+    "suite": "biomaster_odti_v2_s5_esm2_formal",
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "runs": 5,
+    "representative_checkpoint": "outputs/old_drug_target_sota_v1/biomaster_odti_v2_s5_esm2_formal/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260816/BEST_MODEL_V2.pt",
+    "config": {
+      "drug_input_dim": 2048,
+      "target_input_dim": 1024,
+      "target_aux_input_dim": 1280,
+      "target_token_input_dim": 0,
+      "target_token_heads": 4,
+      "target_token_max_len": 1022,
+      "structure_input_dim": 19,
+      "embedding_dim": 192,
+      "hidden_dim": 256,
+      "family_dim": 24,
+      "expert_count": 6,
+      "dropout": 0.12,
+      "rank_weight": 0.12,
+      "listwise_weight": 0.0,
+      "affinity_weight": 0.06,
+      "observation_weight": 0.1,
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "rank_max_pairs": 4096,
+      "affinity_min_log_variance": -6.0,
+      "affinity_max_log_variance": 4.0
+    },
+    "state_tensor_elements": 10419932
+  }
+]

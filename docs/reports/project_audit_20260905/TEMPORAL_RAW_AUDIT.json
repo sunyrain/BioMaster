@@ -1,0 +1,31 @@
+{
+  "database": "downloads/chembl_37/chembl_37/chembl_37_sqlite/chembl_37.db",
+  "eligible_raw_activity_rows": 8562,
+  "actual_training_source_relations_audited": 1839,
+  "all_time_reaggregation_matches_stored_labels_and_means": true,
+  "label_changed_by_future_evidence": 63,
+  "mean_changed_by_future_evidence": 1668,
+  "label_transitions_pre2023_to_stored": [
+    {
+      "pre2023": "grey_or_unresolved",
+      "stored": "negative_or_inactive",
+      "rows": 16
+    },
+    {
+      "pre2023": "grey_or_unresolved",
+      "stored": "positive",
+      "rows": 47
+    },
+    {
+      "pre2023": "negative_or_inactive",
+      "stored": "negative_or_inactive",
+      "rows": 137
+    },
+    {
+      "pre2023": "positive",
+      "stored": "positive",
+      "rows": 1639
+    }
+  ],
+  "scope_limit": "Only cross-cutoff relations retained in actual training are audited. Future-driven exclusions and target context are additional unaudited paths."
+}

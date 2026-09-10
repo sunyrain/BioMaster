@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-09-01T05:47:57.709420+00:00",
+  "pdf": "docs/reports/BIOMASTER_CURRENT_SYSTEM_DATA_METRICS_REPORT_20260901_ZH.pdf",
+  "html": "docs/reports/BIOMASTER_CURRENT_SYSTEM_DATA_METRICS_REPORT_20260901_ZH.html",
+  "pdf_sha256": "9a8995ea52dd2278b3d70cf6041c88636e8b8937ef7814a0affc2e25a85fa700",
+  "pdf_bytes": 586910,
+  "page_count": 10,
+  "empty_pages": [],
+  "title_present": true,
+  "current_specialist_claim_pages": [],
+  "contract_specialist_removed": true,
+  "inputs": {
+    "configs/biomaster_current_contract_v1.json": "05bab450da51f063d29cc745df5c038238309f1140fbe7c87bf302d2fc341e0a",
+    "outputs/biomaster_comprehensive_training_v1/COMPREHENSIVE_TRAINING_MANIFEST_V1.json": "20b993d3c84989464883db605e1bce3f9292e9e47060a131aac6b8f6b5dee8df",
+    "outputs/biomaster_bidirectional_v6_full_fit/seed_20260816/FULL_FIT_SUMMARY_V6.json": "fad19dca08de59e4899ee0fbcb703a91d568b95307544789d227b37a5b015a10",
+    "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_SUMMARY_V1.json": "21a12e7815b1840a612f7eba2ecadc29a9b408e8b59281204796bc7c906dd7a2",
+    "outputs/retrain_20260901/bidirectional_720x745_stage_a_rows4/STAGE_A_TEMPORAL_2024_2025_EXPANDED_SCOPES_SUMMARY_V1.json": "17588ecf0e9d8ae454b70c9f0ef9a980d4e4d1c9a15a7df8c095db19ccd05b7e",
+    "outputs/target_discovery_scope_ch37_v3/TARGET_DISCOVERY_SCOPE_SUMMARY_V3.json": "52c4b07a06284fe3ae84bf9c0ceb4b5ee68d359907a88685df0194aee7184a5b"
+  }
+}

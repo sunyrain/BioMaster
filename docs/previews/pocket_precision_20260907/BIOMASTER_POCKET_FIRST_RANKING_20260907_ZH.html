@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>结构交互模型：首轮老药双向排序与数值核查</title><style>html{color:#243348;background:#fff}body{max-width:1120px;margin:32px auto;padding:0 24px;font:17px/1.75 "Noto Sans CJK SC","Microsoft YaHei",sans-serif;overflow-wrap:anywhere}h1,h2,h3{line-height:1.4;color:#13263e}h1{font-size:30px}h2{font-size:24px;margin-top:1.8em}h3{font-size:20px}a{color:#155fa7;text-decoration:none}a:hover{text-decoration:underline}nav{padding:12px 0;border-bottom:1px solid #d9e1eb;margin-bottom:24px;font-size:15px}nav a{margin-right:18px}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:15px}th,td{border:1px solid #d9e1eb;padding:9px 12px;vertical-align:top}th{background:#edf3fa;text-align:left}tr:nth-child(even){background:#fafbfd}img{display:block;max-width:100%;height:auto;margin:20px auto}blockquote{margin:20px 0;padding:1px 18px;border-left:4px solid #7d9ec6;background:#f1f6fc}pre{padding:18px;background:#f4f6f8;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:"DejaVu Sans Mono","Noto Sans CJK SC",monospace;font-size:.88em}p code,li code{background:#f0f3f6;padding:2px 5px;border-radius:3px}@page{size:A4;margin:16mm}@media print{body{font-size:11px;margin:0;padding:0}h1{font-size:21px}h2{font-size:17px}h3{font-size:14px}table{font-size:9px}img{max-height:220mm;object-fit:contain}nav{display:none}pre{font-size:9px}}</style></head><body><nav><a href="BIOMASTER_CURRENT_ARCHITECTURE_20260907_ZH.html">模型架构</a><a href="BIOMASTER_STRUCTURAL_LIVE_PROGRESS_20260906_ZH.html">停止时进度</a><a href="BIOMASTER_DATA_TRAINING_ARCHITECTURE_AUDIT_20260907_ZH.html">完整审查</a><a href="../../BIOMASTER_POCKET_FIRST_RANKING_20260907_ZH.md">Markdown源文件</a></nav><main><h1 id="结构交互模型首轮老药双向排序与数值核查">结构交互模型：首轮老药双向排序与数值核查</h1>
+<blockquote>
+<p><strong>已于2026-09-07 05:08:47 UTC／北京时间13:08:47按用户要求停止。</strong> 下游日志到10,480步，完整检查点为10,400步；仅完成第1轮验证。新候选未选中，后续不再自动训练。<a href="BIOMASTER_STOP_AND_RETROSPECTIVE_20260907_ZH.html">收束状态与完整复盘</a>。</p>
+</blockquote>
+<p><strong>统一FP32复核及结构保持复测已完成</strong>：新旧双向AP差为+0.002097／+0.007154，两个95%区间均跨零；关系微调后真实口袋接触AP从0.567126降到0.355525。<a href="BIOMASTER_DATA_TRAINING_ARCHITECTURE_AUDIT_20260907_ZH.html">最新数据、训练与实际架构审查</a>。下方BF16表保留作数值核查历史。</p>
+<p>关于“第一轮”的含义及loss下降情况，见<a href="../../BIOMASTER_POCKET_LOSS_PROGRESS_20260907_ZH.md">epoch定义、分类与排序loss曲线</a>。</p>
+<p>历史记录：截至2026-09-07 03:38 UTC，结构预训练及下游第一轮开发验证已有结果；第二轮后来按用户要求中止。<strong>预训练阶段学到了结构预测能力，但微调后明显退化；首轮老药排序收益未得到可靠确认。</strong></p>
+<p>本轮使用≤2020关系训练、2021–2022首次合格测量关系开发验证，种子20260921。34个药物查询、39个靶点查询，共53条验证阳性关系。候选来自720老药×384靶点登记空间，扣除截止点前及无日期的已测关系；未观测候选是检索背景，不能当作实验阴性。这不是2023–2025或KIRHub的新测试。</p>
+<h2 id="一首轮结果与对应旧模型">一、首轮结果与对应旧模型</h2>
+<p>旧模型为当前结构模型内部冻结的DrugCLIP＋Morgan＋ESM2全局父模型，其权重身份一致；没有拿两个时间窗口、多个种子的总体均值作比较。</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align:right">旧模型归档结果</th>
+<th style="text-align:right">旧模型按新评测设置重算</th>
+<th style="text-align:right">新模型第一轮</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>老药→靶点 AP</td>
+<td style="text-align:right">0.475437</td>
+<td style="text-align:right">0.477444</td>
+<td style="text-align:right"><strong>0.478704</strong></td>
+</tr>
+<tr>
+<td>靶点→老药 AP</td>
+<td style="text-align:right">0.205342</td>
+<td style="text-align:right">0.203832</td>
+<td style="text-align:right"><strong>0.210292</strong></td>
+</tr>
+<tr>
+<td>老药→靶点 Recall@20</td>
+<td style="text-align:right">0.662745</td>
+<td style="text-align:right">0.662745</td>
+<td style="text-align:right">0.662745</td>
+</tr>
+<tr>
+<td>靶点→老药 Recall@20</td>
+<td style="text-align:right">0.632479</td>
+<td style="text-align:right">0.555556</td>
+<td style="text-align:right">0.632479</td>
+</tr>
+</tbody>
+</table>
+<p>原归档和新训练器均使用BF16推理，但批量和执行设置不同。本次将旧权重放入新模型相同的父模型执行路径，以batch=1、TF32关闭重新评测。按这一设置，新模型双向AP差为**+0.001260／+0.006459**，不是显著或稳定增益的证明。</p>
+<table>
+<thead>
+<tr>
+<th>同设置比较：靶点→老药</th>
+<th style="text-align:right">旧模型</th>
+<th style="text-align:right">新模型第一轮</th>
+<th style="text-align:right">差值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recall@5</td>
+<td style="text-align:right">0.239316</td>
+<td style="text-align:right">0.213675</td>
+<td style="text-align:right">−0.025641</td>
+</tr>
+<tr>
+<td>Recall@10</td>
+<td style="text-align:right">0.380342</td>
+<td style="text-align:right">0.341880</td>
+<td style="text-align:right">−0.038462</td>
+</tr>
+<tr>
+<td>Recall@20</td>
+<td style="text-align:right">0.555556</td>
+<td style="text-align:right">0.632479</td>
+<td style="text-align:right">+0.076923</td>
+</tr>
+</tbody>
+</table>
+<p>逆向AP和前20召回有上升，前5及前10召回却下降，因而还没有一致改善前排候选质量。旧权重改变评测设置后，逆向Recall@20本身也发生较大变化，这要求先核查数值稳定性，再判断阈值指标的增益。</p>
+<p>当前排序函数在同分时按候选ID的字符串顺序确定排名，AP也从该确定性排名计算；它不是对所有同分顺序求期望的AP。BF16带来的分数舍入及并列排序可能影响结果，具体贡献仍需逐配对核查。本次没有修改运行中的训练器或排名规则。</p>
+<p>证据：<a href="../../../outputs/biomaster_pocket_precision_20260906/training/structurally_pretrained/cutoff_2020/seed_20260921/HISTORY.json">新模型首轮历史</a>、<a href="../../../outputs/biomaster_best_model_20260906/representations/drugclip_morgan/optimization/roll_2020/global_ema/seed_20260921/RESULT.json">旧模型原始结果</a>、<a href="../../../outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/parent_precision_20260907/RESULT.json">相同评测设置的旧模型核查</a>。</p>
+<h2 id="二现在能确认与不能确认的效果">二、现在能确认与不能确认的效果</h2>
+<p>结构预训练在1,223个按簇留出的真实复合物上，全部区域接触AP达到0.566487；真实口袋内AP为0.567126，打乱原子对应关系后为0.258707，只保留残基平均分时为0.319304。它支持原子级接触区分能力，不能直接解释为药物—靶点结合选择性或老药排序收益。</p>
+<p>首轮结果表明，已经学到的结构信息尚未转化成幅度明确、方向一致的老药排序增益。只有一个时间窗口和一个种子的第一次验证，样本量较小，也尚无新模型逐查询置信区间。不能宣布超过旧模型、DTIAM或DrugCLIP，也不能仅凭这一轮判定结构路线无效。</p>
+<p>后续需要重点检验结构监督在关系微调后是否保留、口袋聚合及局部表示到冻结全局读出的连接是否限制收益，以及关系分类与双向排序目标是否一致。这些是待消融的机制假设，当前指标没有确定根因。</p>
+<h2 id="三已完成的精度复核">三、已完成的精度复核</h2>
+<p>已冻结第一轮BEST检查点副本，以FP32权重、输入和运算、TF32关闭、同一批量，对旧模型及新模型遍历相同完整候选集合。已保存逐配对分数、阳性排名、逐查询指标，并完成10,000次按查询配对重采样。</p>
+<table>
+<thead>
+<tr>
+<th>统一FP32 AP</th>
+<th style="text-align:right">旧模型</th>
+<th style="text-align:right">新模型第一轮</th>
+<th>AP差值95%区间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>老药→靶点</td>
+<td style="text-align:right">0.476484</td>
+<td style="text-align:right">0.478581</td>
+<td>[−0.000784，+0.006391]</td>
+</tr>
+<tr>
+<td>靶点→老药</td>
+<td style="text-align:right">0.202568</td>
+<td style="text-align:right">0.209722</td>
+<td>[−0.004920，+0.022961]</td>
+</tr>
+</tbody>
+</table>
+<p>两个区间均跨零，尚无可靠升级证据。FP32逆向Recall@20为0.581197→0.606838；前5及前10召回仍下降。这是独立只读诊断，不参与检查点选择，不修改原训练协议；原第二轮训练继续。<a href="../../../outputs/biomaster_pocket_precision_20260906/downstream_diagnostics/epoch1_fp32_20260907/RESULT.json">FP32完整结果</a> · <a href="BIOMASTER_STRUCTURAL_LIVE_PROGRESS_20260906_ZH.html">总实时报告</a></p>
+</main></body></html>

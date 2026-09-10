@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1370" viewBox="0 0 1920 1370" font-family="Noto Sans CJK SC, DejaVu Sans, sans-serif">
+<title>BioMaster 当前已实现架构：V3 冻结底座与 J 双向增量模块</title>
+<desc>两底座冻结集成，三个独立训练的增量模块。输入为Morgan、蛋白预训练特征、训练期正负支持库和BerMol/完整ESM2全局向量。输出药找靶和靶找药的不同排序分数。</desc>
+<defs>
+<marker id="326AB4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#326AB4"/></marker>
+<marker id="087E78" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087E78"/></marker>
+<marker id="7250AE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7250AE"/></marker>
+<marker id="AE6F17" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#AE6F17"/></marker>
+</defs>
+<rect x="0" y="0" width="1920" height="1370" rx="0" fill="#F7F9FC" stroke="none" stroke-width="1.5"/>
+<rect x="0" y="0" width="1920" height="10" rx="0" fill="#087E78" stroke="none" stroke-width="1.5"/>
+<text x="56" y="68" font-size="43" font-weight="700" fill="#182D43" text-anchor="start">BioMaster 当前架构</text>
+<text x="56" y="108" font-size="23" font-weight="400" fill="#576C80" text-anchor="start">V3 底座 + J 双向增量模块  ·  J_old_relation_pretrained  ·  2026-09-06</text>
+<rect x="1150" y="52" width="16" height="16" rx="4" fill="#326AB4" stroke="none" stroke-width="1.5"/>
+<text x="1175" y="68" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">冻结底座（训练 J 时）</text>
+<rect x="1450" y="52" width="16" height="16" rx="4" fill="#087E78" stroke="none" stroke-width="1.5"/>
+<text x="1475" y="68" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">可训练 J 参数</text>
+<rect x="1685" y="52" width="16" height="16" rx="4" fill="#7250AE" stroke="none" stroke-width="1.5"/>
+<text x="1710" y="68" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">固定输入 / 缓存</text>
+<rect x="40" y="150" width="402" height="875" rx="20" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.5"/>
+<text x="62" y="191" font-size="22" font-weight="700" fill="#7250AE" text-anchor="start">01</text>
+<text x="110" y="191" font-size="27" font-weight="700" fill="#7250AE" text-anchor="start">输入与训练期证据</text>
+<text x="62" y="222" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">分子、蛋白和可追溯实测关系</text>
+<rect x="470" y="150" width="576" height="875" rx="20" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.5"/>
+<text x="492" y="191" font-size="22" font-weight="700" fill="#326AB4" text-anchor="start">02</text>
+<text x="540" y="191" font-size="27" font-weight="700" fill="#326AB4" text-anchor="start">V3 底座 × 2</text>
+<text x="492" y="222" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">两个独立种子；此处展开单个底座</text>
+<rect x="1090" y="150" width="790" height="875" rx="20" fill="#FFFFFF" stroke="#DCE4EC" stroke-width="1.5"/>
+<text x="1112" y="191" font-size="22" font-weight="700" fill="#087E78" text-anchor="start">03</text>
+<text x="1160" y="191" font-size="27" font-weight="700" fill="#087E78" text-anchor="start">J 增量模块 × 3</text>
+<text x="1112" y="222" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">三个独立种子；此处展开单个模块</text>
+<rect x="60" y="252" width="362" height="130" rx="12" fill="#F3EEFA" stroke="#7250AE" stroke-width="1.2"/>
+<text x="80" y="287" font-size="25" font-weight="700" fill="#7250AE" text-anchor="start">药物输入</text>
+<text x="80" y="322" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">SMILES → 标准化分子</text>
+<text x="80" y="352" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">Morgan 2048维  /  BerMol 768维</text>
+<circle cx="405" cy="365" r="15" fill="#FFFFFF" stroke="#7250AE" stroke-width="2"/>
+<text x="405" y="371" font-size="17" font-weight="700" fill="#7250AE" text-anchor="middle">P</text>
+<rect x="60" y="414" width="362" height="165" rx="12" fill="#F3EEFA" stroke="#7250AE" stroke-width="1.2"/>
+<text x="80" y="449" font-size="25" font-weight="700" fill="#7250AE" text-anchor="start">靶点输入</text>
+<text x="80" y="484" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">蛋白序列 + 靶点家族</text>
+<text x="80" y="515" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">ProtBERT 1024 + legacy ESM2 1280</text>
+<text x="80" y="546" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">完整序列 ESM2 均值 1280维</text>
+<circle cx="405" cy="559" r="15" fill="#FFFFFF" stroke="#7250AE" stroke-width="2"/>
+<text x="405" y="565" font-size="17" font-weight="700" fill="#7250AE" text-anchor="middle">P</text>
+<rect x="60" y="620" width="362" height="262" rx="12" fill="#FCF5E7" stroke="#AE6F17" stroke-width="1.2"/>
+<text x="80" y="655" font-size="25" font-weight="700" fill="#AE6F17" text-anchor="start">正负支持库</text>
+<text x="80" y="690" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">仅使用训练期明确实测标签</text>
+<text x="80" y="721" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">按当前靶点检索 Morgan 近邻</text>
+<text x="80" y="752" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">正样本 / 负样本分别 Top 16</text>
+<text x="80" y="783" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">Tanimoto 相似度 + 有效掩码</text>
+<text x="80" y="814" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">排除查询分子自身及其别名</text>
+<text x="80" y="845" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">另提取 8 项相似度 / 可用性统计</text>
+<circle cx="405" cy="862" r="15" fill="#FFFFFF" stroke="#AE6F17" stroke-width="2"/>
+<text x="405" y="868" font-size="17" font-weight="700" fill="#AE6F17" text-anchor="middle">E</text>
+<text x="78" y="925" font-size="19" font-weight="400" fill="#7250AE" text-anchor="start">P：公共预训练全局特征缓存</text>
+<text x="78" y="958" font-size="19" font-weight="400" fill="#AE6F17" text-anchor="start">E：同一支持库的直接证据统计</text>
+<text x="78" y="991" font-size="18" font-weight="400" fill="#576C80" text-anchor="start">同名圆点表示相同输入来源</text>
+<rect x="496" y="252" width="524" height="122" rx="12" fill="#EDF4FD" stroke="#326AB4" stroke-width="1.2"/>
+<text x="516" y="287" font-size="25" font-weight="700" fill="#326AB4" text-anchor="start">模态投影与蛋白融合</text>
+<text x="516" y="322" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">Morgan → 药物向量 d：192维</text>
+<text x="516" y="353" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">ProtBERT + ESM2 门控融合 → t：192维</text>
+<path d="M 422 296 L 496 296" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<path d="M 422 462 L 457 462 L 457 340 L 496 340" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<path d="M 755 374 L 755 401" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<rect x="496" y="406" width="524" height="180" rx="12" fill="#EDF4FD" stroke="#326AB4" stroke-width="1.2"/>
+<text x="516" y="441" font-size="25" font-weight="700" fill="#326AB4" text-anchor="start">全局药物–靶点交互</text>
+<text x="516" y="476" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">双向 FiLM 调制 + 低秩双线性（rank 48）</text>
+<text x="516" y="507" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">拼接 d、t、逐元素积 / 差、双线性、家族</text>
+<text x="516" y="538" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">MLP 256 → 共享头 + 6 专家路由 + 余弦项</text>
+<text x="516" y="569" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">并行投影 → 交互隐状态 h_i：192维</text>
+<path d="M 755 586 L 755 615" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<rect x="496" y="620" width="524" height="142" rx="12" fill="#EDF4FD" stroke="#326AB4" stroke-width="1.2"/>
+<text x="516" y="655" font-size="25" font-weight="700" fill="#326AB4" text-anchor="start">按查询聚合正负支持</text>
+<text x="516" y="690" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">共享药物编码 → 正 / 负分离的注意力池化</text>
+<text x="516" y="720" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">学习支持门控 g 和分数修正 Δsupport</text>
+<text x="516" y="750" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">z_i = z_global + g × Δsupport</text>
+<path d="M 422 708 L 496 708" fill="none" stroke="#AE6F17" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#AE6F17)" />
+<path d="M 755 762 L 755 795" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<rect x="496" y="800" width="524" height="128" rx="12" fill="#EDF4FD" stroke="#326AB4" stroke-width="1.2"/>
+<text x="516" y="835" font-size="25" font-weight="700" fill="#326AB4" text-anchor="start">两个底座汇总</text>
+<text x="516" y="870" font-size="23" font-weight="400" fill="#182D43" text-anchor="start">基础分数 z_base = (z1 + z2) / 2</text>
+<text x="516" y="903" font-size="23" font-weight="400" fill="#182D43" text-anchor="start">H = concat(h1, h2)：384维</text>
+<text x="515" y="967" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">H 来自支持融合前的全局交互投影</text>
+<text x="515" y="996" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">训练 J 时底座与特征缓存均不更新</text>
+<rect x="1114" y="273" width="225" height="321" rx="12" fill="#EAF7F3" stroke="#087E78" stroke-width="1.2"/>
+<text x="1134" y="308" font-size="25" font-weight="700" fill="#087E78" text-anchor="start">全局残差 MLP</text>
+<text x="1134" y="343" font-size="18" font-weight="400" fill="#182D43" text-anchor="start">输入：H 与 z_base / 5</text>
+<text x="1134" y="377" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">385 → 96 → 2</text>
+<text x="1134" y="411" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">LayerNorm / GELU</text>
+<text x="1134" y="445" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">Dropout 0.1</text>
+<text x="1134" y="479" font-size="20" font-weight="400" fill="#182D43" text-anchor="start"></text>
+<text x="1134" y="513" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">输出：rMLP（双向）</text>
+<rect x="1354" y="273" width="249" height="321" rx="12" fill="#EAF7F3" stroke="#087E78" stroke-width="1.2"/>
+<text x="1374" y="308" font-size="25" font-weight="700" fill="#087E78" text-anchor="start">预训练向量交互</text>
+<text x="1374" y="343" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">BerMol：768 → 48</text>
+<text x="1374" y="377" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">完整 ESM2：1280 → 48</text>
+<text x="1374" y="411" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">拼接 d′、t′、</text>
+<text x="1374" y="445" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">d′⊙t′、|d′−t′|</text>
+<text x="1374" y="479" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">192 → 64 → 2</text>
+<text x="1374" y="513" font-size="19" font-weight="400" fill="#182D43" text-anchor="start">输出：rpre（双向）</text>
+<circle cx="1477" cy="254" r="15" fill="#FFFFFF" stroke="#7250AE" stroke-width="2"/>
+<text x="1477" y="260" font-size="17" font-weight="700" fill="#7250AE" text-anchor="middle">P</text>
+<rect x="1618" y="273" width="237" height="321" rx="12" fill="#EAF7F3" stroke="#087E78" stroke-width="1.2"/>
+<text x="1638" y="308" font-size="25" font-weight="700" fill="#087E78" text-anchor="start">有符号直接证据</text>
+<text x="1638" y="343" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">从 E 取有效正 / 负</text>
+<text x="1638" y="377" font-size="17" font-weight="400" fill="#182D43" text-anchor="start">最大相似度 s_pos / s_neg</text>
+<text x="1638" y="411" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">使用 s 与 s² 两项</text>
+<text x="1638" y="445" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">非负权重分别学习</text>
+<text x="1638" y="479" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">正证据 − 负证据</text>
+<text x="1638" y="513" font-size="20" font-weight="400" fill="#182D43" text-anchor="start">输出：rE（双向）</text>
+<circle cx="1736" cy="254" r="15" fill="#FFFFFF" stroke="#AE6F17" stroke-width="2"/>
+<text x="1736" y="260" font-size="17" font-weight="700" fill="#AE6F17" text-anchor="middle">E</text>
+<path d="M 1020 835 L 1070 835 L 1070 467 L 1114 467" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<path d="M 1226 594 L 1226 636" fill="none" stroke="#087E78" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#087E78)" />
+<path d="M 1478 594 L 1478 636" fill="none" stroke="#087E78" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#087E78)" />
+<path d="M 1736 594 L 1736 636" fill="none" stroke="#087E78" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#087E78)" />
+<rect x="1114" y="642" width="741" height="122" rx="14" fill="#EAF7F3" stroke="#087E78" stroke-width="1.5"/>
+<text x="1136" y="678" font-size="25" font-weight="700" fill="#087E78" text-anchor="start">零初始化、有界的双向修正</text>
+<text x="1484" y="720" font-size="24" font-weight="400" fill="#182D43" text-anchor="middle">Δ = 4 tanh((rMLP + rpre) / 4) + 6 tanh(rE / 6)</text>
+<text x="1136" y="747" font-size="19" font-weight="400" fill="#576C80" text-anchor="start">两个输出分量分别服务药→靶、靶→药</text>
+<path d="M 1484 764 L 1484 800" fill="none" stroke="#087E78" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#087E78)" />
+<rect x="1114" y="807" width="741" height="102" rx="14" fill="#E0F1EE" stroke="#087E78" stroke-width="2"/>
+<text x="1136" y="843" font-size="24" font-weight="700" fill="#087E78" text-anchor="start">跨 3 个增量模块求均值，再加回冻结基础分数</text>
+<text x="1484" y="883" font-size="25" font-weight="400" fill="#182D43" text-anchor="middle">z_dir = z_base + mean(Δ1_dir, Δ2_dir, Δ3_dir)</text>
+<path d="M 1020 889 L 1076 889 L 1076 865 L 1114 865" fill="none" stroke="#326AB4" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#326AB4)" />
+<path d="M 1285 909 L 1285 935" fill="none" stroke="#087E78" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#087E78)" />
+<path d="M 1685 909 L 1685 935" fill="none" stroke="#087E78" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#087E78)" />
+<rect x="1114" y="940" width="356" height="65" rx="11" fill="#087E78" stroke="none" stroke-width="1.5"/>
+<rect x="1490" y="940" width="365" height="65" rx="11" fill="#087E78" stroke="none" stroke-width="1.5"/>
+<text x="1292" y="968" font-size="23" font-weight="700" fill="#FFFFFF" text-anchor="middle">药 → 靶点排序</text>
+<text x="1292" y="993" font-size="18" font-weight="400" fill="#FFFFFF" text-anchor="middle">固定药物，按目标集合排序</text>
+<text x="1672" y="968" font-size="23" font-weight="700" fill="#FFFFFF" text-anchor="middle">靶点 → 老药排序</text>
+<text x="1672" y="993" font-size="18" font-weight="400" fill="#FFFFFF" text-anchor="middle">固定靶点，按老药集合排序</text>
+<rect x="40" y="1050" width="1840" height="149" rx="18" fill="#182D43" stroke="none" stroke-width="1.5"/>
+<text x="63" y="1084" font-size="25" font-weight="700" fill="#FFFFFF" text-anchor="start">训练方式</text>
+<text x="65" y="1120" font-size="23" font-weight="700" fill="#BCDFDA" text-anchor="start">① 先训练 V3 底座</text>
+<text x="65" y="1152" font-size="19" font-weight="400" fill="#E3EAF2" text-anchor="start">明确正负标签 BCE + 按药物均衡采样</text>
+<text x="65" y="1180" font-size="19" font-weight="400" fill="#E3EAF2" text-anchor="start">得到两个独立种子的底座权重</text>
+<text x="665" y="1120" font-size="23" font-weight="700" fill="#BCDFDA" text-anchor="start">② 冻结底座，训练 J</text>
+<text x="665" y="1152" font-size="19" font-weight="400" fill="#E3EAF2" text-anchor="start">0.25 × 实测 BCE + 0.5 × 双向关系检索损失</text>
+<text x="665" y="1180" font-size="19" font-weight="400" fill="#E3EAF2" text-anchor="start">未知配对进入检索分母，不伪装成生化阴性</text>
+<text x="1265" y="1120" font-size="23" font-weight="700" fill="#BCDFDA" text-anchor="start">③ 验证集选择，再冻结测试</text>
+<text x="1265" y="1152" font-size="19" font-weight="400" fill="#E3EAF2" text-anchor="start">按双向 AP / Recall 选轮数，保留实测 AP 约束</text>
+<text x="1265" y="1180" font-size="19" font-weight="400" fill="#E3EAF2" text-anchor="start">最终输出是排序 logit，尚非校准概率</text>
+<text x="57" y="1238" font-size="22" font-weight="700" fill="#326AB4" text-anchor="start">当前 J</text>
+<text x="157" y="1238" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">实体划分；471 条训练老药药理关系；用于本轮 KIRHub 评分。</text>
+<text x="57" y="1275" font-size="22" font-weight="700" fill="#087E78" text-anchor="start">时间 J</text>
+<text x="157" y="1275" font-size="21" font-weight="400" fill="#182D43" text-anchor="start">同拓扑、独立权重；≤2022 年实验关系重训，815 条老药阳性用于检索监督；测试 2023–2025。</text>
+<text x="57" y="1323" font-size="22" font-weight="400" fill="#576C80" text-anchor="start">当前边界：全局向量交互；原子–残基交叉注意力、三维口袋 / DrugCLIP 分支未在该候选中启用。</text>
+<text x="57" y="1354" font-size="18" font-weight="400" fill="#576C80" text-anchor="start">评分覆盖：720 老药 × 384 核心靶点；评估时按具体协议筛选候选。图示为已实现升级候选，生产默认尚未替换。</text>
+</svg>

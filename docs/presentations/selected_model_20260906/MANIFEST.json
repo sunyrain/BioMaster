@@ -1,0 +1,43 @@
+{
+  "selected_bundle": {
+    "path": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/MANIFEST.json",
+    "sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e"
+  },
+  "renderer": {
+    "path": "scripts/render_selected_model_architecture_20260906.py",
+    "sha256": "57ce740661655181037962b17f64f2b0eccaa80f95b5bf202081c987f57eec41"
+  },
+  "architecture": {
+    "representation": "drugclip_morgan",
+    "variant": "global",
+    "parameters": 1235604,
+    "drug_projection": [
+      2601,
+      192
+    ],
+    "target_projection": [
+      1280,
+      192
+    ],
+    "pair_width": 768,
+    "residual_mlps": 2,
+    "readout": [
+      192,
+      2
+    ]
+  },
+  "figures": [
+    {
+      "path": "docs/presentations/selected_model_20260906/RETARGETMAP_SELECTED_ARCHITECTURE_20260906_ZH.svg",
+      "sha256": "24e4ff7292b427725c069c588e62f7ab39101e6778775a3432acd9b3cf60ebd4"
+    },
+    {
+      "path": "docs/presentations/selected_model_20260906/RETARGETMAP_SELECTED_ARCHITECTURE_20260906_ZH.png",
+      "sha256": "0aff35f69a56ecb7b6331397ad3cd328aca26f528d8a1be5f5b6a6f9e7cd39dd"
+    },
+    {
+      "path": "docs/presentations/selected_model_20260906/RETARGETMAP_SELECTED_ARCHITECTURE_20260906_ZH.pdf",
+      "sha256": "3f0dcf91b7be444b083ed738bc5238e8de913c402c8b78c6704e01ad15ab0b53"
+    }
+  ]
+}

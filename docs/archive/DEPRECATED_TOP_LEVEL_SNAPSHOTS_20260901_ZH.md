@@ -1,0 +1,20 @@
+# 顶层历史快照状态
+
+自2026-09-01起，当前任务、数据量、模型角色和指标分母只从`docs/CURRENT_PROJECT_CONTRACT_ZH.md`与`configs/biomaster_current_contract_v1.json`读取。以下仍位于`docs/`顶层的文件保留原路径以避免破坏引用，但其“当前”“下一步”等措辞只代表文件日期当时的状态：
+
+- `BIOMASTER_ACTIVE_EXECUTION_QUEUE_20260817_ZH.md`
+- `BIOMASTER_NEXT_MODEL_DATA_ROADMAP_20260817_ZH.md`
+- `BIOMASTER_ODTI_V2_DESIGN_ZH.md`
+- `BIOMASTER_PRETRAINED_REPRESENTATION_SCREEN_20260819_ZH.md`
+- `BIOMASTER_STRENGTHENING_SPEAKER_NOTES_20260817_ZH.md`
+- `BIOMASTER_STRUCTURE_INTERACTION_UPGRADE_20260819_ZH.md`
+- `FDA_OLD_DRUG_AFFINITY_PIPELINE_V8_FRONTIER_COMPARISON_ZH.md`
+- `FDA_OLD_DRUG_CURRENT_EVIDENCE_REUSE_AND_NEXT_ACTION_V6_ZH.md`
+- `FDA_OLD_DRUG_METHOD_COMBINATION_AND_PORTFOLIO_V5_ZH.md`
+- `FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md`
+- `FDA_OLD_DRUG_TEACHER_REPORT_OTHERS_VS_OURS_V8_ZH.md`
+- 顶层旧HTML/PDF报告与页面
+
+这些材料可用于追溯实验为什么做、某个内部模型从何而来，但不得用于回答：当前训练量是多少、当前排名分母是多少、哪个模型是默认模型、KIRHub是否为亲和力或外部确认性证据。
+
+暂不物理移动这些大文件，因为脚本、PPT和历史链接仍可能引用原路径。清理采用“默认入口隔离 + Git历史保留”的方式；待引用审计完成后再做批量迁移。

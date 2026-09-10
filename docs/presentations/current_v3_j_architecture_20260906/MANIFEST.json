@@ -1,0 +1,19 @@
+{
+  "figure": "current implemented V3 + J candidate",
+  "dimensions": [
+    1920,
+    1370
+  ],
+  "source_sha256": {
+    "biomaster/odti_support_v3.py": "5401308b86f43ca225911f91d5d5f6c2f2806dc859ac311c4a62f7609f8297d5",
+    "biomaster/odti_v2.py": "ca9276ac48e2d678c48fd687349e4f71c71d7a03513ebe6801559898c7cc92d7",
+    "biomaster/odti_v3_incremental.py": "66c6680cd1e3a9d116781212699e5ddfa2316ec008e1bcbfe74a4e21c092cb88",
+    "outputs/biomaster_v3_incremental_20260906/CANDIDATE.json": "0141c9731e24097b5d06740ff0c0972d5ce29aa536e7cd7ced663e0d46684ffa",
+    "configs/biomaster_v3_temporal_20260906.json": "5dde0d68f198ad7f05289f106a96e6a4840c31137cdd62e723628aef42bea172"
+  },
+  "files": {
+    "BIOMASTER_CURRENT_V3_J_ARCHITECTURE_20260906_ZH.svg": "8bd0dcbe409f0300ccc82da46f64f59c790bf857d456ed7a1b6007a8f332f34a",
+    "BIOMASTER_CURRENT_V3_J_ARCHITECTURE_20260906_ZH.png": "7fae354f597f8cdbda691cb5d1c08191c11beea06c442d6c6fb68657f38aaa46",
+    "BIOMASTER_CURRENT_V3_J_ARCHITECTURE_20260906_ZH.pdf": "1167104e8ea35cedd7e2db05395ec83c7244f81044cf9b5a93dfd77eccfee01b"
+  }
+}

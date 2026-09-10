@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "method": "Existing predictions only; no fitting, selection or new training",
+  "checks": [
+    {
+      "protocol": "S1_SCAFFOLD_COLD_DRUG",
+      "model": "BioMaster_V2",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.9127810446661897e-11
+    },
+    {
+      "protocol": "S1_SCAFFOLD_COLD_DRUG",
+      "model": "DTIAM_compat_retrain",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "protocol": "S2_HOMOLOGY_COLD_TARGET",
+      "model": "BioMaster_V2",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.2461862330948037e-07
+    },
+    {
+      "protocol": "S2_HOMOLOGY_COLD_TARGET",
+      "model": "DTIAM_compat_retrain",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "protocol": "S3_STRICT_DOUBLE_COLD",
+      "model": "BioMaster_V2",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "protocol": "S3_STRICT_DOUBLE_COLD",
+      "model": "DTIAM_compat_retrain",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 2.220446049250313e-16
+    },
+    {
+      "protocol": "S4_FIRST_SEEN_TEMPORAL_2023_2025",
+      "model": "BioMaster_V2",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 0.0
+    },
+    {
+      "protocol": "S4_FIRST_SEEN_TEMPORAL_2023_2025",
+      "model": "DTIAM_compat_retrain",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 0.0
+    },
+    {
+      "protocol": "S5_OLD_DRUG_ENTITY_COLD",
+      "model": "BioMaster_V2",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "protocol": "S5_OLD_DRUG_ENTITY_COLD",
+      "model": "DTIAM_compat_retrain",
+      "pairs_and_labels_equal": true,
+      "recomputed_metric_max_abs_error": 1.1102230246251565e-16
+    }
+  ]
+}

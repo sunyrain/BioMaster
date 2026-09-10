@@ -1,8 +1,12 @@
 # BioMaster 完整汇报 PPT 大纲
 
+> **口径优先级（2026-09-01）**：本文件保留内部模型代号以便追溯，但任务、数据、模型角色和指标分母以`CURRENT_PROJECT_CONTRACT_ZH.md`及`configs/biomaster_current_contract_v1.json`为准。KIRHub统一称“1 μM功能抑制回顾性审计”，不称亲和力验证或新的外部确认性测试。
+
 版本日期：2026-08-25
 建议标题：**BioMaster：给定老药的潜在靶点发现与证据分层**
-建议副标题：**面向 720 种老药 × 384 个候选靶点的数据、模型、药物中心检索与外部验证**
+建议副标题：**面向720种老药 × 450个主生产靶点的药物中心检索（当前已评分比较核心384个）**
+
+> **范围更新（2026-08-31）**：745个非GPCR人源单蛋白是完整登记目录，不是统一排名分母。主生产候选集为450个有直接小分子证据且属于五类可建模实验通道的靶点；42个特殊体系直接证据靶点和8个高新颖性探索靶点单独分支。当前完整矩阵和个案排名对应384个已评分靶点；S1–S5与KIRHub指标分别在其observed/measured子集内计算，未来主榜才是经分路校准后的rank/450。
 建议时长：30–35 分钟正文 + 10 分钟讨论
 建议页数：25 页正文 + 10 页附录
 
@@ -15,12 +19,12 @@
 | 证据线 | 模型/数据 | 回答的问题 | 主要结果 |
 |---|---|---|---|
 | A. 冻结泛化基准 | E0 / pooled-ESM2 ODTI V2，冻结 ChEMBL37 切分 | 模型在 scaffold-cold、target-cold、double-cold、temporal、drug-entity-cold 下是否有内部泛化能力 | S1–S5；其中 S4 为 7,839 个 2023–2025 pair，AUPRC 0.8325 |
-| B. 任务对齐的生产检索 | 冻结 V10 drug-centric evidence ranker | 给定一种老药，能否在 384 个靶点中把真实作用靶点排到前面 | 720 个药物查询 × 384 个靶点；KiRHub strict-unreported drug-macro AUPRC 0.398、Recall@10 0.505 |
+| B. 任务对齐的生产检索 | 冻结药物中心排序 | 给定一种老药，能否把候选靶点排到前面 | 完整输出为720×384；KiRHub measured-subset回顾性drug-macro AUPRC 0.398、Recall@10 0.505，后者不是Recall@10/384 |
 | C. 最新双向 DTI | V5 共享骨干 + V6 D→T/T→D residual heads；三种子 head-only FULL_FIT | 是否能在不破坏 pair backbone 的前提下直接优化老药→靶点排序 | Stage A 三种子开发集均提升；2024–2025 集成点估计提升但 bootstrap CI 跨 0，故定位为探索性候选 |
 
 必须明确：
 
-- 实际主任务是 **old drug → candidate targets**：固定一种老药，在 384 个候选靶点内排序。
+- 实际主任务是 **old drug → candidate targets**：固定一种老药，在450个主生产候选靶点内排序；当前模型结果覆盖其中384个冻结比较靶点。专项42和探索8单独输出，745只用于目录审计。
 - 模型虽然是 drug–target 双输入，但“排序方向”由 sampler、ranking loss、校准和评测分组决定，不会因双输入而自动双向等价。
 - `7,839` 是 S4 observed-pair temporal benchmark；主任务应优先看其中的 **drug-macro AUPRC 0.8251**。`0.8325` 是全局 micro-AUPRC，不是 384 靶点检索成功率。
 - 原 V5 的 `18/27` 与 `x/720` 是 target → drugs 反向评测；V6 已将同一批 18/27 个未来关系重构为 **11/20 个老药 query → 384 targets** 的药物中心评测。
@@ -50,10 +54,10 @@
 | 12 | 评测地图 | 所有主结果改为按药物分组的 target retrieval |
 | 13 | E0 五类泛化基准 | 汇总 S1–S5 的 drug-macro 结果 |
 | 14 | S4 Temporal 2023–2025 | 详细解释 7,839、micro 与 drug-macro 指标 |
-| 15 | V10 药物中心外部结果 | 展示 strict-unreported KiRHub 的直接任务结果 |
+| 15 | 药物中心KIRHub回顾性结果 | 展示strict-unreported功能抑制迁移审计 |
 | 16 | 从单头到双向 V6 | 解释为何旧 dual-query 不等于真正双向模型 |
 | 17 | 全面补数据后的覆盖审计 | 解释新增数据和总体指标下降 |
-| 18 | 2026 KiRHub 药物中心外部审计 | 展示按每种药物跨靶点检索的总体表现 |
+| 18 | 2026 KiRHub 药物中心回顾性审计 | 展示按每种药物跨靶点检索的总体表现 |
 | 19 | 案例一：Lazertinib 靶点谱 | 一个老药检索 ERBB4、AXL 等候选靶点 |
 | 20 | 案例二：Repotrectinib 靶点谱 | 一个老药检索 AXL、PLK4 等候选靶点 |
 | 21 | 方向纠正后的案例重分级 | 说明 Deucravacitinib、Lorlatinib、Tepotinib 的新定位 |
@@ -77,7 +81,7 @@
 ### 页面内容
 
 - 主标题：BioMaster：给定老药的潜在靶点发现与证据分层
-- 副标题：面向 720 种老药 × 384 个候选靶点的数据、模型、药物中心检索与外部验证
+- 副标题：面向720种老药 × 450个主生产靶点的药物中心检索；当前已评分比较核心384个
 - 汇报人、单位、日期
 - 页脚小字：最新双向候选 `BIOMASTER_BIDIRECTIONAL_V6_HEAD_ONLY_FULL_FIT`；冻结任务对齐基线 `OLD_DRUG_LEAKAGE_SAFE_V10`
 
@@ -97,7 +101,7 @@ Top targets → evidence/structure review → experiment
 
 ### 口头讲述
 
-“我们的目标不是给一个蛋白筛 720 种药，而是从一种已知老药出发，在 384 个候选靶点中建立它的潜在作用谱，并优先验证可能解释新机制或新适应症的靶点。”
+“我们的目标不是给一个蛋白筛720种药，而是从一种已知老药出发，在450个路由后可比较的主生产靶点中建立潜在作用谱。当前384靶点结果是已经完成统一评分和比较的核心，后续补齐其余66个；特殊体系42个和高新颖性探索8个单列。”
 
 ---
 
@@ -113,8 +117,8 @@ Top targets → evidence/structure review → experiment
 - 完整矩阵：720 × 384 = 276,480 个 pair scores；主输出应为每种药物的 384 靶点排序
 - 最新双向候选：V6 三个 FULL_FIT checkpoint；单 checkpoint 3,551,222 参数，其中两个方向头各 16,641 参数
 - E0 S4 temporal：7,839 对；micro-AUPRC 0.8325，**drug-macro AUPRC 0.8251**
-- 冻结 V10 drug-centric 外部 strict-unreported：2,823 pairs、202 positives、prevalence 0.0716
-- V10 strict-unreported：micro-AUPRC 0.1858、drug-macro AUPRC 0.3978、Recall@10 0.505
+- 冻结药物中心KIRHub strict-unreported回顾性切片：2,823个1 μM实测pair、202个≥70%功能抑制pair、prevalence 0.0716
+- strict-unreported measured-subset：micro-AUPRC 0.1858、drug-macro AUPRC 0.3978、Recall@10 0.505；Recall候选分母是每药实测映射子集，不是384
 - V6 2024–2025 药物中心时间测试（三种子集成，20 个药物、27 个未来关系）：平均正样本 rank 91.7→88.7，MRR 0.177→0.208，Recall@5 0.108→0.158，NDCG@20 0.211→0.237
 - V6 配对 drug-query bootstrap：综合增量 +0.0206，改善概率 95.2%，但 95% CI [-0.0026, 0.0495]；属于趋势性增益，不是显著性确认
 - 药物中心案例：Lazertinib→ERBB4 6/384、AXL 7/384；Repotrectinib→AXL 9/384
@@ -128,7 +132,7 @@ Top targets → evidence/structure review → experiment
 |---|---|
 | 已有专门按药物在 384 靶点中排序的冻结 V10 分支 | V6 双向 residual heads 与三种子 head-only FULL_FIT 已完成 |
 | 标准 temporal benchmark 的 drug-macro 指标较好 | target-cold / double-cold 靶点发现仍不可靠 |
-| 2026 外部筛选中按药物分组出现富集和高排名靶点 | 模型分数不能当作物理 affinity 或临床概率 |
+| 2026功能抑制面板回顾性审计中按药物分组出现富集和高排名靶点 | 模型分数不能当作物理affinity或临床概率 |
 
 ### 本页结论
 
@@ -146,17 +150,17 @@ Top targets → evidence/structure review → experiment
 
 主问题：
 
-> 给定一种已上市或已有充分药理信息的老药，从 384 个候选靶点中找出值得优先验证的潜在新作用靶点。
+> 给定一种已上市或已有充分药理信息的老药，从450个主生产候选靶点中找出值得优先验证的潜在新作用靶点；专项42和探索8采用各自的模型与不确定性口径，所有当前结果须标注是否仅在384靶点核心中计算。
 
 三个层次：
 
 1. **药物查询表示**：模型是否能够建立该老药的已知与潜在 target profile？
-2. **跨靶点关系外推**：对同一种药，能否把未见 exact pair 的真实靶点排在 384 个候选靶点前部？
+2. **跨靶点关系外推**：对同一种药，能否把未见exact pair的真实靶点排在450个主候选靶点前部？当前先在384核心中测量，补齐后重新计算rank/450。
 3. **物理与机制验证**：该药物进入候选靶点 pocket 后是否存在结构、结合和功能证据？
 
 ### 建议视觉
 
-画一个 720 行（药物查询）× 384 列（候选靶点）的稀疏矩阵：
+画一个720行（药物查询）×450列（主候选靶点）的稀疏矩阵，并用边框标出其中384列是当前已评分比较核心；旁边再画42个专项靶点、8个探索靶点和245个仅登记靶点的小型分支框：
 
 - 已知正关系：红点
 - 已知负关系：蓝点
@@ -183,7 +187,7 @@ Top targets → evidence/structure review → experiment
 先展示同一个双输入矩阵的两种查询方向：
 
 ```text
-主任务：old drug query → rank 384 targets
+主任务：old drug query → 最终rank 450 primary targets；当前冻结结果rank/384
 辅助任务：target query → rank 720 old drugs
 ```
 
@@ -513,8 +517,8 @@ family embedding 24 ────────────────────
 |---|---|---|---|---|---|
 | S1–S5 drug-grouped | E0/ODTI V2 | drug query → benchmark targets | 内部冻结 | 表示泛化证据 | drug-macro AUPRC |
 | S4 temporal | E0/ODTI V2 | 83 个有双类的 drug groups；总计 7,839 observed pairs | 2023–2025 test | 时间泛化证据 | drug-macro AUPRC、micro-AUPRC |
-| V10 KiRHub all-active | V10 leakage-safe | 72 个有双类 drug queries；8,058 measured pairs | 外部只读 | 较宽外部任务 | drug-macro AUPRC、Recall@K |
-| V10 KiRHub strict-unreported | V10 leakage-safe | 33 个有双类 drug queries；2,823 pairs | 外部只读 | **当前主外部证据** | drug-macro AUPRC、Recall@K、rank/384 |
+| KiRHub all-active | 冻结通用头 | 72个有双类drug queries；8,058 measured pairs | 已查看的回顾性数据 | 较宽功能迁移任务 | measured-subset drug-macro AUPRC、Recall@K |
+| KiRHub strict-unreported | 冻结通用头 | 33个有双类drug queries；2,823 pairs | 已查看的回顾性数据 | **当前功能迁移审计** | measured-subset AUPRC/Recall@K；个案另报rank/384 |
 | V5 reciprocal drug diagnostic | V5 FULL_FIT | 每种药 → 384 targets | 非预注册、score 为 target-wise fusion | 探索性，不作正式主结果 | reciprocal target rank |
 | V5 target→drug 18/27 | V5 evaluation/fusion | target query → 720 drugs | dev/test | 反向辅助诊断 | rank/720、Hit@K |
 | FULL_FIT relation audit | V5 FULL_FIT | 5,992 known relations | 非独立 | coverage only | AUPRC/AUROC |
@@ -601,28 +605,28 @@ family embedding 24 ────────────────────
 
 ---
 
-## 第 15 页｜V10 药物中心的外部结果
+## 第 15 页｜药物中心的KIRHub回顾性结果
 
 ### 页面目的
 
 汇报当前与“给定老药找靶点”最直接对齐的冻结结果。
 
-### 外部数据与排序口径
+### 功能抑制数据与排序口径
 
-- 外部标签：KiRHub 2026，1 µM inhibition ≥70% 定义 strong hit
+- 功能标签：KiRHub 2026，1 µM inhibition ≥70%定义strong hit；不是Ki/Kd亲和力
 - query：每一种老药
 - 生产候选轴：384 个靶点；个案的 `rank/384` 来自全候选排名
-- 外部 AUPRC/Recall@K：只在 KiRHub 实际测量且完成精确映射的 pair 上计算
+- AUPRC/Recall@K：只在KiRHub实际测量且完成精确映射的pair上计算，不是完整384靶点Recall@K
 - V10 分数在外部标签之前冻结，未使用 KiRHub 结果调整后处理组合
 
 ### 主结果
 
-| 外部切片 | pairs / positives | prevalence | micro-AUPRC | **drug-macro AUPRC** | drug-macro Recall@5 / 10 / 20 |
+| 回顾性切片 | pairs / positives | prevalence | micro-AUPRC | **drug-macro AUPRC** | measured-subset drug-macro Recall@5 / 10 / 20 |
 |---|---:|---:|---:|---:|---:|
 | all KiRHub active | 8,058 / 1,041 | 0.1292 | 0.4365 | **0.5399** | 0.341 / 0.442 / 0.591 |
 | **strict frozen-unreported** | **2,823 / 202** | **0.0716** | **0.1858** | **0.3978** | **0.391 / 0.505 / 0.677** |
 
-strict slice 中有 33 种同时具有正负外部标签的药物，drug-macro AUROC 为 0.6805。
+strict slice中有33种同时具有正负功能标签的药物，drug-macro AUROC为0.6805。
 
 ### strict-unreported 对比
 
@@ -635,7 +639,7 @@ strict slice 中有 33 种同时具有正负外部标签的药物，drug-macro A
 
 ### 本页结论
 
-V10 相对 7.16% 的严格外部正例率存在富集，且比对照模型更适合 drug-centric 方向；但这仍是回顾性外部测试，不是前瞻实验或临床有效性证明。
+冻结药物中心排序相对7.16%的严格功能阳性率存在富集，且点估计比若干对照更适合drug-centric方向；但数据已被项目反复查看，只能作为回顾性功能迁移审计，不是新的确认性外部测试、亲和力验证或临床有效性证明。
 
 ---
 
@@ -735,15 +739,15 @@ updates per epoch: D2T 48 + T2D 32
 
 ---
 
-# 第三部分：外部验证与展示案例
+# 第三部分：回顾性功能审计与展示案例
 
-## 第 18 页｜2026 KiRHub：药物中心的富集与失败景观
+## 第 18 页｜2026 KiRHub回顾性功能富集与失败景观
 
 ### 页面目的
 
 在第 15 页的总体指标后，展示“一种药对多个靶点”的真实检索形态，同时不回避药物间差异。
 
-### 外部数据
+### 功能抑制数据
 
 - 92 种临床 kinase inhibitors
 - 758 个 kinase/variant targets
@@ -755,10 +759,10 @@ updates per epoch: D2T 48 + T2D 32
 
 - 2,823 个 measured pairs，202 strong hits，prevalence 7.16%
 - 33 个可计算 drug-macro AUPRC 的双类 drug queries
-- V10 drug-macro AUPRC 0.3978，Recall@10 0.5051
-- 个案在全部 384 targets 内排名，而非在被 KiRHub 测量的小子集内排名
+- 冻结通用头drug-macro AUPRC 0.3978，measured-subset Recall@10 0.5051
+- 总体AUPRC/Recall只在实测映射子集计算；表中逐pair个案排名另取自全部384 targets。两个分母不能混用
 
-### 可用于展示“target profile”的外部强命中
+### 可用于展示“target profile”的回顾性功能强命中
 
 | 老药 | strict-unreported 强命中 | V10 target rank within drug | 1 µM inhibition |
 |---|---|---:|---:|
@@ -771,9 +775,9 @@ updates per epoch: D2T 48 + T2D 32
 
 ### 结论与限制
 
-- 这些主要是“本地 ChEMBL37 未报道、后被外部 panel 测到”的 database-gap rediscovery controls；未完成逐例文献新颖性审计前，不能称为首次发现。
+- 这些主要是“本地ChEMBL37未报道、后被KIRHub功能面板测到”的database-gap rediscovery controls；未完成逐例文献新颖性审计前，不能称为首次发现。
 - 平均富集并不表示每种药都准确；例如 Repotrectinib→PLK4 和 Tepotinib→IRAK1/4 在 V10 中都排名很后。
-- 这是 1 µM 生化筛选，不等同于细胞作用、体内疗效或临床有效。
+- 这是1 µM单浓度功能抑制筛选，不是亲和力测定，也不等同于细胞作用、体内疗效或临床有效。
 - KiRHub 标签未用于自动选择 target-centric 与 drug-centric 分数的后验组合。
 
 参考：[Nature Biotechnology 2026](https://www.nature.com/articles/s41587-026-03090-8)
@@ -784,7 +788,7 @@ updates per epoch: D2T 48 + T2D 32
 
 ### 页面目的
 
-用一种老药找到两个外部强命中靶点，直接展示项目的真实查询方向。
+用一种老药回顾性找回两个功能强抑制靶点，直接展示项目的真实查询方向。
 
 ### 核心结果卡
 
@@ -796,7 +800,7 @@ updates per epoch: D2T 48 + T2D 32
 
 ### 推荐视觉
 
-画 Lazertinib 为中心，右侧是 384-target 排名条，同时高亮 ERBB4 和 AXL。旁边标注三层证据：冻结 V10 高排名、local exact pair unreported、2026 外部生化强抑制。
+画Lazertinib为中心，右侧是384-target排名条，同时高亮ERBB4和AXL。旁边标注三层证据：冻结通用头高排名、local exact pair unreported、2026面板1 μM功能强抑制。
 
 ### 推荐表述
 
@@ -946,8 +950,8 @@ candidate ligand pose
 ### 已经证明
 
 - 标准内部 scaffold-cold 和 temporal benchmark 有较强信号。
-- 冻结 V10 已直接实现每种老药在 384 个靶点中的排序，并在 KiRHub strict-unreported 上超过多个对照。
-- 2026 外部 kinase 筛选存在总体富集，且可见同一药物的多靶点高排名命中。
+- 冻结通用头已直接实现每种老药在384个靶点中的排序，并在KiRHub strict-unreported回顾性子集上取得高于多个对照的点估计。
+- 2026 KIRHub功能筛选回顾性审计存在总体富集，且可见同一药物的多靶点高排名命中。
 - V5 的全面数据、去重、早停和 pair backbone 已完成；V6 已补上独立 D→T/T→D heads，并完成三种子 Stage A 与 head-only FULL_FIT。
 - 方向头在 2023 三种子开发集一致提升；2024–2025 集成的 MRR、Recall@5、Recall@20、NDCG@20 和 retrieval AP 点估计改善。
 
@@ -961,7 +965,7 @@ candidate ligand pose
 
 ### 建议一句话
 
-> BioMaster 当前的主线是：给定一种老药，在 384 个候选靶点中排序未见 exact relations。V10 是冻结任务基线；V6 已完成共享骨干、D→T 主头和 T→D 辅头，下一阶段不是继续解冻，而是扩大独立药物 query、做跨靶点结构重排和前瞻实验。
+> BioMaster当前的主线是：给定一种老药，最终在450个主生产候选靶点中排序未见exact relations。现有V10与后续模型结果来自384靶点冻结比较核心；扩展版需要为新增66个主筛靶点补特征、推理和跨通道校准后形成rank/450。特殊体系42个和探索8个不混入主榜。
 
 ---
 
@@ -1038,8 +1042,8 @@ candidate ligand pose
 
 ### 页面只保留三句话
 
-1. **数据与任务**：我们要解决的是“给定一种老药，对 384 个候选靶点排序”；437,248 条去重训练关系和 720×384 全矩阵是表示基础，不决定排序方向。
-2. **当前证据**：S4 temporal 的 drug-macro AUPRC 为 0.8251；任务对齐的 V10 在 KiRHub strict-unreported 上 drug-macro AUPRC 0.3978、Recall@10 0.505，并有 Lazertinib→ERBB4/AXL 等 `rank/384` 外部强命中。
+1. **数据与任务**：我们要解决的是“给定一种老药，对450个主生产候选靶点排序”；437,248条去重训练关系用于学习表示，720×384是现有冻结评分核心，720×450是下一版主候选清单；745仅是完整登记目录。
+2. **当前证据**：S4 temporal的drug-macro AUPRC为0.8251；冻结通用头在KiRHub strict-unreported measured-subset上drug-macro AUPRC 0.3978、Recall@10 0.505，并有Lazertinib→ERBB4/AXL等完整`rank/384`功能强命中案例。两类分母分别报告。
 3. **边界与下一步**：V6 双向头与 head-only FULL_FIT 已完成，时间测试点估计改善但 CI 跨 0；下一步应扩大独立 drug queries、做跨靶点结构校准和前瞻湿实验，而不是解冻 backbone 追逐小样本。
 
 ### 结束语
@@ -1145,11 +1149,11 @@ candidate ligand pose
 
 ### 可以说
 
-- 构建了 720 种老药 × 384 靶点的完整候选矩阵；实际主任务是固定药物后对 384 个靶点排序。
+- 已构建并评分720种老药×384靶点的冻结比较矩阵；新的主生产候选清单为720×450，新增66个主筛靶点完成特征与跨通道校准后再发布rank/450。另有42个特殊体系和8个高新颖性靶点单列，745仅作登记目录。
 - 最新 V5 pair backbone 使用 437,248 条去重训练行和六 checkpoint 共识，但其生产 fusion 仍是 target-centric。
 - S4 冻结时间基准为 7,839 rows；drug-macro AUPRC 0.8251，micro-AUPRC 0.8325。
-- 冻结 V10 drug-centric 在 KiRHub strict-unreported 上为 2,823 pairs、drug-macro AUPRC 0.3978、Recall@10 0.505。
-- 外部 KiRHub 审计中，Lazertinib→ERBB4/AXL 分别为 6/384 和 7/384，Repotrectinib→AXL 为 9/384。
+- 冻结药物中心头在KiRHub strict-unreported上为2,823个实测pair、drug-macro AUPRC 0.3978、measured-subset Recall@10 0.505。
+- KIRHub回顾性审计的完整空间个案中，Lazertinib→ERBB4/AXL分别为6/384和7/384，Repotrectinib→AXL为9/384。
 
 ### 不可以说
 
@@ -1253,7 +1257,7 @@ V5 在原 target-centric 开发目标上，最佳 epoch 后训练损失继续下
 | V10 KiRHub all drug-macro AUPRC / Recall@10 | 0.5399 / 0.4423 |
 | V10 KiRHub strict rows / positives / prevalence | **2,823 / 202 / 0.0716** |
 | V10 KiRHub strict micro / drug-macro AUPRC | **0.1858 / 0.3978** |
-| V10 KiRHub strict drug-macro Recall@5 / 10 / 20 | 0.391 / 0.505 / 0.677 |
+| KiRHub strict measured-subset drug-macro Recall@5 / 10 / 20 | 0.391 / 0.505 / 0.677 |
 | Lazertinib→ERBB4 / AXL | **6/384 / 7/384**；98.98% / 81.07% inhibition |
 | Repotrectinib→AXL | **9/384**；77.77% inhibition |
 | Repotrectinib→PLK4 | V10 **373/384**；V5 反向 3/720；83.49% inhibition |

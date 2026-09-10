@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1130" viewBox="0 0 1200 1130" role="img" aria-labelledby="title desc">
+<title id="title">PocketPrecision 当前候选模型架构</title>
+<desc id="desc">冻结全局分支产生 g，逐口袋原子残基交互产生局部修正 delta，二者相加后通过冻结旧评分层输出双向分数。结构辅助头仅在预训练阶段受监督。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#526378"/></marker></defs>
+<rect width="1200" height="1130" fill="#ffffff"/>
+<g font-family="Noto Sans CJK SC, sans-serif" text-anchor="middle" fill="#172b42">
+<text x="600" y="45" font-size="31" font-weight="bold" fill="#172b42">PocketPrecision：全局表示＋逐口袋交互修正</text>
+<text x="600" y="82" font-size="20" font-weight="normal" fill="#63748a">已停止训练的候选；尚未替换已交付的全局模型</text>
+<rect x="50" y="130" width="470" height="145" rx="15" fill="#eef5ff" stroke="#7d9ec6" stroke-width="2"/>
+<text x="285.0" y="175.5" font-size="25" font-weight="bold" fill="#172b42">药物整体特征＋蛋白整体特征</text>
+<text x="285.0" y="210.5" font-size="22" font-weight="normal" fill="#172b42">DrugCLIP＋Morgan＋图汇总特征</text>
+<text x="285.0" y="245.5" font-size="22" font-weight="normal" fill="#172b42">ESM2 蛋白整体表示</text>
+<rect x="50" y="335" width="470" height="105" rx="15" fill="#eef5ff" stroke="#7d9ec6" stroke-width="2"/>
+<text x="285.0" y="378.0" font-size="25" font-weight="bold" fill="#172b42">冻结全局交互网络</text>
+<text x="285.0" y="413.0" font-size="22" font-weight="normal" fill="#172b42">拼接、逐元素乘积、绝对差 → MLP</text>
+<rect x="50" y="500" width="470" height="95" rx="15" fill="#eef5ff" stroke="#7d9ec6" stroke-width="2"/>
+<text x="285.0" y="538.0" font-size="25" font-weight="bold" fill="#172b42">全局表示 g</text>
+<text x="285.0" y="573.0" font-size="22" font-weight="normal" fill="#172b42">192维；全局分支参数冻结</text>
+<polyline points="285,275 285,332" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="285,440 285,497" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="620" y="130" width="530" height="145" rx="15" fill="#ecf8f1" stroke="#77a78b" stroke-width="2"/>
+<text x="885.0" y="175.5" font-size="25" font-weight="bold" fill="#172b42">药物原子＋每个候选口袋的残基</text>
+<text x="885.0" y="210.5" font-size="22" font-weight="normal" fill="#172b42">DrugCLIP原子／口袋特征＋ESM2残基</text>
+<text x="885.0" y="245.5" font-size="22" font-weight="normal" fill="#172b42">分子内部距离、键；口袋距离与方向</text>
+<rect x="620" y="325" width="530" height="165" rx="15" fill="#ecf8f1" stroke="#77a78b" stroke-width="2"/>
+<text x="885.0" y="363.0" font-size="25" font-weight="bold" fill="#172b42">6层原子—残基交互</text>
+<text x="885.0" y="398.0" font-size="22" font-weight="normal" fill="#172b42">节点384维；配对128维；8头注意力</text>
+<text x="885.0" y="433.0" font-size="22" font-weight="normal" fill="#172b42">自注意力、配对更新、双向交叉注意力</text>
+<text x="885.0" y="468.0" font-size="22" font-weight="normal" fill="#172b42">辅助接触／距离头：仅结构阶段受监督</text>
+<rect x="620" y="540" width="530" height="105" rx="15" fill="#ecf8f1" stroke="#77a78b" stroke-width="2"/>
+<text x="885.0" y="583.0" font-size="25" font-weight="bold" fill="#172b42">口袋内汇总 → 多口袋加权</text>
+<text x="885.0" y="618.0" font-size="22" font-weight="normal" fill="#172b42">门控＋DrugCLIP分子／口袋相似度</text>
+<rect x="620" y="695" width="530" height="95" rx="15" fill="#ecf8f1" stroke="#77a78b" stroke-width="2"/>
+<text x="885.0" y="733.0" font-size="25" font-weight="bold" fill="#172b42">局部修正 delta</text>
+<text x="885.0" y="768.0" font-size="22" font-weight="normal" fill="#172b42">汇总384维 → 投影192维</text>
+<polyline points="885,275 885,322" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="885,490 885,537" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="885,645 885,692" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M285 595 V620 H70 V825 H600 M885 790 V825 H600" fill="none" stroke="#526378" stroke-width="3"/>
+<polyline points="600,825 600,857" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="335" y="860" width="530" height="90" rx="15" fill="#fff4df" stroke="#ba9b61" stroke-width="2"/>
+<text x="600.0" y="895.5" font-size="25" font-weight="bold" fill="#172b42">g＋delta → 冻结的旧评分层</text>
+<text x="600.0" y="930.5" font-size="22" font-weight="normal" fill="#172b42">缺少有效局部输入时，delta 为0</text>
+<polyline points="600,950 600,987" fill="none" stroke="#526378" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="335" y="990" width="530" height="90" rx="15" fill="#fff4df" stroke="#ba9b61" stroke-width="2"/>
+<text x="600.0" y="1025.5" font-size="25" font-weight="bold" fill="#172b42">输出两个方向的排序分数</text>
+<text x="600.0" y="1060.5" font-size="22" font-weight="normal" fill="#172b42">老药→靶点　／　靶点→老药</text>
+<text x="285" y="655" font-size="22" font-weight="normal" fill="#63748a">全局信息在最后相加处接入</text>
+<text x="285" y="691" font-size="22" font-weight="normal" fill="#63748a">未进入6层局部交互内部</text>
+</g></svg>

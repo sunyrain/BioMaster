@@ -1,0 +1,136 @@
+{
+  "status": "all_12_completed_artifacts_verified",
+  "completion_utc": "2026-09-05T09:32:36.232510+00:00",
+  "each_run_epochs": 6,
+  "each_epoch_coverage_rows": 342031,
+  "same_seed_exposure_hashes_match_all_variants": true,
+  "same_dense_queries_labels_and_targets_all_variants": true,
+  "all_saved_dense_metrics_recomputed_match": true,
+  "dense_queries": 64,
+  "dense_targets": 495,
+  "known_positive_pairs": 84,
+  "panel_targets_without_training_relations": 3,
+  "dense_known_positive_pairs_without_target_training_relations": 0,
+  "reported_variant_mean": "mean of two separately evaluated seeds; not an ensemble score",
+  "bootstrap_scope": "10000 paired whole-query resamples of per-query AP averaged across the two fixed seed models; excludes initialization, family and model-selection uncertainty",
+  "comparisons": {
+    "B_support_pair_minus_A_global_pair": {
+      "mean_delta": 0.4269090039642003,
+      "query_bootstrap_ci95": [
+        0.34493359461213463,
+        0.5096367544693519
+      ],
+      "better_queries": 59,
+      "tied_queries": 2,
+      "worse_queries": 3
+    },
+    "D_support_rank_minus_C_global_rank": {
+      "mean_delta": 0.4327797910810368,
+      "query_bootstrap_ci95": [
+        0.3443098273962448,
+        0.5225494596143928
+      ],
+      "better_queries": 57,
+      "tied_queries": 1,
+      "worse_queries": 6
+    },
+    "C_global_rank_minus_A_global_pair": {
+      "mean_delta": -0.028935097823617275,
+      "query_bootstrap_ci95": [
+        -0.07114563229773493,
+        0.012967387419690106
+      ],
+      "better_queries": 25,
+      "tied_queries": 0,
+      "worse_queries": 39
+    },
+    "D_support_rank_minus_B_support_pair": {
+      "mean_delta": -0.023064310706780708,
+      "query_bootstrap_ci95": [
+        -0.05573848227813784,
+        0.010225846805460825
+      ],
+      "better_queries": 10,
+      "tied_queries": 31,
+      "worse_queries": 23
+    },
+    "E_local_rank_minus_C_global_rank": {
+      "mean_delta": -0.1474997705564507,
+      "query_bootstrap_ci95": [
+        -0.20527934623552127,
+        -0.09269657903757947
+      ],
+      "better_queries": 15,
+      "tied_queries": 0,
+      "worse_queries": 49
+    },
+    "F_local_support_rank_minus_D_support_rank": {
+      "mean_delta": -0.2846895689579286,
+      "query_bootstrap_ci95": [
+        -0.35178729957284194,
+        -0.2194103257975613
+      ],
+      "better_queries": 9,
+      "tied_queries": 4,
+      "worse_queries": 51
+    },
+    "B_support_pair_minus_positive_max_tanimoto": {
+      "mean_delta": -0.30324994693066054,
+      "query_bootstrap_ci95": [
+        -0.3961739772517411,
+        -0.21591038717055955
+      ],
+      "better_queries": 3,
+      "tied_queries": 28,
+      "worse_queries": 33
+    },
+    "B_support_pair_minus_positive_negative_logistic": {
+      "mean_delta": -0.21665849559269404,
+      "query_bootstrap_ci95": [
+        -0.29959498355978453,
+        -0.13954046376309792
+      ],
+      "better_queries": 5,
+      "tied_queries": 28,
+      "worse_queries": 31
+    }
+  },
+  "source_sha256": {
+    "outputs/biomaster_v3_20260905/experiments/A_global_pair/seed_20260905/RUN_SUMMARY_V3.json": "f2c014fae72c853113b27050d75f01bcde160717652064771a390e981c88065b",
+    "outputs/biomaster_v3_20260905/experiments/A_global_pair/seed_20260905/TRAINING_HISTORY_V3.json": "6547edc02bef8baa995542cbbc2bd27361477b92d55a1d2c90721cb013af9759",
+    "outputs/biomaster_v3_20260905/experiments/A_global_pair/seed_20260905/DENSE_TEST_PREDICTIONS_V3.npz": "9622e596501ea315790d37d53ea95a572fac1b152dcee0ee9544b32956ef5eb4",
+    "outputs/biomaster_v3_20260905/experiments/A_global_pair/seed_20260906/RUN_SUMMARY_V3.json": "8c349b4b9f7a7cb1875dd5b4cf860d3cb0d4199ab802eaaa83c6fe3926e6546c",
+    "outputs/biomaster_v3_20260905/experiments/A_global_pair/seed_20260906/TRAINING_HISTORY_V3.json": "05c2aceac330739b49e754d7316dd19af32f6c67e860139ffb66ebb2cf9c48a3",
+    "outputs/biomaster_v3_20260905/experiments/A_global_pair/seed_20260906/DENSE_TEST_PREDICTIONS_V3.npz": "7317b580d36ded9f97ce10584980e5d8d822d955c871b172c190d5fa473752f8",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260905/RUN_SUMMARY_V3.json": "891d0ca44e61fa25d134b3ab8dba5a77d60f0d74f6622ad1aab44fdad8f672fb",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260905/TRAINING_HISTORY_V3.json": "d39f9b46315c50b7408b012cee89fcf8d7da12553a88c09321363ed4b41a9d3f",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260905/DENSE_TEST_PREDICTIONS_V3.npz": "f76c4deaa7f6cb7afecb6902f95262ce6c967b71514976c68e89ae7e807cd594",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260906/RUN_SUMMARY_V3.json": "a951420ef0d8d47153f544b6281b7364bd0a6e4b47160efc720c7b3d5f77f9c2",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260906/TRAINING_HISTORY_V3.json": "97e63d15c60f3c99ea482c579314902be604377b586edde444fea8c58c208ccc",
+    "outputs/biomaster_v3_20260905/experiments/B_support_pair/seed_20260906/DENSE_TEST_PREDICTIONS_V3.npz": "6c852eeec3355783dd468057f506d21b63e5ff1176b79b52795f9fdb33928fbf",
+    "outputs/biomaster_v3_20260905/experiments/C_global_rank/seed_20260905/RUN_SUMMARY_V3.json": "31d1bde0124522d54383591998c548a2fa196494bd25da6547122a93609d56ae",
+    "outputs/biomaster_v3_20260905/experiments/C_global_rank/seed_20260905/TRAINING_HISTORY_V3.json": "706af854e8d50ec5dec51763b3a3e83e99fd38acaac7d27be9321e5826779960",
+    "outputs/biomaster_v3_20260905/experiments/C_global_rank/seed_20260905/DENSE_TEST_PREDICTIONS_V3.npz": "3a94487a72ea372ffb499ab57b0fcedcc603094da94e10afff4be8b1c70a76bc",
+    "outputs/biomaster_v3_20260905/experiments/C_global_rank/seed_20260906/RUN_SUMMARY_V3.json": "f614a733a9b77a50102d683faff0955f60d312a2c41a657705c0d77c85f96785",
+    "outputs/biomaster_v3_20260905/experiments/C_global_rank/seed_20260906/TRAINING_HISTORY_V3.json": "3fb19d58897b0f8b5c0501a167f5d953c77f99922a22a0bcda2b11697fd37b46",
+    "outputs/biomaster_v3_20260905/experiments/C_global_rank/seed_20260906/DENSE_TEST_PREDICTIONS_V3.npz": "75c0be107db936945c575315a74ffd2edfc98bec4314444f2a896fd44f636e3d",
+    "outputs/biomaster_v3_20260905/experiments/D_support_rank/seed_20260905/RUN_SUMMARY_V3.json": "bd458ee9891dbfe46f33453afc54bf9ff042a7c39f8399c03a0d6c115d57b260",
+    "outputs/biomaster_v3_20260905/experiments/D_support_rank/seed_20260905/TRAINING_HISTORY_V3.json": "d0bf9c76e220b966de01658aeb7e69f8f1b0f8708d943282c83fef01d0263396",
+    "outputs/biomaster_v3_20260905/experiments/D_support_rank/seed_20260905/DENSE_TEST_PREDICTIONS_V3.npz": "f76c4deaa7f6cb7afecb6902f95262ce6c967b71514976c68e89ae7e807cd594",
+    "outputs/biomaster_v3_20260905/experiments/D_support_rank/seed_20260906/RUN_SUMMARY_V3.json": "13d86c432e1138da552b059ec03452e173f6fda4ba6c0182bfc7b15ce4884d2f",
+    "outputs/biomaster_v3_20260905/experiments/D_support_rank/seed_20260906/TRAINING_HISTORY_V3.json": "4aa007652eece2a5e2acfc793cb97ba55c6558571074c2784a006d8df4c58ef6",
+    "outputs/biomaster_v3_20260905/experiments/D_support_rank/seed_20260906/DENSE_TEST_PREDICTIONS_V3.npz": "1fa6ba18de857a09399567f7aee6f9d5ee5673f6d101961dc1f647e92ac70bfa",
+    "outputs/biomaster_v3_20260905/experiments/E_local_rank/seed_20260905/RUN_SUMMARY_V3.json": "1c65da5f3a4e3bd4ee218cad1e87b6f903e3f723918f021201f938b6dfc7d7a2",
+    "outputs/biomaster_v3_20260905/experiments/E_local_rank/seed_20260905/TRAINING_HISTORY_V3.json": "e1ef77c932406466935870877584780e272c8c8d49765d75ee45c43dfdb8a2ca",
+    "outputs/biomaster_v3_20260905/experiments/E_local_rank/seed_20260905/DENSE_TEST_PREDICTIONS_V3.npz": "47008889e882dd35affd8c6799ba73a0403f120d76609a4f703784030e40959a",
+    "outputs/biomaster_v3_20260905/experiments/E_local_rank/seed_20260906/RUN_SUMMARY_V3.json": "8425d49f693d20d356078006b6fe6cd874b95c687de2514fc04abd39d4fab289",
+    "outputs/biomaster_v3_20260905/experiments/E_local_rank/seed_20260906/TRAINING_HISTORY_V3.json": "60af01a799f6b764a767260c1dc09e51db86feb4849ae888f654cdb46a1c32e0",
+    "outputs/biomaster_v3_20260905/experiments/E_local_rank/seed_20260906/DENSE_TEST_PREDICTIONS_V3.npz": "341fafb29f8c9b548ac93fd318755143953f207b2a2e1222fa9a809a74f88edd",
+    "outputs/biomaster_v3_20260905/experiments/F_local_support_rank/seed_20260905/RUN_SUMMARY_V3.json": "d72ab71777159f05b4a51562888f10125f78f0938996989e85628530d5e40bd3",
+    "outputs/biomaster_v3_20260905/experiments/F_local_support_rank/seed_20260905/TRAINING_HISTORY_V3.json": "51c2f4c2e8f000e788f6d18effee5b2b10b5c5367c52779f075b8036425ee557",
+    "outputs/biomaster_v3_20260905/experiments/F_local_support_rank/seed_20260905/DENSE_TEST_PREDICTIONS_V3.npz": "b1468cbf8f58369b1b1ef8b09848c0d9bfabe846be59ee00d20e2a07ef892115",
+    "outputs/biomaster_v3_20260905/experiments/F_local_support_rank/seed_20260906/RUN_SUMMARY_V3.json": "d2d31c6d9826571d09ad747f5948ba3ed41eca3e458baa5853ea1288f6fdb421",
+    "outputs/biomaster_v3_20260905/experiments/F_local_support_rank/seed_20260906/TRAINING_HISTORY_V3.json": "1e412659b199c41426b6a00067af3b6197e6b1e3b8a6d834d70b2cbd4ab40d33",
+    "outputs/biomaster_v3_20260905/experiments/F_local_support_rank/seed_20260906/DENSE_TEST_PREDICTIONS_V3.npz": "206e2cfa40defbc1072a1629729f5a02487f8520c75c1a9eabad59947c1d0817"
+  }
+}

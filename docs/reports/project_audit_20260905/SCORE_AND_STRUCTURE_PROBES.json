@@ -1,0 +1,28 @@
+{
+  "s5_existing_scores": {
+    "queries": 75,
+    "tanimoto_drug_macro_ap": 0.7219996075213165,
+    "raw_neural_drug_macro_ap": 0.7009985131646037,
+    "independent_rank_drug_macro_ap": 0.7520878694540815,
+    "rank_minus_tanimoto_ap": 0.030088261932765138,
+    "rank_minus_tanimoto_ap_ci95": [
+      0.012316737049987014,
+      0.05168231183281615
+    ],
+    "note": "Retrospective diagnostic on existing S5 predictions; no model fitted or selected."
+  },
+  "sampler_replay_matches_all_existing_epoch_unique_counts": true,
+  "absolute_coordinate_probe": {
+    "checkpoint": "outputs/retrain_20260901/comprehensive_balanced_full_fit_v2/FULL_FIT_2026_COMPREHENSIVE_BALANCED__seed_20260816/FULL_FIT_MODEL_COMPREHENSIVE_BALANCED_V2.pt",
+    "pairs": 128,
+    "perturbation": "Translate each receptor 100 angstrom along x; all other chemistry and geometry descriptors held fixed.",
+    "absolute_logit_change_mean": 0.4177280068397522,
+    "absolute_logit_change_max": 1.4983949661254883,
+    "pairs_logit_change_above_1e6_inverse": 128,
+    "note": "Tests coordinate invariance of existing scores; does not estimate performance loss."
+  },
+  "default_morgan_chirality_example": {
+    "enantiomer_fingerprints_equal": true,
+    "note": "Configuration matches comprehensive builder; this is a representation limitation, not evidence of a particular candidate failure."
+  }
+}

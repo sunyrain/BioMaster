@@ -1,0 +1,565 @@
+{
+  "scope": "existing 20260901 artifacts; diagnostic only; not a new test or model selection",
+  "relations_file": "outputs/retrain_20260901/comprehensive_training_v1/COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz",
+  "relations_sha256": "dabda92e4d18bd76a9c10322d394eb19d5aeecc8988c6ae2733ef1543faa25b1",
+  "split_audit": {
+    "evaluation_cutoff_year_inclusive": 2022,
+    "evaluation_source_rows": 384381,
+    "evaluation_recovered_unique_train_rows": 161,
+    "evaluation_fit_rows": 384542,
+    "evaluation_bindingdb_rows": 0,
+    "source_rows_with_missing_year_excluded": 7373,
+    "source_rows_after_cutoff_excluded": 35151,
+    "temporal_dev_rows_2023": 18,
+    "temporal_dev_targets": 18,
+    "temporal_test_rows_2024_2025": 27,
+    "temporal_test_targets": 25,
+    "warm_recovered_dev_rows": 18,
+    "warm_recovered_test_rows": 37,
+    "full_fit_rows": 437248
+  },
+  "supervision": {
+    "full_fit_eligible_rows": 437248,
+    "binary_unique_rows": 427470,
+    "binary_drug_feature_entities": 292042,
+    "singleton_binary_drugs": 232865,
+    "two_class_drugs": 8029,
+    "top10_target_fraction": 0.16111306056565372,
+    "top50_target_fraction": 0.49724191171310267,
+    "source_endpoint_counts": {
+      "IC50": 293175,
+      "Ki": 60316,
+      "Kd": 24703,
+      "Inhibition": 13366,
+      "% Control": 12177,
+      "IC50,Ki": 7342,
+      "Activity": 6917,
+      "Ki,IC50": 2464,
+      "Kd,IC50": 1090,
+      "IC50,Kd": 1043,
+      "% Ctrl": 525,
+      "EC50": 504,
+      "IC50,Inhibition": 316,
+      "% Control,% residual kinase activity": 203,
+      "IC50,Activity": 180,
+      "Activity,IC50": 170,
+      "Activity,Inhibition": 153,
+      "Inhibition,IC50": 135,
+      "Delta Tm": 135,
+      "% Control,% Ctrl": 130,
+      "EC50,Emax": 109,
+      "Ki,Kd": 108,
+      "% Activity remaining": 108,
+      "% Residual activity with Skepinone-L": 100,
+      "Inhibition,Activity": 98,
+      "% Enzyme Activity (relative to DMSO controls, average n=2)": 78,
+      "Kd,% Control": 62,
+      "% Control,Inhibition": 60,
+      "Emax": 57,
+      "Inhibition,% Ctrl": 53,
+      "Kd,Ki": 45,
+      "Inhibition,Ki": 45,
+      "IC50,Ki,Kd": 40,
+      "IC50,Kd,Ki": 37,
+      "EC50,IC50": 33,
+      "Efficacy": 32,
+      "EC50,Activity": 31,
+      "Ki,Kd,IC50": 30,
+      "Tm": 29,
+      "Ki,IC50,Kd": 27,
+      "Ki,Inhibition": 27,
+      "IC50,Imax": 27,
+      "Inhibition,Kd": 26,
+      "Effect": 26,
+      "Kd,Inhibition": 25,
+      "% Control,IC50": 24,
+      "IC50,EC50": 24,
+      "Kd,IC50,Ki": 23,
+      "EC50,max activation": 22,
+      "IC50,Activity,Inhibition": 20,
+      "Kd,Activity": 19,
+      "Activity,Kd": 19,
+      "Binding intensity": 19,
+      "Log Ki": 16,
+      "K": 15,
+      "% specific binding": 15,
+      "FC": 14,
+      "Kd,Ki,IC50": 14,
+      "max activation": 14,
+      "RBA": 13,
+      "Ki,Activity": 11,
+      "% residual kinase activity": 11,
+      "Intrinsic activity": 10,
+      "Inhibition,Efficacy": 10,
+      "Activity,Ki": 9,
+      "Inhibition,FC": 9,
+      "EC50,max activation,Activity": 9,
+      "Emax,EC50": 8,
+      "Activity,EC50": 7,
+      "max activation,Activity": 7,
+      "Imax": 7,
+      "deltaTm": 7,
+      "IC50,Ki,Inhibition": 6,
+      "IC50,Ki,Activity": 5,
+      "EC50,Vmax": 5,
+      "IC50,% Control": 5,
+      "IC50,Inhibition,Activity": 5,
+      "Inhibition,IC50,Ki": 5,
+      "EC50,Activity,IC50": 5,
+      "IC50,TDI": 4,
+      "Activity,Emax": 4,
+      "Relative EC30": 4,
+      "EC50,Delta Tm": 4,
+      "ED50": 4,
+      "Inhibition,Kd,Ki": 4,
+      "%max,Activity": 4,
+      "AC50,Emax": 4,
+      "IC50,deltaTm,Imax": 4,
+      "Activity,K": 3,
+      "Ki,IC50,Inhibition": 3,
+      "Selectivity": 3,
+      "IC50,Kd,Inhibition": 3,
+      "pKi": 3,
+      "% Control,Kd": 3,
+      "IC50,TDI,Inhibition": 3,
+      "Activity,EC50,Emax": 3,
+      "pEC50": 3,
+      "Activity,IC50,Inhibition": 3,
+      "Inhibition,EC50,Activity": 3,
+      "Activity,Inhibition,IC50": 2,
+      "Ki,Activity,IC50": 2,
+      "IC50,Activity,Ki": 2,
+      "Inhibition,Activity,IC50": 2,
+      "IC50,Ki,TDI": 2,
+      "IC50,pIC50": 2,
+      "GI": 2,
+      "Ki,EC50": 2,
+      "Activity,IC50,Kd": 2,
+      "Ki,% Ctrl": 2,
+      "IC50,Inhibition,Ki": 2,
+      "Activity,IC50,Ki": 2,
+      "Ratio": 2,
+      "K,Kd": 2,
+      "Emax,EC50,IC50": 2,
+      "EC50,IC50,Induction": 2,
+      "IC50,deltaTm": 2,
+      "IC50,%max": 2,
+      "% Activity remaining,IC50": 2,
+      "Activity,Kd,IC50,Ki": 1,
+      "Activity,Kd,K": 1,
+      "% Ctrl,IC50": 1,
+      "TDI": 1,
+      "Activity,EC50,Vmax": 1,
+      "% Control,Inhibition,IC50": 1,
+      "k obs / 1": 1,
+      "Inhibition,K": 1,
+      "IC50,Ki,Kd,Inhibition,Activity": 1,
+      "Kd,Ki,Inhibition": 1,
+      "IC50,Kd,Activity": 1,
+      "EC50,Max. potentiation": 1,
+      "Selectivity ratio": 1,
+      "Inhibition,Kd,Activity,IC50,Ki": 1,
+      "% Control,IC50,Inhibition": 1,
+      "IC50,% Ctrl": 1,
+      "Kd,% Control,IC50": 1,
+      "Ki,IC50,Activity,Inhibition": 1,
+      "TDI,IC50": 1,
+      "pIC50": 1,
+      "IC50,Efficacy": 1,
+      "Efficacy,IC50": 1,
+      "Inhibition,XI50": 1,
+      "EC50,Ki,Efficacy,Activity,Inhibition,Emax,Kd": 1,
+      "EC50,Emax,Kd,Activity": 1,
+      "EC50,Efficacy": 1,
+      "EC50,Inhibition": 1,
+      "EC50,Intrinsic activity": 1,
+      "EC50,Activity,Inhibition,Emax,Kd,Efficacy": 1,
+      "EC50,Emax,Activity,Kd,Efficacy": 1,
+      "NB": 1,
+      "IC50,Efficacy,Activity,Emax,EC50": 1,
+      "EC50,Ki,Efficacy,Emax,Activity,IC50,Kd": 1,
+      "Ki,NB,IC50": 1,
+      "EC50,Emax,Activity,Kd": 1,
+      "%max": 1,
+      "EC50,Inhibition,Activity": 1,
+      "Relative IC50": 1,
+      "NB,Kd,Activity,Efficacy": 1,
+      "Efficacy,Kd": 1,
+      "EC50,max activation,Kd": 1,
+      "pEC50,Efficacy": 1,
+      "% Control,IC50,EC50,Kd": 1,
+      "Inhibition,Kd,Activity": 1,
+      "Inhibition,Ki,IC50": 1,
+      "IC50,Inhibition,Kd": 1,
+      "IC50,Inhibition,Kd,Activity,EC50": 1,
+      "Ki,Inhibition,Kd": 1,
+      "PC50": 1,
+      "Inhibition,EC50": 1,
+      "Ki,Inhibition,Kd,IC50": 1,
+      "Kd,Tm": 1,
+      "IC50,% Control,Inhibition": 1,
+      "IC50,Ki,Kd,Inhibition": 1,
+      "MEC1.5,MEC2.0": 1,
+      "IC50,GI50": 1,
+      "IC50,Ki,Activity,Kd": 1,
+      "Activity,IC50,Ki,Inhibition": 1,
+      "Activity,Ki,IC50": 1,
+      "AC50,Emax,IC50": 1,
+      "Kd,Inhibition,IC50": 1,
+      "Kd(app)": 1,
+      "IA": 1
+    },
+    "source_numeric_interval_rows": 41195,
+    "source_negative_rows_without_numeric_pchembl": 60129
+  },
+  "temporal": {
+    "source_pre2023_rows": 384415,
+    "source_pre2023_with_future_records": 1849,
+    "actual_eval_fit_with_future_records": 1876,
+    "actual_eval_fit_with_2024_or_later_records": 1035,
+    "note": "Cross-cutoff evidence confirms use of post-cutoff aggregate information; label-change count needs raw activity reaggregation."
+  },
+  "sampling_exposure_seed20260816": {
+    "coverage_sweep": false,
+    "eligible_rows": 437248,
+    "seen_rows": 263113,
+    "never_drawn_rows": 174135,
+    "epochs": [
+      {
+        "epoch": 1,
+        "unique_rows_this_epoch": 75429,
+        "unique_rows_cumulative": 75429
+      },
+      {
+        "epoch": 2,
+        "unique_rows_this_epoch": 76226,
+        "unique_rows_cumulative": 119458
+      },
+      {
+        "epoch": 3,
+        "unique_rows_this_epoch": 75792,
+        "unique_rows_cumulative": 150665
+      },
+      {
+        "epoch": 4,
+        "unique_rows_this_epoch": 75460,
+        "unique_rows_cumulative": 174704
+      },
+      {
+        "epoch": 5,
+        "unique_rows_this_epoch": 75726,
+        "unique_rows_cumulative": 194065
+      },
+      {
+        "epoch": 6,
+        "unique_rows_this_epoch": 75905,
+        "unique_rows_cumulative": 210125
+      },
+      {
+        "epoch": 7,
+        "unique_rows_this_epoch": 76142,
+        "unique_rows_cumulative": 223758
+      },
+      {
+        "epoch": 8,
+        "unique_rows_this_epoch": 76104,
+        "unique_rows_cumulative": 235474
+      },
+      {
+        "epoch": 9,
+        "unique_rows_this_epoch": 75946,
+        "unique_rows_cumulative": 245828
+      },
+      {
+        "epoch": 10,
+        "unique_rows_this_epoch": 76528,
+        "unique_rows_cumulative": 255113
+      },
+      {
+        "epoch": 11,
+        "unique_rows_this_epoch": 75796,
+        "unique_rows_cumulative": 263113
+      }
+    ]
+  },
+  "backbone_config": {
+    "drug_input_dim": 2048,
+    "drug_aux_input_dim": 0,
+    "drug_aux_gate_init_bias": null,
+    "target_input_dim": 1024,
+    "target_aux_input_dim": 1280,
+    "target_aux_gate_init_bias": null,
+    "target_extra_input_dim": 0,
+    "target_extra_gate_init_bias": -4.0,
+    "target_token_input_dim": 0,
+    "target_token_heads": 4,
+    "target_token_max_len": 1022,
+    "target_token_gate_init_bias": -4.0,
+    "structure_input_dim": 19,
+    "interaction_mode": "low_rank_film",
+    "interaction_rank": 48,
+    "film_scale": 0.1,
+    "structure_group_dims": [],
+    "enhanced_structure_interaction": false,
+    "structure_gate_init_bias": null,
+    "local_pair_atom_input_dim": 0,
+    "local_pair_pocket_input_dim": 0,
+    "local_pair_pocket_aux_dim": 0,
+    "local_pair_hidden_dim": 96,
+    "local_pair_layers": 2,
+    "local_pair_heads": 4,
+    "local_pair_gate_init_bias": -4.0,
+    "embedding_dim": 192,
+    "hidden_dim": 256,
+    "family_dim": 24,
+    "expert_count": 6,
+    "dropout": 0.12,
+    "rank_weight": 0.12,
+    "drug_rank_weight": 0.0,
+    "expert_balance_weight": 0.0,
+    "listwise_weight": 0.0,
+    "affinity_weight": 0.06,
+    "affinity_rank_weight": 0.08,
+    "affinity_drug_rank_weight": 0.0,
+    "affinity_rank_min_delta": 0.25,
+    "affinity_rank_margin": 0.1,
+    "affinity_rank_max_pairs": 4096,
+    "observation_weight": 0.0,
+    "contrastive_weight": 0.05,
+    "contrastive_temperature": 0.1,
+    "rank_max_pairs": 4096,
+    "affinity_min_log_variance": -6.0,
+    "affinity_max_log_variance": 4.0,
+    "directional_heads_enabled": false,
+    "directional_hidden_dim": 64,
+    "directional_dropout": 0.0
+  },
+  "backbone_selection": {
+    "best_epoch": 11,
+    "best_optimizer_steps": 1408,
+    "epochs_completed": 16,
+    "best_value": 0.7711551902202444,
+    "stop_reason": "DEVELOPMENT_EARLY_STOPPING",
+    "weights": {
+      "temporal_target_to_drug_mean_percentile": 0.5,
+      "temporal_target_to_drug_reciprocal_log_rank": 0.2,
+      "recovered_target_to_drug_mean_percentile": 0.15,
+      "warm_relation_auprc": 0.1,
+      "bindingdb_target_cold": 0.05
+    }
+  },
+  "unknown_contrastive_gradient_example": {
+    "similarity": [
+      [
+        0.20000000298023224,
+        0.800000011920929
+      ],
+      [
+        0.4000000059604645,
+        0.30000001192092896
+      ]
+    ],
+    "positive_mask": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "loss": 3.6578686237335205,
+    "gradient": [
+      [
+        -4.987636566162109,
+        4.987637042999268
+      ],
+      [
+        3.6552929878234863,
+        -3.6552929878234863
+      ]
+    ],
+    "interpretation": "Positive off-diagonal derivatives make gradient descent decrease unobserved interaction similarity."
+  },
+  "listwise_positive_mass_example": {
+    "positive_positive_negative_logits": [
+      10.0,
+      -10.0,
+      0.0
+    ],
+    "loss": 4.57763671875e-05,
+    "gradient": [
+      -4.57763671875e-05,
+      -9.43689570931383e-14,
+      4.5397850044537336e-05
+    ],
+    "note": "Illustrates only the listwise component; pairwise/BCE terms still supervise the weak positive."
+  },
+  "finite_interval_tail_gradient_examples": [
+    {
+      "prediction": 0.0,
+      "lower": 1.0,
+      "upper": 2.0,
+      "loss": 1.995798110961914,
+      "gradient": -1.3831688165664673
+    },
+    {
+      "prediction": 10.0,
+      "lower": 1.0,
+      "upper": 2.0,
+      "loss": 18.42068099975586,
+      "gradient": 0.0
+    },
+    {
+      "prediction": -10.0,
+      "lower": 1.0,
+      "upper": 2.0,
+      "loss": 18.42068099975586,
+      "gradient": 0.0
+    }
+  ],
+  "s5_diagnostics": {
+    "rows": 2556,
+    "all_drugs": 302,
+    "two_class_drugs": 75,
+    "two_class_query_size_quantiles": {
+      "0": 2.0,
+      "0.25": 4.0,
+      "0.5": 30.0,
+      "0.75": 36.0,
+      "1": 64.0
+    },
+    "two_class_queries_at_most_20_candidates": 29,
+    "random_order_expected_drug_macro_recall20": 0.7466339140040408,
+    "random_order_expected_drug_macro_ap": 0.3874930958241654,
+    "existing_score_drug_macro_ap": {
+      "biomaster_logit": 0.7009985131646037,
+      "independent_validation_rank_score": 0.7520878694540815,
+      "dtiam_probability": 0.7364994384986019
+    },
+    "existing_bootstrap": {
+      "query_column": "parent_standard_inchi_key",
+      "queries_with_both_classes": 75,
+      "iterations": 5000,
+      "seed": 20260827,
+      "metrics": {
+        "average_precision": {
+          "candidate": 0.7520878694540815,
+          "reference": 0.7364994384986018,
+          "observed_difference": 0.015588430955479727,
+          "difference_ci95_low": -0.025040010395977707,
+          "difference_ci95_high": 0.05864663928790979,
+          "probability_difference_gt_zero": 0.7658,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        },
+        "recall_at_5": {
+          "candidate": 0.7282559880206939,
+          "reference": 0.7383407420466245,
+          "observed_difference": -0.0100847540259305,
+          "difference_ci95_low": -0.034642478327772445,
+          "difference_ci95_high": 0.016108245349421794,
+          "probability_difference_gt_zero": 0.221,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        },
+        "recall_at_10": {
+          "candidate": 0.8199677185559537,
+          "reference": 0.8291119185825068,
+          "observed_difference": -0.00914420002655297,
+          "difference_ci95_low": -0.05097330447330447,
+          "difference_ci95_high": 0.036597751322751254,
+          "probability_difference_gt_zero": 0.326,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        },
+        "recall_at_20": {
+          "candidate": 0.8990440452793393,
+          "reference": 0.9480690921279156,
+          "observed_difference": -0.04902504684857626,
+          "difference_ci95_low": -0.0954209595959596,
+          "difference_ci95_high": -0.01033211298505417,
+          "probability_difference_gt_zero": 0.0032,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        },
+        "ndcg_at_5": {
+          "candidate": 0.7728484883409488,
+          "reference": 0.7591070014580172,
+          "observed_difference": 0.01374148688293164,
+          "difference_ci95_low": -0.025048782895054435,
+          "difference_ci95_high": 0.05350801417487519,
+          "probability_difference_gt_zero": 0.7504,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        },
+        "ndcg_at_10": {
+          "candidate": 0.7891743984951387,
+          "reference": 0.7759206404998521,
+          "observed_difference": 0.013253757995286638,
+          "difference_ci95_low": -0.023336630436043615,
+          "difference_ci95_high": 0.05184884532041686,
+          "probability_difference_gt_zero": 0.7636,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        },
+        "ndcg_at_20": {
+          "candidate": 0.8164113499120531,
+          "reference": 0.8106750490842209,
+          "observed_difference": 0.005736300827832232,
+          "difference_ci95_low": -0.028518467197414608,
+          "difference_ci95_high": 0.04132891834322434,
+          "probability_difference_gt_zero": 0.615,
+          "ci95_excludes_zero_in_favor_of_candidate": false
+        }
+      }
+    }
+  },
+  "kirhub_fusion_fold_dependencies": [
+    {
+      "outer_test": 0,
+      "fusion_validation": 1,
+      "validation_score_model_train_folds": [
+        0,
+        3,
+        4
+      ],
+      "outer_test_influences_fusion_validation_scores": true
+    },
+    {
+      "outer_test": 1,
+      "fusion_validation": 2,
+      "validation_score_model_train_folds": [
+        0,
+        1,
+        4
+      ],
+      "outer_test_influences_fusion_validation_scores": true
+    },
+    {
+      "outer_test": 2,
+      "fusion_validation": 3,
+      "validation_score_model_train_folds": [
+        0,
+        1,
+        2
+      ],
+      "outer_test_influences_fusion_validation_scores": true
+    },
+    {
+      "outer_test": 3,
+      "fusion_validation": 4,
+      "validation_score_model_train_folds": [
+        1,
+        2,
+        3
+      ],
+      "outer_test_influences_fusion_validation_scores": true
+    },
+    {
+      "outer_test": 4,
+      "fusion_validation": 0,
+      "validation_score_model_train_folds": [
+        2,
+        3,
+        4
+      ],
+      "outer_test_influences_fusion_validation_scores": true
+    }
+  ]
+}
