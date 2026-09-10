@@ -224,6 +224,15 @@ def main() -> None:
         "frozen_utc": datetime.now(timezone.utc).isoformat(),
         "target_count": 338,
         "definition": "ChEMBL 37 human SINGLE PROTEIN small-molecule direct MoA; non-GPCR; supported target class; preferred druglike experimental holo pocket",
+        "scope_role": "STRUCTURE_READY_DOCKING_CORE_NOT_GLOBAL_TARGET_DISCOVERY_UNIVERSE",
+        "complete_non_gpcr_registry": (
+            "outputs/target_discovery_scope_ch37_v3/"
+            "TARGET_REGISTRY_NON_GPCR_745_V3.csv.gz"
+        ),
+        "primary_drug_to_target_scope": (
+            "outputs/target_discovery_scope_ch37_v3/"
+            "TARGET_PRIMARY_DIRECT_SM_ASSAYABLE_450_V3.csv.gz"
+        ),
         "explicitly_removed_after_preferred_pocket_gate": ["DNMT3A", "ODC1", "TXN"],
         "authoritative_files": {
             str(target_path.relative_to(ROOT)): sha256(target_path),
@@ -235,7 +244,13 @@ def main() -> None:
             str(INSTANCES.relative_to(ROOT)): sha256(INSTANCES),
             str(CORRECTIONS.relative_to(ROOT)): sha256(CORRECTIONS),
         },
-        "usage_rule": "New pair-space construction must read the frozen 338 target CSV; legacy 341/463 target manifests are not production inputs.",
+        "usage_rule": (
+            "Docking or experimental-holo workflows must read the frozen 338 target CSV. "
+            "Drug-to-target production ranking must read the routed 450-target V3 primary "
+            "manifest. The 745-target file is a lossless registry, not a global rank "
+            "denominator. Special systems and no-direct-evidence targets must follow their "
+            "separate V3 routes; structure or pocket readiness remains optional within a route."
+        ),
     }
     (OUTDIR / "FROZEN_TARGET_UNIVERSE_338_MANIFEST.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"

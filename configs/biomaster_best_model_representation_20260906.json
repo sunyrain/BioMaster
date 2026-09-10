@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_BEFORE_REPRESENTATION_RUNS",
+  "cutoffs": [2018, 2020],
+  "seeds": [20260921, 20260922, 20260923],
+  "representations": ["bermol", "bermol_morgan"],
+  "reference": "global_ema using DrugCLIP CLS + graph mean + availability",
+  "training_recipe": "global_ema in biomaster_best_model_optimization_20260906.json, without observed query or assay additions",
+  "replacement": "replace only drug_global with BerMol768 or BerMol768+Morgan2048; retain graph mean, shared interaction trunk and both readouts",
+  "not_a_score_ensemble": true,
+  "controls": "same supervision/exposure seeds/optimizer/selection; report different input projection parameter counts alongside the larger capacity baseline",
+  "frozen_features": "reuse native-axis date-independent BerMol and Morgan banks from the temporal dataset",
+  "temporal_limit": "only downstream label cutoffs certified; public encoder overlap/chronology not certified",
+  "launch": "after the ongoing 24-run development queue finishes successfully",
+  "scope": "12 additional development runs; no test labels used"
+}

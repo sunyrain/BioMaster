@@ -1,0 +1,39 @@
+{
+  "objective": "交付可独立使用、结构清晰、经过可重复比较的最佳老药双向排序模型",
+  "status": "ACTIVE",
+  "task": "old-drug to target and target to old-drug ranking",
+  "reference_scope": "720 drugs by 384 matched targets; deployment scope must be declared and validated against the current target registry",
+  "first_round": "outputs/biomaster_unified_interaction_20260906",
+  "seeds": [20260921, 20260922, 20260923],
+  "development_rolls": [
+    {"train_through": 2018, "validation_from": 2019, "validation_through": 2020},
+    {"train_through": 2020, "validation_from": 2021, "validation_through": 2022}
+  ],
+  "selection": {
+    "primary": "mean across seeds and development rolls of 0.35*d2t_AP+0.35*t2d_AP+0.15*d2t_R20+0.15*t2d_R20 on full old-drug risk sets",
+    "required_reporting": ["seed distribution", "paired query intervals", "direction-specific AP and R20", "measured binary candidate ranking", "compute and active parameter count", "feature and assay coverage"],
+    "complexity_rule": "retain additional components only after controlled evidence of reproducible benefit; compare against a suitable capacity/extra-training control",
+    "regression": "Previously inspected 2023-2025 and KIRHub are regression diagnostics, not the architecture-selection set or new confirmation",
+    "no_universal_best_claim": "best among explicitly evaluated configurations for the declared tasks; no universal superiority claim"
+  },
+  "workstreams": [
+    "reproduce simple and capacity-matched global baselines with original frozen training code",
+    "prepare earlier rolling validation and strictly dated within-assay ranking supervision",
+    "test optimization/EMA, query supervision and warm-started shared local interaction with matched controls",
+    "test one evidence-context interface if required for robust old-drug ranking; no mandatory sum of frozen legacy scores",
+    "select and refit a single deployment model using the validated protocol",
+    "export a clean model package, one inference interface, provenance and a reproducible model card"
+  ],
+  "completion_requirements": [
+    "current-state audit proves baseline reproduction and date-before-label/no-future-supervision contracts",
+    "multiple seeds and earlier rolling validation support the final architecture and training procedure",
+    "all retained components have an ablation or explicit role justified by evidence",
+    "fixed temporal and KIRHub regressions and material tradeoffs are reported without reselecting on test results",
+    "one documented deployment checkpoint and configuration are exported; research candidates are not silently ensembled",
+    "inference works independently of research training scripts and unnecessary experiment artifacts",
+    "registry mapping, invalid inputs, missing optional structure, output directions and reload parity are verified",
+    "active documentation points to the delivered model and distinguishes retrospective evaluation from full-fit deployment"
+  ],
+  "pretraining_temporal_scope": "downstream supervision cutoffs are enforced; public encoder training chronology/overlap is not certified",
+  "production_external_actions": "no external deployment or publication is part of this local model delivery"
+}

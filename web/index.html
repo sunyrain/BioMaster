@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b172b" />
+    <meta
+      name="description"
+      content="Palinova · 老药新靶点研究可视化平台，整合双向排名、多模型证据、疾病关联与三维口袋。"
+    />
+    <title>Palinova · Discovery Atlas</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div id="root"><div style="min-height:100vh;display:grid;place-content:center;background:#f2f5f9;color:#142338;font:16px system-ui;text-align:center;padding:24px" role="status"><strong style="font-size:28px;color:#2459e8">Palinova</strong><p>正在准备研究工作区…</p><p id="boot-help" hidden>连接较慢，请检查网络。<button onclick="location.reload()">重新加载</button></p></div></div>
+    <noscript>请开启浏览器 JavaScript，以浏览研究图谱与交互数据。</noscript>
+    <script>setTimeout(function(){var help=document.getElementById('boot-help');if(help)help.hidden=false},12000);</script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

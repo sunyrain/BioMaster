@@ -1,0 +1,198 @@
+{
+  "scope": "冻结384候选，不含112参考对照；新增384证据池不计入",
+  "source_sha256": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+  "total": 384,
+  "drugs": 229,
+  "targets": 112,
+  "rank_definition": "binding_rank_384：按 independent_validation_rank_score 降序，在每药完整384靶点中排名（并列沿用原表顺序）；不是候选编号、全局排名或命中概率。",
+  "rank_bands": [
+    {
+      "label": "1–5",
+      "count": 87,
+      "percent": 22.7,
+      "EXPLORABLE": 44,
+      "FIRST_RESOLVE": 42,
+      "EVIDENCE_DEPRIORITIZE": 1,
+      "cross_area": 43
+    },
+    {
+      "label": "6–10",
+      "count": 92,
+      "percent": 24.0,
+      "EXPLORABLE": 56,
+      "FIRST_RESOLVE": 34,
+      "EVIDENCE_DEPRIORITIZE": 2,
+      "cross_area": 46
+    },
+    {
+      "label": "11–20",
+      "count": 205,
+      "percent": 53.4,
+      "EXPLORABLE": 123,
+      "FIRST_RESOLVE": 73,
+      "EVIDENCE_DEPRIORITIZE": 9,
+      "cross_area": 106
+    },
+    {
+      "label": "21–50",
+      "count": 0,
+      "percent": 0.0,
+      "EXPLORABLE": 0,
+      "FIRST_RESOLVE": 0,
+      "EVIDENCE_DEPRIORITIZE": 0,
+      "cross_area": 0
+    },
+    {
+      "label": "51–384",
+      "count": 0,
+      "percent": 0.0,
+      "EXPLORABLE": 0,
+      "FIRST_RESOLVE": 0,
+      "EVIDENCE_DEPRIORITIZE": 0,
+      "cross_area": 0
+    }
+  ],
+  "sections": [
+    {
+      "title": "排名利用与探索（本次描述口径）",
+      "rows": [
+        {
+          "label": "高排名利用：1–10",
+          "count": 179,
+          "percent": 46.6
+        },
+        {
+          "label": "相对较低排名探索：11–20",
+          "count": 205,
+          "percent": 53.4
+        },
+        {
+          "label": "前20以外探索",
+          "count": 0,
+          "percent": 0.0
+        }
+      ]
+    },
+    {
+      "title": "最新LLM实验安排",
+      "rows": [
+        {
+          "label": "仍可探索",
+          "count": 223,
+          "percent": 58.1
+        },
+        {
+          "label": "先解决具体问题",
+          "count": 149,
+          "percent": 38.8
+        },
+        {
+          "label": "有证据支持降低投入",
+          "count": 12,
+          "percent": 3.1
+        }
+      ]
+    },
+    {
+      "title": "冻结时额外证据分层（与LLM分类不同）",
+      "rows": [
+        {
+          "label": "优先单靶点侦察",
+          "count": 1,
+          "percent": 0.3
+        },
+        {
+          "label": "有额外来源或化学支持",
+          "count": 143,
+          "percent": 37.2
+        },
+        {
+          "label": "独立支持有限的探索",
+          "count": 240,
+          "percent": 62.5
+        }
+      ]
+    },
+    {
+      "title": "推荐疾病是否跨领域",
+      "rows": [
+        {
+          "label": "原用途与推荐疾病跨大类",
+          "count": 195,
+          "percent": 50.8
+        },
+        {
+          "label": "未标为跨大类",
+          "count": 189,
+          "percent": 49.2
+        }
+      ]
+    },
+    {
+      "title": "阳性近邻化学支持（不等于结合证据）",
+      "rows": [
+        {
+          "label": "可用阳性近邻T≥0.4",
+          "count": 20,
+          "percent": 5.2
+        },
+        {
+          "label": "T≥0.4但未满足可用条件",
+          "count": 2,
+          "percent": 0.5
+        },
+        {
+          "label": "0.3≤T<0.4",
+          "count": 112,
+          "percent": 29.2
+        },
+        {
+          "label": "T<0.3或缺失",
+          "count": 250,
+          "percent": 65.1
+        }
+      ]
+    },
+    {
+      "title": "实验对象类型",
+      "rows": [
+        {
+          "label": "酶类",
+          "count": 225,
+          "percent": 58.6
+        },
+        {
+          "label": "激酶",
+          "count": 99,
+          "percent": 25.8
+        },
+        {
+          "label": "核受体／表观结构域",
+          "count": 60,
+          "percent": 15.6
+        }
+      ]
+    },
+    {
+      "title": "推荐共同疾病的图谱映射",
+      "rows": [
+        {
+          "label": "精确单疾病节点",
+          "count": 322,
+          "percent": 83.9
+        },
+        {
+          "label": "合并疾病节点成员",
+          "count": 62,
+          "percent": 16.1
+        }
+      ]
+    }
+  ],
+  "all_joint_thresholds": true,
+  "lab_confirmed": 0,
+  "target_pair_range": [
+    1,
+    10
+  ]
+}

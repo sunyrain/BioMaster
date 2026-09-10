@@ -23,6 +23,7 @@ from biomaster.ofer_dti import OFERDTIConfig, OFERDTIModel, ofer_discovery_score
 from scripts.train_biomaster_odti_v2 import (
     grouped_training_batches,
     dual_query_training_batches,
+    query_balanced_training_batches,
     infer_structure_group_dims,
     load_structure_features,
     load_target_token_features,
@@ -32,6 +33,7 @@ from scripts.train_biomaster_odti_v2 import (
     load_local_graph_features,
     local_graph_batch,
 )
+from biomaster.comprehensive_balanced import QueryFirstBatchSampler, QuerySamplingConfig
 from scripts.evaluate_biomaster_odti_v2 import progress_state, reusable_run
 from scripts.train_biomaster_bindingdb_affinity_augmented_v1 import affinity_retrieval_metrics
 from scripts.build_biomaster_odti_target_token_features_v1 import window_bounds
@@ -602,6 +604,45 @@ def test_dual_query_training_batches_cover_rows_without_duplicates() -> None:
     assert all(len(batch) <= 4 for batch in batches)
 
 
+def test_query_balanced_training_batches_are_deterministic_and_keep_coverage() -> None:
+    rows = []
+    for drug in range(8):
+        for label in (0, 1):
+            rows.append(
+                {
+                    "drug_feature_index": drug,
+                    "target_feature_index": drug % 2,
+                    "binary_label": label,
+                    "binary_observed": 1,
+                    "murcko_scaffold": f"D{drug}",
+                }
+            )
+    data = pd.DataFrame(rows)
+    positions = np.arange(len(data), dtype=np.int64)
+    drug_sampler = QueryFirstBatchSampler(
+        positions,
+        data,
+        "drug_feature_index",
+        QuerySamplingConfig(batch_size=8, steps_per_epoch=2, rows_per_query=2),
+    )
+    target_sampler = QueryFirstBatchSampler(
+        positions,
+        data,
+        "target_feature_index",
+        QuerySamplingConfig(batch_size=8, steps_per_epoch=1, rows_per_query=4),
+    )
+    coverage = [np.arange(8, dtype=np.int64)]
+    first = query_balanced_training_batches(
+        drug_sampler, target_sampler, coverage, coverage_steps=1, seed=41
+    )
+    second = query_balanced_training_batches(
+        drug_sampler, target_sampler, coverage, coverage_steps=1, seed=41
+    )
+    assert len(first) == 4
+    assert all(np.array_equal(left, right) for left, right in zip(first, second, strict=True))
+    assert any(np.array_equal(batch, coverage[0]) for batch in first)
+
+
 def test_family_vocab_is_train_only_with_unknown_bucket() -> None:
     data = pd.DataFrame(
         {
@@ -624,6 +665,7 @@ def test_composite_selection_metric_prefers_retrieval_aware_score() -> None:
         "drug_macro_auprc": 0.7,
     }
     assert validation_selection_value(row, "composite") == pytest.approx(0.63)
+    assert validation_selection_value(row, "bidirectional_composite") == pytest.approx(0.65)
 
 
 def test_structure_context_builder_is_pair_aligned_and_label_free(tmp_path: Path) -> None:

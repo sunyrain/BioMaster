@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Build audited BioMaster-ODTI deployment features for 720 old drugs x 384 targets."""
+"""Build the frozen 720 x 384 comparison-core deployment features.
+
+This artifact preserves the historical DTIAM/KIRHub comparison denominator.
+It is a subset of the routed 450-target primary production scope. The separate
+745-target non-GPCR artifact is a lossless registry, not one rank denominator.
+"""
 
 from __future__ import annotations
 
@@ -189,7 +194,20 @@ def main() -> None:
     summary = {
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "status": "PASS" if all(checks.values()) else "FAIL",
-        "scope": "Only the frozen 720 old drugs x active 384 targets; the 480 hard-gate-excluded targets remain excluded",
+        "scope": (
+            "Frozen 720 old drugs x 384 scored comparison core. This is a historical "
+            "evaluation/deployment artifact and a subset of the routed 450-target V3 "
+            "primary production manifest. The 745-target artifact is registry-only."
+        ),
+        "scope_boundary": {
+            "rank_denominator": 384,
+            "future_primary_rank_denominator": 450,
+            "additional_primary_targets_not_scored_here": 66,
+            "complete_non_gpcr_registry_not_rank_denominator": 745,
+            "special_direct_sm_branch": 42,
+            "exploratory_assayable_no_direct_sm_branch": 8,
+            "structure_is_optional_within_each_route": True,
+        },
         "counts": {
             "pairs": int(len(pairs)), "old_drugs": int(len(drug_table)), "targets": int(len(target_table)),
             "strict_experimental_pocket_targets": pocket_counts.get("STRICT_EXPERIMENTAL_POCKET_MAINLINE_338", 0),

@@ -1,0 +1,146 @@
+{
+  "status": "FROZEN_CURRENT",
+  "contract_version": 1,
+  "effective_date": "2026-09-01",
+  "external_method_name": "ReTargetMap老药靶点谱检索框架",
+  "task": {
+    "primary_direction": "old_drug_to_target",
+    "query_entity": "approved_or_established_old_drug",
+    "primary_output": "rank_targets_within_each_drug",
+    "auxiliary_direction": "target_to_old_drug",
+    "auxiliary_output": "rank_drugs_within_each_target",
+    "unknown_pair_policy": "unknown_not_negative"
+  },
+  "universes": {
+    "old_drugs": 720,
+    "current_scored_core_targets": 384,
+    "current_scored_core_pairs": 276480,
+    "next_primary_targets": 450,
+    "next_primary_pairs": 324000,
+    "pending_primary_targets": 66,
+    "special_direct_small_molecule_targets": 42,
+    "exploratory_assayable_no_direct_small_molecule_targets": 8,
+    "active_routed_design_targets": 500,
+    "registry_only_targets": 245,
+    "complete_non_gpcr_registry_targets": 745,
+    "rank_policy": {
+      "current_results": "rank_within_drug_over_384_scored_targets",
+      "next_primary_release": "rank_within_drug_over_450_targets_after_all_66_are_scored_and_cross_route_calibrated",
+      "special_and_exploratory": "report_as_separate_routes",
+      "complete_registry": "not_a_rank_denominator"
+    }
+  },
+  "data": {
+    "comprehensive_training": {
+      "role": "canonical_model_training_table",
+      "protocol": "UNCAPPED_CHEMBL37_COMPREHENSIVE_TRAINING_V1",
+      "feature_resolved_relations": 437248,
+      "unique_drugs": 296108,
+      "unique_targets": 843,
+      "endpoint": "heterogeneous_direct_biochemical_activity_and_relation_evidence",
+      "pure_quantitative_affinity_dataset": false,
+      "manifest": "outputs/biomaster_comprehensive_training_v1/COMPREHENSIVE_TRAINING_MANIFEST_V1.json",
+      "full_fit_audit": "outputs/biomaster_bidirectional_v6_full_fit/seed_20260816/FULL_FIT_SUMMARY_V6.json"
+    },
+    "historical_capped_benchmark": {
+      "role": "historical_balanced_calibration_and_S1_to_S5_benchmark_only",
+      "unique_labeled_pairs_before_feature_failure": 86674,
+      "feature_resolved_rows": 86673,
+      "positive_pairs": 45983,
+      "negative_pairs": 40691,
+      "unique_compounds": 62488,
+      "unique_targets": 428,
+      "cap_per_target_per_label": 150,
+      "not_the_current_full_training_size": true
+    },
+    "kirhub": {
+      "general_model_audit_role": "retrospective_functional_transfer_audit",
+      "specialist_head_role": "internal_training_and_OOF_development_for_kinase_functional_route",
+      "endpoint": "HotSpot_single_concentration_1uM_functional_inhibition",
+      "positive_definition": "inhibition_greater_than_or_equal_to_70_percent",
+      "affinity_measurement": false,
+      "untouched_external_after_adapter_training": false
+    }
+  },
+  "model_roles": {
+    "general_primary_system": {
+      "role": "default_general_old_drug_to_target_rank_on_the_current_384_target_core",
+      "requires_dtiam_at_inference": false,
+      "score_column": "biomaster_independent_borda_score",
+      "rank_column": "biomaster_independent_borda_score_rank_within_drug_384",
+      "artifact": "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz",
+      "summary": "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_SUMMARY_V1.json"
+    },
+    "directional_full_fit_neural_head": {
+      "role": "candidate_scoring_component_and_supporting_evidence_not_an_unbiased_performance_estimator",
+      "score_column": "ensemble_drug_to_target_logit",
+      "rank_column": "ensemble_drug_to_target_logit_rank_within_drug_384",
+      "score_summary": "outputs/biomaster_bidirectional_v6_720x384/BIDIRECTIONAL_V6_FULL_FIT_720X384_SUMMARY.json",
+      "checkpoint_summaries": [
+        "outputs/biomaster_bidirectional_v6_full_fit/seed_20260816/FULL_FIT_SUMMARY_V6.json",
+        "outputs/biomaster_bidirectional_v6_full_fit/seed_20260817/FULL_FIT_SUMMARY_V6.json",
+        "outputs/biomaster_bidirectional_v6_full_fit/seed_20260820/FULL_FIT_SUMMARY_V6.json"
+      ],
+      "unbiased_post_refit_performance_available": false
+    },
+    "target_to_drug_auxiliary_head": {
+      "role": "reverse_query_supporting_evidence_only",
+      "rank_column": "v6_aux_rank_drug_within_target_720",
+      "not_primary_delivery": true
+    },
+    "comparators": {
+      "role": "evaluation_or_optional_external_evidence_not_part_of_the_independent_primary_system",
+      "models": [
+        "DTIAM",
+        "ConPLex",
+        "DrugCLIP"
+      ]
+    }
+  },
+  "evaluation": {
+    "primary_internal": {
+      "name": "S5_old_drug_entity_cold",
+      "rows": 2556,
+      "test_drugs": 302,
+      "two_class_drug_queries": 75,
+      "primary_metric": "drug_macro_auprc",
+      "independent_head_drug_macro_auprc": 0.7520878694540815,
+      "dtiam_drug_macro_auprc": 0.7364994384986018,
+      "superiority_confirmed": false
+    },
+    "kirhub_strict_retrospective": {
+      "measured_pairs": 2823,
+      "strong_inhibition_pairs": 202,
+      "drugs": 78,
+      "two_class_drug_queries": 33,
+      "recall_scope": "rank_only_among_measured_mapped_targets_within_each_drug",
+      "not_rank_over_384": true,
+      "independent_borda_drug_macro_auprc": 0.41242127422578856,
+      "dtiam_drug_macro_auprc": 0.38674816911584264,
+      "fresh_confirmatory_test": false
+    },
+    "full_space_rank": {
+      "denominator": 384,
+      "use": "candidate_prioritization_and_case_rank",
+      "do_not_confuse_with_restricted_recall_at_k": true
+    }
+  },
+  "current_entrypoints": {
+    "build_comprehensive_training": "scripts/build_biomaster_comprehensive_training_v1.py",
+    "train_frozen_evaluation_model": "scripts/train_biomaster_comprehensive_balanced_v2.py",
+    "train_directional_heads": "scripts/train_biomaster_bidirectional_v6.py",
+    "refit_directional_full_fit": "scripts/refit_biomaster_bidirectional_v6_full_fit.py",
+    "score_720x384": "scripts/score_biomaster_bidirectional_v6_720x384.py",
+    "build_general_drug_centric_rank": "scripts/build_biomaster_drug_centric_ranker_v1.py",
+    "build_target_routes": "scripts/build_target_discovery_scope_ch37_v3.py",
+    "validate_contract": "scripts/validate_current_project_contract.py"
+  },
+  "claim_rules": [
+    "Do not call KIRHub 1uM inhibition an affinity measurement.",
+    "Do not report restricted measured-subset Recall@K as rank or recall over 384 targets.",
+    "Do not use 745 as one global rank denominator.",
+    "Do not call FULL_FIT coverage an unbiased test result.",
+    "Do not call an unreported pair negative.",
+    "Do not use internal aliases such as V6 or V10 in external project slides."
+  ]
+}

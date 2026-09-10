@@ -70,12 +70,22 @@ env/
 # Generated model and analysis outputs are local by default. Compact audited
 # summaries may be force-added deliberately; already tracked snapshots remain
 # tracked regardless of this rule.
-/outputs/*
 /configs/current_pipeline_v2.yaml
 
 # The workspace contains many exploratory one-off programs. New scripts are
 # ignored until deliberately promoted. Existing tracked scripts are unaffected.
 /scripts/*.py
+
+# V3 support-conditioned and local-interaction model training entry points.
+!/scripts/build_biomaster_support_store_v3.py
+!/scripts/build_biomaster_local_features_v3.py
+!/scripts/build_biomaster_pocket_regions_v3.py
+!/scripts/prepare_biomaster_selectivity_v3.py
+!/scripts/train_biomaster_selectivity_v3.py
+!/scripts/score_biomaster_selectivity_v3.py
+!/scripts/run_biomaster_v3_experiments.py
+!/scripts/evaluate_biomaster_v3_run.py
+!/scripts/organize_biomaster_odti_v4_assets.py
 
 # Current comprehensive/bidirectional training and drug-centric evaluation
 # dependency closure promoted during the 2026-08-26 repository audit.
@@ -88,8 +98,22 @@ env/
 !/scripts/build_drug_centric_cross_target_v1.py
 !/scripts/build_v5_l2_pair_md_audit_v1.py
 !/scripts/evaluate_v10_leakage_safe_external.py
+!/scripts/evaluate_biomaster_direction_preserving_calibration_v1.py
+!/scripts/audit_biomaster_old_drug_primary_head_v1.py
+!/scripts/build_biomaster_drug_centric_ranker_v1.py
+!/scripts/build_biomaster_current_system_report_pdf_zh.py
+!/scripts/build_target_discovery_scope_ch37_v3.py
+!/scripts/build_retargetmap_experiment_candidate_pool_v1.py
+!/scripts/build_kirhub_functional_training_v1.py
+!/scripts/train_kirhub_functional_adapter_v1.py
+!/scripts/build_kirhub_expanded_pretrained_features_v1.py
+!/scripts/train_kirhub_expanded_functional_adapter_v1.py
+!/scripts/refit_and_score_kirhub_expanded_functional_adapter_v1.py
 !/scripts/refit_biomaster_bidirectional_v6_full_fit.py
 !/scripts/score_biomaster_bidirectional_v6_720x384.py
+!/scripts/build_biomaster_target_registry_745_feature_store_v1.py
+!/scripts/score_biomaster_bidirectional_720x745_v1.py
+!/scripts/evaluate_biomaster_stage_a_720x745_v1.py
 !/scripts/score_biomaster_deployment_augmented_720x384_v1.py
 !/scripts/score_biomaster_full_fit_current_new_relations_v1.py
 !/scripts/summarize_biomaster_bidirectional_v6.py
@@ -99,6 +123,10 @@ env/
 !/scripts/train_biomaster_comprehensive_full_fit_v1.py
 !/scripts/train_biomaster_deployment_augmented_v1.py
 !/scripts/train_v10_leakage_safe_ranker.py
+!/scripts/validate_current_project_contract.py
+
+# Compact audit record for the first wet-lab candidate pool. The full
+# 192,960-row pool remains local because it is a generated deployment artifact.
 
 # Generated media is excluded except for the curated presentation deliverables.
 *.png
@@ -108,10 +136,184 @@ env/
 *.ipynb_checkpoints/
 !/docs/presentations/**/*.png
 !/docs/research/**/*.png
+!/docs/assets/pocket_precision_20260907/architecture.png
 
 # OS, editor and Office lock files
+!/scripts/build_biomaster_odti_v4_features.py
+!/scripts/prepare_biomaster_odti_v4_experiment.py
+!/scripts/train_biomaster_odti_v4.py
+!/scripts/evaluate_biomaster_v3_on_v4_panel.py
+!/scripts/summarize_biomaster_odti_v4.py
+!/scripts/audit_biomaster_odti_v4_testset.py
+!/scripts/prepare_old_drug_bidirectional_20260906.py
+!/scripts/evaluate_old_drug_bidirectional_20260906.py
+!/scripts/summarize_old_drug_bidirectional_20260906.py
+!/scripts/prepare_biomaster_v3_incremental_ablation.py
+!/scripts/train_biomaster_v3_incremental_ablation.py
+!/scripts/train_biomaster_v3_old_relation_ablation.py
+!/scripts/evaluate_biomaster_v3_incremental_ablation.py
+!/scripts/summarize_biomaster_v3_incremental_ablation.py
 .DS_Store
+# KIRHub audit and date-before-label temporal retraining (compact evidence only).
+!/scripts/evaluate_v3_upgrade_kirhub_20260906.py
+!/scripts/extract_v3_temporal_raw_20260906.py
+!/scripts/prepare_v3_temporal_20260906.py
+!/scripts/train_v3_temporal_20260906.py
+!/scripts/evaluate_v3_temporal_20260906.py
+!/scripts/audit_v3_temporal_registry_age_20260906.py
+!/scripts/summarize_v3_kirhub_temporal_20260906.py
+!/scripts/render_current_v3_j_architecture_20260906.py
 Thumbs.db
 .vscode/
 .idea/
 ~$*
+# Unified interaction research branch: retain compact provenance, not feature banks.
+!/scripts/prepare_biomaster_unified_interaction.py
+!/scripts/verify_biomaster_unified_pretrained.py
+!/scripts/train_biomaster_unified_interaction.py
+!/scripts/run_biomaster_unified_round.py
+!/scripts/audit_biomaster_unified_interaction.py
+!/scripts/evaluate_biomaster_unified_interaction.py
+!/scripts/summarize_biomaster_unified_interaction.py
+# Best-model development: keep source, compact audits and curves, not cached features/checkpoints.
+!/scripts/reproduce_biomaster_unified_baselines.py
+!/scripts/prepare_biomaster_best_model_data.py
+!/scripts/train_biomaster_best_model.py
+!/scripts/run_biomaster_best_model_development.py
+!/scripts/summarize_biomaster_best_model_development.py
+!/scripts/evaluate_biomaster_best_model_early_age.py
+!/scripts/export_biomaster_catalog_model.py
+!/scripts/verify_biomaster_catalog_model.py
+!/scripts/run_biomaster_best_model_representations.py
+!/scripts/audit_biomaster_best_model_development.py
+!/scripts/select_biomaster_global_parent.py
+!/scripts/fit_biomaster_selected_model.py
+!/scripts/verify_biomaster_anchored_parent.py
+!/scripts/run_biomaster_anchored_round.py
+!/scripts/run_biomaster_molecular_controls.py
+!/scripts/export_biomaster_catalog_model_v2.py
+!/scripts/verify_biomaster_catalog_model_v2.py
+!/scripts/select_biomaster_final_architecture.py
+!/scripts/run_biomaster_final_refits.py
+!/scripts/evaluate_biomaster_selected_development_age.py
+!/scripts/summarize_biomaster_matched_epoch.py
+!/scripts/evaluate_biomaster_selected_regressions.py
+!/scripts/prepare_biomaster_selected_fullfit.py
+!/scripts/run_biomaster_selected_delivery.py
+!/scripts/verify_biomaster_selected_release.py
+!/scripts/document_biomaster_selected_model.py
+!/scripts/package_biomaster_selected_model.py
+!/scripts/audit_biomaster_selected_completion.py
+!/scripts/verify_biomaster_exported_cpu_scores.py
+!/scripts/render_selected_model_architecture_20260906.py
+!/scripts/audit_local_interaction_failure_20260906.py
+!/scripts/audit_local_geometry_fp32_20260906.py
+# Independent-pocket precision architecture: source and audits, not binary caches.
+!/scripts/prepare_biomaster_pocket_precision.py
+!/scripts/prepare_biomaster_structural_pretraining_index.py
+!/scripts/train_biomaster_pocket_precision.py
+!/scripts/verify_biomaster_pocket_precision.py
+!/scripts/audit_biomaster_pocket_precision_assets.py
+!/scripts/fetch_biomaster_structural_complexes.py
+!/scripts/prepare_biomaster_structural_training.py
+!/scripts/encode_biomaster_structural_online.py
+!/scripts/pretrain_biomaster_structural_interaction.py
+!/scripts/verify_biomaster_structural_supervision.py
+!/scripts/run_biomaster_structural_followup.py
+!/scripts/diagnose_biomaster_structural_contact_learning.py
+!/scripts/follow_biomaster_structural_contact_results.py
+!/scripts/assist_biomaster_structural_download_tail.py
+!/scripts/report_biomaster_structural_live_progress.py
+!/scripts/audit_biomaster_pocket_parent_precision.py
+!/scripts/audit_biomaster_pocket_ranking_fp32.py
+!/scripts/summarize_biomaster_pocket_loss.py
+!/scripts/audit_biomaster_pocket_data_training_20260907.py
+!/scripts/audit_biomaster_spr_candidates_20260908.py
+!/scripts/prepare_biomaster_context_pocket_20260908.py
+!/scripts/train_biomaster_context_pocket_20260908.py
+!/scripts/prepare_biomaster_context_full_20260908.py
+!/scripts/train_biomaster_context_full_20260908.py
+!/scripts/run_biomaster_context_full_20260908.py
+!/scripts/predict_biomaster_lyve1_slc8a1_hgf_20260908.py
+!/scripts/predict_biomaster_target_comparators_20260908.py
+!/scripts/report_biomaster_target_comparators_20260908.py
+!/scripts/analyze_biomaster_query_disagreement_20260908.py
+!/scripts/run_explorer.py
+
+!/scripts/audit_explorer_affinity_inventory.py
+
+# Audited output snapshots only; per-file allowlist is maintained in outputs/.gitignore.
+/outputs/**
+!/outputs/**/
+!/outputs/.gitignore
+!/outputs/README.md
+# Current SPR, disease, affinity and cleanup entrypoints and their source dependencies.
+!/scripts/analyze_spr512_txgnn_ot_effect_20260909.py
+!/scripts/assemble_disease_evidence_720x888_20260909.py
+!/scripts/audit_affinity_evidence_refresh_20260910.py
+!/scripts/audit_best_candidate_raw_activities_20260909.py
+!/scripts/audit_comprehensive_raw_activities_20260909.py
+!/scripts/audit_cross_indication_20260909.py
+!/scripts/audit_disk_reclamation_20260910.py
+!/scripts/audit_eckg_project_increment_20260909.py
+!/scripts/audit_outputs_retirement_20260910.py
+!/scripts/audit_proteintalks_overlap_20260910.py
+!/scripts/audit_spr112_fda_control_options_20260910.py
+!/scripts/audit_spr512_investment_readiness_20260908.py
+!/scripts/build_106k_to_1000_physics_funnel.py
+!/scripts/build_affinity_evidence_refresh_20260910.py
+!/scripts/build_biomaster_deployment_augmentation_v1.py
+!/scripts/build_biomaster_odti_davis_feature_store_v1.py
+!/scripts/build_final1000_strengthened_v5.py
+!/scripts/build_joint384_comprehensive_20260909.py
+!/scripts/build_retargetmap_spr512_ours_frozen_v2.py
+!/scripts/build_spr64_target_review_20260909.py
+!/scripts/check_spr512_integrated_system_20260909.py
+!/scripts/collect_affinity_refresh_20260910.py
+!/scripts/design_joint384_agent_review_20260909.py
+!/scripts/design_spr64_512_20260909.py
+!/scripts/document_cross_indication_20260909.py
+!/scripts/document_disease_evidence_restore_20260909.py
+!/scripts/document_joint384_comprehensive_20260909.py
+!/scripts/document_spr512_integration_20260909.py
+!/scripts/download_eckg_audit_snapshot_20260909.py
+!/scripts/enrich_disease_evidence_review_20260909.py
+!/scripts/evaluate_affinity_refresh_predictor_20260910.py
+!/scripts/evaluate_biomaster_odti_bindingdb_source_heldout_v1.py
+!/scripts/evaluate_gnina_calibration_338_v1.py
+!/scripts/evaluate_s3_query_balanced_blend_dev_v1.py
+!/scripts/evaluate_txgnn_biopathnet_comparison_20260909.py
+!/scripts/execute_outputs_retirement_20260910.py
+!/scripts/export_spr384_final_experiment_table_20260910.py
+!/scripts/export_spr384_priority_list_20260910.py
+!/scripts/fetch_joint384_official_labels_20260909.py
+!/scripts/fetch_ot888_disease_evidence_20260909.py
+!/scripts/fetch_spr120_graph_mapping_synonyms_20260909.py
+!/scripts/finalize_best_candidates_20260909.py
+!/scripts/finalize_disease_evidence_review_20260909.py
+!/scripts/finalize_spr384_fda_controls_20260910.py
+!/scripts/integrate_spr512_disease_20260909.py
+!/scripts/manage_explorer_users.py
+!/scripts/package_explorer_offline.py
+!/scripts/prepare_boltz2_calibration_338_v1.py
+!/scripts/prepare_spr_expanded_review_20260910.py
+!/scripts/prepare_txgnn_biopathnet_comparison_20260909.py
+!/scripts/report_affinity_evidence_refresh_20260910.py
+!/scripts/report_affinity_predictor_audit_20260910.py
+!/scripts/report_joint384_agent_review_20260909.py
+!/scripts/report_joint_720x384_20260909.py
+!/scripts/report_spr512_txgnn_ot_effect_20260909.py
+!/scripts/restore_disease_evidence_720x888_20260909.py
+!/scripts/review_spr384_bindingdb_quality_20260910.py
+!/scripts/run_drugclip_dtwg_subset_affinity.py
+!/scripts/run_spr512_supplementary_txgnn_20260909.py
+!/scripts/run_txgnn_all_diseases_720_20260909.py
+!/scripts/run_txgnn_broad_19_inference.py
+!/scripts/screen_joint_720x384_20260909.py
+!/scripts/summarize_spr384_composition_20260910.py
+!/scripts/summarize_spr384_live_reviews.py
+!/scripts/summarize_spr_expanded_review_20260910.py
+!/scripts/train_v8_mutation_aware_multitask.py
+!/scripts/validate_spr_expanded_review_20260910.py
+!/scripts/verify_spr64_design_20260909.py
+!/scripts/verify_txgnn_biopathnet_comparison_20260909.py

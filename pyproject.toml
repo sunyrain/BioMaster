@@ -25,6 +25,15 @@ odti = [
     "scikit-learn>=1.3",
     "torch>=2.1",
 ]
+kinase = [
+    "dill>=0.3",
+    "numpy>=1.24",
+    "openpyxl>=3.1",
+    "rdkit>=2023.9",
+    "scikit-learn>=1.3",
+    "scipy>=1.10",
+    "torch>=2.1",
+]
 structure = [
     "biopython>=1.85",
     "pyyaml>=6.0",
@@ -37,6 +46,7 @@ reports = [
 ]
 production = [
     "biopython>=1.85",
+    "dill>=0.3",
     "joblib>=1.3",
     "numpy>=1.24",
     "openpyxl>=3.1",
@@ -45,6 +55,7 @@ production = [
     "rdkit>=2023.9",
     "reportlab>=4.0",
     "scikit-learn>=1.3",
+    "scipy>=1.10",
     "torch>=2.1",
     "weasyprint>=68.0",
 ]

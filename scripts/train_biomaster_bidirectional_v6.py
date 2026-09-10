@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Stage-A training for the BioMaster bidirectional retrieval heads.
 
-The audited comprehensive V5 evaluation checkpoint is the immutable pair
+The audited comprehensive V5 evaluation checkpoint initializes the pair
 backbone.  Two zero-start residual heads are trained with query-first batches:
 drug -> target is the production direction and target -> drug is auxiliary.
-Only explicit binary observations enter either directional objective.
+Only explicit binary observations enter either directional objective.  The
+default keeps the backbone immutable; an explicit interaction scope can adapt
+only pair-interaction layers under a pair-score retention objective.
 
 Epoch selection uses the mapped 2023 portion of the frozen S4 first-seen set.
 The 2024--2025 portion is scored exactly once after selection.  This script is
-therefore a head-only screen, not a FULL_FIT production refit.
+This remains a development screen, not a FULL_FIT production refit.
 """
 
 from __future__ import annotations
@@ -16,6 +18,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import random
 import sys
 from datetime import datetime, timezone
@@ -25,6 +28,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import torch
+import torch.nn.functional as F
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 
@@ -72,6 +76,137 @@ DEFAULT_REFERENCE = ROOT / (
     "EVALUATION_BEST_MODEL_COMPREHENSIVE_BALANCED_V2.pt"
 )
 DEFAULT_OUT = ROOT / "outputs/biomaster_bidirectional_v6_stage_a"
+
+
+INTERACTION_TRAINABLE_PREFIXES = (
+    "bilinear.",
+    "drug_conditioned_by_target.",
+    "target_conditioned_by_drug.",
+    "pair_trunk.",
+    "shared_head.",
+    "expert_heads.",
+    "gate.",
+)
+
+
+def configure_trainable_scope(
+    model: RoutedInteractionRankerV2,
+    scope: str,
+) -> tuple[list[torch.nn.Parameter], list[torch.nn.Parameter]]:
+    """Freeze the pretrained towers and expose a controlled adaptation scope.
+
+    The directional heads always remain trainable.  ``interaction`` additionally
+    opens only the low-rank drug--target interaction, pair trunk and routed
+    activity heads.  Drug/protein encoders and the structure branch remain
+    frozen so a short query-alignment screen cannot rewrite the pretrained
+    entity representations or exploit structure missingness.
+    """
+
+    if scope not in {"heads", "interaction"}:
+        raise ValueError("trainable scope must be heads or interaction")
+    for parameter in model.parameters():
+        parameter.requires_grad_(False)
+    for head in (model.drug_to_target_head, model.target_to_drug_head):
+        for parameter in head.parameters():
+            parameter.requires_grad_(True)
+    if scope == "interaction":
+        for name, parameter in model.named_parameters():
+            if name.startswith(INTERACTION_TRAINABLE_PREFIXES):
+                parameter.requires_grad_(True)
+    head_parameters = [
+        parameter
+        for name, parameter in model.named_parameters()
+        if parameter.requires_grad
+        and name.startswith(("drug_to_target_head.", "target_to_drug_head."))
+    ]
+    backbone_parameters = [
+        parameter
+        for name, parameter in model.named_parameters()
+        if parameter.requires_grad
+        and not name.startswith(("drug_to_target_head.", "target_to_drug_head."))
+    ]
+    if not head_parameters:
+        raise RuntimeError("directional heads are unexpectedly frozen")
+    if scope == "heads" and backbone_parameters:
+        raise RuntimeError("head-only scope exposed backbone parameters")
+    if scope == "interaction" and not backbone_parameters:
+        raise RuntimeError("interaction scope exposed no backbone parameters")
+    return head_parameters, backbone_parameters
+
+
+def trainable_state_dict(model: RoutedInteractionRankerV2) -> dict[str, torch.Tensor]:
+    """Clone exactly the parameters eligible for the current screen."""
+
+    trainable = {
+        name
+        for name, parameter in model.named_parameters()
+        if parameter.requires_grad
+    }
+    return {
+        name: value.detach().cpu().clone()
+        for name, value in model.state_dict().items()
+        if name in trainable
+    }
+
+
+def cosine_decay_factor(
+    epoch: int,
+    max_epochs: int,
+    min_factor: float = 0.05,
+) -> float:
+    """Decay every optimizer group by the same factor of its own base LR."""
+
+    if max_epochs <= 0:
+        raise ValueError("max_epochs must be positive")
+    if not 0.0 <= min_factor <= 1.0:
+        raise ValueError("min_factor must be between zero and one")
+    progress = min(max(int(epoch), 0), max_epochs) / max_epochs
+    return min_factor + (1.0 - min_factor) * 0.5 * (
+        1.0 + math.cos(math.pi * progress)
+    )
+
+
+def pair_retention_loss(
+    output: dict[str, torch.Tensor],
+    teacher_output: dict[str, torch.Tensor] | None,
+    labels: torch.Tensor,
+    binary_observed: torch.Tensor,
+    bce_weight: float,
+    distill_weight: float,
+) -> dict[str, torch.Tensor]:
+    """Keep the universal pair score useful while adapting retrieval geometry."""
+
+    if min(bce_weight, distill_weight) < 0:
+        raise ValueError("pair-retention weights must be non-negative")
+    logits = output["final_logit"].reshape(-1)
+    observed = binary_observed.reshape(-1).bool()
+    zero = logits.sum() * 0.0
+    if observed.any():
+        bce = F.binary_cross_entropy_with_logits(
+            logits[observed], labels.reshape(-1)[observed].float()
+        )
+    else:
+        bce = zero
+    if teacher_output is not None and observed.any():
+        teacher = teacher_output["final_logit"].reshape(-1).detach()
+        distill = F.smooth_l1_loss(logits[observed], teacher[observed])
+    else:
+        distill = zero
+    return {
+        "total": bce_weight * bce + distill_weight * distill,
+        "pair_bce": bce,
+        "pair_distill": distill,
+    }
+
+
+def pair_selection_value(metrics: dict[str, Any]) -> float:
+    """Composite pair score used only to prevent retrieval-only overfitting."""
+
+    return (
+        0.40 * float(metrics["micro_auprc"])
+        + 0.30 * float(metrics["target_macro_auprc"] or 0.0)
+        + 0.30 * float(metrics["drug_macro_auprc"] or 0.0)
+    )
 
 
 def json_safe(value: Any) -> Any:
@@ -564,21 +699,91 @@ def main() -> None:
     parser.add_argument("--patience", type=int, default=3)
     parser.add_argument("--min-delta", type=float, default=1e-4)
     parser.add_argument("--batch-size", type=int, default=1024)
-    parser.add_argument("--rows-per-query", type=int, default=16)
+    parser.add_argument(
+        "--rows-per-query",
+        type=int,
+        default=None,
+        help=(
+            "Legacy override that applies one chunk size to both directions. "
+            "Prefer the direction-specific arguments below."
+        ),
+    )
+    parser.add_argument(
+        "--d2t-rows-per-query",
+        type=int,
+        default=2,
+        help=(
+            "Observed rows emitted per drug query. The default emits one positive "
+            "and one measured negative so a batch maximizes independent drugs."
+        ),
+    )
+    parser.add_argument(
+        "--t2d-rows-per-query",
+        type=int,
+        default=16,
+        help="Observed rows emitted per target query.",
+    )
     parser.add_argument("--d2t-steps", type=int, default=48)
     parser.add_argument("--t2d-steps", type=int, default=32)
     parser.add_argument("--learning-rate", type=float, default=1e-3)
+    parser.add_argument(
+        "--backbone-learning-rate",
+        type=float,
+        default=2e-5,
+        help="Learning rate for the controlled interaction scope.",
+    )
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--gradient-clip", type=float, default=5.0)
     parser.add_argument("--bce-weight", type=float, default=0.25)
     parser.add_argument("--rank-weight", type=float, default=1.0)
     parser.add_argument("--listwise-weight", type=float, default=0.25)
     parser.add_argument("--residual-weight", type=float, default=1e-3)
+    parser.add_argument(
+        "--trainable-scope",
+        choices=["heads", "interaction"],
+        default="heads",
+        help="Keep the historical head-only screen or adapt the interaction trunk.",
+    )
+    parser.add_argument("--pair-bce-weight", type=float, default=0.0)
+    parser.add_argument("--pair-distill-weight", type=float, default=0.0)
+    parser.add_argument(
+        "--pair-selection-weight",
+        type=float,
+        default=0.0,
+        help="Validation weight for retaining the universal pair score.",
+    )
+    parser.add_argument(
+        "--pair-noninferiority-margin",
+        type=float,
+        default=0.005,
+        help="Maximum allowed development AUPRC loss for each pair metric.",
+    )
     parser.add_argument("--inference-batch-size", type=int, default=4096)
+    parser.add_argument(
+        "--skip-test",
+        action="store_true",
+        help="development-only screen: select on 2023 and do not score or write 2024-2025",
+    )
     parser.add_argument("--cpu", action="store_true")
     args = parser.parse_args()
+    if args.rows_per_query is not None:
+        args.d2t_rows_per_query = args.rows_per_query
+        args.t2d_rows_per_query = args.rows_per_query
     if args.min_epochs < 1 or args.max_epochs < args.min_epochs or args.patience < 1:
         raise ValueError("invalid early-stopping contract")
+    if min(
+        args.learning_rate,
+        args.backbone_learning_rate,
+        args.pair_bce_weight,
+        args.pair_distill_weight,
+        args.pair_selection_weight,
+        args.pair_noninferiority_margin,
+    ) < 0:
+        raise ValueError("learning rates, retention weights and margin must be non-negative")
+    if args.trainable_scope == "interaction" and not (
+        args.pair_bce_weight > 0 or args.pair_distill_weight > 0
+    ):
+        raise ValueError("interaction adaptation requires BCE or distillation retention")
     required = [
         Path(args.reference_checkpoint),
         RELATIONS,
@@ -730,12 +935,26 @@ def main() -> None:
         for key in incompatible.missing_keys
     ):
         raise RuntimeError(f"reference checkpoint mismatch: {incompatible}")
-    for parameter in model.parameters():
-        parameter.requires_grad_(False)
-    for head in (model.drug_to_target_head, model.target_to_drug_head):
-        for parameter in head.parameters():
-            parameter.requires_grad_(True)
+    head_parameters, backbone_parameters = configure_trainable_scope(
+        model, args.trainable_scope
+    )
     model.to(device)
+    teacher_model: RoutedInteractionRankerV2 | None = None
+    if args.trainable_scope == "interaction":
+        teacher_model = RoutedInteractionRankerV2(
+            len(checkpoint["families"]), config, use_conplex=False
+        )
+        teacher_incompatible = teacher_model.load_state_dict(
+            checkpoint["model_state_dict"], strict=False
+        )
+        if teacher_incompatible.unexpected_keys or any(
+            not key.startswith(("drug_to_target_head.", "target_to_drug_head."))
+            for key in teacher_incompatible.missing_keys
+        ):
+            raise RuntimeError(f"teacher checkpoint mismatch: {teacher_incompatible}")
+        for parameter in teacher_model.parameters():
+            parameter.requires_grad_(False)
+        teacher_model.to(device).eval()
 
     drug_cache = torch.from_numpy(np.asarray(drug_features, dtype=np.float32)).to(device)
     target_cache = torch.from_numpy(
@@ -818,13 +1037,13 @@ def main() -> None:
     d2t_sampling = QuerySamplingConfig(
         batch_size=args.batch_size,
         steps_per_epoch=args.d2t_steps,
-        rows_per_query=args.rows_per_query,
+        rows_per_query=args.d2t_rows_per_query,
         query_frequency_power=0.0,
     )
     t2d_sampling = QuerySamplingConfig(
         batch_size=args.batch_size,
         steps_per_epoch=args.t2d_steps,
-        rows_per_query=args.rows_per_query,
+        rows_per_query=args.t2d_rows_per_query,
         query_frequency_power=0.25,
     )
     d2t_sampler = QueryFirstBatchSampler(
@@ -833,25 +1052,35 @@ def main() -> None:
     t2d_sampler = QueryFirstBatchSampler(
         eval_fit, data, "target_feature_index", t2d_sampling
     )
+    optimizer_groups: list[dict[str, Any]] = [
+        {"params": head_parameters, "lr": args.learning_rate}
+    ]
+    if backbone_parameters:
+        optimizer_groups.append(
+            {"params": backbone_parameters, "lr": args.backbone_learning_rate}
+        )
     optimizer = torch.optim.AdamW(
-        [parameter for parameter in model.parameters() if parameter.requires_grad],
-        lr=args.learning_rate,
+        optimizer_groups,
         weight_decay=args.weight_decay,
     )
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-        optimizer, T_max=args.max_epochs, eta_min=args.learning_rate / 20
+    scheduler = torch.optim.lr_scheduler.LambdaLR(
+        optimizer,
+        lr_lambda=lambda epoch: cosine_decay_factor(epoch, args.max_epochs),
     )
-    best_value = baseline_value
+    baseline_pair_value = pair_selection_value(baseline_metrics["pair"])
+    baseline_joint_value = (
+        baseline_value + args.pair_selection_weight * baseline_pair_value
+    )
+    best_value = baseline_joint_value
+    best_dense_value = baseline_value
     best_epoch = 0
-    best_state = {
-        name: value.detach().cpu().clone()
-        for name, value in model.state_dict().items()
-        if name.startswith(("drug_to_target_head.", "target_to_drug_head."))
-    }
+    best_state = trainable_state_dict(model)
     history: list[dict[str, Any]] = [
         {
             "epoch": 0,
-            "selection_value": baseline_value,
+            "dense_selection_value": baseline_value,
+            "pair_selection_value": baseline_pair_value,
+            "selection_value": baseline_joint_value,
             **{
                 f"dev_dense_{head}_{name}": value
                 for head, metrics in baseline_dense_metrics.items()
@@ -870,6 +1099,17 @@ def main() -> None:
         model.eval()
         model.drug_to_target_head.train()
         model.target_to_drug_head.train()
+        if args.trainable_scope == "interaction":
+            for module in (
+                model.bilinear,
+                model.drug_conditioned_by_target,
+                model.target_conditioned_by_drug,
+                model.pair_trunk,
+                model.shared_head,
+                model.expert_heads,
+                model.gate,
+            ):
+                module.train()
         d2t_batches = d2t_sampler.batches(args.seed + 1000 * epoch)
         t2d_batches = t2d_sampler.batches(args.seed + 1000 * epoch + 1)
         schedule = [
@@ -895,6 +1135,10 @@ def main() -> None:
             )
             optimizer.zero_grad(set_to_none=True)
             output = _model_forward(model, values)
+            teacher_output = None
+            if teacher_model is not None:
+                with torch.no_grad():
+                    teacher_output = _model_forward(teacher_model, values)
             group = values["drug_group"] if direction == "drug_to_target" else values["target_group"]
             losses = directional_retrieval_loss(
                 output,
@@ -907,6 +1151,22 @@ def main() -> None:
                 listwise_weight=args.listwise_weight,
                 residual_weight=args.residual_weight,
                 max_pairs=config.rank_max_pairs,
+            )
+            retention = pair_retention_loss(
+                output,
+                teacher_output,
+                values["labels"],
+                values["binary_observed"],
+                args.pair_bce_weight,
+                args.pair_distill_weight,
+            )
+            losses["total"] = losses["total"] + retention["total"]
+            losses.update(
+                {
+                    "pair_retention_total": retention["total"],
+                    "pair_bce": retention["pair_bce"],
+                    "pair_distill": retention["pair_distill"],
+                }
             )
             losses["total"].backward()
             torch.nn.utils.clip_grad_norm_(
@@ -922,10 +1182,19 @@ def main() -> None:
         dense_dev_metrics, _, _ = _evaluate_dense(
             model, dense_dev_frame, **dense_dev_prediction_kwargs
         )
-        selection = _selection_value(dense_dev_metrics)
+        dense_selection = _selection_value(dense_dev_metrics)
+        pair_selection = pair_selection_value(dev_metrics["pair"])
+        selection = dense_selection + args.pair_selection_weight * pair_selection
         row = {
             "epoch": epoch,
-            "learning_rate": float(scheduler.get_last_lr()[0]),
+            "head_learning_rate": float(optimizer.param_groups[0]["lr"]),
+            "backbone_learning_rate": (
+                float(optimizer.param_groups[1]["lr"])
+                if len(optimizer.param_groups) > 1
+                else 0.0
+            ),
+            "dense_selection_value": dense_selection,
+            "pair_selection_value": pair_selection,
             "selection_value": selection,
             **{
                 f"loss_{name}": value
@@ -947,12 +1216,9 @@ def main() -> None:
         print(json.dumps(row, default=json_safe), flush=True)
         if selection > best_value + args.min_delta:
             best_value = selection
+            best_dense_value = dense_selection
             best_epoch = epoch
-            best_state = {
-                name: value.detach().cpu().clone()
-                for name, value in model.state_dict().items()
-                if name.startswith(("drug_to_target_head.", "target_to_drug_head."))
-            }
+            best_state = trainable_state_dict(model)
             no_improvement = 0
         else:
             no_improvement += 1
@@ -970,28 +1236,49 @@ def main() -> None:
     best_dense_dev_metrics, best_dense_dev_prediction, best_dense_dev_known = (
         _evaluate_dense(model, dense_dev_frame, **dense_dev_prediction_kwargs)
     )
-    test_metrics, test_prediction = _evaluate(
-        model, test_frame, test_positions, **prediction_kwargs
-    )
-    dense_test_prediction_kwargs = {
-        **dense_dev_prediction_kwargs,
-        "structure": dense_test_structure,
-        "structure_mask": dense_test_mask,
-        "arrays": dense_test_arrays,
-    }
-    dense_test_metrics, dense_test_prediction, dense_test_known = _evaluate_dense(
-        model, dense_test_frame, **dense_test_prediction_kwargs
-    )
+    test_metrics = None
+    test_prediction = None
+    dense_test_metrics = None
+    dense_test_prediction = None
+    dense_test_known = None
+    if not args.skip_test:
+        test_metrics, test_prediction = _evaluate(
+            model, test_frame, test_positions, **prediction_kwargs
+        )
+        dense_test_prediction_kwargs = {
+            **dense_dev_prediction_kwargs,
+            "structure": dense_test_structure,
+            "structure_mask": dense_test_mask,
+            "arrays": dense_test_arrays,
+        }
+        dense_test_metrics, dense_test_prediction, dense_test_known = _evaluate_dense(
+            model, dense_test_frame, **dense_test_prediction_kwargs
+        )
     pair_unchanged = np.array_equal(
         baseline_prediction["final_logit"], best_dev_prediction["final_logit"]
     )
+    pair_metric_deltas = {
+        name: float(best_dev_metrics["pair"][name])
+        - float(baseline_metrics["pair"][name])
+        for name in (
+            "micro_auprc",
+            "target_macro_auprc",
+            "drug_macro_auprc",
+        )
+    }
     target_aux_delta = (
         float(best_dev_metrics["target_to_drug"]["target_macro_auprc"])
         - float(baseline_metrics["pair"]["target_macro_auprc"])
     )
-    primary_delta = best_value - baseline_value
+    primary_delta = best_dense_value - baseline_value
+    pair_noninferior = all(
+        delta >= -args.pair_noninferiority_margin
+        for delta in pair_metric_deltas.values()
+    )
     gates = {
-        "pair_backbone_exactly_unchanged": pair_unchanged,
+        "pair_backbone_contract_pass": (
+            pair_unchanged if args.trainable_scope == "heads" else pair_noninferior
+        ),
         "d2t_dense_development_selection_improved": primary_delta > args.min_delta,
         "t2d_target_macro_auprc_not_degraded_gt_0_01": target_aux_delta >= -0.01,
         "selected_trained_epoch": best_epoch > 0,
@@ -1001,10 +1288,10 @@ def main() -> None:
     run_dir = Path(args.out_dir).resolve() / f"seed_{args.seed}"
     run_dir.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(history).to_csv(run_dir / "STAGE_A_TRAINING_HISTORY_V6.csv", index=False)
-    for name, frame, prediction in (
-        ("DEVELOPMENT_2023", dev_frame, best_dev_prediction),
-        ("TEST_2024_2025", test_frame, test_prediction),
-    ):
+    prediction_outputs = [("DEVELOPMENT_2023", dev_frame, best_dev_prediction)]
+    if test_prediction is not None:
+        prediction_outputs.append(("TEST_2024_2025", test_frame, test_prediction))
+    for name, frame, prediction in prediction_outputs:
         output = frame.copy()
         for key in (
             "final_logit",
@@ -1015,20 +1302,20 @@ def main() -> None:
         ):
             output[key] = prediction[key]
         output.to_csv(run_dir / f"{name}_PREDICTIONS_V6.csv.gz", index=False, compression="gzip")
-    for name, frame, prediction, known in (
-        (
-            "DENSE_D2T_DEVELOPMENT_2023",
-            dense_dev_frame,
-            best_dense_dev_prediction,
-            best_dense_dev_known,
-        ),
-        (
+    dense_outputs = [(
+        "DENSE_D2T_DEVELOPMENT_2023",
+        dense_dev_frame,
+        best_dense_dev_prediction,
+        best_dense_dev_known,
+    )]
+    if dense_test_prediction is not None and dense_test_known is not None:
+        dense_outputs.append((
             "DENSE_D2T_TEST_2024_2025",
             dense_test_frame,
             dense_test_prediction,
             dense_test_known,
-        ),
-    ):
+        ))
+    for name, frame, prediction, known in dense_outputs:
         output = frame.copy()
         for key in (
             "final_logit",
@@ -1060,37 +1347,51 @@ def main() -> None:
                 "fit_cutoff_year_inclusive": 2022,
                 "selection_year": 2023,
                 "untouched_test_years": [2024, 2025],
+                "untouched_test_evaluated": not args.skip_test,
                 "selection_task": "OLD_DRUG_TO_384_TARGETS_AFTER_REMOVING_PRE_2023_KNOWN_TARGETS",
-                "backbone_frozen": True,
+                "trainable_scope": args.trainable_scope,
+                "backbone_frozen": args.trainable_scope == "heads",
                 "selected_epoch": best_epoch,
                 "stage_a_pass": stage_a_pass,
+                "pair_retention": {
+                    "bce_weight": args.pair_bce_weight,
+                    "distill_weight": args.pair_distill_weight,
+                    "selection_weight": args.pair_selection_weight,
+                    "noninferiority_margin": args.pair_noninferiority_margin,
+                },
             },
         },
         run_dir / "STAGE_A_BEST_BIDIRECTIONAL_V6.pt",
     )
-    regime_metrics: dict[str, Any] = {}
-    for regime, subset in test_frame.groupby("cold_regime", sort=True):
-        index = subset.index.to_numpy(dtype=np.int64)
-        if subset["binary_label"].nunique() == 2:
-            regime_metrics[str(regime)] = {
-                "pair": retrieval_metrics(subset, test_prediction["final_logit"][index]),
-                "drug_to_target": retrieval_metrics(
-                    subset, test_prediction["drug_to_target_logit"][index]
-                ),
-                "target_to_drug": retrieval_metrics(
-                    subset, test_prediction["target_to_drug_logit"][index]
-                ),
-            }
-        else:
-            regime_metrics[str(regime)] = {
-                "rows": int(len(subset)),
-                "positives": int(subset["binary_label"].sum()),
-                "metrics_available": False,
-            }
+    regime_metrics: dict[str, Any] | None = None
+    if test_prediction is not None:
+        regime_metrics = {}
+        for regime, subset in test_frame.groupby("cold_regime", sort=True):
+            index = subset.index.to_numpy(dtype=np.int64)
+            if subset["binary_label"].nunique() == 2:
+                regime_metrics[str(regime)] = {
+                    "pair": retrieval_metrics(subset, test_prediction["final_logit"][index]),
+                    "drug_to_target": retrieval_metrics(
+                        subset, test_prediction["drug_to_target_logit"][index]
+                    ),
+                    "target_to_drug": retrieval_metrics(
+                        subset, test_prediction["target_to_drug_logit"][index]
+                    ),
+                }
+            else:
+                regime_metrics[str(regime)] = {
+                    "rows": int(len(subset)),
+                    "positives": int(subset["binary_label"].sum()),
+                    "metrics_available": False,
+                }
     summary = {
         "status": "PASS" if stage_a_pass else "SCREEN_FAIL",
         "created_utc": datetime.now(timezone.utc).isoformat(),
-        "protocol": "BIOMASTER_BIDIRECTIONAL_V6_STAGE_A_FROZEN_BACKBONE",
+        "protocol": (
+            "BIOMASTER_BIDIRECTIONAL_V6_STAGE_A_FROZEN_BACKBONE"
+            if args.trainable_scope == "heads"
+            else "BIOMASTER_BIDIRECTIONAL_V6_STAGE_A_INTERACTION_ADAPTATION"
+        ),
         "seed": args.seed,
         "device": str(device),
         "reference_checkpoint": str(Path(args.reference_checkpoint).resolve()),
@@ -1129,10 +1430,26 @@ def main() -> None:
             "drug_to_target": {
                 **d2t_sampling.to_dict(),
                 "eligible_two_class_queries": d2t_sampler.query_count,
+                "query_draws_per_batch": (
+                    d2t_sampling.batch_size // d2t_sampling.rows_per_query
+                ),
+                "query_draws_per_epoch": (
+                    d2t_sampling.steps_per_epoch
+                    * d2t_sampling.batch_size
+                    // d2t_sampling.rows_per_query
+                ),
             },
             "target_to_drug": {
                 **t2d_sampling.to_dict(),
                 "eligible_two_class_queries": t2d_sampler.query_count,
+                "query_draws_per_batch": (
+                    t2d_sampling.batch_size // t2d_sampling.rows_per_query
+                ),
+                "query_draws_per_epoch": (
+                    t2d_sampling.steps_per_epoch
+                    * t2d_sampling.batch_size
+                    // t2d_sampling.rows_per_query
+                ),
             },
         },
         "loss": {
@@ -1140,18 +1457,38 @@ def main() -> None:
             "rank_weight": args.rank_weight,
             "listwise_weight": args.listwise_weight,
             "residual_weight": args.residual_weight,
+            "pair_bce_weight": args.pair_bce_weight,
+            "pair_distill_weight": args.pair_distill_weight,
         },
         "selection": {
             "task": "old drug -> 384 targets, pre-2023 known targets removed",
-            "formula": "0.35*macro_ndcg_at_20 + 0.25*macro_recall_at_20 + 0.20*macro_mean_top_percentile + 0.20*macro_mean_reciprocal_log_rank",
+            "dense_formula": "0.35*macro_ndcg_at_20 + 0.25*macro_recall_at_20 + 0.20*macro_mean_top_percentile + 0.20*macro_mean_reciprocal_log_rank",
+            "pair_formula": "0.40*micro_auprc + 0.30*target_macro_auprc + 0.30*drug_macro_auprc",
+            "pair_selection_weight": args.pair_selection_weight,
             "baseline_value": baseline_value,
-            "best_value": best_value,
+            "best_dense_value": best_dense_value,
+            "best_joint_value": best_value,
             "delta": primary_delta,
             "best_epoch": best_epoch,
             "epochs_completed": len(history) - 1,
             "stop_reason": stop_reason,
         },
         "gates": gates,
+        "adaptation": {
+            "trainable_scope": args.trainable_scope,
+            "head_trainable_parameters": int(
+                sum(parameter.numel() for parameter in head_parameters)
+            ),
+            "backbone_trainable_parameters": int(
+                sum(parameter.numel() for parameter in backbone_parameters)
+            ),
+            "head_learning_rate": args.learning_rate,
+            "backbone_learning_rate": (
+                args.backbone_learning_rate if backbone_parameters else 0.0
+            ),
+            "pair_backbone_exactly_unchanged": pair_unchanged,
+            "pair_metric_deltas": pair_metric_deltas,
+        },
         "baseline_dense_d2t_development_metrics": baseline_dense_metrics,
         "best_dense_d2t_development_metrics": best_dense_dev_metrics,
         "untouched_dense_d2t_test_metrics": dense_test_metrics,
@@ -1166,12 +1503,19 @@ def main() -> None:
             "columns": structure_columns,
         },
         "claim_boundary": (
-            "Only explicit binary observations through 2022 train the two residual heads. "
-            "The V5 pair backbone is frozen. Dense old-drug-to-target ranking of 2023 "
-            "future positives selects the head checkpoint after pre-cutoff known targets "
-            "are removed; 2024-2025 is evaluated once after selection. Unlabeled candidate "
-            "targets are ranking background, not asserted biochemical negatives. This "
-            "artifact is not a FULL_FIT model."
+            "Only explicit binary observations through 2022 train the directional objective. "
+            f"The trainable scope is {args.trainable_scope}; interaction adaptation retains "
+            "the pretrained entity towers and is constrained by pair BCE/distillation and "
+            "development non-inferiority. Dense old-drug-to-target ranking of 2023 future "
+            "positives selects the checkpoint after pre-cutoff known targets are removed; "
+            + (
+                "2024-2025 is deliberately not evaluated in this development-only screen. "
+                if args.skip_test else
+                "2024-2025 is evaluated once after selection. "
+            )
+            + "Unlabeled candidate targets are "
+            "ranking background, not asserted biochemical negatives. This artifact is not "
+            "a FULL_FIT model."
         ),
     }
     (run_dir / "STAGE_A_SUMMARY_V6.json").write_text(

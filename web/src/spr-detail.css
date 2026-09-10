@@ -1,0 +1,203 @@
+/* Scoped detail typography: keep the established navy / white / blue palette.
+   Higher specificity isolates nested disclosures from record-header styles. */
+.experiment-panel .experiment-record > .experiment-content {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: normal;
+}
+.experiment-panel .experiment-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.experiment-panel .experiment-content .spr-detail-section h3 {
+  margin: 0 0 14px;
+  padding: 0 0 10px;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.experiment-panel .experiment-content .spr-attempt-chain {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  background: transparent;
+  border-radius: 0;
+}
+.experiment-panel .experiment-content .spr-attempt-chain > div { min-width: 0; }
+.experiment-panel .experiment-content .spr-attempt-chain small,
+.experiment-panel .experiment-content .experiment-field > span {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+.experiment-panel .experiment-content .spr-primary-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+.experiment-panel .experiment-content .spr-primary-summary > div { padding: 0 20px; }
+.experiment-panel .experiment-content .spr-primary-summary > div:first-child { padding-left: 0; }
+.experiment-panel .experiment-content .spr-primary-summary > div:last-child { padding-right: 0; }
+.experiment-panel .experiment-content .spr-primary-summary > div + div { border-left: 1px solid var(--line); }
+.experiment-panel .experiment-content .spr-primary-summary p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.experiment-panel .experiment-content .spr-action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.experiment-panel .experiment-content .spr-action-grid p + p { margin-top: 6px; }
+.experiment-panel .experiment-content .spr-action-grid strong { font-size: 15px; font-weight: 650; }
+.experiment-panel .experiment-content .spr-action-grid .spr-reason-tags { font-size: 12px; color: var(--secondary); }
+.experiment-panel .experiment-content .spr-review-verdict {
+  border-left: 3px solid var(--blue);
+  padding: 0 0 0 14px;
+  margin-bottom: 16px;
+}
+.experiment-panel .experiment-content .spr-review-verdict > h3 {
+  padding: 0;
+  margin: 0 0 5px;
+  border: 0;
+}
+.experiment-panel .experiment-content .spr-review-panel { margin-bottom: 16px; }
+.experiment-panel .experiment-content .spr-record-note {
+  margin: 0 0 12px;
+  gap: 7px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.experiment-panel .experiment-content .spr-record-note > svg { flex-shrink: 0; margin-top: 2px; }
+.experiment-panel .experiment-content .experiment-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0 0 20px;
+}
+.experiment-panel .experiment-content .text-button { font-size: 13px; line-height: 1.6; }
+.experiment-panel .experiment-content .spr-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+.experiment-panel .experiment-content .spr-detail-grid > .spr-detail-section { grid-column: auto; }
+.experiment-panel .experiment-content .experiment-field { padding: 0; margin: 0 0 14px; min-width: 0; }
+.experiment-panel .experiment-content .experiment-field:last-child { margin-bottom: 0; }
+.experiment-panel .experiment-content .experiment-field .field-value {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.experiment-panel .experiment-content .field-value table {
+  width: 100%;
+  font-size: 13px;
+}
+.experiment-panel .experiment-content .field-value td,
+.experiment-panel .experiment-content .field-value th {
+  padding: 8px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.experiment-panel .experiment-content .field-value td + td { padding-left: 12px; }
+.experiment-panel .experiment-content details {
+  margin: 12px 0 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.experiment-panel .experiment-content details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  padding: 10px 14px;
+  min-height: 42px;
+  list-style: none;
+  cursor: pointer;
+  color: var(--secondary);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.experiment-panel .experiment-content details > summary::-webkit-details-marker { display: none; }
+.experiment-panel .experiment-content details > summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -3px;
+  border-radius: 8px;
+}
+.experiment-panel .experiment-content details > summary > svg { flex-shrink: 0; transform: rotate(0); }
+.experiment-panel .experiment-content details[open] > summary > svg { transform: rotate(180deg); }
+.experiment-panel .experiment-content details[open] > summary { margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+.experiment-panel .experiment-content details > :not(summary) { margin-left: 14px; margin-right: 14px; }
+.experiment-panel .experiment-content details > :last-child:not(summary) { margin-bottom: 14px; }
+.experiment-panel .experiment-content .spr-source { margin-top: 20px; }
+.experiment-panel .experiment-content .spr-source .experiment-field { padding: 10px 0; margin: 0; }
+.experiment-panel .experiment-content .spr-control-evidence { margin-bottom: 20px; }
+.experiment-panel .experiment-content .spr-control-evidence > p,
+.experiment-panel .experiment-content .spr-control-evidence > .spr-attempt-chain { margin-bottom: 14px; }
+@media (max-width: 1100px) {
+  .experiment-panel .experiment-content .spr-primary-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 0; }
+  .experiment-panel .experiment-content .spr-primary-summary > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .experiment-panel .experiment-content .spr-action-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .experiment-panel .experiment-content .spr-action-grid > div:first-child { grid-column: 1 / -1; }
+  .experiment-panel .experiment-content .spr-detail-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+}
+@media (max-width: 640px) {
+  .experiment-panel .experiment-record > .experiment-content { padding: 18px 16px; }
+  .experiment-panel .experiment-content .spr-primary-summary { grid-template-columns: 1fr; gap: 14px; }
+  .experiment-panel .experiment-content .spr-primary-summary > div { padding: 0; border: 0 !important; }
+  .experiment-panel .experiment-content .spr-primary-summary p { font-size: 14px; }
+  .experiment-panel .experiment-content .spr-action-grid,
+  .experiment-panel .experiment-content .spr-detail-grid { grid-template-columns: 1fr; gap: 18px; }
+  .experiment-panel .experiment-content .spr-source .experiment-field { display: block; }
+}
+.experiment-panel .experiment-content .object-properties > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(52px, auto);
+  gap: 12px;
+  align-items: start;
+  padding: 8px 0;
+}
+.experiment-panel .experiment-content .object-properties dt {
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.experiment-panel .experiment-content .object-properties dd {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.experiment-panel .experiment-content .spr-source .object-properties > div,
+.experiment-panel .experiment-content .spr-review-details .object-properties > div {
+  grid-template-columns: minmax(100px, 30%) minmax(0, 1fr);
+}
+@media (max-width: 640px) {
+  .experiment-panel .experiment-content .spr-source .object-properties > div,
+  .experiment-panel .experiment-content .spr-review-details .object-properties > div { grid-template-columns: 1fr; gap: 4px; }
+}

@@ -1,0 +1,7 @@
+# Frozen artifacts have published byte-level checksums. Do not normalize their
+# line endings on checkout; CSV record whitespace is part of the archived data.
+outputs/** -text -whitespace
+
+# Markdown hard line breaks and generated SVG path formatting are intentional.
+*.md whitespace=-blank-at-eol
+*.svg -whitespace

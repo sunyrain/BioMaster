@@ -1,0 +1,67 @@
+schema_version: 1
+stage: R1_AND_EXPLORATORY_SIGNED_EVIDENCE
+design: configs/biomaster_odti_v4.yaml
+runner: scripts/train_biomaster_odti_v4.py
+protocol: outputs/biomaster_odti_v4_20260905/protocol/PROTOCOL_V4.json
+features: outputs/biomaster_odti_v4_20260905/features/FEATURE_MANIFEST_V4.json
+configuration_role: descriptive_record_of_frozen_runner_protocol
+
+scope:
+  split: existing_V3_drug_entity_holdout
+  purpose: historical_development_regression
+  labels: legacy_explicit_binary_mixed_endpoint
+  rows: {train: 342031, validation: 43331, test: 42032}
+  public_encoders: frozen
+  measured_drug_mean_target_count_train: 1.46336
+  candidate_targets: 495
+  full_panel_queries: {validation: 512, test: 1024}
+  unknown_candidates_are_training_negatives: false
+
+models:
+  morgan: Morgan2048_plus_complete_ESM2_mean1280_global_pair_head
+  bermol: BerMol768_plus_complete_ESM2_mean1280_global_pair_head
+  signed: fitted_BerMol_global_plus_separate_bounded_positive_and_negative_reference_evidence
+  positive_nearest: maximum_train_positive_Morgan_Tanimoto
+  positive_negative_logistic: train_only_logistic_on_same_positive_negative_support_statistics
+global:
+  hidden: 256
+  bilinear_dim: 64
+  interaction: concatenation_product_absolute_difference_MLP
+  dropout: 0.1
+signed:
+  cap_per_branch: 2.0
+  supports_per_class: 16
+  query_entity_excluded: true
+  evidence_dropout_per_branch: 0.2
+  initial_final_weights: zero
+  contribution_ramp_epochs: 2
+  base_frozen_epochs: 2
+  base_joint_lr: 0.00002
+  reference_delta: shared_deterministic_binary_pair_potential_difference
+  quantitative_reference_loss: false
+training:
+  seeds: [20260905, 20260906, 20260907]
+  batch_size: 2048
+  query_batch: 64
+  query_max_items: 32
+  every_relation_each_epoch: true
+  query_epoch: every_two_class_drug_once
+  loss: measured_BCE_plus_observed_drug_equal_pairwise_softplus
+  new_module_lr: 0.0002
+  optimizer: AdamW
+  weight_decay: 0.01
+  gradient_clip: 1.0
+  precision: bfloat16_autocast
+  max_epochs: 30
+  min_epochs: 8
+  patience: 5
+  checkpoint_selection: validation_full_panel_known_positive_macro_AP
+  signed_zero_contribution_baseline_is_eligible_checkpoint: true
+  test_used_for_selection: false
+not_implemented_in_this_stage:
+  - DrugCLIP_UniMol_geometry
+  - residue_token_cross_interaction
+  - stereochemistry_adapter
+  - endpoint_and_censor_aware_heads
+  - dense_functional_profile_training
+  - pretrained_backbone_finetuning

@@ -1,0 +1,47 @@
+{
+  "status": "DEVELOPMENT_IMPLEMENTATION_NOT_SELECTED",
+  "model": {
+    "width": 384,
+    "pair_width": 128,
+    "heads": 8,
+    "blocks": 6,
+    "outer_width": 16,
+    "dropout": 0.1,
+    "distance_bins": 64,
+    "distance_max": 32.0,
+    "parent_width": 192,
+    "checkpoint_blocks": true
+  },
+  "cutoffs": [2018, 2020],
+  "seeds": [20260921, 20260922, 20260923],
+  "training": {
+    "parent": "frozen including shared readout, eval mode throughout",
+    "microbatch_size": 1,
+    "effective_batch_size": 32,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "max_epochs": 12,
+    "patience": 3,
+    "warmup_steps": 500,
+    "gradient_clip": 1.0,
+    "retrieval_every_updates": 100,
+    "retrieval_weight": 0.5,
+    "retrieval_candidates": "all 384 targets / all 720 old drugs; known positives receive uniform target mass",
+    "validation": "each epoch, same old-drug risk sets; development only",
+    "selection": "0.35*d2t_AP + 0.35*t2d_AP + 0.15*d2t_R20 + 0.15*t2d_R20",
+    "mixed_precision": "BF16 with FP32 losses, gradient checkpointing",
+    "resume": "strict source/data/config identity + optimizer + scheduler + random states"
+  },
+  "structural_pretraining": {
+    "required_before_promotion": true,
+    "source": "PLINDER experimental complexes with official split and release-date filtering, plus project-overlap audit",
+    "targets": ["atom-to-residue minimum-heavy-atom distance distribution", "contact probability", "pocket assignment"],
+    "not_contact_truth": ["P2Rank predictions", "AlphaFold CA neighborhoods", "independently generated ligand coordinates"],
+    "current_status": "contact heads implemented; full structural pretraining not yet performed"
+  },
+  "promotion": {
+    "requires": ["completed structural pretraining and data audit", "two development windows and three seeds", "matched pretrained global control", "local and geometry interventions", "paired query confidence intervals"],
+    "test_labels": "2023-2025 and KIRHub are previously opened regressions, never architecture selection",
+    "public_encoder_chronology": "not certified to predate downstream cutoffs"
+  }
+}

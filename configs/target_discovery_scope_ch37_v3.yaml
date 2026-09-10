@@ -1,0 +1,43 @@
+version: 3
+name: chembl37_non_gpcr_routed_target_scope
+
+inputs:
+  authoritative_target_universe: outputs/target_universe_ch37_v2/TARGET_UNIVERSE_OFFICIAL_888_V2.csv
+  current_scored_target_index: outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/PROJECT_TARGET_FEATURE_INDEX_384_V1.csv.gz
+  supervised_training_pairs: outputs/old_drug_target_sota_v1/feature_store_v1/CHEMBL37_86674_INDEXED_PAIRS_V1.csv.gz
+  old_drug_index: outputs/old_drug_target_sota_v1/deployment_720x384_feature_store_v1/OLD_DRUG_FEATURE_INDEX_720_V1.csv.gz
+  protbert_exact_sequence_cache: outputs/current_production_package_v2/conplex_target_calibration_v5_official/conplex_cache/ProtBert_features.h5
+
+outputs:
+  directory: outputs/target_discovery_scope_ch37_v3
+
+contracts:
+  authoritative_targets: 888
+  non_gpcr_registry_targets: 745
+  legacy_chembl_small_molecule_moa_set: 450
+  opentargets_direct_small_molecule_extension: 42
+  no_direct_small_molecule_evidence: 253
+  primary_direct_sm_assayable_targets: 450
+  primary_biochemical_targets: 367
+  primary_functional_targets: 83
+  special_direct_sm_targets: 42
+  exploratory_assayable_no_direct_sm_targets: 8
+  active_routed_design_targets: 500
+  registry_only_special_no_direct_sm_targets: 245
+  current_scored_targets: 384
+  old_drugs: 720
+  primary_pairs: 324000
+  special_pairs: 30240
+  exploratory_pairs: 5760
+  registry_pairs: 536400
+
+policy:
+  complete_registry: non_gpcr_human_single_protein_with_sequence
+  primary_production_scope: direct_small_molecule_evidence_in_five_assayable_lanes
+  active_design_space: primary_450_plus_special_42_plus_exploratory_8
+  special_system_role: separate_model_assay_and_rank_branch
+  no_direct_special_system_role: registry_only_until_specialized_method_exists
+  structure_and_pocket_role: optional_routed_evidence_not_target_exclusion
+  missing_label_role: unknown_not_negative
+  gpcr_role: separate_assay_and_calibration_lane
+  historical_384_role: frozen_comparison_and_subset_of_primary_450

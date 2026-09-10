@@ -1,0 +1,35 @@
+{
+  "architecture": "FullContextPocketRanker",
+  "cutoff": 2020,
+  "seed": 20260921,
+  "cycles": 6,
+  "model": {"width": 384, "pair_width": 128, "heads": 8, "blocks": 6, "outer_width": 16, "dropout": 0.1, "distance_bins": 64, "distance_max": 32.0, "parent_width": 192, "checkpoint_blocks": true},
+  "training": {
+    "global_lr": 0.00001, "structural_lr": 0.000001, "new_lr": 0.0001,
+    "warmup_updates": 100, "minimum_lr_fraction": 0.1, "weight_decay": 0.01,
+    "candidate_microbatch": 4, "old_observed_batch": 16, "general_observed_batch": 128,
+    "assay_rows_per_class": 4, "structural_complexes_per_update": 4,
+    "query_weight": 1.0, "old_bce_weight": 0.25, "general_bce_weight": 0.05,
+    "assay_weight": 0.1, "native_structure_weight": 0.1, "predicted_structure_weight": 0.1,
+    "gradient_clip": 1.0, "sentinel_every": 25, "sentinel_complexes": 64,
+    "checkpoint_every": 10, "all_task_parameters_train_from_update_one": true
+  },
+  "validation": {
+    "ranking_precision": "FP32 weights, inputs and operations; TF32 disabled; candidate batch 1",
+    "queries": "ALL development-positive queries in both directions, full 384 or 720 candidate universe",
+    "structural_precision": "BF16 inference with FP32 losses/metrics; fixed protocol for both models",
+    "every_cycles": 1, "maximum_native_ap_drop": 0.03, "maximum_native_mae_increase": 0.25,
+    "maximum_recall_drop": 0.02, "bootstrap_iterations": 10000,
+    "selection": "both AP >= matched parent and four Recall@5/10 guards; maximize mean AP",
+    "promotion": "separate decision requiring paired intervals and replication; never automatic",
+    "future_test_labels_used": false
+  },
+  "scope": {
+    "cached_pretrained_encoders": ["DrugCLIP fold 0", "ESM2 t33 650M"],
+    "trainable": ["global task encoders", "six atom-residue interaction blocks", "context projections", "multi-pocket gate", "joint ranking head", "contact and distance heads"],
+    "structural_sources": ["experimental_native", "experimental_p2rank"],
+    "ranking_pocket_source": "alphafold_p2rank",
+    "actual_apo_or_AF_contact_supervision": false,
+    "public_pretraining_chronology_certified": false
+  }
+}

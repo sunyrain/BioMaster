@@ -179,6 +179,16 @@ def main() -> None:
         "package_name":"FULL30_IDENTITY_READINESS_AND_INTERNAL_ROBUSTNESS_AUDITED_ROUTING_V18",
         "created_utc":datetime.now(timezone.utc).isoformat(),"status":"PASS" if all(checks.values()) else "FAIL","checks":checks,
         "universe":v17_summary["universe"],"routing_unchanged":v17_summary["routing_unchanged"],"validation_queue":v17_summary["validation_queue"],
+        "scope_supersession": {
+            "v18_role": "FROZEN_384_COMPARISON_AND_EXPERIMENTAL_ROUTING_CORE",
+            "future_primary_rank_scope": 450,
+            "current_primary_scope_manifest": (
+                "outputs/target_discovery_scope_ch37_v3/"
+                "TARGET_PRIMARY_DIRECT_SM_ASSAYABLE_450_V3.csv.gz"
+            ),
+            "additional_primary_targets_not_scored_by_v18": 66,
+            "complete_registry_not_rank_denominator": 745,
+        },
         "v17_result_ingestion":v17_summary["v17_result_ingestion"],
         "v18_full_candidate_portfolio":{
             "candidate_pairs":30,"unique_entities":28,"unique_targets":16,"w1":8,"w2":21,"veto":1,
@@ -195,8 +205,8 @@ def main() -> None:
             "Sixteen of 30 pairs have a directional model-percentile range >=0.50 and are routed to orthogonal discrimination without reranking.",
         ],
         "claim_boundaries":[
-            "No hard-gate target was recovered; active universe remains 384 = 888 - 480 - 24.",
-            "Only the 46 targets removed solely for lacking experimental pockets remain recovered.",
+            "V18 preserves its historical 384-target score and experimental-routing core; it is a subset of the future 450-target primary production rank.",
+            "The 450-target primary scope has 66 targets not scored by V18. The 745-target file is a registry, while special and exploratory systems are reported through separate routes.",
             "V18 preserves all frozen scores, candidate ranks, waves, active-species rules and V14 W1 plates.",
             "The 30 pairs were selected using overlapping internal evidence; V18 is descriptive sensitivity analysis, not independent validation.",
             "PubChem vendor-record indicators are not current stock, purity, lead time, jurisdictional availability or endorsement.",
@@ -211,7 +221,7 @@ def main() -> None:
     report_path=OUT/"CURRENT_PROGRESS_REPORT_V18_ZH.md"
     report_path.write_text(
         "# V18 当前进展\n\n"
-        "靶点宇宙仍为 384 = 888 - 480 - 24；其中 338 个严格实验口袋靶点、46 个仅因缺少实验口袋而恢复。没有恢复任何硬门槛淘汰靶点。部署仍为 185 个 seeded 与 199 个 unseeded，276,480 对核心哈希未变。\n\n"
+        "本V18历史评分与实验路由核心仍为384个靶点，其中338个严格实验口袋靶点、46个无实验口袋恢复靶点；276,480对核心哈希未变。下一版主生产范围为450个路由后可比较靶点，新增66个主筛靶点不在V18分数中，需补特征、推理和跨通道校准。745个非GPCR靶点仅作为完整登记目录，特殊体系和高新颖性靶点另行报告。\n\n"
         "已将身份、化学风险、双向排名和选择偏倚审计从 W1 扩展到全部 30 对候选：28 个唯一全 InChIKey 实体、16 个靶点，W1=8、W2=21、veto=1；seeded=19、unseeded=11。完成 240 个双向排名和 180 个靶点内模型相关性。Boltz 主结果覆盖 29/30，GNINA 覆盖 10/30；16 对模型百分位跨度至少 0.50。\n\n"
         "28 个实体 PubChem 全键精确匹配 28/28；ChEMBL 全键为 27 个完全一致、1 个 serdexmethylphenidate 表示差异。发现 rank 21 的来源标签 ketoconazole 实际冻结结构为 CHEMBL295698/levoketoconazole 全键实体，已设置实体名称裁决 hold，未替换成外消旋 ketoconazole。该对同时缺少主 Boltz 与 GNINA，禁止用多种子元数据填补。\n\n"
         "化学处理分层为 R3=8、R2=17、R1=5。前药为 nitazoxanide、romidepsin、serdexmethylphenidate；romidepsin 新增二硫键还原/二硫醇状态检测。W2 与 veto 只完成计算及实验前设计，不授权采购、板位或湿实验。W1 仍为真实结果 0、实验放行 0。\n",

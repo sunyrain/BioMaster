@@ -69,7 +69,17 @@ def main() -> None:
     parser.add_argument("--stage-summary")
     parser.add_argument("--out-dir", default=str(DEFAULT_OUT))
     parser.add_argument("--batch-size", type=int, default=1024)
-    parser.add_argument("--rows-per-query", type=int, default=16)
+    parser.add_argument(
+        "--rows-per-query",
+        type=int,
+        default=None,
+        help=(
+            "Legacy override applied to both directions. Prefer the direction-specific "
+            "arguments so FULL_FIT reproduces the Stage-A sampling contract."
+        ),
+    )
+    parser.add_argument("--d2t-rows-per-query", type=int, default=2)
+    parser.add_argument("--t2d-rows-per-query", type=int, default=16)
     parser.add_argument("--d2t-steps", type=int, default=48)
     parser.add_argument("--t2d-steps", type=int, default=32)
     parser.add_argument("--scheduler-horizon", type=int, default=12)
@@ -82,6 +92,11 @@ def main() -> None:
     parser.add_argument("--residual-weight", type=float, default=1e-3)
     parser.add_argument("--cpu", action="store_true")
     args = parser.parse_args()
+    if args.rows_per_query is not None:
+        args.d2t_rows_per_query = args.rows_per_query
+        args.t2d_rows_per_query = args.rows_per_query
+    if args.d2t_rows_per_query < 2 or args.t2d_rows_per_query < 2:
+        raise ValueError("directional rows-per-query values must both be >= 2")
     reference = Path(args.reference_checkpoint or reference_checkpoint(args.seed)).resolve()
     stage_summary_path = Path(
         args.stage_summary
@@ -178,13 +193,13 @@ def main() -> None:
     d2t_config = QuerySamplingConfig(
         batch_size=args.batch_size,
         steps_per_epoch=args.d2t_steps,
-        rows_per_query=args.rows_per_query,
+        rows_per_query=args.d2t_rows_per_query,
         query_frequency_power=0.0,
     )
     t2d_config = QuerySamplingConfig(
         batch_size=args.batch_size,
         steps_per_epoch=args.t2d_steps,
-        rows_per_query=args.rows_per_query,
+        rows_per_query=args.t2d_rows_per_query,
         query_frequency_power=0.25,
     )
     d2t_sampler = QueryFirstBatchSampler(
@@ -287,7 +302,7 @@ def main() -> None:
         "backbone_frozen": True,
         "pair_logit_unchanged_from_reference": True,
         "external_current_case_labels_used_for_selection": False,
-        "statistical_status": "EXPLORATORY_PASS_WITH_UNCERTAINTY",
+        "statistical_status": "FULL_FIT_CANDIDATE_WITHOUT_UNBIASED_POST_REFIT_TEST",
     }
     torch.save(
         {

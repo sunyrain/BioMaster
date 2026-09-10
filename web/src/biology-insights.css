@@ -1,0 +1,39 @@
+.bio-insights { background: #fff; border: 1px solid #cedbea; border-radius: 9px; margin-bottom: 22px; overflow: hidden; color: #18314f; }
+.bio-insights-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 19px 22px 0; }
+.bio-kicker { display: block; color: #516d91; font-size: 12px; font-weight: 700; letter-spacing: 1.3px; }
+.bio-insights .bio-insights-heading h2 { margin-top: 4px; font-size: 21px; font-weight: 750; letter-spacing: -.4px; }
+.bio-source-badge { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #c7d9ee; border-radius: 5px; padding: 5px 8px; color: #345d89; background: #f1f6fd; font-size: 12px; white-space: nowrap; }
+.bio-insights-content { display: grid; grid-template-columns: minmax(0, 1fr) 262px; gap: 23px; padding: 14px 22px 13px; }
+.bio-chart-column { min-width: 0; }
+.bio-chart-caption { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 9px; color: #586f8e; font-size: 12px; }
+.bio-chart-caption > span:last-child { white-space: nowrap; }
+.bio-bars { display: grid; gap: 3px; }
+.bio-bar-row { display: grid; grid-template-columns: minmax(180px, 1.3fr) minmax(90px, 1fr) 45px; align-items: center; gap: 11px; padding: 6px 7px; border: 1px solid transparent; border-radius: 5px; text-align: left; transition: background .17s, border-color .17s; }
+.bio-bar-row:hover { background: #f0f5fd; }.bio-bar-row.selected { background: #edf5fb; border-color: #d3e3ef; }
+.bio-disease-name { color: #284765; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+.bio-bar-row.selected .bio-disease-name { color: #164b59; font-weight: 600; }
+.bio-bar-track { position: relative; height: 8px; background: #e5edf6; border-radius: 2px; overflow: hidden; }
+.bio-bar-track > span { position: absolute; top: 0; bottom: 0; background: #3868df; border-radius: 2px; transition: width .25s ease, background .2s ease; }.bio-bar-row.selected .bio-bar-track > span { background: #00836e; }
+.bio-bar-row > strong { color: #2452a9; font-size: 13px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }.bio-bar-row.selected > strong { color: #006f5b; }
+.bio-expand { display: flex; align-items: center; gap: 6px; padding: 8px 7px 0; color: #285cca; font-size: 12px; font-weight: 600; }.bio-expand svg { transition: transform .18s; }.bio-expand svg.rotated { transform: rotate(180deg); }
+.bio-association-detail { padding-left: 21px; border-left: 1px solid #dce5f0; }
+.bio-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 13px; margin: 0; padding-bottom: 13px; border-bottom: 1px solid #e0e8f1; }.bio-counts > div:last-child { grid-column: span 2; display: flex; justify-content: space-between; align-items: center; }
+.bio-counts dt { color: #5a7392; font-size: 12px; }.bio-counts dd { color: #1c416f; font-size: 19px; font-weight: 700; margin: 2px 0 0; font-variant-numeric: tabular-nums; }.bio-counts > div:last-child dd { font-size: 14px; margin: 0; }
+.bio-selected-evidence { padding-top: 11px; }.bio-selected-label { display: block; font-size: 12px; color: #526f92; }.bio-selected-evidence > strong { display: block; margin-top: 5px; color: #213e61; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }.bio-disease-id { display: block; color: #5d7493; font-size: 12px; margin-top: 2px; }
+.bio-source-name { display: flex; align-items: flex-start; gap: 5px; color: #536d8e; font-size: 12px; line-height: 1.6; margin-top: 8px; }.bio-source-name > svg { margin-top: 3px; }
+.bio-selected-actions { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-top: 8px; }.bio-selected-actions > a { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: #2459c7; }.bio-selected-actions > a:hover { text-decoration: underline; }
+.bio-source-path { font-size: 12px; color: #536b88; }.bio-source-path > summary { cursor: pointer; }.bio-source-path > code { display: block; max-width: 220px; margin-top: 8px; padding: 8px; background: #f1f5fb; border: 1px solid #d9e3ef; border-radius: 4px; overflow-wrap: anywhere; font-size: 12px; line-height: 1.7; }
+.bio-insights .bio-insights-note { margin: 0; padding: 12px 22px 15px; border-top: 1px solid #e1e8f1; color: #506886; font-size: 14px; line-height: 1.8; background: #fafcff; }
+.bio-insights .bio-unscored { font-size: 14px; line-height: 1.9; color: #526e90; padding: 25px 5px; }
+@media (min-width: 1600px) { .bio-bar-row { grid-template-columns: minmax(250px, 1.25fr) minmax(140px, 1fr) 49px; }.bio-disease-name, .bio-bar-row > strong { font-size: 14px; } }
+@media (max-width: 1000px) {
+  .bio-insights-content { grid-template-columns: minmax(0, 1fr); gap: 18px; }.bio-association-detail { border-left: 0; border-top: 1px solid #dce5f0; padding: 14px 0 0; display: grid; grid-template-columns: 180px 1fr; gap: 20px; }.bio-counts { border-bottom: 0; padding-bottom: 0; align-content: start; }.bio-selected-evidence { padding-top: 0; }.bio-source-path > code { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .bio-insights-heading { padding: 16px 15px 0; align-items: flex-start; flex-wrap: wrap; gap: 10px; }.bio-kicker { font-size: 12px; letter-spacing: 1px; }.bio-insights .bio-insights-heading h2 { font-size: 20px; }
+  .bio-insights-content { padding: 13px 15px; }.bio-chart-caption { flex-direction: column; gap: 3px; font-size: 12px; }.bio-chart-caption > span:last-child { text-align: right; }
+  .bio-bar-row { grid-template-columns: minmax(0, 1fr) 43px; gap: 5px 9px; padding: 9px 7px; }.bio-disease-name { grid-column: span 2; font-size: 14px; }.bio-bar-track { grid-column: 1; height: 7px; }.bio-bar-row > strong { grid-column: 2; font-size: 13px; }
+  .bio-association-detail { grid-template-columns: minmax(0, 1fr); gap: 14px; }.bio-counts { display: flex; justify-content: space-between; gap: 15px; }.bio-counts > div:last-child { display: block; }.bio-counts dd, .bio-counts > div:last-child dd { margin-top: 3px; font-size: 19px; }.bio-selected-evidence { border-top: 1px solid #e3eaf3; padding-top: 12px; }
+  .bio-insights .bio-insights-note { padding: 12px 15px 14px; font-size: 14px; }.bio-source-path > code { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .bio-insights * { transition: none !important; } }

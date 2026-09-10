@@ -35,6 +35,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 from biomaster.odti_v2 import ODTIV2Config, RoutedInteractionRankerV2, odti_v2_loss  # noqa: E402
+from biomaster.comprehensive_balanced import (  # noqa: E402
+    QueryFirstBatchSampler,
+    QuerySamplingConfig,
+)
 from run_biomaster_odti_baselines_v1 import metrics, split_masks  # noqa: E402
 
 
@@ -821,6 +825,43 @@ def dual_query_training_batches(
     return batches
 
 
+def query_balanced_training_batches(
+    drug_sampler: QueryFirstBatchSampler,
+    target_sampler: QueryFirstBatchSampler,
+    coverage_batches: list[np.ndarray],
+    coverage_steps: int,
+    seed: int,
+) -> list[np.ndarray]:
+    """Mix explicit D->T/T->D query batches with ordinary row coverage.
+
+    The directional streams contain only experimentally observed two-class
+    queries.  D->T can therefore emit one measured positive and one measured
+    negative per drug, maximizing independent drug coverage without treating
+    unknown pairs as negatives.  A bounded coverage stream retains one-class
+    and long-tail relations needed by the universal pair classifier.
+    """
+
+    if coverage_steps < 0:
+        raise ValueError("coverage_steps must be non-negative")
+    if coverage_steps and not coverage_batches:
+        raise ValueError("coverage stream requested but no coverage batches exist")
+    batches = [
+        *drug_sampler.batches(seed),
+        *target_sampler.batches(seed + 1),
+    ]
+    if coverage_steps:
+        # grouped_training_batches is already deterministically shuffled by
+        # its seed. Cycle only when a tiny smoke role has fewer batches than
+        # the requested fixed compute budget.
+        batches.extend(
+            coverage_batches[index % len(coverage_batches)]
+            for index in range(coverage_steps)
+        )
+    rng = np.random.default_rng(seed + 2)
+    rng.shuffle(batches)
+    return batches
+
+
 def validation_selection_value(
     metric_row: dict[str, float | int | None],
     selection_metric: str,
@@ -842,6 +883,12 @@ def validation_selection_value(
             0.50 * finite("micro_auprc")
             + 0.30 * finite("target_macro_auprc")
             + 0.20 * finite("drug_macro_auprc")
+        )
+    if selection_metric == "bidirectional_composite":
+        return (
+            0.40 * finite("micro_auprc")
+            + 0.30 * finite("target_macro_auprc")
+            + 0.30 * finite("drug_macro_auprc")
         )
     raise ValueError(f"unknown selection metric: {selection_metric}")
 
@@ -1144,6 +1191,11 @@ def train(args: argparse.Namespace) -> dict[str, object]:
     if feature_audit.get("status") != "PASS":
         raise RuntimeError("feature store audit must pass")
     data = pd.read_csv(PAIRS, low_memory=False)
+    if "binary_observed" not in data.columns:
+        # The frozen 86,674-pair store contains only observed binary rows.  An
+        # explicit marker lets it share the audited query-first sampler with
+        # the later comprehensive store without changing any label.
+        data["binary_observed"] = np.int8(1)
     drug_features = np.load(MORGAN, mmap_mode="r")
     drug_aux_features = None
     drug_aux_source = None
@@ -1287,6 +1339,52 @@ def train(args: argparse.Namespace) -> dict[str, object]:
             f"got valid_classes={valid_class_count}, test_classes={test_class_count}. "
             "Increase --max-rows or use the complete frozen role."
         )
+    drug_query_sampler: QueryFirstBatchSampler | None = None
+    target_query_sampler: QueryFirstBatchSampler | None = None
+    query_sampler_audit: dict[str, object] = {"enabled": False}
+    if args.batch_sampler == "query_balanced":
+        requested_d2t_batch = int(getattr(args, "d2t_query_batch_size", 0))
+        requested_t2d_batch = int(getattr(args, "t2d_query_batch_size", 0))
+        d2t_config = QuerySamplingConfig(
+            batch_size=(requested_d2t_batch or effective_batch_size),
+            steps_per_epoch=int(getattr(args, "d2t_query_steps", 24)),
+            rows_per_query=int(getattr(args, "d2t_rows_per_query", 2)),
+            query_frequency_power=0.0,
+        )
+        t2d_config = QuerySamplingConfig(
+            batch_size=(requested_t2d_batch or effective_batch_size),
+            steps_per_epoch=int(getattr(args, "t2d_query_steps", 24)),
+            rows_per_query=int(getattr(args, "t2d_rows_per_query", 16)),
+            query_frequency_power=0.25,
+        )
+        drug_query_sampler = QueryFirstBatchSampler(
+            train_positions, data, "drug_feature_index", d2t_config
+        )
+        target_query_sampler = QueryFirstBatchSampler(
+            train_positions, data, "target_feature_index", t2d_config
+        )
+        query_sampler_audit = {
+            "enabled": True,
+            "drug_to_target": {
+                **d2t_config.to_dict(),
+                "eligible_two_class_queries": drug_query_sampler.query_count,
+                "query_draws_per_epoch": (
+                    d2t_config.steps_per_epoch
+                    * d2t_config.batch_size
+                    // d2t_config.rows_per_query
+                ),
+            },
+            "target_to_drug": {
+                **t2d_config.to_dict(),
+                "eligible_two_class_queries": target_query_sampler.query_count,
+                "query_draws_per_epoch": (
+                    t2d_config.steps_per_epoch
+                    * t2d_config.batch_size
+                    // t2d_config.rows_per_query
+                ),
+            },
+            "coverage_steps": int(getattr(args, "coverage_steps", 16)),
+        }
     arrays = prepare_arrays(
         data,
         train_positions,
@@ -1475,7 +1573,24 @@ def train(args: argparse.Namespace) -> dict[str, object]:
                 for start in range(0, len(order), effective_batch_size)
             ]
         else:
-            if args.batch_sampler == "dual_query":
+            if args.batch_sampler == "query_balanced":
+                if drug_query_sampler is None or target_query_sampler is None:
+                    raise RuntimeError("query-balanced samplers were not initialized")
+                coverage = grouped_training_batches(
+                    train_positions,
+                    data,
+                    effective_batch_size,
+                    args.seed + 3 * epoch,
+                    args.max_rows_per_target,
+                )
+                batches = query_balanced_training_batches(
+                    drug_query_sampler,
+                    target_query_sampler,
+                    coverage,
+                    int(getattr(args, "coverage_steps", 16)),
+                    args.seed + 3 * epoch + 1,
+                )
+            elif args.batch_sampler == "dual_query":
                 batches = dual_query_training_batches(
                     train_positions,
                     data,
@@ -1865,6 +1980,7 @@ def train(args: argparse.Namespace) -> dict[str, object]:
             "batch_sampler": "random" if args.random_batches else args.batch_sampler,
             "max_rows_per_target": int(args.max_rows_per_target),
             "max_rows_per_drug": int(args.max_rows_per_drug),
+            "query_sampler": query_sampler_audit,
             "init_checkpoint": init_checkpoint_info,
             "freeze_base_epochs": freeze_base_epochs,
             "local_only_parameter_count": int(
@@ -2048,7 +2164,13 @@ def main() -> None:
     parser.add_argument("--max-rows", type=int, default=0)
     parser.add_argument(
         "--selection-metric",
-        choices=["composite", "micro_auprc", "target_macro_auprc", "drug_macro_auprc"],
+        choices=[
+            "composite",
+            "bidirectional_composite",
+            "micro_auprc",
+            "target_macro_auprc",
+            "drug_macro_auprc",
+        ],
         default="composite",
     )
     parser.add_argument(
@@ -2058,12 +2180,32 @@ def main() -> None:
     )
     parser.add_argument(
         "--batch-sampler",
-        choices=["target", "dual_query"],
+        choices=["target", "dual_query", "query_balanced"],
         default="target",
-        help="target-aware default or dual target+drug query neighborhoods",
+        help=(
+            "target-aware default, legacy row-assigned dual neighborhoods, or "
+            "explicit positive/negative query-balanced streams"
+        ),
     )
     parser.add_argument("--max-rows-per-target", type=int, default=16)
     parser.add_argument("--max-rows-per-drug", type=int, default=16)
+    parser.add_argument("--d2t-query-steps", type=int, default=24)
+    parser.add_argument("--t2d-query-steps", type=int, default=24)
+    parser.add_argument("--coverage-steps", type=int, default=16)
+    parser.add_argument(
+        "--d2t-query-batch-size",
+        type=int,
+        default=0,
+        help="direction-specific batch size; zero inherits --batch-size",
+    )
+    parser.add_argument(
+        "--t2d-query-batch-size",
+        type=int,
+        default=0,
+        help="direction-specific batch size; zero inherits --batch-size",
+    )
+    parser.add_argument("--d2t-rows-per-query", type=int, default=2)
+    parser.add_argument("--t2d-rows-per-query", type=int, default=16)
     parser.add_argument(
         "--observation-column",
         help="optional binary observation/recorded-pair column for the propensity head",

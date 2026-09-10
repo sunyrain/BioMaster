@@ -13,6 +13,12 @@ from biomaster.odti_v2 import (
     RoutedInteractionRankerV2,
     directional_retrieval_loss,
 )
+from scripts.train_biomaster_bidirectional_v6 import (
+    configure_trainable_scope,
+    cosine_decay_factor,
+    pair_retention_loss,
+    trainable_state_dict,
+)
 
 
 def _small_model(enabled: bool) -> RoutedInteractionRankerV2:
@@ -120,3 +126,67 @@ def test_query_first_sampler_is_deterministic_balanced_and_observed_only() -> No
         for _, group in frame.groupby("drug_feature_index"):
             assert set(group["binary_label"]) == {0, 1}
             assert int(group["binary_label"].sum()) * 2 == len(group)
+
+
+def test_interaction_scope_keeps_entity_and_structure_towers_frozen() -> None:
+    model = _small_model(True)
+    heads, backbone = configure_trainable_scope(model, "interaction")
+    assert heads and backbone
+    trainable = {
+        name for name, parameter in model.named_parameters() if parameter.requires_grad
+    }
+    assert any(name.startswith("pair_trunk.") for name in trainable)
+    assert any(name.startswith("bilinear.") for name in trainable)
+    assert all(not name.startswith("drug_encoder.") for name in trainable)
+    assert all(not name.startswith("target_encoder.") for name in trainable)
+    assert all(not name.startswith("structure_") for name in trainable)
+    assert set(trainable_state_dict(model)) == trainable
+
+
+def test_pair_retention_backpropagates_to_pair_score() -> None:
+    torch.manual_seed(107)
+    model = _small_model(True)
+    configure_trainable_scope(model, "interaction")
+    output = _forward(model)
+    teacher = {"final_logit": output["final_logit"].detach() + 0.5}
+    labels = torch.tensor([1, 0, 1, 0, 1, 0, 1, 0], dtype=torch.float32)
+    observed = torch.tensor([1, 1, 1, 1, 1, 1, 0, 0], dtype=torch.bool)
+    losses = pair_retention_loss(
+        output,
+        teacher,
+        labels,
+        observed,
+        bce_weight=0.25,
+        distill_weight=0.5,
+    )
+    assert losses["pair_bce"].item() > 0
+    assert losses["pair_distill"].item() > 0
+    losses["total"].backward()
+    assert model.pair_trunk[0].weight.grad is not None
+
+
+def test_cosine_decay_preserves_optimizer_group_learning_rate_ratio() -> None:
+    first = torch.nn.Parameter(torch.ones(()))
+    second = torch.nn.Parameter(torch.ones(()))
+    optimizer = torch.optim.AdamW(
+        [
+            {"params": [first], "lr": 1e-3},
+            {"params": [second], "lr": 2e-5},
+        ]
+    )
+    scheduler = torch.optim.lr_scheduler.LambdaLR(
+        optimizer,
+        lr_lambda=lambda epoch: cosine_decay_factor(epoch, 12),
+    )
+    previous = [group["lr"] for group in optimizer.param_groups]
+    assert np.isclose(previous[0] / previous[1], 50.0)
+    for _ in range(12):
+        optimizer.step()
+        scheduler.step()
+        current = [group["lr"] for group in optimizer.param_groups]
+        assert current[0] <= previous[0]
+        assert current[1] <= previous[1]
+        assert np.isclose(current[0] / current[1], 50.0)
+        previous = current
+    assert np.isclose(previous[0], 5e-5)
+    assert np.isclose(previous[1], 1e-6)

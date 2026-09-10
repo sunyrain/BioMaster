@@ -1,0 +1,20 @@
+{
+  "status": "VALIDATED_LOCAL_MODEL",
+  "release": "retargetmap_selected_v1",
+  "bundle": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1",
+  "archive": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1.zip",
+  "manifest_sha256": "c653906a64aa4f58803a74630287deabb352ced8f254e0d2e39e2b015012e44e",
+  "checkpoint_sha256": "7f2c3a4bd5187c3a564ece7dbde9f4248c10834bebe288d549604e9f898b9bfc",
+  "downstream_training_cutoff": 2025,
+  "scope": {
+    "drugs": 720,
+    "targets": 384
+  },
+  "interface": "retargetmap.CatalogRanker",
+  "cli": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/infer.py",
+  "default_precision": "fp32",
+  "source_selection": "outputs/biomaster_best_model_20260906/DEPLOYMENT_SELECTION.json",
+  "validation": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1_RELEASE_VALIDATION.json",
+  "evaluated_temporal_weights_cutoff": 2022,
+  "fullfit_has_independent_test_score": false
+}

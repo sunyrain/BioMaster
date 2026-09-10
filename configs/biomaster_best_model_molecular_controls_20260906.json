@@ -1,0 +1,13 @@
+{
+  "status": "FROZEN_BEFORE_ADDITIONAL_MOLECULAR_CONTROLS",
+  "representations": ["morgan", "drugclip_morgan"],
+  "cutoffs": [2018, 2020],
+  "seeds": [20260921, 20260922, 20260923],
+  "recipe": "same global_ema optimization protocol, original data/row and retrieval exposures",
+  "purpose": "complete fingerprint and pretrained representation controls before global selection; do not attribute a fingerprint gain to pretraining",
+  "prior_information": "initiated after the first complete seed of BerMol/BerMol+Morgan development, before any anchored local fit or new regression evaluation",
+  "input_policy": "Morgan only uses 2048 bits; DrugCLIP+Morgan concatenates the 512 CLS and 2048 bits; the graph mean is retained in every control",
+  "launch": "after the existing 12 representation jobs complete",
+  "result": "12 additional development runs; complete global selection grid is now 54 runs over 9 variants",
+  "fixed_objective": "same two-window three-seed bidirectional composite, no test-driven tuning"
+}

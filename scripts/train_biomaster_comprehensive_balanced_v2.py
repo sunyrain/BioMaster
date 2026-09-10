@@ -75,9 +75,7 @@ DEPLOY_TARGET_AUX = ROOT / (
     "outputs/old_drug_target_sota_v1/public_retrained_v1/"
     "dtiam_deployment_feature_store_v1/DTIAM_PROJECT384_ESM2_T33_650M_1280_FLOAT32_V1.npy"
 )
-DRUG_FEATURE_INDEX = (
-    ROOT / "outputs/biomaster_comprehensive_training_v1/DRUG_FEATURE_INDEX_COMPREHENSIVE_V1.csv.gz"
-)
+DRUG_FEATURE_INDEX = RELATIONS.parent / "DRUG_FEATURE_INDEX_COMPREHENSIVE_V1.csv.gz"
 DEFAULT_OUT = ROOT / "outputs/biomaster_comprehensive_balanced_full_fit_v2"
 # Negative-aware post-training calibration selected the binary head for the
 # primary target-to-720 retrieval objective.  The affinity head is still

@@ -1,0 +1,7 @@
+# Existing project environment already supplies these packages.
+# torch is needed only when computing the selected-release score cache.
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14
+torch>=2.1
+rdkit>=2023.9

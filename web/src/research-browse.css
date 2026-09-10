@@ -1,0 +1,26 @@
+.research-browse { display:grid; gap:18px; }
+.browse-intro h1 { font-size:28px; margin:8px 0 12px; }
+.browse-intro > p { color:var(--secondary); max-width:900px; line-height:1.8; }
+.browse-navigation,.browse-stats,.browse-toolbar,.browse-choices,.browse-facts,.browse-pagination { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.browse-navigation { margin-top:20px; border-top:1px solid var(--line); padding-top:18px; }
+.browse-navigation button,.browse-choices button { border:1px solid var(--line); border-radius:8px; padding:8px 12px; }
+.browse-navigation [aria-current],.browse-choices [aria-pressed=true] { color:var(--blue); border-color:var(--blue); background:#f1f5ff; }
+.browse-stats { margin-top:24px; gap:36px; }
+.browse-stats > span { display:grid; gap:2px; color:var(--secondary); font-size:13px; }
+.browse-stats strong { color:var(--ink); font-size:28px; }
+.browse-toolbar { padding-bottom:18px; border-bottom:1px solid var(--line); }
+.browse-toolbar .filter-search { flex:1; min-width:240px; }
+.browse-toolbar select { border:1px solid var(--line); border-radius:8px; padding:10px; background:white; color:var(--ink); }
+.browse-match { color:var(--secondary); margin:18px 0 4px; font-size:13px; }
+.browse-record { display:flex; justify-content:space-between; align-items:flex-start; gap:24px; padding:22px 0; border-bottom:1px solid var(--line); }
+.browse-record-main { min-width:0; flex:1; }
+.browse-record-heading { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+.browse-record small,.browse-facts,.browse-record p { color:var(--secondary); font-size:13px; }
+.browse-record h2 { font-size:18px; margin:10px 0; overflow-wrap:anywhere; }
+.browse-record p { margin-top:10px; line-height:1.7; }
+.browse-record details { margin-top:12px; font-size:13px; }
+.browse-record summary { cursor:pointer; color:var(--blue); }
+.browse-record-details { padding:14px; margin-top:10px; border:1px solid var(--line); border-radius:8px; overflow-wrap:anywhere; }
+.browse-record > button { flex-shrink:0; }
+.browse-pagination { justify-content:flex-end; margin-top:20px; }
+@media(max-width:700px) { .browse-record { flex-direction:column; gap:14px; } .browse-toolbar .filter-search { min-width:0; flex-basis:100%; } .browse-intro h1 { font-size:24px; } .browse-stats { gap:20px; } .browse-record-heading small { overflow-wrap:anywhere; } }

@@ -84,16 +84,17 @@ th:nth-last-child(-n+2), td:nth-last-child(-n+2) {{ text-align: right; white-spa
   <p class="lead">唯一入口为 ChEMBL 37 中物种为人、靶点类型为单蛋白、且至少存在一条药物机制记录的靶点。本报告只列分类、数量和比例。</p>
   <div class="metrics">
     <div class="metric"><strong>888</strong><span>官方靶点、基因、UniProt 与唯一序列</span></div>
-    <div class="metric"><strong>565</strong><span>存在 ChEMBL 小分子 MoA</span></div>
-    <div class="metric"><strong>450</strong><span>非 GPCR 小分子 MoA</span></div>
+    <div class="metric"><strong>745</strong><span>非 GPCR 完整登记目录，不是统一排名</span></div>
+    <div class="metric"><strong>492</strong><span>ChEMBL 或 Open Targets 直接小分子证据</span></div>
   </div>
 </div>
 {''.join(sections)}
 <section class="definition">
   <h2>口径说明</h2>
-  <p><b>全集口径：</b>888 个靶点全部保留，适用于序列 DTA 和不预设药物模态的广谱探索。</p>
-  <p><b>小分子机制口径：</b>565 个靶点至少有一条 ChEMBL Small molecule MoA；其中 450 个为非 GPCR。</p>
-  <p><b>广义直接小分子口径：</b>在非 GPCR 小分子 MoA 基础上纳入 Open Targets 的直接小分子证据，只作为扩展集合。</p>
+  <p><b>全集口径：</b>888 个靶点全部保留；143 个 GPCR 进入独立膜蛋白/功能实验分支。</p>
+  <p><b>非 GPCR 登记口径：</b>745 个靶点全部有序列，用于保证信息不丢失；它不是统一生产rank/745。</p>
+  <p><b>小分子机制口径：</b>565 个靶点至少有一条 ChEMBL Small molecule MoA；其中 450 个为非 GPCR。这个历史450包含特殊体系，不能直接等同于下游生产450。</p>
+  <p><b>广义直接小分子口径：</b>在非 GPCR ChEMBL小分子MoA基础上纳入 Open Targets 直接小分子证据后为492个；下游再按实验通道分成450个主生产靶点和42个特殊体系靶点。</p>
   <p><b>宽松结构口径：</b>AlphaFold 序列完全一致，且达到项目定义的 P2Rank A/B。</p>
   <p><b>严格结构口径：</b>进一步限定为项目 P2Rank A，口袋平均 pLDDT 不低于 70，且至少 70% 口袋残基 pLDDT 不低于 70。</p>
   <p><b>历史校准口径：</b>严格 binding 数据中，阳性和定量低活性/明确 inactive 均至少 8 个。未测或未记录不作为阴性。</p>

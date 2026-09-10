@@ -1,0 +1,177 @@
+schema_version: 1
+architecture_id: BIOMASTER_ODTI_V4_PRETRAINED_INTERACTION
+status: FULL_ARCHITECTURE_DESIGN_WITH_R1_DEVELOPMENT_EXPERIMENT_COMPLETED
+r1_experiment: configs/biomaster_odti_v4_r1_development.yaml
+r1_report: docs/BIOMASTER_ODTI_V4_R1_TRAIN_TEST_20260905_ZH.md
+production_contract: configs/biomaster_current_contract_v1.json
+design_document: docs/BIOMASTER_ODTI_V4_ARCHITECTURE_AND_DATA_20260905_ZH.md
+data_output: outputs/biomaster_odti_v4_plan_20260905
+
+task:
+  primary: drug_to_target_selectivity
+  score_context: endpoint_and_threshold_conditioned
+  unknown_binary_label: null
+  biochemical_and_functional_scores_are_separate: true
+  target_id_embedding: false
+  raw_target_degree_as_score_feature: false
+
+encoders:
+  molecule_global:
+    initial_backbone: BerMol
+    checkpoint: third_party/sota_dti_2026/DTIAM/code/BerMolModel_base.pkl
+    pooled_dim: 768
+    freeze_initially: true
+    require_full_requested_split_coverage: true
+    stereochemistry: explicit_RS_EZ_bond_conditioned_adapter
+    morgan_role: retrieval_and_control_baseline
+  molecule_geometry:
+    initial_backbone: DrugCLIP_UniMol
+    checkpoint: third_party/sota_dti_2026/Drug-The-Whole-Genome/data/model_weights/6_folds/fold_0.pt
+    checkpoint_prefix: mol_model
+    token_dim: 512
+    retain_projection: mol_project
+    joint_dim: 128
+    initial_conformers: 1
+    conformer_ablation: [1, 3]
+    max_heavy_atoms: 128
+    overlength: explicit_geometry_missing_no_truncation
+    freeze_initially: true
+  protein_sequence:
+    initial_backbone: esm2_t33_650M_UR50D
+    checkpoint: /root/autodl-tmp/.cache/torch/hub/checkpoints/esm2_t33_650M_UR50D.pt
+    residue_dim: 1280
+    pooling: complete_sequence_masked_mean_plus_8_learned_latents
+    long_sequence: overlap_stitched_windows_with_residue_identity
+    comparison_backbone: ESMC_600M
+    freeze_initially: true
+  pocket_geometry:
+    initial_backbone: DrugCLIP_UniMol
+    checkpoint_prefix: pocket_model
+    retain_projection: pocket_project
+    token_dim: 512
+    joint_dim: 128
+    max_pockets: 3
+    max_pocket_atoms: 256
+    initial_source: exact_sequence_mapped_P2Rank
+    experimental_holo_source: separately_audited_optional_branch
+    geometry: intramolecular_distances_and_atom_types
+    freeze_initially: true
+  alternatives:
+    ProFSA: candidate_requires_checkpoint_and_projection_compatibility_validation
+    MoLFormer: historical_control_nonisomeric_input_not_default
+
+interaction:
+  hidden_dim: 256
+  attention_heads: 8
+  sequence_latents: 8
+  residue_tokens_per_pocket: 128
+  pair_channels: 64
+  pair_update_blocks: 3
+  pair_update: axial_attention_with_edge_bias_and_token_feedback
+  stereo_bond_adapter_layers: 2
+  protein_geometry_to_residue: atom_to_canonical_residue_scatter_with_mask
+  global_context_enters_each_block: true
+  geometry_missing: exact_zero_geometry_contribution
+  pose_free_cross_entity_distance: prohibited
+  pose_dependent_contact_supervision: optional_measured_complexes_only
+  pocket_aggregation: normalized_quality_weighted_logsumexp
+  duplicate_pocket_policy: deduplicate_before_aggregation
+  keep_pretrained_cosine_score: true
+  preserve_global_score_path: true
+  new_residual_final_layer_zero_init: true
+  residual_scale_cap_initial: 1.0
+
+evidence:
+  retrieval_snapshot: train_only_versioned
+  positive_k: 16
+  negative_k: 16
+  exclude_query_entity: true
+  exclude_test_entities_from_all_training_sources: true
+  positive_branch: bounded_nonnegative_similarity_and_reference_evidence
+  negative_branch: bounded_nonnegative_penalty_subtracted_from_score
+  negative_information_enters_positive_or_base_branch: false
+  empty_branch_contribution: 0.0
+  positive_cap_initial: 2.0
+  negative_cap_initial: 2.0
+  contribution_ramp_epochs: 2
+  reference_delta: shared_pair_potential_query_minus_reference
+  quantitative_delta_requires: same_endpoint_and_compatible_assay
+  episodes: [full_support, positive_only, negative_only, no_support, no_same_scaffold_support]
+  evidence_dropout: 0.2
+  shortcut_controls: [drug_swap, target_swap, same_family_wrong_pocket, support_label_shuffle]
+
+outputs:
+  - biochemical_activity_logit
+  - endpoint_specific_pactivity_mean_and_scale
+  - functional_inhibition_at_concentration
+  - drug_to_target_rank_score
+  - score_component_decomposition
+  - modality_and_evidence_coverage
+
+training:
+  seeds: [20260905, 20260906, 20260907]
+  freeze_public_backbones_initially: true
+  freeze_fitted_base_during_initial_residual_warmup: true
+  stage_2_unfreeze: projection_and_last_2_blocks_or_adapter_ablation
+  allow_stale_trainable_feature_cache: false
+  relation_stream: without_replacement_all_eligible_rows
+  query_stream: real_measured_distinct_targets_no_duplicate_padding
+  query_targets_max: 32
+  support_references_max: 16
+  loss_initial_weights:
+    endpoint_observed: 1.0
+    drug_to_target_pairwise: 1.0
+    same_target_reference_pairwise: 0.25
+    legacy_mixed_endpoint_binary_auxiliary: 0.0
+    all_unknown_inbatch_infonce: 0.0
+    contact_auxiliary: 0.0
+    teacher_distillation: 0.0
+  censored_likelihood: exact_density_or_one_sided_CDF
+  random_pair_means_are_not_censor_intervals: true
+  learning_rate_new_modules_initial: 0.0002
+  learning_rate_unfrozen_backbone_initial: 0.00001
+  gradient_clip_norm: 1.0
+  initial_max_epochs: 30
+  early_stopping_patience: 5
+  minimum_epochs_before_early_stop: 8
+  mixed_precision: bfloat16_if_supported
+  local_pair_microbatch_initial: 8
+  batch_size_status: requires_real_memory_and_throughput_profile
+  selection:
+    primary: validation_full_panel_macro_known_positive_AP
+    secondary: [measured_drug_macro_AP, recall_at_20, low_similarity_AP, target_cold_AP]
+    proposed_recall20_noninferiority_margin: 0.01
+    test_may_select_checkpoint: false
+
+evaluation:
+  V3_existing_split: development_regression_only
+  S1_to_S5: historical_regression_only
+  KIRHub: grouped_nested_development_functional_task
+  DAVIS: reserved_external_after_current_training_overlap_audit
+  temporal: reaggregate_raw_records_asof_then_split
+  target_cold: single_model_within_fold_candidate_panel
+  full_panel: fixed_candidate_manifest_per_endpoint
+  support_difficulty: [near, intermediate, low_similarity, no_positive_support, no_support]
+  nearest_similarity_boundaries: [0.4, 0.7]
+  include_both_class_query_count: true
+  paired_bootstrap_unit: drug
+  report_target_family_and_seed_variation: true
+  new_confirmatory_holdout: not_yet_created_or_claimed
+
+experiments:
+  - {id: R0, change: fixed_nearest_PN_DTIAM_DrugCLIP_and_current_system_controls}
+  - {id: R1, change: full_coverage_BerMol_ESM_shared_pair_baseline}
+  - {id: R2, change: pretrained_atom_pocket_states_and_global_preserving_interaction}
+  - {id: R3, change: R2_plus_signed_reference_evidence}
+  - {id: R4, change: R3_plus_selective_backbone_adaptation}
+  - {id: R5, change: R4_plus_endpoint_specific_dense_profile_training}
+
+implementation_modules:
+  - {name: assets, purpose: verified_entity_and_feature_indices}
+  - {name: measurements, purpose: raw_endpoint_and_censor_aware_observation_ledger}
+  - {name: encoders, purpose: exact_pretrained_tokenizer_checkpoint_and_atom_mapping_adapters}
+  - {name: interaction, purpose: global_conditioned_atom_residue_pair_updates}
+  - {name: evidence, purpose: signed_support_and_reference_delta}
+  - {name: heads, purpose: endpoint_and_function_specific_outputs}
+  - {name: sampling, purpose: coverage_queries_and_train_only_support_episodes}
+  - {name: evaluation, purpose: fixed_panel_and_cold_entity_comparisons}

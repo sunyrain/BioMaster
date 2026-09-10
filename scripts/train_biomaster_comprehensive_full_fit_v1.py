@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import random
 import sys
 from datetime import datetime, timezone
@@ -46,7 +47,12 @@ from train_biomaster_deployment_augmented_v1 import (
 from train_biomaster_odti_v2 import predict, set_seed, sigmoid, temperature_scale
 
 
-PACKAGE = ROOT / "outputs/biomaster_comprehensive_training_v1"
+PACKAGE = Path(
+    os.environ.get(
+        "BIOMASTER_COMPREHENSIVE_PACKAGE",
+        str(ROOT / "outputs/biomaster_comprehensive_training_v1"),
+    )
+).resolve()
 RELATIONS = PACKAGE / "COMPREHENSIVE_TRAINING_RELATIONS_V1.csv.gz"
 MORGAN = PACKAGE / "MORGAN2048_UINT8_COMPREHENSIVE_V1.npy"
 PACKAGE_MANIFEST = PACKAGE / "COMPREHENSIVE_TRAINING_MANIFEST_V1.json"
