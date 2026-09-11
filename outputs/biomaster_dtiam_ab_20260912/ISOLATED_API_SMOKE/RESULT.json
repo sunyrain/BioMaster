@@ -1,0 +1,19 @@
+{
+  "status": "PASS_API_ONLY",
+  "models": [
+    "LightGBMXT",
+    "LightGBM",
+    "RandomForestGini",
+    "RandomForestEntr",
+    "CatBoost",
+    "ExtraTreesGini",
+    "ExtraTreesEntr",
+    "XGBoost",
+    "NeuralNetTorch",
+    "LightGBMLarge",
+    "NeuralNetFastAI",
+    "WeightedEnsemble_L2"
+  ],
+  "native_best": "WeightedEnsemble_L2",
+  "same_internal_training_members": true
+}

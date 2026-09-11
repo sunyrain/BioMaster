@@ -1,0 +1,88 @@
+{
+  "status": "FROZEN_BEFORE_SUPERVISED_TRAINING",
+  "created_utc": "2026-09-11T17:27:36.232807+00:00",
+  "arms": [
+    {
+      "arm": "kdki_inactive",
+      "pairs": 337570,
+      "positive": 188799,
+      "negative": 148771,
+      "explicit_inactive": 105368,
+      "molecules": 140064,
+      "target_sequences": 2290,
+      "train_sha256": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee"
+    },
+    {
+      "arm": "all_inactive",
+      "pairs": 1116270,
+      "positive": 769395,
+      "negative": 346875,
+      "explicit_inactive": 105368,
+      "molecules": 690439,
+      "target_sequences": 3647,
+      "train_sha256": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d"
+    }
+  ],
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "fit_suites": 6,
+  "representation_dimensions": 2048,
+  "representation": "Frozen official BerMol CLS768 + ESM2 t33 650M mean1280 including EOS; first1022 residues",
+  "implementation": "DTIAM official representation and native AutoGluon default; compatible AG1.4/Python3.10, not bitwise AG0.5.2 paper reproduction",
+  "official_sources": [
+    "third_party/sota_dti_2026/DTIAM/code/data_process/extract_feature.py",
+    "third_party/sota_dti_2026/DTIAM/code/training_validation.py"
+  ],
+  "outer_split": "Exact frozen scaffold/connectivity train, common validation and common test; no per-target cap or subsampling",
+  "fit": {
+    "problem_type": "binary",
+    "eval_metric": "roc_auc",
+    "hyperparameters_file": "AUTOGLUON_HYPERPARAMETERS.json",
+    "presets": null,
+    "excluded_model_types": [],
+    "time_limit": null,
+    "num_cpus": 20,
+    "num_gpus": 0,
+    "memory_limit_GB": 68,
+    "fit_strategy": "sequential",
+    "sample_weight": null,
+    "process_stages": "Native core learners, fresh-process FASTAI, then native weighted ensemble over all 11 learners",
+    "fastai_resource_only_override": {
+      "ag.max_memory_usage_ratio": 2
+    },
+    "resource_gate": "Full-B native preprocessing + loader must peak <=65 GiB; monitor actual child RSS <=78 GiB",
+    "learner_random_state": "seed",
+    "random_initialization": "native learner and model seeds; no old supervised weights",
+    "holdout": "AutoGluon native internal holdout from training members only; save exact internal row IDs",
+    "weighted_ensemble": "Fitted only on native internal training holdout; external common validation never supplied to fit"
+  },
+  "stopping": "Native early stopping or native fixed iteration/forest budgets, no overall wallclock cutoff; record actual fitted hyperparameters, do not assert universal convergence",
+  "completeness": "All 11 default binary base learners and WeightedEnsemble must fit; any skipped/failed learner is INCOMPLETE, not a passed suite",
+  "selection_views": {
+    "native": "AutoGluon internal holdout ROC-AUC winner",
+    "query": "Choose trained base/ensemble by common validation KdKi mean(target macro AP, drug macro AP); tie-break AP then model name"
+  },
+  "calibration": "Same Platt protocol on common validation KdKi, max-F1 validation threshold; input logit(clipped native probability)",
+  "ranking": "Score-based target and drug queries >=10 measured pairs and both classes; report macro AP, P5/P10/P20; query selection does not add a ranking training loss",
+  "test_gate": "No TEST inference until all six suites and both validation selections are frozen; report all seeds and existing BioMaster baselines",
+  "panels": [
+    "AFFINITY_KD_KI",
+    "ACTIVITY_IC50",
+    "ACTIVITY_EC50",
+    "ALL_ENDPOINT_UNION",
+    "EXPLICIT_INACTIVE"
+  ],
+  "secondary_scopes": "Exact shared strict document/raw-assay flags, target training coverage and SPR112-target subset",
+  "uncertainty": "Paired query bootstrap of three-seed mean query metrics, 2000 resamples, fixed seed; conditional exploratory intervals",
+  "protected": "Production model, website and SPR384/112 handoff remain frozen",
+  "limitations": [
+    "Native DTIAM unweighted AutoGluon differs from BioMaster class-balanced losses and feature encoders.",
+    "A/B mixed endpoint labels remain endpoint-specific measurements, not all physical affinity.",
+    "Retrospective scaffold holdout is not prospective SPR validation or protein homology cold start.",
+    "Frozen public encoder pretraining exposure is not certified.",
+    "Native inner holdout means base learner fitting rows are a subset of the identical training-member pool."
+  ]
+}

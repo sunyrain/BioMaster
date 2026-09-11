@@ -1,0 +1,22 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-09-11T17:23:02.458464+00:00",
+  "required_molecules": 857540,
+  "required_targets": 4742,
+  "bermol": "Official frozen BerMol CLS768 FP32, exact SMILES, no truncation",
+  "esm2": "Official ESM2-t33-650M FP32, first 1022 residues, final layer mean including EOS",
+  "checkpoint_sha256": {
+    "bermol": "afd1929fdbef6da110b5f4d0688a0f4a5f88fc3fb660bfcc1fb56e9624de38b1",
+    "esm2": "ea9d0522b335a8778dea6535a65301f10208dece28cd5865482b0b1fc446168c"
+  },
+  "files": {
+    "outputs/biomaster_dtiam_ab_20260912/features/BERMOL.npy": "3beb9f39011fcfd79fad2bc14fcf6f564bfa76bd8fd349abc74cadb526b2a599",
+    "outputs/biomaster_dtiam_ab_20260912/features/ESM2.npy": "a5464b891cd57477e37beb0a07fc0853001507f79af2cb4a697a2e3741252b7f",
+    "outputs/biomaster_dtiam_ab_20260912/features/BERMOL_DONE.npy": "eff9af3728fe3fa0eb89c7ea9d49707d72d1164c0e0485ea6559d7c44f2254ea",
+    "outputs/biomaster_dtiam_ab_20260912/features/ESM2_DONE.npy": "a7df8e5b9a8d64087e57abbc3d5094a03619439788707bd97bd05f0e525caef6",
+    "outputs/biomaster_dtiam_ab_20260912/features/CACHE_PROVENANCE.json": "1542711b9431724d2a66c6bfa82c9708c2ffd778ab922a1f8a0e342259f54cbe",
+    "outputs/biomaster_dtiam_ab_20260912/features/BERMOL_PARITY.json": "283a79ec9df547601c3cd596f6aae00b68e580b24586aacb2688d263ea742cd6",
+    "outputs/biomaster_dtiam_ab_20260912/features/ESM2_PARITY.json": "a73f4b15868fede10c4e60f063f6fbc9c6999a28dae5e5a998460436b66f3d2d"
+  },
+  "label_dependency": "NONE"
+}

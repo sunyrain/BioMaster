@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-09-11T17:11:12.774177+00:00",
+  "sources": [
+    {
+      "kind": "drug",
+      "index": "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/MOLECULES.csv.gz",
+      "array": "outputs/biomaster_v3_kirhub_temporal_20260906/temporal/BERMOL.npy",
+      "index_sha256": "aeaed335a7e8df4b8f17cab8f79712768f717c1fcbff7eadb7c4908ea2279ff4",
+      "array_sha256": "e7d9116c5b2f97c84d7223e807f468308c46bd04a009123bea3be3010090b1e1",
+      "reused": 263405,
+      "parity_ids": [
+        2,
+        142075,
+        284491,
+        426897,
+        569805,
+        712765,
+        854446,
+        996695
+      ]
+    },
+    {
+      "kind": "drug",
+      "index": "outputs/biomaster_odti_v4_plan_20260905/CURRENT_MOLECULE_ASSETS_V4.csv.gz",
+      "array": "outputs/biomaster_odti_v4_20260905/features/BERMOL768_FLOAT32_V4.npy",
+      "index_sha256": "c5dc50adc66c32ff936f0e15bc9b7038bc33a0b7fee5d1e88d1714399614365c",
+      "array_sha256": "d2a10aeea29e056bc098f821f37925244f5f94f72ef80cbb04e536fc17956b18",
+      "reused": 21444,
+      "parity_ids": [
+        7,
+        145806,
+        287865,
+        429145,
+        570081,
+        713024,
+        855848,
+        996693
+      ]
+    },
+    {
+      "kind": "protein",
+      "index": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_official_feature_store_v1/DTIAM_ESM2_TARGET_INDEX_V1.csv.gz",
+      "array": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_official_feature_store_v1/DTIAM_ESM2_T33_650M_1280_FLOAT32_V1.npy",
+      "index_sha256": "cff5da8b3529bddb75d776b7bf889c20b907db0bd93035a64f5358cd2c9e714e",
+      "array_sha256": "879a351e2574e3a159697496a2a2245c2eedabc30acd18d7816838157db6cd52",
+      "reused": 425,
+      "parity_ids": [
+        1,
+        744,
+        1354,
+        1920,
+        2661,
+        3520,
+        4234,
+        5082
+      ]
+    },
+    {
+      "kind": "protein",
+      "index": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_PROJECT384_ESM2_INDEX_V1.csv.gz",
+      "array": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_PROJECT384_ESM2_T33_650M_1280_FLOAT32_V1.npy",
+      "index_sha256": "7d01867f34d360f1b05bee1a7514cc824aa3d54cbb75613bd90ec50999c4f8e7",
+      "array_sha256": "069b75459b164018fdb602875f96a8a98552f9d9ca625ada53c8fd807f831f05",
+      "reused": 16,
+      "parity_ids": [
+        115,
+        966,
+        1863,
+        2551,
+        3527,
+        4029,
+        4391,
+        5057
+      ]
+    }
+  ],
+  "required_drugs": 857540,
+  "required_targets": 4742,
+  "drug_reused": 284849,
+  "protein_reused": 441,
+  "protein_truncated_to_1022": 656,
+  "asset_hashes": {
+    "data/processed/biomaster_training_full_20260910_v1/MOLECULES.parquet": "b2b59f72626b84954b6097af08766ce52c277544f9bdd07997ded07241cffde6",
+    "data/processed/biomaster_training_full_20260910_v1/TARGETS.parquet": "c29d500904f24e8dac4398037a39de301dc4b18cd938cc40cc260577f5d00233",
+    "outputs/biomaster_endpoint_ablation_20260911/REQUIRED_DRUG_IDS.npy": "8eedfae3a3d8f51c0320f0abb9faa6e4aad94a6aba3ef024bb5c7de30f191d39",
+    "outputs/biomaster_endpoint_ablation_20260911/REQUIRED_TARGET_IDS.npy": "488e05819b1b80565a3cbc285ed70160cb856685be63bbc953b5b1bca963dc26"
+  }
+}

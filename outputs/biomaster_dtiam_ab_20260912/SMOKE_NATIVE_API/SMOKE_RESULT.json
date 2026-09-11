@@ -1,0 +1,6 @@
+{
+  "status": "PASS_API_ONLY",
+  "rows": 600,
+  "model_count": 12,
+  "note": "Only training rows; deliberately tiny learner budgets. Not a performance result or formal fit."
+}

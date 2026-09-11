@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "samples": [
+    {
+      "target_feature_index": 1,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 744,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 1354,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 1920,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 2661,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 3520,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 4234,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 5082,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 115,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 966,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 1863,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 2551,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 3527,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 4029,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 4391,
+      "max_abs_error": 0.0
+    },
+    {
+      "target_feature_index": 5057,
+      "max_abs_error": 0.0
+    }
+  ]
+}

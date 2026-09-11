@@ -63,3 +63,7 @@ GPU实测：平均30、60、90次完整池曝光对应整轮约64、128、192分
 入口：`scripts/prepare_assay_aware_20260911.py`、`scripts/run_assay_aware_20260911.py`。训练退出后可用同一命令恢复，文件或代码身份改变会拒绝静默续跑。报告入口为`scripts/report_assay_aware_20260911.py --wait`。
 
 数据和运行文件位于`outputs/biomaster_assay_aware_20260911/`。`PROTOCOL.json`、`DATA_MANIFEST.json`、`PRETRAIN_VERIFICATION.json`记录冻结协议、来源哈希和检查；`THROUGHPUT_ETA.json`记录实测速度。运行日志、模型、特征和较大Parquet留在本地。生产模型、矩阵排名和已交付SPR384实验表保持其既有版本。
+
+**DTIAM 同数据补齐。**
+
+九月 A/B 的 DTIAM 重训已另行组织，范围为 A 337,570 对、B 1,116,270 对，各三个种子；此前历史 DTIAM 不计入这些新拟合。训练、特征规则与统一评估方案见 [DTIAM 九月 A/B 全量补齐](BIOMASTER_DTIAM_AB_RETRAIN_20260912_ZH.md)，实时状态见 [DTIAM STATUS.json](../outputs/biomaster_dtiam_ab_20260912/STATUS.json)。最终性能需等待六套正式拟合及门控测试完成，不用接口检查替代成绩。

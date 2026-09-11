@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "cache_vs_official": [
+    {
+      "drug_feature_index": 2,
+      "max_abs_error": 1.862645149230957e-06
+    },
+    {
+      "drug_feature_index": 142075,
+      "max_abs_error": 8.270144462585449e-07
+    },
+    {
+      "drug_feature_index": 284491,
+      "max_abs_error": 1.087784767150879e-06
+    },
+    {
+      "drug_feature_index": 426897,
+      "max_abs_error": 1.1324882507324219e-06
+    },
+    {
+      "drug_feature_index": 569805,
+      "max_abs_error": 1.1026859283447266e-06
+    },
+    {
+      "drug_feature_index": 712765,
+      "max_abs_error": 1.2516975402832031e-06
+    },
+    {
+      "drug_feature_index": 854446,
+      "max_abs_error": 9.5367431640625e-07
+    },
+    {
+      "drug_feature_index": 996695,
+      "max_abs_error": 9.834766387939453e-07
+    },
+    {
+      "drug_feature_index": 7,
+      "max_abs_error": 1.1920928955078125e-06
+    },
+    {
+      "drug_feature_index": 145806,
+      "max_abs_error": 1.3709068298339844e-06
+    },
+    {
+      "drug_feature_index": 287865,
+      "max_abs_error": 1.0654330253601074e-06
+    },
+    {
+      "drug_feature_index": 429145,
+      "max_abs_error": 1.043081283569336e-06
+    },
+    {
+      "drug_feature_index": 570081,
+      "max_abs_error": 1.341104507446289e-06
+    },
+    {
+      "drug_feature_index": 713024,
+      "max_abs_error": 1.296401023864746e-06
+    },
+    {
+      "drug_feature_index": 855848,
+      "max_abs_error": 1.3709068298339844e-06
+    },
+    {
+      "drug_feature_index": 996693,
+      "max_abs_error": 1.1026859283447266e-06
+    }
+  ],
+  "batch_vs_official_errors": [
+    1.4007091522216797e-06,
+    1.1324882507324219e-06
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "STOPPED_REDUNDANT_TABLE_PROFILE",
+  "utc": "2026-09-11T17:31:13.893378+00:00",
+  "rss_GiB": 41.19029235839844,
+  "reason": "Conservative probe retained redundant full input table; retry exact fit_extra memory layout without that copy."
+}

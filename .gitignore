@@ -363,3 +363,12 @@ Thumbs.db
 !/scripts/prepare_assay_aware_20260911.py
 !/scripts/run_assay_aware_20260911.py
 !/scripts/report_assay_aware_20260911.py
+
+# Full September DTIAM compatible A/B retraining and common evaluation.
+!/scripts/dtiam_ab_common_20260912.py
+!/scripts/build_dtiam_ab_features_20260912.py
+!/scripts/prepare_dtiam_ab_20260912.py
+!/scripts/profile_dtiam_ab_resources_20260912.py
+!/scripts/train_dtiam_ab_20260912.py
+!/scripts/run_dtiam_ab_20260912.py
+!/scripts/report_dtiam_ab_20260912.py

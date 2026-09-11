@@ -1,0 +1,15 @@
+{
+  "python": "3.10.20",
+  "packages": {
+    "autogluon.tabular": "1.4.0",
+    "autogluon.core": "1.4.0",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "lightgbm": "4.6.0",
+    "catboost": "1.2.10",
+    "xgboost": "3.0.5",
+    "fastai": "2.8.8"
+  }
+}

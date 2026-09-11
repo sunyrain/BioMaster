@@ -1,0 +1,14 @@
+{
+  "updated_utc": "2026-09-11T17:30:42.409221+00:00",
+  "feature_completion": "COMPLETE",
+  "historical_s5_pairs": 65276,
+  "historical_s5_fit_seconds": 1609.118,
+  "seeds": 3,
+  "linear_estimate_fit_hours": 29.86549565332843,
+  "initial_planning_hours": [
+    24,
+    60
+  ],
+  "basis": "historical 20 CPU DTIAM native suite row scaling; current full-fit runtime not yet measured",
+  "note": "Update after first full suite; native stopping and full-data scaling may move outside this range"
+}

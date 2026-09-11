@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-09-11T17:27:36.239590+00:00",
+  "inputs": {
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_ablation_20260911/REQUIRED_DRUG_IDS.npy": "8eedfae3a3d8f51c0320f0abb9faa6e4aad94a6aba3ef024bb5c7de30f191d39",
+    "outputs/biomaster_endpoint_ablation_20260911/REQUIRED_TARGET_IDS.npy": "488e05819b1b80565a3cbc285ed70160cb856685be63bbc953b5b1bca963dc26",
+    "data/processed/biomaster_training_full_20260910_v1/MOLECULES.parquet": "b2b59f72626b84954b6097af08766ce52c277544f9bdd07997ded07241cffde6",
+    "data/processed/biomaster_training_full_20260910_v1/TARGETS.parquet": "c29d500904f24e8dac4398037a39de301dc4b18cd938cc40cc260577f5d00233",
+    "outputs/biomaster_dtiam_ab_20260912/AUTOGLUON_HYPERPARAMETERS.json": "bbd937b4e61c79cbb79f172063baeec9e7f0e6e3038aa12b8f8b53db0f958901",
+    "outputs/biomaster_dtiam_ab_20260912/ENVIRONMENT.json": "e8d2111de0e85ef8f1336ae40a72e440afe1bacdf3fdded5f669614ca6835020",
+    "outputs/biomaster_assay_aware_20260911/STRICT_SOURCE_ASSAY_FLAGS.parquet": "e9ba28ab83d0d7ca0d662cabb036727942d57f5539fb95a33f26b52c8c2966a5",
+    "outputs/biomaster_model_consolidation_20260911/RECOMMENDED_MODELS.json": "84c328ae8a08ee95f28e99203a33e54053ef1cf7b8719febb11003eb31b14129",
+    "outputs/biomaster_model_consolidation_20260911/MODEL_LEDGER.csv": "7e2fbdce33bc529bb1d417fe2c3cbb52a89bdd278cea12d2e9639b256acc88bc",
+    "outputs/biomaster_model_decision_audit_20260911/WETLAB112_TARGET_BENCHMARK.csv": "9a3ddc9e87c3619fc3a97b255baf9ef6a32bca733f4bdaeccc0c2ef7b381cb1a",
+    "outputs/biomaster_old_production_comparison_20260911/TEST_PREDICTIONS.parquet": "42d262ec44327877cbc574ad3eab3a49e8a077bc03382d4cd83565998326595c",
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c"
+  },
+  "code": {
+    "scripts/dtiam_ab_common_20260912.py": "7a2035a1348d432c2fca2b240f8433b228c7434020d03860451c66e49343bbf9",
+    "scripts/build_dtiam_ab_features_20260912.py": "0af2cfff54a9c908bb131de5f4b7f3763e2b578e14cddc64222c6b77241d18d0",
+    "scripts/prepare_dtiam_ab_20260912.py": "7620e14e1f741e0623df3f1917ea8d853a68e107004c248fc3df73068ad17d01",
+    "scripts/train_dtiam_ab_20260912.py": "e0da235cec900f0e3fe6037439dd97185d62cec79431eca72f462dfae117da69",
+    "scripts/report_dtiam_ab_20260912.py": "07d514877aba82a3dcd98f08d482e20cf6186928764ea8742f37ee454d16795c",
+    "scripts/run_dtiam_ab_20260912.py": "e6b21d423561fd803717e17925a18cc17cb89502f7341ddb7818c550efae4923",
+    "scripts/profile_dtiam_ab_resources_20260912.py": "bc5b3894c0d46c84df099cc862f26cdc0d8aad58756ff994c77ec829e859244e"
+  },
+  "frozen_inputs": {
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+  },
+  "protocol_sha256": "84532bed4d3a2515ee1cf1eb64f5c5ec1d750ed1777625e07dd31f5f4982187d",
+  "preflight_amendments": [
+    {
+      "utc": "2026-09-11T17:32:07.280337+00:00",
+      "file": "scripts/profile_dtiam_ab_resources_20260912.py",
+      "before_sha256": "a2b5ece005f9f0dca6b6a012669e49361d16e7d06ad75777363bf07c7901f2ca",
+      "after_sha256": "bc5b3894c0d46c84df099cc862f26cdc0d8aad58756ff994c77ec829e859244e",
+      "reason": "Measure exact isolated fit_extra memory layout by releasing redundant unsplit table; no training/validation/test members or learner parameters changed; zero formal fits started."
+    }
+  ]
+}
