@@ -1,0 +1,10 @@
+{
+  "all_pass": true,
+  "original_pair_ids_order_and_utility_exactly_reproduced": true,
+  "six_original_budget_scenarios_reproduced": true,
+  "all_model_review_dispositions_and_counts_verified": true,
+  "unreviewed_not_selected": true,
+  "incomplete_pools_not_mislabeled_as384": true,
+  "frozen_inputs_unchanged": true,
+  "models_audited": 11
+}

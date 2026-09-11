@@ -1,0 +1,49 @@
+{
+  "input_sha256": {
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/joint384_comprehensive_20260909/FULL574_COMPREHENSIVE_AUDIT.csv": "3b5892e2002298fcb80717c7f404b5d39778ed1ab49ece36474e14537952eab4",
+    "outputs/joint384_comprehensive_20260909/RECOMMENDED_CANDIDATES_384.csv": "bf1ac323287c3b54c4ca92a5326e9da3e39f355fad60f2ac3edf672d0c4ef042",
+    "outputs/joint384_comprehensive_20260909/TARGET_BUDGET_COMPARISON.csv": "06d786331eb31b2641ef7d81f347880ddcb6ed6fd3b466cde0381992da01efea",
+    "outputs/biomaster_ab_ranking_selection_20260911/CORE276480_SELECTION_AUDIT.parquet": "df7df2851ad0a76299591bb6d8cbaf2b5d76e06eaa1b6c7c6c98ef4b6c30c6c5",
+    "outputs/biomaster_ab_ranking_selection_20260911/old_production_DIRECTIONAL_LOGITS.npy": "060995532ed2da59154b5eb259f8cea589c4157786fbbc3dd5cc8eff20035c87",
+    "scripts/build_joint384_comprehensive_20260909.py": "a99c191ec34554112d89d3465ffe0a9de163578b79606c09cb710e77f3732ec5",
+    "scripts/screen_joint_720x384_20260909.py": "8658b80cc3f2335cc44debe0399d32ba29508808324924c6df0b03aa781bfe12"
+  },
+  "operation": "Restore original selection pipeline; replace entire initial scoring source only, not retrain or reconstruct a hybrid score.",
+  "full_scope": "Same 720 drugs x 384 targets, ranking before all exclusions, pandas rank(method=first) in original row order",
+  "original_screen": "Frozen base_eligible; new within-drug rank<=20; TxGNN top50 / OT>=0.3 same disease; three biochemical lanes",
+  "original_review": "Recompute frozen574 review-pass formula; missing review remains pending, never assumed passed",
+  "inherited_identity_hold": "Previously established molecule identity hold applies to other pairs for that same exact molecule",
+  "original_utility": "Unchanged original_quality + 20*integrated_priority; original solve() also rewards distinct drugs by 0.001",
+  "resource_budgets": [
+    [
+      64,
+      10
+    ],
+    [
+      80,
+      10
+    ],
+    [
+      96,
+      10
+    ],
+    [
+      96,
+      12
+    ],
+    [
+      112,
+      10
+    ],
+    [
+      112,
+      12
+    ]
+  ],
+  "drug_and_connectivity_cap": 4,
+  "minimum_drugs": 128,
+  "candidate_count": 384,
+  "budget_policy": "Same max integrated priority, max usable chemical support, >=95% best evidence utility, then lowest target count/cap",
+  "not_done": "No transfer of review approval to new pairs; no lowering thresholds; no fixed per-target slots; no replacement of wet-lab list"
+}

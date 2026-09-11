@@ -339,3 +339,6 @@ Thumbs.db
 
 # Existing external-model agreement audit.
 !/scripts/audit_ab_external_agreement_20260911.py
+
+# Original SPR384 policy replay, no frozen-list replacement.
+!/scripts/replay_original_spr384_policy_20260911.py

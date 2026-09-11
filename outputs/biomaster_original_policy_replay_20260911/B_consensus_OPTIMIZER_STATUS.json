@@ -1,0 +1,8 @@
+{
+  "status": "INSUFFICIENT_REVIEWED_ELIGIBLE_PAIRS",
+  "reviewed_eligible": 59,
+  "reviewed_drugs": 47,
+  "required_pairs": 384,
+  "required_min_drugs": 128,
+  "reason": "Original fixed-size portfolio constraints are analytically infeasible; no padding or unreviewed substitutions."
+}

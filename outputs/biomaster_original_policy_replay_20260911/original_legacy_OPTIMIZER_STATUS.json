@@ -1,0 +1,20 @@
+{
+  "status": "SELECTED384",
+  "target_count": 112,
+  "drug_cap": 4,
+  "target_cap": 10,
+  "cross_weight": 2.0,
+  "chem_weight": 4.0,
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_gap": 0.0,
+  "candidates": 384,
+  "drugs": 229,
+  "integrated_priority": 1,
+  "chemical_ge04": 20,
+  "cross_area_pairs": 195,
+  "exact_genetic_pairs": 126,
+  "evidence_utility": 1728.25,
+  "objective_utility": 1748.25,
+  "legacy_low_priority": 224
+}
