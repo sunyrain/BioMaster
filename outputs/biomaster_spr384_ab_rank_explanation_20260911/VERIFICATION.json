@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "input_hashes_match": true,
+  "artifact_hashes_match": true,
+  "unique_frozen_pairs": 384,
+  "rank_bins_and_totals_match": true,
+  "new_pool_dispositions_match": true,
+  "both_top20": 17,
+  "either_top20": 82
+}

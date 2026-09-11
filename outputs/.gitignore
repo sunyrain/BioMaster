@@ -875,3 +875,13 @@
 !/biomaster_original_policy_replay_20260911/B_consensus_OPTIMIZER_STATUS.json
 !/biomaster_original_policy_replay_20260911/original_legacy_OPTIMIZER_STATUS.json
 !/biomaster_original_policy_replay_20260911/NEW_PAIR_REVIEW_QUEUE.csv.gz
+
+# Frozen SPR384 rank explanations and known hold audit.
+!/biomaster_spr384_ab_rank_explanation_20260911/KNOWN_HOLD_DETAILS.csv
+!/biomaster_spr384_ab_rank_explanation_20260911/NEW_POOL_REASON_COUNTS.csv
+!/biomaster_spr384_ab_rank_explanation_20260911/RANK_DISTRIBUTION.csv
+!/biomaster_spr384_ab_rank_explanation_20260911/RANK_STATISTICS.csv
+!/biomaster_spr384_ab_rank_explanation_20260911/SPR384_AB_RANKING_EXPLANATION.csv
+!/biomaster_spr384_ab_rank_explanation_20260911/SPR384_BOTH_TOP20_17.csv
+!/biomaster_spr384_ab_rank_explanation_20260911/SUMMARY.json
+!/biomaster_spr384_ab_rank_explanation_20260911/VERIFICATION.json

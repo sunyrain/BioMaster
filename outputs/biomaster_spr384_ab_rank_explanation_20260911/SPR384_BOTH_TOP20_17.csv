@@ -1,0 +1,18 @@
+﻿排序,原候选编号,小分子药物名称,新靶点名称,当前实验建议,pair_id,原药内排名_384,A药内排名_384,A排名变化_正数为后移,A排名区间,A原规则去向,A三个种子Top20次数,A_种子20260921_药内排名,A_种子20260922_药内排名,A_种子20260923_药内排名,A靶点内药物排名_720,B药内排名_384,B排名变化_正数为后移,B排名区间,B原规则去向,B三个种子Top20次数,B_种子20260921_药内排名,B_种子20260922_药内排名,B_种子20260923_药内排名,B靶点内药物排名_720,共识Top20组合
+13,C384-157,oxycodone,CA7 — Carbonic anhydrase 7,仍可探索,BRUQQQPBMZOVGD-XFKAJCMBSA-N__CHEMBL2326,2,3,1,1–10,通过原Top20及既有审核,3,2,9,3,139,20,18,11–20,通过原Top20及既有审核,1,132,9,43,590,A和B均在Top20
+27,C384-102,nimodipine,CA7 — Carbonic anhydrase 7,仍可探索,UIAGMCDKSXEBJQ-UHFFFAOYSA-N__CHEMBL2326,4,5,1,1–10,通过原Top20及既有审核,2,6,1,28,52,3,-1,1–10,通过原Top20及既有审核,2,3,33,5,53,A和B均在Top20
+52,C384-032,desonide,NR3C2 — Mineralocorticoid receptor,仍可探索,WBGKWQHBNHJJPZ-LECWWXJVSA-N__CHEMBL1994,7,1,-6,1–10,通过原Top20及既有审核,3,7,5,2,64,5,-2,1–10,通过原Top20及既有审核,2,18,12,83,53,A和B均在Top20
+55,C384-201,methocarbamol,CA4 — Carbonic anhydrase 4,仍可探索,GNXFOGHNGIVQEH-UHFFFAOYSA-N__CHEMBL3729,7,14,7,11–20,通过原Top20及既有审核,1,83,8,35,616,5,-2,1–10,通过原Top20及既有审核,2,52,2,6,313,A和B均在Top20
+78,C384-126,metoprolol,CA7 — Carbonic anhydrase 7,仍可探索,IUBSYMUCCVWXPE-UHFFFAOYSA-N__CHEMBL2326,9,2,-7,1–10,通过原Top20及既有审核,2,2,151,2,488,4,-5,1–10,通过原Top20及既有审核,3,8,12,2,564,A和B均在Top20
+79,C384-209,indacaterol,CA2 — Carbonic anhydrase 2,仍可探索,QZZUEBNBZAPZLX-QFIPXVFZSA-N__CHEMBL205,9,20,11,11–20,通过原Top20及既有审核,1,21,6,53,210,12,3,11–20,通过原Top20及既有审核,3,15,20,13,164,A和B均在Top20
+94,C384-226,nimodipine,CA12 — Carbonic anhydrase 12,仍可探索,UIAGMCDKSXEBJQ-UHFFFAOYSA-N__CHEMBL3242,10,9,-1,1–10,通过原Top20及既有审核,2,16,30,17,94,1,-9,1–10,通过原Top20及既有审核,3,1,3,1,26,A和B均在Top20
+109,C384-111,lisinopril,NR3C2 — Mineralocorticoid receptor,仍可探索,RLAWWYSOJDYHDC-BZSNNMDCSA-N__CHEMBL1994,11,4,-7,1–10,通过原Top20及既有审核,2,25,10,11,277,20,9,11–20,通过原Top20及既有审核,1,17,88,30,282,A和B均在Top20
+113,C384-335,relebactam,MMP8 — Neutrophil collagenase,仍可探索,SMOBCLHAZXOKDQ-ZJUUUORDSA-N__CHEMBL4588,11,3,-8,1–10,通过原Top20及既有审核,2,35,6,5,176,2,-9,1–10,通过原Top20及既有审核,2,2,31,5,21,A和B均在Top20
+136,C384-339,pramipexole,CA2 — Carbonic anhydrase 2,仍可探索,FASDKYOPVNHBLU-ZETCQYMHSA-N__CHEMBL205,13,20,7,11–20,通过原Top20及既有审核,1,74,125,2,221,1,-12,1–10,通过原Top20及既有审核,3,1,2,3,100,A和B均在Top20
+170,C384-113,amlodipine,CA12 — Carbonic anhydrase 12,仍可探索,HTIQEAQVCYTUBX-UHFFFAOYSA-N__CHEMBL3242,16,8,-8,1–10,通过原Top20及既有审核,2,8,45,6,191,1,-15,1–10,通过原Top20及既有审核,3,2,2,1,25,A和B均在Top20
+179,C384-150,methocarbamol,CA7 — Carbonic anhydrase 7,仍可探索,GNXFOGHNGIVQEH-UHFFFAOYSA-N__CHEMBL2326,17,1,-16,1–10,通过原Top20及既有审核,3,1,1,5,454,4,-13,1–10,通过原Top20及既有审核,3,6,3,4,310,A和B均在Top20
+228,C384-090,levamlodipine,CA7 — Carbonic anhydrase 7,先解决具体问题,HTIQEAQVCYTUBX-KRWDZBQOSA-N__CHEMBL2326,1,9,8,1–10,通过原Top20及既有审核,3,16,18,5,234,7,6,1–10,通过原Top20及既有审核,2,3,29,13,69,A和B均在Top20
+244,C384-266,oxycodone,CA2 — Carbonic anhydrase 2,先解决具体问题,BRUQQQPBMZOVGD-XFKAJCMBSA-N__CHEMBL205,3,10,7,1–10,通过原Top20及既有审核,2,24,7,12,120,11,8,11–20,通过原Top20及既有审核,1,82,3,56,381,A和B均在Top20
+263,C384-108,teriflunomide,XDH — Xanthine dehydrogenase/oxidase,先解决具体问题,UTNUDOFZCWSZMS-YFHOEESVSA-N__CHEMBL1929,5,11,6,11–20,通过原Top20及既有审核,1,22,28,18,85,2,-3,1–10,通过原Top20及既有审核,2,11,8,24,100,A和B均在Top20
+273,C384-123,esmolol,CA7 — Carbonic anhydrase 7,先解决具体问题,AQNDDEOPVVGCPG-UHFFFAOYSA-N__CHEMBL2326,7,2,-5,1–10,通过原Top20及既有审核,3,7,17,1,491,3,-4,1–10,通过原Top20及既有审核,3,3,7,9,410,A和B均在Top20
+295,C384-270,olopatadine,NR3C1 — Glucocorticoid receptor,先解决具体问题,JBIMVDZLSHOPLA-LSCVHKIXSA-N__CHEMBL2034,9,1,-8,1–10,通过原Top20及既有审核,3,6,3,1,31,14,5,11–20,通过原Top20及既有审核,1,86,12,38,161,A和B均在Top20

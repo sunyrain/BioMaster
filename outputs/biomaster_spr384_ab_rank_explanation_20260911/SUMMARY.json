@@ -1,0 +1,71 @@
+{
+  "status": "COMPLETE",
+  "input_sha256": {
+    "outputs/biomaster_original_policy_replay_20260911/SPR384_ORIGINAL_POLICY_AB_CHECK.csv": "f17e6763bd81d7372b18dd88b0c415da667b836df65ff953fa525e1d337c9c46",
+    "outputs/biomaster_original_policy_replay_20260911/SCREEN_AND_REVIEW_DISPOSITION.csv.gz": "d2e74e30d7ccacc9e6cead29d0f2aea0c1ab8f3e61e81d8f7308855129d3c7ea",
+    "outputs/biomaster_original_policy_replay_20260911/ORIGINAL_POLICY_COMPARISON.csv": "c9f4a05790d9e31d51a73eb8d73b571afd6d631b9475f6e51c2646687eb88e88",
+    "outputs/joint384_comprehensive_20260909/FULL574_COMPREHENSIVE_AUDIT.csv": "3b5892e2002298fcb80717c7f404b5d39778ed1ab49ece36474e14537952eab4",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/biomaster_ab_ranking_selection_20260911/SPR384_MODEL_RANK_AND_RETENTION.csv": "d3036a502bd16796b0b1988b11e29807db5c74f31e0117144603668815fb7a4d"
+  },
+  "frozen_inputs_unchanged": true,
+  "original384_loss_is_rank_gate_only": true,
+  "original384_rank_stats": [
+    {
+      "model": "A",
+      "pairs": 384,
+      "top20": 50,
+      "rank_only_gate_loss": 334,
+      "additional_nonmodel_rejections": 0,
+      "top50": 100,
+      "top100": 161,
+      "mean_rank": 143.91666666666666,
+      "median_rank": 125.0,
+      "q25": 47.0,
+      "q75": 226.25,
+      "minimum": 1,
+      "maximum": 381,
+      "all_three_seeds_top20": 10,
+      "any_seed_top20": 101
+    },
+    {
+      "model": "B",
+      "pairs": 384,
+      "top20": 49,
+      "rank_only_gate_loss": 335,
+      "additional_nonmodel_rejections": 0,
+      "top50": 94,
+      "top100": 166,
+      "mean_rank": 139.65104166666666,
+      "median_rank": 119.5,
+      "q25": 51.75,
+      "q75": 216.0,
+      "minimum": 1,
+      "maximum": 381,
+      "all_three_seeds_top20": 14,
+      "any_seed_top20": 87
+    }
+  ],
+  "original384_joint_top20": {
+    "A和B均未进Top20": 302,
+    "仅A在Top20": 33,
+    "仅B在Top20": 32,
+    "A和B均在Top20": 17
+  },
+  "primary_reason_priority": "passed, pending, identity, prior HOLD/EXCLUDE, close-negative, disease, prior-activity, deep-review; all overlapping flags retained",
+  "caveats": [
+    "Ranks are within each drug among 384 targets, not among the 384 experimental candidates.",
+    "Review-pending is not a failed biological hypothesis; prior activity is not necessarily positive binding.",
+    "This explains deterministic filtering, not neural causal mechanisms or SPR success probability."
+  ],
+  "source_sha256": "23516f56958516b1e3414297a788681e270bd39d7ee29618164305c79373d195",
+  "artifacts": {
+    "SPR384_AB_RANKING_EXPLANATION.csv": "736f96241d6ab8e50ab2ac39c5a77610c707b8da1ff0092df4468d95d0810d4a",
+    "SPR384_BOTH_TOP20_17.csv": "b5cf86052361dc6d3ee5e3857336edbe148ac5fda79b8aa62702936188102175",
+    "RANK_DISTRIBUTION.csv": "ae3372c8e17cc93ddbc621517adbedba6017126c19c6b8e3278e9a884a0cb4c7",
+    "RANK_STATISTICS.csv": "c4ba333abd90911014ff331101f034e294bf2711190832ec43f4db0818524624",
+    "NEW_POOL_REASONS_ALL_ROWS.csv.gz": "ae2f8038af52774123c29b4f762f64d1f0e94173c2a2e5418e3e68db0099ad43",
+    "KNOWN_HOLD_DETAILS.csv": "b75f64209300b2cd320ff0c0c87fa2b46a5e984052e8597dc3504fb1319e8175",
+    "NEW_POOL_REASON_COUNTS.csv": "829c265871cc5ecb0d96c4517f5dae9f1fb9bb7488eef74d948703fba39b028f"
+  }
+}

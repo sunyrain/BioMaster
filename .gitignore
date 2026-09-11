@@ -342,3 +342,6 @@ Thumbs.db
 
 # Original SPR384 policy replay, no frozen-list replacement.
 !/scripts/replay_original_spr384_policy_20260911.py
+
+# Explain frozen SPR384 ranks under A/B.
+!/scripts/explain_original384_ab_rankings_20260911.py
