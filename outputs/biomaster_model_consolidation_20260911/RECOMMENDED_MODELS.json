@@ -1,0 +1,236 @@
+{
+  "status": "RESEARCH_RECOMMENDATIONS_EXISTING_WEIGHTS",
+  "primary_role_for_current_SPR": "binding",
+  "roles": {
+    "binding": {
+      "model_id": "multitask__kdki_inactive__binary__20260921",
+      "stage": "multitask",
+      "arm": "kdki_inactive",
+      "variant": "binary",
+      "seed": 20260921,
+      "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/model.pt",
+      "checkpoint_sha256": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+      "calibration": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/CALIBRATION.json",
+      "validation_metric": "validation_binding_ap",
+      "family_validation_mean": 0.9642099812469137,
+      "representative_validation_value": 0.9665339932336595,
+      "test_metric_panel": "AFFINITY_KD_KI",
+      "representative_test": {
+        "ap": 0.9583505170384772,
+        "auroc": 0.9166476204879888,
+        "target_macro_ap": 0.6935429508144152,
+        "drug_macro_ap": 0.6229627227836807,
+        "balanced_query_ap": 0.6582528367990479,
+        "target_p5": 0.6395348837209303,
+        "drug_p5": 0.5962962962962963,
+        "target_p20": 0.5789603960396039,
+        "drug_p20": 0.26833333333333337
+      },
+      "family_test_mean": {
+        "ap": 0.9555030741111114,
+        "auroc": 0.9151169231060322,
+        "target_macro_ap": 0.6979201832925584,
+        "drug_macro_ap": 0.6084496892327745,
+        "balanced_query_ap": 0.6531849362626665,
+        "target_p5": 0.6409560723514212,
+        "drug_p5": 0.5790123456790124,
+        "target_p20": 0.5773102310231023,
+        "drug_p20": 0.26333333333333336
+      },
+      "family_member_ids": [
+        "multitask__kdki_inactive__binary__20260921",
+        "multitask__kdki_inactive__binary__20260922",
+        "multitask__kdki_inactive__binary__20260923"
+      ],
+      "score": "mean of the two binary logits",
+      "auxiliary_regression_trained": false,
+      "deployed": false,
+      "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+      "representative_endpoint_test": {
+        "AFFINITY_KD_KI": {
+          "pairs": 34327,
+          "positive": 23190,
+          "negative": 11137,
+          "ap": 0.9583505170384772,
+          "auroc": 0.9166476204879888
+        },
+        "ACTIVITY_IC50": {
+          "pairs": 85704,
+          "positive": 65173,
+          "negative": 20531,
+          "ap": 0.86890643838183,
+          "auroc": 0.7030382060959834
+        },
+        "ACTIVITY_EC50": {
+          "pairs": 11957,
+          "positive": 8543,
+          "negative": 3414,
+          "ap": 0.8300769621263273,
+          "auroc": 0.6872971982735122
+        },
+        "ALL_ENDPOINT_UNION": {
+          "pairs": 132331,
+          "positive": 93249,
+          "negative": 39082,
+          "ap": 0.87812695632341,
+          "auroc": 0.7651842302093324
+        }
+      }
+    },
+    "ranking": {
+      "model_id": "multitask__kdki_inactive__joint__20260923",
+      "stage": "multitask",
+      "arm": "kdki_inactive",
+      "variant": "joint",
+      "seed": 20260923,
+      "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__joint__seed_20260923/model.pt",
+      "checkpoint_sha256": "40261afc4a18e047a9343058d689dde781621945b2c31b6e6c4081ebd4b60e75",
+      "calibration": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__joint__seed_20260923/CALIBRATION.json",
+      "validation_metric": "validation_balanced_query_ap",
+      "family_validation_mean": 0.7078103087967286,
+      "representative_validation_value": 0.7145813800750571,
+      "test_metric_panel": "AFFINITY_KD_KI",
+      "representative_test": {
+        "ap": 0.9522049139010276,
+        "auroc": 0.9117577880537056,
+        "target_macro_ap": 0.7046662337999976,
+        "drug_macro_ap": 0.6343901823378855,
+        "balanced_query_ap": 0.6695282080689415,
+        "target_p5": 0.6468992248062014,
+        "drug_p5": 0.5740740740740742,
+        "target_p20": 0.5788366336633664,
+        "drug_p20": 0.275
+      },
+      "family_test_mean": {
+        "ap": 0.9468223680616029,
+        "auroc": 0.903524356167336,
+        "target_macro_ap": 0.6955815002295954,
+        "drug_macro_ap": 0.6274077337161538,
+        "balanced_query_ap": 0.6614946169728746,
+        "target_p5": 0.6396640826873385,
+        "drug_p5": 0.5740740740740741,
+        "target_p20": 0.5762376237623762,
+        "drug_p20": 0.26166666666666666
+      },
+      "family_member_ids": [
+        "multitask__kdki_inactive__joint__20260921",
+        "multitask__kdki_inactive__joint__20260922",
+        "multitask__kdki_inactive__joint__20260923"
+      ],
+      "score": "mean of the two binary logits",
+      "auxiliary_regression_trained": true,
+      "deployed": false,
+      "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+      "representative_endpoint_test": {
+        "AFFINITY_KD_KI": {
+          "pairs": 34327,
+          "positive": 23190,
+          "negative": 11137,
+          "ap": 0.9522049139010276,
+          "auroc": 0.9117577880537056
+        },
+        "ACTIVITY_IC50": {
+          "pairs": 85704,
+          "positive": 65173,
+          "negative": 20531,
+          "ap": 0.8650436244514527,
+          "auroc": 0.6820477546644095
+        },
+        "ACTIVITY_EC50": {
+          "pairs": 11957,
+          "positive": 8543,
+          "negative": 3414,
+          "ap": 0.8354830280878598,
+          "auroc": 0.6819153987262205
+        },
+        "ALL_ENDPOINT_UNION": {
+          "pairs": 132331,
+          "positive": 93249,
+          "negative": 39082,
+          "ap": 0.869787162397088,
+          "auroc": 0.7469798722414992
+        }
+      }
+    },
+    "activity": {
+      "model_id": "multitask__all_inactive__binary__20260922",
+      "stage": "multitask",
+      "arm": "all_inactive",
+      "variant": "binary",
+      "seed": 20260922,
+      "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/model.pt",
+      "checkpoint_sha256": "29011320c118fa7d91959b4433ba5b5259eb1f838247518ed91e18be218483e1",
+      "calibration": "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/CALIBRATION.json",
+      "validation_metric": "validation_activity_ap",
+      "family_validation_mean": 0.9712187484493103,
+      "representative_validation_value": 0.9714743829745486,
+      "test_metric_panel": "AFFINITY_KD_KI",
+      "representative_test": {
+        "ap": 0.92118760586681,
+        "auroc": 0.8596920326996442,
+        "target_macro_ap": 0.654308831391991,
+        "drug_macro_ap": 0.5493188713030752,
+        "balanced_query_ap": 0.6018138513475331,
+        "target_p5": 0.6034883720930232,
+        "drug_p5": 0.5111111111111112,
+        "target_p20": 0.561509900990099,
+        "drug_p20": 0.22666666666666666
+      },
+      "family_test_mean": {
+        "ap": 0.917034670291831,
+        "auroc": 0.8623364146273982,
+        "target_macro_ap": 0.6568858359575498,
+        "drug_macro_ap": 0.5431991032119643,
+        "balanced_query_ap": 0.6000424695847569,
+        "target_p5": 0.6058139534883721,
+        "drug_p5": 0.5197530864197532,
+        "target_p20": 0.5664191419141914,
+        "drug_p20": 0.23722222222222222
+      },
+      "family_member_ids": [
+        "multitask__all_inactive__binary__20260921",
+        "multitask__all_inactive__binary__20260922",
+        "multitask__all_inactive__binary__20260923"
+      ],
+      "score": "mean of the two binary logits",
+      "auxiliary_regression_trained": false,
+      "deployed": false,
+      "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+      "representative_endpoint_test": {
+        "AFFINITY_KD_KI": {
+          "pairs": 34327,
+          "positive": 23190,
+          "negative": 11137,
+          "ap": 0.92118760586681,
+          "auroc": 0.8596920326996442
+        },
+        "ACTIVITY_IC50": {
+          "pairs": 85704,
+          "positive": 65173,
+          "negative": 20531,
+          "ap": 0.9825853829059689,
+          "auroc": 0.9520463619761579
+        },
+        "ACTIVITY_EC50": {
+          "pairs": 11957,
+          "positive": 8543,
+          "negative": 3414,
+          "ap": 0.9656324797724889,
+          "auroc": 0.9326133222738056
+        },
+        "ALL_ENDPOINT_UNION": {
+          "pairs": 132331,
+          "positive": 93249,
+          "negative": 39082,
+          "ap": 0.9643660462442757,
+          "auroc": 0.925848010086699
+        }
+      }
+    }
+  },
+  "selection": "Among 18 validation-converged families: highest three-seed mean validation metric for the use case, then highest validation member within that family; no ensemble.",
+  "policy_disclosure": "Role-specific synthesis performed after earlier test reports were viewed; no claim of a fresh independent selection experiment. Existing checkpoints were originally selected by validation balanced query AP.",
+  "legacy_scope": "Legacy and fixed-budget models are retained in comparisons, not included in the 54-converged-fit family selection.",
+  "production_replaced": false,
+  "wetlab_reselected": false
+}

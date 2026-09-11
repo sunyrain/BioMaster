@@ -1,0 +1,5 @@
+direction,metric,queries,binding_family_value,ranking_family_value,ranking_minus_binding,ci95_low,ci95_high,interpretation
+target,macro_ap,516,0.6979201832925586,0.6955815002295955,-0.0023386830629630808,-0.009227106246652326,0.004715852132854607,Exploratory paired query bootstrap conditional on three seeds; no multiplicity correction or independent confirmation.
+target,p5,516,0.6409560723514213,0.6396640826873385,-0.0012919896640826898,-0.007751937984496129,0.00503875968992248,Exploratory paired query bootstrap conditional on three seeds; no multiplicity correction or independent confirmation.
+drug,macro_ap,54,0.6084496892327746,0.6274077337161534,0.018958044483379035,-0.0065000697127672435,0.05064372520925056,Exploratory paired query bootstrap conditional on three seeds; no multiplicity correction or independent confirmation.
+drug,p5,54,0.5790123456790124,0.5740740740740742,-0.004938271604938268,-0.030864197530864203,0.02098765432098766,Exploratory paired query bootstrap conditional on three seeds; no multiplicity correction or independent confirmation.
