@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-09-11T13:44:32.758278+00:00",
+  "prediction_source": "outputs/biomaster_old_production_comparison_20260911/TEST_PREDICTIONS.parquet",
+  "prediction_sha256": "42d262ec44327877cbc574ad3eab3a49e8a077bc03382d4cd83565998326595c",
+  "recommendation_sha256": "84c328ae8a08ee95f28e99203a33e54053ef1cf7b8719febb11003eb31b14129",
+  "random_definition": "Uniform permutation of the fixed observed candidate labels, equivalent to iid continuous random scores independent of labels.",
+  "random_AP_formula": "For N>1 and M>0: M/N + (1-M/N)*(H_N-1)/(N-1); H_N=sum(1/k,k=1..N). For N=M=1: 1. No positive class: AP not reported.",
+  "random_P_at_K_formula": "M/N for each query with N>=K; macro baseline averages this over eligible queries.",
+  "all_tied_AP": "A constant-score classifier has AP=M/N, which differs from finite random-permutation expected AP.",
+  "formula_exhaustive_checks": {
+    "maximum_N": 7,
+    "N_M_cases": 28,
+    "tolerance": 1e-12,
+    "passed": true
+  },
+  "test_file_panel_rows": 274968,
+  "test_unique_pairs": 132650,
+  "test_molecules": 82860,
+  "test_target_sequences": 3465,
+  "union_pairs": 132331,
+  "outside_union_unique_pairs": 319,
+  "outside_union_note": "Single-endpoint panels and the pooled-label panel apply different aggregation eligibility; these 319 pairs are not additional rows of the pooled binary panel.",
+  "kdki_pairs": 34327,
+  "kdki_molecules": 16293,
+  "kdki_target_sequences": 2533,
+  "random_balanced_query_AP": 0.4681037985185995,
+  "selected_model_balanced_query_AP": 0.6582528367990479,
+  "cold_target_subset": {
+    "pairs": 870,
+    "positive": 599,
+    "negative": 271,
+    "random_ap": 0.6907805812240717,
+    "random_auroc": 0.5
+  },
+  "limitations": [
+    "Random baselines are conditioned on this observed test pool, not the unmeasured project matrix.",
+    "AP is not classification accuracy or expected SPR hit rate.",
+    "Single-class inactivity panel has no discriminative AUROC/AP.",
+    "Panel rows and directional query populations overlap and must not be summed as independent pairs."
+  ]
+}

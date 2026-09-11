@@ -1,0 +1,3 @@
+direction,queries,pairs,positive,negative,median_query_pairs,random_macro_ap,random_macro_p5,random_macro_auroc,selected_model_id,selected_model_macro_ap,selected_model_p5
+target_to_drug,516,28317,19937,8380,23.0,0.5440151029884545,0.4787595991113782,0.5,multitask__kdki_inactive__binary__20260921,0.6935429508144152,0.6395348837209303
+drug_to_target,54,8474,1579,6895,31.5,0.3921924940487446,0.34026512797535446,0.5,multitask__kdki_inactive__binary__20260921,0.6229627227836807,0.5962962962962963
