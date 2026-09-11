@@ -1,0 +1,9 @@
+{
+  "all_pass": true,
+  "source_and_output_hashes_verified": true,
+  "sampled_spearman_and_top20_intersections_recomputed": 40,
+  "all384_rank_support_counts_recomputed": true,
+  "DrugCLIP_272_present_112_missing_no_negative_imputation": true,
+  "DTIAM_two_scenarios_exact_slots_caps_overlap_verified": true,
+  "focused_tests": "6 passed"
+}

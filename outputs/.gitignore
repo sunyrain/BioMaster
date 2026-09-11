@@ -844,3 +844,18 @@
 !/biomaster_ab_ranking_selection_20260911/INDEPENDENT_VERIFICATION.json
 !/biomaster_ab_ranking_selection_20260911/FOCUSED_TEST_RESULT.txt
 !/biomaster_ab_ranking_selection_20260911/RELEASE_MANIFEST.json
+
+# Compact A/B vs external models agreement; per-query rows remain local.
+!/biomaster_ab_external_agreement_20260911/RANK_AGREEMENT_SUMMARY.csv
+!/biomaster_ab_external_agreement_20260911/SPR384_RANK_SUPPORT_COUNTS.csv
+!/biomaster_ab_external_agreement_20260911/SPR384_SHARED_TOP20_SUPPORT.csv
+!/biomaster_ab_external_agreement_20260911/SPR384_EXTERNAL_MODEL_AGREEMENT.csv
+!/biomaster_ab_external_agreement_20260911/SPR384_CONSENSUS_CHECK.csv
+!/biomaster_ab_external_agreement_20260911/DTIAM_fixed112_frozen_evidence_384.csv
+!/biomaster_ab_external_agreement_20260911/DTIAM_fixed112_latest_exact_excluded_384.csv
+!/biomaster_ab_external_agreement_20260911/DTIAM_FIXED112_RETENTION.csv
+!/biomaster_ab_external_agreement_20260911/LYVE1_SLC8A1_AGREEMENT.csv
+!/biomaster_ab_external_agreement_20260911/SUMMARY.json
+!/biomaster_ab_external_agreement_20260911/VERIFICATION.json
+!/biomaster_ab_external_agreement_20260911/FOCUSED_TEST_RESULT.txt
+!/biomaster_ab_external_agreement_20260911/RELEASE_MANIFEST.json

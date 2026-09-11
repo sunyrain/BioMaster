@@ -336,3 +336,6 @@ Thumbs.db
 !/scripts/score_ab_catalog_retention_20260911.py
 !/scripts/audit_spr384_selection_lineage_20260911.py
 !/scripts/verify_ab_ranking_selection_20260911.py
+
+# Existing external-model agreement audit.
+!/scripts/audit_ab_external_agreement_20260911.py

@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETE",
+  "input_sha256": {
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/biomaster_ab_ranking_selection_20260911/CORE276480_SELECTION_AUDIT.parquet": "df7df2851ad0a76299591bb6d8cbaf2b5d76e06eaa1b6c7c6c98ef4b6c30c6c5",
+    "outputs/biomaster_old_drug_bidirectional_20260906/OLD_DRUGS_720.csv": "46d1c7a78132118d2cd447c8462e4b001433461ca84480962b7d100a91930252",
+    "outputs/biomaster_old_drug_bidirectional_20260906/TARGETS_384.csv.gz": "69bf9e9cf19a4d3df7e19f42606bb56ba9487e0bdc75e05944c1f4dbc5b67206",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/dtiam.npz": "5f1bda47f012400673fd2b07d193b90f46eb8b285cdc6ce47da6020966adf7cc",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/drugclip.npz": "7d44b018e72a8746a4332eb32b020faa0b3536c49c0fb0ffc740dd32c2ac1cbf",
+    "outputs/biomaster_old_drug_bidirectional_20260906/DRUGCLIP_COMMON_SCOPE.npz": "255e6f91570ef67ec3110c234e520f0de28a9d940842bf4494833a29b444fac1",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/drugclip.json": "fdde529735a0309aa1a3b7c3302ab6d29ce12ff63e6a2b97225c54ed904ddd1a",
+    "outputs/biomaster_old_drug_bidirectional_20260906/scores/dtiam.json": "8ca26b62044eb7caa005b462aa9b90f0af01e02d2445a210646a56036668baef",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/LYVE1_THREE_MODEL_COMPARISON_720.csv": "95f1eef0208c1bd20e68ac579df4ef6c0d3bdebcaeada7ba93af52f758ac5846",
+    "outputs/biomaster_target_queries_20260908/lyve1_slc8a1_hgf/comparators/SLC8A1_THREE_MODEL_COMPARISON_720.csv": "b7c0bc17687f393ae0d5a883b7e0878775053241d3d718c2b27a756186611365",
+    "outputs/biomaster_ab_ranking_selection_20260911/CATALOG_720x890_SCORES.parquet": "0bf4ce4a1730c071b962c46f0c57b8fe2d557310e46474fb7527f7f8b02a73ce",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda",
+    "outputs/biomaster_ab_ranking_selection_20260911/old_production_DIRECTIONAL_LOGITS.npy": "060995532ed2da59154b5eb259f8cea589c4157786fbbc3dd5cc8eff20035c87",
+    "outputs/biomaster_matrix_720x890_20260910/DRUG_INDEX.csv": "b7e42b2ae42345d9b165954ede7b11e61fb645131fabb681911983c46a170464",
+    "scripts/score_ab_catalog_retention_20260911.py": "2291f5be5875005b2e9f39fd9150d80cec11948a541ba2a544241a7a45c9fb42"
+  },
+  "source_sha256": "0898a72bea5e63ea51b0a748a0024d370a6c037cedd362d34cbac956c5c98225",
+  "dtiam_version": {
+    "name": "dtiam",
+    "kind": "DTIAM_official_representation_compatible_AutoML_S5_retrain",
+    "source": "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz",
+    "source_sha256": "10a456291bbc7ed518c1ed145ae8225d6988f65ead1f58a12977d881abdd9183",
+    "training_exposure": "different historical S5 fitting split; no common unbiased claim",
+    "score_sha256": "5f1bda47f012400673fd2b07d193b90f46eb8b285cdc6ce47da6020966adf7cc"
+  },
+  "drugclip_version": {
+    "name": "drugclip",
+    "kind": "original_six_fold_mean_cosine",
+    "source": "outputs/affinity_first_remote_discovery_v1/drugclip_inference_v1/DRUGCLIP_PROJECT722_X_307_MATRIX_V1.csv.gz",
+    "source_sha256": "efdb8475f2c85455d3402cb6e56af74516f9c8b2960bbd516884bc68c8b6abc8",
+    "training_exposure": "public DrugCLIP pretraining overlap with known controls not excluded",
+    "target_identity_source": "outputs/affinity_first_remote_discovery_v1/TARGET_MODEL_READINESS_463_V1.csv",
+    "target_identity_source_sha256": "c9d5311dcd6738feed97ef50106ada3794a1e10d6526cd1ca080d0269db1bff5",
+    "score_scope": "exact-SMILES and exact-sequence mapped rectangular subset",
+    "old_drugs": 548,
+    "targets": 269,
+    "score_sha256": "7d44b018e72a8746a4332eb32b020faa0b3536c49c0fb0ffc740dd32c2ac1cbf"
+  },
+  "drugclip_covered_final_pairs": 272,
+  "missing_not_negative": true,
+  "exact_axis_and_sequence_mapping_verified": true,
+  "unchanged_inputs": true,
+  "no_training": true,
+  "no_new_external_model_inference": true,
+  "interpretation": "Rank agreement, not assay validation; public encoders/data are shared, models are not independent witnesses.",
+  "output_sha256": {
+    "RANK_AGREEMENT_SUMMARY.csv": "c8cdb64c06dc5ed401aab3e4830c49348ff1aacfa41107faeb6aa0b1a8e70c3b",
+    "QUERY_AGREEMENT.csv.gz": "746f80d0be41f98b7ce83a53df19b72e54e2be9117b719bf53d0f46325c22054",
+    "SPR384_RANK_SUPPORT_COUNTS.csv": "b0285f4a9e7538d7234bb26083fbf5b1dddfc72b3b473cd3f7838c335d24aa50",
+    "SPR384_SHARED_TOP20_SUPPORT.csv": "28611efede6f6f11bd8a2c596ff6a1a056f8abd1a14567a3717927f4d08ff272",
+    "SPR384_EXTERNAL_MODEL_AGREEMENT.csv": "fecd33879697f4f4b4189e50cc7f57c344cc1c345d82ac118002ee34441f8c3a",
+    "LYVE1_SLC8A1_AGREEMENT.csv": "bda7e7c852922fc5f5e62cae8a06a25cca7933a90431adbb125b645382d77411",
+    "SPR384_CONSENSUS_CHECK.csv": "5a9c92480e958ad5d2ab2b480aed7f8965b5396fc5317f7911a85eaf9a576c91",
+    "DTIAM_fixed112_frozen_evidence_384.csv": "b08a5074366dd68b2c6c72b520902e87fbba3fa4ff69c64f9afd53360d0c53fe",
+    "DTIAM_fixed112_latest_exact_excluded_384.csv": "c33a5ddfac7ab01b864c59c3d313430d242732f10455865bf08ec2db930ca45e",
+    "DTIAM_FIXED112_RETENTION.csv": "cd8a513682c18a2d7f5105afddbb55dbf7c1f977ca22f838b3b22f34c128fa8e"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE",
+  "all_checks_pass": true,
+  "code_and_report_sha256": {
+    "scripts/audit_ab_external_agreement_20260911.py": "0898a72bea5e63ea51b0a748a0024d370a6c037cedd362d34cbac956c5c98225",
+    "tests/test_ab_external_agreement.py": "f4b24967d2e1f786a112c5f64f05e0b429768a56f4adb10bd44e06ca9f59223b",
+    "docs/BIOMASTER_AB_DRUGCLIP_DTIAM_AGREEMENT_20260911_ZH.md": "62d73f765d767dffaf958ab42b2b77bb4966539e938f36ddd75c0cfdb0e79b2b"
+  },
+  "artifact_sha256": {
+    "RANK_AGREEMENT_SUMMARY.csv": "c8cdb64c06dc5ed401aab3e4830c49348ff1aacfa41107faeb6aa0b1a8e70c3b",
+    "QUERY_AGREEMENT.csv.gz": "746f80d0be41f98b7ce83a53df19b72e54e2be9117b719bf53d0f46325c22054",
+    "SPR384_RANK_SUPPORT_COUNTS.csv": "b0285f4a9e7538d7234bb26083fbf5b1dddfc72b3b473cd3f7838c335d24aa50",
+    "SPR384_SHARED_TOP20_SUPPORT.csv": "28611efede6f6f11bd8a2c596ff6a1a056f8abd1a14567a3717927f4d08ff272",
+    "SPR384_EXTERNAL_MODEL_AGREEMENT.csv": "fecd33879697f4f4b4189e50cc7f57c344cc1c345d82ac118002ee34441f8c3a",
+    "LYVE1_SLC8A1_AGREEMENT.csv": "bda7e7c852922fc5f5e62cae8a06a25cca7933a90431adbb125b645382d77411",
+    "SUMMARY.json": "76412136296f340388785a3192e55c662d583f488e89b21a496d0206eac722fe",
+    "SPR384_CONSENSUS_CHECK.csv": "5a9c92480e958ad5d2ab2b480aed7f8965b5396fc5317f7911a85eaf9a576c91",
+    "DTIAM_fixed112_frozen_evidence_384.csv": "b08a5074366dd68b2c6c72b520902e87fbba3fa4ff69c64f9afd53360d0c53fe",
+    "DTIAM_fixed112_latest_exact_excluded_384.csv": "c33a5ddfac7ab01b864c59c3d313430d242732f10455865bf08ec2db930ca45e",
+    "DTIAM_FIXED112_RETENTION.csv": "cd8a513682c18a2d7f5105afddbb55dbf7c1f977ca22f838b3b22f34c128fa8e",
+    "FOCUSED_TEST_RESULT.txt": "5a989528b6d98e8efc8944dda62e68226f396d443df67e66e70778ef94e79c73",
+    "VERIFICATION.json": "3dad9cb56a181ad86507ab6d956379208c5314e0dd425a0c1b4064baa0f90083"
+  },
+  "wetlab_and_website_unchanged": true
+}
