@@ -911,3 +911,12 @@
 !/biomaster_model_lineage_convergence_20260911/SPR384_SCHEDULING_REVIEW_AID.csv
 !/biomaster_model_lineage_convergence_20260911/SUMMARY.json
 !/biomaster_model_lineage_convergence_20260911/VERIFICATION.json
+
+# Compact S5 provenance and A/B auxiliary supervision counts.
+!/biomaster_s5_origin_auxiliary_plan_20260911/S5_ROW_ACCOUNTING.csv
+!/biomaster_s5_origin_auxiliary_plan_20260911/POOLED_RANK_QUERY_AVAILABILITY.csv
+!/biomaster_s5_origin_auxiliary_plan_20260911/SAME_TASK_RANK_QUERY_AVAILABILITY.csv
+!/biomaster_s5_origin_auxiliary_plan_20260911/EXACT_REGRESSION_AVAILABILITY.csv
+!/biomaster_s5_origin_auxiliary_plan_20260911/AUXILIARY_POOL_TOTALS.csv
+!/biomaster_s5_origin_auxiliary_plan_20260911/SUMMARY.json
+!/biomaster_s5_origin_auxiliary_plan_20260911/VERIFICATION.json

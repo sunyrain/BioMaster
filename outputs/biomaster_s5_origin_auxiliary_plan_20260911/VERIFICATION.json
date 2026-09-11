@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "checks": {
+    "all_input_hashes_still_match": true,
+    "script_hash_matches": true,
+    "all_artifact_hashes_match": true,
+    "role_sum_equals_prepared_population": true,
+    "training_classes_sum": true,
+    "five_historical_runs_agree": true,
+    "endpoint_counts_sum_to_audited_totals": true,
+    "unique_pair_vs_endpoint_denominators": true,
+    "A_regression_only_Kd_Ki": true,
+    "B_regression_four_separate_endpoints": true,
+    "official_extraction_label_accounting": true
+  },
+  "historical_run_files": {
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260813__CORE/RUN_SUMMARY_V1.json": "2bccc3e25a631bc7bb785eb7f598319f982d3dd7a4f0125f01e7687878a720eb",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260814__CORE/RUN_SUMMARY_V1.json": "7bf95dc32bbcfc3c9e80d4f0e587b44d8ca5701f55f2de3ce2274636ffbc3b4b",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260815__CORE/RUN_SUMMARY_V1.json": "f1367f3be16eee99594905f7d3818a65961d1d1610f470877869de902e8ad240",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260816__CORE/RUN_SUMMARY_V1.json": "673a1e892f2e80c71184b1fdbf86e435dcd96b496dc30891ca391ff57936201d",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260817__CORE/RUN_SUMMARY_V1.json": "1dfc47586ecdb6a04e301b54d802a6f81f18a5be62b6fda24706ac8fc7bba5f1"
+  },
+  "scope": "Source provenance, historical training records and exported data counts; no new model training or performance claim.",
+  "official_extraction_labels": {
+    "positive": 331404,
+    "negative_or_inactive": 96122,
+    "grey_or_unresolved": 77596,
+    "conflicting_exclude": 4050
+  }
+}

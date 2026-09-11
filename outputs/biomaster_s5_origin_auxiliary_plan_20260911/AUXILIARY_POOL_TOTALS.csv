@@ -1,0 +1,3 @@
+model,existing_train_pairs,exact_regression_rows,unique_pairs_with_exact_regression,exact_regression_rows_outside_current_arm
+A,337570,192469,191189,37571
+B,1116270,799246,766314,180819

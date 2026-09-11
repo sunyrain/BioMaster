@@ -351,3 +351,6 @@ Thumbs.db
 
 # Model lineage and convergence audit.
 !/scripts/audit_model_lineage_convergence_20260911.py
+
+# Historical S5 provenance and current A/B auxiliary-data audit.
+!/scripts/audit_s5_origin_and_auxiliary_data_20260911.py

@@ -1,0 +1,5 @@
+model,scope,direction,pairs,all_queries,both_label_queries,rows_in_both_label_queries,both_label_queries_at_least10,median_both_label_query_size
+A,current_pooled_binary_including_inactivity,drug_to_target,337570,140064,8211,111708,622,3.0
+A,current_pooled_binary_including_inactivity,target_to_drug,337570,2290,1362,323133,1155,112.0
+B,current_pooled_binary_including_inactivity,drug_to_target,1116270,690439,48036,253798,1507,2.0
+B,current_pooled_binary_including_inactivity,target_to_drug,1116270,3647,2288,1098316,2060,145.0

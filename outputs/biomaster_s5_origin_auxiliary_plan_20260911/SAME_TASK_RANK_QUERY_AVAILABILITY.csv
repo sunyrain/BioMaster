@@ -1,0 +1,9 @@
+model,scope,direction,pairs,all_queries,both_label_queries,rows_in_both_label_queries,both_label_queries_at_least10,median_both_label_query_size
+A,AFFINITY_KD_KI,drug_to_target,286787,136645,8012,88354,445,3.0
+A,AFFINITY_KD_KI,target_to_drug,286787,2138,1287,273783,1096,66.0
+B,ACTIVITY_EC50,drug_to_target,100568,79287,4797,11751,13,2.0
+B,ACTIVITY_EC50,target_to_drug,100568,992,529,91745,434,48.0
+B,ACTIVITY_IC50,drug_to_target,718997,513404,32389,106611,756,2.0
+B,ACTIVITY_IC50,target_to_drug,718997,3171,1936,705700,1678,81.5
+B,AFFINITY_KD_KI,drug_to_target,284797,135639,7891,87188,434,3.0
+B,AFFINITY_KD_KI,target_to_drug,284797,2128,1271,271779,1085,67.0

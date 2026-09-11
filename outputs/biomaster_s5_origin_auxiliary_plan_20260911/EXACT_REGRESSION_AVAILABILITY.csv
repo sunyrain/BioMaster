@@ -1,0 +1,7 @@
+model,endpoint,exact_regression_rows,unique_pairs
+A,Kd,20660,20660
+A,Ki,171809,171809
+B,Kd,20749,20749
+B,Ki,172012,172012
+B,IC50,530921,530921
+B,EC50,75564,75564

@@ -1,0 +1,90 @@
+{
+  "status": "COMPLETE_DATA_AUDIT_DESIGN_ONLY_NO_TRAINING",
+  "input_sha256": {
+    "outputs/old_drug_target_sota_v1/feature_store_v1/CHEMBL37_86674_INDEXED_PAIRS_V1.csv.gz": "a01a41fc230fe481466ac71187e89cb8d77a2b5fc6aea20de9b8103e015ae4f8",
+    "outputs/current_production_package_v2/conplex_target_calibration_v5_official/CONPLEX_CALIBRATION_PREPARATION_V5.json": "7a792cf28908b19723a48b68d0ee5bce6e918cabf2307e654ab19c71d23d8aee",
+    "outputs/current_production_package_v2/chembl37_target_calibration_v5/PROJECT463_CHEMBL37_STRICT_BINDING_PAIR_CALIBRATION_V5.csv.gz": "2dd28252e62164fa8b4122a35b22d8a679ffd3db578a1b6aa334694d7ef4e125",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN.parquet": "a0a40f86bd6673cb32823ec7b9d122d72d7caaaf7898b0c7e78243db81164bc4",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN_REGRESSION.parquet": "f0be8cc958703155ef83ebe974755bcef746706acc6d1ee025250f7168b7d20b",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "scripts/prepare_conplex_calibration_v5.py": "87d5f9993491cdb8e6452890d509d4db0c760157874d31d1edaa6b5dff3f332d",
+    "scripts/run_biomaster_odti_baselines_v1.py": "212aae8a767139056b1a9f245d11500b2cea72d5fe057dc747812233bf028ccd",
+    "scripts/train_biomaster_odti_routed_ranker_v1.py": "21655224089f7ca9c97b51b99c2aeaa0c526cba98fd6341dfd5e7395ce3f4827",
+    "biomaster/best_model_training.py": "9777da87b5bb1385ddae729b75c73b7dac473e228306d1b59d12fcb80225789c",
+    "biomaster/unified_interaction.py": "92acb4ad6971900f3d21eee7d11af1e21449052ec1c7e047322dbbba6d614dd4"
+  },
+  "inputs_unchanged": true,
+  "source_pairs": 509172,
+  "capped_calibration_pairs": 86674,
+  "per_target_per_class_cap": 150,
+  "source_label_counts": {
+    "positive": 331404,
+    "negative_or_inactive": 96122,
+    "grey_or_unresolved": 77596,
+    "conflicting_exclude": 4050
+  },
+  "s5_role_counts": [
+    {
+      "role": "FEATURE_QUARANTINE",
+      "rows": 1,
+      "positive": 0,
+      "negative": 1
+    },
+    {
+      "role": "OLD_SCAFFOLD_NONCATALOG_HOLDOUT",
+      "rows": 2173,
+      "positive": 878,
+      "negative": 1295
+    },
+    {
+      "role": "TEST",
+      "rows": 2556,
+      "positive": 354,
+      "negative": 2202
+    },
+    {
+      "role": "TRAIN",
+      "rows": 65276,
+      "positive": 35684,
+      "negative": 29592
+    },
+    {
+      "role": "VALID",
+      "rows": 16668,
+      "positive": 9067,
+      "negative": 7601
+    }
+  ],
+  "auxiliary_pool_totals": [
+    {
+      "model": "A",
+      "existing_train_pairs": 337570,
+      "exact_regression_rows": 192469,
+      "unique_pairs_with_exact_regression": 191189,
+      "exact_regression_rows_outside_current_arm": 37571
+    },
+    {
+      "model": "B",
+      "existing_train_pairs": 1116270,
+      "exact_regression_rows": 799246,
+      "unique_pairs_with_exact_regression": 766314,
+      "exact_regression_rows_outside_current_arm": 180819
+    }
+  ],
+  "caveats": [
+    "Pooled query counts include generic inactivity and cross-endpoint pooling; same-task counts are the proposed numeric ranking pools.",
+    "Same-task does not certify identical assay conditions; endpoint-specific or same-assay strength ranking requires stricter grouping.",
+    "Regression counts are endpoint rows within existing A/B training pair memberships, not unique independent experiments.",
+    "Outside-arm regression rows are not included in the proposed first controlled ablation; they require separate QC and feature availability checks."
+  ],
+  "artifacts": {
+    "S5_ROW_ACCOUNTING.csv": "c59019090db3e5daed859cbcdf1b135a2c69c6fd2c85dcb1d4e6fc955b258599",
+    "S5_ROLE_MEMBERSHIP.csv.gz": "75c1bf3c270212f5889847d76bc9f600d8f2e8440ad8210555096eb330b21667",
+    "POOLED_RANK_QUERY_AVAILABILITY.csv": "a7d9396036000dc84c5a0ce3459a120c7313f6dddce7c12d972b9f876da1a2da",
+    "SAME_TASK_RANK_QUERY_AVAILABILITY.csv": "747ee651b1d98f85814794a622a2ef6b626fa92bb27ea2addc73f9f578d85366",
+    "EXACT_REGRESSION_AVAILABILITY.csv": "de10ddf84ec2526a8b8d8e4f38b39f6796625604c22bccb6508355fa6452048e",
+    "AUXILIARY_POOL_TOTALS.csv": "6be2c0ece8766d737fa72c2eca9bccf4a721cbc6aeffc3fa013c29d9e8031ded"
+  },
+  "source_sha256": "ee17760e621e1e27638d6fac07de5917201d11f2e4a1864acac6193278a21301"
+}
