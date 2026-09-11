@@ -53,9 +53,9 @@
     "fastai_resource_only_override": {
       "ag.max_memory_usage_ratio": 2
     },
-    "resource_gate": "Full-B native preprocessing + loader must peak <=65 GiB; monitor actual child RSS <=78 GiB",
+    "resource_gate": "Full-B native preprocessing + loader must peak <=72 GiB; monitor actual child RSS <=78 GiB",
     "learner_random_state": "seed",
-    "random_initialization": "native learner and model seeds; no old supervised weights",
+    "random_initialization": "Native internal split RNG varies; library-specific model seeds retained (FastAI hardcodes 0); no old supervised weights",
     "holdout": "AutoGluon native internal holdout from training members only; save exact internal row IDs",
     "weighted_ensemble": "Fitted only on native internal training holdout; external common validation never supplied to fit"
   },

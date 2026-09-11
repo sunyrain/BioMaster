@@ -170,7 +170,7 @@ def fastai(arm,seed):
     run=OUT/f'{arm}__seed_{seed}'
     if (run/'FASTAI_COMPLETE.json').exists():return
     profile=json.loads((OUT/'RESOURCE_PROFILE.json').read_text())
-    assert profile['status']=='PASS_FULL_B_PREPROCESS_ONLY' and profile['peak_RSS_GiB']<=65
+    assert profile['status']=='PASS_FULL_B_PREPROCESS_ONLY' and profile['peak_RSS_GiB']<=72
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed);torch.set_num_threads(20)
     predictor=TabularPredictor.load(str(run/'predictor'))
     started=time.monotonic()

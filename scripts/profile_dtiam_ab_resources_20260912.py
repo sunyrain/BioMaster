@@ -26,7 +26,10 @@ def main():
     dls=data.dataloaders(bs=512,num_workers=0);batch=dls.one_batch()
     rows=len(data.items)
     peak=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024**2
-    if rows!=len(frame) or peak>65:
+    observation=dict(rows=rows,expected_rows=len(frame),features=features,peak_RSS_GiB=peak,
+        seconds=time.monotonic()-started,batch_shapes=[list(v.shape) for v in batch],utc=now())
+    write_json(OUT/'RESOURCE_PROFILE_OBSERVATION.json',observation)
+    if rows!=len(frame) or peak>72:
         raise RuntimeError(f'Full-B native preprocessing exceeded the profiled budget: {peak} GiB')
     write_json(OUT/'RESOURCE_PROFILE.json',dict(status='PASS_FULL_B_PREPROCESS_ONLY',utc=now(),
         rows=rows,features=features,peak_RSS_GiB=peak,seconds=time.monotonic()-started,

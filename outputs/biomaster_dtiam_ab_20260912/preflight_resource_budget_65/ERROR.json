@@ -1,0 +1,5 @@
+{
+  "utc": "2026-09-11T17:39:05.619413+00:00",
+  "error": "RuntimeError('Child exited 1; see /root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/RESOURCE_PROFILE.log')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 101, in <module>\n    main()\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 68, in main\n    command([str(AGPY),'-u','scripts/profile_dtiam_ab_resources_20260912.py'],OUT/'RESOURCE_PROFILE.log')\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 39, in command\n    raise RuntimeError(f'Child exited {result}; see {log_path}')\nRuntimeError: Child exited 1; see /root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/RESOURCE_PROFILE.log\n"
+}

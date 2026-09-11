@@ -21,11 +21,11 @@
   "code": {
     "scripts/dtiam_ab_common_20260912.py": "7a2035a1348d432c2fca2b240f8433b228c7434020d03860451c66e49343bbf9",
     "scripts/build_dtiam_ab_features_20260912.py": "0af2cfff54a9c908bb131de5f4b7f3763e2b578e14cddc64222c6b77241d18d0",
-    "scripts/prepare_dtiam_ab_20260912.py": "7620e14e1f741e0623df3f1917ea8d853a68e107004c248fc3df73068ad17d01",
-    "scripts/train_dtiam_ab_20260912.py": "e0da235cec900f0e3fe6037439dd97185d62cec79431eca72f462dfae117da69",
+    "scripts/prepare_dtiam_ab_20260912.py": "bd3f301cc16a2a15bf346398b5c75a68829573ad8139f86bb8f751f3073f4242",
+    "scripts/train_dtiam_ab_20260912.py": "3f7340874cd0faa9e533c0e9b93850d40a74693f5ef31454229ef70662864ca9",
     "scripts/report_dtiam_ab_20260912.py": "07d514877aba82a3dcd98f08d482e20cf6186928764ea8742f37ee454d16795c",
     "scripts/run_dtiam_ab_20260912.py": "e6b21d423561fd803717e17925a18cc17cb89502f7341ddb7818c550efae4923",
-    "scripts/profile_dtiam_ab_resources_20260912.py": "bc5b3894c0d46c84df099cc862f26cdc0d8aad58756ff994c77ec829e859244e"
+    "scripts/profile_dtiam_ab_resources_20260912.py": "867a1da7024943817b73fbf2bc0d5acd3d316f9c922aa8d4e644bf821ffb4491"
   },
   "frozen_inputs": {
     "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
@@ -33,7 +33,7 @@
     "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
     "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
   },
-  "protocol_sha256": "84532bed4d3a2515ee1cf1eb64f5c5ec1d750ed1777625e07dd31f5f4982187d",
+  "protocol_sha256": "265c8e8706ab6f2b2a66eda0aa90f7257249b63439178fb41246be77c18ad026",
   "preflight_amendments": [
     {
       "utc": "2026-09-11T17:32:07.280337+00:00",
@@ -41,6 +41,35 @@
       "before_sha256": "a2b5ece005f9f0dca6b6a012669e49361d16e7d06ad75777363bf07c7901f2ca",
       "after_sha256": "bc5b3894c0d46c84df099cc862f26cdc0d8aad58756ff994c77ec829e859244e",
       "reason": "Measure exact isolated fit_extra memory layout by releasing redundant unsplit table; no training/validation/test members or learner parameters changed; zero formal fits started."
+    },
+    {
+      "utc": "2026-09-11T17:38:46.924015+00:00",
+      "file": "scripts/prepare_dtiam_ab_20260912.py",
+      "before_sha256": "7620e14e1f741e0623df3f1917ea8d853a68e107004c248fc3df73068ad17d01",
+      "after_sha256": "9515173e0f4a7dd1dcda571c68ca6db1249a63510e627d8324009ca7d4dd21be",
+      "protocol_before_sha256": "84532bed4d3a2515ee1cf1eb64f5c5ec1d750ed1777625e07dd31f5f4982187d",
+      "protocol_after_sha256": "d69317ca54ab4c83d81d812d84bb5f45b5f33cf6dbaf0bbe579dc2895855490d",
+      "reason": "Clarify native fixed FastAI seed versus varied AutoGluon internal split seed; no RNG behavior or learning setting changed, zero formal fits started."
+    },
+    {
+      "utc": "2026-09-11T17:41:17.740251+00:00",
+      "code_changes": {
+        "scripts/profile_dtiam_ab_resources_20260912.py": {
+          "before": "bc5b3894c0d46c84df099cc862f26cdc0d8aad58756ff994c77ec829e859244e",
+          "after": "867a1da7024943817b73fbf2bc0d5acd3d316f9c922aa8d4e644bf821ffb4491"
+        },
+        "scripts/train_dtiam_ab_20260912.py": {
+          "before": "e0da235cec900f0e3fe6037439dd97185d62cec79431eca72f462dfae117da69",
+          "after": "3f7340874cd0faa9e533c0e9b93850d40a74693f5ef31454229ef70662864ca9"
+        },
+        "scripts/prepare_dtiam_ab_20260912.py": {
+          "before": "9515173e0f4a7dd1dcda571c68ca6db1249a63510e627d8324009ca7d4dd21be",
+          "after": "bd3f301cc16a2a15bf346398b5c75a68829573ad8139f86bb8f751f3073f4242"
+        }
+      },
+      "protocol_before_sha256": "d69317ca54ab4c83d81d812d84bb5f45b5f33cf6dbaf0bbe579dc2895855490d",
+      "protocol_after_sha256": "265c8e8706ab6f2b2a66eda0aa90f7257249b63439178fb41246be77c18ad026",
+      "reason": "Measured full-B preprocessing peak 69.0404 GiB; raise preflight threshold from 65 to72 GiB below unchanged78 GiB runtime guard and90 GiB cgroup ceiling; retain full rows/native learning configuration. Zero formal fits started."
     }
   ]
 }
