@@ -1,0 +1,12 @@
+{
+  "all_pass": true,
+  "unchanged_input_hashes": true,
+  "sampled_query_AP_independently_recomputed": 40,
+  "previous_ab_query_ap_reproduced": 18138,
+  "selection_sets_verified": 21,
+  "exact_fixed_slots_and_diversity_caps": true,
+  "retained_pair_ids_independently_recomputed": true,
+  "shared_training_catalog_feature_rows_identical": 472,
+  "focused_tests": "10 passed",
+  "script_sha256": "1402325b7a639b38c7073cd0f29d1e8418c9df10ac8257cfb200f04decbf1a73"
+}

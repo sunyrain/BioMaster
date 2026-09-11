@@ -330,3 +330,9 @@ Thumbs.db
 
 # Frozen production baseline on endpoint test panels.
 !/scripts/evaluate_old_production_endpoint_20260911.py
+
+# Endpoint query ranking and frozen experiment overlap audit.
+!/scripts/evaluate_endpoint_query_ranking_20260911.py
+!/scripts/score_ab_catalog_retention_20260911.py
+!/scripts/audit_spr384_selection_lineage_20260911.py
+!/scripts/verify_ab_ranking_selection_20260911.py

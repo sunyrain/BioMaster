@@ -1,0 +1,11 @@
+model,full_core_gate_pass,original384_still_top20,previously_reviewed_449_still_eligible,can_fill384_without_new_pair_reviews
+actual_legacy_ranker,449,384,449,True
+old_production,801,75,89,False
+kdki_inactive_20260921,683,36,43,False
+kdki_inactive_20260922,855,55,67,False
+kdki_inactive_20260923,711,54,60,False
+all_inactive_20260921,609,47,56,False
+all_inactive_20260922,605,47,53,False
+all_inactive_20260923,546,40,49,False
+kdki_inactive_consensus,726,50,58,False
+all_inactive_consensus,560,49,59,False

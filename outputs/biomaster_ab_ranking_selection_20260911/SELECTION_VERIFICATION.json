@@ -1,0 +1,20 @@
+{
+  "all_pass": true,
+  "full_scoring_shape": [
+    720,
+    890,
+    2
+  ],
+  "models": 7,
+  "consensus_models": 2,
+  "frozen_inputs_unchanged": true,
+  "old_matrix_max_abs_difference": 8.487701416015625e-05,
+  "same_frozen384_present_and_not_in_ab_training": true,
+  "exact_target_slots_and_diversity_asserted": true,
+  "eligible_core_pairs": 14816,
+  "eligible_fixed_target_pairs": 8353,
+  "original384_latest_exact_evidence": 0,
+  "original384_latest_connectivity_evidence": 0,
+  "original384_old_production_rank_matches": 4,
+  "source_sha256": "2291f5be5875005b2e9f39fd9150d80cec11948a541ba2a544241a7a45c9fb42"
+}

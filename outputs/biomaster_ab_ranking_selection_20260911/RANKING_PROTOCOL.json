@@ -1,0 +1,18 @@
+{
+  "test_predictions_sha256": "42d262ec44327877cbc574ad3eab3a49e8a077bc03382d4cd83565998326595c",
+  "minimum_measured_candidates": 10,
+  "require_both_labels": true,
+  "cutoffs": [
+    1,
+    5,
+    10,
+    20
+  ],
+  "insufficient_candidates": "K metric missing when query size < K",
+  "old_score": "head0 within drug; head1 within target",
+  "new_score": "mean of two logits, each seed separately",
+  "aggregation": "unweighted query macro, then arithmetic mean of three seed metrics",
+  "tie_break": "pair_id ascending; AP and AUROC use tie-aware sklearn",
+  "bootstrap": "1000 paired queries, new per-query metrics averaged over seeds minus old",
+  "interpretation": "Only measured test candidates; unmeasured pairs are never negative labels."
+}

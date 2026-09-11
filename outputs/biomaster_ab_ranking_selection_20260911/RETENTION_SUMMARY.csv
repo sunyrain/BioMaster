@@ -1,0 +1,22 @@
+model,scenario,candidate_pool,selected,retained,retained_percent,drugs,targets,original_reviewed,latest_exact_evidence,a_train_seen,b_train_seen,status,message,mip_gap
+old_production,fixed112_frozen_evidence,14816,384,57,14.84375,187,112,62,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+old_production,fixed112_latest_exact_excluded,14781,384,57,14.84375,187,112,62,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+old_production,global_top384_frozen_evidence,14816,384,38,9.895833333333334,162,104,42,1,0,1,,,
+kdki_inactive_20260921,fixed112_frozen_evidence,14816,384,44,11.458333333333334,176,112,50,1,0,1,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+kdki_inactive_20260921,global_top384_frozen_evidence,14816,384,13,3.3854166666666665,106,114,15,1,0,0,,,
+kdki_inactive_20260922,fixed112_frozen_evidence,14816,384,41,10.677083333333334,173,112,41,1,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+kdki_inactive_20260922,global_top384_frozen_evidence,14816,384,14,3.6458333333333335,113,122,16,1,0,0,,,
+kdki_inactive_20260923,fixed112_frozen_evidence,14816,384,45,11.71875,175,112,47,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+kdki_inactive_20260923,global_top384_frozen_evidence,14816,384,9,2.34375,98,130,12,0,0,0,,,
+all_inactive_20260921,fixed112_frozen_evidence,14816,384,56,14.583333333333334,177,112,59,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+all_inactive_20260921,global_top384_frozen_evidence,14816,384,19,4.947916666666667,84,146,21,0,0,0,,,
+all_inactive_20260922,fixed112_frozen_evidence,14816,384,44,11.458333333333334,171,112,44,2,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+all_inactive_20260922,global_top384_frozen_evidence,14816,384,20,5.208333333333333,78,139,21,1,0,0,,,
+all_inactive_20260923,fixed112_frozen_evidence,14816,384,50,13.020833333333334,174,112,54,1,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+all_inactive_20260923,global_top384_frozen_evidence,14816,384,14,3.6458333333333335,70,138,17,1,0,0,,,
+kdki_inactive_consensus,fixed112_frozen_evidence,14816,384,41,10.677083333333334,177,112,43,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+kdki_inactive_consensus,fixed112_latest_exact_excluded,14781,384,41,10.677083333333334,177,112,43,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+kdki_inactive_consensus,global_top384_frozen_evidence,14816,384,14,3.6458333333333335,101,123,17,1,0,0,,,
+all_inactive_consensus,fixed112_frozen_evidence,14816,384,51,13.28125,169,112,52,1,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+all_inactive_consensus,fixed112_latest_exact_excluded,14781,384,51,13.28125,169,112,52,0,0,0,0.0,Optimization terminated successfully. (HiGHS Status 7: Optimal),0.0
+all_inactive_consensus,global_top384_frozen_evidence,14816,384,14,3.6458333333333335,79,134,14,0,0,0,,,

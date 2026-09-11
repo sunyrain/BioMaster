@@ -1,0 +1,10 @@
+model,drug_top10_core384,drug_top20_core384,drug_top20_full890,target_top20_drugs720
+old_production,35,75,53,21
+kdki_inactive_20260921,18,36,13,8
+kdki_inactive_20260922,29,55,27,6
+kdki_inactive_20260923,28,54,26,7
+all_inactive_20260921,30,47,29,12
+all_inactive_20260922,29,47,27,5
+all_inactive_20260923,20,40,17,11
+kdki_inactive_consensus,36,50,30,6
+all_inactive_consensus,29,49,24,5

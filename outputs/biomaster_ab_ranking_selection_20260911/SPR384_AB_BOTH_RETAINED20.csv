@@ -1,0 +1,21 @@
+﻿排序,原候选编号,小分子药物名称,新靶点名称,当前实验建议,pair_id,原冻结药内排名_384,A药内靶点排名_384,A靶点内药物排名_720,A固定名额重选保留,A三个种子保留次数,B药内靶点排名_384,B靶点内药物排名_720,B固定名额重选保留,B三个种子保留次数,AB共同保留,AB至少一个保留
+11,C384-094,solifenacin,CA7 — Carbonic anhydrase 7,仍可探索,FBOUYBDGKBSUES-VXKWHMMOSA-N__CHEMBL2326,2,5,10,True,3,111,113,True,1,True,True
+27,C384-102,nimodipine,CA7 — Carbonic anhydrase 7,仍可探索,UIAGMCDKSXEBJQ-UHFFFAOYSA-N__CHEMBL2326,4,5,52,True,2,3,53,True,2,True,True
+34,C384-305,lumateperone,COMT — Catechol O-methyltransferase,仍可探索,HOIIHACBCFLJET-SFTDATJTSA-N__CHEMBL2023,4,329,167,True,3,289,140,True,3,True,True
+40,C384-167,rimegepant,REN — Renin,仍可探索,KRNAOFGYEFKHPB-ANJVHQHFSA-N__CHEMBL286,5,2,7,True,3,175,148,True,2,True,True
+41,C384-217,calcipotriene,NR3C2 — Mineralocorticoid receptor,仍可探索,LWQQLNNNIPYSNX-UROSTWAQSA-N__CHEMBL1994,5,1,10,True,3,104,26,True,3,True,True
+52,C384-032,desonide,NR3C2 — Mineralocorticoid receptor,仍可探索,WBGKWQHBNHJJPZ-LECWWXJVSA-N__CHEMBL1994,7,1,64,True,0,5,53,True,2,True,True
+89,C384-214,vaborbactam,MME — Neprilysin,仍可探索,IOOWNWLVCOUUEX-WPRPVWTQSA-N__CHEMBL1944,10,26,51,True,3,92,138,True,2,True,True
+98,C384-319,ixabepilone,PRKCB — Protein kinase C beta type,仍可探索,FABUFPQFXZVHFB-PVYNADRNSA-N__CHEMBL3045,10,99,100,True,1,77,65,True,2,True,True
+120,C384-232,glimepiride,REN — Renin,仍可探索,WIGIZIANZCJQQY-RUCARUNLSA-N__CHEMBL286,12,35,31,True,3,125,142,True,0,True,True
+125,C384-336,dextromethorphan,CTSC — Dipeptidyl peptidase 1,仍可探索,MKXZASYAUGDDCJ-NJAFHUGGSA-N__CHEMBL2252,12,88,377,True,2,115,433,True,2,True,True
+143,C384-237,glimepiride,MME — Neprilysin,仍可探索,WIGIZIANZCJQQY-RUCARUNLSA-N__CHEMBL1944,14,83,49,True,2,64,66,True,2,True,True
+180,C384-249,bictegravir,MAPK8 — Mitogen-activated protein kinase 8,仍可探索,SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL2276,17,1,49,True,3,111,17,True,3,True,True
+255,C384-306,hydroxychloroquine,CTSC — Dipeptidyl peptidase 1,先解决具体问题,XXSMGPRMXLTPCZ-UHFFFAOYSA-N__CHEMBL2252,4,196,175,True,3,26,132,True,3,True,True
+280,C384-312,perampanel,CYP46A1 — Cholesterol 24-hydroxylase,先解决具体问题,PRMWGUBFXWROHD-UHFFFAOYSA-N__CHEMBL4523510,7,133,284,True,1,120,166,True,1,True,True
+282,C384-072,calcipotriene,EGLN3 — Prolyl hydroxylase EGLN3,先解决具体问题,LWQQLNNNIPYSNX-UROSTWAQSA-N__CHEMBL5705,8,130,19,True,1,141,37,True,2,True,True
+286,C384-327,deutetrabenazine,UGCG — Ceramide glucosyltransferase,先解决具体问题,MKJIEFSOBYUXJB-WEZHFFAMSA-N__CHEMBL2063,8,251,217,True,3,112,397,True,3,True,True
+347,C384-374,lesinurad,UGCG — Ceramide glucosyltransferase,先解决具体问题,FGQFOYHRJSUHMR-UHFFFAOYSA-N__CHEMBL2063,16,272,205,True,3,123,472,True,3,True,True
+365,C384-302,sonidegib,LCK — Tyrosine-protein kinase Lck,先解决具体问题,VZZJRYRQSPEMTK-CALCHBBNSA-N__CHEMBL258,19,120,101,True,2,203,77,True,1,True,True
+372,C384-381,lenalidomide,HDAC11 — Histone deacetylase 11,先解决具体问题,GOTYRUGSSMKFNF-UHFFFAOYSA-N__CHEMBL3310,20,38,180,True,2,212,152,True,3,True,True
+382,C384-378,deutetrabenazine,COMT — Catechol O-methyltransferase,有证据支持降低投入,MKJIEFSOBYUXJB-WEZHFFAMSA-N__CHEMBL2023,18,118,186,True,3,96,430,True,1,True,True

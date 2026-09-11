@@ -1,0 +1,47 @@
+{
+  "actual_rank_source": "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz",
+  "source_sha256": "10a456291bbc7ed518c1ed145ae8225d6988f65ead1f58a12977d881abdd9183",
+  "exact_score_and_rank_reproduction": true,
+  "frozen384_all_original_rank_top20": true,
+  "actual_rank_features": {
+    "features": [
+      "biomaster_logit",
+      "train_positive_max_tanimoto",
+      "target_train_prior"
+    ],
+    "standardization_mean": {
+      "biomaster_logit": 1.5685159943408191,
+      "train_positive_max_tanimoto": 0.4565608501434326,
+      "target_train_prior": 0.5464580781895952
+    },
+    "standardization_scale": {
+      "biomaster_logit": 4.201811392648108,
+      "train_positive_max_tanimoto": 0.23953741788864136,
+      "target_train_prior": 0.14344558138828428
+    },
+    "weights": {
+      "biomaster_logit": 1.0,
+      "train_positive_max_tanimoto": 2.5,
+      "target_train_prior": 0.25
+    },
+    "objective_mean_minus_fold_std": 0.8553573229570965,
+    "fold_mean_drug_auprc": [
+      0.8655058534897605,
+      0.8851415129628296,
+      0.8881343176575743,
+      0.8895081579194332,
+      0.8411373360221858
+    ],
+    "mean_fold_drug_auprc": 0.8738854356103566,
+    "fold_std": 0.01852811265326,
+    "worst_fold": 0.8411373360221858
+  },
+  "actual_legacy_score_with_fixed112_model_only_retained": 171,
+  "solver": {
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "mip_gap": 0.0
+  },
+  "legacy_ranker_is_not_selected_neural_checkpoint": true,
+  "interpretation": "Low overlap mixes changed scorer and changed selection objective. Original384 also used positive-neighbor, disease and review utility; counterfactual model-only selection does not replicate that full policy."
+}
