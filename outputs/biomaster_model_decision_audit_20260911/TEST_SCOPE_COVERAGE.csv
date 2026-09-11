@@ -1,0 +1,9 @@
+scope,pairs,positives,negatives,molecules,targets,wetlab_drugs,wetlab_targets
+all_kdki,34327,23190,11137,16293,2533,12,99
+old_pair_unseen,27439,18074,9365,13511,2489,9,93
+document_disjoint_old_pair_unseen,400,244,156,261,135,1,10
+catalog384_targets_old_pair_unseen,2890,1685,1205,1963,232,3,93
+wetlab112_targets_old_pair_unseen,1390,848,542,970,93,2,93
+catalog720_drugs_old_pair_unseen,1380,174,1206,28,465,9,26
+catalog720x384_old_pair_unseen,70,19,51,11,49,3,26
+wetlab229x112_old_pair_unseen,2,1,1,2,2,2,2

@@ -345,3 +345,6 @@ Thumbs.db
 
 # Explain frozen SPR384 ranks under A/B.
 !/scripts/explain_original384_ab_rankings_20260911.py
+
+# Model decision diagnostics on frozen predictions.
+!/scripts/audit_model_decision_readiness_20260911.py

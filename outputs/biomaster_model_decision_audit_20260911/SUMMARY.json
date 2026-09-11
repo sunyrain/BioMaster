@@ -1,0 +1,88 @@
+{
+  "status": "COMPLETE_POSTHOC_DIAGNOSTIC",
+  "input_sha256": {
+    "outputs/biomaster_old_production_comparison_20260911/TEST_PREDICTIONS.parquet": "42d262ec44327877cbc574ad3eab3a49e8a077bc03382d4cd83565998326595c",
+    "outputs/biomaster_ab_ranking_selection_20260911/CORE276480_SELECTION_AUDIT.parquet": "df7df2851ad0a76299591bb6d8cbaf2b5d76e06eaa1b6c7c6c98ef4b6c30c6c5",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN.parquet": "a0a40f86bd6673cb32823ec7b9d122d72d7caaaf7898b0c7e78243db81164bc4",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "outputs/biomaster_spr384_ab_rank_explanation_20260911/SPR384_AB_RANKING_EXPLANATION.csv": "736f96241d6ab8e50ab2ac39c5a77610c707b8da1ff0092df4468d95d0810d4a",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c"
+  },
+  "inputs_unchanged": true,
+  "frozen_target_support": {
+    "A": {
+      "frozen_targets": 112,
+      "no_training_targets": 3,
+      "no_positive_targets": 6,
+      "no_negative_targets": 4,
+      "both_classes_at_least10_targets": 87,
+      "both_classes_at_least10_pairs": 298
+    },
+    "B": {
+      "frozen_targets": 112,
+      "no_training_targets": 0,
+      "no_positive_targets": 0,
+      "no_negative_targets": 0,
+      "both_classes_at_least10_targets": 109,
+      "both_classes_at_least10_pairs": 376
+    },
+    "A_no_positive_pairs": {
+      "pairs": 29,
+      "A_median_rank": 226.0,
+      "B_median_rank": 84.0,
+      "A_top20": 1,
+      "B_top20": 8
+    }
+  },
+  "training_stats": [
+    {
+      "model": "A",
+      "pairs": 337570,
+      "targets": 2290,
+      "molecules": 140064,
+      "positive": 188799,
+      "negative": 148771,
+      "equivalent_full_passes": 18.200669490772285,
+      "old_parent_seen_pairs": 75375
+    },
+    {
+      "model": "B",
+      "pairs": 1116270,
+      "targets": 3647,
+      "molecules": 690439,
+      "positive": 769395,
+      "negative": 346875,
+      "equivalent_full_passes": 5.504044720363353,
+      "old_parent_seen_pairs": 288075
+    }
+  ],
+  "protocol": {
+    "thresholds_fitted": false,
+    "model_training": false,
+    "target_prior": "(train positives+1)/(train pairs+2); absent target uses global training prevalence",
+    "metrics": "A/B per-seed metrics averaged; old neural direction-specific head for query ranking",
+    "query_eligibility": "at least 10 measured candidates and both labels within each scope",
+    "scope": "Kd/Ki only; no unmeasured negatives",
+    "bootstrap": "1000 paired query resamples, seed-mean metric difference; at least 10 queries for intervals; post hoc, not multiplicity corrected",
+    "missing_cold_target_evidence": "train counts do not certify nearest-neighbor or protein-homology generalization",
+    "legacy_combined_ranker": "not evaluated on these new TEST pairs; old_neural is a different baseline"
+  },
+  "artifacts": {
+    "TRAINING_SCOPE.csv": "224d3f27391c8ddfdb1b111fdb93a4e1bd6fe7223d4d23fbf9532368041fad2a",
+    "CORE384_TARGET_TRAINING_SUPPORT.csv": "bd0d3eeaf284f4fabf2562189fbf53e8701fe8e1c2f2847ca872694bc9cc6a33",
+    "SPR384_TRAINING_SUPPORT.csv": "978e408eed7b813e91df57623623d262e7c156de3f2c6fd0d08556c7f370c392",
+    "TEST_SCOPE_COVERAGE.csv": "b29abb190ede9d067a902e3d5f6c608dc87bd354220b1e609d25229b48ff28da",
+    "PAIR_METRICS_PER_SEED.csv": "fca2cfc77ea89a0ffdd562590937138349d4bbdbefc7c5d7f81b5eebc76a5ab1",
+    "PAIR_COMPARISON.csv": "aad7bdb7ad805f4a0709abf9c14857521ae61672cdd1e3f8a344335c43d4dbc4",
+    "QUERY_METRICS.csv.gz": "7cab0c2c01ea508944c76510ecc7eb64a4f07cecde6d730fb2b602ce792282f6",
+    "QUERY_COMPARISON.csv": "78c0d4803c02ec0d0606f91b39fcfc1c9239da012b2a25c536eb5523396eb668",
+    "QUERY_PAIRED_BOOTSTRAP.csv": "5ffa101e2f1d7559bf2bfa72b798f1526a9cf0365667024928442bdef3875a7a",
+    "TRAINING_EVIDENCE_YEARS.csv": "c1e121322f794f4b8c2ebb011b2f76856cb742b1f9c37338bc411d89e4a935b9",
+    "TRAINING_SOURCE_COMBINATIONS.csv": "244e58cacbe1915e23a2d15490aaee638eea3b5f033c0167e5931a02545e18ca",
+    "TEST_SCOPE_AND_PRIORS.csv.gz": "97bb21fd6f69fa144532b3f5369b28e3d09dd4869592ffcf0dd40f3ca80f2df8",
+    "WETLAB112_TARGET_BENCHMARK.csv": "9a3ddc9e87c3619fc3a97b255baf9ef6a32bca733f4bdaeccc0c2ef7b381cb1a"
+  },
+  "source_sha256": "c9f39aac232a71439ecfc9297d735cc3b56255c019eb54ca4ed5e0b868106873"
+}

@@ -1,0 +1,3 @@
+model,pairs,targets,molecules,positive,negative,equivalent_full_passes,old_parent_seen_pairs
+A,337570,2290,140064,188799,148771,18.200669490772285,75375
+B,1116270,3647,690439,769395,346875,5.504044720363353,288075

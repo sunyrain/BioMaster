@@ -885,3 +885,19 @@
 !/biomaster_spr384_ab_rank_explanation_20260911/SPR384_BOTH_TOP20_17.csv
 !/biomaster_spr384_ab_rank_explanation_20260911/SUMMARY.json
 !/biomaster_spr384_ab_rank_explanation_20260911/VERIFICATION.json
+
+# Compact model decision and project-target diagnostics.
+!/biomaster_model_decision_audit_20260911/CORE384_TARGET_TRAINING_SUPPORT.csv
+!/biomaster_model_decision_audit_20260911/PAIR_COMPARISON.csv
+!/biomaster_model_decision_audit_20260911/PAIR_METRICS_PER_SEED.csv
+!/biomaster_model_decision_audit_20260911/QUERY_COMPARISON.csv
+!/biomaster_model_decision_audit_20260911/QUERY_METRICS.csv.gz
+!/biomaster_model_decision_audit_20260911/QUERY_PAIRED_BOOTSTRAP.csv
+!/biomaster_model_decision_audit_20260911/SPR384_TRAINING_SUPPORT.csv
+!/biomaster_model_decision_audit_20260911/SUMMARY.json
+!/biomaster_model_decision_audit_20260911/TEST_SCOPE_COVERAGE.csv
+!/biomaster_model_decision_audit_20260911/TRAINING_EVIDENCE_YEARS.csv
+!/biomaster_model_decision_audit_20260911/TRAINING_SCOPE.csv
+!/biomaster_model_decision_audit_20260911/TRAINING_SOURCE_COMBINATIONS.csv
+!/biomaster_model_decision_audit_20260911/VERIFICATION.json
+!/biomaster_model_decision_audit_20260911/WETLAB112_TARGET_BENCHMARK.csv

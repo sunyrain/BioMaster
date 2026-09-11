@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "input_and_artifact_hashes_match": true,
+  "frozen_pairs": 384,
+  "frozen_targets": 112,
+  "eligible_matched_targets": 31,
+  "eligible_measured_pairs": 1163,
+  "associated_frozen_candidates_not_measured": 130,
+  "independent_tie_aware_ap_and_top5_queries_checked": 40,
+  "prior_full_scope_metrics_reproduced": true,
+  "small_query_ci_suppressed": true
+}
