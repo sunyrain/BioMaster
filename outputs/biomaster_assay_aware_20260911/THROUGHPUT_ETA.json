@@ -1,0 +1,82 @@
+{
+  "rows": [
+    {
+      "arm": "kdki_inactive",
+      "variant": "balanced",
+      "seconds_per_step": 0.004649492837488651,
+      "validation_seconds": 0.4398143105208874,
+      "seconds_at_30_passes": 50.38162726797164,
+      "seconds_at_60_passes": 100.76325453594328,
+      "seconds_at_90_passes": 151.1448818039149
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "balanced",
+      "seconds_per_step": 0.00472375794313848,
+      "validation_seconds": 0.4573626993224025,
+      "seconds_at_30_passes": 161.3462202622369,
+      "seconds_at_60_passes": 322.6877167665306,
+      "seconds_at_90_passes": 484.02921327082436
+    },
+    {
+      "arm": "kdki_inactive",
+      "variant": "rotate150",
+      "seconds_per_step": 0.00483977765776217,
+      "validation_seconds": 0.43196822609752417,
+      "seconds_at_30_passes": 52.18508329624311,
+      "seconds_at_60_passes": 104.37016659248621,
+      "seconds_at_90_passes": 156.55524988872932
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "rotate150",
+      "seconds_per_step": 0.004817828247323633,
+      "validation_seconds": 0.45470617339015007,
+      "seconds_at_30_passes": 164.38284760132433,
+      "seconds_at_60_passes": 328.76087737440133,
+      "seconds_at_90_passes": 493.13890714747833
+    },
+    {
+      "arm": "kdki_inactive",
+      "variant": "regression",
+      "seconds_per_step": 0.005576217891648412,
+      "validation_seconds": 0.43630681093782187,
+      "seconds_at_30_passes": 59.511863057781014,
+      "seconds_at_60_passes": 119.02372611556203,
+      "seconds_at_90_passes": 178.53558917334303
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "regression",
+      "seconds_per_step": 0.006002688119187951,
+      "validation_seconds": 0.45334306824952364,
+      "seconds_at_30_passes": 203.1120582736656,
+      "seconds_at_60_passes": 406.21811385921205,
+      "seconds_at_90_passes": 609.3241694447585
+    },
+    {
+      "arm": "kdki_inactive",
+      "variant": "assay",
+      "seconds_per_step": 0.007952879844233395,
+      "validation_seconds": 0.4244227157905698,
+      "seconds_at_30_passes": 82.89820881737397,
+      "seconds_at_60_passes": 165.79641763474794,
+      "seconds_at_90_passes": 248.6946264521219
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "assay",
+      "seconds_per_step": 0.010208785189315677,
+      "validation_seconds": 0.4480367675423622,
+      "seconds_at_30_passes": 340.58866234451534,
+      "seconds_at_60_passes": 681.1671159038414,
+      "seconds_at_90_passes": 1021.7455694631674
+    }
+  ],
+  "total_fits": 30,
+  "benchmark_weights_discarded": true,
+  "caveat": "Measured throughput scenarios; convergence and rotating sampler setup can change actual duration. Add preparation, checkpoint I/O and final evaluation.",
+  "total_seconds_at_30_passes": 3840.60896566758,
+  "total_seconds_at_60_passes": 7681.140672156663,
+  "total_seconds_at_90_passes": 11521.672378645744
+}

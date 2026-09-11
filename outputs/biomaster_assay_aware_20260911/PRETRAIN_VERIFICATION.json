@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": {
+    "frozen_feature_hashes": true,
+    "all_prepared_hashes": true,
+    "protected_model_and_experiment_hashes": true,
+    "kdki_inactive_only_original_members": true,
+    "kdki_inactive_no_holdout_pairs": true,
+    "kdki_inactive_unique_assay_pair": true,
+    "kdki_inactive_no_mixed_targets_or_endpoints": true,
+    "kdki_inactive_minimum_five_distinct_compounds": true,
+    "kdki_inactive_all_numeric_finite": true,
+    "all_inactive_only_original_members": true,
+    "all_inactive_no_holdout_pairs": true,
+    "all_inactive_unique_assay_pair": true,
+    "all_inactive_no_mixed_targets_or_endpoints": true,
+    "all_inactive_minimum_five_distinct_compounds": true,
+    "all_inactive_all_numeric_finite": true
+  },
+  "directed_tests": "13 passed: tests/test_assay_aware_training.py and tests/test_endpoint_multitask.py"
+}

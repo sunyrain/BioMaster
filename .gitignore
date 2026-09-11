@@ -360,3 +360,6 @@ Thumbs.db
 !/scripts/run_endpoint_multitask_20260911.py
 !/scripts/audit_ab_balance_20260911.py
 !/scripts/audit_assay_context_frontier_20260911.py
+!/scripts/prepare_assay_aware_20260911.py
+!/scripts/run_assay_aware_20260911.py
+!/scripts/report_assay_aware_20260911.py

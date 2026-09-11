@@ -1,0 +1,116 @@
+{
+  "status": "FROZEN_BEFORE_OPTIMIZED_TRAINING",
+  "arms": {
+    "kdki_inactive": [
+      "AFFINITY_KD_KI"
+    ],
+    "all_inactive": [
+      "AFFINITY_KD_KI",
+      "ACTIVITY_IC50",
+      "ACTIVITY_EC50"
+    ]
+  },
+  "variants": {
+    "balanced": {
+      "sampler": "soft",
+      "regression": false,
+      "assay": false
+    },
+    "rotate150": {
+      "sampler": "rotate150",
+      "regression": false,
+      "assay": false
+    },
+    "regression": {
+      "sampler": "soft",
+      "regression": true,
+      "assay": false
+    },
+    "assay": {
+      "sampler": "soft",
+      "regression": true,
+      "assay": true
+    }
+  },
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "total_fits": 30,
+  "initialization": "fresh identical base initialization per seed; no supervised parent weights",
+  "endpoints": {
+    "kdki_inactive": [
+      "Kd",
+      "Ki"
+    ],
+    "all_inactive": [
+      "Kd",
+      "Ki",
+      "IC50",
+      "EC50"
+    ]
+  },
+  "batch_size": 1024,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "ema_decay": 0.995,
+  "warmup_steps": 200,
+  "regression_rows_per_endpoint": 128,
+  "rank_temperature": 1.0,
+  "binary_objective": "Original measured A/B labels and two binary heads; change only weights or rotating exposure.",
+  "inactivity": "Original explicit negatives remain in BCE; no unknown-negative sampling or assigning generic inactivity to an endpoint.",
+  "regression_objective": "Same existing exact endpoint labels, train-only scaling and endpoint-balanced Huber.",
+  "validation_interval": "max(1000, ceil(2 * train_pairs / batch_size)) optimizer steps",
+  "checkpoint_selection": "Mean of Kd/Ki validation target-macro AP and drug-macro AP, each query >= 10 and both labels; maximum across checkpoints.",
+  "convergence": {
+    "minimum_complete_passes": 10,
+    "improvement_delta": 0.0002,
+    "lr_reduce_every_stale_checks": 4,
+    "lr_factor": 0.5,
+    "minimum_lr": 5e-06,
+    "stale_checks_to_stop": 12,
+    "minimum_lr_reductions_since_improvement": 2
+  },
+  "emergency_max_steps": 200000,
+  "emergency_policy": "Stop with NOT_CONVERGED_NEEDS_EXTENSION, never report a budget stop as convergence.",
+  "test_policy": "Score no optimized checkpoints on test until all 30 fits are frozen. Existing test is a diagnostic panel, not pristine.",
+  "comparisons": "All seeds; same A/B members, frozen features, BCE definition, validation queries and score convention. Report differing sample exposure and auxiliary computation.",
+  "limitations": [
+    "Operational validation convergence, not a guarantee of global optimality.",
+    "The classifier remains pooled; endpoint regression heads are separate. This round tests weighting, intra-assay supervision and adaptation.",
+    "150 means a rotating target/class budget without the historical scaffold-selection heuristic.",
+    "Current scaffold splits can share source assays; only explicitly flagged subsets claim source-assay separation.",
+    "No real SPR outcome inferred from model agreement or calibration.",
+    "All measurements and production assets retained; research models are not automatically deployed."
+  ],
+  "minimum_lr_exception": "A plateau already at minimum LR may stop without two further impossible LR reductions.",
+  "primary_fits": 24,
+  "adaptation_fits": 6,
+  "auxiliary_weights": {
+    "regression": 0.1,
+    "assay_difference": 0.2
+  },
+  "assay_pairs_per_endpoint": 32,
+  "assay_minimum_compounds": 5,
+  "assay_minimum_iqr": 0.3,
+  "assay_minimum_pair_difference": 0.3,
+  "target_count_smoothing": 20.0,
+  "maximum_class_relative_gain": 5.0,
+  "rotating_cap": 150,
+  "minimum_unique_binary_fraction": 1.0,
+  "assay_objective": "Huber on intra-assay exact p-activity differences; separate endpoints, equal endpoint and assay weights.",
+  "source_duplicate_policy": "Prefer ChEMBL for pair-endpoint auxiliary evidence when available; otherwise BindingDB. No merging of unverified assay namespaces.",
+  "auxiliary_context": "Source assay descriptions required; annotated mutation/fusion contexts excluded; remaining context is source-reported, not fully experimentally certified.",
+  "partition_policy": "Retain original scaffold split for matched comparisons; audit source-assay and document-disjoint subsets separately.",
+  "adaptation": {
+    "parents": [
+      "kdki_inactive",
+      "all_inactive"
+    ],
+    "parent_variant": "assay",
+    "target_arm": "kdki_inactive",
+    "learning_rate": 0.0001,
+    "purpose": "Compare B-to-A with A-to-A continued training using identical downstream data and loss; upstream compute still differs."
+  }
+}

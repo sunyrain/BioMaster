@@ -1,0 +1,5 @@
+arm,group,pairs,raw_fraction,soft_bce_coefficient_fraction
+all_inactive,positive,769395,0.6892552876992125,0.5
+all_inactive,negative,346875,0.31074471230078743,0.5
+all_inactive,numeric_KdKi_present,284797,0.2551327187866735,0.2568542957305908
+all_inactive,explicit_inactive,105368,0.09439293360925224,0.1517886519432068

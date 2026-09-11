@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "data/processed/biomaster_training_full_20260910_v1/OBSERVATIONS_WITH_QC.parquet": "fafab4163ba491db67ff7cab6bbd537459f95fd8fb1b9f1c322f3c0ba9971d36",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN_REGRESSION.parquet": "f0be8cc958703155ef83ebe974755bcef746706acc6d1ee025250f7168b7d20b",
+    "data/processed/biomaster_training_full_20260910_v1/ALL_PAIR_TASK_LABELS.parquet": "29e2b536dbb7361d73b0fdbc6ee02d859bd4bdb04db96c61ab645bb729ea80e9",
+    "outputs/biomaster_endpoint_multitask_20260911/PROTOCOL.json": "c13328a69a1b3994505e4cf76173df290ea56cf8b75481f8e1db85ece59f5755",
+    "outputs/biomaster_endpoint_multitask_20260911/DATA_MANIFEST.json": "e73a3d1848c7ea8f0879608b43b15b558e88805d3cb37fb4edd1337fa4e6d287",
+    "outputs/biomaster_endpoint_multitask_20260911/MODEL_CONFIG.json": "041e9e4eabbb1eea0129d3a4f8a39bfad9cff4a4a2ac21220b642955da87560f",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "data/external/assay_context_research_20260911/BindingDB_Assays_202609_tsv.zip": "b9949b6271de7a3d2e4269498fffc9a5374b0e45d72202c4c347d798876b345e",
+    "data/external/assay_context_research_20260911/BindingDB_rsid_eaids_202609_tsv.zip": "0c967f8a34ab21d766a5e9ca327a02ad45970321f691816f1d27109ef79c7cf9"
+  },
+  "prepared": {
+    "outputs/biomaster_assay_aware_20260911/CHEMBL_ASSAY_METADATA.parquet": "d95dd924988a32b38f18851a42993e69d3e65edf6d14453e72b28684b1d23fe3",
+    "outputs/biomaster_assay_aware_20260911/kdki_inactive_ASSAY_TRAIN.parquet": "b7897a7c5708c98a14bed09de652378e76ad1521ba25852b16ad6ff9585bb095",
+    "outputs/biomaster_assay_aware_20260911/kdki_inactive_VALIDATION_CONTEXT.parquet": "6650c148a4caefc30b02f733c39b4a21e3206e00516ce0f19553066f0335c6fc",
+    "outputs/biomaster_assay_aware_20260911/kdki_inactive_TEST_CONTEXT.parquet": "5f2871604394664a1b558accd5794a4b75bed93bee34ab0b2c8d6bf45c14834c",
+    "outputs/biomaster_assay_aware_20260911/all_inactive_ASSAY_TRAIN.parquet": "0a6d0f9de3804e5a296e1fc8b137b4e8ed18008e8669f096aa6ba10420056e04",
+    "outputs/biomaster_assay_aware_20260911/all_inactive_VALIDATION_CONTEXT.parquet": "b4bc7e167b14b35b1c7a0b3cf3d7aba2f0867d53e9bca6bf29bd146e971d644d",
+    "outputs/biomaster_assay_aware_20260911/all_inactive_TEST_CONTEXT.parquet": "1f083a16ba1cd6d1541d3162b4f3b0880604e048084fbbfbd272ade1a2ac9886",
+    "outputs/biomaster_assay_aware_20260911/MODEL_CONFIG.json": "041e9e4eabbb1eea0129d3a4f8a39bfad9cff4a4a2ac21220b642955da87560f"
+  },
+  "protocol_sha256": "ba8a9223bbbee999715ed1bc352328d4e4be82607e68d1a002a3aa4e9a7e31e0",
+  "frozen_inputs": {
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+  },
+  "producer_sha256": "80f02139c4986f174bb0ea8c1cf1a73c687cb2004a1da8dcdedb3cf9c26a0ab4"
+}

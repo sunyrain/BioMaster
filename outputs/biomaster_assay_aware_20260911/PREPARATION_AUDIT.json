@@ -1,0 +1,11 @@
+{
+  "accepted_observations": 2897915,
+  "known_description": 2877889,
+  "mutation_or_fusion_description": 86193,
+  "bindingdb_ambiguous_descriptions": 0,
+  "secondary_bindingdb_observations_removed": 453531,
+  "context_certification": "source-reported; not laboratory-verified",
+  "original_scaffold_split_preserved": true,
+  "test_scores_used": false,
+  "cross_source_policy": "Prefer ChEMBL for pair-endpoint auxiliary evidence when available; otherwise BindingDB. No merging of unverified assay namespaces."
+}
