@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE_24_VALIDATION_CONVERGED_FITS",
+  "completed_utc": "2026-09-11T04:39:39.091106+00:00",
+  "runs": 24,
+  "production_replaced": false,
+  "wetlab_unchanged": true,
+  "protocol_sha256": "c13328a69a1b3994505e4cf76173df290ea56cf8b75481f8e1db85ece59f5755",
+  "limitations": [
+    "Validation plateau is an operational early-stopping criterion, not proof of a global optimum.",
+    "Same-task ranking does not certify same assay conditions; Kd/Ki remain one binary task.",
+    "Existing test panels were inspected in prior research; this is not a new pristine prospective test.",
+    "No automatic replacement of the frozen SPR list or production scorer."
+  ],
+  "no_claim_of_optimal_auxiliary_weights": true
+}

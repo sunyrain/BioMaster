@@ -1,0 +1,41 @@
+{
+  "status": "PASS_COMPLETION_AUDIT",
+  "checks": {
+    "24_converged_runs_with_valid_checkpoint_hashes": true,
+    "eight_configurations_three_seeds_each": true,
+    "all_stopped_on_validation_plateau_not_budget_guard": true,
+    "best_checkpoints_match_recorded_validation_maximum": true,
+    "protected_inputs_unchanged": true,
+    "all_fits_frozen_before_test_completion": true,
+    "no_runtime_error": true
+  },
+  "checkpoint_sha256": {
+    "all_inactive__binary__seed_20260921": "caf875dde9bc4b49164cfdb4e21ac64dfd1072e63747e9af6f1348e6e9473334",
+    "all_inactive__binary__seed_20260922": "29011320c118fa7d91959b4433ba5b5259eb1f838247518ed91e18be218483e1",
+    "all_inactive__binary__seed_20260923": "d7064c7171ad55a5cf670cc7c16b5fdc69a037ebc8dbc6c631deacf59be8dafe",
+    "all_inactive__joint__seed_20260921": "667c437dd4363b71b060c575a9d6b018770520e0ab26a00c91f99b1c3e100ddf",
+    "all_inactive__joint__seed_20260922": "b1d1ab93cf22fcc58ff15ff5eb41457830616dc71e512ceaa766fcc565b48ee9",
+    "all_inactive__joint__seed_20260923": "dd34a603446f5b26b3ae8a639310e25f959942377b71d93b5f0fac889065053f",
+    "all_inactive__rank__seed_20260921": "bbe1b5fbf9b4a1800dfbb211131d3e083fb5ce66c7e555c29a18762a408854a7",
+    "all_inactive__rank__seed_20260922": "7506896beeb067be87b0d2c8d9337e3f3650d0ce85aacb7f4c6965458af9d670",
+    "all_inactive__rank__seed_20260923": "7327839688fb97e0c7ee3bc794de931064a592db7bf1fa4d8a0c994f541c0ce3",
+    "all_inactive__regression__seed_20260921": "b794013b77408da99ca71276481528a3a59f1988fd770cfdd395c69e697fc31d",
+    "all_inactive__regression__seed_20260922": "b793e88b06ecf076ca4c3d202a196f712b1a1a8716467c8a57c4639d5ada38cd",
+    "all_inactive__regression__seed_20260923": "f169fa95aada5a393f46f1168751f64359fcddfe9e31fe0009ff7d69d9c08fb6",
+    "kdki_inactive__binary__seed_20260921": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+    "kdki_inactive__binary__seed_20260922": "1c4315005b8bc881aad08610fc0760a3ea7847b6a78b85927c1657c5e6176c29",
+    "kdki_inactive__binary__seed_20260923": "5e3a09363979205d1c0db3cdeac4e3f2495bcd3984085c7ea2bf7d4568ba6cfc",
+    "kdki_inactive__joint__seed_20260921": "6ceca6a0e48449a38b790929fb34b14d16b7e4277782ca644311a8a9d2a3911c",
+    "kdki_inactive__joint__seed_20260922": "0fc8f842edf53552e32c5497a882259eebed518608c54f861ee3c2090f5d11cd",
+    "kdki_inactive__joint__seed_20260923": "40261afc4a18e047a9343058d689dde781621945b2c31b6e6c4081ebd4b60e75",
+    "kdki_inactive__rank__seed_20260921": "a62deed4e78dac6fb6074cda4f31972ca99bd8ff584c2d9fd27a19157770f246",
+    "kdki_inactive__rank__seed_20260922": "9713caf50c3931af7b5921c16740ba9c694cbe327902c6bc00602e1cdeba354d",
+    "kdki_inactive__rank__seed_20260923": "ad960401e72ce5dbd851df41bbd7dd47e213c8043e0bad16968e4cd442efa2a1",
+    "kdki_inactive__regression__seed_20260921": "fecdebd1b79261e4cdea603157a9408ffdb817d7267269edeb0ec4ca787a8e9e",
+    "kdki_inactive__regression__seed_20260922": "532035bfe9eec403a04d26bcbcf66d1a59907eafcb267ed1e50bee1083c7dcfb",
+    "kdki_inactive__regression__seed_20260923": "594a0608aae9798ff55a33f17ed3545aa6522fbb94947931680f62e44f241935"
+  },
+  "elapsed_minutes": 91.07041235,
+  "completed_utc": "2026-09-11T04:39:39.091106+00:00",
+  "scope": "Recorded validation convergence, checkpoints and frozen inputs; not a claim of global optimization or prospective SPR performance."
+}
