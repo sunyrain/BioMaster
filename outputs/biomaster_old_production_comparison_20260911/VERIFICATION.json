@@ -1,0 +1,12 @@
+{
+  "all_pass": true,
+  "frozen_inputs_unchanged": true,
+  "output_hashes_match": true,
+  "previous_six_prediction_columns_unchanged": true,
+  "previous_30_full_panel_seed_metrics_reproduced": true,
+  "old_metrics_independently_recomputed": true,
+  "mean_head_scores_verified": true,
+  "kdki_pairs": 34327,
+  "old_seen_kdki_pairs": 6888,
+  "old_unseen_kdki_pairs": 27439
+}

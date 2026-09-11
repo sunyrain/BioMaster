@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETE",
+  "frozen_inputs": {
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_endpoint_ablation_20260911/TEST_PREDICTIONS.parquet": "ac150eef15d68b9c5d177271187fb74df833298aae21d8aefbd25ba2e91225a2",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4",
+    "outputs/spr384_final_experiment_table_20260910/CONTROL_SOURCE_ACTIVITY_EVIDENCE.csv": "f12774d6362e4f50fca1096ca348e6e80508d5cf8f9d24de151765fb688b8669",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_FOUR_COLUMNS.csv": "0b94be528118e7984bc1e4a08b6da7a28422c719e65a0145de73953453554da3",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/spr384_final_experiment_table_20260910/FDA_CONTROL_REPLACEMENTS.csv": "a474960b3b9d07c2f684b8ff3fb663e9dec06f45b1c56f211bef092b6d10f5c1"
+  },
+  "producer_sha256": "f583d04f487eae02e337faec216b6338426d1ed8f76e0c9b6e4f74c3311f69ec",
+  "checkpoint_loaded_strictly": true,
+  "identical_panel_order_and_labels": true,
+  "all_predictions_finite": true,
+  "score": "mean of both output logits, bf16 autocast, same as A/B",
+  "new_model_summary": "arithmetic mean of 3 seed metrics, not ensemble predictions",
+  "old_model_count": 1,
+  "retrained": false,
+  "production_and_wetlab_unchanged": true,
+  "exposure_definition": "old supervised molecular connectivity plus exact protein sequence pair",
+  "limitations": [
+    "Full test contains old training pairs; report seen/unseen separately.",
+    "Pair unseen does not certify molecule/scaffold/citation or encoder-pretraining unseen.",
+    "Threshold metrics use new validation-only calibration, not deployed probability.",
+    "Pooled measured-pair classification is not full-catalog directional retrieval or prospective SPR."
+  ],
+  "artifacts": {
+    "CALIBRATION.json": "0bcf97dcbea1c00d5a05b0f338f834dee4107c85ced513e2f744a5a0f2180008",
+    "TEST_PREDICTIONS.parquet": "42d262ec44327877cbc574ad3eab3a49e8a077bc03382d4cd83565998326595c",
+    "TEST_METRICS.csv": "b70cba30c9186f79e5ad82776adc857499acd8b99d03e0910d2dd76bc3651128",
+    "OLD_HEAD_DIAGNOSTICS.csv": "d0728e9d8b5e6458448a1b0aeff66d24e130ed1bfae7d6b2f59a248e2c52156b",
+    "COMPARISON.csv": "c292b3317e473e7a1644f16f836099626a6dcc8fce77c76e0201faf8436a37d4"
+  }
+}

@@ -327,3 +327,6 @@ Thumbs.db
 !/scripts/run_endpoint_ablation_20260911.py
 !/scripts/report_endpoint_ablation_20260911.py
 !/scripts/verify_endpoint_ablation_20260911.py
+
+# Frozen production baseline on endpoint test panels.
+!/scripts/evaluate_old_production_endpoint_20260911.py

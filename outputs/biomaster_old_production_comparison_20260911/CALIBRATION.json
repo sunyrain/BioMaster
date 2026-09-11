@@ -1,0 +1,9 @@
+{
+  "slope": 0.20973459035118636,
+  "intercept": 1.3173265539986758,
+  "threshold": 0.3989824478551512,
+  "validation_f1": 0.8475893394625951,
+  "fit_panel": "VALIDATION_AFFINITY_KD_KI",
+  "old_training_overlap_in_validation_kdki": 7592,
+  "note": "New validation-only calibration for common threshold metrics; production checkpoint unchanged. Validation may overlap old training."
+}

@@ -815,3 +815,11 @@
 !/biomaster_endpoint_ablation_20260911/features/PROTEIN_COMPLETE.json
 !/biomaster_endpoint_ablation_20260911/features/DRUGCLIP_COMPLETE.json
 !/biomaster_endpoint_ablation_20260911/features/MANIFEST.json
+
+# Compact old-production comparison reports; full predictions remain local.
+!/biomaster_old_production_comparison_20260911/COMPARISON.csv
+!/biomaster_old_production_comparison_20260911/TEST_METRICS.csv
+!/biomaster_old_production_comparison_20260911/OLD_HEAD_DIAGNOSTICS.csv
+!/biomaster_old_production_comparison_20260911/CALIBRATION.json
+!/biomaster_old_production_comparison_20260911/MANIFEST.json
+!/biomaster_old_production_comparison_20260911/VERIFICATION.json
