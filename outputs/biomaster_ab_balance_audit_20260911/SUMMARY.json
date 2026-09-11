@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_DESCRIPTIVE_AUDIT_NO_NEW_TRAINING",
+  "input_sha256": {
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN.parquet": "a0a40f86bd6673cb32823ec7b9d122d72d7caaaf7898b0c7e78243db81164bc4",
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_METRICS.csv": "c2919879eb3eb3a7ebf8c4463955e0b48c953eba12e450cd637bac04309517ea",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "scripts/run_endpoint_multitask_20260911.py": "209aa91631576d71789d0c3c6e9faab812711c51e7582d88ac698bdd614f7099"
+  },
+  "inputs_unchanged": true,
+  "cap_applied": false,
+  "producer_sha256": "8098e433915062a7addb19e5e59d62176bbe888d81948f041f61a4c5e0f15587",
+  "caveats": [
+    "Coefficient fractions are expected sampling/loss weights, not actual error or gradient contributions.",
+    "The 150 cap is count-only per current target and class; no actual rows or scaffolds were selected.",
+    "Square-root target-only sampling is an illustrative exposure calculation, not a tested performance gain or the proposed fully class-normalized weighting.",
+    "A retains non-KdKi rows only via accepted inactivity; other numerical endpoints on these pairs do not supervise A.",
+    "Observed imbalance and task performance do not identify the causal source of the A/B gap."
+  ]
+}

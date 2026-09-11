@@ -937,3 +937,9 @@
 !/biomaster_endpoint_multitask_20260911/COMPLETION_VERIFICATION.json
 !/biomaster_endpoint_multitask_20260911/OBJECTIVE_COMPARISON.csv
 !/biomaster_endpoint_multitask_20260911/OBJECTIVE_COMPARISON_PER_SEED.csv
+
+# Descriptive endpoint/target balance audit; no new training selection.
+!/biomaster_ab_balance_audit_20260911/BALANCE_SUMMARY.csv
+!/biomaster_ab_balance_audit_20260911/SUPERVISION_MIX.csv
+!/biomaster_ab_balance_audit_20260911/BINARY_TASK_PERFORMANCE.csv
+!/biomaster_ab_balance_audit_20260911/SUMMARY.json

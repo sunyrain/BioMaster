@@ -358,3 +358,4 @@ Thumbs.db
 # Validation-converged A/B objective ablations.
 !/scripts/prepare_endpoint_multitask_20260911.py
 !/scripts/run_endpoint_multitask_20260911.py
+!/scripts/audit_ab_balance_20260911.py
