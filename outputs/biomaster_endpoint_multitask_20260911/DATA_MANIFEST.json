@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE",
+  "inputs": {
+    "outputs/biomaster_endpoint_ablation_20260911/DATA_MANIFEST.json": "a1124102a36b4a25f7faac5b0e9db882b56edb79e04c6422eb4ce965f7059c40",
+    "outputs/biomaster_endpoint_ablation_20260911/PROTOCOL.json": "ee1be3cc2d79e8e9f3a78db3588ecf519454aba6d38b5963f29aa85a15cffcc3",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN.parquet": "a0a40f86bd6673cb32823ec7b9d122d72d7caaaf7898b0c7e78243db81164bc4",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN_REGRESSION.parquet": "f0be8cc958703155ef83ebe974755bcef746706acc6d1ee025250f7168b7d20b",
+    "data/processed/biomaster_training_full_20260910_v1/VALIDATION_REGRESSION.parquet": "94fcac2e855e884695a375662dff7f24187e2193132c0da43f73e8dfff0e8fbc",
+    "data/processed/biomaster_training_full_20260910_v1/TEST_REGRESSION.parquet": "447e459ca3778676d81ad2ac5dd25c6c541382664f87d9fa90e80de0b7b968b9",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_VALIDATION.parquet": "1eaf1d72bdaec91d58dd17462a105c5b2211e8ffe701488b9955811da0305449",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_VALIDATION.parquet": "4251ee0ac27ba008851fa60ce50a4b0434c365c6394752be3ea42662bdf4a01c"
+  },
+  "prepared": {
+    "MODEL_CONFIG.json": "041e9e4eabbb1eea0129d3a4f8a39bfad9cff4a4a2ac21220b642955da87560f",
+    "kdki_inactive_TRAIN_REGRESSION.parquet": "3507eff3d57cf0bb3ba1df8ced8da6a055be9bf403b883e3ab9217289cf8b0a2",
+    "kdki_inactive_VALIDATION_REGRESSION.parquet": "77d40947307c25c11e17e0d122b30606eee192553956c4ca13daed81ca171611",
+    "kdki_inactive_RANK_TASKS.parquet": "36abf344ccb5e134abc70f1cff00f0404ffd9e383e9282ec6fefdcd0827fcdd6",
+    "all_inactive_TRAIN_REGRESSION.parquet": "ed1c729ccb2598dfaafdc64388f5c031e40857ae62ac288d93349a9d4dbc2350",
+    "all_inactive_VALIDATION_REGRESSION.parquet": "78c70b3b73cdc151f74a6de42a6c8777436d9caa7ff804d1ed03441761b13657",
+    "all_inactive_RANK_TASKS.parquet": "afde730eca67fcdc1dc91dbf85c43f0c35f07a0d458fe3645c7f2b645dc942fc",
+    "SUPERVISION_COUNTS.csv": "1e66de1cc41e12a4574ee5f0369a0ac57e9d190e23eaaa079299256031208427"
+  },
+  "frozen_inputs": {
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+  },
+  "protocol_sha256": "c13328a69a1b3994505e4cf76173df290ea56cf8b75481f8e1db85ece59f5755",
+  "producer_sha256": "4d191d8c77aff0fa03af9c3e720b5e12c945f995d9c7378695fd57332976fc27",
+  "checks": {
+    "kdki_inactive_same_member_supervision_and_split_isolation": true,
+    "all_inactive_same_member_supervision_and_split_isolation": true
+  },
+  "feature_files_verified": true,
+  "no_new_training_pairs": true
+}

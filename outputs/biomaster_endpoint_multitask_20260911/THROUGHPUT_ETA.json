@@ -1,0 +1,137 @@
+{
+  "created_utc": "2026-09-11T03:08:53.878126+00:00",
+  "rows": [
+    {
+      "arm": "kdki_inactive",
+      "variant": "binary",
+      "seconds_per_step": 0.003681220794096589,
+      "validation_seconds": 0.4352324651554227,
+      "validation_interval_steps": 1000,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 0,
+        "regression": 0
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 40.75959830516949,
+      "estimated_seconds_60_passes": 81.51919661033898
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "binary",
+      "seconds_per_step": 0.0036494456604123115,
+      "validation_seconds": 0.4628487229347229,
+      "validation_interval_steps": 2181,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 0,
+        "regression": 0
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 126.29420172214508,
+      "estimated_seconds_60_passes": 252.58475399862974
+    },
+    {
+      "arm": "kdki_inactive",
+      "variant": "rank",
+      "seconds_per_step": 0.004453167039901018,
+      "validation_seconds": 0.4232762483879924,
+      "validation_interval_steps": 1000,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 128,
+        "regression": 0
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 48.27458450850099,
+      "estimated_seconds_60_passes": 96.54916901700199
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "rank",
+      "seconds_per_step": 0.0054530854150652884,
+      "validation_seconds": 0.45400400646030903,
+      "validation_interval_steps": 2181,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 384,
+        "regression": 0
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 185.14776551119982,
+      "estimated_seconds_60_passes": 370.2900779369846
+    },
+    {
+      "arm": "kdki_inactive",
+      "variant": "regression",
+      "seconds_per_step": 0.004557416290044785,
+      "validation_seconds": 0.43002544716000557,
+      "validation_interval_steps": 1000,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 0,
+        "regression": 256
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 49.37310158014298,
+      "estimated_seconds_60_passes": 98.74620316028596
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "regression",
+      "seconds_per_step": 0.004839110383763909,
+      "validation_seconds": 0.44796775095164776,
+      "validation_interval_steps": 2181,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 0,
+        "regression": 512
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 164.9777822548896,
+      "estimated_seconds_60_passes": 329.9507253993954
+    },
+    {
+      "arm": "kdki_inactive",
+      "variant": "joint",
+      "seconds_per_step": 0.005361482566222549,
+      "validation_seconds": 0.4223226234316826,
+      "validation_interval_steps": 1000,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 128,
+        "regression": 256
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 57.24828881425783,
+      "estimated_seconds_60_passes": 114.49657762851567
+    },
+    {
+      "arm": "all_inactive",
+      "variant": "joint",
+      "seconds_per_step": 0.0065454400703310964,
+      "validation_seconds": 0.44561517890542746,
+      "validation_interval_steps": 2181,
+      "rows_per_step": {
+        "binary": 1024,
+        "rank": 384,
+        "regression": 512
+      },
+      "benchmark_steps": 120,
+      "benchmark_weights_discarded": true,
+      "estimated_seconds_30_passes": 220.74629974368958,
+      "estimated_seconds_60_passes": 441.48605404730887
+    }
+  ],
+  "total_fits": 24,
+  "seconds_at_30_passes": 2678.4648673199863,
+  "seconds_at_60_passes": 5356.868273395384,
+  "caveat": "Measured-speed scenarios, not known convergence epochs; excludes final evaluation and per-fit setup/checkpoint I/O."
+}

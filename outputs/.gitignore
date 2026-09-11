@@ -920,3 +920,17 @@
 !/biomaster_s5_origin_auxiliary_plan_20260911/AUXILIARY_POOL_TOTALS.csv
 !/biomaster_s5_origin_auxiliary_plan_20260911/SUMMARY.json
 !/biomaster_s5_origin_auxiliary_plan_20260911/VERIFICATION.json
+
+# Frozen protocol and compact results for the 24-fit objective experiment.
+!/biomaster_endpoint_multitask_20260911/PROTOCOL.json
+!/biomaster_endpoint_multitask_20260911/MODEL_CONFIG.json
+!/biomaster_endpoint_multitask_20260911/DATA_MANIFEST.json
+!/biomaster_endpoint_multitask_20260911/SUPERVISION_COUNTS.csv
+!/biomaster_endpoint_multitask_20260911/THROUGHPUT_ETA.json
+!/biomaster_endpoint_multitask_20260911/LAUNCH_SNAPSHOT.json
+!/biomaster_endpoint_multitask_20260911/VERIFICATION.json
+!/biomaster_endpoint_multitask_20260911/TEST_METRICS.csv
+!/biomaster_endpoint_multitask_20260911/TEST_REGRESSION_METRICS.csv
+!/biomaster_endpoint_multitask_20260911/TEST_SUMMARY.csv
+!/biomaster_endpoint_multitask_20260911/CONVERGENCE_SUMMARY.csv
+!/biomaster_endpoint_multitask_20260911/SUMMARY.json

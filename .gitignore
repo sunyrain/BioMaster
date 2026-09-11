@@ -354,3 +354,7 @@ Thumbs.db
 
 # Historical S5 provenance and current A/B auxiliary-data audit.
 !/scripts/audit_s5_origin_and_auxiliary_data_20260911.py
+
+# Validation-converged A/B objective ablations.
+!/scripts/prepare_endpoint_multitask_20260911.py
+!/scripts/run_endpoint_multitask_20260911.py

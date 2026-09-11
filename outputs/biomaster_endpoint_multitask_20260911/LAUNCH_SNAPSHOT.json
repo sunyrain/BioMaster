@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-09-11T03:12:13.202401+00:00",
+  "launch": {
+    "pid": 221012,
+    "started_utc": "2026-09-11T03:08:34.866365+00:00",
+    "stdout": "/root/autodl-tmp/BioMaster/outputs/biomaster_endpoint_multitask_20260911/RUN.log",
+    "planned_fits": 24,
+    "detached": true
+  },
+  "status": {
+    "updated_utc": "2026-09-11T03:12:13.077916+00:00",
+    "pid": 221012,
+    "stage": "training",
+    "arm": "all_inactive",
+    "variant": "binary",
+    "seed": 20260921,
+    "fit_index": 2,
+    "total_fits": 24,
+    "step": 14750,
+    "complete_passes": 13,
+    "learning_rate": 0.0003,
+    "seconds": 70.12487001158297,
+    "recent_steps_per_second": 220.1445109486741,
+    "losses": {
+      "binary": 0.06893170304829255
+    }
+  },
+  "progress": {
+    "updated_utc": "2026-09-11T03:11:02.797362+00:00",
+    "completed_fits": 1,
+    "total_fits": 24,
+    "runs": [
+      {
+        "arm": "kdki_inactive",
+        "variant": "binary",
+        "seed": 20260921,
+        "status": "CONVERGED_VALIDATION_PLATEAU",
+        "seconds": 128.8921222668141,
+        "optimizer_steps": 26000
+      }
+    ]
+  },
+  "initial_eta_minutes": [
+    60,
+    120
+  ],
+  "snapshot_only": true
+}

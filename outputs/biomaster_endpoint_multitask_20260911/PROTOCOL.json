@@ -1,0 +1,89 @@
+{
+  "status": "FROZEN_BEFORE_NEW_TRAINING",
+  "arms": {
+    "kdki_inactive": [
+      "AFFINITY_KD_KI"
+    ],
+    "all_inactive": [
+      "AFFINITY_KD_KI",
+      "ACTIVITY_IC50",
+      "ACTIVITY_EC50"
+    ]
+  },
+  "variants": {
+    "binary": [
+      false,
+      false
+    ],
+    "rank": [
+      true,
+      false
+    ],
+    "regression": [
+      false,
+      true
+    ],
+    "joint": [
+      true,
+      true
+    ]
+  },
+  "seeds": [
+    20260921,
+    20260922,
+    20260923
+  ],
+  "total_fits": 24,
+  "initialization": "fresh identical base initialization per seed; no supervised parent weights",
+  "endpoints": {
+    "kdki_inactive": [
+      "Kd",
+      "Ki"
+    ],
+    "all_inactive": [
+      "Kd",
+      "Ki",
+      "IC50",
+      "EC50"
+    ]
+  },
+  "batch_size": 1024,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "ema_decay": 0.995,
+  "warmup_steps": 200,
+  "rank_queries_per_task_direction": 2,
+  "rank_candidates_per_class": 16,
+  "regression_rows_per_endpoint": 128,
+  "rank_temperature": 1.0,
+  "target_rank_weight": 0.1,
+  "drug_rank_weight": 0.1,
+  "regression_weight": 0.1,
+  "weight_policy": "Fixed preregistered starting weights; no test tuning or claim of optimal loss weights.",
+  "binary_objective": "Original prevalence-balanced observed BCE on both heads; all original rows cycle before repeating.",
+  "rank_objective": "Mean-logit pairwise softplus; equal queries, equal numeric tasks, separate drug and target directions.",
+  "inactivity": "Original explicit negatives remain in BCE; no unknown-negative sampling or assigning generic inactivity to an endpoint.",
+  "regression_objective": "Exact same-member endpoint values; train-only z-score and endpoint-balanced Huber; no censored or fabricated targets.",
+  "validation_interval": "max(1000, ceil(2 * train_pairs / batch_size)) optimizer steps",
+  "checkpoint_selection": "Mean of Kd/Ki validation target-macro AP and drug-macro AP, each query >= 10 and both labels; maximum across checkpoints.",
+  "convergence": {
+    "minimum_complete_passes": 10,
+    "improvement_delta": 0.0002,
+    "lr_reduce_every_stale_checks": 4,
+    "lr_factor": 0.5,
+    "minimum_lr": 5e-06,
+    "stale_checks_to_stop": 12,
+    "minimum_lr_reductions_since_improvement": 2
+  },
+  "emergency_max_steps": 200000,
+  "emergency_policy": "Stop with NOT_CONVERGED_NEEDS_EXTENSION, never report a budget stop as convergence.",
+  "test_policy": "No new test scores until all 24 validation-selected fits converge and checkpoint hashes are frozen.",
+  "comparisons": "All seeds; same A/B members, frozen features, BCE definition, validation queries and score convention. Report differing sample exposure and auxiliary computation.",
+  "limitations": [
+    "Validation plateau is an operational early-stopping criterion, not proof of a global optimum.",
+    "Same-task ranking does not certify same assay conditions; Kd/Ki remain one binary task.",
+    "Existing test panels were inspected in prior research; this is not a new pristine prospective test.",
+    "No automatic replacement of the frozen SPR list or production scorer."
+  ],
+  "minimum_lr_exception": "A plateau already at minimum LR may stop without two further impossible LR reductions."
+}

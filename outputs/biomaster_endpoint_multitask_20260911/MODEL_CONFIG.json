@@ -1,0 +1,9 @@
+{
+  "variant": "global",
+  "width": 192,
+  "pair_width": 32,
+  "blocks": 2,
+  "dropout": 0.1,
+  "capacity_hidden": 768,
+  "drug_representation": "drugclip_morgan"
+}

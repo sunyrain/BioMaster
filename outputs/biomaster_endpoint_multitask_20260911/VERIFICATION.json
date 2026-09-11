@@ -1,0 +1,21 @@
+{
+  "status": "PASS_LAUNCH_VERIFICATION",
+  "verified_utc": "2026-09-11T03:12:13.202401+00:00",
+  "checks": {
+    "data_preparation_checks": true,
+    "protocol_matches_manifest": true,
+    "prepared_files_match": true,
+    "protected_inputs_unchanged": true,
+    "planned_24_fits": true,
+    "eight_real_gpu_configurations_passed": true,
+    "no_runtime_error_file": true,
+    "background_process_alive": true,
+    "directed_tests_passed": true
+  },
+  "tests": {
+    "command": "python -m pytest -q tests/test_endpoint_multitask.py tests/test_endpoint_ablation.py tests/test_best_model_training.py",
+    "passed": 21,
+    "seconds": 3.14
+  },
+  "scope": "Launch/data/loss/plateau checks; not a completed training or performance verification."
+}
