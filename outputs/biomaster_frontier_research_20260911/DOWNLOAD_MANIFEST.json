@@ -1,0 +1,16 @@
+[
+  {
+    "file": "data/external/assay_context_research_20260911/BindingDB_Assays_202609_tsv.zip",
+    "url": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_Assays_202609_tsv.zip",
+    "md5": "b80b1ea6064aa25fb44387b10f205ce8",
+    "sha256": "b9949b6271de7a3d2e4269498fffc9a5374b0e45d72202c4c347d798876b345e",
+    "bytes": 10095267
+  },
+  {
+    "file": "data/external/assay_context_research_20260911/BindingDB_rsid_eaids_202609_tsv.zip",
+    "url": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_rsid_eaids_202609_tsv.zip",
+    "md5": "f2a9567064ad4d893dd3706d5edaf2c8",
+    "sha256": "0c967f8a34ab21d766a5e9ca327a02ad45970321f691816f1d27109ef79c7cf9",
+    "bytes": 7541165
+  }
+]

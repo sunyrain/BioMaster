@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": {
+    "binary_denominators_match_prior_audit": true,
+    "coverage_bounded": true,
+    "threshold_coverage_monotonic": true,
+    "assay_purged_coverage_not_greater": true,
+    "source_recovery_bounded": true,
+    "original_inputs_unchanged": true,
+    "fifteen_cited_sources": true,
+    "local_report_links_exist": true
+  },
+  "scope": "metadata audit and report consistency; no model training or model-performance validation"
+}

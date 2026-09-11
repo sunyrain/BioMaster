@@ -1,0 +1,56 @@
+{
+  "status": "DESCRIPTIVE_AUDIT_ONLY_NO_TRAINING",
+  "input_sha256": {
+    "data/processed/biomaster_training_full_20260910_v1/OBSERVATIONS_WITH_QC.parquet": "fafab4163ba491db67ff7cab6bbd537459f95fd8fb1b9f1c322f3c0ba9971d36",
+    "data/processed/biomaster_training_full_20260910_v1/TRAIN_REGRESSION.parquet": "f0be8cc958703155ef83ebe974755bcef746706acc6d1ee025250f7168b7d20b",
+    "data/processed/biomaster_training_full_20260910_v1/ALL_PAIR_TASK_LABELS.parquet": "29e2b536dbb7361d73b0fdbc6ee02d859bd4bdb04db96c61ab645bb729ea80e9",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "data/external/assay_context_research_20260911/BindingDB_Assays_202609_tsv.zip": "b9949b6271de7a3d2e4269498fffc9a5374b0e45d72202c4c347d798876b345e",
+    "data/external/assay_context_research_20260911/BindingDB_rsid_eaids_202609_tsv.zip": "0c967f8a34ab21d766a5e9ca327a02ad45970321f691816f1d27109ef79c7cf9"
+  },
+  "inputs_unchanged": true,
+  "bindingdb_mapping_rows": 3179005,
+  "bindingdb_ambiguous_reactant_ids": 0,
+  "bindingdb_description_rows": 224430,
+  "chembl_assay_columns": [
+    "assay_id",
+    "doc_id",
+    "description",
+    "assay_type",
+    "assay_test_type",
+    "assay_category",
+    "assay_organism",
+    "assay_tax_id",
+    "assay_strain",
+    "assay_tissue",
+    "assay_cell_type",
+    "assay_subcellular_fraction",
+    "tid",
+    "relationship_type",
+    "confidence_score",
+    "src_id",
+    "src_assay_id",
+    "chembl_id",
+    "cell_id",
+    "bao_format",
+    "tissue_id",
+    "variant_id",
+    "aidx",
+    "assay_group"
+  ],
+  "verified_checks": {
+    "training_pair_ids_unique": true,
+    "regression_pair_endpoint_unique": true
+  },
+  "limitations": [
+    "Source assay ID recovery is not confirmation of identical constructs, conditions or mechanism.",
+    "Recovered coverage is descriptive, not a model performance gain.",
+    "ChEMBL/BindingDB assay namespaces are not merged; cross-source duplicate evidence can remain.",
+    "Coverage uses existing exact-regression eligibility and original A/B members; all raw evidence is not newly admitted.",
+    "Excluding shared assays from this auxiliary view alone would not purge them from current BCE training.",
+    "Censored observations and generic inactive labels are excluded from exact within-assay regression coverage.",
+    "Assay descriptions can vary within a source group; metadata and dynamic-range checks remain before training."
+  ],
+  "producer_sha256": "84ce13360cfd43279e8a4d281bc2147ecb8ec8eb3fd3be9aa2a89eca85c35a78"
+}

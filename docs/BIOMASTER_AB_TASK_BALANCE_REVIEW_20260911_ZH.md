@@ -63,3 +63,5 @@ IC50会受底物浓度、总蛋白、pH等条件影响，不能无条件等同�
 建议先做A/B的“原全量BCE、温和加权、150训练视图”对照，验证集选择平衡方式；随后固定成员与平衡方式，比较B的合并分类和分任务分类。不要一次改数据成员、骨架采样、损失、头结构与评分接口，再把提升归因于某一个因素。现有测试集是已查看过的诊断面板，不包装成全新独立确认集。
 
 代码：`scripts/audit_ab_balance_20260911.py`。结果目录：`outputs/biomaster_ab_balance_audit_20260911/`，含`BALANCE_SUMMARY.csv`、`SUPERVISION_MIX.csv`、`BINARY_TASK_PERFORMANCE.csv`及输入哈希。当前模型、矩阵和已交付实验清单均未改变。
+
+补充研究见[前沿方法与下一轮训练设计](BIOMASTER_FRONTIER_ASSAY_AWARE_TRAINING_20260911_ZH.md)。官方BindingDB实验映射已恢复并完成覆盖审计；应先补实验上下文和划分审计，再执行上述平衡消融。MBP实际使用IC50与K={Ki,Kd}两类任务，Boltz-2提供混合端点单连续值头有效的反例，因此拆头保留为实验假设。同靶点/同任务排序与同assay监督不同，不能将本轮结果解释为已经验证过后者。
