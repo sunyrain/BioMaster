@@ -1,0 +1,24 @@
+{
+  "status": "PASS_FULL_B_PREPROCESS_ONLY",
+  "utc": "2026-09-11T17:48:22.150567+00:00",
+  "rows": 1116270,
+  "features": 2048,
+  "peak_RSS_GiB": 69.03412246704102,
+  "seconds": 419.1628719000146,
+  "batch_shapes": [
+    [
+      512,
+      0
+    ],
+    [
+      512,
+      2048
+    ],
+    [
+      512,
+      1
+    ]
+  ],
+  "supervised_weight_updates": 0,
+  "interpretation": "Native full-B preprocessing and loader; no prediction performance claim. Isolate FASTAI, allow its conservative 10x precheck ratio=2, stop child if actual RSS exceeds 78 GiB."
+}

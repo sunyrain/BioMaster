@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "utc": "2026-09-11T17:30:42.408715+00:00",
+  "utc": "2026-09-11T17:49:39.861373+00:00",
   "frozen_checks": {
     "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": true,
     "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": true,
@@ -36,5 +36,6 @@
   "test_script_sha256": "5bab10318bbe1c5b3b1af3ca462e526fcd01e72d4e1dcfce34f5f3f768809cbf",
   "feature_complete": true,
   "no_supervised_fits_counted_from_smoke": true,
-  "resource_profile": "separate mandatory gate before training"
+  "resource_profile": "PASS",
+  "resource_profile_sha256": "519d630c23b4e3b7bc78effee60fb1c58a9bc46d46650a91cbb65c14263ba5f5"
 }

@@ -1,0 +1,43 @@
+{
+  "status": "PASS_FORMAL_FIT_STARTED",
+  "utc": "2026-09-11T17:49:39.861781+00:00",
+  "current_suite": "kdki_inactive__seed_20260921",
+  "completed_suites": 0,
+  "total_suites": 6,
+  "queue_pid": 252851,
+  "child_pid": 253256,
+  "formal_train_rows": 337570,
+  "features": 2048,
+  "features_complete": true,
+  "required_drugs": 857540,
+  "required_targets": 4742,
+  "full_B_resource_profile": {
+    "status": "PASS_FULL_B_PREPROCESS_ONLY",
+    "utc": "2026-09-11T17:48:22.150567+00:00",
+    "rows": 1116270,
+    "features": 2048,
+    "peak_RSS_GiB": 69.03412246704102,
+    "seconds": 419.1628719000146,
+    "batch_shapes": [
+      [
+        512,
+        0
+      ],
+      [
+        512,
+        2048
+      ],
+      [
+        512,
+        1
+      ]
+    ],
+    "supervised_weight_updates": 0,
+    "interpretation": "Native full-B preprocessing and loader; no prediction performance claim. Isolate FASTAI, allow its conservative 10x precheck ratio=2, stop child if actual RSS exceeds 78 GiB."
+  },
+  "protocol_sha256": "265c8e8706ab6f2b2a66eda0aa90f7257249b63439178fb41246be77c18ad026",
+  "code_and_input_hashes_verified": true,
+  "protected_model_and_wetlab_hashes_verified": true,
+  "public_test_gate_open": false,
+  "results_available": false
+}

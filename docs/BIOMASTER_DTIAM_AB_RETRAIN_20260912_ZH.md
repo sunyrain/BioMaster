@@ -4,6 +4,8 @@
 
 实时状态以 [STATUS.json](../outputs/biomaster_dtiam_ab_20260912/STATUS.json) 为准；目录日期沿用本轮任务标签，实际启动、结束时间均写入 UTC 时间戳。完成后自动生成 `SUMMARY.json`、`ALL_MODEL_COMPARISON.csv` 和 `docs/BIOMASTER_DTIAM_AB_RESULTS_20260912_ZH.md`。
 
+启动核验已通过：完整 B 的 1,116,270 行、2,048 维原生预处理和数据加载器峰值为 69.03 GiB。首套 A / 20260921 于 2026-09-11 17:48 UTC 进入正式拟合；这是启动记录，尚无本轮最终测试成绩。
+
 ## 训练范围
 
 | 组别 | 训练配对 | 阳性 | 阴性 | 其中明确失活 | 分子 | 精确靶点序列 |
