@@ -348,3 +348,6 @@ Thumbs.db
 
 # Model decision diagnostics on frozen predictions.
 !/scripts/audit_model_decision_readiness_20260911.py
+
+# Model lineage and convergence audit.
+!/scripts/audit_model_lineage_convergence_20260911.py

@@ -1,0 +1,6 @@
+scorer,original384_top20,median_rank,mean_rank
+historical_neural_only,148,31.0,63.338541666666664
+chemical_neighbor_only,231,13.0,32.403645833333336
+historical_neural_plus_chemical,332,8.0,12.096354166666666
+historical_neural_plus_prior,114,40.0,66.47916666666667
+original_complete_combination,384,11.0,10.901041666666666

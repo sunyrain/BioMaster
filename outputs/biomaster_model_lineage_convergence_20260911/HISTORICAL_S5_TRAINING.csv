@@ -1,0 +1,6 @@
+model,seed,train_pairs,validation_pairs,test_pairs,best_epoch,epochs_completed,objectives
+historical_S5_neural,20260813,65276,16668,2556,20,28,"{""target_class_balanced_bce"": 1.0, ""within_target_rank_weight"": 0.12, ""pchembl_huber_aux_weight"": 0.06}"
+historical_S5_neural,20260814,65276,16668,2556,18,26,"{""target_class_balanced_bce"": 1.0, ""within_target_rank_weight"": 0.12, ""pchembl_huber_aux_weight"": 0.06}"
+historical_S5_neural,20260815,65276,16668,2556,18,26,"{""target_class_balanced_bce"": 1.0, ""within_target_rank_weight"": 0.12, ""pchembl_huber_aux_weight"": 0.06}"
+historical_S5_neural,20260816,65276,16668,2556,11,19,"{""target_class_balanced_bce"": 1.0, ""within_target_rank_weight"": 0.12, ""pchembl_huber_aux_weight"": 0.06}"
+historical_S5_neural,20260817,65276,16668,2556,15,23,"{""target_class_balanced_bce"": 1.0, ""within_target_rank_weight"": 0.12, ""pchembl_huber_aux_weight"": 0.06}"

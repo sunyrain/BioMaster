@@ -1,0 +1,112 @@
+{
+  "status": "COMPLETE_AUDIT_NO_RETRAIN_NO_LAB_CHANGE",
+  "inputs_unchanged": true,
+  "input_sha256": {
+    "outputs/old_drug_target_sota_v1/biomaster_odti_deployment_v1/BIOMASTER_ODTI_720X384_SCORES_V1.csv.gz": "8df185eb929f149f19cc01c94078797b271eb0322ccc85aca85f898bf56ce86d",
+    "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz": "10a456291bbc7ed518c1ed145ae8225d6988f65ead1f58a12977d881abdd9183",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/biomaster_ab_ranking_selection_20260911/SELECTION_LINEAGE.json": "c32395e18f6284bacefdc6aee282e5cf8015e6df87f997d6980d4fb61c287e35",
+    "outputs/biomaster_spr384_ab_rank_explanation_20260911/SPR384_AB_RANKING_EXPLANATION.csv": "736f96241d6ab8e50ab2ac39c5a77610c707b8da1ff0092df4468d95d0810d4a",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_same_data_compatible_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__OFFICIAL_DEFAULT_COMPAT_V1/RUN_SUMMARY_V1.json": "da8587eef5f8881d51fcfbf846aca95ecd175afc8e082ffd08053570d30457b0",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_deployment_v1/BIOMASTER_ODTI_DEPLOYMENT_SUMMARY_V1.json": "1a876284f4e7ab15053f2fcd9e70ddaf46dd9e7fc8842cdaedb5e9f54725db33",
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/training_data.json": "1ec5f0b0325ff412071c35c8c873cf4253f5a5f2797ed952af6810da1f4cb9f0",
+    "scripts/run_endpoint_ablation_20260911.py": "49cdf8b68efb567443aadd05fca6d89ca819d776a4a15c8bb9ae0f98258434cd",
+    "outputs/biomaster_endpoint_ablation_20260911/PROTOCOL.json": "ee1be3cc2d79e8e9f3a78db3588ecf519454aba6d38b5963f29aa85a15cffcc3",
+    "scripts/run_strict_dta_720x338_v1.sh": "eed118ae979ad7f8762217e2ec35bcfda683cc192c25d2888460eb75cdda1530",
+    "scripts/run_recovered_dta_720x46_v1.sh": "915a36f0c165ec24f5e6b3de4856570a62c5258c566acafe5501f822495c8737",
+    "third_party/ConPLex/conplex_dti/cli/download.py": "d00a7aa27e3f9af98c35434eb16a6e2d25c59d0671be26c6756736f473ef064a",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260813__CORE/RUN_SUMMARY_V1.json": "2bccc3e25a631bc7bb785eb7f598319f982d3dd7a4f0125f01e7687878a720eb",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260814__CORE/RUN_SUMMARY_V1.json": "7bf95dc32bbcfc3c9e80d4f0e587b44d8ca5701f55f2de3ce2274636ffbc3b4b",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260815__CORE/RUN_SUMMARY_V1.json": "f1367f3be16eee99594905f7d3818a65961d1d1610f470877869de902e8ad240",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260816__CORE/RUN_SUMMARY_V1.json": "673a1e892f2e80c71184b1fdbf86e435dcd96b496dc30891ca391ff57936201d",
+    "outputs/old_drug_target_sota_v1/biomaster_odti_routed_ranker_v1/S5_OLD_DRUG_ENTITY_COLD__fold_-1__seed_20260817__CORE/RUN_SUMMARY_V1.json": "1dfc47586ecdb6a04e301b54d802a6f81f18a5be62b6fda24706ac8fc7bba5f1",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260921/HISTORY.json": "dbbbb79300d8509c814ee4da5385e5161f1918720c8a8ac7f0f36322c8637634",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260921/RESULT.json": "2a5156b4e9e5afb5380bbf77860ce05d9a6c2a50cae8afa147260c87941faf05",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260921/VALIDATION_METRICS.csv": "373417ea0cc43b991a2ed14ebc0fa27349fd08f382514e87b7bccd0c83a5de74",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260922/HISTORY.json": "8607e1e8c2641beba41f6d2dad456db8b2dfb426a543a8c415e57d3334d6d9df",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260922/RESULT.json": "ff42195135b22de679857bf554df31e1ed1cde0a70187e412b8fbecfc45cb035",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260922/VALIDATION_METRICS.csv": "eb454f69694ca44e6f26e047388fb36909429adac5ea6142c9b099baede5d73b",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260923/HISTORY.json": "bc4a4851aeec7168b5a7f28c936ba9b75fd32b360a43fd36f82f05e8d406b944",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260923/RESULT.json": "91d2c6d29a5145d5fce56bd9da6f38a6ead64302b2f0de96cb6bda22a7d89824",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_seed_20260923/VALIDATION_METRICS.csv": "1b405e83b6d25d7ad35b3ae479aa94b85f089b15d7b69e994a1d695f57a3211d",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260921/HISTORY.json": "05ed732d9c4c00484e497fa6e52c53ba07f5adceff908d75899a7e13eb022b9e",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260921/RESULT.json": "5501a354b9c6591e74d485ce1c53b35cb59bd6fc35d589173223d71b6d13caf6",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260921/VALIDATION_METRICS.csv": "1585d98c68b8829efbce3e4acbd5b49fbc8fc5bfad7428b08c97f7034c58a849",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260922/HISTORY.json": "5a988cb0eae7d5e2df556446d19da387ae0ba7da2fcc6801ef232f7b4dd2e5fb",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260922/RESULT.json": "349aaede8f7337103e898f8f50692ac953536c3e98350d45260d34ec81fc7923",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260922/VALIDATION_METRICS.csv": "b0849d1231241a1130435089049d995852c6d447a44bc2c10b32865a3d8e7fac",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260923/HISTORY.json": "463a7b01745742f704096faeb3f4026b9858f9f7f34e51e459f4cec2f3660a07",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260923/RESULT.json": "6f2bea8f46e54a176aa697794504522f275ccafe1bc2523b3fb6a3cef857629b",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_seed_20260923/VALIDATION_METRICS.csv": "21b421ccad2ffdff1b600ecfe16c7ed44780a716c8c99d09c97bdf8d628ad362"
+  },
+  "original_scorer": "historical 5-seed S5 neural + training positive neighbor + target prior",
+  "original_neural_train_pairs_per_seed": 65276,
+  "later_neural_train_pairs": 383638,
+  "dtiam_train_counts": {
+    "train_rows": 65276,
+    "valid_rows": 16668,
+    "test_rows": 2556,
+    "train_positives": 35684,
+    "valid_positives": 9067,
+    "test_positives": 354,
+    "train_targets": 423,
+    "test_targets": 261,
+    "train_compounds": 48057,
+    "test_compounds": 302
+  },
+  "dtiam_time_limit": null,
+  "historical_component_results": [
+    {
+      "scorer": "historical_neural_only",
+      "original384_top20": 148,
+      "median_rank": 31.0,
+      "mean_rank": 63.338541666666664
+    },
+    {
+      "scorer": "chemical_neighbor_only",
+      "original384_top20": 231,
+      "median_rank": 13.0,
+      "mean_rank": 32.403645833333336
+    },
+    {
+      "scorer": "historical_neural_plus_chemical",
+      "original384_top20": 332,
+      "median_rank": 8.0,
+      "mean_rank": 12.096354166666666
+    },
+    {
+      "scorer": "historical_neural_plus_prior",
+      "original384_top20": 114,
+      "median_rank": 40.0,
+      "mean_rank": 66.47916666666667
+    },
+    {
+      "scorer": "original_complete_combination",
+      "original384_top20": 384,
+      "median_rank": 11.0,
+      "mean_rank": 10.901041666666666
+    }
+  ],
+  "conplex_source": "local scripts use official BindingDB_ExperimentalValidModel.pt; no new-data refit on this scoring route",
+  "drugclip_source": "existing public six-fold pocket-ligand retrieval; A/B reuse frozen molecule features, not full pocket scorer",
+  "scheduling_counts": {
+    "仍可探索": 223,
+    "先解决具体问题": 149,
+    "有证据支持降低投入": 12
+  },
+  "exploratory_with_any_AB_top20": 52,
+  "caveats": [
+    "Component removal explains this frozen score mathematically; it is not new binding validation or a causal allocation of total disagreement.",
+    "No plateau/early-stopping validation curve was collected during A/B training; convergence is unestablished, not proven absent.",
+    "Scheduling aid reuses prior reviews without a new per-pair literature audit; conditional items are not all impossible mechanisms."
+  ],
+  "artifacts": {
+    "SPR384_HISTORICAL_COMPONENT_RANKS.csv": "6f491090f92ca94096317c5f207658e220081230148aaf200ec1f0be221d017f",
+    "HISTORICAL_COMPONENT_SUMMARY.csv": "e08df7073ee3ec57c7e471e4078137638090ec24cd72aa80810e5f733f73260d",
+    "HISTORICAL_S5_TRAINING.csv": "8f7d1d43787bdc87ea11cbb6edad732577de1fff542e1bb63f8b075af68178e4",
+    "AB_CONVERGENCE_EVIDENCE.csv": "62f5a8556d4753a631e253b49028325f4876fa5b5dac9ef117750e0e5c7ad902",
+    "SPR384_SCHEDULING_REVIEW_AID.csv": "cb9e2f1d3c2e27030dffc73a83f9d5384e5a133c7e0ffc5f19ff34c3927ff656",
+    "SCHEDULING_STRATA.csv": "9aa414f48a5743a9cb4f311f9f130f97f204e8dbb10c4fdac1dd028fe1f31b2a"
+  },
+  "source_sha256": "c9a6262255739e8c85099c901ac1ad16be3c7b10e845ea5efaf939eec1485c1e"
+}
