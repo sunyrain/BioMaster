@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE_30_VALIDATION_CONVERGED_FITS",
+  "completed_utc": "2026-09-11T09:33:09.094531+00:00",
+  "fits": 30,
+  "inputs_unchanged": true,
+  "production_replaced": false,
+  "limitations": [
+    "Operational validation convergence, not a guarantee of global optimality.",
+    "The classifier remains pooled; endpoint regression heads are separate. This round tests weighting, intra-assay supervision and adaptation.",
+    "150 means a rotating target/class budget without the historical scaffold-selection heuristic.",
+    "Current scaffold splits can share source assays; only explicitly flagged subsets claim source-assay separation.",
+    "No real SPR outcome inferred from model agreement or calibration.",
+    "All measurements and production assets retained; research models are not automatically deployed."
+  ]
+}

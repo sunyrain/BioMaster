@@ -1,6 +1,8 @@
 # A/B实验上下文优化与重训
 
-本轮落实[前沿研究与训练设计](BIOMASTER_FRONTIER_ASSAY_AWARE_TRAINING_20260911_ZH.md)，使用相同A/B成员及原分子骨架划分，研究数据平衡、实验内监督和亲和适应。训练任务于2026-09-11 07:36 UTC启动（北京时间15:36）。实时进度以[STATUS.json](../outputs/biomaster_assay_aware_20260911/STATUS.json)和[RUN.log](../outputs/biomaster_assay_aware_20260911/RUN.log)为准，本文是冻结的启动设计，不表示所有拟合已经完成。
+本轮落实[前沿研究与训练设计](BIOMASTER_FRONTIER_ASSAY_AWARE_TRAINING_20260911_ZH.md)，使用相同A/B成员及原分子骨架划分，研究数据平衡、实验内监督和亲和适应。训练任务于2026-09-11 07:36 UTC启动（北京时间15:36），30次拟合及评估于09:33 UTC完成（北京时间17:33），自动报告于随后生成。
+
+**结果更新：全部达到预设验证平台期，但本轮没有整体超过上一轮A基线，不支持据此替换生产模型。** 详见[完成核验与两轮结果分析](BIOMASTER_ASSAY_AWARE_RESULTS_20260911_ZH.md)。自动选出的“温和平衡A”只是在本轮新方案中验证指标最高，不能理解为超过已有方案。以下保留冻结的启动设计；运行状态和日志见[STATUS.json](../outputs/biomaster_assay_aware_20260911/STATUS.json)、[RUN.log](../outputs/biomaster_assay_aware_20260911/RUN.log)。
 
 **30次新拟合，加上已有原二分类基线。**
 

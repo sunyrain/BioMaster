@@ -1,0 +1,9 @@
+{
+  "status": "RESEARCH_VALIDATION_SELECTION_NOT_DEPLOYED",
+  "arm": "kdki_inactive",
+  "variant": "balanced",
+  "validation_selection_score": 0.7054942340859586,
+  "selection_rule": "Highest mean validation balanced query AP across the three preregistered seeds.",
+  "test_used_to_choose_variant": false,
+  "production_replaced": false
+}
