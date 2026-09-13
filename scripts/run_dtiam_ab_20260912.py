@@ -74,7 +74,14 @@ def main():
             if not (run/'SELECTION.json').exists():
                 status('TRAINING',current_suite=name,completed_suites=completed,total_suites=6)
                 base=[str(AGPY),'-u','scripts/train_dtiam_ab_20260912.py','--arm',arm,'--seed',str(seed)]
-                command(base+['--core-only'],run/'RUN.log')
+                if arm=='all_inactive':
+                    cfg=json.loads((OUT/'PROTOCOL.json').read_text())['fit']
+                    isolated=[str(AGPY),'-u','scripts/train_dtiam_isolated_core_20260913.py','--seed',str(seed)]
+                    for model in cfg['isolated_B_core_model_order']:
+                        command(isolated+['--model',model],run/f'CORE_{model}.log')
+                    command(isolated+['--finalize'],run/'CORE_FINALIZE.log')
+                else:
+                    command(base+['--core-only'],run/'RUN.log')
                 command(base+['--fastai'],run/'FASTAI.log')
                 command(base,run/'VALIDATION.log')
             selected=json.loads((run/'SELECTION.json').read_text())

@@ -62,19 +62,7 @@
       "kdki_inactive": 68,
       "all_inactive": 84
     },
-    "core_raise_on_model_failure": true,
-    "isolated_B_core_model_order": [
-      "LightGBMXT",
-      "LightGBM",
-      "RandomForestGini",
-      "RandomForestEntr",
-      "CatBoost",
-      "ExtraTreesGini",
-      "ExtraTreesEntr",
-      "XGBoost",
-      "NeuralNetTorch",
-      "LightGBMLarge"
-    ]
+    "core_raise_on_model_failure": true
   },
   "stopping": "Native early stopping or native fixed iteration/forest budgets, no overall wallclock cutoff; record actual fitted hyperparameters, do not assert universal convergence",
   "completeness": "All 11 default binary base learners and WeightedEnsemble must fit; any skipped/failed learner is INCOMPLETE, not a passed suite",
@@ -119,34 +107,6 @@
       "preserved": "same members, labels, features, native learner parameters, validation choices and TEST gate; previously completed A unchanged",
       "aborted_incomplete_B_attempt": "core_memory_repair_20260913/all_inactive__seed_20260921_attempt68",
       "note": "Resource availability may affect native memory-adaptive budgets; all fitted parameters and actual RSS remain recorded"
-    },
-    {
-      "utc": "2026-09-13T09:47:34.266381+00:00",
-      "kind": "FRESH_PROCESS_PER_B_CORE_LEARNER",
-      "observed_failure_utc": "2026-09-13T09:03:34.509122+00:00",
-      "reason": "Second native LightGBM precheck: 46.782 GiB estimated versus 47.585 GiB available; prior model had completed but process residency increased. No actual OOM was reported.",
-      "method": "Original native bootstrap for first learner; fit_extra for each remaining native base learner in its own process using the same cached inner data; retain all ten core learners, isolated FASTAI and final ensemble",
-      "core_model_order": [
-        "LightGBMXT",
-        "LightGBM",
-        "RandomForestGini",
-        "RandomForestEntr",
-        "CatBoost",
-        "ExtraTreesGini",
-        "ExtraTreesEntr",
-        "XGBoost",
-        "NeuralNetTorch",
-        "LightGBMLarge"
-      ],
-      "soft_memory_GiB": 84,
-      "actual_RSS_guard_GiB": 78,
-      "labels_members_features_and_learner_hyperparameters_unchanged": true,
-      "validation_and_TEST_rules_unchanged": true,
-      "inherited_model_sha256": {
-        "LightGBMXT": "b105fa181a2378891f5d58638768790229fe4c9f914e71a0cd0b476e40a72e76"
-      },
-      "seed_note": "Initialize process RNG to the suite seed; native per-model seed rules remain. Independent native models fit on the identical cached inner split; no bitwise equivalence to uninterrupted monolithic execution is claimed.",
-      "tests": "Native small-data fit/save/load/fit_extra: exact internal member labels, prior model bytes and predictions unchanged; no missing or renamed learner allowed"
     }
   ]
 }

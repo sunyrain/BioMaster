@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-13T09:48:36.610064+00:00",
+  "inherited_models": {
+    "LightGBMXT": "b105fa181a2378891f5d58638768790229fe4c9f914e71a0cd0b476e40a72e76"
+  },
+  "inherited_native_fit_seconds": 2413.5204377174377,
+  "preprocessing_seconds": 182.86398148536682,
+  "members_sha256": "a88d932f813943debd55b4dfdb943d38a85516b70453d5da5898162d76a24b91",
+  "cache_sha256": {
+    "X.pkl": "5ca18f7e09a1dd35880b6634e53d277cf85523c43e690be1bf0899d7e7f7ef57",
+    "y.pkl": "2f689c5b517c4c09cbfe4db7eef02c09c32fefddb16953b47cc58a3647fac863",
+    "X_val.pkl": "f10e88afe304a7a89ed60e5ce8a59f3168df0a21faf0a75e810428be4bf8c1ec",
+    "y_val.pkl": "4915bc56c89dc1d726364bfd9807cd75a24c25d7b6956d896c15d84de4ad2a73"
+  }
+}

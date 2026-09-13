@@ -373,3 +373,4 @@ Thumbs.db
 !/scripts/run_dtiam_ab_20260912.py
 !/scripts/report_dtiam_ab_20260912.py
 !/scripts/report_dtiam_interim_20260913.py
+!/scripts/train_dtiam_isolated_core_20260913.py

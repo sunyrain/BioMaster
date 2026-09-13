@@ -1,0 +1,6 @@
+{
+  "stage": "FAILED_REQUIRES_INSPECTION",
+  "updated_utc": "2026-09-13T09:03:37.761544+00:00",
+  "pid": 335721,
+  "error": "RuntimeError('Child exited 1; see /root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/RUN.log')"
+}

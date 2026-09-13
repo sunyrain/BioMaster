@@ -1,0 +1,47 @@
+{
+  "status": "RESUMED_SECOND_B_LEARNER",
+  "utc": "2026-09-13T09:51:28.293279+00:00",
+  "runner": {
+    "stage": "TRAINING",
+    "updated_utc": "2026-09-13T09:48:31.999529+00:00",
+    "pid": 339523,
+    "current_suite": "all_inactive__seed_20260921",
+    "completed_suites": 1,
+    "total_suites": 6
+  },
+  "child": {
+    "pid": 339661,
+    "args": [
+      "/root/autodl-tmp/BioMaster/.venv_dtiam_compat/bin/python",
+      "-u",
+      "scripts/train_dtiam_isolated_core_20260913.py",
+      "--seed",
+      "20260921",
+      "--model",
+      "LightGBM"
+    ],
+    "started_utc": "2026-09-13T09:48:46.015732+00:00",
+    "log": "/root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/CORE_LightGBM.log"
+  },
+  "completed_validation_suites": 1,
+  "total_suites": 6,
+  "completed_B_base_learners": [
+    "LightGBMXT"
+  ],
+  "B_base_learners_required": 11,
+  "B_first_model_fit_seconds": 2413.5204377174377,
+  "B_first_model_rounds": 10000,
+  "second_B_native_available_estimate_GiB": 74.6,
+  "previous_second_B_available_estimate_GiB": 47.585,
+  "current_child_RSS_GiB": 17.012184143066406,
+  "actual_RSS_guard_GiB": 78,
+  "inherited_model_hashes_verified": true,
+  "original_native_inner_labels_and_member_ids_verified": true,
+  "training_member_pool": 1116270,
+  "base_train_rows": 1105107,
+  "internal_holdout_rows": 11163,
+  "new_common_validation_results": false,
+  "test_gate_open": false,
+  "unit_and_native_continuation_tests_passed": 2,
+  "eta": "Previous 30-60 hour range remains provisional; repeated interruption invalidates a fixed completion time. Re-estimate once one complete B suite finishes."
+}

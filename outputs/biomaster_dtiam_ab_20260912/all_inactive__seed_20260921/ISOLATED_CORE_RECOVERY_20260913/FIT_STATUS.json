@@ -1,0 +1,16 @@
+{
+  "stage": "FITTING",
+  "model": "LightGBM",
+  "completed": [
+    {
+      "model": "LightGBMXT",
+      "success_names": [
+        "LightGBMXT"
+      ],
+      "seconds": 2414.0801685815677
+    }
+  ],
+  "updated_utc": "2026-09-13T09:02:59.124105+00:00",
+  "elapsed_seconds": 2620.6554001094773,
+  "memory_GiB": 63.5478630065918
+}
