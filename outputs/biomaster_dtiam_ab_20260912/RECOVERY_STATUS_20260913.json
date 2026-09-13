@@ -1,0 +1,35 @@
+{
+  "status": "RECOVERED_A_VALIDATION_AND_B_CORE_PREFLIGHT_PASSED",
+  "utc": "2026-09-13T08:24:22.977150+00:00",
+  "runner": {
+    "stage": "TRAINING",
+    "updated_utc": "2026-09-13T08:19:06.336968+00:00",
+    "pid": 335721,
+    "current_suite": "all_inactive__seed_20260921",
+    "completed_suites": 1,
+    "total_suites": 6
+  },
+  "child": {
+    "pid": 335768,
+    "args": [
+      "/root/autodl-tmp/BioMaster/.venv_dtiam_compat/bin/python",
+      "-u",
+      "scripts/train_dtiam_ab_20260912.py",
+      "--arm",
+      "all_inactive",
+      "--seed",
+      "20260921",
+      "--core-only"
+    ],
+    "started_utc": "2026-09-13T08:19:06.338077+00:00",
+    "log": "/root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/RUN.log"
+  },
+  "child_RSS_GiB": 37.14129638671875,
+  "actual_container_limit_GiB": 90.0,
+  "all_training_complete": false,
+  "B_fit_complete": false,
+  "test_gate_open": false,
+  "evidence": "Native B LightGBMXT passed allocation precheck (46.782 GiB estimated / 54.455 GiB available) and entered 10000-round fit; no model skipped in restarted attempt",
+  "actual_training_RSS_guard_GiB": 78,
+  "remaining_runtime": "30-60 hours provisional, one measured A suite only"
+}

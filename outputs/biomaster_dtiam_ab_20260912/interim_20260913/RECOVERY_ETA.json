@@ -1,0 +1,13 @@
+{
+  "updated_utc": "2026-09-13T08:20:33.672515+00:00",
+  "basis": "One measured A suite; B runtime remains unmeasured",
+  "completed_A_fit_hours": 2.99563495536102,
+  "remaining_A_suites": 2,
+  "remaining_B_suites": 3,
+  "row_scaled_remaining_fit_hours": 35.708994515581885,
+  "initial_remaining_planning_hours": [
+    30,
+    60
+  ],
+  "previous_wallclock_ETA_invalidated_by_failure": true
+}

@@ -68,6 +68,8 @@ def main():
         fit=dict(problem_type='binary',eval_metric='roc_auc',hyperparameters_file='AUTOGLUON_HYPERPARAMETERS.json',
             presets=None,excluded_model_types=[],time_limit=None,num_cpus=20,num_gpus=0,
             memory_limit_GB=68,fit_strategy='sequential',sample_weight=None,
+            core_memory_limit_GB_by_arm={'kdki_inactive':68,'all_inactive':84},
+            core_raise_on_model_failure=True,
             process_stages='Native core learners, fresh-process FASTAI, then native weighted ensemble over all 11 learners',
             fastai_resource_only_override={'ag.max_memory_usage_ratio':2},
             resource_gate='Full-B native preprocessing + loader must peak <=72 GiB; monitor actual child RSS <=78 GiB',

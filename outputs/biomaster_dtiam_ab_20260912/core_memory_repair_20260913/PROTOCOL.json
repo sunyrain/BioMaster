@@ -57,12 +57,7 @@
     "learner_random_state": "seed",
     "random_initialization": "Native internal split RNG varies; library-specific model seeds retained (FastAI hardcodes 0); no old supervised weights",
     "holdout": "AutoGluon native internal holdout from training members only; save exact internal row IDs",
-    "weighted_ensemble": "Fitted only on native internal training holdout; external common validation never supplied to fit",
-    "core_memory_limit_GB_by_arm": {
-      "kdki_inactive": 68,
-      "all_inactive": 84
-    },
-    "core_raise_on_model_failure": true
+    "weighted_ensemble": "Fitted only on native internal training holdout; external common validation never supplied to fit"
   },
   "stopping": "Native early stopping or native fixed iteration/forest budgets, no overall wallclock cutoff; record actual fitted hyperparameters, do not assert universal convergence",
   "completeness": "All 11 default binary base learners and WeightedEnsemble must fit; any skipped/failed learner is INCOMPLETE, not a passed suite",
@@ -89,24 +84,5 @@
     "Retrospective scaffold holdout is not prospective SPR validation or protein homology cold start.",
     "Frozen public encoder pretraining exposure is not certified.",
     "Native inner holdout means base learner fitting rows are a subset of the identical training-member pool."
-  ],
-  "runtime_resource_amendments": [
-    {
-      "utc": "2026-09-13T08:18:40.350584+00:00",
-      "kind": "RESOURCE_PREFLIGHT_AND_EARLY_FAILURE_ONLY",
-      "reason": "Full B core process retains ~29.56 GiB before LightGBM precheck, which estimates another 46.782 GiB and refuses the old soft total budget 68; actual container is 90 GiB",
-      "core_soft_total_GiB": {
-        "kdki_inactive": 68,
-        "all_inactive": 84
-      },
-      "fastai_soft_total_GiB": 68,
-      "actual_child_RSS_guard_GiB": 78,
-      "actual_container_limit_GiB": 90,
-      "raise_on_core_failure": true,
-      "scientific_changes": false,
-      "preserved": "same members, labels, features, native learner parameters, validation choices and TEST gate; previously completed A unchanged",
-      "aborted_incomplete_B_attempt": "core_memory_repair_20260913/all_inactive__seed_20260921_attempt68",
-      "note": "Resource availability may affect native memory-adaptive budgets; all fitted parameters and actual RSS remain recorded"
-    }
   ]
 }

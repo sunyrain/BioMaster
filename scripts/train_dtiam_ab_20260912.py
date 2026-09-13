@@ -46,16 +46,19 @@ class Progress(AbstractCallback):
 
 
 def prediction(predictor,frame,bank,models):
+    requested=tuple(models)
     # Panels overlap; infer once per physical pair, then restore exact frozen row order.
     unique=frame.drop_duplicates('pair_id').reset_index(drop=True)
     positions=pd.Series(np.arange(len(unique)),index=unique.pair_id)
     restore=frame.pair_id.map(positions).to_numpy(int)
-    result={name:np.empty(len(unique),np.float32) for name in models}
+    result={name:np.empty(len(unique),np.float32) for name in requested}
     for start in range(0,len(unique),16384):
         f=unique.iloc[start:start+16384]
-        values=predictor.predict_proba_multi(table(f,bank),models=models,as_pandas=False,as_multiclass=False)
-        for name,p in values.items():
-            p=np.asarray(p).reshape(-1)
+        values=predictor.predict_proba_multi(table(f,bank),models=list(requested),as_pandas=False,as_multiclass=False)
+        # The native API also returns ancestors needed by a requested ensemble.
+        # Only requested outputs have allocated result arrays; retain their order.
+        for name in requested:
+            p=np.asarray(values[name]).reshape(-1)
             assert len(p)==len(f) and np.isfinite(p).all() and ((p>=0)&(p<=1)).all()
             result[name][start:start+len(f)]=p
     return {name:p[restore] for name,p in result.items()}
@@ -92,9 +95,12 @@ def fit(arm,seed,smoke=False,core_only=False):
         x=table(frame,bank,labels=True)
         predictor=TabularPredictor(label='y',problem_type='binary',eval_metric='roc_auc',
             path=str(run/'predictor'),verbosity=3,learner_kwargs={'random_state':seed})
+        fit_config=json.loads((OUT/'PROTOCOL.json').read_text())['fit']
+        core_memory=fit_config.get('core_memory_limit_GB_by_arm',{}).get(arm,fit_config['memory_limit_GB'])
         started=time.monotonic()
         predictor.fit(x,presets=None,hyperparameters=params,excluded_model_types=[],time_limit=None,
-            num_cpus=20,num_gpus=0,memory_limit=68,fit_strategy='sequential',
+            num_cpus=20,num_gpus=0,memory_limit=core_memory,fit_strategy='sequential',
+            raise_on_model_failure=True,
             calibrate_decision_threshold=False,callbacks=[Progress(run)],fit_weighted_ensemble=smoke)
         del x;gc.collect()
         duration=time.monotonic()-started
@@ -112,7 +118,7 @@ def fit(arm,seed,smoke=False,core_only=False):
         write_json(run/'FIT_RETURNED.json',dict(fit_seconds=duration,training_member_pool=len(frame),
             base_train_rows=len(ytrain),internal_holdout_rows=len(yval),native_best=predictor.model_best,
             model_names=predictor.model_names(),peak_RSS_GiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024**2,
-            finished_utc=now(),smoke_only=smoke))
+            finished_utc=now(),smoke_only=smoke,core_soft_memory_limit_GB=core_memory))
     else:
         predictor=TabularPredictor.load(str(run/'predictor'))
     if core_only:

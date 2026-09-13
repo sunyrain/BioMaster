@@ -21,8 +21,8 @@
   "code": {
     "scripts/dtiam_ab_common_20260912.py": "7a2035a1348d432c2fca2b240f8433b228c7434020d03860451c66e49343bbf9",
     "scripts/build_dtiam_ab_features_20260912.py": "0af2cfff54a9c908bb131de5f4b7f3763e2b578e14cddc64222c6b77241d18d0",
-    "scripts/prepare_dtiam_ab_20260912.py": "6213bf4ea29a1d8cf1dfea2d3252093b7fe03bf934ce49848dbef1ac1d6373af",
-    "scripts/train_dtiam_ab_20260912.py": "11190a25202b958583a7144b2d77704f61f1354c62f58431461709e4768b1bb0",
+    "scripts/prepare_dtiam_ab_20260912.py": "bd3f301cc16a2a15bf346398b5c75a68829573ad8139f86bb8f751f3073f4242",
+    "scripts/train_dtiam_ab_20260912.py": "88f1868bb2d33915c4ec45129de59a3ea7a52e062057533a157195e49486f88f",
     "scripts/report_dtiam_ab_20260912.py": "07d514877aba82a3dcd98f08d482e20cf6186928764ea8742f37ee454d16795c",
     "scripts/run_dtiam_ab_20260912.py": "e6b21d423561fd803717e17925a18cc17cb89502f7341ddb7818c550efae4923",
     "scripts/profile_dtiam_ab_resources_20260912.py": "867a1da7024943817b73fbf2bc0d5acd3d316f9c922aa8d4e644bf821ffb4491"
@@ -33,7 +33,7 @@
     "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
     "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
   },
-  "protocol_sha256": "3f9faae39da00ddc2538a36b3e34611a50160647693e77671f618beb1815388a",
+  "protocol_sha256": "265c8e8706ab6f2b2a66eda0aa90f7257249b63439178fb41246be77c18ad026",
   "preflight_amendments": [
     {
       "utc": "2026-09-11T17:32:07.280337+00:00",
@@ -85,35 +85,6 @@
       "fit_returned_sha256": "b8be75fcd21e4e96befaf008d97f22db58fe87b942be31cedc3522f63c34ab4a",
       "verification_sha256": "67fb4f03e8a3d193fe9ff0b39fc863801cdaf9445ba44b87b7c5d2e2990e1413",
       "regression_tests": 2
-    },
-    {
-      "utc": "2026-09-13T08:18:40.350584+00:00",
-      "kind": "RESOURCE_PREFLIGHT_AND_EARLY_FAILURE_ONLY",
-      "reason": "Full B core process retains ~29.56 GiB before LightGBM precheck, which estimates another 46.782 GiB and refuses the old soft total budget 68; actual container is 90 GiB",
-      "core_soft_total_GiB": {
-        "kdki_inactive": 68,
-        "all_inactive": 84
-      },
-      "fastai_soft_total_GiB": 68,
-      "actual_child_RSS_guard_GiB": 78,
-      "actual_container_limit_GiB": 90,
-      "raise_on_core_failure": true,
-      "scientific_changes": false,
-      "preserved": "same members, labels, features, native learner parameters, validation choices and TEST gate; previously completed A unchanged",
-      "aborted_incomplete_B_attempt": "core_memory_repair_20260913/all_inactive__seed_20260921_attempt68",
-      "note": "Resource availability may affect native memory-adaptive budgets; all fitted parameters and actual RSS remain recorded",
-      "code_changes": {
-        "scripts/prepare_dtiam_ab_20260912.py": {
-          "before": "bd3f301cc16a2a15bf346398b5c75a68829573ad8139f86bb8f751f3073f4242",
-          "after": "6213bf4ea29a1d8cf1dfea2d3252093b7fe03bf934ce49848dbef1ac1d6373af"
-        },
-        "scripts/train_dtiam_ab_20260912.py": {
-          "before": "88f1868bb2d33915c4ec45129de59a3ea7a52e062057533a157195e49486f88f",
-          "after": "11190a25202b958583a7144b2d77704f61f1354c62f58431461709e4768b1bb0"
-        }
-      },
-      "protocol_sha256_before": "265c8e8706ab6f2b2a66eda0aa90f7257249b63439178fb41246be77c18ad026",
-      "protocol_sha256_after": "3f9faae39da00ddc2538a36b3e34611a50160647693e77671f618beb1815388a"
     }
   ]
 }

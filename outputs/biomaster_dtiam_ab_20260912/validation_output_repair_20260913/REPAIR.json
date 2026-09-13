@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-13T08:05:04.661920+00:00",
+  "reason": "Filter native predict_proba_multi outputs to explicitly requested models; preserve ensemble ancestor computations and pass fresh model lists. Validation output bug only; no training objective, data, seed, score, model choice criterion, weights or TEST gate changed.",
+  "file": "scripts/train_dtiam_ab_20260912.py",
+  "before_sha256": "3f7340874cd0faa9e533c0e9b93850d40a74693f5ef31454229ef70662864ca9",
+  "after_sha256": "88f1868bb2d33915c4ec45129de59a3ea7a52e062057533a157195e49486f88f",
+  "completed_fit_suites": 1,
+  "completed_validation_suites_before_repair": 0,
+  "completed_test_suites": 0,
+  "fit_returned_sha256": "b8be75fcd21e4e96befaf008d97f22db58fe87b942be31cedc3522f63c34ab4a",
+  "verification_sha256": "67fb4f03e8a3d193fe9ff0b39fc863801cdaf9445ba44b87b7c5d2e2990e1413",
+  "regression_tests": 2
+}

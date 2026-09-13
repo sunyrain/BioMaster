@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-13T08:03:37.797059+00:00",
+  "requested": [
+    "WeightedEnsemble_L2",
+    "RandomForestEntr"
+  ],
+  "native_returned": [
+    "LightGBMLarge",
+    "NeuralNetFastAI",
+    "NeuralNetTorch",
+    "RandomForestEntr",
+    "RandomForestGini",
+    "WeightedEnsemble_L2",
+    "XGBoost"
+  ],
+  "rows": 19,
+  "unique_pairs": 16,
+  "max_abs_error_vs_individual": {
+    "WeightedEnsemble_L2": 5.960464477539063e-08,
+    "RandomForestEntr": 0.0
+  },
+  "supervised_updates": 0,
+  "test_inference": false
+}

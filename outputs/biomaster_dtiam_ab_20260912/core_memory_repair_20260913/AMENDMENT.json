@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-13T08:18:40.350584+00:00",
+  "kind": "RESOURCE_PREFLIGHT_AND_EARLY_FAILURE_ONLY",
+  "reason": "Full B core process retains ~29.56 GiB before LightGBM precheck, which estimates another 46.782 GiB and refuses the old soft total budget 68; actual container is 90 GiB",
+  "core_soft_total_GiB": {
+    "kdki_inactive": 68,
+    "all_inactive": 84
+  },
+  "fastai_soft_total_GiB": 68,
+  "actual_child_RSS_guard_GiB": 78,
+  "actual_container_limit_GiB": 90,
+  "raise_on_core_failure": true,
+  "scientific_changes": false,
+  "preserved": "same members, labels, features, native learner parameters, validation choices and TEST gate; previously completed A unchanged",
+  "aborted_incomplete_B_attempt": "core_memory_repair_20260913/all_inactive__seed_20260921_attempt68",
+  "note": "Resource availability may affect native memory-adaptive budgets; all fitted parameters and actual RSS remain recorded",
+  "code_changes": {
+    "scripts/prepare_dtiam_ab_20260912.py": {
+      "before": "bd3f301cc16a2a15bf346398b5c75a68829573ad8139f86bb8f751f3073f4242",
+      "after": "6213bf4ea29a1d8cf1dfea2d3252093b7fe03bf934ce49848dbef1ac1d6373af"
+    },
+    "scripts/train_dtiam_ab_20260912.py": {
+      "before": "88f1868bb2d33915c4ec45129de59a3ea7a52e062057533a157195e49486f88f",
+      "after": "11190a25202b958583a7144b2d77704f61f1354c62f58431461709e4768b1bb0"
+    }
+  },
+  "protocol_sha256_before": "265c8e8706ab6f2b2a66eda0aa90f7257249b63439178fb41246be77c18ad026",
+  "protocol_sha256_after": "3f9faae39da00ddc2538a36b3e34611a50160647693e77671f618beb1815388a"
+}

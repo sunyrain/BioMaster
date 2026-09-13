@@ -1,0 +1,18 @@
+{
+  "native": {
+    "slope": 0.8018468580828512,
+    "intercept": -0.27481806840761275,
+    "threshold": 0.5165016308787567,
+    "validation_f1": 0.9144439467361648,
+    "fit_panel": "VALIDATION_AFFINITY_KD_KI",
+    "input": "clipped native probability logit"
+  },
+  "query": {
+    "slope": 1.3704984217696616,
+    "intercept": 0.23263251149331732,
+    "threshold": 0.36564435202287393,
+    "validation_f1": 0.9180340848360088,
+    "fit_panel": "VALIDATION_AFFINITY_KD_KI",
+    "input": "clipped native probability logit"
+  }
+}

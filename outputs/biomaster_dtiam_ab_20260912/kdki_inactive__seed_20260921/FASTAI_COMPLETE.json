@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-11T20:48:22.688663+00:00",
+  "seconds": 474.8328404771164,
+  "model_names": [
+    "LightGBMXT",
+    "LightGBM",
+    "RandomForestGini",
+    "RandomForestEntr",
+    "CatBoost",
+    "ExtraTreesGini",
+    "ExtraTreesEntr",
+    "XGBoost",
+    "NeuralNetTorch",
+    "LightGBMLarge",
+    "NeuralNetFastAI",
+    "WeightedEnsemble_L2"
+  ],
+  "resource_profile_sha256": "519d630c23b4e3b7bc78effee60fb1c58a9bc46d46650a91cbb65c14263ba5f5"
+}

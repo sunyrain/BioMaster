@@ -1,0 +1,5 @@
+{
+  "utc": "2026-09-11T20:49:00.599176+00:00",
+  "error": "RuntimeError('Child exited 1; see /root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/VALIDATION.log')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 101, in <module>\n    main()\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 79, in main\n    command(base,run/'VALIDATION.log')\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 39, in command\n    raise RuntimeError(f'Child exited {result}; see {log_path}')\nRuntimeError: Child exited 1; see /root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/VALIDATION.log\n"
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-13T08:17:54.918637+00:00",
+  "reason": "Two required LightGBM learners skipped by allocation estimate before training; abort incomplete B attempt before continuing other learners",
+  "estimated_extra_GiB": 46.782,
+  "available_estimated_GiB": 38.444,
+  "original_soft_total_GiB": 68,
+  "original_actual_RSS_guard_GiB": 78,
+  "actual_cgroup_limit_GiB": 90,
+  "partial_attempt_preserved": true,
+  "completed_A_preserved": true
+}
