@@ -1,0 +1,375 @@
+{
+  "utc": "2026-09-13T15:47:31.252985+00:00",
+  "active_vscode_servers": [
+    "Stable-7e7950df89d055b5a378379db9ee14290772148a"
+  ],
+  "system_before": {
+    "total": 32212254720,
+    "used": 31248596992,
+    "free": 963657728
+  },
+  "remove_directories": [
+    {
+      "path": "/root/.vscode-server/cli/servers/Stable-08d4889f9ec4a1685d257b9b95de036c8e1ce1e5",
+      "allocated_bytes": 717459456,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/root/.vscode-server/cli/servers/Stable-520fb30b2d3d324b4cb2342f6e88e2cd93751de1",
+      "allocated_bytes": 734142464,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/root/.vscode-server/cli/servers/Stable-a44adf7f53e00964ab890f9f8758a334f1fc15bc",
+      "allocated_bytes": 734171136,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/root/.vscode-server/cli/servers/Stable-88e44fa0e00b08f7758b4f6d05632e4fd5e4df6f",
+      "allocated_bytes": 734384128,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/root/.vscode-server/cli/servers/Stable-645f29cc3176500b4b5762ba887cf2a7f0ffdf2c",
+      "allocated_bytes": 683401216,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/root/.npm/_cacache",
+      "allocated_bytes": 169488384,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/root/.vscode-server/data/CachedExtensionVSIXs",
+      "allocated_bytes": 103505920,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/tmp/biomaster_offline_test_env",
+      "allocated_bytes": 321732608,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/tmp/biomaster_offline_runtime",
+      "allocated_bytes": 63012864,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    },
+    {
+      "path": "/tmp/pytest-of-root",
+      "allocated_bytes": 14868480,
+      "reason": "Inactive downloaded editor version, package archive cache, or disposable test environment"
+    }
+  ],
+  "remove_conda_archives": [
+    {
+      "path": "/root/miniconda3/pkgs/_libgcc_mutex-0.1-main.conda",
+      "bytes": 3473
+    },
+    {
+      "path": "/root/miniconda3/pkgs/_openmp_mutex-5.1-1_gnu.conda",
+      "bytes": 21315
+    },
+    {
+      "path": "/root/miniconda3/pkgs/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100.conda",
+      "bytes": 28846
+    },
+    {
+      "path": "/root/miniconda3/pkgs/archspec-0.2.3-pyhd3eb1b0_0.conda",
+      "bytes": 47787
+    },
+    {
+      "path": "/root/miniconda3/pkgs/boltons-23.0.0-py312h06a4308_0.conda",
+      "bytes": 473472
+    },
+    {
+      "path": "/root/miniconda3/pkgs/brotli-python-1.0.9-py312h6a678d5_8.conda",
+      "bytes": 364635
+    },
+    {
+      "path": "/root/miniconda3/pkgs/bzip2-1.0.8-h5eee18b_6.conda",
+      "bytes": 268384
+    },
+    {
+      "path": "/root/miniconda3/pkgs/c-ares-1.19.1-h5eee18b_0.conda",
+      "bytes": 120666
+    },
+    {
+      "path": "/root/miniconda3/pkgs/ca-certificates-2024.3.11-h06a4308_0.conda",
+      "bytes": 130359
+    },
+    {
+      "path": "/root/miniconda3/pkgs/certifi-2024.2.2-py312h06a4308_0.conda",
+      "bytes": 163757
+    },
+    {
+      "path": "/root/miniconda3/pkgs/cffi-1.16.0-py312h5eee18b_1.conda",
+      "bytes": 312643
+    },
+    {
+      "path": "/root/miniconda3/pkgs/charset-normalizer-2.0.4-pyhd3eb1b0_0.conda",
+      "bytes": 35372
+    },
+    {
+      "path": "/root/miniconda3/pkgs/conda-24.4.0-py312h06a4308_0.conda",
+      "bytes": 1238131
+    },
+    {
+      "path": "/root/miniconda3/pkgs/conda-content-trust-0.2.0-py312h06a4308_1.conda",
+      "bytes": 61489
+    },
+    {
+      "path": "/root/miniconda3/pkgs/conda-libmamba-solver-24.1.0-pyhd3eb1b0_0.conda",
+      "bytes": 40190
+    },
+    {
+      "path": "/root/miniconda3/pkgs/conda-package-handling-2.2.0-py312h06a4308_1.conda",
+      "bytes": 283416
+    },
+    {
+      "path": "/root/miniconda3/pkgs/conda-package-streaming-0.9.0-py312h06a4308_0.conda",
+      "bytes": 32369
+    },
+    {
+      "path": "/root/miniconda3/pkgs/cryptography-42.0.5-py312hdda0065_1.conda",
+      "bytes": 2214401
+    },
+    {
+      "path": "/root/miniconda3/pkgs/distro-1.9.0-py312h06a4308_0.conda",
+      "bytes": 36586
+    },
+    {
+      "path": "/root/miniconda3/pkgs/expat-2.6.2-h6a678d5_0.conda",
+      "bytes": 181207
+    },
+    {
+      "path": "/root/miniconda3/pkgs/fmt-9.1.0-hdb19cb5_1.conda",
+      "bytes": 199925
+    },
+    {
+      "path": "/root/miniconda3/pkgs/icu-73.1-h6a678d5_0.conda",
+      "bytes": 27195861
+    },
+    {
+      "path": "/root/miniconda3/pkgs/idna-3.7-py312h06a4308_0.conda",
+      "bytes": 134338
+    },
+    {
+      "path": "/root/miniconda3/pkgs/jsonpatch-1.33-py312h06a4308_1.conda",
+      "bytes": 36682
+    },
+    {
+      "path": "/root/miniconda3/pkgs/jsonpointer-2.1-pyhd3eb1b0_0.conda",
+      "bytes": 9495
+    },
+    {
+      "path": "/root/miniconda3/pkgs/krb5-1.20.1-h143b758_1.conda",
+      "bytes": 1399854
+    },
+    {
+      "path": "/root/miniconda3/pkgs/ld_impl_linux-64-2.38-h1181459_1.conda",
+      "bytes": 669201
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libarchive-3.6.2-h6ac8c49_3.conda",
+      "bytes": 919313
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libcurl-8.7.1-h251f7ec_0.conda",
+      "bytes": 434501
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libedit-3.1.20230828-h5eee18b_0.conda",
+      "bytes": 183510
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libev-4.33-h7f8727e_1.conda",
+      "bytes": 114011
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libffi-3.4.4-h6a678d5_1.conda",
+      "bytes": 144691
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libgcc-ng-11.2.0-h1234567_1.conda",
+      "bytes": 5602184
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libgomp-11.2.0-h1234567_1.conda",
+      "bytes": 485145
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libmamba-1.5.8-hfe524e5_2.conda",
+      "bytes": 1950480
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libmambapy-1.5.8-py312h2dafd23_2.conda",
+      "bytes": 335348
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libnghttp2-1.57.0-h2d74bed_0.conda",
+      "bytes": 690359
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libsolv-0.7.24-he621ea3_1.conda",
+      "bytes": 501714
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libssh2-1.11.0-h251f7ec_0.conda",
+      "bytes": 288925
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libstdcxx-ng-11.2.0-h1234567_1.conda",
+      "bytes": 4919942
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libuuid-1.41.5-h5eee18b_0.conda",
+      "bytes": 28110
+    },
+    {
+      "path": "/root/miniconda3/pkgs/libxml2-2.10.4-hfdd30dd_2.conda",
+      "bytes": 772403
+    },
+    {
+      "path": "/root/miniconda3/pkgs/lz4-c-1.9.4-h6a678d5_1.conda",
+      "bytes": 159495
+    },
+    {
+      "path": "/root/miniconda3/pkgs/menuinst-2.0.2-py312h06a4308_1.conda",
+      "bytes": 167408
+    },
+    {
+      "path": "/root/miniconda3/pkgs/ncurses-6.4-h6a678d5_0.conda",
+      "bytes": 935878
+    },
+    {
+      "path": "/root/miniconda3/pkgs/openssl-3.0.13-h7f8727e_1.conda",
+      "bytes": 5466167
+    },
+    {
+      "path": "/root/miniconda3/pkgs/packaging-23.2-py312h06a4308_0.conda",
+      "bytes": 171843
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pcre2-10.42-hebb0a14_1.conda",
+      "bytes": 1379156
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pip-24.0-py312h06a4308_0.conda",
+      "bytes": 3427910
+    },
+    {
+      "path": "/root/miniconda3/pkgs/platformdirs-3.10.0-py312h06a4308_0.conda",
+      "bytes": 37282
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pluggy-1.0.0-py312h06a4308_1.conda",
+      "bytes": 31768
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pybind11-abi-5-hd3eb1b0_0.conda",
+      "bytes": 14215
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pycosat-0.6.6-py312h5eee18b_1.conda",
+      "bytes": 92282
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pycparser-2.21-pyhd3eb1b0_0.conda",
+      "bytes": 96617
+    },
+    {
+      "path": "/root/miniconda3/pkgs/pysocks-1.7.1-py312h06a4308_0.conda",
+      "bytes": 35357
+    },
+    {
+      "path": "/root/miniconda3/pkgs/python-3.12.3-h996f2a0_1.conda",
+      "bytes": 36581315
+    },
+    {
+      "path": "/root/miniconda3/pkgs/readline-8.2-h5eee18b_0.conda",
+      "bytes": 365188
+    },
+    {
+      "path": "/root/miniconda3/pkgs/reproc-14.2.4-h6a678d5_2.conda",
+      "bytes": 29681
+    },
+    {
+      "path": "/root/miniconda3/pkgs/reproc-cpp-14.2.4-h6a678d5_2.conda",
+      "bytes": 21248
+    },
+    {
+      "path": "/root/miniconda3/pkgs/requests-2.31.0-py312h06a4308_1.conda",
+      "bytes": 122450
+    },
+    {
+      "path": "/root/miniconda3/pkgs/ruamel.yaml-0.17.21-py312h5eee18b_0.conda",
+      "bytes": 247107
+    },
+    {
+      "path": "/root/miniconda3/pkgs/setuptools-69.5.1-py312h06a4308_0.conda",
+      "bytes": 1346364
+    },
+    {
+      "path": "/root/miniconda3/pkgs/sqlite-3.45.3-h5eee18b_0.conda",
+      "bytes": 1285571
+    },
+    {
+      "path": "/root/miniconda3/pkgs/tk-8.6.14-h39e8969_0.conda",
+      "bytes": 3584424
+    },
+    {
+      "path": "/root/miniconda3/pkgs/tqdm-4.66.2-py312he106c6f_0.conda",
+      "bytes": 162384
+    },
+    {
+      "path": "/root/miniconda3/pkgs/truststore-0.8.0-py312h06a4308_0.conda",
+      "bytes": 43694
+    },
+    {
+      "path": "/root/miniconda3/pkgs/tzdata-2024a-h04d1e81_0.conda",
+      "bytes": 119069
+    },
+    {
+      "path": "/root/miniconda3/pkgs/urllib3-2.1.0-py312h06a4308_1.conda",
+      "bytes": 200894
+    },
+    {
+      "path": "/root/miniconda3/pkgs/wheel-0.43.0-py312h06a4308_0.conda",
+      "bytes": 145411
+    },
+    {
+      "path": "/root/miniconda3/pkgs/xz-5.4.6-h5eee18b_1.conda",
+      "bytes": 658941
+    },
+    {
+      "path": "/root/miniconda3/pkgs/yaml-cpp-0.8.0-h6a678d5_1.conda",
+      "bytes": 621367
+    },
+    {
+      "path": "/root/miniconda3/pkgs/zlib-1.2.13-h5eee18b_1.conda",
+      "bytes": 113492
+    },
+    {
+      "path": "/root/miniconda3/pkgs/zstandard-0.22.0-py312h2c38b39_0.conda",
+      "bytes": 447771
+    },
+    {
+      "path": "/root/miniconda3/pkgs/zstd-1.5.5-hc292b87_2.conda",
+      "bytes": 657991
+    }
+  ],
+  "protected": [
+    "Current VSCode server and extensions",
+    "All installed conda packages and active environments",
+    "Codex session history and generated artifacts",
+    "All training inputs, models and SPR handoff files",
+    "Security logs"
+  ],
+  "finished_utc": "2026-09-13T15:47:32.141719+00:00",
+  "system_after_cache_cleanup": {
+    "total": 32212254720,
+    "used": 26972430336,
+    "free": 5239824384
+  },
+  "actual_free_space_gain_bytes": 4276166656
+}

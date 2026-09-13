@@ -1,16 +1,16 @@
 {
-  "status": "RUNNING_AFTER_ENVIRONMENT_RESTART",
-  "utc": "2026-09-13T15:53:14.907316+00:00",
+  "status": "RESUMED_B_XGBOOST_AFTER_FULL_DATA_RESOURCE_PROBE",
+  "utc": "2026-09-13T14:14:08.503306+00:00",
   "runner": {
     "stage": "TRAINING",
-    "updated_utc": "2026-09-13T15:43:48.474149+00:00",
-    "pid": 2015,
+    "updated_utc": "2026-09-13T14:08:52.238886+00:00",
+    "pid": 349849,
     "current_suite": "all_inactive__seed_20260921",
     "completed_suites": 1,
     "total_suites": 6
   },
   "child": {
-    "pid": 2593,
+    "pid": 350406,
     "args": [
       "/root/autodl-tmp/BioMaster/.venv_dtiam_compat/bin/python",
       "-u",
@@ -20,7 +20,7 @@
       "--model",
       "XGBoost"
     ],
-    "started_utc": "2026-09-13T15:44:44.534805+00:00",
+    "started_utc": "2026-09-13T14:09:48.319176+00:00",
     "log": "/root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/CORE_XGBoost.log"
   },
   "completed_validation_suites": 1,
@@ -41,7 +41,7 @@
     "LightGBMLarge",
     "NeuralNetFastAI"
   ],
-  "current_child_RSS_GiB": 30.085067749023438,
+  "current_child_RSS_GiB": 30.167526245117188,
   "actual_RSS_guard_GiB": 78,
   "full_B_two_round_probe_peak_RSS_GiB": 30.437686920166016,
   "real_sample_probability_max_difference": 0.0,
@@ -49,20 +49,5 @@
   "training_member_pool": 1116270,
   "new_common_validation_results": false,
   "test_gate_open": false,
-  "eta": {
-    "source": "RESTORE_ETA_20260913.json",
-    "first_B_remaining_hours": [
-      6,
-      12
-    ],
-    "all_six_and_test_remaining_hours": [
-      30,
-      50
-    ],
-    "central_hours": 38.22434153985249
-  },
-  "current_xgboost_last_logged_iteration": 300,
-  "frozen_inputs_protocol_code_verified": true,
-  "recovery": "all_inactive__seed_20260921/ENV_RESTART_RECOVERY_20260913/RECOVERY.json",
-  "training_TMPDIR": "/root/autodl-tmp/BioMaster/.runtime_tmp/dtiam"
+  "eta": "No reliable completion timestamp yet; seven of eleven base models does not equal seven elevenths of runtime. Re-estimate once one full B suite finishes."
 }

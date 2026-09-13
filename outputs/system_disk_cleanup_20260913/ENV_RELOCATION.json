@@ -1,0 +1,49 @@
+{
+  "started_utc": "2026-09-13T15:50:49.508944+00:00",
+  "source": "/root/.bioemu_colabfold",
+  "destination": "/root/autodl-tmp/.system_migrated/bioemu_colabfold",
+  "system_before": {
+    "total": 32212254720,
+    "used": 26973863936,
+    "free": 5238390784
+  },
+  "data_before": {
+    "total": 590558003200,
+    "used": 510790897664,
+    "free": 79767105536
+  },
+  "python_probe_before": {
+    "executable": "/root/.bioemu_colabfold/bin/python",
+    "prefix": "/root/.bioemu_colabfold",
+    "packages": {
+      "jax": "0.4.35",
+      "jaxlib": "0.4.34",
+      "colabfold": "1.5.4"
+    }
+  },
+  "status": "COMPLETE",
+  "checksum_dry_run_equal": true,
+  "verified_utc": "2026-09-13T15:51:07.070022+00:00",
+  "python_probe_after": {
+    "executable": "/root/.bioemu_colabfold/bin/python",
+    "prefix": "/root/.bioemu_colabfold",
+    "packages": {
+      "jax": "0.4.35",
+      "jaxlib": "0.4.34",
+      "colabfold": "1.5.4"
+    }
+  },
+  "original_path_symlink": "/root/autodl-tmp/.system_migrated/bioemu_colabfold",
+  "finished_utc": "2026-09-13T15:51:45.887095+00:00",
+  "system_after": {
+    "total": 32212254720,
+    "used": 20745011200,
+    "free": 11467243520
+  },
+  "data_after": {
+    "total": 590558003200,
+    "used": 517021876224,
+    "free": 73536126976
+  },
+  "actual_system_free_space_gain_bytes": 6228852736
+}

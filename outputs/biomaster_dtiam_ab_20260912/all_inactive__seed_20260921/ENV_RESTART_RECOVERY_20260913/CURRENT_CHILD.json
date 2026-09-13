@@ -1,0 +1,14 @@
+{
+  "pid": 350406,
+  "args": [
+    "/root/autodl-tmp/BioMaster/.venv_dtiam_compat/bin/python",
+    "-u",
+    "scripts/train_dtiam_isolated_core_20260913.py",
+    "--seed",
+    "20260921",
+    "--model",
+    "XGBoost"
+  ],
+  "started_utc": "2026-09-13T14:09:48.319176+00:00",
+  "log": "/root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/CORE_XGBoost.log"
+}

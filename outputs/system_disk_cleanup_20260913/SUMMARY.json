@@ -1,0 +1,39 @@
+{
+  "utc": "2026-09-13T15:53:14.907316+00:00",
+  "status": "COMPLETE",
+  "system_before": {
+    "total": 32212254720,
+    "used": 31248596992,
+    "free": 963657728
+  },
+  "system_after": {
+    "total": 32212254720,
+    "used": 20745273344,
+    "free": 11466981376
+  },
+  "data_after": {
+    "total": 590558003200,
+    "used": 517021888512,
+    "free": 73536114688
+  },
+  "cache_cleanup_freed_bytes": 4276166656,
+  "environment_relocation_freed_bytes": 6228852736,
+  "relocated_environment": {
+    "original_path": "/root/.bioemu_colabfold",
+    "destination": "/root/autodl-tmp/.system_migrated/bioemu_colabfold",
+    "checksum_verified": true,
+    "python_and_package_metadata_unchanged": true
+  },
+  "frozen_training_inputs_protocol_code_verified": true,
+  "seven_saved_B_model_hashes_verified": true,
+  "training_queue_pid": 2015,
+  "training_child_pid": 2593,
+  "protected": [
+    "Current VSCode server and extensions",
+    "All installed conda packages and active environments",
+    "Codex session history and generated artifacts",
+    "All training inputs, models and SPR handoff files",
+    "Security logs"
+  ],
+  "actual_system_free_space_gain_bytes": 10503323648
+}

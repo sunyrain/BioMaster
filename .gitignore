@@ -376,3 +376,6 @@ Thumbs.db
 !/scripts/train_dtiam_isolated_core_20260913.py
 !/scripts/dtiam_numeric_xgboost_20260913.py
 !/scripts/profile_dtiam_dense_xgboost_20260913.py
+
+# Rebuildable training temporary files belong on the data disk, outside Git.
+/.runtime_tmp/

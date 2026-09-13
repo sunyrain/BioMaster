@@ -1,0 +1,5 @@
+{
+  "pid": 349849,
+  "started_utc": "2026-09-13T14:08:48.247576+00:00",
+  "command": "python -u scripts/run_dtiam_ab_20260912.py"
+}

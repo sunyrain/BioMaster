@@ -1,0 +1,52 @@
+{
+  "status": "PROVISIONAL_RUNTIME_EXTRAPOLATION",
+  "generated_utc": "2026-09-13T15:53:14.907316+00:00",
+  "anchor_utc": "2026-09-13T15:44:44.534805+00:00",
+  "assumptions": [
+    "No further process or environment interruption",
+    "Same 20 CPU allocation; XGBoost retains original 10000-round cap and early stopping",
+    "Remaining B neural/large-tree times scale A measured runtime by training row ratio; early stopping may change substantially",
+    "Range is a planning interval, not a statistical confidence interval or guaranteed deadline"
+  ],
+  "measurements": {
+    "A_full_fit_seconds": 10784.285839299671,
+    "A_component_seconds": {
+      "NeuralNetTorch": 5352.395434856415,
+      "LightGBMLarge": 716.0368921756744,
+      "NeuralNetFastAI": 468.3311369419098
+    },
+    "B_completed_seven_stages_hours": 2.7086612406336807,
+    "previous_B_xgboost_start_utc": "2026-09-13T14:09:48.319176+00:00",
+    "previous_B_xgboost_last_log_utc": "2026-09-13T15:38:51.341952+00:00",
+    "previous_B_xgboost_last_iteration": 5600,
+    "previous_B_xgboost_elapsed_seconds": 5343.022776,
+    "assumed_initialization_seconds": 150,
+    "estimated_xgboost_seconds_per_iteration": 0.9273254957142857,
+    "B_to_A_training_rows_ratio": 3.3067808158307908
+  },
+  "current_B_remaining_component_hours": {
+    "XGBoost": 2.6175708214285716,
+    "NeuralNetTorch": 4.916444039645415,
+    "LightGBMLarge": 0.6577158495760058,
+    "NeuralNetFastAI": 0.4301856719710362,
+    "ensemble_validation_allowance": 0.15
+  },
+  "first_B_remaining_hours": {
+    "central": 8.77191638262103,
+    "planning_low": 6,
+    "planning_high": 12
+  },
+  "all_six_suites_and_test_remaining_hours": {
+    "central": 38.22434153985249,
+    "planning_low": 30,
+    "planning_high": 50
+  },
+  "total_formula": "current B remaining + 2 * measured A fit + 2 * (measured B first seven stages + B remaining estimate) + 0.5 h final test/report allowance",
+  "first_B_finish_central_utc": "2026-09-14T00:31:03.433782+00:00",
+  "all_six_finish_central_utc": "2026-09-15T05:58:12.164348+00:00",
+  "all_six_finish_planning_interval_utc": [
+    "2026-09-14T21:44:44.534805+00:00",
+    "2026-09-15T17:44:44.534805+00:00"
+  ],
+  "reestimate_after": "First complete B fit and public validation"
+}
