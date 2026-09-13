@@ -18,6 +18,7 @@ from autogluon.tabular.configs.hyperparameter_configs import get_hyperparameter_
 from dtiam_ab_common_20260912 import ROOT,OUT,SOURCE,SEEDS,now,digest,write_json,table,banks
 # Interrupted native trainer pickles can reference __main__.Progress.
 from train_dtiam_ab_20260912 import Progress,EXPECTED
+from dtiam_numeric_xgboost_20260913 import NumericDenseXGBoostModel
 
 
 def core_plan(defaults):
@@ -73,6 +74,11 @@ def work(seed,model=None,finalize=False):
     assert defaults==json.loads((OUT/'AUTOGLUON_HYPERPARAMETERS.json').read_text())
     plan=core_plan(defaults)
     assert list(plan)==cfg['isolated_B_core_model_order']
+    if model=='XGBoost' and cfg.get('B_XGBoost_numeric_transport')=='dense_zero_as_nan_v1':
+        probe=json.loads((OUT/'XGBOOST_DENSE_RESOURCE_PROFILE_20260913.json').read_text())
+        assert probe['status']=='PASS_FULL_B_TWO_ROUNDS_ONLY'
+        assert probe['adapter_sha256']==digest(ROOT/'scripts/dtiam_numeric_xgboost_20260913.py')
+        plan['XGBoost']={NumericDenseXGBoostModel:defaults['XGB']}
     random.seed(seed);np.random.seed(seed);torch.manual_seed(seed);torch.set_num_threads(20)
     frame=pd.read_parquet(SOURCE/f'{arm}_TRAIN.parquet',columns=['pair_id','binary_label'])
     record_dir=run/'ISOLATED_CORE';record_dir.mkdir(exist_ok=True)

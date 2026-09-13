@@ -1,0 +1,41 @@
+{
+  "utc": "2026-09-13T14:08:43.081697+00:00",
+  "kind": "NUMERIC_XGBOOST_INPUT_TRANSPORT_ONLY",
+  "reason": "Full-B native CSR route exceeded actual 78 GiB RSS guard before first logged iteration",
+  "implementation": "NumericDenseXGBoostModel wraps native XGBoostModel; dense float32 input, original CSR implicit zeros encoded as NaN in both fit and inference; reject non-float32 inputs",
+  "learning_parameters": "Same native XGBoost objective, tree method, estimator budget, seed behavior, early stopping and 20 CPU threads; no label/member/feature-dimension reduction",
+  "preserved": "Seven completed B base learners plus completed A suite; common validation choices and TEST gate unchanged",
+  "probe_profile": "outputs/biomaster_dtiam_ab_20260912/XGBOOST_DENSE_RESOURCE_PROFILE_20260913.json",
+  "profile_sha256": "570fc20e9b11cea6938c3bf97d6423edaa913c3a0428ec823466fca4f0778cf0",
+  "full_B_probe_peak_RSS_GiB": 30.437686920166016,
+  "real_sample_probability_max_difference": 0.0,
+  "probability_tolerance": 2e-07,
+  "limitation": "Representation semantics and tested outputs agree; not a claim of bitwise equivalence for every full-data tree or convergence under a two-round probe",
+  "actual_RSS_guard_GiB": 78,
+  "core_soft_budget_GiB": 84,
+  "tests_passed": 5,
+  "code_changes": {
+    "scripts/prepare_dtiam_ab_20260912.py": {
+      "before": "93a4101ec36b2a3f05864d01102ffea62d5d5bd0a04304af76d6bce13e758cdb",
+      "after": "d97ec9e23a300e533e39c612cd20592b58300b313d79bd4cb673b58ee00d7a00"
+    },
+    "scripts/run_dtiam_ab_20260912.py": {
+      "before": "c6f96a8cbffa1cb5463b5e7727e4733575276aa8325443700e84471fba77999e",
+      "after": "7adba20708a50e8a053ae313198731e3405a51105dafcd4ecc63fa69866d24bc"
+    },
+    "scripts/train_dtiam_isolated_core_20260913.py": {
+      "before": "8e4790a8178a94b15c3b18a9ee9937f1dcfc2e69e91e3aebd436a8209ef12dbd",
+      "after": "7183cb7091b8e511b24917f5e74b926a432b3498760b1f5209788fe2bd42b6ad"
+    },
+    "scripts/dtiam_numeric_xgboost_20260913.py": {
+      "before": null,
+      "after": "73c3ba977c3cacc760b7247a392f361450130aaeb83b54094f6a5f9a8a4f2836"
+    },
+    "scripts/profile_dtiam_dense_xgboost_20260913.py": {
+      "before": null,
+      "after": "5adc7c0c8f85904f55a062cde76366dbeb55bcd11cad08df57d959068d6f0b79"
+    }
+  },
+  "protocol_sha256_before": "2f0df6c20e1b05ae4e244b1bfde519d8e5d32e03729991169cc83bc9d4e5cfb9",
+  "protocol_sha256_after": "28e9ffa4bac972319aea7eeec427d1fe4374dc1396d39a29c486b335eaef6d58"
+}

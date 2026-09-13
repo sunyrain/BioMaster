@@ -16,20 +16,17 @@
     "outputs/biomaster_model_consolidation_20260911/MODEL_LEDGER.csv": "7e2fbdce33bc529bb1d417fe2c3cbb52a89bdd278cea12d2e9639b256acc88bc",
     "outputs/biomaster_model_decision_audit_20260911/WETLAB112_TARGET_BENCHMARK.csv": "9a3ddc9e87c3619fc3a97b255baf9ef6a32bca733f4bdaeccc0c2ef7b381cb1a",
     "outputs/biomaster_old_production_comparison_20260911/TEST_PREDICTIONS.parquet": "42d262ec44327877cbc574ad3eab3a49e8a077bc03382d4cd83565998326595c",
-    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c",
-    "outputs/biomaster_dtiam_ab_20260912/XGBOOST_DENSE_RESOURCE_PROFILE_20260913.json": "570fc20e9b11cea6938c3bf97d6423edaa913c3a0428ec823466fca4f0778cf0"
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c"
   },
   "code": {
     "scripts/dtiam_ab_common_20260912.py": "7a2035a1348d432c2fca2b240f8433b228c7434020d03860451c66e49343bbf9",
     "scripts/build_dtiam_ab_features_20260912.py": "0af2cfff54a9c908bb131de5f4b7f3763e2b578e14cddc64222c6b77241d18d0",
-    "scripts/prepare_dtiam_ab_20260912.py": "d97ec9e23a300e533e39c612cd20592b58300b313d79bd4cb673b58ee00d7a00",
+    "scripts/prepare_dtiam_ab_20260912.py": "93a4101ec36b2a3f05864d01102ffea62d5d5bd0a04304af76d6bce13e758cdb",
     "scripts/train_dtiam_ab_20260912.py": "11190a25202b958583a7144b2d77704f61f1354c62f58431461709e4768b1bb0",
     "scripts/report_dtiam_ab_20260912.py": "07d514877aba82a3dcd98f08d482e20cf6186928764ea8742f37ee454d16795c",
-    "scripts/run_dtiam_ab_20260912.py": "7adba20708a50e8a053ae313198731e3405a51105dafcd4ecc63fa69866d24bc",
+    "scripts/run_dtiam_ab_20260912.py": "c6f96a8cbffa1cb5463b5e7727e4733575276aa8325443700e84471fba77999e",
     "scripts/profile_dtiam_ab_resources_20260912.py": "867a1da7024943817b73fbf2bc0d5acd3d316f9c922aa8d4e644bf821ffb4491",
-    "scripts/train_dtiam_isolated_core_20260913.py": "7183cb7091b8e511b24917f5e74b926a432b3498760b1f5209788fe2bd42b6ad",
-    "scripts/dtiam_numeric_xgboost_20260913.py": "73c3ba977c3cacc760b7247a392f361450130aaeb83b54094f6a5f9a8a4f2836",
-    "scripts/profile_dtiam_dense_xgboost_20260913.py": "5adc7c0c8f85904f55a062cde76366dbeb55bcd11cad08df57d959068d6f0b79"
+    "scripts/train_dtiam_isolated_core_20260913.py": "8e4790a8178a94b15c3b18a9ee9937f1dcfc2e69e91e3aebd436a8209ef12dbd"
   },
   "frozen_inputs": {
     "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/model.pt": "ca1ad1de8364806282bacac993fd477711c59498c42248982c441eafcc254f76",
@@ -37,7 +34,7 @@
     "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
     "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
   },
-  "protocol_sha256": "28e9ffa4bac972319aea7eeec427d1fe4374dc1396d39a29c486b335eaef6d58",
+  "protocol_sha256": "2f0df6c20e1b05ae4e244b1bfde519d8e5d32e03729991169cc83bc9d4e5cfb9",
   "preflight_amendments": [
     {
       "utc": "2026-09-11T17:32:07.280337+00:00",
@@ -162,47 +159,6 @@
       },
       "protocol_sha256_before": "3f9faae39da00ddc2538a36b3e34611a50160647693e77671f618beb1815388a",
       "protocol_sha256_after": "2f0df6c20e1b05ae4e244b1bfde519d8e5d32e03729991169cc83bc9d4e5cfb9"
-    },
-    {
-      "utc": "2026-09-13T14:08:43.081697+00:00",
-      "kind": "NUMERIC_XGBOOST_INPUT_TRANSPORT_ONLY",
-      "reason": "Full-B native CSR route exceeded actual 78 GiB RSS guard before first logged iteration",
-      "implementation": "NumericDenseXGBoostModel wraps native XGBoostModel; dense float32 input, original CSR implicit zeros encoded as NaN in both fit and inference; reject non-float32 inputs",
-      "learning_parameters": "Same native XGBoost objective, tree method, estimator budget, seed behavior, early stopping and 20 CPU threads; no label/member/feature-dimension reduction",
-      "preserved": "Seven completed B base learners plus completed A suite; common validation choices and TEST gate unchanged",
-      "probe_profile": "outputs/biomaster_dtiam_ab_20260912/XGBOOST_DENSE_RESOURCE_PROFILE_20260913.json",
-      "profile_sha256": "570fc20e9b11cea6938c3bf97d6423edaa913c3a0428ec823466fca4f0778cf0",
-      "full_B_probe_peak_RSS_GiB": 30.437686920166016,
-      "real_sample_probability_max_difference": 0.0,
-      "probability_tolerance": 2e-07,
-      "limitation": "Representation semantics and tested outputs agree; not a claim of bitwise equivalence for every full-data tree or convergence under a two-round probe",
-      "actual_RSS_guard_GiB": 78,
-      "core_soft_budget_GiB": 84,
-      "tests_passed": 5,
-      "code_changes": {
-        "scripts/prepare_dtiam_ab_20260912.py": {
-          "before": "93a4101ec36b2a3f05864d01102ffea62d5d5bd0a04304af76d6bce13e758cdb",
-          "after": "d97ec9e23a300e533e39c612cd20592b58300b313d79bd4cb673b58ee00d7a00"
-        },
-        "scripts/run_dtiam_ab_20260912.py": {
-          "before": "c6f96a8cbffa1cb5463b5e7727e4733575276aa8325443700e84471fba77999e",
-          "after": "7adba20708a50e8a053ae313198731e3405a51105dafcd4ecc63fa69866d24bc"
-        },
-        "scripts/train_dtiam_isolated_core_20260913.py": {
-          "before": "8e4790a8178a94b15c3b18a9ee9937f1dcfc2e69e91e3aebd436a8209ef12dbd",
-          "after": "7183cb7091b8e511b24917f5e74b926a432b3498760b1f5209788fe2bd42b6ad"
-        },
-        "scripts/dtiam_numeric_xgboost_20260913.py": {
-          "before": null,
-          "after": "73c3ba977c3cacc760b7247a392f361450130aaeb83b54094f6a5f9a8a4f2836"
-        },
-        "scripts/profile_dtiam_dense_xgboost_20260913.py": {
-          "before": null,
-          "after": "5adc7c0c8f85904f55a062cde76366dbeb55bcd11cad08df57d959068d6f0b79"
-        }
-      },
-      "protocol_sha256_before": "2f0df6c20e1b05ae4e244b1bfde519d8e5d32e03729991169cc83bc9d4e5cfb9",
-      "protocol_sha256_after": "28e9ffa4bac972319aea7eeec427d1fe4374dc1396d39a29c486b335eaef6d58"
     }
   ]
 }

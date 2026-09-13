@@ -9,10 +9,16 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from train_dtiam_isolated_core_20260913 import (
-    core_plan,member_roles,inventory,verify_preserved,TabularPredictor,get_hyperparameter_config)
+try:
+    from train_dtiam_isolated_core_20260913 import (
+        core_plan,member_roles,inventory,verify_preserved,TabularPredictor,get_hyperparameter_config)
+except ModuleNotFoundError as error:
+    if error.name and error.name.startswith('autogluon'):
+        core_plan=None
+    else:raise
 
 
+@unittest.skipIf(core_plan is None,'Run with .venv_dtiam_compat/bin/python')
 class IsolatedCoreTests(unittest.TestCase):
     def test_plan_keeps_every_binary_default_and_no_learning_overrides(self):
         defaults=get_hyperparameter_config('default');before=copy.deepcopy(defaults)

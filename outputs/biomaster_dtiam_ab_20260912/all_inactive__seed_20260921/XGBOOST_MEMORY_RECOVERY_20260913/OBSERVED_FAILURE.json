@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-13T14:01:54.689755+00:00",
+  "failure_utc": "2026-09-13T11:55:23.872659+00:00",
+  "kind": "ACTUAL_RSS_GUARD_EXCEEDED_78_GiB",
+  "completed_B_models": {
+    "LightGBMXT": "b105fa181a2378891f5d58638768790229fe4c9f914e71a0cd0b476e40a72e76",
+    "LightGBM": "4819f22c0a8c31804f18e7b2de0b6492665a3349cff19dd5b1edbfb0990e5a3e",
+    "RandomForestGini": "fe7cf8fdde11afb2183848432c4523f603112d3d7f95d04b0693be5c3427cb06",
+    "RandomForestEntr": "f4445fca76c293bad489c0fed304c81d4e98486bd6283885935c78611acc99f4",
+    "CatBoost": "ed1f2c0305ff651376e8b07b916b6f7190034719a1ea7c2a743478a25b18954c",
+    "ExtraTreesGini": "966ac50190d1f3953e1d054709d8734edc58beecadffb8e05ff4705615a97bda",
+    "ExtraTreesEntr": "734d8801aa48af73c5e4958b3014c7cf12566bf558938cdec68375b3d42f5330"
+  },
+  "unchanged_A_validation": true,
+  "formal_TEST_not_open": true,
+  "observation": "Failure happened before the first reported XGBoost boosting iteration. Native numeric preprocessing builds CSR then stacks it; peak attribution to this conversion is an inference from source, not a captured Python stack."
+}

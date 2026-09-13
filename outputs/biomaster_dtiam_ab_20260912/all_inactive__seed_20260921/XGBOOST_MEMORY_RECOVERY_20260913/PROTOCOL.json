@@ -74,8 +74,7 @@
       "XGBoost",
       "NeuralNetTorch",
       "LightGBMLarge"
-    ],
-    "B_XGBoost_numeric_transport": "dense_zero_as_nan_v1"
+    ]
   },
   "stopping": "Native early stopping or native fixed iteration/forest budgets, no overall wallclock cutoff; record actual fitted hyperparameters, do not assert universal convergence",
   "completeness": "All 11 default binary base learners and WeightedEnsemble must fit; any skipped/failed learner is INCOMPLETE, not a passed suite",
@@ -148,23 +147,6 @@
       },
       "seed_note": "Initialize process RNG to the suite seed; native per-model seed rules remain. Independent native models fit on the identical cached inner split; no bitwise equivalence to uninterrupted monolithic execution is claimed.",
       "tests": "Native small-data fit/save/load/fit_extra: exact internal member labels, prior model bytes and predictions unchanged; no missing or renamed learner allowed"
-    },
-    {
-      "utc": "2026-09-13T14:08:43.081697+00:00",
-      "kind": "NUMERIC_XGBOOST_INPUT_TRANSPORT_ONLY",
-      "reason": "Full-B native CSR route exceeded actual 78 GiB RSS guard before first logged iteration",
-      "implementation": "NumericDenseXGBoostModel wraps native XGBoostModel; dense float32 input, original CSR implicit zeros encoded as NaN in both fit and inference; reject non-float32 inputs",
-      "learning_parameters": "Same native XGBoost objective, tree method, estimator budget, seed behavior, early stopping and 20 CPU threads; no label/member/feature-dimension reduction",
-      "preserved": "Seven completed B base learners plus completed A suite; common validation choices and TEST gate unchanged",
-      "probe_profile": "outputs/biomaster_dtiam_ab_20260912/XGBOOST_DENSE_RESOURCE_PROFILE_20260913.json",
-      "profile_sha256": "570fc20e9b11cea6938c3bf97d6423edaa913c3a0428ec823466fca4f0778cf0",
-      "full_B_probe_peak_RSS_GiB": 30.437686920166016,
-      "real_sample_probability_max_difference": 0.0,
-      "probability_tolerance": 2e-07,
-      "limitation": "Representation semantics and tested outputs agree; not a claim of bitwise equivalence for every full-data tree or convergence under a two-round probe",
-      "actual_RSS_guard_GiB": 78,
-      "core_soft_budget_GiB": 84,
-      "tests_passed": 5
     }
   ]
 }

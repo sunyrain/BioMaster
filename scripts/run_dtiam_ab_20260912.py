@@ -78,6 +78,8 @@ def main():
                     cfg=json.loads((OUT/'PROTOCOL.json').read_text())['fit']
                     isolated=[str(AGPY),'-u','scripts/train_dtiam_isolated_core_20260913.py','--seed',str(seed)]
                     for model in cfg['isolated_B_core_model_order']:
+                        if model=='XGBoost' and cfg.get('B_XGBoost_numeric_transport')=='dense_zero_as_nan_v1' and not (OUT/'XGBOOST_DENSE_RESOURCE_PROFILE_20260913.json').exists():
+                            command([str(AGPY),'-u','scripts/profile_dtiam_dense_xgboost_20260913.py','--seed',str(seed)],OUT/'XGBOOST_DENSE_RESOURCE_PROFILE_20260913.log')
                         command(isolated+['--model',model],run/f'CORE_{model}.log')
                     command(isolated+['--finalize'],run/'CORE_FINALIZE.log')
                 else:

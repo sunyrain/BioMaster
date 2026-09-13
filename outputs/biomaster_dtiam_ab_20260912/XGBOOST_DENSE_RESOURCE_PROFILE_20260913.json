@@ -1,0 +1,20 @@
+{
+  "status": "PASS_FULL_B_TWO_ROUNDS_ONLY",
+  "utc": "2026-09-13T14:04:37.302438+00:00",
+  "seed": 20260921,
+  "train_rows": 1105107,
+  "inner_validation_rows": 11163,
+  "features": 2048,
+  "peak_RSS_GiB": 30.437686920166016,
+  "seconds": 147.08737936802208,
+  "probe_rounds": 2,
+  "formal_learning_budget_unchanged": 10000,
+  "real_sample_max_probability_difference": 0.0,
+  "native_save_load_parity": true,
+  "save_load_max_probability_difference": 0.0,
+  "probability_tolerance": 2e-07,
+  "adapter_sha256": "73c3ba977c3cacc760b7247a392f361450130aaeb83b54094f6a5f9a8a4f2836",
+  "formal_models_modified": false,
+  "common_validation_inference": false,
+  "test_inference": false
+}

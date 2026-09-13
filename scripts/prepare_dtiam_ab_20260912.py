@@ -72,6 +72,7 @@ def main():
             core_raise_on_model_failure=True,
             isolated_B_core_model_order=['LightGBMXT','LightGBM','RandomForestGini','RandomForestEntr',
                 'CatBoost','ExtraTreesGini','ExtraTreesEntr','XGBoost','NeuralNetTorch','LightGBMLarge'],
+            B_XGBoost_numeric_transport='dense_zero_as_nan_v1',
             process_stages='Native core learners, fresh-process FASTAI, then native weighted ensemble over all 11 learners',
             fastai_resource_only_override={'ag.max_memory_usage_ratio':2},
             resource_gate='Full-B native preprocessing + loader must peak <=72 GiB; monitor actual child RSS <=78 GiB',
@@ -107,7 +108,8 @@ def main():
         ROOT/'outputs/biomaster_model_decision_audit_20260911/WETLAB112_TARGET_BENCHMARK.csv',
         ROOT/'outputs/biomaster_old_production_comparison_20260911/TEST_PREDICTIONS.parquet',
         ROOT/'outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet']
-    code=list((ROOT/'scripts').glob('*dtiam_ab*20260912.py'))+[ROOT/'scripts/train_dtiam_isolated_core_20260913.py']
+    code=list((ROOT/'scripts').glob('*dtiam_ab*20260912.py'))+[ROOT/'scripts'/n for n in
+        ['train_dtiam_isolated_core_20260913.py','dtiam_numeric_xgboost_20260913.py','profile_dtiam_dense_xgboost_20260913.py']]
     write_json(OUT/'DATA_MANIFEST.json',dict(created_utc=now(),inputs={str(p.relative_to(ROOT)):digest(p) for p in inputs},
         code={str(p.relative_to(ROOT)):digest(p) for p in code},frozen_inputs=frozen,protocol_sha256=digest(protocol_path)))
     print(json.dumps(dict(status='FROZEN',counts=counts,required_drugs=len(drugs),required_targets=len(targets),

@@ -374,3 +374,5 @@ Thumbs.db
 !/scripts/report_dtiam_ab_20260912.py
 !/scripts/report_dtiam_interim_20260913.py
 !/scripts/train_dtiam_isolated_core_20260913.py
+!/scripts/dtiam_numeric_xgboost_20260913.py
+!/scripts/profile_dtiam_dense_xgboost_20260913.py

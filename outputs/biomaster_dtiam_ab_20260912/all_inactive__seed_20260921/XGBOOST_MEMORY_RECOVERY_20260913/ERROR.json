@@ -1,0 +1,5 @@
+{
+  "utc": "2026-09-13T11:55:23.858764+00:00",
+  "error": "RuntimeError('Actual training RSS exceeded 78 GiB; run preserved for resource adjustment')",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 108, in <module>\n    main()\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 81, in main\n    command(isolated+['--model',model],run/f'CORE_{model}.log')\n  File \"/root/autodl-tmp/BioMaster/scripts/run_dtiam_ab_20260912.py\", line 34, in command\n    raise RuntimeError('Actual training RSS exceeded 78 GiB; run preserved for resource adjustment')\nRuntimeError: Actual training RSS exceeded 78 GiB; run preserved for resource adjustment\n"
+}
