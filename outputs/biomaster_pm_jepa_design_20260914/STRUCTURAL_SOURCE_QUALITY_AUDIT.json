@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-09-14T05:16:49.125118+00:00",
+  "identity_join": "system_id AND exact ligand_rdkit_canonical_smiles; one-to-one",
+  "splits": {
+    "train": {
+      "systems": 9903,
+      "cofactor_true": 4525,
+      "cofactor_false": 5378,
+      "cofactor_unknown": 0,
+      "determination_methods": {
+        "X-RAY DIFFRACTION": 9903
+      },
+      "unverified_source_has_affinity_true": 2990
+    },
+    "validation": {
+      "systems": 1223,
+      "cofactor_true": 191,
+      "cofactor_false": 1032,
+      "cofactor_unknown": 0,
+      "determination_methods": {
+        "X-RAY DIFFRACTION": 1223
+      },
+      "unverified_source_has_affinity_true": 297
+    }
+  },
+  "limitations": [
+    "Cofactor annotation is from the source; non-cofactor does not certify approved drug, human target or wild type.",
+    "Systems are not independent affinities; structural contact labels are derived from coordinates.",
+    "Upstream README reports entry_release_date corrections and disabled ligand_binding_affinity queries after BindingDB parsing bugs.",
+    "Historical <=2020 subset used raw metadata dates; temporal cutoff needs verification before reuse.",
+    "No affinity values imported, no training or changes to existing splits."
+  ],
+  "upstream_notice": "https://github.com/plinder-org/plinder#-plinder-versions"
+}

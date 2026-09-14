@@ -88,6 +88,28 @@ def audit_structures():
     return result
 
 
+def audit_structural_quality():
+    base = ROOT / 'outputs/biomaster_pocket_precision_20260906/structural_data'
+    admitted = pq(base / 'training_2020/ADMITTED.parquet')
+    selected = pq(base / 'complexes_2020/SELECTED.parquet', columns=['system_id', 'ligand_rdkit_canonical_smiles'])
+    columns = ['system_id', 'ligand_rdkit_canonical_smiles', 'ligand_is_cofactor', 'entry_determination_method', 'system_has_binding_affinity']
+    raw = pq(base / 'annotation_table.parquet', columns=columns)
+    raw = raw[raw.system_id.isin(admitted.system_id)]
+    keys = ['system_id', 'ligand_rdkit_canonical_smiles']
+    raw = raw[pd.MultiIndex.from_frame(raw[keys]).isin(pd.MultiIndex.from_frame(selected[keys]))]
+    joined = admitted.merge(selected, on='system_id', validate='one_to_one').merge(raw, on=['system_id', 'ligand_rdkit_canonical_smiles'], how='left', validate='one_to_one', indicator=True)
+    assert joined['_merge'].eq('both').all()
+    result = {'created_utc': datetime.now(timezone.utc).isoformat(), 'identity_join': 'system_id AND exact ligand_rdkit_canonical_smiles; one-to-one', 'splits': {}}
+    for split, group in joined.groupby('split'):
+        flags = group.ligand_is_cofactor.astype(str).str.lower()
+        result['splits'][split] = {'systems': len(group), 'cofactor_true': int(flags.eq('true').sum()), 'cofactor_false': int(flags.eq('false').sum()), 'cofactor_unknown': int((~flags.isin(['true', 'false'])).sum()), 'determination_methods': group.entry_determination_method.value_counts().to_dict(), 'unverified_source_has_affinity_true': int(truth(group.system_has_binding_affinity).sum())}
+    result['limitations'] = ['Cofactor annotation is from the source; non-cofactor does not certify approved drug, human target or wild type.', 'Systems are not independent affinities; structural contact labels are derived from coordinates.', 'Upstream README reports entry_release_date corrections and disabled ligand_binding_affinity queries after BindingDB parsing bugs.', 'Historical <=2020 subset used raw metadata dates; temporal cutoff needs verification before reuse.', 'No affinity values imported, no training or changes to existing splits.']
+    result['upstream_notice'] = 'https://github.com/plinder-org/plinder#-plinder-versions'
+    OUT.mkdir(exist_ok=True, parents=True)
+    (OUT / 'STRUCTURAL_SOURCE_QUALITY_AUDIT.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    return result
+
+
 def main():
     OUT.mkdir(exist_ok=True, parents=True)
     molecules = pq(DATA / 'MOLECULES.parquet', columns=['drug_feature_index', 'molecule_id', 'smiles'])
@@ -181,7 +203,9 @@ def main():
 
 
 if __name__=='__main__':
-    if '--structure-only' in sys.argv:
+    if '--structural-quality-only' in sys.argv:
+        print(json.dumps(audit_structural_quality(), indent=2))
+    elif '--structure-only' in sys.argv:
         print(json.dumps(audit_structures(), indent=2))
     else:
         main()
