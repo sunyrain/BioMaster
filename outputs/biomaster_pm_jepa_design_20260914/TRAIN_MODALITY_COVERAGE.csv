@@ -1,0 +1,3 @@
+arm,pairs,molecules,targets,positives,explicit_inactive,basic_embeddings_complete_pairs,drugclip_available_pairs,esm2_truncated_pairs,residue_token_target_pairs,template_pocket_target_pairs,template_pocket_pass_target_pairs,existing_ligand_graph_pairs,existing_both_graph_pairs,existing_both_graph_pass_pairs
+kdki_inactive,337570,140064,2290,188799,105368,337570,331227,44111,216129,98242,96664,129634,38371,37854
+all_inactive,1116270,690439,3647,769395,105368,1116270,1099941,237739,717627,486230,466499,203468,91534,87807

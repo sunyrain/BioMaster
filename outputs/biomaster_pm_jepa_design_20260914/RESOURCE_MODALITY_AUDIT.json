@@ -1,0 +1,332 @@
+{
+  "created_utc": "2026-09-14T05:01:23.625797+00:00",
+  "coverage": [
+    {
+      "arm": "kdki_inactive",
+      "pairs": 337570,
+      "molecules": 140064,
+      "targets": 2290,
+      "positives": 188799,
+      "explicit_inactive": 105368,
+      "basic_embeddings_complete_pairs": 337570,
+      "drugclip_available_pairs": 331227,
+      "esm2_truncated_pairs": 44111,
+      "residue_token_target_pairs": 216129,
+      "template_pocket_target_pairs": 98242,
+      "template_pocket_pass_target_pairs": 96664,
+      "existing_ligand_graph_pairs": 129634,
+      "existing_both_graph_pairs": 38371,
+      "existing_both_graph_pass_pairs": 37854
+    },
+    {
+      "arm": "all_inactive",
+      "pairs": 1116270,
+      "molecules": 690439,
+      "targets": 3647,
+      "positives": 769395,
+      "explicit_inactive": 105368,
+      "basic_embeddings_complete_pairs": 1116270,
+      "drugclip_available_pairs": 1099941,
+      "esm2_truncated_pairs": 237739,
+      "residue_token_target_pairs": 717627,
+      "template_pocket_target_pairs": 486230,
+      "template_pocket_pass_target_pairs": 466499,
+      "existing_ligand_graph_pairs": 203468,
+      "existing_both_graph_pairs": 91534,
+      "existing_both_graph_pass_pairs": 87807
+    }
+  ],
+  "regression": {
+    "kdki_inactive": {
+      "rows": 192469,
+      "unique_pairs": 191189,
+      "endpoint_counts": {
+        "Ki": 171809,
+        "Kd": 20660
+      },
+      "pairs_with_at_least_2_endpoints": 1280,
+      "assay_rows": 150591,
+      "assay_groups": 8512
+    },
+    "all_inactive": {
+      "rows": 799246,
+      "unique_pairs": 766314,
+      "endpoint_counts": {
+        "IC50": 530921,
+        "Ki": 172012,
+        "EC50": 75564,
+        "Kd": 20749
+      },
+      "pairs_with_at_least_2_endpoints": 31852,
+      "assay_rows": 639511,
+      "assay_groups": 28855
+    }
+  },
+  "boltz": [
+    {
+      "source": "outputs/boltz2_calibration_338_v1/evaluation/BOLTZ2_CALIBRATION_PAIR_EVIDENCE_V1.csv.gz",
+      "rows": 16992,
+      "completed": 16982,
+      "cif_files_present": 16982,
+      "confidence_files_present": 16982,
+      "affinity_files_present": 16982,
+      "unique_project_pair_ids": 16982,
+      "mapped_pairs_current_registry": 16884,
+      "kdki_inactive_overlap": 7923,
+      "all_inactive_overlap": 13035
+    },
+    {
+      "source": "outputs/boltz2_discovery_conditional_v1/evaluation/BOLTZ2_CONDITIONAL_DISCOVERY_EVIDENCE_V1.csv.gz",
+      "rows": 14488,
+      "completed": 14468,
+      "cif_files_present": 14468,
+      "confidence_files_present": 14468,
+      "affinity_files_present": 14468,
+      "unique_project_pair_ids": 14468,
+      "mapped_pairs_current_registry": 11165,
+      "kdki_inactive_overlap": 40,
+      "all_inactive_overlap": 44,
+      "historical_tier_counts": {
+        "OUT_OF_DOMAIN_EXPLORATORY": 7206,
+        "BOLTZ_BELOW_TARGET_BACKGROUND": 6675,
+        "BOLTZ_STRUCTURE_A": 394,
+        "BOLTZ_STRUCTURE_C": 145,
+        "BOLTZ_STRUCTURE_B": 48,
+        "TECHNICAL_INCOMPLETE": 20
+      }
+    }
+  ],
+  "lincs": {
+    "compound_metadata_rows": 39321,
+    "unique_inchikeys": 21869,
+    "gctx_matrix_shape": [
+      720216,
+      12328
+    ],
+    "raw_bytes": 35518405386,
+    "match_policy": "exact supplied full InChIKey; no connectivity/tautomer expansion; overlap of compound metadata, not QC-passed signatures",
+    "kdki_inactive_molecules": 1315,
+    "kdki_inactive_pairs_with_molecule_metadata": 55733,
+    "all_inactive_molecules": 2372,
+    "all_inactive_pairs_with_molecule_metadata": 63101
+  },
+  "hiqbind": {
+    "metadata_rows": 31572,
+    "unique_pdbs": 17725,
+    "endpoint_rows": {
+      "ic50": 11592,
+      "ki": 9891,
+      "kd": 9653,
+      "ec50": 436
+    },
+    "full_structure_bundle_local": false,
+    "exact_pair_training_overlap": "not_certified: metadata has UniProt IDs but no construct sequences"
+  },
+  "cache_specs": {
+    "outputs/biomaster_dtiam_ab_20260912/features/BERMOL.npy": {
+      "shape": [
+        996696,
+        768
+      ],
+      "dtype": "float32",
+      "bytes": 3061850112
+    },
+    "outputs/biomaster_dtiam_ab_20260912/features/ESM2.npy": {
+      "shape": [
+        5086,
+        1280
+      ],
+      "dtype": "float32",
+      "bytes": 26040320
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/DRUG_CLIP.npy": {
+      "shape": [
+        996696,
+        512
+      ],
+      "dtype": "float32",
+      "bytes": 2041233408
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/GRAPH.npy": {
+      "shape": [
+        996696,
+        40
+      ],
+      "dtype": "float32",
+      "bytes": 159471360
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/MORGAN.npy": {
+      "shape": [
+        996696,
+        2048
+      ],
+      "dtype": "uint8",
+      "bytes": 2041233408
+    }
+  },
+  "resources": {
+    "cpu.max": "2000000 100000",
+    "memory.max": "96636764160",
+    "memory.current": "41710346240",
+    "cpuset.cpus.effective": "0-207",
+    "gpu": "NVIDIA GeForce RTX 4090, 49140 MiB, 0 MiB, 0 %",
+    "/_free_bytes": 11429109760,
+    "/root/autodl-tmp/BioMaster_free_bytes": 68662194176
+  },
+  "token_index_rows": 813,
+  "token_shape": [
+    483934,
+    1280
+  ],
+  "existing_template_pocket_graphs": 326,
+  "existing_template_redock_pass_graphs": 307,
+  "notes": [
+    "Counts refer to TRAIN only; no held-out labels loaded.",
+    "Old ligand-graph overlap uses exact canonical SMILES text and is a conservative count.",
+    "Boltz overlap matches curated molecule identity and protocol canonical protein SHA256; actual modeled fragment/mutations/pose quality still require audit.",
+    "Completed Boltz scores and CIF files do not establish a cached latent representation or experimental binding.",
+    "Template pockets concern reference ligands, not candidate drug poses.",
+    "LINCS signature count is not unique compounds, and drug-cell response is not pair-specific affinity.",
+    "Array allocation size is not the number of available entities.",
+    "This script performs an inventory, not training or a speed benchmark."
+  ],
+  "source_files": {
+    "data/processed/biomaster_training_full_20260910_v1/MOLECULES.parquet": {
+      "bytes": 84650303,
+      "mtime_ns": 1789057879561301933
+    },
+    "data/processed/biomaster_training_full_20260910_v1/TARGETS.parquet": {
+      "bytes": 2262766,
+      "mtime_ns": 1789057879573301598
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": {
+      "bytes": 11988906,
+      "mtime_ns": 1789059474168826841
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": {
+      "bytes": 55952815,
+      "mtime_ns": 1789059482380654710
+    },
+    "outputs/old_drug_target_sota_v1/feature_store_v1/TARGET_FEATURE_INDEX_V1.csv.gz": {
+      "bytes": 188308,
+      "mtime_ns": 1786611527413506537
+    },
+    "outputs/biomaster_bindingdb_affinity_feature_package_v1/BINDINGDB_NEW_TARGET_FEATURE_INDEX_V1.csv.gz": {
+      "bytes": 111233,
+      "mtime_ns": 1787073457382376200
+    },
+    "outputs/biomaster_bindingdb_target_token_feature_package_v1/ESM2_650M_RESIDUE_INDEX_COMBINED_V1.csv.gz": {
+      "bytes": 23856,
+      "mtime_ns": 1787073704892014977
+    },
+    "outputs/biomaster_bindingdb_target_token_feature_package_v1/ESM2_650M_RESIDUE_FLOAT16_COMBINED_V1.npy": {
+      "bytes": 1238871168,
+      "mtime_ns": 1787073704600017546
+    },
+    "outputs/biomaster_odti_experimental_template_graph_features_v1/POCKET_GRAPH_INDEX_V1.csv.gz": {
+      "bytes": 12052,
+      "mtime_ns": 1787325065302902956
+    },
+    "outputs/old_drug_target_sota_v1/feature_store_v1/DRUG_FEATURE_INDEX_V1.csv.gz": {
+      "bytes": 962413,
+      "mtime_ns": 1786611527393505456
+    },
+    "outputs/biomaster_odti_experimental_template_graph_features_v1/LIGAND_GRAPH_INDEX_V1.csv.gz": {
+      "bytes": 672228,
+      "mtime_ns": 1787115276233302719
+    },
+    "outputs/biomaster_odti_experimental_template_graph_features_v1/LIGAND_ATOM_FEATURES_FLOAT16_V1.npy": {
+      "bytes": 127270144,
+      "mtime_ns": 1787115275841305604
+    },
+    "outputs/biomaster_odti_experimental_template_graph_features_v1/POCKET_ESM2_RESIDUE_FLOAT16_V1.npy": {
+      "bytes": 41259648,
+      "mtime_ns": 1787325065294902796
+    },
+    "outputs/biomaster_odti_experimental_template_graph_features_v1/POCKET_RESIDUE_AUX_FLOAT16_V1.npy": {
+      "bytes": 1515126,
+      "mtime_ns": 1787325065294902796
+    },
+    "outputs/biomaster_odti_experimental_template_graph_features_v1/POCKET_CA_COORD_FLOAT32_V1.npy": {
+      "bytes": 193532,
+      "mtime_ns": 1787325065294902796
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/AVAILABLE.npy": {
+      "bytes": 996824,
+      "mtime_ns": 1789061592906380132
+    },
+    "outputs/biomaster_dtiam_ab_20260912/features/BERMOL_DONE.npy": {
+      "bytes": 996824,
+      "mtime_ns": 1789147217987003033
+    },
+    "outputs/biomaster_dtiam_ab_20260912/features/ESM2_DONE.npy": {
+      "bytes": 5214,
+      "mtime_ns": 1789147380601153567
+    },
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive_TRAIN_REGRESSION.parquet": {
+      "bytes": 9904636,
+      "mtime_ns": 1789095644936017215
+    },
+    "outputs/biomaster_assay_aware_20260911/kdki_inactive_ASSAY_TRAIN.parquet": {
+      "bytes": 5564744,
+      "mtime_ns": 1789111924820426747
+    },
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive_TRAIN_REGRESSION.parquet": {
+      "bytes": 48323419,
+      "mtime_ns": 1789095658854805107
+    },
+    "outputs/biomaster_assay_aware_20260911/all_inactive_ASSAY_TRAIN.parquet": {
+      "bytes": 25362078,
+      "mtime_ns": 1789112010214323740
+    },
+    "outputs/boltz2_calibration_338_v1/evaluation/BOLTZ2_CALIBRATION_PAIR_EVIDENCE_V1.csv.gz": {
+      "bytes": 4294354,
+      "mtime_ns": 1785951696323189797
+    },
+    "outputs/boltz2_discovery_conditional_v1/evaluation/BOLTZ2_CONDITIONAL_DISCOVERY_EVIDENCE_V1.csv.gz": {
+      "bytes": 6589517,
+      "mtime_ns": 1785984318799090189
+    },
+    "data/external/lincs_cmap/compoundinfo_beta.txt": {
+      "bytes": 4631014,
+      "mtime_ns": 1611874010000000000
+    },
+    "data/external/lincs_cmap/level5_beta_trt_cp_n720216x12328.gctx": {
+      "bytes": 35518405386,
+      "mtime_ns": 1608162849000000000
+    },
+    "outputs/recent_affinity_sources_20260910/hiqbind_sm_metadata.csv": {
+      "bytes": 8309849,
+      "mtime_ns": 1789007827072424631
+    },
+    "outputs/biomaster_dtiam_ab_20260912/features/BERMOL.npy": {
+      "bytes": 3061850240,
+      "mtime_ns": 1789147217983003077
+    },
+    "outputs/biomaster_dtiam_ab_20260912/features/ESM2.npy": {
+      "bytes": 26040448,
+      "mtime_ns": 1789147380601153567
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/DRUG_CLIP.npy": {
+      "bytes": 2041233536,
+      "mtime_ns": 1789061592906380132
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/GRAPH.npy": {
+      "bytes": 159471488,
+      "mtime_ns": 1789061591074380151
+    },
+    "outputs/biomaster_endpoint_ablation_20260911/features/MORGAN.npy": {
+      "bytes": 2041233536,
+      "mtime_ns": 1789061591074380151
+    }
+  },
+  "boltz_union_training_overlap": {
+    "kdki_inactive": 7963,
+    "all_inactive": 13079
+  },
+  "storage_arithmetic": {
+    "B_512d_fp16_latents_GiB": 1.0645580291748047,
+    "all_registry_full_length_1280d_fp16_residue_tokens_GiB": 7.624475955963135,
+    "note": "Theoretical tensor bytes only, excluding indices, activations, optimizer and checkpoints; not a measured runtime."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source": "PLINDER official 2024-06/v2; existing project <=2020 structural branch",
+  "splits": {
+    "train": {
+      "systems": 9903,
+      "clusters": 489,
+      "largest_cluster_systems": 5279,
+      "mapped_pickle_present": 9903,
+      "native_encoded_present": 0,
+      "global_context_present": 9903,
+      "predicted_encoded_present": 0
+    },
+    "validation": {
+      "systems": 1223,
+      "clusters": 162,
+      "largest_cluster_systems": 144,
+      "mapped_pickle_present": 1223,
+      "native_encoded_present": 0,
+      "global_context_present": 1223,
+      "predicted_encoded_present": 0
+    }
+  },
+  "checkpoint": {
+    "path": "outputs/biomaster_pocket_precision_20260906/structural_pretraining/cutoff_2020/seed_20260921/STRUCTURAL_PRETRAINED.pt",
+    "exists": true,
+    "bytes": 134792539
+  },
+  "caveats": [
+    "Native and predicted encoded feature caches were cleaned; regenerate before training.",
+    "Mapped experimental contact/distance data and pooled inputs retained.",
+    "Original structural train split excluded old project identities; overlap with new A/B split is not certified.",
+    "Structural pretrained readout is not validated as a stronger affinity teacher."
+  ]
+}
