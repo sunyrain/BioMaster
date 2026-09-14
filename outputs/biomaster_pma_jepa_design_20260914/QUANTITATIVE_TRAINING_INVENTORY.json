@@ -1,0 +1,19 @@
+{
+  "status": "DESIGN_INVENTORY_NOT_A_TRAINING_RUN",
+  "source": "data/processed/biomaster_training_full_20260910_v1/TRAIN_REGRESSION.parquet",
+  "source_sha256": "f0be8cc958703155ef83ebe974755bcef746706acc6d1ee025250f7168b7d20b",
+  "all_rows": 980065,
+  "all_unique_pairs": 943483,
+  "kdki_rows": 230040,
+  "kdki_unique_pairs": 228686,
+  "endpoint_counts": {
+    "EC50": 95381,
+    "IC50": 654644,
+    "Kd": 26984,
+    "Ki": 203056
+  },
+  "all_regression_eligible": true,
+  "all_train": true,
+  "all_p_activity_finite": true,
+  "note": "One aggregated pair-endpoint target per row, not an independent experiment. Censored and annotation-only observations are additional views, not extra exact affinity values. Full eligibility and leakage checks must be revalidated before any new run."
+}
