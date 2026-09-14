@@ -1,0 +1,26 @@
+[
+  {
+    "arm": "kdki_inactive",
+    "training_pairs": 337570,
+    "molecules": 140064,
+    "targets": 2290,
+    "molecule_degree_median": 1.0,
+    "molecules_at_least_2_targets": 47041,
+    "fraction_molecules_at_least_2_targets": 0.335853609778387,
+    "molecules_with_both_measured_classes": 8211,
+    "targets_with_both_measured_classes": 1362,
+    "fraction_pairs_from_molecules_at_least_2_targets": 0.7244334508398258
+  },
+  {
+    "arm": "all_inactive",
+    "training_pairs": 1116270,
+    "molecules": 690439,
+    "targets": 3647,
+    "molecule_degree_median": 1.0,
+    "molecules_at_least_2_targets": 181182,
+    "fraction_molecules_at_least_2_targets": 0.2624156514912976,
+    "molecules_with_both_measured_classes": 48036,
+    "targets_with_both_measured_classes": 2288,
+    "fraction_pairs_from_molecules_at_least_2_targets": 0.5437868974352084
+  }
+]
