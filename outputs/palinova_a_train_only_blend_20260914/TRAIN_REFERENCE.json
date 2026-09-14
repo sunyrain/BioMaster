@@ -1,0 +1,9 @@
+{
+  "pairs": 337570,
+  "positive": 188799,
+  "negative": 148771,
+  "targets": 2290,
+  "positive_pool_targets": 1794,
+  "global_prior": 0.5592884438783067,
+  "fingerprint_reference": "Unmodified training feature cache; hash declared in feature manifest"
+}

@@ -1,0 +1,86 @@
+{
+  "CATALOG_BLEND_COMPONENTS_AND_RANKS.parquet": {
+    "bytes": 12090731,
+    "sha256": "a09d3cab7c959963c97335bf4db3b0552694600adae14f963a5a1530617c9245"
+  },
+  "COMMON_TEST_BLEND_PREDICTIONS.parquet": {
+    "bytes": 4390638,
+    "sha256": "37e5b4e970c5d08e2a19f742e7dc557c6ebfcb87c6c025f7b9ab89a3494f2e68"
+  },
+  "FROZEN384_BLEND_RANK_DIAGNOSTIC.csv": {
+    "bytes": 66484,
+    "sha256": "0f04f618e271302b65a1c1674928afdb3a51ad56c1438119ba703189e28b2a93"
+  },
+  "FROZEN384_SUPPORT_DIAGNOSTIC.csv": {
+    "bytes": 81025,
+    "sha256": "c762ef47c7a6f07d0686c34c76e32622dd9f36ebe76b565766afaae45f754fcc"
+  },
+  "FROZEN384_SUPPORT_SUMMARY.csv": {
+    "bytes": 162,
+    "sha256": "aa91b009da9ee1a9ff05fc3166dc6e1e16882958ca47a17d8849271a420f269f"
+  },
+  "METRICS.csv": {
+    "bytes": 18774,
+    "sha256": "40280a65f223b2cdd419b6fcd1006e233af841b17ad3a2cb5f9fe88a1651c346"
+  },
+  "PAIRED_INTERVALS.csv": {
+    "bytes": 6323,
+    "sha256": "f3285323fbd90e6d740f3ce9d40acbb1a63c03576cb7c268cfb5c9e94ed29736"
+  },
+  "PREVIOUS_PANEL_BLEND_PREDICTIONS.csv.gz": {
+    "bytes": 665133,
+    "sha256": "91125c93c9cb065190a855672fd156f2f36b6a567e174545797c1eea08b07806"
+  },
+  "PROTOCOL.json": {
+    "bytes": 7996,
+    "sha256": "c2261f5e1a7b28e726f16c313383d597acbf113dd9ca8c9903930ce37f0df1af"
+  },
+  "QUERY_METRICS.csv.gz": {
+    "bytes": 660698,
+    "sha256": "456e3855548f5d3351ce162b870302f31e754a9cb4318860451ca997387e8267"
+  },
+  "README.md": {
+    "bytes": 2538,
+    "sha256": "16453dffd24ceb3a6f52b78f4da98265668e5fcfbe133c8d6702afaa0055d861"
+  },
+  "SELECTION.json": {
+    "bytes": 5240,
+    "sha256": "56138284e59c7a7ba1ba43bc3703deb23f5137194c6298c8d06cbd669398994c"
+  },
+  "STATUS.json": {
+    "bytes": 716,
+    "sha256": "4a871eb6c598c70a13f7312b3a1ffe0f52654adb93d821a2781949806f91f9df"
+  },
+  "SUMMARY.json": {
+    "bytes": 66953,
+    "sha256": "d238ff75017160391d8b49e582d836e63b56805153ba3f6906ca05f0f36865b7"
+  },
+  "SUPPORT_DIAGNOSTIC.json": {
+    "bytes": 1458,
+    "sha256": "49506660de4c7509e73ff00a1ceafaafdd84689bf35b0b0335b36e451403dc6e"
+  },
+  "SUPPORT_STRATIFIED_DIAGNOSTIC.csv": {
+    "bytes": 3913,
+    "sha256": "b80471e1fdc4cf62507f13afdf75cfedf315d01c3606044312c1dbd301c8f7bd"
+  },
+  "TRAIN_REFERENCE.json": {
+    "bytes": 255,
+    "sha256": "1c02ed53caf1bc1538b67d6722d77f84234e62495249dd29be6af0862e497bc2"
+  },
+  "TRAIN_TARGET_PRIORS.csv": {
+    "bytes": 214619,
+    "sha256": "1f8c059c84dc28d512d1fb9bbab8ff0818ec8af379ccd02175fef1890115e63a"
+  },
+  "VALIDATION_BLEND_SCORES.parquet": {
+    "bytes": 3663597,
+    "sha256": "95ccfe73b56510712091a16fbf73302a62c5477e116c0a559036e650480b2541"
+  },
+  "VALIDATION_NEURAL_SCORES.parquet": {
+    "bytes": 14963718,
+    "sha256": "688c92e47f79de316056f7f6d7c3d45514d48a7c9af28733efbe62216ca58aa2"
+  },
+  "VALIDATION_WEIGHT_SEARCH.csv": {
+    "bytes": 7707,
+    "sha256": "55981a5cd8fef408aec771ddfa77ba875bfed0fdb7ef29d55a155a721cef7c65"
+  }
+}

@@ -1,0 +1,4 @@
+group,pairs,A_top20,A_neighbor_top20,A_blend_top20
+neighbor_ge_0.3,53,11,40,43
+no_train_positive_target,29,0,0,0
+positive_target_but_neighbor_lt_0.3,302,25,56,57

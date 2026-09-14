@@ -1,0 +1,44 @@
+{
+  "stage": "COMPLETE",
+  "utc": "2026-09-14T15:56:14.981683+00:00",
+  "selected_weights": {
+    "A_neural": [
+      0.0,
+      0.0
+    ],
+    "A_plus_neighbor": [
+      2.0,
+      0.0
+    ],
+    "A_plus_prior": [
+      0.0,
+      0.125
+    ],
+    "A_joint_blend": [
+      2.5,
+      0.25
+    ]
+  },
+  "original384_rank_diagnostic": {
+    "A_neural": {
+      "top10": 18,
+      "top20": 36,
+      "median_rank": 134.5
+    },
+    "A_plus_neighbor": {
+      "top10": 72,
+      "top20": 96,
+      "median_rank": 74.5
+    },
+    "A_plus_prior": {
+      "top10": 19,
+      "top20": 38,
+      "median_rank": 124.0
+    },
+    "A_joint_blend": {
+      "top10": 68,
+      "top20": 100,
+      "median_rank": 73.0
+    }
+  }
+}

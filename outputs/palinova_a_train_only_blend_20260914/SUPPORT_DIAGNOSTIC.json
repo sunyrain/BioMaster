@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE_POST_HOC_DIAGNOSTIC",
+  "selection_sha256": "56138284e59c7a7ba1ba43bc3703deb23f5137194c6298c8d06cbd669398994c",
+  "source_sha256": {
+    "COMMON_TEST_BLEND_PREDICTIONS.parquet": "37e5b4e970c5d08e2a19f742e7dc557c6ebfcb87c6c025f7b9ab89a3494f2e68",
+    "FROZEN384_BLEND_RANK_DIAGNOSTIC.csv": "0f04f618e271302b65a1c1674928afdb3a51ad56c1438119ba703189e28b2a93",
+    "audit_palinova_blend_support_20260914.py": "b7b8a8c169b626ee03c4424969f9fb3d162a137a0d848f8acc05ef57e6916a9c"
+  },
+  "stratum_rule": "0.3 is a post-hoc descriptive Tanimoto threshold, not a selected routing threshold; zero eligible pool is an exact training-support absence.",
+  "unchanged": [
+    "neural weights",
+    "reference pool",
+    "blend coefficients",
+    "calibration thresholds",
+    "original384"
+  ],
+  "caveat": "Support categories can differ in targets, molecules and assays; this is not causal attribution. No fallback gate was tuned on these results.",
+  "experimental_candidate_support": [
+    {
+      "group": "neighbor_ge_0.3",
+      "pairs": 53,
+      "A_top20": 11,
+      "A_neighbor_top20": 40,
+      "A_blend_top20": 43
+    },
+    {
+      "group": "no_train_positive_target",
+      "pairs": 29,
+      "A_top20": 0,
+      "A_neighbor_top20": 0,
+      "A_blend_top20": 0
+    },
+    {
+      "group": "positive_target_but_neighbor_lt_0.3",
+      "pairs": 302,
+      "A_top20": 25,
+      "A_neighbor_top20": 56,
+      "A_blend_top20": 57
+    }
+  ]
+}

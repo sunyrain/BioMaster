@@ -1,0 +1,122 @@
+{
+  "mean": [
+    5.359341270971387,
+    0.547161739469713,
+    0.6348553539800684
+  ],
+  "scale": [
+    8.174437158254685,
+    0.26719560931108766,
+    0.30128448667242336
+  ],
+  "choices": {
+    "A_neural": {
+      "neighbor_weight": 0.0,
+      "prior_weight": 0.0,
+      "robust_objective": 0.9136849421396802,
+      "fold_mean": 0.9268680487271628,
+      "fold_std": 0.013183106587482589,
+      "drug_macro_ap": 0.9266366039167538,
+      "fold_0_ap": 0.9184099438053169,
+      "fold_1_ap": 0.9428279330227218,
+      "fold_2_ap": 0.9141577889107376,
+      "fold_3_ap": 0.9430295602821236,
+      "fold_4_ap": 0.9159150176149142
+    },
+    "A_plus_neighbor": {
+      "neighbor_weight": 2.0,
+      "prior_weight": 0.0,
+      "robust_objective": 0.9358275634122218,
+      "fold_mean": 0.9463548229825202,
+      "fold_std": 0.010527259570298335,
+      "drug_macro_ap": 0.9463204188365457,
+      "fold_0_ap": 0.9296100044448313,
+      "fold_1_ap": 0.9551196466176808,
+      "fold_2_ap": 0.950311975808506,
+      "fold_3_ap": 0.9576709256760653,
+      "fold_4_ap": 0.9390615623655173
+    },
+    "A_plus_prior": {
+      "neighbor_weight": 0.0,
+      "prior_weight": 0.125,
+      "robust_objective": 0.918062633830869,
+      "fold_mean": 0.9285727326510503,
+      "fold_std": 0.01051009882018134,
+      "drug_macro_ap": 0.9284470043476921,
+      "fold_0_ap": 0.9210525426671714,
+      "fold_1_ap": 0.937424423227765,
+      "fold_2_ap": 0.9203186204262843,
+      "fold_3_ap": 0.9447877351481362,
+      "fold_4_ap": 0.919280341785895
+    },
+    "A_joint_blend": {
+      "neighbor_weight": 2.5,
+      "prior_weight": 0.25,
+      "robust_objective": 0.9378214359935477,
+      "fold_mean": 0.9503289436369885,
+      "fold_std": 0.012507507643440722,
+      "drug_macro_ap": 0.9503505878280409,
+      "fold_0_ap": 0.9286249694293796,
+      "fold_1_ap": 0.957852753818459,
+      "fold_2_ap": 0.9585802946812992,
+      "fold_3_ap": 0.9624818841638378,
+      "fold_4_ap": 0.9441048160919665
+    }
+  },
+  "validation_drug_queries": 1097,
+  "fold_query_counts": [
+    217,
+    208,
+    226,
+    222,
+    224
+  ],
+  "calibrations": {
+    "A_neural": {
+      "slope": 2.064619895250803,
+      "intercept": 1.2988367346001097,
+      "threshold": 0.600121130466758,
+      "validation_f1": 0.9098534201954398,
+      "fit_panel": "VALIDATION_KD_KI_ONLY"
+    },
+    "A_plus_neighbor": {
+      "slope": 0.8652189465613483,
+      "intercept": 1.5945340317062897,
+      "threshold": 0.535007913990976,
+      "validation_f1": 0.9226355159340096,
+      "fit_panel": "VALIDATION_KD_KI_ONLY"
+    },
+    "A_plus_prior": {
+      "slope": 2.0317915368401915,
+      "intercept": 1.3456901624755633,
+      "threshold": 0.6147050832540376,
+      "validation_f1": 0.9145253682487724,
+      "fit_panel": "VALIDATION_KD_KI_ONLY"
+    },
+    "A_joint_blend": {
+      "slope": 0.691129694688315,
+      "intercept": 1.583260944257045,
+      "threshold": 0.5331013942741756,
+      "validation_f1": 0.9218331047751602,
+      "fit_panel": "VALIDATION_KD_KI_ONLY"
+    }
+  },
+  "input_hashes": {
+    "scripts/evaluate_palinova_a_train_only_blend_20260914.py": "f1d3d81d52e01f7340fd0a13bec475e72a9baf4fe81352d0beb4b101b8151ec0",
+    "biomaster/train_only_blend.py": "9f55a5832b9ecbfd4fd28a2233f7ef719d79649f4c677f05c4211343253ee01f",
+    "outputs/biomaster_model_consolidation_20260911/RECOMMENDED_MODELS.json": "84c328ae8a08ee95f28e99203a33e54053ef1cf7b8719febb11003eb31b14129",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/model.pt": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c",
+    "outputs/palinova_ab_same_task_20260914/ALL_PANEL_PREDICTIONS_AND_OVERLAP.csv.gz": "ee88f5cbc94eceea3ffd9edbfce8f0834e97383a7e353cbbe3be58f62da0549a",
+    "outputs/palinova_ab_same_task_20260914/CORE720x384_RECOMMENDED_SCORES.parquet": "ca985a0ccdebd11403807635c8ab660c4794d7c33878c68c97875e1266580a67",
+    "outputs/palinova_ab_same_task_20260914/DRUG_INPUT_AUDIT.csv": "8eeae33745555356d265d1359820023239a6c316afa613554a227f9e31624325",
+    "outputs/palinova_ab_same_task_20260914/INPUT_drug_global.npy": "aa4228aac8fcc2c4066fb156b32e9c0784aeeb384041047e4264fe8914393aa6",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c"
+  },
+  "frozen_utc": "2026-09-14T15:55:05.806312+00:00"
+}

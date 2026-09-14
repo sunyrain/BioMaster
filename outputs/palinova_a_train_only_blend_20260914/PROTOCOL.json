@@ -1,0 +1,285 @@
+{
+  "status": "FROZEN_BEFORE_COMPONENT_BUILD_AND_WEIGHT_SELECTION",
+  "input_hashes": {
+    "scripts/evaluate_palinova_a_train_only_blend_20260914.py": "f1d3d81d52e01f7340fd0a13bec475e72a9baf4fe81352d0beb4b101b8151ec0",
+    "biomaster/train_only_blend.py": "9f55a5832b9ecbfd4fd28a2233f7ef719d79649f4c677f05c4211343253ee01f",
+    "outputs/biomaster_model_consolidation_20260911/RECOMMENDED_MODELS.json": "84c328ae8a08ee95f28e99203a33e54053ef1cf7b8719febb11003eb31b14129",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/model.pt": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c",
+    "outputs/palinova_ab_same_task_20260914/ALL_PANEL_PREDICTIONS_AND_OVERLAP.csv.gz": "ee88f5cbc94eceea3ffd9edbfce8f0834e97383a7e353cbbe3be58f62da0549a",
+    "outputs/palinova_ab_same_task_20260914/CORE720x384_RECOMMENDED_SCORES.parquet": "ca985a0ccdebd11403807635c8ab660c4794d7c33878c68c97875e1266580a67",
+    "outputs/palinova_ab_same_task_20260914/DRUG_INPUT_AUDIT.csv": "8eeae33745555356d265d1359820023239a6c316afa613554a227f9e31624325",
+    "outputs/palinova_ab_same_task_20260914/INPUT_drug_global.npy": "aa4228aac8fcc2c4066fb156b32e9c0784aeeb384041047e4264fe8914393aa6",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c"
+  },
+  "neural_checkpoint": {
+    "model_id": "multitask__kdki_inactive__binary__20260921",
+    "stage": "multitask",
+    "arm": "kdki_inactive",
+    "variant": "binary",
+    "seed": 20260921,
+    "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/model.pt",
+    "checkpoint_sha256": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+    "calibration": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/CALIBRATION.json",
+    "validation_metric": "validation_binding_ap",
+    "family_validation_mean": 0.9642099812469137,
+    "representative_validation_value": 0.9665339932336595,
+    "test_metric_panel": "AFFINITY_KD_KI",
+    "representative_test": {
+      "ap": 0.9583505170384772,
+      "auroc": 0.9166476204879888,
+      "target_macro_ap": 0.6935429508144152,
+      "drug_macro_ap": 0.6229627227836807,
+      "balanced_query_ap": 0.6582528367990479,
+      "target_p5": 0.6395348837209303,
+      "drug_p5": 0.5962962962962963,
+      "target_p20": 0.5789603960396039,
+      "drug_p20": 0.26833333333333337
+    },
+    "family_test_mean": {
+      "ap": 0.9555030741111114,
+      "auroc": 0.9151169231060322,
+      "target_macro_ap": 0.6979201832925584,
+      "drug_macro_ap": 0.6084496892327745,
+      "balanced_query_ap": 0.6531849362626665,
+      "target_p5": 0.6409560723514212,
+      "drug_p5": 0.5790123456790124,
+      "target_p20": 0.5773102310231023,
+      "drug_p20": 0.26333333333333336
+    },
+    "family_member_ids": [
+      "multitask__kdki_inactive__binary__20260921",
+      "multitask__kdki_inactive__binary__20260922",
+      "multitask__kdki_inactive__binary__20260923"
+    ],
+    "score": "mean of the two binary logits",
+    "auxiliary_regression_trained": false,
+    "deployed": false,
+    "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+    "representative_endpoint_test": {
+      "AFFINITY_KD_KI": {
+        "pairs": 34327,
+        "positive": 23190,
+        "negative": 11137,
+        "ap": 0.9583505170384772,
+        "auroc": 0.9166476204879888
+      },
+      "ACTIVITY_IC50": {
+        "pairs": 85704,
+        "positive": 65173,
+        "negative": 20531,
+        "ap": 0.86890643838183,
+        "auroc": 0.7030382060959834
+      },
+      "ACTIVITY_EC50": {
+        "pairs": 11957,
+        "positive": 8543,
+        "negative": 3414,
+        "ap": 0.8300769621263273,
+        "auroc": 0.6872971982735122
+      },
+      "ALL_ENDPOINT_UNION": {
+        "pairs": 132331,
+        "positive": 93249,
+        "negative": 39082,
+        "ap": 0.87812695632341,
+        "auroc": 0.7651842302093324
+      }
+    }
+  },
+  "training_reference": "337570 A TRAIN pairs only; positive neighbor pools from188799 measured positives; all measured labels form prior",
+  "nearest": "Maximum Morgan2048 radius2 Tanimoto at identical sequence; exclude query connectivity including self and stereoisomers; no positive pool ->0",
+  "prior": "(target positives+10*global training prevalence)/(target measured pairs+10); unseen target ->global prevalence",
+  "feature_standardization": "Mean and population std fitted on full common Kd/Ki VALIDATION, never test",
+  "weights": "Neural coefficient fixed1; nonnegative neighbor and prior grid. Zero included in every applicable family.",
+  "grid": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.125
+    ],
+    [
+      0.0,
+      0.25
+    ],
+    [
+      0.0,
+      0.5
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      2.0
+    ],
+    [
+      0.25,
+      0.0
+    ],
+    [
+      0.25,
+      0.125
+    ],
+    [
+      0.25,
+      0.25
+    ],
+    [
+      0.25,
+      0.5
+    ],
+    [
+      0.25,
+      1.0
+    ],
+    [
+      0.25,
+      2.0
+    ],
+    [
+      0.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.125
+    ],
+    [
+      0.5,
+      0.25
+    ],
+    [
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      1.0
+    ],
+    [
+      0.5,
+      2.0
+    ],
+    [
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.125
+    ],
+    [
+      1.0,
+      0.25
+    ],
+    [
+      1.0,
+      0.5
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      2.0
+    ],
+    [
+      2.0,
+      0.0
+    ],
+    [
+      2.0,
+      0.125
+    ],
+    [
+      2.0,
+      0.25
+    ],
+    [
+      2.0,
+      0.5
+    ],
+    [
+      2.0,
+      1.0
+    ],
+    [
+      2.0,
+      2.0
+    ],
+    [
+      2.5,
+      0.0
+    ],
+    [
+      2.5,
+      0.125
+    ],
+    [
+      2.5,
+      0.25
+    ],
+    [
+      2.5,
+      0.5
+    ],
+    [
+      2.5,
+      1.0
+    ],
+    [
+      2.5,
+      2.0
+    ],
+    [
+      4.0,
+      0.0
+    ],
+    [
+      4.0,
+      0.125
+    ],
+    [
+      4.0,
+      0.25
+    ],
+    [
+      4.0,
+      0.5
+    ],
+    [
+      4.0,
+      1.0
+    ],
+    [
+      4.0,
+      2.0
+    ]
+  ],
+  "selection": "Same primary direction as historical drug ranker: mean drug AP across5 hashed drug folds minus fold std; all1097 mixed-label drug queries, >=2 measured pairs. Ties prefer lower weight sum.",
+  "ablations": [
+    "A_neural",
+    "A_plus_neighbor",
+    "A_plus_prior",
+    "A_joint_blend"
+  ],
+  "secondary_metrics": "Global AP/AUROC; drug and target macroAP with>=2 and>=10; P5 with>=10; P20 with>=20; explicit inactive FPR paired with Kd/Ki recall",
+  "thresholds": "Each blend calibrated and maximum-F1 threshold chosen solely on same validation Kd/Ki labels",
+  "evaluation": "Existing common neural A TEST and prior S5/BindingDB panels only after SELECTION.json frozen; prior test results viewed, retrospective diagnostics",
+  "overlap": "Retain exact same A/B-common-unseen masks from previous audit; neighbor excludes self even on overlapping full diagnostic panels",
+  "neural_retraining": false,
+  "website_modified": false,
+  "wetlab_reselection": false,
+  "dtiam_test_access": false
+}
