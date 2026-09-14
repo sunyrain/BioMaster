@@ -1,0 +1,274 @@
+{
+  "created_utc": "2026-09-14T15:37:29.550432+00:00",
+  "status": "FROZEN_BEFORE_NEW_MODEL_INFERENCE",
+  "input_hashes": {
+    "scripts/evaluate_palinova_ab_same_task_20260914.py": "06b5ff9a12c5f4846149c82bc4d45b70647fe54490877c79b7eac2f032d95711",
+    "outputs/biomaster_model_consolidation_20260911/RECOMMENDED_MODELS.json": "84c328ae8a08ee95f28e99203a33e54053ef1cf7b8719febb11003eb31b14129",
+    "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_S5_TEST_V1.csv.gz": "010944dd593635be6173b4313547f14f1ce01bfda68983d21c0f773c757fdec0",
+    "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_SUMMARY_V1.json": "21a12e7815b1840a612f7eba2ecadc29a9b408e8b59281204796bc7c906dd7a2",
+    "outputs/affinity_predictor_audit_20260910/PAIR_LABELS_AND_FROZEN_SCORES.csv.gz": "2d2f66b5f25c3ba85b8df5902176529303d445f66853cd4a2dd6e8fc8fe40d00",
+    "outputs/spr384_bindingdb_quality_review_20260910/BINDINGDB_COVERED_EVALUATION_PAIRS.csv": "fd3f06d597c35caacd535d64c21ee76d1b9bd218c0fba94db0ad1c84907a8c6e",
+    "outputs/spr384_bindingdb_quality_review_20260910/COHORT_METRICS.csv": "32ad16a32ad06c73446a132c4d8acaaa54afee7bb72e146390188ae78354334e",
+    "outputs/biomaster_matrix_720x890_20260910/DRUG_INDEX.csv": "b7e42b2ae42345d9b165954ede7b11e61fb645131fabb681911983c46a170464",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_GLOBAL.npy": "b33395dc27a57036f396e37cd5eb5fac570e7cd4c8f48c5632fd90400b9f398f",
+    "outputs/biomaster_endpoint_ablation_20260911/DATA_MANIFEST.json": "a1124102a36b4a25f7faac5b0e9db882b56edb79e04c6422eb4ce965f7059c40",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c",
+    "data/processed/biomaster_training_full_20260910_v1/MOLECULES.parquet": "b2b59f72626b84954b6097af08766ce52c277544f9bdd07997ded07241cffde6",
+    "data/processed/biomaster_training_full_20260910_v1/TARGETS.parquet": "c29d500904f24e8dac4398037a39de301dc4b18cd938cc40cc260577f5d00233",
+    "outputs/joint_screen_720x384_20260909/FULL_276480_PAIR_AUDIT.parquet": "2f174a3a6dd4fef374bd5307ee24df8fc8d2fb5301eab0017f5df7966efd1c7a",
+    "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_VALIDATION.parquet": "1eaf1d72bdaec91d58dd17462a105c5b2211e8ffe701488b9955811da0305449",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_VALIDATION.parquet": "4251ee0ac27ba008851fa60ce50a4b0434c365c6394752be3ea42662bdf4a01c",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/model.pt": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/model.pt": "29011320c118fa7d91959b4433ba5b5259eb1f838247518ed91e18be218483e1",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__joint__seed_20260923/model.pt": "40261afc4a18e047a9343058d689dde781621945b2c31b6e6c4081ebd4b60e75",
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/features/drug_global.npy": "4fbf84e535baedce514e2056aa147ebb823a08e7d933d81d2e797bc739a82707",
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/features/drug_graph_mean.npy": "58cdd3ab20dec41c00d433f571e1680847ec489d0f744eda3b63882d66bbaec8",
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/features/pretrained_available.npy": "a4816c3907069fe14baf43e7f7ddb8782b594b350d79cd1681bc61ebcc0799a5",
+    "outputs/biomaster_best_model_20260906/retargetmap_selected_v1/features/target_global.npy": "89de0c2edba1bd2b85f216216285505d8b3e3d18b7a21277f3a8de03c734b888"
+  },
+  "models": {
+    "Palinova_A_binary": {
+      "model_id": "multitask__kdki_inactive__binary__20260921",
+      "stage": "multitask",
+      "arm": "kdki_inactive",
+      "variant": "binary",
+      "seed": 20260921,
+      "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/model.pt",
+      "checkpoint_sha256": "8102a6b9dc0ffdfb162e884965873d4ec099b6270851eac423446cd173a69e80",
+      "calibration": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/CALIBRATION.json",
+      "validation_metric": "validation_binding_ap",
+      "family_validation_mean": 0.9642099812469137,
+      "representative_validation_value": 0.9665339932336595,
+      "test_metric_panel": "AFFINITY_KD_KI",
+      "representative_test": {
+        "ap": 0.9583505170384772,
+        "auroc": 0.9166476204879888,
+        "target_macro_ap": 0.6935429508144152,
+        "drug_macro_ap": 0.6229627227836807,
+        "balanced_query_ap": 0.6582528367990479,
+        "target_p5": 0.6395348837209303,
+        "drug_p5": 0.5962962962962963,
+        "target_p20": 0.5789603960396039,
+        "drug_p20": 0.26833333333333337
+      },
+      "family_test_mean": {
+        "ap": 0.9555030741111114,
+        "auroc": 0.9151169231060322,
+        "target_macro_ap": 0.6979201832925584,
+        "drug_macro_ap": 0.6084496892327745,
+        "balanced_query_ap": 0.6531849362626665,
+        "target_p5": 0.6409560723514212,
+        "drug_p5": 0.5790123456790124,
+        "target_p20": 0.5773102310231023,
+        "drug_p20": 0.26333333333333336
+      },
+      "family_member_ids": [
+        "multitask__kdki_inactive__binary__20260921",
+        "multitask__kdki_inactive__binary__20260922",
+        "multitask__kdki_inactive__binary__20260923"
+      ],
+      "score": "mean of the two binary logits",
+      "auxiliary_regression_trained": false,
+      "deployed": false,
+      "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+      "representative_endpoint_test": {
+        "AFFINITY_KD_KI": {
+          "pairs": 34327,
+          "positive": 23190,
+          "negative": 11137,
+          "ap": 0.9583505170384772,
+          "auroc": 0.9166476204879888
+        },
+        "ACTIVITY_IC50": {
+          "pairs": 85704,
+          "positive": 65173,
+          "negative": 20531,
+          "ap": 0.86890643838183,
+          "auroc": 0.7030382060959834
+        },
+        "ACTIVITY_EC50": {
+          "pairs": 11957,
+          "positive": 8543,
+          "negative": 3414,
+          "ap": 0.8300769621263273,
+          "auroc": 0.6872971982735122
+        },
+        "ALL_ENDPOINT_UNION": {
+          "pairs": 132331,
+          "positive": 93249,
+          "negative": 39082,
+          "ap": 0.87812695632341,
+          "auroc": 0.7651842302093324
+        }
+      }
+    },
+    "Palinova_B_binary": {
+      "model_id": "multitask__all_inactive__binary__20260922",
+      "stage": "multitask",
+      "arm": "all_inactive",
+      "variant": "binary",
+      "seed": 20260922,
+      "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/model.pt",
+      "checkpoint_sha256": "29011320c118fa7d91959b4433ba5b5259eb1f838247518ed91e18be218483e1",
+      "calibration": "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/CALIBRATION.json",
+      "validation_metric": "validation_activity_ap",
+      "family_validation_mean": 0.9712187484493103,
+      "representative_validation_value": 0.9714743829745486,
+      "test_metric_panel": "AFFINITY_KD_KI",
+      "representative_test": {
+        "ap": 0.92118760586681,
+        "auroc": 0.8596920326996442,
+        "target_macro_ap": 0.654308831391991,
+        "drug_macro_ap": 0.5493188713030752,
+        "balanced_query_ap": 0.6018138513475331,
+        "target_p5": 0.6034883720930232,
+        "drug_p5": 0.5111111111111112,
+        "target_p20": 0.561509900990099,
+        "drug_p20": 0.22666666666666666
+      },
+      "family_test_mean": {
+        "ap": 0.917034670291831,
+        "auroc": 0.8623364146273982,
+        "target_macro_ap": 0.6568858359575498,
+        "drug_macro_ap": 0.5431991032119643,
+        "balanced_query_ap": 0.6000424695847569,
+        "target_p5": 0.6058139534883721,
+        "drug_p5": 0.5197530864197532,
+        "target_p20": 0.5664191419141914,
+        "drug_p20": 0.23722222222222222
+      },
+      "family_member_ids": [
+        "multitask__all_inactive__binary__20260921",
+        "multitask__all_inactive__binary__20260922",
+        "multitask__all_inactive__binary__20260923"
+      ],
+      "score": "mean of the two binary logits",
+      "auxiliary_regression_trained": false,
+      "deployed": false,
+      "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+      "representative_endpoint_test": {
+        "AFFINITY_KD_KI": {
+          "pairs": 34327,
+          "positive": 23190,
+          "negative": 11137,
+          "ap": 0.92118760586681,
+          "auroc": 0.8596920326996442
+        },
+        "ACTIVITY_IC50": {
+          "pairs": 85704,
+          "positive": 65173,
+          "negative": 20531,
+          "ap": 0.9825853829059689,
+          "auroc": 0.9520463619761579
+        },
+        "ACTIVITY_EC50": {
+          "pairs": 11957,
+          "positive": 8543,
+          "negative": 3414,
+          "ap": 0.9656324797724889,
+          "auroc": 0.9326133222738056
+        },
+        "ALL_ENDPOINT_UNION": {
+          "pairs": 132331,
+          "positive": 93249,
+          "negative": 39082,
+          "ap": 0.9643660462442757,
+          "auroc": 0.925848010086699
+        }
+      }
+    },
+    "Palinova_A_joint_reference": {
+      "model_id": "multitask__kdki_inactive__joint__20260923",
+      "stage": "multitask",
+      "arm": "kdki_inactive",
+      "variant": "joint",
+      "seed": 20260923,
+      "checkpoint": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__joint__seed_20260923/model.pt",
+      "checkpoint_sha256": "40261afc4a18e047a9343058d689dde781621945b2c31b6e6c4081ebd4b60e75",
+      "calibration": "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__joint__seed_20260923/CALIBRATION.json",
+      "validation_metric": "validation_balanced_query_ap",
+      "family_validation_mean": 0.7078103087967286,
+      "representative_validation_value": 0.7145813800750571,
+      "test_metric_panel": "AFFINITY_KD_KI",
+      "representative_test": {
+        "ap": 0.9522049139010276,
+        "auroc": 0.9117577880537056,
+        "target_macro_ap": 0.7046662337999976,
+        "drug_macro_ap": 0.6343901823378855,
+        "balanced_query_ap": 0.6695282080689415,
+        "target_p5": 0.6468992248062014,
+        "drug_p5": 0.5740740740740742,
+        "target_p20": 0.5788366336633664,
+        "drug_p20": 0.275
+      },
+      "family_test_mean": {
+        "ap": 0.9468223680616029,
+        "auroc": 0.903524356167336,
+        "target_macro_ap": 0.6955815002295954,
+        "drug_macro_ap": 0.6274077337161538,
+        "balanced_query_ap": 0.6614946169728746,
+        "target_p5": 0.6396640826873385,
+        "drug_p5": 0.5740740740740741,
+        "target_p20": 0.5762376237623762,
+        "drug_p20": 0.26166666666666666
+      },
+      "family_member_ids": [
+        "multitask__kdki_inactive__joint__20260921",
+        "multitask__kdki_inactive__joint__20260922",
+        "multitask__kdki_inactive__joint__20260923"
+      ],
+      "score": "mean of the two binary logits",
+      "auxiliary_regression_trained": true,
+      "deployed": false,
+      "calibration_fit_panel": "VALIDATION_AFFINITY_KD_KI",
+      "representative_endpoint_test": {
+        "AFFINITY_KD_KI": {
+          "pairs": 34327,
+          "positive": 23190,
+          "negative": 11137,
+          "ap": 0.9522049139010276,
+          "auroc": 0.9117577880537056
+        },
+        "ACTIVITY_IC50": {
+          "pairs": 85704,
+          "positive": 65173,
+          "negative": 20531,
+          "ap": 0.8650436244514527,
+          "auroc": 0.6820477546644095
+        },
+        "ACTIVITY_EC50": {
+          "pairs": 11957,
+          "positive": 8543,
+          "negative": 3414,
+          "ap": 0.8354830280878598,
+          "auroc": 0.6819153987262205
+        },
+        "ALL_ENDPOINT_UNION": {
+          "pairs": 132331,
+          "positive": 93249,
+          "negative": 39082,
+          "ap": 0.869787162397088,
+          "auroc": 0.7469798722414992
+        }
+      }
+    }
+  },
+  "score": "mean of two binary logits; GPU BF16, batch4096, TF32 enabled as training evaluation",
+  "primary_input": "Exact molecule and sequence mapping; prepared A/B feature rows take precedence; otherwise preserved catalog features. No feature cache mutation.",
+  "secondary_input": "Original catalog features, same weights and precision; sensitivity only, never chosen by outcome",
+  "panels": "Exact S5 2556, merged refresh 488, BindingDB-covered 479 and identity/chemistry subset382; original labels retained, no new endpoint pooling",
+  "overlap": "Exact and connectivity+exact-sequence membership in A/B train AND validation. Strict shared subset excludes either arm exposure; separate unseen split-group subset when mapped.",
+  "queries": "Both labels required; no minimum size for macro AP/AUROC, matching historical S5/refresh; P5 only when >=5 measured pairs",
+  "catalog_rank": "Same original720x384 axis, descending stable original-row tie order, before known-relationship exclusion; no reselection",
+  "uncertainty": "1000 paired drug-cluster bootstraps; difference versus frozen SPR score",
+  "training": false,
+  "deployment": false,
+  "wetlab_reselection": false,
+  "dtiam_test_access": false
+}

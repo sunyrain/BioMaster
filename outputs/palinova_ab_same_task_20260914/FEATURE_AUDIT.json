@@ -1,0 +1,33 @@
+{
+  "drug_global": {
+    "shape": [
+      720,
+      2560
+    ],
+    "rows_changed": 15,
+    "max_abs_difference": 3.134780168533325
+  },
+  "drug_graph_mean": {
+    "shape": [
+      720,
+      40
+    ],
+    "rows_changed": 1,
+    "max_abs_difference": 0.0416666641831398
+  },
+  "pretrained_available": {
+    "shape": [
+      720
+    ],
+    "rows_changed": 1,
+    "max_abs_difference": 1.0
+  },
+  "target_global": {
+    "shape": [
+      890,
+      1280
+    ],
+    "rows_changed": 0,
+    "max_abs_difference": 0.0
+  }
+}

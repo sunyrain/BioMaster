@@ -1,0 +1,73 @@
+{
+  "status": "COMPLETE",
+  "files": {
+    "ALL_PANEL_PREDICTIONS_AND_OVERLAP.csv": {
+      "sha256": "0bd38d12297175bb3e225a4255b8f163a12a3e3a9335a2b3b8dd6ed37af53151",
+      "bytes": 2534640
+    },
+    "ALL_PANEL_PREDICTIONS_AND_OVERLAP.csv.gz": {
+      "sha256": "ee88f5cbc94eceea3ffd9edbfce8f0834e97383a7e353cbbe3be58f62da0549a",
+      "bytes": 470917
+    },
+    "CATALOG_INPUT_SENSITIVITY.csv": {
+      "sha256": "5ec34d051ad6e1bcc95586f2c503f042223cc97bd99922fe3862b194a25e76f4",
+      "bytes": 6650
+    },
+    "CORE720x384_RECOMMENDED_SCORES.parquet": {
+      "sha256": "ca985a0ccdebd11403807635c8ab660c4794d7c33878c68c97875e1266580a67",
+      "bytes": 2675501
+    },
+    "DRUG_INPUT_AUDIT.csv": {
+      "sha256": "8eeae33745555356d265d1359820023239a6c316afa613554a227f9e31624325",
+      "bytes": 132450
+    },
+    "FEATURE_AUDIT.json": {
+      "sha256": "02f2a9afa05dafe814ac98754a9014b4f975564f918c5e6d867c09a4d1ae17c0",
+      "bytes": 518
+    },
+    "INPUT_drug_global.npy": {
+      "sha256": "aa4228aac8fcc2c4066fb156b32e9c0784aeeb384041047e4264fe8914393aa6",
+      "bytes": 7372928
+    },
+    "INPUT_drug_graph_mean.npy": {
+      "sha256": "43952a4efe72be24d5152d06ac41492efd783573a7b89a2d3cff4aad4beba95a",
+      "bytes": 115328
+    },
+    "INPUT_pretrained_available.npy": {
+      "sha256": "acb506d25c1c9f81cee09e440a028464f74f29b8c47746f4279525f29db2250a",
+      "bytes": 3008
+    },
+    "INPUT_target_global.npy": {
+      "sha256": "b33395dc27a57036f396e37cd5eb5fac570e7cd4c8f48c5632fd90400b9f398f",
+      "bytes": 4556928
+    },
+    "PAIRED_DRUG_BOOTSTRAP.csv": {
+      "sha256": "53ed8f30ab97337fdabfa6ef0fd8d53b1d658b1eb9b19ca17289f698fb100e08",
+      "bytes": 7491
+    },
+    "PROTOCOL.json": {
+      "sha256": "ce5fffb64ea91c0c5352e8d0e9725ea59a23ceedffbe1ef3a24c275a484170e1",
+      "bytes": 14088
+    },
+    "RANK_BAND_MEASURED_OUTCOMES.csv": {
+      "sha256": "2eecee673a77b6fedd172950cb544e5988f84a879f9a80eb99bbd81c25a18a2b",
+      "bytes": 7619
+    },
+    "README.md": {
+      "sha256": "980bbab88791ec1af4f138aa750c7424e0c4cb158d37f05aa86a5e684a505c8f",
+      "bytes": 1734
+    },
+    "SAME_PANEL_METRICS.csv": {
+      "sha256": "fb0872c7a645dfaf2ef573cf6eeeaeba99b97fe4b32b1c655b0337298897489f",
+      "bytes": 12258
+    },
+    "SUMMARY.json": {
+      "sha256": "f08f4df628c24ecab28a2f22365185dda9be921bade7d6c2727cd8476465913e",
+      "bytes": 40418
+    },
+    "TRAIN_VALIDATION_OVERLAP.csv": {
+      "sha256": "dfd5387e3f9dab8665345094fbcd01f9295e81570a390d6271edf2b94e5d8a6f",
+      "bytes": 984
+    }
+  }
+}

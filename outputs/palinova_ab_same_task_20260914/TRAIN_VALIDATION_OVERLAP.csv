@@ -1,0 +1,5 @@
+cohort,pairs,positive,local_training_drug_seen,local_training_target_seen,A_train_exact_pair_seen,A_train_connectivity_pair_seen,A_train_split_group_seen,A_train_label_conflict,A_validation_exact_pair_seen,A_validation_connectivity_pair_seen,A_validation_split_group_seen,A_validation_label_conflict,B_train_exact_pair_seen,B_train_connectivity_pair_seen,B_train_split_group_seen,B_train_label_conflict,B_validation_exact_pair_seen,B_validation_connectivity_pair_seen,B_validation_split_group_seen,B_validation_label_conflict,both_AB_train_validation_pair_unseen,both_AB_train_validation_group_unseen
+S5_HISTORICAL_TEST,2556,354,0,0,1672,1673,1951,0,133,133,158,0,1788,1788,1987,1,144,144,165,0,620,392
+MERGED_REFRESH_488,488,133,478,488,297,297,314,0,11,11,12,0,279,281,315,0,8,8,11,0,180,161
+BINDINGDB_479,479,125,470,479,294,294,309,0,10,10,10,0,278,280,309,0,8,8,10,0,175,160
+BINDINGDB_IDENTITY_CHEMISTRY_382,382,94,374,382,204,204,217,0,10,10,10,0,192,194,217,0,8,8,10,0,168,155
