@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-09-14T03:06:21.015319+00:00",
+  "status": "VALIDATION_DIAGNOSTIC_ONLY_NOT_NEW_DEPLOYMENT_THRESHOLDS",
+  "validation_KdKi_pairs": 34685,
+  "validation_KdKi_positive": 24419,
+  "validation_inactive_pairs": 11719,
+  "definition": "At least one accepted explicit inactive annotation; any-task positive contradictions removed under existing contract",
+  "inactivity_sources": {
+    "ChEMBL37": 11719
+  },
+  "evidence_groups": {
+    "no_numeric_negative_meeting_10uM_rule": 7195,
+    "has_KdKi_numeric_negative": 4462,
+    "IC50_numeric_negative_without_KdKi_negative": 55,
+    "EC50_numeric_negative_without_KdKi_IC50_negative": 7
+  },
+  "numeric_negative_group_definition": "Numerical evidence independently meets value_nM >= 10000 and relation in [=,>,>=]; do not infer a numerical negative from observation_label=0 because explicit inactivity also sets that field.",
+  "test_gate_open": false,
+  "production_threshold_changed": false,
+  "training_protocol_changed": false,
+  "sources": {
+    "/root/autodl-tmp/BioMaster/outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "data/processed/biomaster_training_full_20260910_v1/OBSERVATIONS_WITH_QC.parquet": "fafab4163ba491db67ff7cab6bbd537459f95fd8fb1b9f1c322f3c0ba9971d36",
+    "outputs/biomaster_dtiam_ab_20260912/interim_20260913/COMMON_VALIDATION_PREDICTIONS.parquet": "d7b64b606f89990052c15642849352fba22f00979288f24ebf9c52aa961aed27",
+    "outputs/biomaster_dtiam_ab_20260912/interim_20260914/COMMON_VALIDATION_COMPARISON.csv": "877134abcd48fd8aebd8a854cb91979d4a0a8dc167cde6134ed14bddf22abbce",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/SELECTION.json": "8ebc48b6e1d621322c6e8b3b329afbd17e124dbf90246c55a1cc884142c4db3c",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/CALIBRATION.json": "e6853a5c3b6ff4a18bace179d3b981449249650d3f3d5371c6577a6bf4170c6c",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/VALIDATION_PREDICTIONS.parquet": "74e93316adc3b1a6a2d8acbd1a19d045f81cf6f8a61d0c1c75113c9543617f56",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/SELECTION.json": "a23027f877a8e90f618348b7562d7feaa84e31e290d951f330b6a47ee5b0e1d0",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/CALIBRATION.json": "619f128388e3e3f5afe315e8dc1ea985f42c5792afc64379f307b8952f9db433",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/VALIDATION_PREDICTIONS.parquet": "e7d655ce39a355b4b6ad153a37ab73bc3a374941f4346023eae71bc2cc0180f9",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/SELECTION.json": "7d2f7c8c9c2b6dc4ba75ff473620f296af0627f997f3fd78d76b0d3c82233e2a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/CALIBRATION.json": "d9fd366f0958c80608aec5851f889b452a46e5aa6df46ebe53e899e1cff85fda",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/VALIDATION_PREDICTIONS.parquet": "cce9509a9efe9615d38110008e0d3b387a094b51d517c2cccf409074bafe4502"
+  },
+  "diagnostic_caution": "FPR-constrained thresholds measured on the same validation negatives used to choose them. Must freeze and independently evaluate before deployment.",
+  "annotation_assay_types_pairs_nonexclusive": {
+    "B": 11649,
+    "F": 84
+  },
+  "annotation_endpoints_pairs_nonexclusive": {
+    "EC50": 187,
+    "IC50": 283,
+    "INACTIVE": 6699,
+    "Kd": 4475,
+    "Ki": 99
+  },
+  "checks": {
+    "frozen_FPR_and_recall_match_prior_report": true,
+    "evidence_groups_exhaustive_disjoint_and_FP_counts_match": true,
+    "empirical_FPR_constraints_tie_safe": true
+  }
+}
