@@ -1,0 +1,60 @@
+{
+  "utc": "2026-09-14T09:42:51.077792+00:00",
+  "completed_suites": 3,
+  "total_suites": 6,
+  "current_suite": "all_inactive__seed_20260922",
+  "queue_pid": 2015,
+  "queue_alive": true,
+  "child_pid": 35487,
+  "child_alive": true,
+  "child_model": "NeuralNetTorch",
+  "completed_base_learners": [
+    "CatBoost",
+    "ExtraTreesEntr",
+    "ExtraTreesGini",
+    "LightGBM",
+    "LightGBMXT",
+    "RandomForestEntr",
+    "RandomForestGini",
+    "XGBoost"
+  ],
+  "current_epoch": 114,
+  "current_updates": 246012,
+  "last_train_loss": 0.1428,
+  "last_inner_validation_auroc": 0.9729,
+  "best_epoch_so_far": 110,
+  "inner_validation_scope": "Native B inner training holdout; not common Kd/Ki validation or TEST",
+  "last_log_update_utc": "2026-09-14T09:42:07.625749+00:00",
+  "child_RSS_GiB": 17.962039947509766,
+  "cgroup_memory_GiB": 43.545555114746094,
+  "cgroup_memory_limit_GiB": 90,
+  "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
+  "test_gate_open": false,
+  "current_error_present": false,
+  "new_common_validation_since_0254": false,
+  "eta": {
+    "current_B_remaining_hours": [
+      3,
+      6
+    ],
+    "all_six_test_report_remaining_hours": [
+      16,
+      26
+    ],
+    "current_B_central_hours": 3.978933896033434,
+    "all_central_hours": 18.58993822025588,
+    "central_finish_utc": "2026-09-15T04:18:14.855385+00:00",
+    "basis": {
+      "first_B_torch_hours": 4.130549032358556,
+      "current_torch_elapsed_hours": 1.6839081872222221,
+      "first_B_LGBLarge_hours": 1.007221126861146,
+      "first_B_fastai_ensemble_hours": 0.4950719240359548,
+      "mean_A_fit_hours": 2.7415212642204843,
+      "first_B_full_fit_hours": 11.309483060001964,
+      "final_test_report_allowance_hours": 0.5
+    },
+    "assumptions": "Comparable stopping on later seeds, unchanged resources, no interruption; planning range, not guaranteed."
+  },
+  "/_free_GiB": 10.648719787597656,
+  "/root/autodl-tmp/BioMaster_free_GiB": 62.55009078979492
+}
