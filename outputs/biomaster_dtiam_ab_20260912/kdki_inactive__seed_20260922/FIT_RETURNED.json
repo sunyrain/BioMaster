@@ -1,0 +1,27 @@
+{
+  "fit_seconds": 8954.667263087817,
+  "training_member_pool": 337570,
+  "base_train_rows": 334194,
+  "internal_holdout_rows": 3376,
+  "native_best": "WeightedEnsemble_L2",
+  "model_names": [
+    "LightGBMXT",
+    "LightGBM",
+    "RandomForestGini",
+    "RandomForestEntr",
+    "CatBoost",
+    "ExtraTreesGini",
+    "ExtraTreesEntr",
+    "XGBoost",
+    "NeuralNetTorch",
+    "LightGBMLarge",
+    "NeuralNetFastAI",
+    "WeightedEnsemble_L2"
+  ],
+  "peak_RSS_GiB": 36.64854431152344,
+  "finished_utc": "2026-09-14T02:49:35.867984+00:00",
+  "smoke_only": false,
+  "core_soft_memory_limit_GB": 68,
+  "core_fit_seconds": 8481.327369439416,
+  "fastai_ensemble_seconds": 473.3398936484009
+}

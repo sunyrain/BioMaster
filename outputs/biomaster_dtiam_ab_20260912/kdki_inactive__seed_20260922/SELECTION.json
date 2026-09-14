@@ -1,0 +1,110 @@
+{
+  "status": "COMPLETE_FIT_AND_VALIDATION_FROZEN",
+  "arm": "kdki_inactive",
+  "seed": 20260922,
+  "frozen_utc": "2026-09-14T02:51:02.885923+00:00",
+  "choices": {
+    "native": "WeightedEnsemble_L2",
+    "query": "WeightedEnsemble_L2"
+  },
+  "validation_scores": [
+    {
+      "model": "WeightedEnsemble_L2",
+      "selection_score": 0.7235621393715468,
+      "target_macro_ap": 0.7486261014056225,
+      "drug_macro_ap": 0.6984981773374711,
+      "ap": 0.9783731515073628,
+      "auroc": 0.948056818645728
+    },
+    {
+      "model": "LightGBMXT",
+      "selection_score": 0.7227766521378853,
+      "target_macro_ap": 0.7637259968932064,
+      "drug_macro_ap": 0.6818273073825641,
+      "ap": 0.9762244050763088,
+      "auroc": 0.9449332110031402
+    },
+    {
+      "model": "CatBoost",
+      "selection_score": 0.7172971941775379,
+      "target_macro_ap": 0.7427383108410298,
+      "drug_macro_ap": 0.691856077514046,
+      "ap": 0.9734584025280084,
+      "auroc": 0.9387380170849483
+    },
+    {
+      "model": "RandomForestGini",
+      "selection_score": 0.7153458775265915,
+      "target_macro_ap": 0.7713258039105958,
+      "drug_macro_ap": 0.6593659511425872,
+      "ap": 0.9776327144527621,
+      "auroc": 0.9474417211299384
+    },
+    {
+      "model": "ExtraTreesEntr",
+      "selection_score": 0.7142171743525791,
+      "target_macro_ap": 0.7710944911741925,
+      "drug_macro_ap": 0.6573398575309658,
+      "ap": 0.9770418596686855,
+      "auroc": 0.9469503264437512
+    },
+    {
+      "model": "RandomForestEntr",
+      "selection_score": 0.7111103298723103,
+      "target_macro_ap": 0.768361239891706,
+      "drug_macro_ap": 0.6538594198529146,
+      "ap": 0.9780369329285669,
+      "auroc": 0.9487651086448757
+    },
+    {
+      "model": "LightGBM",
+      "selection_score": 0.7078503754032923,
+      "target_macro_ap": 0.7325335555333687,
+      "drug_macro_ap": 0.6831671952732158,
+      "ap": 0.9735923406863481,
+      "auroc": 0.9395237208298493
+    },
+    {
+      "model": "LightGBMLarge",
+      "selection_score": 0.7073818202597355,
+      "target_macro_ap": 0.7372663735907324,
+      "drug_macro_ap": 0.6774972669287387,
+      "ap": 0.9752594051752339,
+      "auroc": 0.9426860662605498
+    },
+    {
+      "model": "ExtraTreesGini",
+      "selection_score": 0.7054760880740788,
+      "target_macro_ap": 0.7655592513144548,
+      "drug_macro_ap": 0.6453929248337028,
+      "ap": 0.9759941237940669,
+      "auroc": 0.9453390163595212
+    },
+    {
+      "model": "XGBoost",
+      "selection_score": 0.704183351095939,
+      "target_macro_ap": 0.7296292507290549,
+      "drug_macro_ap": 0.6787374514628232,
+      "ap": 0.9737766954360052,
+      "auroc": 0.9384327041967102
+    },
+    {
+      "model": "NeuralNetFastAI",
+      "selection_score": 0.6951831285527248,
+      "target_macro_ap": 0.7312788104832076,
+      "drug_macro_ap": 0.6590874466222418,
+      "ap": 0.9667577667626414,
+      "auroc": 0.9269771252862562
+    },
+    {
+      "model": "NeuralNetTorch",
+      "selection_score": 0.6867824794445285,
+      "target_macro_ap": 0.7291400011799365,
+      "drug_macro_ap": 0.6444249577091206,
+      "ap": 0.963344624929837,
+      "auroc": 0.9221353106510919
+    }
+  ],
+  "calibration_sha256": "d9fd366f0958c80608aec5851f889b452a46e5aa6df46ebe53e899e1cff85fda",
+  "fit_sha256": "4c839e9def25da599a1f476b4f5dd1f256e27b0b3cf54c5bc059590e4da636f1"
+}

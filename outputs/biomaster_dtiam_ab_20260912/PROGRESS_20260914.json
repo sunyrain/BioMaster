@@ -1,123 +1,103 @@
 {
-  "utc": "2026-09-14T00:03:11.241393+00:00",
-  "status": "RUNNING_FIRST_B_FINAL_BASE_LEARNER",
+  "utc": "2026-09-14T02:54:29.109060+00:00",
+  "status": "THREE_SUITES_COMPLETE_SECOND_B_RUNNING",
   "runner": {
     "stage": "TRAINING",
-    "updated_utc": "2026-09-13T15:43:48.474149+00:00",
+    "updated_utc": "2026-09-14T02:51:09.099976+00:00",
     "pid": 2015,
-    "current_suite": "all_inactive__seed_20260921",
-    "completed_suites": 1,
+    "current_suite": "all_inactive__seed_20260922",
+    "completed_suites": 3,
     "total_suites": 6
   },
   "current_child": {
-    "pid": 16230,
+    "pid": 23169,
     "args": [
       "/root/autodl-tmp/BioMaster/.venv_dtiam_compat/bin/python",
       "-u",
-      "scripts/train_dtiam_ab_20260912.py",
-      "--arm",
-      "all_inactive",
+      "scripts/train_dtiam_isolated_core_20260913.py",
       "--seed",
-      "20260921",
-      "--fastai"
+      "20260922",
+      "--model",
+      "LightGBMXT"
     ],
-    "started_utc": "2026-09-13T23:49:10.520566+00:00",
-    "log": "/root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/FASTAI.log"
+    "started_utc": "2026-09-14T02:51:09.101909+00:00",
+    "log": "/root/autodl-tmp/BioMaster/outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/CORE_LightGBMXT.log"
   },
   "queue_alive": true,
   "current_child_alive": true,
-  "current_child_RSS_GiB": 34.56816482543945,
-  "continuous_queue_elapsed_hours": 8.324280942545997,
-  "completed_validation_suites": 1,
+  "current_child_RSS_GiB": 35.33317184448242,
+  "continuous_queue_elapsed_hours": 11.17877915611111,
+  "completed_validation_suites": 3,
   "total_suites": 6,
-  "completed_B_base_learners": [
-    "LightGBMXT",
-    "LightGBM",
-    "RandomForestGini",
-    "RandomForestEntr",
-    "CatBoost",
-    "ExtraTreesGini",
-    "ExtraTreesEntr",
-    "XGBoost",
-    "NeuralNetTorch",
-    "LightGBMLarge"
-  ],
-  "required_B_base_learners": 11,
-  "new_completed_stage_results": [
+  "completed_suites": [
     {
-      "status": "COMPLETE",
-      "utc": "2026-09-13T18:39:53.248099+00:00",
-      "model": "XGBoost",
-      "seconds": 10501.863068520091,
-      "peak_RSS_GiB": 30.673503875732422,
-      "model_sha256": "457c7a2f95bb863943c1b1cc70d61af7a25f1738cff031381d776f6b9cc61cc7",
-      "fitted_parameters": {
-        "n_estimators": 7959
-      }
+      "suite": "all_inactive__seed_20260921",
+      "finished_validation_utc": "2026-09-14T00:19:59.028644+00:00",
+      "fit_hours": 11.309483060001964,
+      "base_learners": 11,
+      "choices": {
+        "native": "WeightedEnsemble_L2",
+        "query": "LightGBMLarge"
+      },
+      "selection_sha256": "a23027f877a8e90f618348b7562d7feaa84e31e290d951f330b6a47ee5b0e1d0"
     },
     {
-      "status": "COMPLETE",
-      "utc": "2026-09-13T22:47:58.472364+00:00",
-      "model": "NeuralNetTorch",
-      "seconds": 14869.976516490802,
-      "peak_RSS_GiB": 59.083438873291016,
-      "model_sha256": "81a9ad77fc2fe8964ea80e19e70dce8cb353c16b00c4932eeacb6ca193f8b65b",
-      "fitted_parameters": {
-        "batch_size": 512,
-        "num_epochs": 181
-      }
+      "suite": "kdki_inactive__seed_20260921",
+      "finished_validation_utc": "2026-09-13T08:06:35.954787+00:00",
+      "fit_hours": 2.99563495536102,
+      "base_learners": 11,
+      "choices": {
+        "native": "WeightedEnsemble_L2",
+        "query": "RandomForestEntr"
+      },
+      "selection_sha256": "8ebc48b6e1d621322c6e8b3b329afbd17e124dbf90246c55a1cc884142c4db3c"
     },
     {
-      "status": "COMPLETE",
-      "utc": "2026-09-13T23:48:41.624555+00:00",
-      "model": "LightGBMLarge",
-      "seconds": 3625.9960567001253,
-      "peak_RSS_GiB": 17.927188873291016,
-      "model_sha256": "996701ab1d03814f46421b7ca7bbe4dcc1d08094252175f86650faa0265e4e02",
-      "fitted_parameters": {
-        "num_boost_round": 9972
-      }
+      "suite": "kdki_inactive__seed_20260922",
+      "finished_validation_utc": "2026-09-14T02:51:02.885923+00:00",
+      "fit_hours": 2.487407573079949,
+      "base_learners": 11,
+      "choices": {
+        "native": "WeightedEnsemble_L2",
+        "query": "WeightedEnsemble_L2"
+      },
+      "selection_sha256": "7d2f7c8c9c2b6dc4ba75ff473620f296af0627f997f3fd78d76b0d3c82233e2a"
     }
   ],
-  "new_completed_model_payload_hashes_verified": true,
-  "B_NeuralNetTorch_actual_last_logged_epoch": 291,
-  "B_NeuralNetTorch_retained_best_epoch": 181,
-  "B_core_successful_duration_hours": 10.81441113596601,
-  "B_core_duration_excludes_failed_attempts_and_downtime": true,
-  "fastai_last_logged_improvement_epoch": 11,
-  "fastai_last_logged_improvement_loss": 0.2309446781873703,
-  "fastai_log_mtime_utc": "2026-09-14T00:03:05.395124+00:00",
-  "fastai_log_note": "Only improvements are logged; last improvement epoch is a lower bound on actual progress, not the exact current epoch",
-  "new_B_public_validation_available": false,
+  "new_B_public_validation_available": true,
   "test_gate_open": false,
+  "current_error_present": false,
+  "frozen_protocol_code_inputs_verified": true,
   "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\n",
-  "system_free_GiB": 10.687362670898438,
-  "data_free_GiB": 68.29987716674805,
+  "system_free_GiB": 10.683734893798828,
+  "data_free_GiB": 67.88566589355469,
   "eta": {
-    "anchor_utc": "2026-09-14T00:03:11.241393+00:00",
-    "first_B_completion_remaining_hours": [
-      0.5,
-      1.5
+    "anchor_utc": "2026-09-14T02:54:29.109060+00:00",
+    "remaining_suite_counts": {
+      "A": 1,
+      "B": 2
+    },
+    "A_measured_fit_hours": [
+      2.99563495536102,
+      2.487407573079949
     ],
+    "B_measured_fit_hours": [
+      11.309483060001964
+    ],
+    "public_validation_mean_measured_hours_excluding_historical_interruption": 0.021018686527777778,
+    "current_B_elapsed_hours": 0.05555807888888889,
     "all_six_and_test_remaining_hours": [
-      24,
-      40
+      22,
+      34
     ],
-    "all_six_central_remaining_hours": 30.87009218265406,
-    "central_finish_utc": "2026-09-15T06:55:23.573251+00:00",
-    "A_measured_full_fit_hours": 2.99563495536102,
-    "B_measured_core_hours": 10.81441113596601,
-    "B_estimated_full_fit_and_validation_hours": 11.81441113596601,
-    "assumed_full_B_FastAI_ensemble_hours": 0.75,
-    "assumed_B_public_validation_hours": 0.25,
-    "assumed_current_B_remaining_hours": 0.75,
-    "assumed_final_test_report_hours": 0.5,
-    "formula": "current B remaining + 2 * measured A fit + 2 * estimated full B fit and validation + final test/report allowance",
+    "all_six_central_remaining_hours": 25.867985364918855,
+    "central_finish_utc": "2026-09-15T04:46:33.856374+00:00",
+    "formula": "2 * first B fit + mean(two A fits) + 3 * measured validation duration + 0.5 h final test/report allowance - current B elapsed",
     "assumptions": [
-      "No further interruption or material CPU resource change",
-      "Next seeds have comparable runtime; early stopping may differ",
-      "FastAI and public validation durations are estimates until completion",
-      "Planning range is not a confidence interval or guaranteed deadline"
+      "No further interruption or material resource change",
+      "Later seed stopping behavior remains comparable",
+      "22-34 h is a planning range, not a confidence interval or guaranteed deadline"
     ]
-  }
+  },
+  "comparison": "interim_20260914/COMMON_VALIDATION_COMPARISON.csv"
 }

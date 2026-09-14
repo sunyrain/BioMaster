@@ -1,0 +1,29 @@
+{
+  "fit_seconds": 40714.13901600707,
+  "training_member_pool": 1116270,
+  "base_train_rows": 1105107,
+  "internal_holdout_rows": 11163,
+  "native_best": "WeightedEnsemble_L2",
+  "model_names": [
+    "LightGBMXT",
+    "LightGBM",
+    "RandomForestGini",
+    "RandomForestEntr",
+    "CatBoost",
+    "ExtraTreesGini",
+    "ExtraTreesEntr",
+    "XGBoost",
+    "NeuralNetTorch",
+    "LightGBMLarge",
+    "NeuralNetFastAI",
+    "WeightedEnsemble_L2"
+  ],
+  "peak_RSS_GiB": 68.39717864990234,
+  "finished_utc": "2026-09-14T00:18:54.712040+00:00",
+  "smoke_only": false,
+  "core_soft_memory_limit_GB": 84,
+  "execution": "One fresh process per native core learner; exact same cached inner split",
+  "duration_note": "Inherited successful native fit plus preprocessing and isolated process fit durations; excludes failed checks and downtime",
+  "core_fit_seconds": 38931.880089477636,
+  "fastai_ensemble_seconds": 1782.2589265294373
+}
