@@ -1,0 +1,48 @@
+{
+  "utc": "2026-09-15T03:41:08.922363+00:00",
+  "completed_suites": 5,
+  "total_suites": 6,
+  "current_suite": "all_inactive__seed_20260923",
+  "completed_base_learners": 8,
+  "total_base_learners": 11,
+  "current_model": "NeuralNetTorch",
+  "epoch": 349,
+  "updates": 753142,
+  "best_epoch": 247,
+  "previous_report_epoch": 170,
+  "elapsed_torch_hours": 4.6131072247222225,
+  "queue_alive": true,
+  "child_alive": true,
+  "child_pid": 66259,
+  "last_log_utc": "2026-09-15T03:41:06.917847+00:00",
+  "child_RSS_GiB": 17.96551513671875,
+  "cgroup_memory_GiB": 45.69790267944336,
+  "memory_events": "low 0\nhigh 29852\nmax 0\noom 0\noom_kill 0\n",
+  "root_free_GiB": 10.321304321289062,
+  "data_free_GiB": 56.61767578125,
+  "current_errors": [],
+  "test_gate_open": false,
+  "new_validation_results": false,
+  "completed_selections_calibrations_fit_hashes_unchanged": true,
+  "prior_report": "interim_20260915/PROGRESS.json",
+  "prior_report_sha256": "cb587317a50c99eca93bc7fbdea782cc709ee71858da5455c9cd9b5a3296f16d",
+  "eta": {
+    "basis": "Mean of two completed B stage durations, minus current Torch elapsed; no new fit or test used",
+    "expected_stage_hours": {
+      "torch_hours": 4.973713644879819,
+      "large_hours": 1.0027193302901773,
+      "fastai_ensemble_hours": 0.48361365566495806
+    },
+    "central_remaining_hours": 2.3969394061127316,
+    "planning_remaining_hours": [
+      2,
+      4
+    ],
+    "central_finish_utc": "2026-09-15T06:04:57.904225+00:00",
+    "earliest_finish_utc": "2026-09-15T05:41:08.922363+00:00",
+    "latest_finish_utc": "2026-09-15T07:41:08.922363+00:00",
+    "unmeasured_test_report_allowance_hours": 0.5,
+    "validation_allowance_hours": 0.05,
+    "caveat": "Stopping improvements can extend Torch; subsequent test/report allowance has not been measured. Planning range, not guaranteed."
+  }
+}
