@@ -1,0 +1,129 @@
+{
+  "status": "COMPLETE_READ_ONLY_GAP_AUDIT",
+  "sources": {
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/RESULT.json": "36ce2edcb00f62f3aae7e598b5919eb1797b80d648255eb1875c0aa79546b6c8",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260921/HISTORY.json": "7c04d714a7bccfbfb0767c8d2e38e5e87a13ea0a0729a1a52e96142ae95fd7e4",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/FIT_RETURNED.json": "b8be75fcd21e4e96befaf008d97f22db58fe87b942be31cedc3522f63c34ab4a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/INTERNAL_MEMBER_ROLES.parquet": "987ab6af8613a05a7bc7c3e491974c7ada64726fbdf8e3cf7e5c44df95c8433e",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/VALIDATION_LEADERBOARD.csv": "cbc1921a08ea3c8f2b08aad87a8f3e687b045597f771b53d496faacd72b22754",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260922/RESULT.json": "375e5cb22065fb38f96698a30b3e1486300f5a72acb65c1266b2eebe44e4e75e",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260922/HISTORY.json": "40c2eed78e6f53d8c66cb0bad82e5557df7018ecc114e30be2add8feeac3a31a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/FIT_RETURNED.json": "4c839e9def25da599a1f476b4f5dd1f256e27b0b3cf54c5bc059590e4da636f1",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/INTERNAL_MEMBER_ROLES.parquet": "e2c48509c5c0459cbaf2bf743ec91c114ac410b238256e904e380fa76d7dbe5a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/VALIDATION_LEADERBOARD.csv": "b81603c2d14f959484496ae6411adcf2b9aacbc351cd452ef47b145a01b40487",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260923/RESULT.json": "4e257b3772cec405f257714a53c957cbf01cb484636330ca74ba38c09e7e2ceb",
+    "outputs/biomaster_endpoint_multitask_20260911/kdki_inactive__binary__seed_20260923/HISTORY.json": "a313559073abd42f3f363b76ed068569ab2abce0e917717562812948fd92da04",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/FIT_RETURNED.json": "5db70047ce936a49c8cf9efcbfb3106b55a219c3010c036c42843d90cd1c4fda",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/INTERNAL_MEMBER_ROLES.parquet": "a9cd75466c01f4bbbea6170fd304509ad38f14a16b35c0ab0df7fb0263b5738f",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/VALIDATION_LEADERBOARD.csv": "0d32dc77464486c1ad86bd2eb23d8f50ee8a86a3e38b71b90a0d263ff7716e53",
+    "outputs/biomaster_endpoint_ablation_20260911/kdki_inactive_TRAIN.parquet": "f60de283c892d7621024d3dd576ade268f5ab5d429765ad9169caf2dead930ee",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260921/RESULT.json": "09a70ffb3047b7dea81dd982551561870abd377d29766b3b4ce4b7fb40e45da4",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260921/HISTORY.json": "ff7bff3e5618ee0d21d313ebcd04c074b7246a675421881326a438614543b2c3",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/FIT_RETURNED.json": "59616fe0f9e6aedce639b4da36d3dce951f20ab81541044d0d6ea880ccedc560",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/INTERNAL_MEMBER_ROLES.parquet": "a88d932f813943debd55b4dfdb943d38a85516b70453d5da5898162d76a24b91",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/VALIDATION_LEADERBOARD.csv": "c0b16022e202bf5571a886f73ed94e613fcc486a41053f7656e77ba47c1386ae",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/RESULT.json": "05d31bfbba2f8b4602665ab3b162f54508c5b0354582775674a6d1903a098bc3",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260922/HISTORY.json": "c20ba607fd7a43775eda4810b7d5793571ff8fc80eff64a2a55203e66934d7ed",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/FIT_RETURNED.json": "53842b8bed0d751a5dacc59866ea8368196984bf3515704b893f73aed12494cc",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/INTERNAL_MEMBER_ROLES.parquet": "7eb183644444467b99d8be29ef26ccd46d078e38ab16bc00cf5947263a9464e1",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/VALIDATION_LEADERBOARD.csv": "1d42f863016bbb08c5a9aaf13cd9f9645dea973813f94b920c93702007a1fb84",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260923/RESULT.json": "8ebc9ae16cc0892415ae8f15e72bd737f6e317cc7a948071d00aab210c4aa057",
+    "outputs/biomaster_endpoint_multitask_20260911/all_inactive__binary__seed_20260923/HISTORY.json": "48a0761ade0a9dd72c205785e90ba4c9bace1acc654a6d9d5abf9c9c5e6f91cc",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260923/FIT_RETURNED.json": "bcd6908403a0ce21373366859dfc18329e44e32463d9b62c0a7cca3cf79c6267",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260923/INTERNAL_MEMBER_ROLES.parquet": "547f79c20437722d2461ba8d09ff041ce1b2f2bbf90ec2b8e32d5271d19ec3f3",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260923/VALIDATION_LEADERBOARD.csv": "5ff488d61f3aab37bac52e912bc81cefedcc2863f1e74bfcaa02fac8e8bc434d",
+    "outputs/biomaster_endpoint_ablation_20260911/all_inactive_TRAIN.parquet": "d0f5a574b63cb9817556409d9bdd2b6b184a3cc63384989bc2bb8e53dd696c7d",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/TEST_PREDICTIONS.parquet": "4dab7146ed18d4c208213158074972435ab40bdda3632ae0319979d2a123d795",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/TEST_PREDICTIONS.parquet": "abce065a02277a80a4f4149763a9318be5726542b487c81b10fa6fad0038bf2c",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/TEST_PREDICTIONS.parquet": "aa9af28daf55b929032348d373e2172e1b3248d7bd53cbbb43c7e3a3c6cc3201",
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_TEST.parquet": "01d221b3452645eef0edb9b27af5fa999237c95fb4b22ea6961d6f057127d9c5",
+    "outputs/biomaster_endpoint_multitask_20260911/TEST_PREDICTIONS.parquet": "6edfd02b26d580325719a8ae7ff45b995853e1c3616634f77a0f14dede0a8e9c",
+    "outputs/biomaster_endpoint_multitask_20260911/MODEL_CONFIG.json": "041e9e4eabbb1eea0129d3a4f8a39bfad9cff4a4a2ac21220b642955da87560f",
+    "outputs/biomaster_endpoint_ablation_20260911/features/DRUGCLIP_COMPLETE.json": "f06a2fc51062dee27c1ef361c4d825cdc1fef44ce264da6c7155b92b87aaba40",
+    "outputs/biomaster_endpoint_ablation_20260911/features/MANIFEST.json": "55c6bc228c422c733a8ab5b807f81cd9812c706fc5e4acd790a2b24b2d83bd9c",
+    "outputs/biomaster_dtiam_ab_20260912/features/MANIFEST.json": "31d2e474b487ced89415b3a05ef33304df1f8590ec0c886dce82f6f378213d8f",
+    "outputs/biomaster_endpoint_multitask_20260911/DATA_MANIFEST.json": "e73a3d1848c7ea8f0879608b43b15b558e88805d3cb37fb4edd1337fa4e6d287",
+    "outputs/biomaster_dtiam_ab_20260912/PROTOCOL.json": "28e9ffa4bac972319aea7eeec427d1fe4374dc1396d39a29c486b335eaef6d58",
+    "scripts/audit_palinova_dtiam_gap_20260915.py": "ab75d52e5d0345d0ef8f1fdb425ada9742422691788f0fa57fddd2a0b3780757"
+  },
+  "same_supervised_members_labels_and_outer_splits": true,
+  "pretraining_data_equivalence_claimed": false,
+  "feature_health": [
+    {
+      "arm": "kdki_inactive",
+      "feature": "Palinova_DrugCLIP",
+      "rows": 140064,
+      "finite_rows": 140064,
+      "nonzero_rows": 136115
+    },
+    {
+      "arm": "kdki_inactive",
+      "feature": "DTIAM_BerMol",
+      "rows": 140064,
+      "finite_rows": 140064,
+      "nonzero_rows": 140064
+    },
+    {
+      "arm": "kdki_inactive",
+      "feature": "Palinova_ESM2",
+      "rows": 2290,
+      "finite_rows": 2290,
+      "nonzero_rows": 2290
+    },
+    {
+      "arm": "kdki_inactive",
+      "feature": "DTIAM_ESM2",
+      "rows": 2290,
+      "finite_rows": 2290,
+      "nonzero_rows": 2290
+    },
+    {
+      "arm": "all_inactive",
+      "feature": "Palinova_DrugCLIP",
+      "rows": 690439,
+      "finite_rows": 690439,
+      "nonzero_rows": 678566
+    },
+    {
+      "arm": "all_inactive",
+      "feature": "DTIAM_BerMol",
+      "rows": 690439,
+      "finite_rows": 690439,
+      "nonzero_rows": 690439
+    },
+    {
+      "arm": "all_inactive",
+      "feature": "Palinova_ESM2",
+      "rows": 3647,
+      "finite_rows": 3647,
+      "nonzero_rows": 3647
+    },
+    {
+      "arm": "all_inactive",
+      "feature": "DTIAM_ESM2",
+      "rows": 3647,
+      "finite_rows": 3647,
+      "nonzero_rows": 3647
+    }
+  ],
+  "observed_configuration": {
+    "variant": "global",
+    "width": 192,
+    "pair_width": 32,
+    "blocks": 2,
+    "dropout": 0.1,
+    "capacity_hidden": 768,
+    "drug_representation": "drugclip_morgan"
+  },
+  "verified_architecture": "Global branch projects molecule 2601->192, protein1280->192, merges d/t/product/absolute difference, one global fusion residual and one additional residual; local token/pocket blocks inactive.",
+  "note": "global variant ignores capacity_hidden and cfg.blocks for residual depth; increasing only those config values would not deepen the active branch.",
+  "limitations": [
+    "Learner comparison is validation, not new TEST inference for unselected base learners",
+    "Availability strata use the previously inspected TEST for retrospective diagnosis, not model selection",
+    "Changing feature families, pooling, heads, weights and model search together does not isolate causal contribution",
+    "Streaming training BCE is not an independently rescored train/validation loss gap",
+    "GPU neural and CPU AutoGluon elapsed times do not measure equal compute budgets"
+  ],
+  "training_started": false,
+  "production_changed": false
+}

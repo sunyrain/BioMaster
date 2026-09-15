@@ -1,0 +1,9 @@
+arm,feature,rows,finite_rows,nonzero_rows
+kdki_inactive,Palinova_DrugCLIP,140064,140064,136115
+kdki_inactive,DTIAM_BerMol,140064,140064,140064
+kdki_inactive,Palinova_ESM2,2290,2290,2290
+kdki_inactive,DTIAM_ESM2,2290,2290,2290
+all_inactive,Palinova_DrugCLIP,690439,690439,678566
+all_inactive,DTIAM_BerMol,690439,690439,690439
+all_inactive,Palinova_ESM2,3647,3647,3647
+all_inactive,DTIAM_ESM2,3647,3647,3647
