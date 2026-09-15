@@ -1,0 +1,99 @@
+{
+  "utc": "2026-09-15T01:28:25.360340+00:00",
+  "runner": {
+    "stage": "TRAINING",
+    "updated_utc": "2026-09-14T17:59:41.905146+00:00",
+    "pid": 2015,
+    "current_suite": "all_inactive__seed_20260923",
+    "completed_suites": 5,
+    "total_suites": 6
+  },
+  "completed_suites": [
+    "all_inactive__seed_20260921",
+    "all_inactive__seed_20260922",
+    "kdki_inactive__seed_20260921",
+    "kdki_inactive__seed_20260922",
+    "kdki_inactive__seed_20260923"
+  ],
+  "total_suites": 6,
+  "queue_alive": true,
+  "child_pid": 66259,
+  "child_model": "NeuralNetTorch",
+  "child_elapsed_hours": 2.4010066627777777,
+  "child_RSS_GiB": 17.965267181396484,
+  "completed_current_learners": [
+    "CatBoost",
+    "ExtraTreesEntr",
+    "ExtraTreesGini",
+    "LightGBM",
+    "LightGBMXT",
+    "RandomForestEntr",
+    "RandomForestGini",
+    "XGBoost"
+  ],
+  "latest_epoch": 170,
+  "latest_updates": 366860,
+  "best_epoch": 164,
+  "log_modified_utc": "2026-09-15T01:27:46.052865+00:00",
+  "cgroup_memory_GiB": 46.125083923339844,
+  "cgroup_memory_limit_GiB": 90.0,
+  "cgroup_memory_events": "low 0\nhigh 29852\nmax 0\noom 0\noom_kill 0\n",
+  "root_free_GiB": 10.637687683105469,
+  "data_free_GiB": 56.6177864074707,
+  "test_gate_open": false,
+  "current_errors": [],
+  "eta": {
+    "previous_B_stage_hours": {
+      "20260921": {
+        "torch_hours": 4.130549032358556,
+        "large_hours": 1.007221126861146,
+        "fastai_ensemble_hours": 0.4950719240359548
+      },
+      "20260922": {
+        "torch_hours": 5.816878257401081,
+        "large_hours": 0.9982175337192085,
+        "fastai_ensemble_hours": 0.47215538729396134
+      }
+    },
+    "current_torch_expected_total_hours": 4.973713644879819,
+    "central_remaining_hours": 4.609039968057177,
+    "remaining_planning_hours": [
+      3,
+      7
+    ],
+    "central_finish_utc": "2026-09-15T06:04:57.904225+00:00",
+    "earliest_planning_finish_utc": "2026-09-15T04:28:25.360340+00:00",
+    "latest_planning_finish_utc": "2026-09-15T08:28:25.360340+00:00",
+    "common_validation_allowance_hours": 0.05,
+    "test_report_allowance_hours": 0.5,
+    "caveat": "Stage durations extrapolated from two completed B seeds. TEST/report allowance unmeasured; early stopping and interruptions can change ETA."
+  },
+  "validation_only": true,
+  "test_predictions_read": false,
+  "validation_pairs": 34685,
+  "validation_positive": 24419,
+  "validation_negative": 10266,
+  "sources": {
+    "outputs/biomaster_endpoint_ablation_20260911/COMMON_VALIDATION.parquet": "d9bd574e531befffcb4445bb2a011ba9eab46471ac0a132d84bafb4890371dba",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/SELECTION.json": "a23027f877a8e90f618348b7562d7feaa84e31e290d951f330b6a47ee5b0e1d0",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/CALIBRATION.json": "619f128388e3e3f5afe315e8dc1ea985f42c5792afc64379f307b8952f9db433",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/VALIDATION_PREDICTIONS.parquet": "e7d655ce39a355b4b6ad153a37ab73bc3a374941f4346023eae71bc2cc0180f9",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/FIT_RETURNED.json": "59616fe0f9e6aedce639b4da36d3dce951f20ab81541044d0d6ea880ccedc560",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/SELECTION.json": "308cf611a6b6ce013ce8b81a9bb0e16617594cead3e1cce19f30ae638db8a721",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/CALIBRATION.json": "7e3ddeed63fea5d375123c6620740b89827d400ff7e88d30cefb932b130c6e5b",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/VALIDATION_PREDICTIONS.parquet": "9c185be792ecb1061c1bb5fde5dafe5a8801e7cc646988d4cc4267413ffddbf5",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/FIT_RETURNED.json": "53842b8bed0d751a5dacc59866ea8368196984bf3515704b893f73aed12494cc",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/SELECTION.json": "8ebc48b6e1d621322c6e8b3b329afbd17e124dbf90246c55a1cc884142c4db3c",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/CALIBRATION.json": "e6853a5c3b6ff4a18bace179d3b981449249650d3f3d5371c6577a6bf4170c6c",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/VALIDATION_PREDICTIONS.parquet": "74e93316adc3b1a6a2d8acbd1a19d045f81cf6f8a61d0c1c75113c9543617f56",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/FIT_RETURNED.json": "b8be75fcd21e4e96befaf008d97f22db58fe87b942be31cedc3522f63c34ab4a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/SELECTION.json": "7d2f7c8c9c2b6dc4ba75ff473620f296af0627f997f3fd78d76b0d3c82233e2a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/CALIBRATION.json": "d9fd366f0958c80608aec5851f889b452a46e5aa6df46ebe53e899e1cff85fda",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/VALIDATION_PREDICTIONS.parquet": "cce9509a9efe9615d38110008e0d3b387a094b51d517c2cccf409074bafe4502",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/FIT_RETURNED.json": "4c839e9def25da599a1f476b4f5dd1f256e27b0b3cf54c5bc059590e4da636f1",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/SELECTION.json": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/CALIBRATION.json": "ede6b00ab3d0393f8e20358ad1c8781ff731e5c7b75aaddbbc8ba412760f36c6",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/VALIDATION_PREDICTIONS.parquet": "fb9125dc405bfc9de5a1a19cb5192263a2b3a57f511287f444c4b07f2cb737d1",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/FIT_RETURNED.json": "5db70047ce936a49c8cf9efcbfb3106b55a219c3010c036c42843d90cd1c4fda"
+  }
+}
