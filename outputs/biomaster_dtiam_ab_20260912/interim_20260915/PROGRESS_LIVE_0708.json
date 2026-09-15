@@ -1,0 +1,59 @@
+{
+  "utc": "2026-09-15T07:08:52.339242+00:00",
+  "completed_suites": 5,
+  "total_suites": 6,
+  "current_suite": "all_inactive__seed_20260923",
+  "current_model": "LightGBMLarge",
+  "completed_base_learners": 9,
+  "total_base_learners": 11,
+  "current_last_logged_boost_round": 6100,
+  "current_model_elapsed_hours": 0.6760893272222223,
+  "torch": {
+    "completed_utc": "2026-09-15T06:28:08.458013+00:00",
+    "actual_epochs": 562,
+    "actual_updates": 1212796,
+    "retained_best_epoch": 362,
+    "hours": 7.394465242342299,
+    "peak_RSS_GiB": 59.07353973388672,
+    "model_sha256": "f5ad766db893752b42b9eb070c1ceb81babf7b74f8c074c26c052255efe5f6af",
+    "elapsed_hours_above_previous_two_seed_mean": 2.4207515974624805
+  },
+  "queue_alive": true,
+  "child_alive": true,
+  "child_pid": 81045,
+  "last_log_utc": "2026-09-15T07:08:38.403032+00:00",
+  "child_RSS_GiB": 17.84939193725586,
+  "cgroup_memory_GiB": 45.5498161315918,
+  "memory_events": "low 0\nhigh 29852\nmax 0\noom 0\noom_kill 0\n",
+  "root_free_GiB": 10.321250915527344,
+  "data_free_GiB": 56.61393356323242,
+  "current_errors": [],
+  "test_gate_open": false,
+  "test_prediction_files": 0,
+  "new_common_validation": false,
+  "completed_selection_calibration_fit_hashes_unchanged": true,
+  "source_sha256": {
+    "outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS.json": "cb587317a50c99eca93bc7fbdea782cc709ee71858da5455c9cd9b5a3296f16d",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260923/ISOLATED_CORE/MODEL_NeuralNetTorch.json": "193da6e73223d3c7572af86fbb410cddad2448a1bda7f348877c4dbd99b5c843",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260923/CORE_NeuralNetTorch.log": "7d2743300f5caafac6922d416a6ce1875e0ae6522fc178aff4e6c00f7055320e"
+  },
+  "eta": {
+    "basis": "Completed Torch actual duration replaces prior extrapolation; mean previous two B LightGBMLarge and FastAI durations",
+    "previous_stage_means_hours": {
+      "torch_hours": 4.973713644879819,
+      "large_hours": 1.0027193302901773,
+      "fastai_ensemble_hours": 0.48361365566495806
+    },
+    "central_remaining_hours": 1.3602436587329132,
+    "planning_remaining_hours": [
+      1,
+      2.5
+    ],
+    "central_finish_utc": "2026-09-15T08:30:29.216413+00:00",
+    "earliest_planning_finish_utc": "2026-09-15T08:08:52.339242+00:00",
+    "latest_planning_finish_utc": "2026-09-15T09:38:52.339242+00:00",
+    "validation_allowance_hours": 0.05,
+    "test_report_allowance_hours": 0.5,
+    "caveat": "Test/report allowance still unmeasured. Planning interval assumes no interruption; subsequent early stopping or report runtime may change ETA."
+  }
+}
