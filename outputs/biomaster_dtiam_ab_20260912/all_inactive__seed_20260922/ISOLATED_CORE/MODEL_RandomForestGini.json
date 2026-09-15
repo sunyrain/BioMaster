@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-14T04:33:10.497975+00:00",
+  "model": "RandomForestGini",
+  "seconds": 942.1146046156064,
+  "peak_RSS_GiB": 19.938655853271484,
+  "model_sha256": "515d628d7ff4b85b3c2a9974852dba0e9ff0f309c5ff2722e2abcde8cdf460e3",
+  "fitted_parameters": {
+    "n_estimators": 300
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-15T07:59:09.525955+00:00",
+  "test_rows": 274968,
+  "selection_sha256": "7d2f7c8c9c2b6dc4ba75ff473620f296af0627f997f3fd78d76b0d3c82233e2a",
+  "predictions_sha256": "abce065a02277a80a4f4149763a9318be5726542b487c81b10fa6fad0038bf2c"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-14T23:04:13.273376+00:00",
+  "model": "XGBoost",
+  "seconds": 8341.91873575747,
+  "peak_RSS_GiB": 30.721904754638672,
+  "model_sha256": "08b3eeaa3a80850f510729dd036d67aeb5fd2050074536f61a7a6f882b7eee8c",
+  "fitted_parameters": {
+    "n_estimators": 8331
+  }
+}

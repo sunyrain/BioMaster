@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-14T20:37:00.352697+00:00",
+  "model": "CatBoost",
+  "seconds": 2615.6130880862474,
+  "peak_RSS_GiB": 17.76557159423828,
+  "model_sha256": "f7028cd83a90920a45427a85e94f90c1b4d198e492a9b883e87cced138fa72ec",
+  "fitted_parameters": {
+    "iterations": 10000
+  }
+}

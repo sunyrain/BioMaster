@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-14T04:17:21.209328+00:00",
+  "model": "LightGBM",
+  "seconds": 2527.370568894781,
+  "peak_RSS_GiB": 17.754230499267578,
+  "model_sha256": "91c9bf64c58022cfdcf3074671ea24b6415615be81e8820a5fbf0024a5c93318",
+  "fitted_parameters": {
+    "num_boost_round": 10000
+  }
+}

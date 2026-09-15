@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-14T13:50:56.252260+00:00",
+  "model": "NeuralNetTorch",
+  "seconds": 20940.76172664389,
+  "peak_RSS_GiB": 59.070335388183594,
+  "model_sha256": "cb4c162a575c5af95dd95928297c87fbe8d08202361ecf387741bd0a41d057fc",
+  "fitted_parameters": {
+    "batch_size": 512,
+    "num_epochs": 267
+  }
+}

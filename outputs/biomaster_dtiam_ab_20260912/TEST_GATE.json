@@ -1,0 +1,12 @@
+{
+  "status": "ALL_SIX_FITS_AND_VALIDATION_CHOICES_FROZEN",
+  "opened_utc": "2026-09-15T07:57:10.207872+00:00",
+  "selection_hashes": {
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260921/SELECTION.json": "8ebc48b6e1d621322c6e8b3b329afbd17e124dbf90246c55a1cc884142c4db3c",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260922/SELECTION.json": "7d2f7c8c9c2b6dc4ba75ff473620f296af0627f997f3fd78d76b0d3c82233e2a",
+    "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/SELECTION.json": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/SELECTION.json": "a23027f877a8e90f618348b7562d7feaa84e31e290d951f330b6a47ee5b0e1d0",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260922/SELECTION.json": "308cf611a6b6ce013ce8b81a9bb0e16617594cead3e1cce19f30ae638db8a721",
+    "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260923/SELECTION.json": "1353e8381cce6408b53277039215cad61061be720b21f37498a631f15b6a33bd"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-09-14T05:40:23.248018+00:00",
+  "model": "ExtraTreesEntr",
+  "seconds": 225.82043746858835,
+  "peak_RSS_GiB": 19.951168060302734,
+  "model_sha256": "2b2537aaf90e5aa318072297be4507ad71893145c6e7d8daea8ae4e5c6a6039a",
+  "fitted_parameters": {
+    "n_estimators": 300
+  }
+}
