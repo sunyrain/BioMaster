@@ -1,0 +1,81 @@
+[
+  {
+    "type": "file",
+    "oid": "bba17f20b1c75b8ac60ec697d7063defedd1780a",
+    "size": 1732,
+    "path": "v1.0.0/hparams.json",
+    "lastCommit": {
+      "id": "a2ffdeb3b2acf8e77dfff98bd8821db4d0d2c2fa",
+      "title": "Publish v1.0.0",
+      "date": "2026-07-11T16:27:36.000Z"
+    },
+    "securityFileStatus": {
+      "status": "safe",
+      "protectAiScan": {
+        "status": "unscanned",
+        "reportLink": "https://insights-db.paloaltonetworks.com/models/recursionpharma/nesso/499ed12b0343918ab01b2519226390cf8eca038a/files?blob-id=bba17f20b1c75b8ac60ec697d7063defedd1780a&utm_source=huggingface"
+      },
+      "avScan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.3/28053"
+      },
+      "pickleImportScan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      },
+      "virusTotalScan": {
+        "status": "unscanned"
+      },
+      "jFrogScan": {
+        "status": "unscanned",
+        "message": "Not a machine-learning model"
+      }
+    }
+  },
+  {
+    "type": "file",
+    "oid": "6cdbc17ac3a83600e9469c287c96f878d595bbd3",
+    "size": 165426752,
+    "lfs": {
+      "oid": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622",
+      "size": 165426752,
+      "pointerSize": 134
+    },
+    "xetHash": "824b66dadac9085d0ccc0d8288fdab8ddf7c82229b0b680f78599c8db95ce7c8",
+    "path": "v1.0.0/model.safetensors",
+    "lastCommit": {
+      "id": "ba48f9df0c1c4800277031d2459e44a214589b39",
+      "title": "Publish v1.0.0",
+      "date": "2026-07-11T16:27:36.000Z"
+    },
+    "securityFileStatus": {
+      "status": "safe",
+      "protectAiScan": {
+        "status": "unscanned",
+        "reportLink": "https://insights-db.paloaltonetworks.com/models/recursionpharma/nesso/499ed12b0343918ab01b2519226390cf8eca038a/files?blob-id=6cdbc17ac3a83600e9469c287c96f878d595bbd3&utm_source=huggingface"
+      },
+      "avScan": {
+        "status": "safe",
+        "message": "",
+        "version": "1.5.3/28053"
+      },
+      "pickleImportScan": {
+        "status": "unscanned",
+        "pickleImports": [],
+        "version": "0.0.0"
+      },
+      "virusTotalScan": {
+        "status": "safe",
+        "message": "0/76 engines detect it as malicious.",
+        "reportLink": "https://www.virustotal.com/gui/file/9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622?utm_source=huggingface"
+      },
+      "jFrogScan": {
+        "status": "safe",
+        "message": "Safe model, does not support code execution on load.",
+        "reportLink": "https://research.jfrog.com/model-threats/noautoload-suscode?utm_source=huggingface"
+      }
+    }
+  }
+]

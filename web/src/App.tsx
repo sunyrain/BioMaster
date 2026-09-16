@@ -66,6 +66,7 @@ import Workspace, { SaveEntityButton, RecentEntities, recordVisit } from "./Work
 const AffinityAtlas = lazy(() => import("./AffinityAtlas"));
 const SPRDirectory = lazy(() => import("./SPRDirectory"));
 const ResearchBrowse = lazy(() => import("./ResearchBrowse"));
+const FrontierModels = lazy(() => import("./FrontierModels"));
 
 type Route = {
   page: "home" | "drugs" | "targets" | "sources" | "workspace" | "entity" | "browse" | "spr" | "affinity";
@@ -835,6 +836,7 @@ function RankingsPanel({
           : "原始分数用于同一模型内排序。 "}
         “未标注”不代表阴性；已知关系不等于已验证该预测。
       </p>
+      {!compact && view === "parallel" && <Suspense fallback={<Loading />}><FrontierModels kind={entity.kind} identifier={entity.id} compact /></Suspense>}
       {selected &&
         createPortal(
           <div className="drawer-backdrop" onClick={() => setSelected(null)}>

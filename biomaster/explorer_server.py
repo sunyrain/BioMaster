@@ -147,6 +147,16 @@ class ExplorerHandler(BaseHTTPRequestHandler):
                 self._json({"status": "ok", "loaded": data._ready})
             elif path == "/api/summary":
                 self._json(data.summary())
+            elif path == "/api/frontier-dti":
+                from .frontier_dti import load_snapshot
+                self._json(load_snapshot(data.root, arg("kind"), arg("id")))
+            elif path == "/api/frontier-dti.csv":
+                from .frontier_dti import DIRECTORY
+                table = data.root / DIRECTORY / "SPR384_MODEL_REVIEW.csv"
+                if not table.exists():
+                    self._json({"error": "模型复核表尚未生成。"}, 404)
+                else:
+                    self._send(table.read_bytes(), "text/csv; charset=utf-8", filename="SPR384_MODEL_REVIEW.csv")
             elif path == "/api/browse":
                 from .explorer_browse import browse
                 self._json(browse(data, arg("section", "known_diseases"), arg("search"), arg("category", "all"), int(arg("page", "1")), int(arg("page_size", "20"))))

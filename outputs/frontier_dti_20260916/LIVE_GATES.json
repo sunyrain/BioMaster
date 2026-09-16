@@ -1,0 +1,42 @@
+[
+  {
+    "url": "http://127.0.0.1:18765/login",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "url": "http://127.0.0.1:18765/api/frontier-dti",
+    "status": 401,
+    "expected": 401
+  },
+  {
+    "url": "http://127.0.0.1:18765/api/frontier-dti.csv",
+    "status": 401,
+    "expected": 401
+  },
+  {
+    "url": "http://127.0.0.1:18765/api/spr-final.csv",
+    "status": 401,
+    "expected": 401
+  },
+  {
+    "url": "https://palinova.xyz/login",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "url": "https://palinova.xyz/api/frontier-dti",
+    "status": 401,
+    "expected": 401
+  },
+  {
+    "url": "https://palinova.xyz/api/frontier-dti.csv",
+    "status": 401,
+    "expected": 401
+  },
+  {
+    "url": "https://palinova.xyz/api/spr-final.csv",
+    "status": 401,
+    "expected": 401
+  }
+]

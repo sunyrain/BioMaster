@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "candidate_rows": 384,
+  "auth_gates": "401 without login",
+  "csv_exact_pair_join": true,
+  "original_final_csv_unchanged": true,
+  "browser_checks": [
+    "SPR model tab",
+    "candidate search",
+    "disagreement sorting",
+    "completed ProbeMatch metric selector",
+    "seven-model plot keyboard inspection",
+    "mobile no page overflow",
+    "drug model disagreement integration"
+  ],
+  "page_errors": [],
+  "scope": "same code/assets/data on ephemeral loopback authenticated server"
+}

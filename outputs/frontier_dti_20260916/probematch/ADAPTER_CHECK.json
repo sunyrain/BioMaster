@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "pair_id": "CSKDFZIMJXRJGH-VWLPUNTISA-N__CHEMBL1871",
+      "official_pack_predict": 0.9218999147415161,
+      "adapter_score": 0.921899914741516,
+      "absolute_difference": 1.1102230246251565e-16,
+      "protein_length": 920
+    },
+    {
+      "pair_id": "IVBHGBMCVLDMKU-GXNBUGAJSA-N__CHEMBL261",
+      "official_pack_predict": 0.003790319664403796,
+      "adapter_score": 0.0037903245538473,
+      "absolute_difference": 4.889443503720836e-09,
+      "protein_length": 261
+    },
+    {
+      "pair_id": "DRHKJLXJIQTDTD-OAHLLOKOSA-N__CHEMBL3729",
+      "official_pack_predict": 0.9611297845840454,
+      "adapter_score": 0.9611295461654664,
+      "absolute_difference": 2.384185789905402e-07,
+      "protein_length": 312
+    },
+    {
+      "pair_id": "UJVDJAPJQWZRFR-DHIUTWEWSA-N__CHEMBL1808",
+      "official_pack_predict": 0.0470152348279953,
+      "adapter_score": 0.0470152609050273,
+      "absolute_difference": 2.6077031999027778e-08,
+      "protein_length": 1306
+    },
+    {
+      "pair_id": "SOLUWJRYJLAZCX-LYOVBCGYSA-N__CHEMBL3717",
+      "official_pack_predict": 0.9471885561943054,
+      "adapter_score": 0.9471884965896606,
+      "absolute_difference": 5.960464477539063e-08,
+      "protein_length": 1390
+    }
+  ],
+  "contract": "Official pack + predict against production adapter, including long-sequence packing",
+  "strict_checkpoint": true
+}

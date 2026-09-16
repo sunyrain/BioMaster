@@ -1,0 +1,79 @@
+[
+  {
+    "repo": "Rostlab/prot_bert_bfd",
+    "revision": "6c5c8a55a52ff08a664dfd584aa1773f125a0487",
+    "file": "config.json",
+    "bytes": 361,
+    "sha256": "44c1e1229d520841e5b29f1dd2292595219061daf0c5f5dacb4f68d1272d69a3"
+  },
+  {
+    "repo": "Rostlab/prot_bert_bfd",
+    "revision": "6c5c8a55a52ff08a664dfd584aa1773f125a0487",
+    "file": "pytorch_model.bin",
+    "bytes": 1684058277,
+    "sha256": "89a5b439bde4df5e6b09a7e568066a66eabacb69cbca6cbae59e98f9756db804"
+  },
+  {
+    "repo": "Rostlab/prot_bert_bfd",
+    "revision": "6c5c8a55a52ff08a664dfd584aa1773f125a0487",
+    "file": "special_tokens_map.json",
+    "bytes": 112,
+    "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+  },
+  {
+    "repo": "Rostlab/prot_bert_bfd",
+    "revision": "6c5c8a55a52ff08a664dfd584aa1773f125a0487",
+    "file": "tokenizer_config.json",
+    "bytes": 86,
+    "sha256": "73f5e97ab29042bac49dc96f7b8a7a790994509bbd2fe3e9cd4f59affc46c2ce"
+  },
+  {
+    "repo": "Rostlab/prot_bert_bfd",
+    "revision": "6c5c8a55a52ff08a664dfd584aa1773f125a0487",
+    "file": "vocab.txt",
+    "bytes": 81,
+    "sha256": "7ea18f4fe3a796c1146f9830d50334a251f368db96bdd0606e78846ca3a30607"
+  },
+  {
+    "repo": "seyonec/PubChem10M_SMILES_BPE_450k",
+    "revision": "c18fccd09b3326bf2d4633412c256d7db872156d",
+    "file": "config.json",
+    "bytes": 515,
+    "sha256": "bbce3b7bd4a5ff3c246eaf85cd8ed3cb12828a56b4e65153f5f9f20b3277854e"
+  },
+  {
+    "repo": "seyonec/PubChem10M_SMILES_BPE_450k",
+    "revision": "c18fccd09b3326bf2d4633412c256d7db872156d",
+    "file": "pytorch_model.bin",
+    "bytes": 336422980,
+    "sha256": "f471de1ad73de11d47e1bbdfddb93aeace0b8aeab31ec03bcde0eabb17a97264"
+  },
+  {
+    "repo": "seyonec/PubChem10M_SMILES_BPE_450k",
+    "revision": "c18fccd09b3326bf2d4633412c256d7db872156d",
+    "file": "merges.txt",
+    "bytes": 101307,
+    "sha256": "711b94fe4512ea656c3e849b9cbad47033bcc9521e0042bad5bf807d7d990020"
+  },
+  {
+    "repo": "seyonec/PubChem10M_SMILES_BPE_450k",
+    "revision": "c18fccd09b3326bf2d4633412c256d7db872156d",
+    "file": "vocab.json",
+    "bytes": 164540,
+    "sha256": "f1e78bee7d674f970495446b3ec0f44ab8e1e4620d2172638c247d1645ba89d1"
+  },
+  {
+    "repo": "seyonec/PubChem10M_SMILES_BPE_450k",
+    "revision": "c18fccd09b3326bf2d4633412c256d7db872156d",
+    "file": "special_tokens_map.json",
+    "bytes": 772,
+    "sha256": "c611b1f7d416eb001ee4f293d903ea8c88e703463f1d403f1866a0352743fd00"
+  },
+  {
+    "repo": "seyonec/PubChem10M_SMILES_BPE_450k",
+    "revision": "c18fccd09b3326bf2d4633412c256d7db872156d",
+    "file": "tokenizer_config.json",
+    "bytes": 62,
+    "sha256": "359fdd360be3de14228b56e2ca9c6c940ff0b1a3dc88a5bf32bdeeb21ec7be9c"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "checkpoint_sha256": "bd7de877c1198f62b1b2038c25b2b96c588c9b49f565e713b0d14c3f4e6b84eb",
+  "source_revision": "2b9c0dcb40bcc4e5482d6ea98aa1419538ecdd12",
+  "strict_weight_load": true,
+  "device": "cpu",
+  "missing_dependency": "Inactive mask classes raise if reached; active forward unchanged",
+  "ranking_score": "softmax of official 0.40 fused + 0.27 semantic + 0.33 structure logits",
+  "seed": "sha256(pair_id) first 32 bits for stochastic ProbAttention",
+  "protein_context": "first 5000 residues; official LM retains CLS/SEP; packed first 1200 tokens",
+  "drug_context": "full SMILES; packed first 100 tokens",
+  "training": "none",
+  "feature_errors": {}
+}

@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-09-16T13:26:06.945865+00:00",
+  "cohorts": {
+    "SPR384": 384,
+    "BINDINGDB479": 479,
+    "BINDINGDB_AB_UNSEEN175": 175
+  },
+  "unique_pairs": 863,
+  "original_spr_sha256": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+  "historical_panel_sha256": "0bd38d12297175bb3e225a4255b8f163a12a3e3a9335a2b3b8dd6ed37af53151",
+  "input_sha256": "3e9bb2c79e860343431a509f3eb37bc4f68c8dd356941deab0b49a6f70070059",
+  "primary_scores": {
+    "nesso": "affinity_probability_binary",
+    "probematch": "official ensemble positive probability",
+    "dtbind": "occurrence sigmoid"
+  },
+  "secondary_scores": {
+    "nesso_pic50": "6 - affinity_pred_value; predicted pIC50, not measured Kd"
+  },
+  "evaluation": "AP, AUROC, prevalence; identical successfully-scored subsets for comparisons; no test-set threshold fitting",
+  "caveat": "Public checkpoints training overlap with BindingDB is unknown; A/B-unseen does not establish new-model-unseen status.",
+  "ranks": "Within frozen SPR384 pool only; no new full 720x384 matrix ranking.",
+  "frozen_experiment": "Unchanged, controls separate; no new scores determine experimental truth.",
+  "model_revisions": {
+    "ProbeMatchDTI": "2b9c0dcb40bcc4e5482d6ea98aa1419538ecdd12",
+    "DTBind": "08983e476760fbe5b5dc62be06fd2e087b31ac0c"
+  },
+  "nesso_settings": {
+    "recycling_steps": 5,
+    "precision": "bf16-mixed",
+    "seed": 20260916,
+    "pocket_crop": true
+  }
+}

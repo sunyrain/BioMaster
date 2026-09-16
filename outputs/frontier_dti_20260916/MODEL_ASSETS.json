@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": ".external/DTBind/models/occurrence_model.pth",
+      "bytes": 4306239,
+      "sha256": "99a82b9dba312bd8316509723b095d8206af5bb45c5488a5911c56ba720be85d"
+    },
+    {
+      "path": ".external/DTBind/models/affinity_model.pth",
+      "bytes": 10793387,
+      "sha256": "c1b9d5ba677114761a60059933ea4abcdf9838cdc3fde839257a63cf13df4ab5"
+    },
+    {
+      "path": ".external/ProbeMatchDTI/model/All_Model",
+      "bytes": 78050677,
+      "sha256": "bd7de877c1198f62b1b2038c25b2b96c588c9b49f565e713b0d14c3f4e6b84eb"
+    },
+    {
+      "path": ".cache/nesso/huggingface/models--recursionpharma--nesso/snapshots/1896c84c7186c506c7efd79051480809d51098bf/v1.0.0/hparams.json",
+      "bytes": 1732,
+      "sha256": "06aa0c44fcd44eaa2c5c2473bfcf0d9a3af892d867e5279859bb22eb0f6e2d72"
+    },
+    {
+      "path": ".cache/nesso/huggingface/models--recursionpharma--nesso/snapshots/1896c84c7186c506c7efd79051480809d51098bf/v1.0.0/model.safetensors",
+      "bytes": 165426752,
+      "sha256": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622"
+    }
+  ],
+  "revisions": {
+    "nesso": "6b2626dd5b2eea29ea09861bb0ac0d0e3344dfd3",
+    "ProbeMatchDTI": "2b9c0dcb40bcc4e5482d6ea98aa1419538ecdd12",
+    "DTBind": "08983e476760fbe5b5dc62be06fd2e087b31ac0c"
+  }
+}
