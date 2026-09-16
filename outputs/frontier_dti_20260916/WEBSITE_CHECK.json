@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "checked_utc": "2026-09-16T14:20:50.524944+00:00",
+  "checked_utc": "2026-09-16T14:54:38.460220+00:00",
   "candidate_rows": 384,
   "auth_gates": "401 without login",
   "csv_exact_pair_join": true,
@@ -14,7 +14,9 @@
     "mobile no page overflow on SPR and entity views",
     "seven-model main view on drug overview, drug rankings and target rankings",
     "four-model view preserved separately",
-    "coverage reasons and zero-common target handling"
+    "coverage reasons and zero-common target handling",
+    "AR frozen seven sorted by forward score with explicit scope",
+    "full-catalog Top10 navigation and exact API ranking match on drug and target views"
   ],
   "page_errors": [],
   "scope": "same code/assets/data on ephemeral loopback authenticated server"

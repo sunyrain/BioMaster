@@ -92,6 +92,24 @@ def main():
                     page.get_by_role('button',name='原四模型分歧',exact=True).click()
                     page.get_by_role('group',name='四模型排名位置平行坐标图',exact=True).wait_for()
                     assert page.locator('.frontier-models').count()==0
+                    page.get_by_role('button',name='模型分歧 · 七模型',exact=True).click()
+                    page.get_by_role('button',name='查看 ReTargetMap 全目录Top10',exact=False).click()
+                    page.wait_for_function("document.querySelectorAll('.rv-matrix tbody tr').length === 10")
+                    expected=data.rankings(kind,identifier,model='biomaster',page_size=10)['items']
+                    assert page.locator('.rv-entity strong').all_text_contents()==[r['name'] for r in expected]
+                    assert page.locator('.rv-order').all_text_contents()==[f'{i:02d}' for i in range(1,11)]
+                page.goto(base+'/#/target/CHEMBL1871/rankings',wait_until='networkidle')
+                page.get_by_role('button',name='模型分歧 · 七模型',exact=True).click()
+                page.get_by_role('button',name='逐对评分',exact=True).click()
+                page.get_by_label('新模型复核排序').select_option('biomaster')
+                assert page.locator('.frontier-pairs tbody tr').count()==7
+                assert '属于本靶点的7对' in page.locator('.frontier-scope').inner_text()
+                assert '靶点全目录药物排名使用反向输出' in page.locator('.frontier-scope').inner_text()
+                # These are the seven frozen AR pairs, not AR's full-catalog Top10.
+                assert page.locator('.frontier-pairs tbody th > a:first-of-type').all_text_contents()==['belzutifan','efavirenz','tecovirimat','dasabuvir','lubiprostone','calcipotriene','memantine']
+                page.get_by_role('button',name='查看 ReTargetMap 全目录Top10',exact=False).click()
+                page.wait_for_function("document.querySelectorAll('.rv-matrix tbody tr').length === 10")
+                assert page.locator('.rv-entity strong').all_text_contents()==[r['name'] for r in data.rankings('target','CHEMBL1871',page_size=10)['items']]
                 # A target with no joint coverage must show its missing-input reason,
                 # not claim the target is absent from the frozen SPR candidate set.
                 gap=next(r for r in payload['items'] if r['gene']=='PDE10A')
@@ -104,7 +122,7 @@ def main():
                 assert '官方蛋白序列与本项目不一致' in page.locator('.frontier-missing').inner_text()
                 assert not errors,errors
                 browser.close()
-            report=dict(status='PASS',checked_utc=datetime.now(timezone.utc).isoformat(),candidate_rows=384,auth_gates='401 without login',csv_exact_pair_join=True,original_final_csv_unchanged=True,browser_checks=['SPR model tab defaults to seven axes','candidate search','disagreement sorting','completed ProbeMatch metric selector','seven-model plot keyboard inspection','mobile no page overflow on SPR and entity views','seven-model main view on drug overview, drug rankings and target rankings','four-model view preserved separately','coverage reasons and zero-common target handling'],page_errors=errors,scope='same code/assets/data on ephemeral loopback authenticated server')
+            report=dict(status='PASS',checked_utc=datetime.now(timezone.utc).isoformat(),candidate_rows=384,auth_gates='401 without login',csv_exact_pair_join=True,original_final_csv_unchanged=True,browser_checks=['SPR model tab defaults to seven axes','candidate search','disagreement sorting','completed ProbeMatch metric selector','seven-model plot keyboard inspection','mobile no page overflow on SPR and entity views','seven-model main view on drug overview, drug rankings and target rankings','four-model view preserved separately','coverage reasons and zero-common target handling','AR frozen seven sorted by forward score with explicit scope','full-catalog Top10 navigation and exact API ranking match on drug and target views'],page_errors=errors,scope='same code/assets/data on ephemeral loopback authenticated server')
         finally:server.shutdown();server.server_close()
     (OUT/'WEBSITE_CHECK.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report,ensure_ascii=False))
 

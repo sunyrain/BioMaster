@@ -681,6 +681,7 @@ function RankingsPanel({
   const [query, setQuery] = useState("");
   const [relationship, setRelationship] = useState("all");
   const [page, setPage] = useState(1);
+  const [rankingPageSize, setRankingPageSize] = useState(compact ? 8 : 20);
   const [data, setData] = useState<Rankings | null>(null);
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
@@ -709,7 +710,7 @@ function RankingsPanel({
     search: query,
     relationship,
     page: String(page),
-    page_size: compact ? "8" : "20",
+    page_size: String(rankingPageSize),
   }).toString();
   useEffect(() => {
     const c = new AbortController();
@@ -791,7 +792,7 @@ function RankingsPanel({
           </div>
         )}
       </div>
-      {view === "frontier" ? <Suspense fallback={<Loading />}><FrontierModels kind={entity.kind} identifier={entity.id} compact initialView="plot" /></Suspense> : <>
+      {view === "frontier" ? <Suspense fallback={<Loading />}><FrontierModels kind={entity.kind} identifier={entity.id} compact initialView="plot" onShowTop10={() => {setView("matrix");setModel("biomaster");setOrder("asc");setQuery("");setRelationship("all");setPage(1);setRankingPageSize(10);}} /></Suspense> : <>
       {!compact && <div className="ranking-filter-row">
         <div className="relationship-filters" aria-label="关系证据筛选">
           <span><SlidersHorizontal size={14} />关系证据</span>

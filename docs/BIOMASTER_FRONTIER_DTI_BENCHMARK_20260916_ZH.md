@@ -109,6 +109,30 @@
 6. 新输出独立为 `SPR384_MODEL_REVIEW.csv`，不覆盖 `SPR384_FINAL_EXPERIMENT_TABLE.csv`。
 7. 各模型覆盖卡分别列出待完成、未覆盖、失败；“为什么尚未覆盖”可展开查看原因、数量和靶点。实体尚无共同覆盖时，可切到逐对评分查看已有结果，不能误提示该实体不在384中。
 
+### 为什么“按ReTargetMap分数排序”不是全目录Top10
+
+七模型页面复核的是已经冻结的384对。按实体进入时先筛出这384中属于该实体的配对，再按指定分数重排；例如AR只有7对。下拉框不会重新从720种药中取10种，也不会改写实验清单。
+
+截图时七模型共同覆盖251对，`#3/251`是**全部251对、跨药物与靶点**的池内位置。该名次不等于AR的720药物排名。两处ReTargetMap输出方向也不同：共同候选表使用正向药物→靶点输出，全目录AR药物排名使用独立的反向靶点→药物输出。
+
+2026-09-16核验的实际例子：
+
+| 药物→AR | 截图共同池正向排名 /251 | 当前AR全目录反向排名 /720 | 原实验表历史组合排名：每药384靶点 |
+|---|---:|---:|---:|
+| belzutifan | 3 | 20 | 20 |
+| efavirenz | 16 | 73 | 17 |
+| tecovirimat | 46 | 173 | 1 |
+| dasabuvir | 60 | 187 | 16 |
+| lubiprostone | 120 | 391 | 6 |
+| calcipotriene | 136 | 326 | 13 |
+| memantine | 187 | 572 | 14 |
+
+原实验表的`结合排名_每药384靶点`来自历史`independent_validation_rank_score`，不是当前网站ReTargetMap神经分数。比如tecovirimat–AR历史第1，表示给tecovirimat找靶点时AR排第1，不表示给AR找药物时tecovirimat排第1。选样另受已知关系排除、疾病证据和人工审查约束。
+
+当前网站ReTargetMap（2026-09-06部署版）的AR反向全目录Top10依次为：fulvestrant、dexamethasone、betamethasone、triamcinolone、budesonide、drospirenone、dorzolamide、testosterone、tamoxifen、clascoterone。其中含已知关系，不能直接视作10个新靶点实验推荐。
+
+页面已将排序选项标为“候选内”，列名标明“全SPR共同池排名”与正向输出，并提供“查看ReTargetMap全目录Top10”按钮。按钮清除候选筛选，使用现有目录排名接口取前10，方向随药物/靶点页面明确区分；并未把未计算的新模型结果填入全目录。
+
 ## 文件与运行
 
 - [实时报告](../outputs/frontier_dti_20260916/RUN_REPORT.md)
