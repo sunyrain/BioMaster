@@ -1,0 +1,18 @@
+[
+  {
+    "name": "ProbeMatchDTI_All_Model",
+    "url": "https://media.githubusercontent.com/media/developer-hq/ProbeMatchDTI/master/model/All_Model",
+    "status": 206,
+    "content_range": "bytes 0-31/78050677",
+    "content_length": "32",
+    "prefix_hex": "504b030400000808000000000000000000000000000000000000100012006172"
+  },
+  {
+    "name": "MolJEPA_checkpoint",
+    "url": "https://huggingface.co/Flogrammer/Mol-JEPA/resolve/4c912b450175f31b5ba913a5dc921c03b27b985a/model.safetensors",
+    "status": 206,
+    "content_range": "bytes 0-31/181651424",
+    "content_length": "32",
+    "prefix_hex": "005f0000000000007b225f5f6d657461646174615f5f223a7b22666f726d6174"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "frozen_handoff_hashes": {
+    "SPR384_FINAL_EXPERIMENT_TABLE.csv": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1",
+    "SPR384_FINAL_DETAILED.csv": "d11615975519ac6c78f879a5f5054000ddf80cc557a47e7008be8170bf12183c",
+    "SPR112_REFERENCE_CONTROLS.csv": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+  },
+  "restored_website_pid": 139050,
+  "restored_tunnel_pid": 139135,
+  "service_manager_added": false,
+  "production_models_changed": false,
+  "new_training_started": false,
+  "weights_range_access_only": true,
+  "observed_gaps": [
+    "website default ranks remain 720x384; full 720x890 matrix remains offline",
+    "LYVE1 and SLC8A1 not currently searchable",
+    "website DTIAM still historical deployment, not September A/B",
+    "SPR result store has no uploaded rows"
+  ]
+}

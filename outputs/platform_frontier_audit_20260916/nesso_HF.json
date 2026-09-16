@@ -1,0 +1,33 @@
+{
+  "id": "recursionpharma/nesso",
+  "sha": "499ed12b0343918ab01b2519226390cf8eca038a",
+  "lastModified": "2026-08-06T17:13:07.000Z",
+  "gated": false,
+  "private": false,
+  "files": [
+    {
+      "name": "LICENSE",
+      "bytes": 11355
+    },
+    {
+      "name": "README.md",
+      "bytes": 1604
+    },
+    {
+      "name": "ccd.pkl",
+      "bytes": 412923533
+    },
+    {
+      "name": "config.json",
+      "bytes": 225
+    },
+    {
+      "name": "v1.0.0/hparams.json",
+      "bytes": 1732
+    },
+    {
+      "name": "v1.0.0/model.safetensors",
+      "bytes": 165426752
+    }
+  ]
+}

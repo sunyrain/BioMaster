@@ -1,0 +1,728 @@
+{
+  "checked_utc": "2026-09-16T13:12:53.577505+00:00",
+  "live": [
+    {
+      "url": "http://127.0.0.1:18765/login",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:18765/api/summary",
+      "status": 401,
+      "expected": 401,
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:18765/api/spr-final.csv",
+      "status": 401,
+      "expected": 401,
+      "ok": true
+    },
+    {
+      "url": "https://palinova.xyz/login",
+      "status": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "url": "https://palinova.xyz/api/summary",
+      "status": 401,
+      "expected": 401,
+      "ok": true
+    },
+    {
+      "url": "https://palinova.xyz/api/spr-final.csv",
+      "status": 401,
+      "expected": 401,
+      "ok": true
+    }
+  ],
+  "isolated_api": {
+    "/api/health": {
+      "status": 200,
+      "bytes": 32,
+      "items": 0,
+      "total": null
+    },
+    "/api/summary": {
+      "status": 200,
+      "bytes": 16438,
+      "items": 0,
+      "total": null
+    },
+    "/api/spr-design": {
+      "status": 200,
+      "bytes": 2869464,
+      "items": 496,
+      "total": null
+    },
+    "/api/spr-results/catalog": {
+      "status": 200,
+      "bytes": 120939,
+      "items": 384,
+      "total": 384
+    },
+    "/api/spr-results": {
+      "status": 200,
+      "bytes": 53,
+      "items": 0,
+      "total": 0
+    },
+    "/api/search?kind=target&q=LYVE1": {
+      "status": 200,
+      "bytes": 43,
+      "items": 0,
+      "total": 0
+    },
+    "/api/search?kind=target&q=SLC8A1": {
+      "status": 200,
+      "bytes": 44,
+      "items": 0,
+      "total": 0
+    },
+    "/api/spr-final.csv": {
+      "status": 200,
+      "identical_to_handoff": true,
+      "sha256": "c9ac52e938682f63c52366f95a1a374ee7505efd6a396e7eeacc48393eac48f1"
+    },
+    "/api/spr-final-controls.csv": {
+      "status": 200,
+      "identical_to_handoff": true,
+      "sha256": "bce5d0b9cf209c652b227f3ec5590c9343834658c8231af877055562b2cee9e4"
+    }
+  },
+  "production_auth_changed": false,
+  "uploaded_results": false,
+  "new_model_inference": false,
+  "summary": {
+    "project": "Palinova",
+    "version": "2026-09-06 Selected",
+    "counts": {
+      "drugs": 720,
+      "targets": 888,
+      "scored_targets": 384,
+      "pairs": 276480,
+      "pockets": 43239,
+      "structures": 878,
+      "pathways": 5366,
+      "target_diseases": 907849,
+      "txgnn_associations": 18150,
+      "known_diseases": 15779,
+      "non_gpcr_targets": 745,
+      "known_indications": 15779,
+      "approved_indications": 3017,
+      "clinical_indications": 12762,
+      "known_targets": 1019,
+      "txgnn_drugs": 605,
+      "pathway_targets": 850,
+      "target_disease_associations": 907849,
+      "disease_targets": 886,
+      "go_annotations": 78555,
+      "tissue_expression_records": 105978,
+      "spr_design_pairs": 496,
+      "spr_candidate_pairs": 384,
+      "spr_control_pairs": 112,
+      "spr_design_targets": 112,
+      "spr_not_released_pairs": 496,
+      "spr_catalog_drugs": 255,
+      "spr_catalog_targets": 112,
+      "spr_off_catalog_compounds": 47,
+      "spr_off_catalog_targets": 0
+    },
+    "models": [
+      {
+        "name": "ReTargetMap",
+        "version": "Selected · 2026-09-06",
+        "role": "DrugCLIP + Morgan + ESM2; FP32 双方向网络",
+        "score_type": "logit",
+        "source": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1",
+        "note": "≤2025部署拟合；分数不是概率或实验亲和力。反向使用独立方向输出，仅作辅助证据。",
+        "id": "biomaster",
+        "coverage": 276480,
+        "targets": 384,
+        "available": true
+      },
+      {
+        "name": "DrugCLIP",
+        "version": "统一 720 × 384 比较核心",
+        "role": "结构表征比较证据",
+        "score_type": "cosine similarity",
+        "source": "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz",
+        "note": "382个靶点可评分；实验与预测口袋之间未校准，跨来源总排序仅用于探索。",
+        "id": "drugclip",
+        "coverage": 275040,
+        "targets": 382,
+        "available": true
+      },
+      {
+        "name": "DTIAM",
+        "version": "Public retrained deployment v1",
+        "role": "独立比较模型",
+        "score_type": "model probability",
+        "source": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_720x384_deployment_v1/DTIAM_720X384_SCORES_V1.csv.gz",
+        "note": "模型输出并非实验亲和力。",
+        "id": "dtiam",
+        "coverage": 276480,
+        "targets": 384,
+        "available": true
+      },
+      {
+        "name": "ConPLex",
+        "version": "统一 720 × 384 比较核心",
+        "role": "序列比较证据",
+        "score_type": "model score",
+        "source": "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz",
+        "note": "模型输出并非实验亲和力。",
+        "id": "conplex",
+        "coverage": 276480,
+        "targets": 384,
+        "available": true
+      }
+    ],
+    "sources": [
+      {
+        "name": "统一比较模型与已知关系",
+        "path": "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz",
+        "available": true,
+        "size_bytes": 28062251
+      },
+      {
+        "name": "2026-09-01 冻结合同 Borda",
+        "path": "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz",
+        "available": true,
+        "size_bytes": 21285057
+      },
+      {
+        "name": "2026-09-06 选定独立模型",
+        "path": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1",
+        "available": true,
+        "size_bytes": null
+      },
+      {
+        "name": "ChEMBL 37 / OpenTargets 靶点登记",
+        "path": "outputs/target_universe_ch37_v2/TARGET_UNIVERSE_OFFICIAL_888_V2.csv",
+        "available": true,
+        "size_bytes": 2261921
+      },
+      {
+        "name": "DTIAM 全目录评分",
+        "path": "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_720x384_deployment_v1/DTIAM_720X384_SCORES_V1.csv.gz",
+        "available": true,
+        "size_bytes": 7029708
+      },
+      {
+        "name": "SPR512 disease hypotheses · append-only review · 2026-09-09",
+        "path": "outputs/spr512_integrated_disease_20260909/SPR512_DISEASE_EVIDENCE_APPEND_ONLY.csv",
+        "available": true
+      },
+      {
+        "name": "SPR512 EC-KG source-relation review · 2026-09-09",
+        "path": "outputs/spr512_integrated_disease_20260909/SPR512_ECKG_RELATION_REVIEW.csv",
+        "available": true
+      },
+      {
+        "name": "FDA / RxNorm / GSRS reviewed drug entities",
+        "path": "outputs/fda_drug_universe_2005_2026_v1/10_nda_window_mechanism_active_species/FDA_NDA_WINDOW_STANDARD_DRUG_ENTITY_MECHANISM_ACTIVE_SPECIES_AUDIT.csv",
+        "available": true
+      },
+      {
+        "name": "Model species ↔ marketed drug identity",
+        "path": "outputs/fda_drug_universe_2005_2026_v1/10_nda_window_mechanism_active_species/FDA_NDA_WINDOW_CORE_DISCOVERY_MODEL_LIGANDS_2005_2026.csv",
+        "available": true
+      },
+      {
+        "name": "ChEMBL 37 drug indications and mechanisms",
+        "path": "downloads/chembl_37/chembl_37/chembl_37_sqlite/chembl_37.db",
+        "available": true,
+        "note": "phase=4 为已批准适应症记录；较低阶段为临床研究，不能称为已批准。"
+      },
+      {
+        "name": "TxGNN local full_graph predictions",
+        "path": "data/processed/txgnn_drug_disease_scores.csv",
+        "available": true,
+        "note": "本地已有 cancer / MONDO_0004992 单疾病预测；sigmoid(logit) 不是临床获益概率。未覆盖药物保留为空。"
+      },
+      {
+        "name": "OpenTargets 26.06 target annotation / Reactome pathways",
+        "path": "data/external/opentargets_26_06/target",
+        "available": true
+      },
+      {
+        "name": "OpenTargets target–disease local snapshot",
+        "path": "outputs/retargetmap_spr64_target_review_20260909/OPENTARGETS_64_AVAILABLE_ASSOCIATIONS.csv.gz",
+        "available": true,
+        "note": "靶点–疾病证据关联不直接代表药物治疗方向；本地缓存覆盖范围有限。"
+      },
+      {
+        "name": "OpenTargets target–disease local snapshot",
+        "path": "outputs/current_production_package_v2/full_untruncated_universe_v4/opentargets_top3000_target_completion_v4/opentargets_final1000_target_disease_long.csv",
+        "available": true,
+        "note": "靶点–疾病证据关联不直接代表药物治疗方向；本地缓存覆盖范围有限。"
+      },
+      {
+        "name": "OpenTargets target–disease local snapshot",
+        "path": "outputs/chembl_moa_enhanced_information_package_v1/opentargets_final1000_full_disease_completion/opentargets_final1000_target_disease_long.csv",
+        "available": true,
+        "note": "靶点–疾病证据关联不直接代表药物治疗方向；本地缓存覆盖范围有限。"
+      },
+      {
+        "name": "OpenTargets target–disease local snapshot",
+        "path": "data/processed/opentargets_target_disease_scores.csv",
+        "available": true,
+        "note": "靶点–疾病证据关联不直接代表药物治疗方向；本地缓存覆盖范围有限。"
+      },
+      {
+        "name": "GTEx v10 tissue median RNA expression",
+        "path": "data/external/gtex/GTEx_Analysis_v10_RNASeQCv2.4.2_gene_median_tpm.gct.gz",
+        "available": true,
+        "note": "68 tissues/cell populations; median TPM. Expression is context, not binding evidence."
+      },
+      {
+        "name": "Human Protein Atlas local tissue RNA consensus",
+        "path": "data/external/hpa/rna_tissue_consensus.tsv.zip",
+        "available": true,
+        "note": "HPA nTPM; a distinct normalization from GTEx TPM. Snapshot version unavailable in local filename."
+      },
+      {
+        "name": "TxGNN 全疾病推理 · 已排除身份暂扣及保守已知关系 · 展示Top30",
+        "path": "outputs/biomaster_disease_evidence_720x888_20260909/DRUG_ALL_DISEASE_TOP30.csv.gz",
+        "available": true,
+        "note": "精确项目结构键连接；sigmoid仅作展示，不是临床获益概率。完整分数矩阵另存。"
+      },
+      {
+        "name": "Open Targets 26.06 · 886靶点完整疾病证据",
+        "path": "outputs/biomaster_disease_evidence_720x888_20260909/OPENTARGETS_ALL_TARGET_DISEASE_EVIDENCE.parquet",
+        "available": true,
+        "note": "完整分页；来源关联不是治疗方向。缺失靶点不回填相近基因。"
+      },
+      {
+        "id": "TARGET_UNIVERSE_OFFICIAL_888_V2",
+        "name": "AlphaFold exact-sequence structures / ChEMBL target universe",
+        "path": "outputs/target_universe_ch37_v2/TARGET_UNIVERSE_OFFICIAL_888_V2.csv",
+        "source": "AlphaFold exact-sequence structures / ChEMBL target universe"
+      },
+      {
+        "id": "KNOWN_POCKET_CANONICAL_RESIDUE_SETS.csv",
+        "name": "Curated experimental pocket atlas",
+        "path": "outputs/chembl37_known_pocket_atlas/final_atlas/KNOWN_POCKET_CANONICAL_RESIDUE_SETS.csv.gz",
+        "source": "Curated experimental pocket atlas"
+      },
+      {
+        "id": "P2RANK_ALL_PREDICTED_POCKETS_875.csv",
+        "name": "P2Rank predicted pockets",
+        "path": "outputs/chembl37_known_pocket_atlas/final_atlas/P2RANK_ALL_PREDICTED_POCKETS_875.csv.gz",
+        "source": "P2Rank predicted pockets"
+      },
+      {
+        "id": "FINAL_RECEPTOR_PROTOCOL_AUDIT_338",
+        "name": "Frozen experimental receptor protocols",
+        "path": "outputs/strict_receptor_protocol_338_v1/FINAL_RECEPTOR_PROTOCOL_AUDIT_338.csv",
+        "source": "Frozen experimental receptor protocols"
+      },
+      {
+        "name": "综合 SPR 384 候选与另计对照",
+        "path": "outputs/joint384_comprehensive_20260909/RECOMMENDED_CANDIDATES_384.csv",
+        "available": true
+      },
+      {
+        "name": "综合 SPR 384 候选与另计对照",
+        "path": "outputs/joint384_comprehensive_20260909/REFERENCE_CONTROLS_EXTRA.csv",
+        "available": true
+      },
+      {
+        "name": "综合 SPR 384 候选与另计对照",
+        "path": "outputs/joint384_comprehensive_20260909/TARGET_ROSTER.csv",
+        "available": true
+      },
+      {
+        "name": "最终SPR对照与FDA修订记录",
+        "path": "outputs/spr384_final_experiment_table_20260910/SPR112_REFERENCE_CONTROLS.csv",
+        "available": true
+      }
+    ],
+    "warnings": [],
+    "selected_provenance": {
+      "fingerprint": "e969e274b2ab11859d614e8ed85412e34da621d10fae4c5a54801ee45475303a",
+      "precision": "FP32",
+      "device": "cpu",
+      "cache": "outputs/biomaster_explorer/cache/selected_e969e274b2ab11859d614e8ed85412e34da621d10fae4c5a54801ee45475303a.npz"
+    },
+    "experiments": {
+      "candidate_pairs": 384,
+      "drugs": 229,
+      "targets": 112,
+      "extra_controls": 112,
+      "total_pairs_including_controls": 496,
+      "origin_review_drugs": 266,
+      "origin_status_counts": {
+        "LABEL_REVIEWED": 217,
+        "EXTERNAL_REVIEWED": 48,
+        "UNRESOLVED": 1
+      },
+      "eligible_pairs": 449,
+      "cross_area_pairs": 195,
+      "cross_area_germline_pairs": 63,
+      "cross_area_somatic_pairs": 14,
+      "chemical_support_ge04": 20,
+      "raw_chemical_similarity_ge04": 22,
+      "exact_genetic_or_somatic_pairs": 126,
+      "priority_pairs": 1,
+      "priority_names": [
+        "tecovirimat–AR"
+      ],
+      "bands": {
+        "EXPLORATORY_LIMITED_INDEPENDENT_SUPPORT": 240,
+        "ADDITIONAL_SOURCE_OR_CHEMICAL_SUPPORT": 143,
+        "PRIORITY_CROSS_AREA_MECHANISM_REVIEW": 1
+      },
+      "legacy_agent_decisions": {
+        "LOW_PRIORITY": 224,
+        "KEEP_REVIEW": 160
+      },
+      "same_old_pairs": 301,
+      "replaced_pairs": 83,
+      "stable_in_three_weight_settings": 375,
+      "reference_categories": {
+        "Kd_RECORD_PRESENT": 90,
+        "Ki_NO_Kd_RECORD": 18,
+        "FUNCTIONAL_OR_OTHER_ONLY": 4
+      },
+      "dispositions_574": {
+        "SELECTED": 384,
+        "RESERVE_NOT_SELECTED_BY_COMPREHENSIVE_POLICY": 65,
+        "RAW_PRIOR_ACTIVITY_NOT_NOVEL": 61,
+        "PRIOR_HOLD": 44,
+        "DEEP_REVIEW_INVESTMENT_HOLD": 12,
+        "PRIOR_EXCLUSION": 3,
+        "MODEL_APPROVED_ENTITY_IDENTITY_HOLD": 3,
+        "DISEASE_INVESTMENT_HOLD": 2
+      },
+      "chosen_resource_policy": "Smallest feasible target-budget scenario retaining max integrated-priority and usable-chemical-support counts and >=95% of best declared utility, then lower per-target cap; not measured performance."
+    },
+    "featured": {
+      "drugs": [
+        {
+          "id": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+          "kind": "drug",
+          "name": "imatinib",
+          "subtitle": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+          "identifiers": {
+            "inchikey": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+            "project_ids": "UNII:BKJ8M8G5HI",
+            "project_entity_ids": [
+              "UNII:BKJ8M8G5HI"
+            ],
+            "chembl_ids": [
+              "CHEMBL1642",
+              "CHEMBL2386595",
+              "CHEMBL941"
+            ],
+            "chembl_id": "CHEMBL941",
+            "pubchem_cid": "5291",
+            "drugbank_id": "DB00619"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 4,
+            "known_diseases": 108,
+            "txgnn_diseases": 30,
+            "pathways": 0,
+            "target_diseases": 0,
+            "pockets": 0,
+            "experiments": 0
+          },
+          "classification": "C29H31N7O"
+        },
+        {
+          "id": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+          "kind": "drug",
+          "name": "dasatinib",
+          "subtitle": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+          "identifiers": {
+            "inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+            "project_ids": "UNII:RBZ1571X5H",
+            "project_entity_ids": [
+              "UNII:RBZ1571X5H"
+            ],
+            "chembl_ids": [
+              "CHEMBL1421",
+              "CHEMBL5314601",
+              "CHEMBL5416410"
+            ],
+            "chembl_id": "CHEMBL1421",
+            "pubchem_cid": "11540687",
+            "drugbank_id": "DB01254"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 11,
+            "known_diseases": 88,
+            "txgnn_diseases": 30,
+            "pathways": 0,
+            "target_diseases": 0,
+            "pockets": 0,
+            "experiments": 4
+          },
+          "classification": "C22H26ClN7O2S.H2O"
+        },
+        {
+          "id": "XGALLCVXEZPNRQ-UHFFFAOYSA-N",
+          "kind": "drug",
+          "name": "gefitinib",
+          "subtitle": "XGALLCVXEZPNRQ-UHFFFAOYSA-N",
+          "identifiers": {
+            "inchikey": "XGALLCVXEZPNRQ-UHFFFAOYSA-N",
+            "project_ids": "UNII:S65743JHBS",
+            "project_entity_ids": [
+              "UNII:S65743JHBS"
+            ],
+            "chembl_ids": [
+              "CHEMBL939"
+            ],
+            "chembl_id": "CHEMBL939",
+            "pubchem_cid": "123631",
+            "drugbank_id": "DB00317"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 1,
+            "known_diseases": 51,
+            "txgnn_diseases": 30,
+            "pathways": 0,
+            "target_diseases": 0,
+            "pockets": 0,
+            "experiments": 0
+          },
+          "classification": "C22H24ClFN4O3"
+        },
+        {
+          "id": "XZWYZXLIPXDOLR-UHFFFAOYSA-N",
+          "kind": "drug",
+          "name": "metformin",
+          "subtitle": "XZWYZXLIPXDOLR-UHFFFAOYSA-N",
+          "identifiers": {
+            "inchikey": "XZWYZXLIPXDOLR-UHFFFAOYSA-N",
+            "project_ids": "UNII:9100L32L2N",
+            "project_entity_ids": [
+              "UNII:9100L32L2N"
+            ],
+            "chembl_ids": [
+              "CHEMBL1431",
+              "CHEMBL1703",
+              "CHEMBL3094198"
+            ],
+            "chembl_id": "CHEMBL1431",
+            "pubchem_cid": "4091",
+            "drugbank_id": "DB00331"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 2,
+            "known_diseases": 180,
+            "txgnn_diseases": 30,
+            "pathways": 0,
+            "target_diseases": 0,
+            "pockets": 0,
+            "experiments": 2
+          },
+          "classification": "C4H11N5"
+        },
+        {
+          "id": "HFNKQEVNSGCOJV-OAHLLOKOSA-N",
+          "kind": "drug",
+          "name": "ruxolitinib",
+          "subtitle": "HFNKQEVNSGCOJV-OAHLLOKOSA-N",
+          "identifiers": {
+            "inchikey": "HFNKQEVNSGCOJV-OAHLLOKOSA-N",
+            "project_ids": "UNII:82S8X8XX8H",
+            "project_entity_ids": [
+              "UNII:0CA0VSF91Y",
+              "UNII:82S8X8XX8H"
+            ],
+            "chembl_ids": [
+              "CHEMBL1789941",
+              "CHEMBL1795071",
+              "CHEMBL4594381",
+              "CHEMBL4594382"
+            ],
+            "chembl_id": "CHEMBL1789941",
+            "pubchem_cid": "25126798",
+            "drugbank_id": "DB08877"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 4,
+            "known_diseases": 72,
+            "txgnn_diseases": 30,
+            "pathways": 0,
+            "target_diseases": 0,
+            "pockets": 0,
+            "experiments": 3
+          },
+          "classification": "C17H18N6"
+        }
+      ],
+      "targets": [
+        {
+          "id": "CHEMBL203",
+          "kind": "target",
+          "name": "EGFR",
+          "subtitle": "Epidermal growth factor receptor",
+          "identifiers": {
+            "chembl_id": "CHEMBL203",
+            "uniprot_id": "P00533",
+            "ensembl_id": "ENSG00000146648"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 0,
+            "known_diseases": 0,
+            "txgnn_diseases": 0,
+            "pathways": 37,
+            "target_diseases": 6459,
+            "pockets": 585,
+            "experiments": 0
+          },
+          "classification": "Enzyme"
+        },
+        {
+          "id": "CHEMBL2971",
+          "kind": "target",
+          "name": "JAK2",
+          "subtitle": "Tyrosine-protein kinase JAK2",
+          "identifiers": {
+            "chembl_id": "CHEMBL2971",
+            "uniprot_id": "O60674",
+            "ensembl_id": "ENSG00000096968"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 0,
+            "known_diseases": 0,
+            "txgnn_diseases": 0,
+            "pathways": 39,
+            "target_diseases": 1636,
+            "pockets": 229,
+            "experiments": 4
+          },
+          "classification": "Enzyme"
+        },
+        {
+          "id": "CHEMBL2041",
+          "kind": "target",
+          "name": "RET",
+          "subtitle": "Proto-oncogene tyrosine-protein kinase receptor Ret",
+          "identifiers": {
+            "chembl_id": "CHEMBL2041",
+            "uniprot_id": "P07949",
+            "ensembl_id": "ENSG00000165731"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 0,
+            "known_diseases": 0,
+            "txgnn_diseases": 0,
+            "pathways": 5,
+            "target_diseases": 1945,
+            "pockets": 56,
+            "experiments": 3
+          },
+          "classification": "Enzyme"
+        },
+        {
+          "id": "CHEMBL4191",
+          "kind": "target",
+          "name": "MGLL",
+          "subtitle": "Monoglyceride lipase",
+          "identifiers": {
+            "chembl_id": "CHEMBL4191",
+            "uniprot_id": "Q99685",
+            "ensembl_id": "ENSG00000074416"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 0,
+            "known_diseases": 0,
+            "txgnn_diseases": 0,
+            "pathways": 4,
+            "target_diseases": 397,
+            "pockets": 41,
+            "experiments": 0
+          },
+          "classification": "Enzyme"
+        },
+        {
+          "id": "CHEMBL1862",
+          "kind": "target",
+          "name": "ABL1",
+          "subtitle": "Tyrosine-protein kinase ABL1",
+          "identifiers": {
+            "chembl_id": "CHEMBL1862",
+            "uniprot_id": "P00519",
+            "ensembl_id": "ENSG00000097007"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 0,
+            "known_diseases": 0,
+            "txgnn_diseases": 0,
+            "pathways": 13,
+            "target_diseases": 1462,
+            "pockets": 111,
+            "experiments": 2
+          },
+          "classification": "Enzyme"
+        },
+        {
+          "id": "CHEMBL5145",
+          "kind": "target",
+          "name": "BRAF",
+          "subtitle": "Serine/threonine-protein kinase B-raf",
+          "identifiers": {
+            "chembl_id": "CHEMBL5145",
+            "uniprot_id": "P15056",
+            "ensembl_id": "ENSG00000157764"
+          },
+          "scored": true,
+          "annotations": {
+            "known_targets": 0,
+            "known_diseases": 0,
+            "txgnn_diseases": 0,
+            "pathways": 16,
+            "target_diseases": 3139,
+            "pockets": 168,
+            "experiments": 4
+          },
+          "classification": "Enzyme"
+        }
+      ]
+    },
+    "boundaries": [
+      "720种老药 × 384个已评分核心靶点；888官方登记（含745非GPCR）不扩大排序分母。",
+      "ReTargetMap采用2026-09-06选定模型的≤2025部署权重；双方向logit不是概率或实验亲和力。",
+      "给定靶点的老药排名使用反向输出，仅作为辅助证据。",
+      "DrugCLIP实验与预测口袋跨来源未统一校准；总排名为探索性比较。",
+      "TxGNN仅展示本地缓存覆盖的疾病预测；未收录关系代表未知，不等同于阴性。",
+      "AlphaFold/P2Rank为预测结构和预测口袋；实验口袋单独标注证据来源。"
+    ]
+  },
+  "ranking_sample": {
+    "drug": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+    "rows": 20,
+    "total": 384
+  },
+  "browser": {
+    "status": "passed",
+    "page_errors": [],
+    "checks": [
+      "ephemeral_login",
+      "home",
+      "SPR384",
+      "drug_ranking",
+      "mobile_no_overflow"
+    ],
+    "scope": "isolated loopback instance with production code, assets and data"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "source": "outputs/affinity_experiment_package_v8/nesso_control_benchmark_stratified20/NESSO_CONTROL_PREDICTIONS_V8.csv",
+  "sha256": "860887ef0a3e1ecbe0df3347f6e09e4e8fcb1b0ea235289b704ab7709de6283e",
+  "requested": 474,
+  "completed": 449,
+  "missing": 25,
+  "targets_requested": 20,
+  "targets_with_both_labels_and_scores": 19,
+  "median_auroc": {
+    "affinity": 0.9166666666666667,
+    "binder": 0.7638888888888888
+  },
+  "complete_without_predictions": {
+    "CACNA1B": 24,
+    "MST1R": 1
+  },
+  "warning": "Historical controls, unknown pretraining overlap, not current common TEST or SPR384. Original summary counts 20 target groups including one with no score; only 19 yield Nesso AUROC."
+}

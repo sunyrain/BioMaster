@@ -1,0 +1,45 @@
+{
+  "id": "Flogrammer/Mol-JEPA",
+  "sha": "4c912b450175f31b5ba913a5dc921c03b27b985a",
+  "lastModified": "2026-08-19T22:24:01.000Z",
+  "gated": false,
+  "private": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 1568
+    },
+    {
+      "name": "README.md",
+      "bytes": 3869
+    },
+    {
+      "name": "collator.py",
+      "bytes": 9293
+    },
+    {
+      "name": "config.json",
+      "bytes": 3600
+    },
+    {
+      "name": "configuration_moljepa.py",
+      "bytes": 2077
+    },
+    {
+      "name": "data.py",
+      "bytes": 2180
+    },
+    {
+      "name": "model.safetensors",
+      "bytes": 181651424
+    },
+    {
+      "name": "modeling_moljepa.py",
+      "bytes": 28299
+    },
+    {
+      "name": "overview.png",
+      "bytes": 1281090
+    }
+  ]
+}
