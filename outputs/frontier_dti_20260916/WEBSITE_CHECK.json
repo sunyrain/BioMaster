@@ -1,17 +1,20 @@
 {
   "status": "PASS",
+  "checked_utc": "2026-09-16T14:20:50.524944+00:00",
   "candidate_rows": 384,
   "auth_gates": "401 without login",
   "csv_exact_pair_join": true,
   "original_final_csv_unchanged": true,
   "browser_checks": [
-    "SPR model tab",
+    "SPR model tab defaults to seven axes",
     "candidate search",
     "disagreement sorting",
     "completed ProbeMatch metric selector",
     "seven-model plot keyboard inspection",
-    "mobile no page overflow",
-    "drug model disagreement integration"
+    "mobile no page overflow on SPR and entity views",
+    "seven-model main view on drug overview, drug rankings and target rankings",
+    "four-model view preserved separately",
+    "coverage reasons and zero-common target handling"
   ],
   "page_errors": [],
   "scope": "same code/assets/data on ephemeral loopback authenticated server"

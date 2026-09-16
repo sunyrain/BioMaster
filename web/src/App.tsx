@@ -674,7 +674,7 @@ function RankingsPanel({
   entity: Entity;
   compact?: boolean;
 }) {
-  const [view, setView] = useState<RankView>("matrix");
+  const [view, setView] = useState<RankView | "frontier">("matrix");
   const [model, setModel] = useState<Model>("biomaster");
   const [order, setOrder] = useState<"asc" | "desc">("asc");
   const sortModel = (next: Model) => { setOrder(next === model && order === "asc" ? "desc" : "asc"); setModel(next); setPage(1); };
@@ -754,19 +754,19 @@ function RankingsPanel({
         ) : (
           <a
             className="button secondary small-button"
-            href={`/api/rankings.csv?${params}`}
+            href={view === "frontier" ? "/api/frontier-dti.csv" : `/api/rankings.csv?${params}`}
             download
           >
             <ArrowDownToLine size={15} />
-            导出 CSV
+            {view === "frontier" ? "导出384复核 CSV" : "导出 CSV"}
           </a>
         )}
       </SectionTitle>
       <div className="ranking-toolbar">
         <div className="ranking-view-switch" aria-label="排名视图">
-          {([["matrix", "排名矩阵", Grid2X2], ["parallel", "模型分歧", ChartNoAxesCombined]] as const).map(([id, text, Icon]) => <button key={id} className={view === id ? "active" : ""} aria-pressed={view === id} onClick={() => setView(id)}><Icon size={15} />{text}</button>)}
+          {([["matrix", "排名矩阵", Grid2X2], ["frontier", "模型分歧 · 七模型", ChartNoAxesCombined], ["parallel", "原四模型分歧", ChartNoAxesCombined]] as const).map(([id, text, Icon]) => <button key={id} className={view === id ? "active" : ""} aria-pressed={view === id} onClick={() => setView(id)}><Icon size={15} />{text}</button>)}
         </div>
-        <div className="model-tabs">
+        {view !== "frontier" && <div className="model-tabs">
           {MODELS.map((m) => (
             <button
               className={model === m ? "active" : ""}
@@ -778,8 +778,8 @@ function RankingsPanel({
               {MODEL_NAMES[m]}
             </button>
           ))}
-        </div>
-        {!compact && (
+        </div>}
+        {!compact && view !== "frontier" && (
           <div className="filter-search small-filter">
             <Search size={15} />
             <input
@@ -791,6 +791,7 @@ function RankingsPanel({
           </div>
         )}
       </div>
+      {view === "frontier" ? <Suspense fallback={<Loading />}><FrontierModels kind={entity.kind} identifier={entity.id} compact initialView="plot" /></Suspense> : <>
       {!compact && <div className="ranking-filter-row">
         <div className="relationship-filters" aria-label="关系证据筛选">
           <span><SlidersHorizontal size={14} />关系证据</span>
@@ -836,7 +837,8 @@ function RankingsPanel({
           : "原始分数用于同一模型内排序。 "}
         “未标注”不代表阴性；已知关系不等于已验证该预测。
       </p>
-      {!compact && view === "parallel" && <Suspense fallback={<Loading />}><FrontierModels kind={entity.kind} identifier={entity.id} compact /></Suspense>}
+      <p className="panel-footnote">本视图使用原四模型的目录排名。Nesso-1、ProbeMatchDTI、DTBind 本轮复核原384候选，可在“模型分歧 · 七模型”查看。</p>
+      </>}
       {selected &&
         createPortal(
           <div className="drawer-backdrop" onClick={() => setSelected(null)}>
