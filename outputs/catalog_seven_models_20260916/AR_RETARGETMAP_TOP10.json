@@ -1,0 +1,912 @@
+{
+  "kind": "target",
+  "id": "CHEMBL1871",
+  "model": "biomaster",
+  "page": 1,
+  "page_size": 10,
+  "total": 720,
+  "denominator": 720,
+  "catalog_count": 720,
+  "relationship_filter": "all",
+  "model_coverage": {
+    "biomaster": 720,
+    "drugclip": 720,
+    "dtiam": 720,
+    "conplex": 720,
+    "nesso": 7,
+    "probematch": 7,
+    "dtbind": 207
+  },
+  "model_progress": {
+    "nesso": {
+      "pid": 149979,
+      "updated_utc": "2026-09-16T15:14:05.427551+00:00",
+      "catalog_pairs": 276480,
+      "state": "waiting_gpu",
+      "waiting_for_pid": 141815,
+      "completed": 539,
+      "elapsed_seconds": 90.41938972473145
+    },
+    "probematch": {
+      "pid": 149571,
+      "updated_utc": "2026-09-16T15:14:22.485734+00:00",
+      "state": "encoding_protein",
+      "encoded": 174,
+      "total_to_encode": 211,
+      "catalog_pairs": 276480
+    },
+    "dtbind": {
+      "pid": 149572,
+      "updated_utc": "2026-09-16T15:14:13.556888+00:00",
+      "state": "inference",
+      "target": "AR",
+      "completed": 725,
+      "catalog_pairs": 276480,
+      "computed_this_run": 200,
+      "elapsed_seconds": 255.9077169895172
+    }
+  },
+  "scope": "完整老药目录；反向检索仅为辅助证据",
+  "auxiliary": true,
+  "items": [
+    {
+      "id": "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+      "kind": "drug",
+      "name": "fulvestrant",
+      "subtitle": "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+      "identifiers": {
+        "inchikey": "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+        "project_ids": "UNII:22X328QOC4",
+        "project_entity_ids": [
+          "UNII:22X328QOC4"
+        ],
+        "chembl_ids": [
+          "CHEMBL1358"
+        ],
+        "chembl_id": "CHEMBL1358",
+        "pubchem_cid": "104741",
+        "drugbank_id": "DB00947"
+      },
+      "rank": 1.0,
+      "score": 7.5454936027526855,
+      "scores": {
+        "biomaster": 7.5454936027526855,
+        "drugclip": 0.42356098,
+        "dtiam": 0.8175958,
+        "conplex": 0.6876298,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 1.0,
+        "drugclip": 59.0,
+        "dtiam": 47.0,
+        "conplex": 13.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.1051872,
+      "frozen_score": 0.8968668407310705,
+      "frozen_rank": 28.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "UREBDLICKHMUKA-CXSFZGCWSA-N",
+      "kind": "drug",
+      "name": "dexamethasone",
+      "subtitle": "UREBDLICKHMUKA-CXSFZGCWSA-N",
+      "identifiers": {
+        "inchikey": "UREBDLICKHMUKA-CXSFZGCWSA-N",
+        "project_ids": "UNII:7S5I7G3JQL",
+        "project_entity_ids": [
+          "UNII:7S5I7G3JQL"
+        ],
+        "chembl_ids": [
+          "CHEMBL384467"
+        ],
+        "chembl_id": "CHEMBL384467",
+        "pubchem_cid": "5743",
+        "drugbank_id": "DB01234"
+      },
+      "rank": 2.0,
+      "score": 7.440745830535889,
+      "scores": {
+        "biomaster": 7.440745830535889,
+        "drugclip": 0.56305385,
+        "dtiam": 0.871977,
+        "conplex": 0.5845752,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 2.0,
+        "drugclip": 13.0,
+        "dtiam": 21.0,
+        "conplex": 14.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.089873075,
+      "frozen_score": 0.8511749347258486,
+      "frozen_rank": 41.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "UREBDLICKHMUKA-DVTGEIKXSA-N",
+      "kind": "drug",
+      "name": "betamethasone",
+      "subtitle": "UREBDLICKHMUKA-DVTGEIKXSA-N",
+      "identifiers": {
+        "inchikey": "UREBDLICKHMUKA-DVTGEIKXSA-N",
+        "project_ids": "UNII:9842X06Q6M",
+        "project_entity_ids": [
+          "UNII:9842X06Q6M"
+        ],
+        "chembl_ids": [
+          "CHEMBL632"
+        ],
+        "chembl_id": "CHEMBL632",
+        "pubchem_cid": "9782"
+      },
+      "rank": 3.0,
+      "score": 7.359374046325684,
+      "scores": {
+        "biomaster": 7.359374046325684,
+        "drugclip": 0.55996245,
+        "dtiam": 0.871977,
+        "conplex": 0.5845752,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 3.0,
+        "drugclip": 15.0,
+        "dtiam": 22.0,
+        "conplex": 15.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.09832906,
+      "frozen_score": 0.8511749347258486,
+      "frozen_rank": 42.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "GFNANZIMVAIWHM-OBYCQNJPSA-N",
+      "kind": "drug",
+      "name": "triamcinolone",
+      "subtitle": "GFNANZIMVAIWHM-OBYCQNJPSA-N",
+      "identifiers": {
+        "inchikey": "GFNANZIMVAIWHM-OBYCQNJPSA-N",
+        "project_ids": "UNII:1ZK20VI6TY",
+        "project_entity_ids": [
+          "UNII:1ZK20VI6TY"
+        ],
+        "chembl_ids": [
+          "CHEMBL1451"
+        ],
+        "chembl_id": "CHEMBL1451",
+        "pubchem_cid": "31307"
+      },
+      "rank": 4.0,
+      "score": 6.890505313873291,
+      "scores": {
+        "biomaster": 6.890505313873291,
+        "drugclip": 0.5286072,
+        "dtiam": 0.86176693,
+        "conplex": 0.44473723,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": 0.9998906850814819
+      },
+      "ranks": {
+        "biomaster": 4.0,
+        "drugclip": 22.0,
+        "dtiam": 24.0,
+        "conplex": 27.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": 12.0
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "completed"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.12197704,
+      "frozen_score": 0.8485639686684073,
+      "frozen_rank": 44.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "VOVIALXJUBGFJZ-KWVAZRHASA-N",
+      "kind": "drug",
+      "name": "budesonide",
+      "subtitle": "VOVIALXJUBGFJZ-KWVAZRHASA-N",
+      "identifiers": {
+        "inchikey": "VOVIALXJUBGFJZ-KWVAZRHASA-N",
+        "project_ids": "UNII:Q3OKS62Q6X",
+        "project_entity_ids": [
+          "UNII:Q3OKS62Q6X"
+        ],
+        "chembl_ids": [
+          "CHEMBL1370"
+        ],
+        "chembl_id": "CHEMBL1370",
+        "pubchem_cid": "5281004",
+        "drugbank_id": "DB01222"
+      },
+      "rank": 5.0,
+      "score": 6.787243843078613,
+      "scores": {
+        "biomaster": 6.787243843078613,
+        "drugclip": 0.6077271,
+        "dtiam": 0.36939558,
+        "conplex": 0.11672817,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 5.0,
+        "drugclip": 3.0,
+        "dtiam": 418.0,
+        "conplex": 164.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.10486387,
+      "frozen_score": 0.8472584856396868,
+      "frozen_rank": 46.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "METQSPRSQINEEU-HXCATZOESA-N",
+      "kind": "drug",
+      "name": "drospirenone",
+      "subtitle": "METQSPRSQINEEU-HXCATZOESA-N",
+      "identifiers": {
+        "inchikey": "METQSPRSQINEEU-HXCATZOESA-N",
+        "project_ids": "UNII:N295J34A25",
+        "project_entity_ids": [
+          "UNII:N295J34A25"
+        ],
+        "chembl_ids": [
+          "CHEMBL1509"
+        ],
+        "chembl_id": "CHEMBL1509",
+        "pubchem_cid": "68873",
+        "drugbank_id": "DB01395"
+      },
+      "rank": 6.0,
+      "score": 6.658272743225098,
+      "scores": {
+        "biomaster": 6.658272743225098,
+        "drugclip": 0.54234713,
+        "dtiam": 0.39933017,
+        "conplex": 0.43353826,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 6.0,
+        "drugclip": 18.0,
+        "dtiam": 386.0,
+        "conplex": 29.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.123658225,
+      "frozen_score": 1.0,
+      "frozen_rank": 1.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "IAVUPMFITXYVAF-XPUUQOCRSA-N",
+      "kind": "drug",
+      "name": "dorzolamide",
+      "subtitle": "IAVUPMFITXYVAF-XPUUQOCRSA-N",
+      "identifiers": {
+        "inchikey": "IAVUPMFITXYVAF-XPUUQOCRSA-N",
+        "project_ids": "UNII:9JDX055TW1",
+        "project_entity_ids": [
+          "UNII:9JDX055TW1"
+        ],
+        "chembl_ids": [
+          "CHEMBL1201162",
+          "CHEMBL218490"
+        ],
+        "chembl_id": "CHEMBL218490",
+        "pubchem_cid": "5284549",
+        "drugbank_id": "DB00869"
+      },
+      "rank": 7.0,
+      "score": 6.618910312652588,
+      "scores": {
+        "biomaster": 6.618910312652588,
+        "drugclip": -0.017038235,
+        "dtiam": 0.62440103,
+        "conplex": 0.02576335,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 7.0,
+        "drugclip": 474.0,
+        "dtiam": 188.0,
+        "conplex": 360.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.07399825,
+      "frozen_score": 0.674934725848564,
+      "frozen_rank": 135.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "MUMGGOZAMZWBJJ-DYKIIFRCSA-N",
+      "kind": "drug",
+      "name": "testosterone",
+      "subtitle": "MUMGGOZAMZWBJJ-DYKIIFRCSA-N",
+      "identifiers": {
+        "inchikey": "MUMGGOZAMZWBJJ-DYKIIFRCSA-N",
+        "project_ids": "UNII:3XMK78S47O",
+        "project_entity_ids": [
+          "UNII:3XMK78S47O"
+        ],
+        "chembl_ids": [
+          "CHEMBL386630"
+        ],
+        "chembl_id": "CHEMBL386630",
+        "pubchem_cid": "6013",
+        "drugbank_id": "DB00624"
+      },
+      "rank": 8.0,
+      "score": 6.557347297668457,
+      "scores": {
+        "biomaster": 6.557347297668457,
+        "drugclip": 0.39372957,
+        "dtiam": 0.5787146,
+        "conplex": 0.8532154,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 8.0,
+        "drugclip": 67.0,
+        "dtiam": 237.0,
+        "conplex": 2.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": true,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": "AGONIST",
+      "mechanism": "Androgen Receptor agonist",
+      "novelty": "K0_KNOWN_PROJECT_RELATIONSHIP",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.10909758,
+      "frozen_score": 0.9725848563968668,
+      "frozen_rank": 11.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "NKANXQFJJICGDU-QPLCGJKRSA-N",
+      "kind": "drug",
+      "name": "tamoxifen",
+      "subtitle": "NKANXQFJJICGDU-QPLCGJKRSA-N",
+      "identifiers": {
+        "inchikey": "NKANXQFJJICGDU-QPLCGJKRSA-N",
+        "project_ids": "UNII:094ZI81Y45",
+        "project_entity_ids": [
+          "UNII:094ZI81Y45"
+        ],
+        "chembl_ids": [
+          "CHEMBL786",
+          "CHEMBL83"
+        ],
+        "chembl_id": "CHEMBL83",
+        "pubchem_cid": "2733526",
+        "drugbank_id": "DB00675"
+      },
+      "rank": 9.0,
+      "score": 6.3635573387146,
+      "scores": {
+        "biomaster": 6.3635573387146,
+        "drugclip": 0.44273618,
+        "dtiam": 0.42526194,
+        "conplex": 0.24387366,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "ranks": {
+        "biomaster": 9.0,
+        "drugclip": 51.0,
+        "dtiam": 355.0,
+        "conplex": 70.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": null
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": false,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "running"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": null,
+      "mechanism": null,
+      "novelty": "N1_UNRECORDED_IN_FROZEN_PROJECT_AND_CHEMBL37_MOA",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.105938874,
+      "frozen_score": 0.5378590078328982,
+      "frozen_rank": 281.0,
+      "frozen_denominator": 720
+    },
+    {
+      "id": "GPNHMOZDMYNCPO-PDUMRIMRSA-N",
+      "kind": "drug",
+      "name": "clascoterone",
+      "subtitle": "GPNHMOZDMYNCPO-PDUMRIMRSA-N",
+      "identifiers": {
+        "inchikey": "GPNHMOZDMYNCPO-PDUMRIMRSA-N",
+        "project_ids": "UNII:XN7MM8XG2M",
+        "project_entity_ids": [
+          "UNII:XN7MM8XG2M"
+        ],
+        "chembl_ids": [
+          "CHEMBL3590187"
+        ],
+        "chembl_id": "CHEMBL3590187",
+        "pubchem_cid": "11750009",
+        "drugbank_id": "DB12499"
+      },
+      "rank": 10.0,
+      "score": 6.024343967437744,
+      "scores": {
+        "biomaster": 6.024343967437744,
+        "drugclip": 0.5593625,
+        "dtiam": 0.17830694,
+        "conplex": 0.48079264,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": 0.9998534917831421
+      },
+      "ranks": {
+        "biomaster": 10.0,
+        "drugclip": 16.0,
+        "dtiam": 639.0,
+        "conplex": 22.0,
+        "nesso": null,
+        "probematch": null,
+        "dtbind": 21.0
+      },
+      "denominators": {
+        "biomaster": 720,
+        "drugclip": 720,
+        "dtiam": 720,
+        "conplex": 720,
+        "nesso": 7,
+        "probematch": 7,
+        "dtbind": 207
+      },
+      "known_relation": true,
+      "coverage_complete": {
+        "biomaster": true,
+        "drugclip": true,
+        "dtiam": true,
+        "conplex": true,
+        "nesso": false,
+        "probematch": false,
+        "dtbind": false
+      },
+      "model_status": {
+        "biomaster": "completed",
+        "drugclip": "completed",
+        "dtiam": "completed",
+        "conplex": "completed",
+        "nesso": "pending",
+        "probematch": "pending",
+        "dtbind": "completed"
+      },
+      "model_reasons": {
+        "biomaster": "",
+        "drugclip": "",
+        "dtiam": "",
+        "conplex": "",
+        "nesso": "",
+        "probematch": "",
+        "dtbind": ""
+      },
+      "action": "ANTAGONIST",
+      "mechanism": "Androgen Receptor antagonist",
+      "novelty": "K0_KNOWN_PROJECT_RELATIONSHIP",
+      "pocket_source": "PREFERRED_DRUGLIKE_HOLO_EXPERIMENTAL_POCKET",
+      "drugclip_scope": "EXPERIMENTAL_HOLO_338",
+      "drugclip_std": 0.12597643,
+      "frozen_score": 0.943864229765013,
+      "frozen_rank": 17.0,
+      "frozen_denominator": 720
+    }
+  ],
+  "source": {
+    "name": "ReTargetMap",
+    "version": "Selected · 2026-09-06",
+    "role": "DrugCLIP + Morgan + ESM2; FP32 双方向网络",
+    "score_type": "logit",
+    "source": "outputs/biomaster_best_model_20260906/retargetmap_selected_v1",
+    "note": "≤2025部署拟合；分数不是概率或实验亲和力。反向使用独立方向输出，仅作辅助证据。"
+  },
+  "rank_policy": "descending score, deterministic entity-ID tie break; missing scores have null rank"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-16T15:14:30.111053+00:00",
+  "ar_target": "CHEMBL1871",
+  "ar_catalog": 720,
+  "ar_top10_ids": [
+    "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+    "UREBDLICKHMUKA-CXSFZGCWSA-N",
+    "UREBDLICKHMUKA-DVTGEIKXSA-N",
+    "GFNANZIMVAIWHM-OBYCQNJPSA-N",
+    "VOVIALXJUBGFJZ-KWVAZRHASA-N",
+    "METQSPRSQINEEU-HXCATZOESA-N",
+    "IAVUPMFITXYVAF-XPUUQOCRSA-N",
+    "MUMGGOZAMZWBJJ-DYKIIFRCSA-N",
+    "NKANXQFJJICGDU-QPLCGJKRSA-N",
+    "GPNHMOZDMYNCPO-PDUMRIMRSA-N"
+  ],
+  "seven_model_matrix": true,
+  "seven_axes_main_plot": true,
+  "drug_overview_and_rankings": true,
+  "reverse_head_verified": true,
+  "csv_rows": 720,
+  "page_errors": [],
+  "scope": "same production code, assets and data with ephemeral local authentication"
+}

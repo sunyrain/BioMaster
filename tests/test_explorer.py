@@ -215,3 +215,48 @@ def test_browse_cross_entity_search_filter_and_pagination(catalog):
     with pytest.raises(ValueError): browse(catalog, 'unknown')
     with pytest.raises(ValueError): browse(catalog, 'pathways', category='approved')
     with pytest.raises(ValueError): browse(catalog, 'structures', page=0)
+
+
+def test_seven_models_rank_over_full_entity_catalog_and_refresh_live(catalog):
+    from biomaster.catalog_models import connect, save
+    db=connect(catalog.root,write=True)
+    save(db,[dict(model='nesso',drug_id='D1',target_id='T1',score=.1,status='completed'),
+             dict(model='nesso',drug_id='D2',target_id='T1',score=.9,status='completed'),
+             dict(model='probematch',drug_id='D1',target_id='T1',score=.8,status='completed')])
+    result=catalog.rankings('target','T1','nesso')
+    assert result['catalog_count']==2 and result['total']==2
+    assert result['denominator']==2
+    assert [r['id'] for r in result['items']]==['D2','D1']
+    assert result['items'][0]['ranks']['nesso']==1
+    assert result['items'][0]['coverage_complete']['nesso'] is True
+    assert result['items'][0]['scores']['probematch'] is None
+    assert len(result['items'][0]['scores'])==7
+    # Search/relationship filters keep the original per-target ranks, never SPR ranks.
+    filtered=catalog.rankings('target','T1','nesso',search='D1')
+    assert filtered['denominator']==2 and filtered['items'][0]['rank']==2
+    assert filtered['items'][0]['coverage_complete']['probematch'] is False
+    # New scores appear without process restart and cannot change the old model's head.
+    before=catalog.rankings('target','T1','biomaster')
+    save(db,[dict(model='probematch',drug_id='D2',target_id='T1',score=.95,status='completed')])
+    updated=catalog.rankings('target','T1','probematch')
+    assert updated['items'][0]['id']=='D2' and updated['denominator']==2
+    after=catalog.rankings('target','T1','biomaster')
+    assert [(r['id'],r['score'],r['rank']) for r in before['items']]==[(r['id'],r['score'],r['rank']) for r in after['items']]
+    assert after['items'][0]['score']==pytest.approx(.9)
+    db.execute("INSERT INTO target_status VALUES ('dtbind','T1','unavailable','publisher_sequence_mismatch')");db.commit()
+    missing=catalog.rankings('target','T1','dtbind')
+    assert missing['total']==2 and missing['denominator']==0
+    assert all(r['rank'] is None and r['score'] is None for r in missing['items'])
+    assert missing['items'][0]['model_reasons']['dtbind']=='publisher_sequence_mismatch'
+    db.close()
+
+
+def test_seven_model_csv_exports_full_directory_with_missing_rows(http_server,catalog):
+    from biomaster.catalog_models import connect,save
+    db=connect(catalog.root,write=True)
+    save(db,[dict(model='dtbind',drug_id='D2',target_id='T1',score=.8,status='completed')]);db.close()
+    status,_,body=get(http_server,'/api/rankings.csv?kind=target&id=T1&model=dtbind&page_size=1')
+    rows=list(csv.DictReader(io.StringIO(body.decode('utf-8-sig'))))
+    assert status==200 and len(rows)==2
+    assert rows[0]['entity_id']=='D2' and rows[1]['rank']==''
+    assert 'nesso_rank' in rows[0] and 'probematch_score' in rows[0]

@@ -1,0 +1,27 @@
+[
+  {
+    "target": "CHEMBL1871",
+    "drug": "BUGYDGFZZOZRHP-UHFFFAOYSA-N",
+    "max_abs_difference": 0.0
+  },
+  {
+    "target": "CHEMBL1902",
+    "drug": "CJBJHOAVZSMMDJ-HEXNFIEUSA-N",
+    "max_abs_difference": 4.172325134277344e-07
+  },
+  {
+    "target": "CHEMBL2085",
+    "drug": "RZVAJINKPMORJF-UHFFFAOYSA-N",
+    "max_abs_difference": 3.4272670748625167e-07
+  },
+  {
+    "target": "CHEMBL202",
+    "drug": "ACWZRVQXLIRSDF-UHFFFAOYSA-N",
+    "max_abs_difference": 0.0
+  },
+  {
+    "target": "CHEMBL5705",
+    "drug": "FVTWTVQXNAJTQP-UHFFFAOYSA-N",
+    "max_abs_difference": 0.0
+  }
+]

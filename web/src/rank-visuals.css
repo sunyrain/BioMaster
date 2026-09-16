@@ -16,9 +16,9 @@
 .rv-summary p { font-size: 14px; color: #526176; align-self: center; line-height: 1.8; padding-left: 16px; border-left: 1px solid #e0e7f0; }
 .rv-summary p svg { vertical-align: middle; margin-right: 6px; }
 .rv-matrix-scroll { overflow: auto; scrollbar-width: thin; }
-.rv-matrix { width: 100%; border-spacing: 5px; table-layout: fixed; min-width: 670px; }
+.rv-matrix { width: 100%; border-spacing: 5px; table-layout: fixed; min-width: 1560px; }
 .rv-matrix th { text-align: left; font-size: 13px; padding: 8px 10px; color: #30445f; font-weight: 650; }
-.rv-matrix th:first-child { width: 26%; }
+.rv-matrix th:first-child { width: 230px; }
 .rv-matrix thead th small { display: block; font-weight: 400; font-size: 12px; margin-top: 3px; color: #526176; }
 .rv-matrix thead th.is-sorted { color: #1a50c1; border-bottom: 2px solid #2459e8; }
 .rv-matrix thead th i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; }
@@ -53,7 +53,7 @@
 .rv-plot-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 12px; font-size: 12px; color: #526176; }
 .rv-plot-title > div { display: flex; align-items: center; gap: 7px; font-size: 14px; color: #1e3554; }
 .rv-plot-scroll { overflow: auto; background: #f8fafd; border: 1px solid #e0e7f0; border-radius: 8px; }
-.rv-plot-scroll svg { display: block; width: 100%; min-width: 600px; }
+.rv-plot-scroll svg { display: block; width: 100%; min-width: 1100px; }
 .rv-trace { cursor: pointer; transition: opacity .15s; }
 .rv-trace:focus { outline: none; }
 .rv-trace:focus-visible circle { stroke: #ffb52a; stroke-width: 3; }
@@ -72,3 +72,4 @@
 .rv-evidence small,.rv-score { font-size:11px; }
 .catalog-clickable-row { cursor:pointer; }
 .catalog-clickable-row:hover,.catalog-clickable-row:focus-visible { background:#eaf1fc; outline:2px solid #2459e8; outline-offset:-2px; }
+.rv-cell.partial{background:#f6f4ed;border:1px dashed #b1a98a;color:#665f46}.rv-cell>span{flex-wrap:wrap}.model-tabs small{font-size:10px;opacity:.75}.ranking-toolbar .model-tabs{flex-wrap:wrap}

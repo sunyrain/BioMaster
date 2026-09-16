@@ -13,8 +13,10 @@ import requests
 
 class RangeStream(io.RawIOBase):
     """Ordered, bounded-memory HTTP ranges for a slow large gzip download."""
-    def __init__(self,url,total=38706096444,chunk=4*1024*1024,workers=8):
+    def __init__(self,url,total=38706096444,chunk=4*1024*1024,workers=8,cache=None):
         self.url,self.total,self.chunk,self.workers=url,total,chunk,workers
+        self.cache=cache
+        if cache:cache.mkdir(parents=True,exist_ok=True)
         self.pool=ThreadPoolExecutor(max_workers=workers)
         self.index=0;self.position=0;self.buffer=b'';self.jobs={}
         for i in range(workers):self.submit(i)
@@ -22,16 +24,20 @@ class RangeStream(io.RawIOBase):
         if i*self.chunk<self.total:self.jobs[i]=self.pool.submit(self.fetch,i)
     def fetch(self,i):
         start=i*self.chunk;end=min(self.total-1,start+self.chunk-1)
-        for attempt in range(4):
+        cached=self.cache/f'{i:06d}.range' if self.cache else None
+        if cached and cached.exists() and cached.stat().st_size==end-start+1:return cached.read_bytes()
+        for attempt in range(12):
             try:
                 r=requests.get(self.url,headers={'Range':f'bytes={start}-{end}'},timeout=(30,120))
                 r.raise_for_status()
                 assert r.status_code==206 and r.headers.get('Content-Range','').startswith(f'bytes {start}-{end}/')
                 assert len(r.content)==end-start+1
+                if cached:
+                    temp=cached.with_suffix('.part');temp.write_bytes(r.content);temp.replace(cached)
                 return r.content
             except Exception:
-                if attempt==3:raise
-                time.sleep(2**attempt)
+                if attempt==11:raise
+                time.sleep(min(30,2**attempt))
     def readable(self):return True
     def read(self,size=-1):
         if size<0:raise ValueError('unbounded reads prohibited')
@@ -71,13 +77,13 @@ def encoders():
     with ThreadPoolExecutor(max_workers=3) as pool: items=list(pool.map(fetch,jobs))
     (OUT/'ENCODERS.json').write_text(json.dumps(items,indent=2))
 
-def dtbind_graphs():
+def dtbind_graphs(catalog=False):
     dest=OUT/'dtbind/protein_graph';dest.mkdir(parents=True,exist_ok=True)
-    targets=set(pd.read_csv(OUT/'UNIQUE_PAIRS.csv').uniprot_id)
+    targets=set(pd.read_csv(ROOT/'outputs/catalog_seven_models_20260916/TARGETS.csv' if catalog else OUT/'UNIQUE_PAIRS.csv').uniprot_id)
     # Do not store/extract the 38.7 GB archive. Occurrence graphs are the first section.
     url='https://zenodo.org/records/17283638/files/DTBind_datasets.tar.gz?download=1'
     found=[];count=0;started=time.time(); entered=False
-    with RangeStream(url) as response:
+    with RangeStream(url,workers=4,cache=ROOT/'.cache/frontier_dti/dtbind_archive_ranges') as response:
         with tarfile.open(fileobj=response,mode='r|gz') as archive:
             for member in archive:
                 name=member.name
@@ -86,7 +92,7 @@ def dtbind_graphs():
                     accession=Path(name).stem
                     if accession in targets:
                         payload=archive.extractfile(member).read()
-                        (dest/(accession+'.pt')).write_bytes(payload)
+                        temp=dest/(accession+'.tmp');temp.write_bytes(payload);temp.replace(dest/(accession+'.pt'))
                         found.append(dict(uniprot_id=accession,archive_member=name,bytes=len(payload),sha256=hashlib.sha256(payload).hexdigest()))
                         print(f'kept {accession}: {len(found)}/{len(targets)}; scanned {count}',flush=True)
                     if count%10==0:
@@ -99,5 +105,5 @@ def dtbind_graphs():
     (OUT/'dtbind/FETCH_STATUS.json').write_text(json.dumps(dict(status='completed',scanned=count,found=len(found),requested=len(targets),elapsed_seconds=time.time()-started)))
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['encoders','dtbind']);args=p.parse_args()
-    encoders() if args.action=='encoders' else dtbind_graphs()
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['encoders','dtbind']);p.add_argument('--catalog',action='store_true');args=p.parse_args()
+    encoders() if args.action=='encoders' else dtbind_graphs(args.catalog)

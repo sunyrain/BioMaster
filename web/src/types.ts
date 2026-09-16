@@ -1,5 +1,5 @@
 export type Kind = "drug" | "target";
-export type Model = "biomaster" | "drugclip" | "dtiam" | "conplex" | "frozen";
+export type Model = "biomaster" | "drugclip" | "dtiam" | "conplex" | "nesso" | "probematch" | "dtbind" | "frozen";
 export type EntityRef = {
   id: string;
   kind: Kind;
@@ -35,6 +35,9 @@ export type Ranking = EntityRef & {
   scores: Record<Model, number | null>;
   ranks: Record<Model, number | null>;
   denominators: Record<Model, number>;
+  coverage_complete: Record<Model, boolean>;
+  model_status: Record<Model, string>;
+  model_reasons: Record<Model, string>;
   known_relation?: boolean;
   frozen_score?: number;
   frozen_rank?: number;
@@ -52,6 +55,9 @@ export type Rankings = {
   page_size: number;
   total: number;
   denominator: number;
+  catalog_count: number;
+  model_coverage: Record<Model, number>;
+  model_progress: Record<string, Evidence>;
   scope: string;
   auxiliary: boolean;
   items: Ranking[];
@@ -72,6 +78,9 @@ export const MODEL_NAMES: Record<Model, string> = {
   drugclip: "DrugCLIP",
   dtiam: "DTIAM",
   conplex: "ConPLex",
+  nesso: "Nesso-1",
+  probematch: "ProbeMatchDTI",
+  dtbind: "DTBind",
   frozen: "冻结生产版",
 };
 export const MODEL_COLORS: Record<Model, string> = {
@@ -79,9 +88,12 @@ export const MODEL_COLORS: Record<Model, string> = {
   drugclip: "#2459E8",
   dtiam: "#7136CF",
   conplex: "#A34D0C",
+  nesso: "#B33870",
+  probematch: "#147A94",
+  dtbind: "#777017",
   frozen: "#526176",
 };
-export const MODELS: Model[] = ["biomaster", "drugclip", "dtiam", "conplex"];
+export const MODELS: Model[] = ["biomaster", "drugclip", "dtiam", "conplex", "nesso", "probematch", "dtbind"];
 export function fmt(value: unknown, digits = 3): string {
   return typeof value === "number" && Number.isFinite(value)
     ? Number.isInteger(value)

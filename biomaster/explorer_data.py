@@ -25,12 +25,17 @@ PAIRS = "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATR
 FROZEN = "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz"
 DTIAM = "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_720x384_deployment_v1/DTIAM_720X384_SCORES_V1.csv.gz"
 TARGETS = "outputs/target_universe_ch37_v2/TARGET_UNIVERSE_OFFICIAL_888_V2.csv"
-MODELS = ("biomaster", "drugclip", "dtiam", "conplex")
+BASE_MODELS = ("biomaster", "drugclip", "dtiam", "conplex")
+from .catalog_models import NEW_MODELS, entity_scores, progress as catalog_progress, coverage as catalog_coverage
+MODELS = BASE_MODELS + NEW_MODELS
 MODEL_INFO = {
     "biomaster": {"name": "ReTargetMap", "version": "Selected · 2026-09-06", "role": "DrugCLIP + Morgan + ESM2; FP32 双方向网络", "score_type": "logit", "source": BUNDLE, "note": "≤2025部署拟合；分数不是概率或实验亲和力。反向使用独立方向输出，仅作辅助证据。"},
     "drugclip": {"name": "DrugCLIP", "version": "统一 720 × 384 比较核心", "role": "结构表征比较证据", "score_type": "cosine similarity", "source": PAIRS, "note": "382个靶点可评分；实验与预测口袋之间未校准，跨来源总排序仅用于探索。"},
     "dtiam": {"name": "DTIAM", "version": "Public retrained deployment v1", "role": "独立比较模型", "score_type": "model probability", "source": DTIAM, "note": "模型输出并非实验亲和力。"},
     "conplex": {"name": "ConPLex", "version": "统一 720 × 384 比较核心", "role": "序列比较证据", "score_type": "model score", "source": PAIRS, "note": "模型输出并非实验亲和力。"},
+    "nesso": {"name": "Nesso-1", "version": "Official v1.0.0 · 2026-09-16", "role": "序列与分子结构联合预测", "score_type": "binder score", "source": "outputs/catalog_seven_models_20260916", "note": "完整目录逐对补算中；未完成评分保留为空。使用binder输出，不是实测亲和力。"},
+    "probematch": {"name": "ProbeMatchDTI", "version": "Official All_Model", "role": "多表征融合比较模型", "score_type": "model probability", "source": "outputs/catalog_seven_models_20260916", "note": "官方融合权重，1200蛋白位置/100分子词元窗口；完整目录评分，不限于SPR候选。"},
+    "dtbind": {"name": "DTBind", "version": "Official occurrence", "role": "蛋白表面与几何图结合预测", "score_type": "model probability", "source": "outputs/catalog_seven_models_20260916", "note": "缺少匹配蛋白图时保留为空；使用模型本身输出，不重复Sigmoid，不是Kd预测。"},
 }
 
 
@@ -173,6 +178,8 @@ class ExplorerData:
         pairs["frozen"] = pd.to_numeric(pairs.get("biomaster_independent_borda_score", np.nan), errors="coerce")
         pairs["biomaster"] = np.nan
         pairs["biomaster_reverse"] = np.nan
+        for model in NEW_MODELS:
+            pairs[model] = np.nan
         if len(pairs) and (self.root / BUNDLE / "MANIFEST.json").is_file():
             try:
                 selected = self._selected_scores(pairs)
@@ -215,7 +222,7 @@ class ExplorerData:
             entity["known_targets"] = list(normalized.values())
         for kind, entities in (("drug", self.drugs), ("target", self.targets)):
             for identifier, entity in entities.items():
-                entity["models"] = self._model_coverage(kind, identifier)
+                entity["models"] = self._model_coverage(kind, identifier, live=False)
                 fields = ("known_diseases", "txgnn_diseases", "known_targets") if kind == "drug" else ("pathways", "target_diseases", "pockets", "structure")
                 entity["missing"] = [field for field in fields if not entity.get(field)]
         self._aliases = {}
@@ -362,9 +369,29 @@ class ExplorerData:
         indices = groups.get(identifier, [])
         return self.pairs.iloc[indices]
 
-    def _model_coverage(self, kind: str, identifier: str) -> list[dict]:
-        rows = self._rows(kind, identifier)
+    def _live_rows(self, kind: str, identifier: str) -> pd.DataFrame:
+        """Merge current scores into the ENTIRE entity directory before any filter."""
+        rows = self._rows(kind, identifier).copy()
+        scores, states = entity_scores(self.root, kind, identifier)
+        other = "target_chembl_id" if kind == "drug" else "ligand_inchikey"
+        for model in NEW_MODELS:
+            values, statuses, reasons = [], [], []
+            for target_id, other_id in zip(rows.target_chembl_id, rows[other]):
+                result = scores.get((model, str(other_id)), states.get((model, str(target_id)), {}))
+                values.append(result.get("score", np.nan))
+                statuses.append(result.get("status", "pending"))
+                reasons.append(result.get("reason", ""))
+            rows[model] = pd.to_numeric(pd.Series(values, index=rows.index), errors="coerce")
+            rows[f"{model}_status"] = statuses
+            rows[f"{model}_reason"] = reasons
+            rows[f"{kind}_{model}_rank"] = rows[model].rank(ascending=False, method="first", na_option="keep")
+            rows[f"{kind}_{model}_denominator"] = int(rows[model].notna().sum())
+        return rows
+
+    def _model_coverage(self, kind: str, identifier: str, *, live: bool = True) -> list[dict]:
+        rows = self._live_rows(kind, identifier) if live else self._rows(kind, identifier)
         return [dict(MODEL_INFO[m], id=m, coverage=int(rows[f"{kind}_{m}_denominator"].iloc[0]) if len(rows) else 0,
+                     catalog_count=len(rows),
                      available=bool(len(rows) and rows[f"{kind}_{m}_denominator"].iloc[0] > 0)) for m in MODELS]
 
     @staticmethod
@@ -401,6 +428,7 @@ class ExplorerData:
                 result[f"{key}_total"] = len(value)
         result["rank_scope"] = "逐药物靶点检索" if kind == "drug" else "逐靶点老药检索 · 辅助证据"
         result["sources"] = self.sources
+        result["models"] = self._model_coverage(kind, identifier)
         return clean(result)
 
     def evidence(self, kind: str, identifier: str, section: str, page: int = 1, page_size: int = 50, search: str = "") -> dict:
@@ -430,7 +458,9 @@ class ExplorerData:
             raise ValueError("Unknown relationship filter")
         if page < 1 or not 1 <= page_size <= 200:
             raise ValueError("page must be positive; page_size must be between 1 and 200")
-        rows = self._rows(kind, identifier)
+        rows = self._live_rows(kind, identifier)
+        catalog_count = len(rows)
+        coverage = {m: int(rows[f"{kind}_{m}_denominator"].iloc[0]) if len(rows) else 0 for m in MODELS}
         denominator = int(rows[f"{kind}_{model}_denominator"].iloc[0]) if len(rows) else 0
         entity_key = "target_chembl_id" if kind == "drug" else "ligand_inchikey"
         name_key = "gene_symbol" if kind == "drug" else "drug_names"
@@ -455,14 +485,18 @@ class ExplorerData:
             items.append({"id": str(row[entity_key]), "kind": other_kind, "name": str(row[name_key]), "subtitle": counterpart.get("subtitle"),
                   "identifiers": counterpart["identifiers"], "rank": ranks[model], "score": scores[model], "scores": scores, "ranks": ranks,
                   "denominators": denominators, "known_relation": _bool(row.get("is_any_frozen_known_relationship")) if "is_any_frozen_known_relationship" in row else None,
+                  "coverage_complete": {m: denominators[m] == catalog_count for m in MODELS},
+                  "model_status": {m: row.get(f"{m}_status", "completed" if pd.notna(scores[m]) else "unavailable") for m in MODELS},
+                  "model_reasons": {m: row.get(f"{m}_reason", "") for m in MODELS},
                   "action": row.get("chembl37_action_types"), "mechanism": row.get("chembl37_mechanism_of_action"),
                   "novelty": row.get("pair_novelty_class_384"), "pocket_source": row.get("pair_pocket_evidence_source"),
                   "drugclip_scope": row.get("drugclip_evidence_scope"), "drugclip_std": row.get("drugclip_sixfold_std"),
                   "frozen_score": row.get("frozen"), "frozen_rank": row.get(f"{kind}_frozen_rank"),
                   "frozen_denominator": row.get(f"{kind}_frozen_denominator")})
         return clean({"kind": kind, "id": identifier, "model": model, "page": page, "page_size": page_size,
-                      "total": total, "denominator": denominator, "catalog_count": len(self._rows(kind, identifier)), "relationship_filter": relationship,
-                      "scope": "完整可评分核心；过滤与分页不改变排名" if kind == "drug" else "完整720老药范围；反向检索仅为辅助证据",
+                      "total": total, "denominator": denominator, "catalog_count": catalog_count, "relationship_filter": relationship,
+                      "model_coverage": coverage, "model_progress": catalog_progress(self.root),
+                      "scope": "完整靶点目录；过滤与分页不改变排名" if kind == "drug" else "完整老药目录；反向检索仅为辅助证据",
                       "auxiliary": kind == "target", "items": items, "source": MODEL_INFO[model],
                       "rank_policy": "descending score, deterministic entity-ID tie break; missing scores have null rank"})
 
@@ -481,6 +515,11 @@ class ExplorerData:
         models = [dict(MODEL_INFO[m], id=m, coverage=int(self.pairs[m].notna().sum()),
                        targets=int(self.pairs.loc[self.pairs[m].notna(), "target_chembl_id"].nunique()),
                        available=bool(self.pairs[m].notna().any())) for m in MODELS]
+        live_counts = catalog_coverage(self.root)
+        for item in models:
+            if item['id'] in NEW_MODELS:
+                counts_now = live_counts.get(item['id'], {})
+                item.update(coverage=counts_now.get('coverage', 0), targets=counts_now.get('targets', 0), available=counts_now.get('coverage', 0)>0)
         def featured(kind, names):
             result = []
             for name in names:

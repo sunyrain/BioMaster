@@ -66,7 +66,6 @@ import Workspace, { SaveEntityButton, RecentEntities, recordVisit } from "./Work
 const AffinityAtlas = lazy(() => import("./AffinityAtlas"));
 const SPRDirectory = lazy(() => import("./SPRDirectory"));
 const ResearchBrowse = lazy(() => import("./ResearchBrowse"));
-const FrontierModels = lazy(() => import("./FrontierModels"));
 
 type Route = {
   page: "home" | "drugs" | "targets" | "sources" | "workspace" | "entity" | "browse" | "spr" | "affinity";
@@ -674,14 +673,14 @@ function RankingsPanel({
   entity: Entity;
   compact?: boolean;
 }) {
-  const [view, setView] = useState<RankView | "frontier">("matrix");
+  const [view, setView] = useState<RankView>("matrix");
   const [model, setModel] = useState<Model>("biomaster");
   const [order, setOrder] = useState<"asc" | "desc">("asc");
   const sortModel = (next: Model) => { setOrder(next === model && order === "asc" ? "desc" : "asc"); setModel(next); setPage(1); };
   const [query, setQuery] = useState("");
   const [relationship, setRelationship] = useState("all");
   const [page, setPage] = useState(1);
-  const [rankingPageSize, setRankingPageSize] = useState(compact ? 8 : 20);
+  const [rankingPageSize, setRankingPageSize] = useState(compact ? 10 : 20);
   const [data, setData] = useState<Rankings | null>(null);
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
@@ -734,6 +733,7 @@ function RankingsPanel({
       clearTimeout(timer);
     };
   }, [params, revision]);
+  useEffect(() => { const timer = window.setInterval(() => setRevision(v => v + 1), 30000); return () => window.clearInterval(timer); }, []);
   useEffect(() => {
     setPage(1);
     setSelected(null);
@@ -755,19 +755,20 @@ function RankingsPanel({
         ) : (
           <a
             className="button secondary small-button"
-            href={view === "frontier" ? "/api/frontier-dti.csv" : `/api/rankings.csv?${params}`}
+            href={`/api/rankings.csv?${params}`}
             download
           >
             <ArrowDownToLine size={15} />
-            {view === "frontier" ? "导出384复核 CSV" : "导出 CSV"}
+            导出 CSV
           </a>
         )}
       </SectionTitle>
       <div className="ranking-toolbar">
+        <button className="button secondary small-button" onClick={() => {setView("matrix");setModel("biomaster");setOrder("asc");setQuery("");setRelationship("all");setPage(1);setRankingPageSize(10);}}>ReTargetMap 全目录 Top10</button>
         <div className="ranking-view-switch" aria-label="排名视图">
-          {([["matrix", "排名矩阵", Grid2X2], ["frontier", "模型分歧 · 七模型", ChartNoAxesCombined], ["parallel", "原四模型分歧", ChartNoAxesCombined]] as const).map(([id, text, Icon]) => <button key={id} className={view === id ? "active" : ""} aria-pressed={view === id} onClick={() => setView(id)}><Icon size={15} />{text}</button>)}
+          {([["matrix", "排名矩阵 · 七模型", Grid2X2], ["parallel", "模型分歧 · 七模型", ChartNoAxesCombined]] as const).map(([id, text, Icon]) => <button key={id} className={view === id ? "active" : ""} aria-pressed={view === id} onClick={() => setView(id)}><Icon size={15} />{text}</button>)}
         </div>
-        {view !== "frontier" && <div className="model-tabs">
+        <div className="model-tabs">
           {MODELS.map((m) => (
             <button
               className={model === m ? "active" : ""}
@@ -777,10 +778,11 @@ function RankingsPanel({
             >
               <i style={{ background: MODEL_COLORS[m] }} />
               {MODEL_NAMES[m]}
+              {data?.model_coverage && <small>{data.model_coverage[m]} / {data.catalog_count}</small>}
             </button>
           ))}
-        </div>}
-        {!compact && view !== "frontier" && (
+        </div>
+        {!compact && (
           <div className="filter-search small-filter">
             <Search size={15} />
             <input
@@ -792,7 +794,6 @@ function RankingsPanel({
           </div>
         )}
       </div>
-      {view === "frontier" ? <Suspense fallback={<Loading />}><FrontierModels kind={entity.kind} identifier={entity.id} compact initialView="plot" onShowTop10={() => {setView("matrix");setModel("biomaster");setOrder("asc");setQuery("");setRelationship("all");setPage(1);setRankingPageSize(10);}} /></Suspense> : <>
       {!compact && <div className="ranking-filter-row">
         <div className="relationship-filters" aria-label="关系证据筛选">
           <span><SlidersHorizontal size={14} />关系证据</span>
@@ -807,7 +808,7 @@ function RankingsPanel({
             <Badge>药物 → 靶点</Badge>
           )}
           <span>
-            排名分母 <strong>{data?.denominator ?? "—"}</strong> · 筛选不重排
+            已评分 <strong>{data?.denominator ?? "—"} / {data?.catalog_count ?? "—"}</strong> · 完整目录 · 筛选不重排
           </span>
         </span>
         <span>{view === "matrix" ? "点击矩阵单元格查看配对证据" : "悬停轨迹查看模型分歧"}</span>
@@ -817,7 +818,7 @@ function RankingsPanel({
       ) : busy ? (
         <Loading />
       ) : data?.items.length ? (
-        <RankVisuals rows={data.items} model={model} view={view} order={order} onSort={sortModel} onSelect={selectPair} />
+        <RankVisuals rows={data.items} model={model} view={view} order={order} onSort={sortModel} onSelect={selectPair} catalogCount={data.catalog_count} />
       ) : (
         <Empty
           title="当前模型没有可用排名"
@@ -838,8 +839,7 @@ function RankingsPanel({
           : "原始分数用于同一模型内排序。 "}
         “未标注”不代表阴性；已知关系不等于已验证该预测。
       </p>
-      <p className="panel-footnote">本视图使用原四模型的目录排名。Nesso-1、ProbeMatchDTI、DTBind 本轮复核原384候选，可在“模型分歧 · 七模型”查看。</p>
-      </>}
+      <p className="panel-footnote">显示完整目录中的模型排名。已评分不足目录总数时标记“暂列”；各模型独立排序，未出分保留为空。</p>
       {selected &&
         createPortal(
           <div className="drawer-backdrop" onClick={() => setSelected(null)}>
@@ -880,7 +880,7 @@ function RankingsPanel({
               </header>
               <div className="pair-body">
               <div className="pair-relation-context"><Link2 size={19} /><div><strong>{selected.known_relation ? "已有数据库关系注释" : "当前关系未标注"}</strong><p>{selected.mechanism || (selected.known_relation ? "已知关系的详细机制以原始数据记录为准。" : "可作为待研究候选；未标注不代表实验阴性。")}</p>{selected.action && <span>作用类型：{({ INHIBITOR: "抑制剂", SUBSTRATE: "底物", ANTAGONIST: "拮抗剂", AGONIST: "激动剂", BLOCKER: "阻断剂", ACTIVATOR: "激活剂" } as Record<string, string>)[selected.action] || selected.action}</span>}</div></div>
-              <section className="pair-comparison" aria-label="四模型对比">
+              <section className="pair-comparison" aria-label="七模型对比">
                 <div className="pair-section-heading"><h3>模型对比</h3><span>排名越小，位置越靠前</span></div>
                 <table><thead><tr><th>模型</th><th>排名 / 总数</th><th>原始分数</th></tr></thead><tbody>
                 {MODELS.map(m => <tr key={m}>

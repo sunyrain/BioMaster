@@ -1,0 +1,15 @@
+{
+  "drugs": 720,
+  "targets": 384,
+  "pairs": 276480,
+  "priority": "AR all 720 drugs, then complete targets ordered by length; no SPR-only filtering",
+  "catalog_source": "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz",
+  "input_sha256": {
+    "DRUGS.csv": "43fbe86cb18665c697e520d3c5b856551a12aa54331963eeab3d47abfbdcbf61",
+    "TARGETS.csv": "87aaa47324f9da8674d26794e0db7433bf82295463954282e16c9d2d4e5f19b6"
+  },
+  "ranks": "per entity over the full directory; missing scores remain null; partial score coverage explicitly displayed",
+  "biomaster_direction": "drug query uses forward logit; target query uses reverse logit, unchanged from original rankings API",
+  "prior_scores_imported": 1881,
+  "weights": "same pinned official checkpoints and preprocessing as frontier_dti_20260916; no training"
+}
