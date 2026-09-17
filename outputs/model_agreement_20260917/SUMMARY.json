@@ -1,0 +1,20 @@
+{
+  "snapshot_utc": "2026-09-17T07:00:34.696016+00:00",
+  "shared_targets": 8,
+  "shared_pairs": 5752,
+  "per_target_pairs": [
+    719
+  ],
+  "all_five_targets": 382,
+  "all_five_pairs": 275040,
+  "common_labels": 378,
+  "nesso_minus_retargetmap_ap": 0.05875093602749881,
+  "paired_target_bootstrap_95_ci": [
+    -0.028854557150749215,
+    0.14166725704876182
+  ],
+  "bootstrap_replicates": 1200,
+  "biomaster_benchmark_direction": "prespecified forward; reverse also exported separately",
+  "coverage_note": ">=719 of 720 scored per target for all seven; then exact intersection, no SPR-only restriction; selected targets biased toward early short proteins",
+  "rank_note": "same-query score direction; tied ranks averaged for Spearman; TopK ID tie break and randomized-tie expected overlap both exported"
+}

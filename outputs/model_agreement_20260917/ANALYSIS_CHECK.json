@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "shared_pairs": 5752,
+  "shared_targets": 8,
+  "metrics_same_labeled_pairs": 378,
+  "positive": 103,
+  "negative": 275,
+  "nesso_zero_interface_confidence": 6,
+  "snapshot_utc": "2026-09-17T07:00:34.696016+00:00",
+  "checks": [
+    "exact pair uniqueness",
+    "same target/drug sets",
+    "correct Top10 random baseline",
+    "same labeled comparison set",
+    "no probability thresholds for nonprobability scores",
+    "threshold count consistency",
+    "all raw Nesso outputs found"
+  ]
+}

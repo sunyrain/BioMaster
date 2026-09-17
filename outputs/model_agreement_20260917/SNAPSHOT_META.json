@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-17T07:00:34.696016+00:00",
+  "scores_source": "one SQLite read transaction + immutable website FP32 baseline",
+  "snapshot_sha256": "003e9ab8c60686194d98ac7091948a2d1ae70a5e6b7100206d4260e103e8bb9e",
+  "successful_counts": {
+    "biomaster": 276480,
+    "drugclip": 275040,
+    "dtiam": 276480,
+    "conplex": 276480,
+    "nesso": 20899,
+    "probematch": 276480,
+    "dtbind": 56504
+  }
+}
