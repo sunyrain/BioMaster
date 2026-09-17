@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-17T07:51:49.904890+00:00",
+  "release_id": "dtiam_a_kdki_inactive_20260917",
+  "scored_pairs": 276480,
+  "public_login_status": 200,
+  "unauthorized_public_api_status": 401,
+  "browser_contract": "website_check/WEBSITE_CHECK.json",
+  "live_process": {
+    "status": "READY",
+    "pid": 183775,
+    "port": 18765,
+    "dtiam_release": "dtiam_a_kdki_inactive_20260917",
+    "scored_pairs": 276480,
+    "auth_enabled": true,
+    "other_model_roles_unchanged": true
+  }
+}

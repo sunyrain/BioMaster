@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-17T07:47:54.861409+00:00",
+  "ar_target": "CHEMBL1871",
+  "ar_catalog": 720,
+  "ar_top10_ids": [
+    "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+    "UREBDLICKHMUKA-CXSFZGCWSA-N",
+    "UREBDLICKHMUKA-DVTGEIKXSA-N",
+    "GFNANZIMVAIWHM-OBYCQNJPSA-N",
+    "VOVIALXJUBGFJZ-KWVAZRHASA-N",
+    "METQSPRSQINEEU-HXCATZOESA-N",
+    "IAVUPMFITXYVAF-XPUUQOCRSA-N",
+    "MUMGGOZAMZWBJJ-DYKIIFRCSA-N",
+    "NKANXQFJJICGDU-QPLCGJKRSA-N",
+    "GPNHMOZDMYNCPO-PDUMRIMRSA-N"
+  ],
+  "dtiam_version": "dtiam_a_kdki_inactive_20260917",
+  "dtiam_top10_ids": [
+    "LXMSZDCAJNLERA-ZHYRCANASA-N",
+    "RJKFOVLPORLFTN-LEKSSAKUSA-N",
+    "BTBHLEZXCOBLCY-QGZVFWFLSA-N",
+    "BFPYWIDHMRZLRN-SLHNCBLASA-N",
+    "IIXWYSCJSQVBQM-LLVKDONJSA-N",
+    "BLIJXOOIHRSQRB-PXYINDEMSA-N",
+    "JWJOTENAMICLJG-QWBYCMEYSA-N",
+    "HKDLNTKNLJPAIY-WKWWZUSTSA-N",
+    "GHILNKWBALQPDP-UHFFFAOYSA-N",
+    "PEMUGDMSUDYLHU-ZEQRLZLVSA-N"
+  ],
+  "seven_model_matrix": true,
+  "seven_axes_main_plot": true,
+  "drug_overview_and_rankings": true,
+  "reverse_head_verified": true,
+  "csv_rows": 720,
+  "page_errors": [],
+  "scope": "same production code, assets and data with ephemeral local authentication"
+}

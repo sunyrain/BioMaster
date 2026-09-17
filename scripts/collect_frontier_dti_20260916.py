@@ -13,6 +13,7 @@ import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from biomaster.frontier_dti import ALL_MODELS,BASE_MODELS,NEW_MODELS,NAMES,metrics,common_ranks,finite_json,DIRECTORY
+from biomaster.dtiam_release import RELEASE_ID as DTIAM_RELEASE, overlay_baseline
 OUT=ROOT/DIRECTORY
 
 def atomic_json(path,value):
@@ -32,7 +33,7 @@ def baseline(manifest):
         subset=pairs[pairs.pair_id.isin(manifest.pair_id)][['pair_id',*BASE_MODELS]]
         assert len(subset)==len(manifest)
         subset.to_csv(path,index=False)
-    return pd.read_csv(path)
+    return overlay_baseline(ROOT, pd.read_csv(path))
 
 def collect():
     manifest=pd.read_csv(OUT/'INPUT_MANIFEST.csv',keep_default_na=False)
@@ -115,7 +116,7 @@ def collect():
     finished=all(not s['running'] for s in statuses.values())
     snapshot=dict(available=True,updated_utc=datetime.now(timezone.utc).isoformat(),finished=finished,
         provisional=not finished,scope='冻结SPR384候选；对照另计',models=list(statuses.values()),model_names=NAMES,
-        model_order=list(ALL_MODELS),items=items,common_spr_pairs=common_n,common_benchmark_pairs=int(common.sum()),
+        model_order=list(ALL_MODELS),items=items,common_spr_pairs=common_n,common_benchmark_pairs=int(common.sum()),dtiam_model_version=DTIAM_RELEASE,
         metrics=metric_rows,agreements=agreements,
         interpretation='共同覆盖的同一批候选内比较排名。分歧只是模型排序差异，不代表实测结合或实验成败；未覆盖不等于阴性。',
         benchmark_note='BindingDB回顾性标签；175子集仅排除了我们A/B的训练及验证重叠。公开新模型训练重叠未排除，不能宣称独立泛化性能。',
@@ -128,6 +129,7 @@ def collect():
     pd.DataFrame(agreements).to_csv(OUT/'SPR384_AGREEMENT.csv',index=False)
     temp=OUT/'ALL_PREDICTIONS.tmp';data.to_csv(temp,index=False);temp.replace(OUT/'ALL_PREDICTIONS.csv')
     export=spr[['candidate_id','priority','drug_name','gene','drug_id','target_id','pair_id',*ALL_MODELS,'nesso_pic50']].copy()
+    export['dtiam_model_version']=DTIAM_RELEASE
     for model in ALL_MODELS:export[model+'_common_rank']=ranks[model]
     export['common_denominator']=common_n
     for model in NEW_MODELS:

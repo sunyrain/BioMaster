@@ -48,7 +48,7 @@ export default function FrontierModels({ kind, identifier, compact = false, init
   });
   return <section className="panel frontier-models">
     <div className="frontier-heading"><div><span className="eyebrow">SPR384 / MODEL REVIEW</span><h2><GitCompareArrows size={22}/> 新模型复核与分歧</h2></div><button className="button secondary" onClick={() => setRevision(x=>x+1)}><RefreshCw size={15}/>刷新</button></div>
-    <p>原384候选的七模型复核：ReTargetMap、DrugCLIP、DTIAM、ConPLex，以及 Nesso-1、ProbeMatchDTI、DTBind。本轮新增模型尚未覆盖完整药物×靶点矩阵。</p>
+    <p>原384候选的七模型复核：ReTargetMap、DrugCLIP、DTIAM A（九月加强版）、ConPLex，以及 Nesso-1、ProbeMatchDTI、DTBind。本轮新增模型尚未覆盖完整药物×靶点矩阵。</p>
     {error && <p className="error-panel" role="alert">{error}</p>}
     {!data ? <p role="status">正在读取模型结果…</p> : !data.available ? <p>本轮结果尚未生成。</p> : <>
       <div className="frontier-run"><strong>{data.provisional ? "正在运行 · 阶段性结果" : "本轮运行已结束"}</strong><span>更新 {new Date(data.updated_utc).toLocaleString()} · 每30秒刷新</span><a href="/api/frontier-dti.csv" download>下载384逐对复核 CSV <ArrowUpRight size={14}/></a></div>

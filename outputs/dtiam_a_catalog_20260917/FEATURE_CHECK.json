@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "identity_matched_drugs": 720,
+  "identity_matched_targets": 384,
+  "target_truncated_to_1022": 74,
+  "parity": [
+    {
+      "kind": "drug",
+      "exact_identity_overlaps": 472,
+      "max_abs_feature_error": 2.0936131477355957e-06
+    },
+    {
+      "kind": "target",
+      "exact_identity_overlaps": 373,
+      "max_abs_feature_error": 0.0
+    }
+  ],
+  "feature_files": {
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_OLD_DRUG720_BERMOL768_FLOAT32_V1.npy": "a33fd7ed479015d9cbd35f516bf03f08ce167dc0a801651c8a1c71339785fbe7",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_PROJECT384_ESM2_T33_650M_1280_FLOAT32_V1.npy": "069b75459b164018fdb602875f96a8a98552f9d9ca625ada53c8fd807f831f05",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_OLD_DRUG720_BERMOL_INDEX_V1.csv.gz": "14116cfc4f9dd6f9739a5ddb18e0120986c24a22c6cb5180e33f44e76c118b9f",
+    "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_deployment_feature_store_v1/DTIAM_PROJECT384_ESM2_INDEX_V1.csv.gz": "7d01867f34d360f1b05bee1a7514cc824aa3d54cbb75613bd90ec50999c4f8e7"
+  }
+}

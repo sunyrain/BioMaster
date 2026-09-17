@@ -6,12 +6,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
+from .dtiam_release import NAME as DTIAM_NAME
 
 DIRECTORY='outputs/frontier_dti_20260916'
 NEW_MODELS=('nesso','probematch','dtbind')
 BASE_MODELS=('biomaster','drugclip','dtiam','conplex')
 ALL_MODELS=BASE_MODELS+NEW_MODELS
-NAMES={'biomaster':'ReTargetMap（网站版）','drugclip':'DrugCLIP','dtiam':'DTIAM（网站历史版）','conplex':'ConPLex','nesso':'Nesso-1','probematch':'ProbeMatchDTI','dtbind':'DTBind · 结合预测','nesso_pic50':'Nesso-1 · pIC50辅助'}
+NAMES={'biomaster':'ReTargetMap（网站版）','drugclip':'DrugCLIP','dtiam':DTIAM_NAME,'conplex':'ConPLex','nesso':'Nesso-1','probematch':'ProbeMatchDTI','dtbind':'DTBind · 结合预测','nesso_pic50':'Nesso-1 · pIC50辅助'}
 
 def finite_json(value):
     if isinstance(value,dict):return {k:finite_json(v) for k,v in value.items()}

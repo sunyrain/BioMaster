@@ -18,12 +18,12 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
+from .dtiam_release import SCORES as DTIAM, NAME as DTIAM_NAME, RELEASE_ID as DTIAM_RELEASE, load_scores as load_dtiam_scores
 
 LOG = logging.getLogger(__name__)
 BUNDLE = "outputs/biomaster_best_model_20260906/retargetmap_selected_v1"
 PAIRS = "outputs/unified_pair_program_720x384_v1/UNIFIED_DTA_720_X_384_PAIR_MATRIX_V1.csv.gz"
 FROZEN = "outputs/old_drug_target_sota_v1/drug_centric_ranker_v1/BIOMASTER_DRUG_TO_TARGET_720X384_V1.csv.gz"
-DTIAM = "outputs/old_drug_target_sota_v1/public_retrained_v1/dtiam_720x384_deployment_v1/DTIAM_720X384_SCORES_V1.csv.gz"
 TARGETS = "outputs/target_universe_ch37_v2/TARGET_UNIVERSE_OFFICIAL_888_V2.csv"
 BASE_MODELS = ("biomaster", "drugclip", "dtiam", "conplex")
 from .catalog_models import NEW_MODELS, entity_scores, progress as catalog_progress, coverage as catalog_coverage
@@ -31,7 +31,7 @@ MODELS = BASE_MODELS + NEW_MODELS
 MODEL_INFO = {
     "biomaster": {"name": "ReTargetMap", "version": "Selected · 2026-09-06", "role": "DrugCLIP + Morgan + ESM2; FP32 双方向网络", "score_type": "logit", "source": BUNDLE, "note": "≤2025部署拟合；分数不是概率或实验亲和力。反向使用独立方向输出，仅作辅助证据。"},
     "drugclip": {"name": "DrugCLIP", "version": "统一 720 × 384 比较核心", "role": "结构表征比较证据", "score_type": "cosine similarity", "source": PAIRS, "note": "382个靶点可评分；实验与预测口袋之间未校准，跨来源总排序仅用于探索。"},
-    "dtiam": {"name": "DTIAM", "version": "Public retrained deployment v1", "role": "独立比较模型", "score_type": "model probability", "source": DTIAM, "note": "模型输出并非实验亲和力。"},
+    "dtiam": {"name": DTIAM_NAME, "version": DTIAM_RELEASE, "role": "337,570对 Kd/Ki＋明确失活重训；验证集排序优选 A", "score_type": "native classification score", "source": DTIAM, "note": "20260923 / WeightedEnsemble_L2；原始分类分数用于完整目录排序，不是实测亲和力或经验证的实验命中概率。"},
     "conplex": {"name": "ConPLex", "version": "统一 720 × 384 比较核心", "role": "序列比较证据", "score_type": "model score", "source": PAIRS, "note": "模型输出并非实验亲和力。"},
     "nesso": {"name": "Nesso-1", "version": "Official v1.0.0 · 2026-09-16", "role": "序列与分子结构联合预测", "score_type": "binder score", "source": "outputs/catalog_seven_models_20260916", "note": "完整目录逐对补算中；未完成评分保留为空。使用binder输出，不是实测亲和力。"},
     "probematch": {"name": "ProbeMatchDTI", "version": "Official All_Model", "role": "多表征融合比较模型", "score_type": "model probability", "source": "outputs/catalog_seven_models_20260916", "note": "官方融合权重，1200蛋白位置/100分子词元窗口；完整目录评分，不限于SPR候选。"},
@@ -115,7 +115,7 @@ class ExplorerData:
                    "is_chembl37_mechanism_relationship", "cross_pocket_source_drugclip_rank_policy"]
         pairs = _read(self.root, PAIRS, columns)
         frozen = _read(self.root, FROZEN, ["ligand_inchikey", "drug_names", "target_chembl_id", "gene_symbol",
-                      "biomaster_independent_borda_score", "dtiam_probability"])
+                      "biomaster_independent_borda_score"])
         keys = ["ligand_inchikey", "target_chembl_id"]
         if pairs.empty and not frozen.empty:
             pairs = frozen.drop(columns=["biomaster_independent_borda_score", "dtiam_probability"], errors="ignore").copy()
@@ -167,11 +167,13 @@ class ExplorerData:
         if not frozen.empty:
             if frozen.duplicated(keys).any():
                 raise ValueError("Duplicate keys in frozen score table")
-            pairs = pairs.merge(frozen[keys + [c for c in ["biomaster_independent_borda_score", "dtiam_probability"] if c in frozen]], on=keys, how="left", validate="one_to_one")
-        dtiam = _read(self.root, DTIAM, keys + ["dtiam_probability"])
+            pairs = pairs.merge(frozen[keys + [c for c in ["biomaster_independent_borda_score"] if c in frozen]], on=keys, how="left", validate="one_to_one")
+        dtiam = load_dtiam_scores(self.root)
         if not dtiam.empty:
             pairs = pairs.drop(columns=["dtiam_probability"], errors="ignore").merge(dtiam, on=keys, how="left", validate="one_to_one")
-        self.sources.append(_source(self.root, "DTIAM 全目录评分", DTIAM))
+        elif len(pairs):
+            self.warnings.append("DTIAM A 加强版评分未挂载；保留为空，不使用历史DTIAM分数代替。")
+        self.sources.append(_source(self.root, "DTIAM A 加强版全目录评分", DTIAM))
         pairs["drugclip"] = pd.to_numeric(pairs.get("drugclip_cosine_mean", np.nan), errors="coerce")
         pairs["conplex"] = pd.to_numeric(pairs.get("conplex_score", np.nan), errors="coerce")
         pairs["dtiam"] = pd.to_numeric(pairs.get("dtiam_probability", np.nan), errors="coerce")
@@ -495,7 +497,7 @@ class ExplorerData:
                   "frozen_denominator": row.get(f"{kind}_frozen_denominator")})
         return clean({"kind": kind, "id": identifier, "model": model, "page": page, "page_size": page_size,
                       "total": total, "denominator": denominator, "catalog_count": catalog_count, "relationship_filter": relationship,
-                      "model_coverage": coverage, "model_progress": catalog_progress(self.root),
+                      "model_coverage": coverage, "model_progress": catalog_progress(self.root), "dtiam_model_version": DTIAM_RELEASE,
                       "scope": "完整靶点目录；过滤与分页不改变排名" if kind == "drug" else "完整老药目录；反向检索仅为辅助证据",
                       "auxiliary": kind == "target", "items": items, "source": MODEL_INFO[model],
                       "rank_policy": "descending score, deterministic entity-ID tie break; missing scores have null rank"})

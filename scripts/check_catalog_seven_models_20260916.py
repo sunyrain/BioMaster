@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Verify main seven-model views against complete directory ranks and exact direction."""
 import csv
+import argparse
 from datetime import datetime,timezone
 import hashlib
 import io
@@ -25,6 +26,7 @@ def main():
     original=data._rows('target',ar).sort_values('target_biomaster_rank').head(10)
     expected=list(original.ligand_inchikey)
     api=data.rankings('target',ar,'biomaster',page_size=10)
+    dtiam_api=data.rankings('target',ar,'dtiam',page_size=10)
     assert api['catalog_count']==720 and api['denominator']==720 and api['total']==720
     assert [x['id'] for x in api['items']]==expected
     assert [x['rank'] for x in api['items']]==list(range(1,11))
@@ -52,6 +54,7 @@ def main():
                 page.goto(base+'/#/target/'+ar+'/rankings',wait_until='networkidle')
                 page.locator('.rv-matrix').wait_for()
                 assert page.locator('.rv-sort').count()==7
+                assert 'DTIAM A' in page.locator('.rv-sort').all_text_contents()[2]
                 assert page.locator('.ranking-panel .frontier-models').count()==0
                 page.get_by_role('button',name='ReTargetMap 全目录 Top10',exact=True).click()
                 page.wait_for_timeout(500);page.locator('.rv-matrix').wait_for()
@@ -65,6 +68,12 @@ def main():
                 page.locator('.rv-trace').first.focus()
                 assert api['items'][0]['name'] in page.locator('.rv-trace-inspector').inner_text()
                 page.locator('.rv-parallel').scroll_into_view_if_needed();page.screenshot(path=str(OUT/'AR_SEVEN_MODEL_DISAGREEMENT.png'))
+                page.locator('.model-tabs button').filter(has_text='DTIAM A').click();page.wait_for_timeout(600)
+                assert page.locator('[data-model-axis="dtiam"]').text_content().startswith('DTIAM A')
+                page.get_by_role('button',name='排名矩阵 · 七模型',exact=True).click();page.wait_for_timeout(300)
+                assert page.locator('.rv-entity strong').all_text_contents()==[x['name'] for x in dtiam_api['items']]
+                page.screenshot(path=str(OUT/'AR_DTIAM_A_MATRIX.png'))
+                page.get_by_role('button',name='模型分歧 · 七模型',exact=True).click()
                 page.set_viewport_size({'width':390,'height':844});page.wait_for_timeout(200)
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),page.evaluate('[document.documentElement.scrollWidth,innerWidth]')
                 page.set_viewport_size({'width':1700,'height':1150})
@@ -78,7 +87,10 @@ def main():
                     assert page.locator('.frontier-models').count()==0
                 assert not errors,errors
                 browser.close()
-            report=dict(status='PASS',checked_utc=datetime.now(timezone.utc).isoformat(),ar_target=ar,ar_catalog=720,ar_top10_ids=expected,seven_model_matrix=True,seven_axes_main_plot=True,drug_overview_and_rankings=True,reverse_head_verified=True,csv_rows=720,page_errors=errors,scope='same production code, assets and data with ephemeral local authentication')
+            report=dict(status='PASS',checked_utc=datetime.now(timezone.utc).isoformat(),ar_target=ar,ar_catalog=720,ar_top10_ids=expected,dtiam_version=dtiam_api['source']['version'],dtiam_top10_ids=[x['id'] for x in dtiam_api['items']],seven_model_matrix=True,seven_axes_main_plot=True,drug_overview_and_rankings=True,reverse_head_verified=True,csv_rows=720,page_errors=errors,scope='same production code, assets and data with ephemeral local authentication')
             (OUT/'WEBSITE_CHECK.json').write_text(json.dumps(report,ensure_ascii=False,indent=2));print(json.dumps(report,ensure_ascii=False))
         finally:server.shutdown();server.server_close()
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--out-dir',type=Path,default=OUT)
+    OUT=parser.parse_args().out_dir;OUT.mkdir(parents=True,exist_ok=True)
+    main()

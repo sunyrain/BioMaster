@@ -215,14 +215,14 @@ class ExplorerHandler(BaseHTTPRequestHandler):
                     stream = io.StringIO(newline="")
                     fields = ["query_kind", "query_id", "rank", "denominator", "catalog_count", "entity_id", "name", "score", "known_relation"]
                     fields += [f"{model}_{metric}" for model in MODELS for metric in ("score", "rank", "denominator", "coverage_complete", "status", "reason")]
-                    fields += ["frozen_score", "frozen_rank", "frozen_denominator", "source", "auxiliary", "scope"]
+                    fields += ["frozen_score", "frozen_rank", "frozen_denominator", "source", "auxiliary", "scope", "dtiam_model_version"]
                     writer = csv.DictWriter(stream, fieldnames=fields)
                     writer.writeheader()
                     for item in result["items"]:
                         row = {"query_kind": result["kind"], "query_id": result["id"], "rank": item["rank"], "denominator": result["denominator"],
                                "catalog_count": result["catalog_count"], "entity_id": item["id"], "name": item["name"], "score": item["score"], "known_relation": item["known_relation"],
                                "frozen_score": item["frozen_score"], "frozen_rank": item["frozen_rank"], "frozen_denominator": item["frozen_denominator"],
-                               "source": result["source"]["source"], "auxiliary": result["auxiliary"], "scope": result["scope"]}
+                               "source": result["source"]["source"], "auxiliary": result["auxiliary"], "scope": result["scope"], "dtiam_model_version": result["dtiam_model_version"]}
                         for model in MODELS:
                             row.update({f"{model}_score": item["scores"][model], f"{model}_rank": item["ranks"][model], f"{model}_denominator": item["denominators"][model]})
                             row.update({f"{model}_coverage_complete": item["coverage_complete"][model], f"{model}_status": item["model_status"][model], f"{model}_reason": item["model_reasons"][model]})

@@ -1,0 +1,35 @@
+{
+  "release_id": "dtiam_a_kdki_inactive_20260917",
+  "created_utc": "2026-09-17T07:40:32.503278+00:00",
+  "selection_rule": "Highest frozen COMMON_VALIDATION bidirectional macro AP among A query-selected views; smaller seed breaks exact ties. No TEST or catalog labels used.",
+  "selected": {
+    "seed": 20260923,
+    "model": "WeightedEnsemble_L2",
+    "validation_selection_score": 0.7248591659759506,
+    "selection_sha256": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026"
+  },
+  "candidates": [
+    {
+      "seed": 20260921,
+      "model": "RandomForestEntr",
+      "validation_selection_score": 0.7183985148205436,
+      "selection_sha256": "8ebc48b6e1d621322c6e8b3b329afbd17e124dbf90246c55a1cc884142c4db3c"
+    },
+    {
+      "seed": 20260922,
+      "model": "WeightedEnsemble_L2",
+      "validation_selection_score": 0.7235621393715468,
+      "selection_sha256": "7d2f7c8c9c2b6dc4ba75ff473620f296af0627f997f3fd78d76b0d3c82233e2a"
+    },
+    {
+      "seed": 20260923,
+      "model": "WeightedEnsemble_L2",
+      "validation_selection_score": 0.7248591659759506,
+      "selection_sha256": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026"
+    }
+  ],
+  "training_pairs": 337570,
+  "explicit_inactive_training_pairs": 105368,
+  "representation": "Frozen official BerMol CLS768 + ESM2-t33-650M1280, first1022 residues including EOS",
+  "score": "Raw native positive probability; no test-set recalibration, no multi-seed averaging"
+}

@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "updated_utc": "2026-09-17T07:48:07.406727+00:00",
+  "release_id": "dtiam_a_kdki_inactive_20260917",
+  "scored_pairs": 276480,
+  "drug_queries": 720,
+  "target_queries": 384,
+  "review_pairs": 384,
+  "review_and_benchmark_pairs": 863,
+  "unchanged_other_scores": {
+    "biomaster": {
+      "pairs": 276480,
+      "comparison_dtype": "float32",
+      "maximum_absolute_difference": 0.0
+    },
+    "biomaster_reverse": {
+      "pairs": 276480,
+      "comparison_dtype": "float32",
+      "maximum_absolute_difference": 0.0
+    },
+    "drugclip": {
+      "pairs": 276480,
+      "comparison_dtype": "float64",
+      "maximum_absolute_difference": 0.0
+    },
+    "conplex": {
+      "pairs": 276480,
+      "comparison_dtype": "float64",
+      "maximum_absolute_difference": 0.0
+    },
+    "nesso": {
+      "preexisting_pairs": 20899,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    "probematch": {
+      "preexisting_pairs": 276480,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    },
+    "dtbind": {
+      "preexisting_pairs": 56504,
+      "maximum_absolute_difference": 1.1102230246251565e-16
+    }
+  },
+  "frozen_spr_unchanged": true,
+  "common_label_comparison": [
+    {
+      "version": "historical",
+      "pairs": 378,
+      "positive": 103,
+      "negative": 275,
+      "ap": 0.4151679921571141,
+      "auroc": 0.6371756398940863
+    },
+    {
+      "version": "september_A",
+      "pairs": 378,
+      "positive": 103,
+      "negative": 275,
+      "ap": 0.7836626802897145,
+      "auroc": 0.9211297440423654
+    }
+  ],
+  "query_checks": [
+    {
+      "target_id": "CHEMBL1871",
+      "top10": [
+        {
+          "drug": "spironolactone",
+          "score": 0.9931079
+        },
+        {
+          "drug": "progesterone",
+          "score": 0.9922506
+        },
+        {
+          "drug": "finerenone",
+          "score": 0.98875797
+        },
+        {
+          "drug": "ethinyl estradiol",
+          "score": 0.98860115
+        },
+        {
+          "drug": "lorlatinib",
+          "score": 0.98850054
+        },
+        {
+          "drug": "darolutamide",
+          "score": 0.9874897
+        },
+        {
+          "drug": "dutasteride",
+          "score": 0.9868414
+        },
+        {
+          "drug": "ulipristal",
+          "score": 0.9862276
+        },
+        {
+          "drug": "paltusotine",
+          "score": 0.98611563
+        },
+        {
+          "drug": "adagrasib",
+          "score": 0.98410755
+        }
+      ]
+    },
+    {
+      "target_id": "CHEMBL203",
+      "top10": [
+        {
+          "drug": "bosutinib",
+          "score": 0.97954017
+        },
+        {
+          "drug": "lazertinib",
+          "score": 0.9755865
+        },
+        {
+          "drug": "brigatinib",
+          "score": 0.97012275
+        },
+        {
+          "drug": "dabigatran etexilate",
+          "score": 0.9661797
+        },
+        {
+          "drug": "adagrasib",
+          "score": 0.96386075
+        },
+        {
+          "drug": "acalabrutinib",
+          "score": 0.9599334
+        },
+        {
+          "drug": "zanubrutinib",
+          "score": 0.9584078
+        },
+        {
+          "drug": "lorlatinib",
+          "score": 0.9563248
+        },
+        {
+          "drug": "infigratinib",
+          "score": 0.9543962
+        },
+        {
+          "drug": "rilpivirine",
+          "score": 0.9465331
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 """Behavior tests: rank denominators, absence, full exports, and file isolation."""
 import csv
+import hashlib
 import http.client
 import io
 import json
@@ -12,6 +13,7 @@ import pytest
 
 from biomaster.explorer_data import BUNDLE, FROZEN, PAIRS, ExplorerData, clean
 from biomaster.explorer_server import ExplorerHTTPServer
+from biomaster.dtiam_release import SCORES as DTIAM_SCORES, MANIFEST as DTIAM_MANIFEST, RELEASE_ID as DTIAM_RELEASE
 
 
 @pytest.fixture
@@ -33,6 +35,14 @@ def catalog(tmp_path, monkeypatch):
     path = tmp_path / FROZEN
     path.parent.mkdir(parents=True)
     frozen.to_csv(path, index=False)
+    upgraded = frozen[['ligand_inchikey', 'target_chembl_id']].copy()
+    upgraded['dtiam_probability'] = [0.2, 0.8, 0.3, 0.9, 0.1, 0.5]
+    upgraded['dtiam_model_version'] = DTIAM_RELEASE
+    path = tmp_path / DTIAM_SCORES
+    path.parent.mkdir(parents=True)
+    upgraded.to_csv(path, index=False)
+    (tmp_path / DTIAM_MANIFEST).write_text(json.dumps(dict(status='COMPLETE', release_id=DTIAM_RELEASE,
+        rows=len(upgraded), scores_sha256=hashlib.sha256(path.read_bytes()).hexdigest())))
     bundle = tmp_path / BUNDLE
     bundle.mkdir(parents=True)
     (bundle / "MANIFEST.json").write_text('{"files": {}}')
@@ -68,6 +78,52 @@ def test_reverse_rank_uses_reverse_head(catalog):
     assert result["items"][0]["id"] == "D2"
     assert result["items"][0]["score"] == pytest.approx(0.9)
     assert catalog.rankings("drug", "D1")["items"][0]["score"] == 3
+
+
+def test_dtiam_upgrade_replaces_historical_scores_in_both_directions_and_export(catalog, http_server):
+    result = catalog.rankings('drug', 'D1', 'dtiam')
+    assert result['dtiam_model_version'] == DTIAM_RELEASE
+    assert result['source']['version'] == DTIAM_RELEASE
+    assert [r['id'] for r in result['items']] == ['T2', 'T3', 'T1']
+    assert result['items'][0]['score'] == pytest.approx(.8)
+    target = catalog.rankings('target', 'T2', 'dtiam')
+    assert target['items'][0]['id'] == 'D1' and target['denominator'] == 2
+    status, _, body = get(http_server, '/api/rankings.csv?kind=drug&id=D1&model=dtiam')
+    rows = list(csv.DictReader(io.StringIO(body.decode('utf-8-sig'))))
+    assert status == 200 and len(rows) == 3
+    assert rows[0]['dtiam_model_version'] == DTIAM_RELEASE
+    assert rows[0]['entity_id'] == 'T2' and float(rows[0]['dtiam_score']) == .8
+    assert catalog.rankings('drug', 'D1', 'biomaster')['items'][0]['score'] == 3
+
+
+def test_missing_dtiam_release_does_not_relabel_frozen_historical_scores(catalog):
+    (catalog.root / DTIAM_SCORES).unlink()
+    reloaded = ExplorerData(catalog.root)
+    reloaded.ensure_loaded()
+    result = reloaded.rankings('drug', 'D1', 'dtiam')
+    assert result['denominator'] == 0
+    assert all(row['score'] is None and row['rank'] is None for row in result['items'])
+    assert reloaded.pairs.frozen.notna().all()
+
+
+def test_dtiam_upgrade_checksum_rejects_changed_artifact(catalog):
+    from biomaster.dtiam_release import load_scores
+    with (catalog.root / DTIAM_SCORES).open('ab') as handle:
+        handle.write(b'changed')
+    with pytest.raises(ValueError, match='checksum'):
+        load_scores(catalog.root)
+
+
+def test_dtiam_review_overlay_preserves_other_models_and_matches_exact_identity(catalog):
+    from biomaster.dtiam_release import overlay_baseline
+    before = pd.DataFrame({'pair_id': ['D1__T2', 'D1__T1', 'D0__T0'],
+        'biomaster': [3., 3., 1.], 'drugclip': [.8, .2, .1], 'conplex': [.6, .9, .1], 'dtiam': [.4, .5, .9]})
+    after = overlay_baseline(catalog.root, before)
+    pd.testing.assert_frame_equal(before[['pair_id', 'biomaster', 'drugclip', 'conplex']],
+                                  after[['pair_id', 'biomaster', 'drugclip', 'conplex']])
+    assert after.dtiam.iloc[:2].tolist() == [.8, .2]
+    assert pd.isna(after.dtiam.iloc[2])
+    assert after.dtiam_model_version.eq(DTIAM_RELEASE).all()
 
 
 def test_relationship_filter_preserves_global_rank_and_export(http_server, catalog):

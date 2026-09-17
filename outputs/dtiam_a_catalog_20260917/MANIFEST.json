@@ -1,0 +1,50 @@
+{
+  "status": "COMPLETE",
+  "release_id": "dtiam_a_kdki_inactive_20260917",
+  "completed_utc": "2026-09-17T07:42:44.668592+00:00",
+  "rows": 276480,
+  "drugs": 720,
+  "targets": 384,
+  "scores_sha256": "f2b0c550890941e8c8c445afb3ff4812a3a9f04eecf6cc9e277b1111119d4e96",
+  "selected": {
+    "seed": 20260923,
+    "model": "WeightedEnsemble_L2",
+    "validation_selection_score": 0.7248591659759506,
+    "selection_sha256": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026"
+  },
+  "selection_rule": "Highest frozen COMMON_VALIDATION bidirectional macro AP among A query-selected views; smaller seed breaks exact ties. No TEST or catalog labels used.",
+  "predictor": "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/predictor",
+  "predictor_files_sha256": {
+    "predictor/learner.pkl": "2e82bab81805a8a8a257ba88478a2323febfa487035b3216bcef929c3a49109e",
+    "predictor/metadata.json": "84fb6aa2bf16731c9a15755d1f62a576d30a1c6200c2238eac451e3bc1278bdd",
+    "predictor/models/CatBoost/model.pkl": "fa48ef7ff7e1802a3a77f0315e37a085d82be41fc720a66eb99099f950e04d34",
+    "predictor/models/ExtraTreesEntr/model.pkl": "0f1561f79f7c5105dd497298cd4f87c19105ec3d88ab42596a2449752a79e908",
+    "predictor/models/ExtraTreesGini/model.pkl": "2e8e0fd3e556da310b6d032d50a41860a69468d8243c0969094b2a796149abf3",
+    "predictor/models/LightGBM/model.pkl": "ad535b8481140073ad3e06e3c1b3546130c11e1cda5b2a2bfaa5e96263223783",
+    "predictor/models/LightGBMLarge/model.pkl": "ad20a8b311042e8f53c51220de6e7ebeb0fed913d2e140c87fef15bdd2ab5450",
+    "predictor/models/LightGBMXT/model.pkl": "58fd0d0f8f3d03f8defcd6d0068c6bf4be064dac4d2d812515135074d6b08587",
+    "predictor/models/NeuralNetFastAI/model-internals.pkl": "f58cd02cb90dec250eb47177234b033e5542854c2e30d87e0831da404e5112e2",
+    "predictor/models/NeuralNetFastAI/model.pkl": "97066f5a6e629d8bb5498a1d6fd7db326c0eb1f306ec61402fa487a7a06e0016",
+    "predictor/models/NeuralNetTorch/model.pkl": "48a4d0d0572c329b917213107e40cd5d08f998d58faecd97ee558712920aa6f4",
+    "predictor/models/RandomForestEntr/model.pkl": "c922954e5a3d4dbde58eb2150f67067d67f95fd9e9919c6883a46dea24f2b6c0",
+    "predictor/models/RandomForestGini/model.pkl": "ea2cb6201501eafcf7ad457a7d948dfc23ee2b4cd37f0afbda3a553d99898120",
+    "predictor/models/WeightedEnsemble_L2/model.pkl": "86288fd6fae87b9cac1dfc14abfac95a360554549b56427758cce6206eb6c403",
+    "predictor/models/XGBoost/model.pkl": "73840ae67a78a2536b45c74b7d11a6609404e9e969bbca060e04695bb17f4bd6",
+    "predictor/models/XGBoost/xgb.ubj": "c782bdb74bd30896a62accc15c1933d5b957ed3aed3030f73413243394e9c86c",
+    "predictor/models/trainer.pkl": "d82962c6e18e4920295bff749b179a6d772254233f87986536f56efaf956d35a",
+    "predictor/predictor.pkl": "d22f6d70812a5802db623a06185f15c427d15ce8aa65f4768c5bb442e2bbb25c",
+    "predictor/version.txt": "74b860b3270666137a4d543c3e3d1e4e473d54636f7593d1c17bf693e6540bbe"
+  },
+  "calibration": {
+    "slope": 0.8583136065680272,
+    "intercept": -0.20737955061188706,
+    "threshold": 0.5232230668975973,
+    "validation_f1": 0.9201130128572598,
+    "fit_panel": "VALIDATION_AFFINITY_KD_KI",
+    "input": "clipped native probability logit"
+  },
+  "score_column": "dtiam_probability",
+  "training_pairs": 337570,
+  "note": "Classification score for ranking, not measured affinity or verified wet-lab hit probability.",
+  "inference_seconds": 121.71102662477642
+}

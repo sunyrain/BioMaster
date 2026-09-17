@@ -76,7 +76,7 @@ export type Summary = {
 export const MODEL_NAMES: Record<Model, string> = {
   biomaster: "ReTargetMap",
   drugclip: "DrugCLIP",
-  dtiam: "DTIAM",
+  dtiam: "DTIAM A",
   conplex: "ConPLex",
   nesso: "Nesso-1",
   probematch: "ProbeMatchDTI",

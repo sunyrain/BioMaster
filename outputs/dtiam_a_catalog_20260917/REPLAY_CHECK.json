@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "pairs": 32,
+  "max_abs_difference": 1.1920928955078125e-07,
+  "selected": {
+    "seed": 20260923,
+    "model": "WeightedEnsemble_L2",
+    "validation_selection_score": 0.7248591659759506,
+    "selection_sha256": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026"
+  },
+  "source": "Frozen validation predictions; no refit"
+}
