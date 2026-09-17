@@ -1,0 +1,87 @@
+{
+  "checked_utc": "2026-09-17T00:57:26.881078+00:00",
+  "catalog_pairs": 276480,
+  "models": {
+    "probematch": {
+      "pid": 149571,
+      "updated_utc": "2026-09-17T00:57:23.858783+00:00",
+      "state": "inference",
+      "target": "NOS2",
+      "completed": 239517,
+      "catalog_pairs": 276480,
+      "computed_this_run": 238654,
+      "elapsed_seconds": 35246.20971727371,
+      "counts": {
+        "completed": 239517
+      },
+      "ar_counts": {
+        "completed": 720
+      },
+      "completed_targets_720": 332
+    },
+    "dtbind": {
+      "pid": 149572,
+      "updated_utc": "2026-09-17T00:57:15.392207+00:00",
+      "state": "inference",
+      "target": "CYP19A1",
+      "completed": 38897,
+      "catalog_pairs": 276480,
+      "computed_this_run": 38372,
+      "elapsed_seconds": 35237.74310708046,
+      "counts": {
+        "completed": 38897
+      },
+      "ar_counts": {
+        "completed": 720
+      },
+      "completed_targets_720": 53
+    },
+    "nesso": {
+      "pid": 149979,
+      "updated_utc": "2026-09-17T00:57:13.959192+00:00",
+      "catalog_pairs": 276480,
+      "state": "inference",
+      "target": "CMA1",
+      "target_id": "CHEMBL4068",
+      "child_pid": 167880,
+      "completed": 11841,
+      "elapsed_seconds": 35078.95101571083,
+      "batch_elapsed_seconds": 570.893575668335,
+      "counts": {
+        "completed": 11841,
+        "failed": 15
+      },
+      "ar_counts": {
+        "completed": 719,
+        "failed": 1
+      },
+      "completed_targets_720": 0
+    }
+  },
+  "nesso_failure_audit": {
+    "drug": "quinidine",
+    "drug_id": "LOUPRKONTZGTKE-LHHVKLHASA-N",
+    "reason": "Bad Conformer Id during official YAML preprocessing",
+    "interpretation": "input preparation failure, not a negative binding prediction"
+  },
+  "dtbind_input_audit": {
+    "targets_total": 384,
+    "publisher_sequence_exact": 306,
+    "publisher_sequence_absent": 71,
+    "sequence_mismatch": 7,
+    "potential_pairs_with_publisher_features": 220320,
+    "graphs_downloaded_for_exact_targets": 146
+  },
+  "download_recovery": {
+    "pid": 168237,
+    "updated_utc": "2026-09-17T00:55:56.688954+00:00",
+    "state": "running",
+    "attempt": 1,
+    "child_pid": 168238
+  },
+  "eta_note": {
+    "probematch": "approximately 1.5–2 hours at recent speed",
+    "dtbind": "several days for currently compatible inputs, depends on graph downloads; no full-matrix ETA until 78 target input gaps are addressed",
+    "nesso": "weeks; early short-protein targets are not representative of all remaining targets"
+  }
+}
