@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-09-18T05:24:02.241267+00:00",
+  "checks": "PASS",
+  "dtiam_release": "dtiam_a_kdki_inactive_20260917",
+  "shared_targets": 8,
+  "shared_pairs": 5752,
+  "benchmark_pairs": 378,
+  "benchmark_positive": 103,
+  "source_sha256": {
+    "outputs/model_agreement_20260917/SCORE_SNAPSHOT.csv.gz": "003e9ab8c60686194d98ac7091948a2d1ae70a5e6b7100206d4260e103e8bb9e",
+    "outputs/model_agreement_20260917/SEVEN_SHARED_SCORES.csv.gz": "4a35ad17f3fbb85b00fe0d6e4499224e396d58d0a3640a05df708f11a8d4eb06",
+    "outputs/model_agreement_20260917/BENCHMARK_INPUT_SNAPSHOT.csv": "3bbe0127f30fa4fc7c3f29e94aa2a8c7ee1c1a80233580f5b880d2e8c3830243",
+    "outputs/dtiam_a_catalog_20260917/DTIAM_A_720X384_SCORES.csv.gz": "f2b0c550890941e8c8c445afb3ff4812a3a9f04eecf6cc9e277b1111119d4e96"
+  },
+  "scope": "Only replace DTIAM in the frozen Sep17 snapshot. Other six unchanged. No production changes.",
+  "limitations": [
+    "Eight early-completed targets are not representative of all 384.",
+    "Known relations retained; model training overlap not removed.",
+    "Agreement is not accuracy; the observed-label benchmark is not a prospective test.",
+    "AB unseen excludes our A/B train/validation only; not all public checkpoints."
+  ]
+}
