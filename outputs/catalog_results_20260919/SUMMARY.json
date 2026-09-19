@@ -1,0 +1,136 @@
+{
+  "snapshot_utc": "2026-09-19T02:45:58.244557+00:00",
+  "checks": "PASS",
+  "dtiam_release": "dtiam_a_kdki_inactive_20260917",
+  "common_pairs_any_coverage": 23217,
+  "complete_shared_targets": 31,
+  "complete_shared_drugs": 719,
+  "complete_shared_pairs": 22289,
+  "shared_target_length_min": 108,
+  "shared_target_length_max": 920,
+  "coverage": [
+    {
+      "model": "biomaster",
+      "completed": 276480,
+      "percent": 100.0,
+      "targets_with_any_score": 384,
+      "targets_720": 384,
+      "targets_at_least_719": 384
+    },
+    {
+      "model": "drugclip",
+      "completed": 275040,
+      "percent": 99.47916666666667,
+      "targets_with_any_score": 382,
+      "targets_720": 382,
+      "targets_at_least_719": 382
+    },
+    {
+      "model": "dtiam",
+      "completed": 276480,
+      "percent": 100.0,
+      "targets_with_any_score": 384,
+      "targets_720": 384,
+      "targets_at_least_719": 384
+    },
+    {
+      "model": "conplex",
+      "completed": 276480,
+      "percent": 100.0,
+      "targets_with_any_score": 384,
+      "targets_720": 384,
+      "targets_at_least_719": 384
+    },
+    {
+      "model": "nesso",
+      "completed": 70140,
+      "percent": 25.36892361111111,
+      "targets_with_any_score": 234,
+      "targets_720": 0,
+      "targets_at_least_719": 96
+    },
+    {
+      "model": "probematch",
+      "completed": 276480,
+      "percent": 100.0,
+      "targets_with_any_score": 384,
+      "targets_720": 384,
+      "targets_at_least_719": 384
+    },
+    {
+      "model": "dtbind",
+      "completed": 141821,
+      "percent": 51.295211226851855,
+      "targets_with_any_score": 205,
+      "targets_720": 196,
+      "targets_at_least_719": 196
+    }
+  ],
+  "worker_status": {
+    "nesso": {
+      "pid": 149979,
+      "updated_utc": "2026-09-19T02:46:01.222251+00:00",
+      "catalog_pairs": 276480,
+      "state": "inference",
+      "target": "GABRA2",
+      "target_id": "CHEMBL4956",
+      "child_pid": 260935,
+      "completed": 70144,
+      "elapsed_seconds": 214406.2140877247,
+      "batch_elapsed_seconds": 1683.461865901947
+    },
+    "dtbind": {
+      "pid": 149572,
+      "updated_utc": "2026-09-19T02:45:18.795817+00:00",
+      "state": "inference",
+      "target": "ERBB2",
+      "completed": 141821,
+      "catalog_pairs": 276480,
+      "computed_this_run": 141296,
+      "elapsed_seconds": 214521.1466012001
+    },
+    "probematch": {
+      "pid": 149571,
+      "updated_utc": "2026-09-17T02:28:17.237004+00:00",
+      "state": "completed",
+      "completed": 276480,
+      "catalog_pairs": 276480,
+      "waiting_targets": 0,
+      "computed_this_run": 275617,
+      "elapsed_seconds": 40699.587938308716
+    }
+  },
+  "dtbind_inputs": {
+    "available": 303,
+    "no_author_sequence": 71,
+    "sequence_mismatch": 7,
+    "no_author_graph": 3
+  },
+  "failures": {
+    "nesso:inference_missing_after_target_stage_exit_0": 96
+  },
+  "nesso_recent20_mean_target_seconds": 2583.268443787098,
+  "sources": {
+    "outputs/model_agreement_20260917/SCORE_SNAPSHOT.csv.gz": "003e9ab8c60686194d98ac7091948a2d1ae70a5e6b7100206d4260e103e8bb9e",
+    "outputs/dtiam_a_catalog_20260917/DTIAM_A_720X384_SCORES.csv.gz": "f2b0c550890941e8c8c445afb3ff4812a3a9f04eecf6cc9e277b1111119d4e96",
+    "outputs/model_disagreement_literature_20260918/SEVEN_FIXED_SCORES_WITH_DTIAM_A.csv.gz": "1193a6efbaea459839b19cc2ab738ba78858d27be699b4689dcf7b9eb5c9d782"
+  },
+  "limitations": [
+    "Unlabeled catalog agreement is not accuracy or SPR success.",
+    "Common completed targets favor early/short/available proteins.",
+    "Drug-wise ranks cover only the current shared target subset, not all 384.",
+    "No new controlled training or independent experimental labels in this snapshot."
+  ],
+  "snapshot_sha256": "c41dd95c3a2c86cf643a5b5a138f71d8134eaa5660a906de2c3e26915f43b279",
+  "original_5752_scores_equal_within_1e_12": true,
+  "validation": {
+    "checks": "PASS",
+    "scipy_rank_checks": "PASS",
+    "old_score_max_abs_delta": 1.1102230246251565e-16,
+    "old_score_comparison_atol": 1e-12,
+    "old_top10_max_abs_delta": 0.0,
+    "old_spearman_max_abs_delta": 2.7311535491143096e-05,
+    "precision_note": "Live database scores retain original precision; prior CSV round trips can alter near-ties.",
+    "conplex_constant_drug_queries_in_shared_subset": 7
+  }
+}
