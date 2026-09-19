@@ -1,0 +1,8 @@
+drug_id,drug_name,input_nonzero,latent_active_dimensions,target_latents_all_nonzero,overlap_max,zero_queries
+CUIHSIWYWATEQL-UHFFFAOYSA-N,pazopanib,57,13,True,0,37
+CVWXJKQAOSCOAB-UHFFFAOYSA-N,quizartinib,73,15,True,0,37
+MLDQJTXFUGDVEO-UHFFFAOYSA-N,sorafenib,51,13,True,0,37
+NHHQJBCNYHBUSI-UHFFFAOYSA-N,fostamatinib,58,12,True,0,37
+RRMJMHOQSALEJJ-UHFFFAOYSA-N,lazertinib,79,15,True,0,37
+WINHZLLDWRZWRT-ATVHPVEESA-N,sunitinib,57,14,True,0,37
+XZXHXSATPCNXJR-ZIADKAODSA-N,nintedanib,65,13,True,0,37

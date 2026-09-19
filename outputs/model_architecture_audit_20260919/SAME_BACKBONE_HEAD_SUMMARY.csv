@@ -1,0 +1,5 @@
+query,head_a,head_b,queries,mean_spearman,median_spearman,negative_queries
+drug_id,biomaster,biomaster_reverse,719,0.8379578612358056,0.9497392128971075,20
+drug_id,nesso,nesso_pic50,719,0.13826332737832628,0.15860597439544807,253
+target_id,biomaster,biomaster_reverse,37,0.9002999745164657,0.9527712455269687,0
+target_id,nesso,nesso_pic50,37,-0.07639130296112556,-0.16007854197579174,28

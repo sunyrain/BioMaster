@@ -1,0 +1,79 @@
+{
+  "checks": "PASS",
+  "pairs": 26603,
+  "max_abs_delta": 9.305860519392972e-07,
+  "checkpoint_sha256": "c28f0e64907e2cec786f2fdefd0ee75ac991b971671a49f896611dc192e6d39c",
+  "zero_scores": 9180,
+  "zero_score_fraction": 0.3450738638499417,
+  "zeros_without_shared_positive_dimensions": 9180,
+  "all_zero_input_drugs": 0,
+  "all_zero_input_targets": 0,
+  "all_zero_latent_drugs": 0,
+  "all_zero_latent_targets": 0,
+  "constant_zero_drugs": [
+    {
+      "drug_id": "CUIHSIWYWATEQL-UHFFFAOYSA-N",
+      "drug_name": "pazopanib",
+      "input_nonzero": 57,
+      "latent_active_dimensions": 13,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    },
+    {
+      "drug_id": "CVWXJKQAOSCOAB-UHFFFAOYSA-N",
+      "drug_name": "quizartinib",
+      "input_nonzero": 73,
+      "latent_active_dimensions": 15,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    },
+    {
+      "drug_id": "MLDQJTXFUGDVEO-UHFFFAOYSA-N",
+      "drug_name": "sorafenib",
+      "input_nonzero": 51,
+      "latent_active_dimensions": 13,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    },
+    {
+      "drug_id": "NHHQJBCNYHBUSI-UHFFFAOYSA-N",
+      "drug_name": "fostamatinib",
+      "input_nonzero": 58,
+      "latent_active_dimensions": 12,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    },
+    {
+      "drug_id": "RRMJMHOQSALEJJ-UHFFFAOYSA-N",
+      "drug_name": "lazertinib",
+      "input_nonzero": 79,
+      "latent_active_dimensions": 15,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    },
+    {
+      "drug_id": "WINHZLLDWRZWRT-ATVHPVEESA-N",
+      "drug_name": "sunitinib",
+      "input_nonzero": 57,
+      "latent_active_dimensions": 14,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    },
+    {
+      "drug_id": "XZXHXSATPCNXJR-ZIADKAODSA-N",
+      "drug_name": "nintedanib",
+      "input_nonzero": 65,
+      "latent_active_dimensions": 13,
+      "target_latents_all_nonzero": true,
+      "overlap_max": 0,
+      "zero_queries": 37
+    }
+  ],
+  "interpretation": "Frozen linear/ReLU/cosine replay explains ties, not all disagreements or their accuracy."
+}

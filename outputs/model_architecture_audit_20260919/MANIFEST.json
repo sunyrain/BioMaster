@@ -1,0 +1,120 @@
+{
+  "snapshot_utc": "2026-09-19T10:24:29.405497+00:00",
+  "files": {
+    "docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md": {
+      "bytes": 15261,
+      "sha256": "50783d27f27abaa8d38b2c47a63f755cd41a062ae6d49556b325658741c5c127"
+    },
+    "outputs/model_architecture_audit_20260919/ARCHITECTURE_DIAGNOSTICS.json": {
+      "bytes": 2311,
+      "sha256": "26547ba76332789ce3f0f39239be27b5d2b737ecc7bf8bf3f57e84e8b2a6403f"
+    },
+    "outputs/model_architecture_audit_20260919/CONPLEX_REPLAY_CHECK.json": {
+      "bytes": 2309,
+      "sha256": "4420183dcd9b202d54f7ac8e1b8d48e3cf10370162324aa27e96be76666ce177"
+    },
+    "outputs/model_architecture_audit_20260919/CONPLEX_ZERO_MECHANISM.csv": {
+      "bytes": 494,
+      "sha256": "f8b43cde4cbb276b712e3781abcf2dcdf7f9c494118921529558a2e7debba965"
+    },
+    "outputs/model_architecture_audit_20260919/DESCRIPTIVE_SCORE_DECOMPOSITION.csv": {
+      "bytes": 1456,
+      "sha256": "d88dbdc1c7c708e8c809c3b4b770081a1183feb7777d8eed9e9ad6120f756cf3"
+    },
+    "outputs/model_architecture_audit_20260919/NESSO_HEADS_NONZERO_CROP_ENTROPY.csv": {
+      "bytes": 1335,
+      "sha256": "a0ebbb470800192225a8bf7b9e95415a53e7a1fbac62fe7deaee35c8d967ec68"
+    },
+    "outputs/model_architecture_audit_20260919/NESSO_SAME_BACKBONE_HEADS.csv.gz": {
+      "bytes": 859134,
+      "sha256": "1c857d662d0701e903e0cf3212a546c73f732e93377c7eab5e0ef0f0036aa9e5"
+    },
+    "outputs/model_architecture_audit_20260919/PROBEMATCH_CPU2_SEED_SCORES.csv": {
+      "bytes": 16467,
+      "sha256": "b5adc313c1eba4b11d34a08aa78be2ca19be2023d09e6cd5d3cd984c2fb89608"
+    },
+    "outputs/model_architecture_audit_20260919/PROBEMATCH_INFERENCE_SEED_CHECK.json": {
+      "bytes": 1445,
+      "sha256": "07715aaf71a12a8c1a18f1e227294d79b6c14d30272b23729e60d4a0edf6516a"
+    },
+    "outputs/model_architecture_audit_20260919/PROBEMATCH_INFERENCE_SEED_SCORES.csv": {
+      "bytes": 16471,
+      "sha256": "63bd6ef4ef8117ffd620760420e4f418dbec99920f7ea742f29dcc1addfe63c0"
+    },
+    "outputs/model_architecture_audit_20260919/PROBEMATCH_INFERENCE_SEED_SUMMARY.csv": {
+      "bytes": 284,
+      "sha256": "eb476e04c67e57110d17fe8cb97588c368b1dde1628700245f8c253d0ac64118"
+    },
+    "outputs/model_architecture_audit_20260919/SAME_BACKBONE_HEAD_AGREEMENT.csv": {
+      "bytes": 122158,
+      "sha256": "46c6b94e1e9924f1e171b5fe36ffd94c4e0e1f0f364c354c6664e9de44554a79"
+    },
+    "outputs/model_architecture_audit_20260919/SAME_BACKBONE_HEAD_SUMMARY.csv": {
+      "bytes": 387,
+      "sha256": "8b6449b79a492e4945b2172639d3377050d3aff37241dd9ff2559bb75d5415f9"
+    },
+    "outputs/model_architecture_audit_20260919/VALIDATION.json": {
+      "bytes": 331,
+      "sha256": "8fc35b481c5abd180eb1720afa23e2387cc99d69e5e329616dc5ce7e9b29116a"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/AGREEMENT_SUMMARY.csv": {
+      "bytes": 5829,
+      "sha256": "af3f4147083cb8438b5444f0ad836cddd86fb2091611f8b26356ed0db88d7f49"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/CONPLEX_CONSTANT_QUERY_AUDIT.csv": {
+      "bytes": 548,
+      "sha256": "36d9a1ffad9392d56745e53facdad01dc54d0568ff333f7e22632c68eecaa2cc"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/COVERAGE.csv": {
+      "bytes": 345,
+      "sha256": "da483add0081e87df21d0e086e61ed8e00e86eed2571d6af8d0cf1abe1964f6e"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/DTBIND_INPUT_AVAILABILITY.csv": {
+      "bytes": 11126,
+      "sha256": "5992ae69c36a444d5dc58315d69478410f117034d10efb0708b56bccac597812"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/FAILED_PREDICTIONS.csv": {
+      "bytes": 10345,
+      "sha256": "f10b2d2b9078182048411897a5dc37a3b3c2c5ee831c195a490f1c493c78ed66"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/NESSO_TARGET_TIMINGS.csv": {
+      "bytes": 3021,
+      "sha256": "cb301be1afcc707c8b7463cc18a57848ddd4166b0d2518eebbca3cf6922764be"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/PER_QUERY_AGREEMENT.csv": {
+      "bytes": 1585339,
+      "sha256": "79e579e43e1fb81b6f8ecf24ae66891415b7730286761a903e58bc69433c44c2"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/SCORE_SNAPSHOT.csv.gz": {
+      "bytes": 14135566,
+      "sha256": "7a294927e080baa55b003ede26f357c985f1bfc598e82e745c8e183edf0b8cb2"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/SEVEN_SHARED_COMPLETE_TARGETS.csv.gz": {
+      "bytes": 1646536,
+      "sha256": "b5b4de52088d06cc599421bbb7e6447c8962fa0da32ffabb7e5488872544b0bf"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/SHARED_TARGETS.csv": {
+      "bytes": 17481,
+      "sha256": "6a005e40dd12d52f0d52e2566377710492d918639a9d186f6254140400523057"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/SUMMARY.json": {
+      "bytes": 4305,
+      "sha256": "378163f150fd4e0375371a20117f04712963c44b0c2518a9e57703ecb32e1f06"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/TARGET_STATUS_SNAPSHOT.csv": {
+      "bytes": 27760,
+      "sha256": "7755566ba6f3a6e433d36ef59a5f4975e4e8e67dcd293ef59bae9111af71b840"
+    },
+    "outputs/model_architecture_audit_20260919/latest_results/VALIDATION.json": {
+      "bytes": 404,
+      "sha256": "b68c45a833d34a58dc242d7deba21eeba41a24cce0ee6703dc58c8d3b02c2cbe"
+    },
+    "scripts/audit_model_architecture_20260919.py": {
+      "bytes": 13153,
+      "sha256": "205fbb93d0ff8deba309a848002ab16c1fb4641da59008a2a8c51ec1706a1bfc"
+    }
+  },
+  "large_local_only": "latest_results/SCORE_SNAPSHOT.csv.gz",
+  "production_changes": false,
+  "new_training": false
+}

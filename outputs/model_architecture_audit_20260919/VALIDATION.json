@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "script_syntax": true,
+  "local_document_links": 13,
+  "shared_pairs": 26603,
+  "nesso_heads_aligned": true,
+  "nesso_negative_target_queries": 28,
+  "conplex_zero_pairs": 9180,
+  "inference_replay_checks": "PASS",
+  "scope": "Architecture diagnostics, not experimental accuracy or controlled retraining"
+}

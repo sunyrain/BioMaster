@@ -1,0 +1,71 @@
+{
+  "checks": "PASS",
+  "shared_pairs": 26603,
+  "shared_targets": 37,
+  "limits": {
+    "catalog_targets": 384,
+    "shared_targets": 37,
+    "shared_max_protein_length": 920,
+    "dtiam_catalog_proteins_over_1022": 74,
+    "probe_catalog_proteins_over_1200": 47,
+    "probe_catalog_smiles_over_100_chars": 11,
+    "note": "SMILES character length is descriptive, not a truncation count: the fixed word tensor is used only for batch size by the active forward path. The full molecular graph is retained; the LM branch has a separate 100-token limit."
+  },
+  "dtiam_ensemble_weights": {
+    "LightGBMXT": 0.16666666666666666,
+    "RandomForestGini": 0.041666666666666664,
+    "XGBoost": 0.16666666666666666,
+    "NeuralNetTorch": 0.16666666666666666,
+    "LightGBMLarge": 0.20833333333333334,
+    "NeuralNetFastAI": 0.25
+  },
+  "dtiam_tree_weight": 0.5833333333333334,
+  "dtiam_neural_weight": 0.41666666666666663,
+  "nesso_crop_entropy_zero": 23,
+  "nesso_crop_entropy_missing": 0,
+  "nesso_heads_excluding_zero_crop_entropy": {
+    "queries": 37,
+    "pairs": 26580,
+    "mean_spearman": -0.07672165348846786,
+    "negative_queries": 28
+  },
+  "head_agreement": [
+    {
+      "query": "drug_id",
+      "head_a": "biomaster",
+      "head_b": "biomaster_reverse",
+      "queries": 719,
+      "mean_spearman": 0.8379578612358056,
+      "median_spearman": 0.9497392128971075,
+      "negative_queries": 20
+    },
+    {
+      "query": "drug_id",
+      "head_a": "nesso",
+      "head_b": "nesso_pic50",
+      "queries": 719,
+      "mean_spearman": 0.13826332737832628,
+      "median_spearman": 0.15860597439544807,
+      "negative_queries": 253
+    },
+    {
+      "query": "target_id",
+      "head_a": "biomaster",
+      "head_b": "biomaster_reverse",
+      "queries": 37,
+      "mean_spearman": 0.9002999745164657,
+      "median_spearman": 0.9527712455269687,
+      "negative_queries": 0
+    },
+    {
+      "query": "target_id",
+      "head_a": "nesso",
+      "head_b": "nesso_pic50",
+      "queries": 37,
+      "mean_spearman": -0.07639130296112556,
+      "median_spearman": -0.16007854197579174,
+      "negative_queries": 28
+    }
+  ],
+  "interpretation": "Same-backbone different-head comparisons do not isolate training labels or objective. Matrix decomposition is descriptive and has no experimental truth."
+}

@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "pairs": 64,
+  "repeats": 4,
+  "targets": [
+    "AR",
+    "MIF"
+  ],
+  "random_drugs": 32,
+  "weights_unchanged": true,
+  "model_eval": true,
+  "device": "cpu",
+  "cpu_threads": 3,
+  "replay_max_delta": 0.0,
+  "summaries": [
+    {
+      "gene": "AR",
+      "n": 32,
+      "seed_offset": 1,
+      "spearman": 1.0,
+      "max_absolute_change": 0.0006477236747741699,
+      "top10_overlap": 10
+    },
+    {
+      "gene": "AR",
+      "n": 32,
+      "seed_offset": 2,
+      "spearman": 1.0,
+      "max_absolute_change": 0.000673830509185791,
+      "top10_overlap": 10
+    },
+    {
+      "gene": "AR",
+      "n": 32,
+      "seed_offset": 3,
+      "spearman": 1.0,
+      "max_absolute_change": 0.0005936920642852783,
+      "top10_overlap": 10
+    },
+    {
+      "gene": "MIF",
+      "n": 32,
+      "seed_offset": 1,
+      "spearman": 1.0,
+      "max_absolute_change": 0.0014944076538085938,
+      "top10_overlap": 10
+    },
+    {
+      "gene": "MIF",
+      "n": 32,
+      "seed_offset": 2,
+      "spearman": 1.0,
+      "max_absolute_change": 0.003197968006134033,
+      "top10_overlap": 10
+    },
+    {
+      "gene": "MIF",
+      "n": 32,
+      "seed_offset": 3,
+      "spearman": 1.0,
+      "max_absolute_change": 0.001798868179321289,
+      "top10_overlap": 10
+    }
+  ],
+  "limitation": "Two targets and 32 sampled drugs; Top10 here is within this diagnostic subset, not the full catalog. No labels or training-seed test."
+}
