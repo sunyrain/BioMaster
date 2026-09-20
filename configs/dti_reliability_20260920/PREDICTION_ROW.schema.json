@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DTI research prediction row",
+  "type": "object",
+  "required": [
+    "run_id",
+    "model_version",
+    "pair_id",
+    "query_direction",
+    "score",
+    "higher_is_better",
+    "score_semantics",
+    "status",
+    "input_manifest_sha256"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "pair_id": {
+      "type": "string"
+    },
+    "query_direction": {
+      "enum": [
+        "target_to_drug",
+        "drug_to_target"
+      ]
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "higher_is_better": {
+      "type": "boolean"
+    },
+    "score_semantics": {
+      "enum": [
+        "classification_logit",
+        "classifier_probability",
+        "retrieval_similarity",
+        "directional_logit",
+        "pKd",
+        "pKi",
+        "pIC50",
+        "pEC50",
+        "log10_IC50_uM"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OK",
+        "UNSUPPORTED_INPUT",
+        "MISSING_FEATURE",
+        "INFERENCE_FAILED",
+        "UNRELIABLE_OUTPUT"
+      ]
+    },
+    "input_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "OK"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "UNSUPPORTED_INPUT",
+              "MISSING_FEATURE",
+              "INFERENCE_FAILED"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "score": {
+            "type": "null"
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      }
+    }
+  ]
+}

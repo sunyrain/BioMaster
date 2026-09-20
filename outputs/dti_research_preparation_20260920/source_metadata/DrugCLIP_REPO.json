@@ -1,0 +1,15 @@
+{
+  "model": "DrugCLIP",
+  "repo": "THU-ATOM/Drug-The-Whole-Genome",
+  "default_branch": "main",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "pushed_at": "2026-06-15T02:46:17Z",
+  "commit": "9d0db73915219763b5bcc3b7de86d7c4edb5ed03",
+  "weight_candidates": []
+}

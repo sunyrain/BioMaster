@@ -1,0 +1,15 @@
+{
+  "model": "ProbeMatchDTI",
+  "repo": "developer-hq/ProbeMatchDTI",
+  "default_branch": "master",
+  "license": null,
+  "pushed_at": "2026-08-03T08:39:04Z",
+  "commit": "2b9c0dcb40bcc4e5482d6ea98aa1419538ecdd12",
+  "weight_candidates": [
+    {
+      "path": "model/All_Model",
+      "bytes": 133,
+      "blob": "545c29bd53d6f2da239c840ba4816c85970da0e6"
+    }
+  ]
+}

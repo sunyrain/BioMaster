@@ -1,0 +1,481 @@
+{
+  "commit": "ac846b1463ecf4a031b84bd6caacb57b25d50d4f",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df3628c6bd90c220441e97ee7e21d07a2a4115a8",
+      "size": 1063,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/df3628c6bd90c220441e97ee7e21d07a2a4115a8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f6b160bd710806ba94df74bd36d5f17b851bac7",
+      "size": 2676,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/3f6b160bd710806ba94df74bd36d5f17b851bac7"
+    },
+    {
+      "path": "configs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cea78960d2c3be32e11f7e52cdc97d7aaea7a17a",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/cea78960d2c3be32e11f7e52cdc97d7aaea7a17a"
+    },
+    {
+      "path": "configs/model_config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95d1686ba46ba14c9b8fc15f9febd41ebdb055e6",
+      "size": 312,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/95d1686ba46ba14c9b8fc15f9febd41ebdb055e6"
+    },
+    {
+      "path": "configs/train_config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73e07f9e82b0097fe4e00cedef4f2bd09d897600",
+      "size": 323,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/73e07f9e82b0097fe4e00cedef4f2bd09d897600"
+    },
+    {
+      "path": "dataloader",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "880e9cc6c123490eb1f2cb1715dcb5f1a4c0a647",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/880e9cc6c123490eb1f2cb1715dcb5f1a4c0a647"
+    },
+    {
+      "path": "dataloader/dataloader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f5cf747ab8a79191853f2d550f3c92c4a58edc4",
+      "size": 7088,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/7f5cf747ab8a79191853f2d550f3c92c4a58edc4"
+    },
+    {
+      "path": "datasets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d5f3a7ab928636339244c693c250de1708b05f4",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/6d5f3a7ab928636339244c693c250de1708b05f4"
+    },
+    {
+      "path": "datasets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50c11480e6281f2f0621c288e2b6c818383f4027",
+      "size": 519,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/50c11480e6281f2f0621c288e2b6c818383f4027"
+    },
+    {
+      "path": "datasets/bindingdb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7a40be347f23576c20a2f411bfb5801c1ac0bba",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/b7a40be347f23576c20a2f411bfb5801c1ac0bba"
+    },
+    {
+      "path": "datasets/bindingdb/cluster",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2ed64a5e78c9c9d3a83fca3b3e3c024e4665576",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/e2ed64a5e78c9c9d3a83fca3b3e3c024e4665576"
+    },
+    {
+      "path": "datasets/bindingdb/cluster/source_train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c00371c029e1ce9fa25889927f88ff3f18b8185",
+      "size": 11394843,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/6c00371c029e1ce9fa25889927f88ff3f18b8185"
+    },
+    {
+      "path": "datasets/bindingdb/cluster/target_test_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4930ccec7831e30e2a92a4ab103a4329dd840770",
+      "size": 1411616,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/4930ccec7831e30e2a92a4ab103a4329dd840770"
+    },
+    {
+      "path": "datasets/bindingdb/cluster/target_train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9fb2965f6efd64df84ad17554f721173a55b3fb",
+      "size": 5580820,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/c9fb2965f6efd64df84ad17554f721173a55b3fb"
+    },
+    {
+      "path": "datasets/bindingdb/random",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "212878623fee2c41adc90e1d0812f7fdf5c6542a",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/212878623fee2c41adc90e1d0812f7fdf5c6542a"
+    },
+    {
+      "path": "datasets/bindingdb/random/0.5tendency_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81c5a83e24c3be68f7e5fc4145a46a09befc6aa2",
+      "size": 1582971,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/81c5a83e24c3be68f7e5fc4145a46a09befc6aa2"
+    },
+    {
+      "path": "datasets/bindingdb/random/drug_high_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be841984a89817f53193f28454d13a1161d6bd8c",
+      "size": 1583887,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/be841984a89817f53193f28454d13a1161d6bd8c"
+    },
+    {
+      "path": "datasets/bindingdb/random/test_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e4615fb4db95ce680876b922098e06086a2a647",
+      "size": 7484854,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/3e4615fb4db95ce680876b922098e06086a2a647"
+    },
+    {
+      "path": "datasets/bindingdb/random/train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3debe0b6149d3c89de5e06bd9dd75e181c8cf025",
+      "size": 26097699,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/3debe0b6149d3c89de5e06bd9dd75e181c8cf025"
+    },
+    {
+      "path": "datasets/bindingdb/random/val_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84c4365f54a212e1ca89f5219fe767232ba213e0",
+      "size": 3722032,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/84c4365f54a212e1ca89f5219fe767232ba213e0"
+    },
+    {
+      "path": "datasets/biosnap",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e292b6bd787b296f296aaa12560602e99f373c78",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/e292b6bd787b296f296aaa12560602e99f373c78"
+    },
+    {
+      "path": "datasets/biosnap/cluster",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e7dff67f5b811a1897808d2784331bd164cde2c",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/5e7dff67f5b811a1897808d2784331bd164cde2c"
+    },
+    {
+      "path": "datasets/biosnap/cluster/source_train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b4fc8dba8037822243fba61559f931199eef2b9",
+      "size": 5928905,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/1b4fc8dba8037822243fba61559f931199eef2b9"
+    },
+    {
+      "path": "datasets/biosnap/cluster/target_test_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a0d1d52ec3b1d8b74c7da3d5eed8ba61df1a151",
+      "size": 617676,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/9a0d1d52ec3b1d8b74c7da3d5eed8ba61df1a151"
+    },
+    {
+      "path": "datasets/biosnap/cluster/target_train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3494be1889b772da227ee9e11aa4c0a5fbf4b69",
+      "size": 2379361,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/c3494be1889b772da227ee9e11aa4c0a5fbf4b69"
+    },
+    {
+      "path": "datasets/biosnap/random",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed7a2743489db312f650d100ce7e0642ce0ccb24",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/ed7a2743489db312f650d100ce7e0642ce0ccb24"
+    },
+    {
+      "path": "datasets/biosnap/random/test_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6416ff895464f4f864cdff6149fff20cd2acd7d3",
+      "size": 3426509,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/6416ff895464f4f864cdff6149fff20cd2acd7d3"
+    },
+    {
+      "path": "datasets/biosnap/random/train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3993b82d07e31ec2a11f65f7782b06872e577edf",
+      "size": 11814110,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/3993b82d07e31ec2a11f65f7782b06872e577edf"
+    },
+    {
+      "path": "datasets/biosnap/random/val_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067ee869b73467f977d07ff8d47eb93353d5c5b8",
+      "size": 1701448,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/067ee869b73467f977d07ff8d47eb93353d5c5b8"
+    },
+    {
+      "path": "datasets/dataset_avg.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "752fc02ca3c2656f00f59875d5160c3f211addbd",
+      "size": 922,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/752fc02ca3c2656f00f59875d5160c3f211addbd"
+    },
+    {
+      "path": "datasets/dataset_drug_high.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be034384c2da74548fb88fead18e4c5c3d90f5a4",
+      "size": 1441,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/be034384c2da74548fb88fead18e4c5c3d90f5a4"
+    },
+    {
+      "path": "datasets/davis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2425bcb4f1134e9ec6ffc307ddccfa8effa532ab",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/2425bcb4f1134e9ec6ffc307ddccfa8effa532ab"
+    },
+    {
+      "path": "datasets/davis/random",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c9defaed7c917080fa176536d995ed0043e0d8a",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/8c9defaed7c917080fa176536d995ed0043e0d8a"
+    },
+    {
+      "path": "datasets/davis/random/test_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2684571d7766e90966050c0fa298d1b6f6f24f0",
+      "size": 5588389,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/b2684571d7766e90966050c0fa298d1b6f6f24f0"
+    },
+    {
+      "path": "datasets/davis/random/train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "206b327a824ac6191d1723d6e37dc4fd7caca1f4",
+      "size": 2057479,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/206b327a824ac6191d1723d6e37dc4fd7caca1f4"
+    },
+    {
+      "path": "datasets/davis/random/val_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "357fca228ef63b7788e15b77c963e287db11f7a9",
+      "size": 2826033,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/357fca228ef63b7788e15b77c963e287db11f7a9"
+    },
+    {
+      "path": "datasets/human",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcaa147d357214eb78869046fafbd59d3f1060d3",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/dcaa147d357214eb78869046fafbd59d3f1060d3"
+    },
+    {
+      "path": "datasets/human/cold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dd74d6344b78efbabdb2dfe5586f080c3dffbd8b",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/dd74d6344b78efbabdb2dfe5586f080c3dffbd8b"
+    },
+    {
+      "path": "datasets/human/cold/test_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a45062abff1e492e2b9142137ec729eb039c559",
+      "size": 189358,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/2a45062abff1e492e2b9142137ec729eb039c559"
+    },
+    {
+      "path": "datasets/human/cold/train_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "859ab02e21634eb57071821627166edb9e064978",
+      "size": 2437275,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/859ab02e21634eb57071821627166edb9e064978"
+    },
+    {
+      "path": "datasets/human/cold/val_with_id.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c7f116c20e208d6c6d668c6cb50f7810c6a6e9e",
+      "size": 96959,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/6c7f116c20e208d6c6d668c6cb50f7810c6a6e9e"
+    },
+    {
+      "path": "image",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06a57964e9637ab9ac0e437acc030cff71208fa6",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/06a57964e9637ab9ac0e437acc030cff71208fa6"
+    },
+    {
+      "path": "image/TAPB.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebcfdbd5dae89f90c08b1a40d3cc9716cee58ede",
+      "size": 344757,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/ebcfdbd5dae89f90c08b1a40d3cc9716cee58ede"
+    },
+    {
+      "path": "main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1af68af257231046e0b50af99ef2f65fbaecb892",
+      "size": 4511,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/1af68af257231046e0b50af99ef2f65fbaecb892"
+    },
+    {
+      "path": "models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99e372b26b0b7c90ecda465cc17f3f8533cf9001",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/99e372b26b0b7c90ecda465cc17f3f8533cf9001"
+    },
+    {
+      "path": "models/attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "358175ce56ab649b59300850ee6cae0ed3bcab29",
+      "size": 4487,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/358175ce56ab649b59300850ee6cae0ed3bcab29"
+    },
+    {
+      "path": "models/drug",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "169f3aee5d7e027809ff39e4174b613082625557",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/169f3aee5d7e027809ff39e4174b613082625557"
+    },
+    {
+      "path": "models/drug/molformer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b03cb7086f6df91d672b78efc961b29c455135c6",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/b03cb7086f6df91d672b78efc961b29c455135c6"
+    },
+    {
+      "path": "models/drug/molformer/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb43b1e4f74def5e5e2d5a4dbbea34bb068ae23",
+      "size": 607,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/edb43b1e4f74def5e5e2d5a4dbbea34bb068ae23"
+    },
+    {
+      "path": "models/protein",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "977d76f6e4ca8e6a6ab48744633e1e472b7d9f4d",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/977d76f6e4ca8e6a6ab48744633e1e472b7d9f4d"
+    },
+    {
+      "path": "models/protein/esm2_model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a850d340ffef5be7d6f0b1b4b4183f7109b9515f",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/a850d340ffef5be7d6f0b1b4b4183f7109b9515f"
+    },
+    {
+      "path": "models/protein/esm2_model/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4b0f73869cfe8969e95a0507e6977c99270b048",
+      "size": 308,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/f4b0f73869cfe8969e95a0507e6977c99270b048"
+    },
+    {
+      "path": "models/tapb.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9d32d7b159d19b189e27991bf2b2146e0779b48",
+      "size": 6071,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/c9d32d7b159d19b189e27991bf2b2146e0779b48"
+    },
+    {
+      "path": "models/transformer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcaee965934c95d3eafaa529326d910301688c24",
+      "size": 7713,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/dcaee965934c95d3eafaa529326d910301688c24"
+    },
+    {
+      "path": "preparation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6764119d1495e0b94f6b64be7f2c66fac64013dd",
+      "size": 4383,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/6764119d1495e0b94f6b64be7f2c66fac64013dd"
+    },
+    {
+      "path": "trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f6e3d5e0f542d9e3104ccdbcad41c22465c6eec",
+      "size": 9135,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/7f6e3d5e0f542d9e3104ccdbcad41c22465c6eec"
+    },
+    {
+      "path": "utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1ca5996f1f66986cd22d76b37c1b0a8e21f5bf3",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/e1ca5996f1f66986cd22d76b37c1b0a8e21f5bf3"
+    },
+    {
+      "path": "utils/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58f59d8122060c9d6c4b8b8013657e137747677d",
+      "size": 2302,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/58f59d8122060c9d6c4b8b8013657e137747677d"
+    },
+    {
+      "path": "visualization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16d33060cb070b86f1cab07d3e147c0fec6ad96f",
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/trees/16d33060cb070b86f1cab07d3e147c0fec6ad96f"
+    },
+    {
+      "path": "visualization/freq_vis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c2670277e8da2e5b38a117e48add84fd783002",
+      "size": 1631,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/94c2670277e8da2e5b38a117e48add84fd783002"
+    },
+    {
+      "path": "visualization/v_attn_map_pr.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "556591d5338705c9b5d1e7799d844ed2895ea6bd",
+      "size": 4602,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/556591d5338705c9b5d1e7799d844ed2895ea6bd"
+    },
+    {
+      "path": "visualization/vis_drug.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46204f2524a5a17c713faeebcecc6776b3fa565a",
+      "size": 2990,
+      "url": "https://api.github.com/repos/GaomingL1n/TAPB/git/blobs/46204f2524a5a17c713faeebcecc6776b3fa565a"
+    }
+  ]
+}

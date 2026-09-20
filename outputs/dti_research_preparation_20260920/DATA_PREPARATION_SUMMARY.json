@@ -1,0 +1,52 @@
+{
+  "status": "PREPARED_AND_VALIDATED",
+  "created_utc": "2026-09-20T03:21:20.557225+00:00",
+  "canonical_pairs": 1386225,
+  "molecules": 857332,
+  "targets": 4742,
+  "views": [
+    "scaffold_replay",
+    "source_purged",
+    "cold_target",
+    "double_cold",
+    "temporal_conservative"
+  ],
+  "materialized_member_files": 30,
+  "protein_clusters": {
+    "sequences": 5086,
+    "clusters": 3529,
+    "hit_rows": 12943,
+    "max_cluster_sequences": 150,
+    "mmseqs_version": "13-45111+ds-2",
+    "identity": 0.3,
+    "bidirectional_coverage": 0.8,
+    "evalue": 0.001,
+    "sensitivity": 7.5,
+    "method": "Connected components of detected MMseqs all-against-all hits; heuristic homology screen, not exhaustive biological homology certification."
+  },
+  "source_audit": {
+    "alias_identifiers": 74925,
+    "document_groups": 43097,
+    "pairs_missing_any_source": 37893,
+    "pairs_with_known_source": 1348332,
+    "source_purged_document_overlap": 0,
+    "temporal_policy": "All accepted observations for the pair dated <=2022 / entirely2023 / first>=2024; missing or boundary-straddling dates excluded. Retrospective, not newly collected."
+  },
+  "protected_pairs_in_training_universe": 0,
+  "matched_train_pairs": 337459,
+  "overlapping_AB_label_conflicts": 0,
+  "exact_regression_rows": 998162,
+  "assay_auxiliary_rows": 639511,
+  "assay_scope": "Reused audited original-training assay records only; every new split must filter by its member IDs and recalculate group>=5.",
+  "no_unmeasured_negative_pairs": true,
+  "new_training_started": false,
+  "wetlab_results_access_status": "UNKNOWN_PENDING_USER",
+  "interpretation": "Retrospective repartition for freshly initialized supervised models. Previously trained checkpoints are ineligible for independent cold/temporal claims.",
+  "limitations": [
+    "Homology screening is heuristic at30% identity/80% bidirectional coverage; it is not an exhaustive domain-homology exclusion.",
+    "Source groups conservatively union co-reported DOI/PMID/patent; undisclosed or incorrect source metadata cannot be certified.",
+    "Conservative temporal view uses wholly dated intervals, not a complete historical database reconstruction.",
+    "Kd/Ki classifier pooling, IC50/EC50, exact regression and inactivity remain distinct declared views; no numeric affinity fabricated for inactivity.",
+    "No new external-confirmatory or prospectively unseen labels were created by repartitioning."
+  ]
+}

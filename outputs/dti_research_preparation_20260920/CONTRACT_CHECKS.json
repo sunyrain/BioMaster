@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "prediction_schema": true,
+  "invalid_ok_without_score_rejected": true,
+  "missing_with_numeric_score_rejected": true,
+  "missing_without_reason_rejected": true,
+  "nesso_official_lfs_matches": true
+}

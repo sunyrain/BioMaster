@@ -1,0 +1,173 @@
+{
+  "created": "2025-06-28T03:01:57.686146+00:00",
+  "modified": "2025-06-28T03:01:58.681923+00:00",
+  "id": 14056305,
+  "conceptrecid": "13989198",
+  "doi": "10.5281/zenodo.14056305",
+  "conceptdoi": "10.5281/zenodo.13989198",
+  "doi_url": "https://doi.org/10.5281/zenodo.14056305",
+  "metadata": {
+    "title": "The dataset used in the article \"Evidential Deep Learning for Guided Drug-Target Interaction Prediction\"",
+    "doi": "10.5281/zenodo.14056305",
+    "publication_date": "2025-06-28",
+    "description": "<p>The file consists of two parts, the first part is the feature file used for model training and the second part is the saved model.</p>\n<p>bond_angle file is the feature file for the drugbank dataset, KIBA file is the feature file for the kiba dataset, davis is the feature file for the davis dataset. case_drugbank is the dungbank feature file for the independent test set and case_len_drug is the feature file for the patent validation dataset in the TKIs feature file.len_vs is the feature file for TKIs virtual screening dataset.</p>\n<p>In the runs folder, the models saved by random division on the Drugbank, KIBA, and Davis datasets are stored.</p>\n<p>The <a href=\"https://zenodo.org/api/records/14056305/draft/files/bert_weights_encoderMedium_10.h5/content\" target=\"_blank\" rel=\"noopener noreferrer\">bert_weights_encoderMedium_10.h5</a> is the parameter for the small molecule pre-training model, MG-BERT.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Zhao, Yanpeng",
+        "affiliation": null,
+        "orcid": "0000-0002-2117-630X"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 1,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "13989198"
+          }
+        }
+      ]
+    }
+  },
+  "title": "The dataset used in the article \"Evidential Deep Learning for Guided Drug-Target Interaction Prediction\"",
+  "links": {
+    "self": "https://zenodo.org/api/records/14056305",
+    "self_html": "https://zenodo.org/records/14056305",
+    "preview_html": "https://zenodo.org/records/14056305?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.14056305",
+    "self_doi": "https://doi.org/10.5281/zenodo.14056305",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.14056305",
+    "reserve_doi": "https://zenodo.org/api/records/14056305/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/13989198",
+    "parent_html": "https://zenodo.org/records/13989198",
+    "parent_doi": "https://doi.org/10.5281/zenodo.13989198",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.13989198",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:14056305/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:14056305/sequence/default",
+    "files": "https://zenodo.org/api/records/14056305/files",
+    "media_files": "https://zenodo.org/api/records/14056305/media-files",
+    "archive": "https://zenodo.org/api/records/14056305/files-archive",
+    "archive_media": "https://zenodo.org/api/records/14056305/media-files-archive",
+    "latest": "https://zenodo.org/api/records/14056305/versions/latest",
+    "latest_html": "https://zenodo.org/records/14056305/latest",
+    "versions": "https://zenodo.org/api/records/14056305/versions",
+    "draft": "https://zenodo.org/api/records/14056305/draft",
+    "access_links": "https://zenodo.org/api/records/14056305/access/links",
+    "access_grants": "https://zenodo.org/api/records/14056305/access/grants",
+    "access_users": "https://zenodo.org/api/records/14056305/access/users",
+    "access_request": "https://zenodo.org/api/records/14056305/access/request",
+    "access": "https://zenodo.org/api/records/14056305/access",
+    "communities": "https://zenodo.org/api/records/14056305/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/14056305/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/14056305/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/14056305/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/14056305/quota-increase",
+    "requests": "https://zenodo.org/api/records/14056305/requests"
+  },
+  "updated": "2025-06-28T03:01:58.681923+00:00",
+  "recid": "14056305",
+  "revision": 4,
+  "files": [
+    {
+      "id": "e2193a76-ff58-4fd0-a58d-04c537dab735",
+      "key": "runs.zip",
+      "size": 834777472,
+      "checksum": "md5:c2cf275a42b1e323967257f93dffd073",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/runs.zip/content"
+      }
+    },
+    {
+      "id": "f36c6aac-e809-4f7f-b40a-aab82835812e",
+      "key": "bert_weights_encoderMedium_10.h5",
+      "size": 12795552,
+      "checksum": "md5:f15d993dd67e7bb3f975c0fca5df07ca",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/bert_weights_encoderMedium_10.h5/content"
+      }
+    },
+    {
+      "id": "238108ba-3d4c-4fe5-aca6-a9afb6bbb994",
+      "key": "KIBA.zip",
+      "size": 746368223,
+      "checksum": "md5:6ae8a2d11d4e2980291a9a088cc97347",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/KIBA.zip/content"
+      }
+    },
+    {
+      "id": "65b5a669-575a-47ff-aec5-1924567b0c0a",
+      "key": "davis.zip",
+      "size": 1170633949,
+      "checksum": "md5:898e21e8dc4824f11a5d934eb834fb60",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/davis.zip/content"
+      }
+    },
+    {
+      "id": "d395d3de-3619-4aba-b93e-fd45a8a59563",
+      "key": "len_vs.zip",
+      "size": 284769580,
+      "checksum": "md5:a3ad1ff20c40d63170eebcf60c57adeb",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/len_vs.zip/content"
+      }
+    },
+    {
+      "id": "6979dc85-296a-40ab-b975-66b7384a739e",
+      "key": "case_len_drug.zip",
+      "size": 45473153,
+      "checksum": "md5:81d929b82e8670c1217f9a7590d2136b",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/case_len_drug.zip/content"
+      }
+    },
+    {
+      "id": "d9dc8f88-2544-4e1e-8415-9ad997a58561",
+      "key": "bond_angle.zip",
+      "size": 8866382711,
+      "checksum": "md5:ab3f12a93b8604cc85b4f3336f9fc925",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/bond_angle.zip/content"
+      }
+    },
+    {
+      "id": "2e5d8f08-d1fd-491f-b50b-cdc0a6b02a2e",
+      "key": "case_drugbank.zip",
+      "size": 109402223,
+      "checksum": "md5:aad05c6d732c6033dd00c72a973a8d69",
+      "links": {
+        "self": "https://zenodo.org/api/records/14056305/files/case_drugbank.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "257655"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 4621,
+    "unique_downloads": 2563,
+    "views": 1500,
+    "unique_views": 1341,
+    "version_downloads": 4410,
+    "version_unique_downloads": 2363,
+    "version_unique_views": 1219,
+    "version_views": 1359
+  },
+  "state": "done",
+  "submitted": true
+}

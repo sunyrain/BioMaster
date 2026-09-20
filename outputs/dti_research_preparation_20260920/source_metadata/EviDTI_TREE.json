@@ -1,0 +1,491 @@
+{
+  "commit": "8734bd7278edb2453c76d3072f292fa19f152802",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a357ed3f04418fcb490a5446d23d38166f9931b",
+      "size": 104,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/4a357ed3f04418fcb490a5446d23d38166f9931b"
+    },
+    {
+      "path": ".idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5c640429c226cc6461c63a9b8564f50872c41d03",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/5c640429c226cc6461c63a9b8564f50872c41d03"
+    },
+    {
+      "path": ".idea/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7e9d11d4bf243bffe4bb60b4ac1f9392297f4bf",
+      "size": 39,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/e7e9d11d4bf243bffe4bb60b4ac1f9392297f4bf"
+    },
+    {
+      "path": ".idea/csv-plugin.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe87efff6d45692a4cf70636738510f2e0ea3834",
+      "size": 411,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/fe87efff6d45692a4cf70636738510f2e0ea3834"
+    },
+    {
+      "path": "compound_encode.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df9cd8f6f94e42ab33a14299d2be57e763ea521b",
+      "size": 17092,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/df9cd8f6f94e42ab33a14299d2be57e763ea521b"
+    },
+    {
+      "path": "compound_tools.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4e1710357e46ecf40a83b3222d2cc1457112556",
+      "size": 25521,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/c4e1710357e46ecf40a83b3222d2cc1457112556"
+    },
+    {
+      "path": "configs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5121787119510fd93d73fb77923b529b11535766",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/5121787119510fd93d73fb77923b529b11535766"
+    },
+    {
+      "path": "configs/davis.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f588f40f8cf271d2d83c8a849bc5f9a12a90d72",
+      "size": 61,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/3f588f40f8cf271d2d83c8a849bc5f9a12a90d72"
+    },
+    {
+      "path": "configs/drugbank.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "525ab046e99ec0727cfcc3779e2914beac131e48",
+      "size": 66,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/525ab046e99ec0727cfcc3779e2914beac131e48"
+    },
+    {
+      "path": "configs/kiba.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "525ab046e99ec0727cfcc3779e2914beac131e48",
+      "size": 66,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/525ab046e99ec0727cfcc3779e2914beac131e48"
+    },
+    {
+      "path": "d_2D_cnn_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "299304a50ec13a5ca773013b2b9d79bfc7bba416",
+      "size": 13189,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/299304a50ec13a5ca773013b2b9d79bfc7bba416"
+    },
+    {
+      "path": "dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cc3917096a9379a849a49395ea9a319862058cf",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/9cc3917096a9379a849a49395ea9a319862058cf"
+    },
+    {
+      "path": "dataset/KIBA_dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7c6e37647ca1184f30b0b5e69f84476ece6056d",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/a7c6e37647ca1184f30b0b5e69f84476ece6056d"
+    },
+    {
+      "path": "dataset/KIBA_dataset/KIBA_smiles.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9553d767c7f65264129301de95e2c912fa45a3",
+      "size": 121734,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/2c9553d767c7f65264129301de95e2c912fa45a3"
+    },
+    {
+      "path": "dataset/KIBA_dataset/KIBA_total_cid_unid.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a3bc46a9269f5a45b2a28462b7dc6d0ce49657",
+      "size": 92038838,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/d0a3bc46a9269f5a45b2a28462b7dc6d0ce49657"
+    },
+    {
+      "path": "dataset/KIBA_dataset/kiba_seq.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "405befa4e29cac60878d858d01623d5af19803f3",
+      "size": 155604,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/405befa4e29cac60878d858d01623d5af19803f3"
+    },
+    {
+      "path": "dataset/davis_dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3e99197b15684d32a8a5b90d8138f78904f9b30",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/c3e99197b15684d32a8a5b90d8138f78904f9b30"
+    },
+    {
+      "path": "dataset/davis_dataset/Davis-drug.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83fa48c3e105723bbde79043815883092c53c158",
+      "size": 1695279,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/83fa48c3e105723bbde79043815883092c53c158"
+    },
+    {
+      "path": "dataset/davis_dataset/davis_seq.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c7c168c3e96bd3cd5855b52383331360ef47f66",
+      "size": 282676,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/8c7c168c3e96bd3cd5855b52383331360ef47f66"
+    },
+    {
+      "path": "dataset/davis_dataset/davis_seq_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6cc7d36d348637569253cf8f09b310567546302",
+      "size": 19390413,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/b6cc7d36d348637569253cf8f09b310567546302"
+    },
+    {
+      "path": "dataset/davis_dataset/davis_total_cid_unid.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c93febbe132bf870921068c6e3f5e711c114c9d9",
+      "size": 21297936,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/c93febbe132bf870921068c6e3f5e711c114c9d9"
+    },
+    {
+      "path": "dataset/drugbank_case_dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09c1a721a3162acb0a934ec27cdf9fa7f2839942",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/09c1a721a3162acb0a934ec27cdf9fa7f2839942"
+    },
+    {
+      "path": "dataset/drugbank_case_dataset/drug_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09427c350773193e57625ed1890272e9075b1e2a",
+      "size": 1140,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/09427c350773193e57625ed1890272e9075b1e2a"
+    },
+    {
+      "path": "dataset/drugbank_case_dataset/drugbank_total.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f632c557e8c0c5b7fa42d238a3a50e6342473a2",
+      "size": 40180,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/2f632c557e8c0c5b7fa42d238a3a50e6342473a2"
+    },
+    {
+      "path": "dataset/drugbank_case_dataset/target_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbb561b605ddb2958e1ddf95637b231f74d06d77",
+      "size": 17630,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/cbb561b605ddb2958e1ddf95637b231f74d06d77"
+    },
+    {
+      "path": "dataset/drugbank_dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "466c95897da09b45b30221b4126aa86d180d5ac3",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/466c95897da09b45b30221b4126aa86d180d5ac3"
+    },
+    {
+      "path": "dataset/drugbank_dataset/metadata.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287745373c59b7ae36715ca7afec23ecda9c4c7c",
+      "size": 19355352,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/287745373c59b7ae36715ca7afec23ecda9c4c7c"
+    },
+    {
+      "path": "dataset/drugbank_dataset/total_cid_unid_csv.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17d16b7d5a2180a13d67db52453d59e82e1fc046",
+      "size": 524024,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/17d16b7d5a2180a13d67db52453d59e82e1fc046"
+    },
+    {
+      "path": "dataset/len_case_dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71d9feab874555bd45d567d57ba6af028ce4b019",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/71d9feab874555bd45d567d57ba6af028ce4b019"
+    },
+    {
+      "path": "dataset/len_case_dataset/len_case_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2def17e95dfa7eaf2d86503ceb5ff5a440d70549",
+      "size": 24145,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/2def17e95dfa7eaf2d86503ceb5ff5a440d70549"
+    },
+    {
+      "path": "dataset/len_v_s_dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f46214a7cd5a6ac489ebad5f8e1c8f85d96aac13",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/f46214a7cd5a6ac489ebad5f8e1c8f85d96aac13"
+    },
+    {
+      "path": "dataset/len_v_s_dataset/cid_0.7.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "725f85d19ca5cc7f9f62cbfaba9d8fbe0beff4e1",
+      "size": 2992,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/725f85d19ca5cc7f9f62cbfaba9d8fbe0beff4e1"
+    },
+    {
+      "path": "dataset/len_v_s_dataset/target_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aef6bb2168a02c23b88a3a2e052b358ec8769a0c",
+      "size": 60176,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/aef6bb2168a02c23b88a3a2e052b358ec8769a0c"
+    },
+    {
+      "path": "dataset/len_v_s_dataset/v_s_drug_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c61ed136e2d440d56c259735f96dff0944e8d50",
+      "size": 47677,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/1c61ed136e2d440d56c259735f96dff0944e8d50"
+    },
+    {
+      "path": "dataset/len_v_s_dataset/v_s_info.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bed7fdd061fde1187328d48337e14f5f8c1bffe",
+      "size": 40660205,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/3bed7fdd061fde1187328d48337e14f5f8c1bffe"
+    },
+    {
+      "path": "davis_configs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "402a4fd1f4090450b6a46b2f754dd17150dbd695",
+      "size": 1082,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/402a4fd1f4090450b6a46b2f754dd17150dbd695"
+    },
+    {
+      "path": "davis_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "419abbb048aaa66156776cbbce638cf078a108bc",
+      "size": 13104,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/419abbb048aaa66156776cbbce638cf078a108bc"
+    },
+    {
+      "path": "davis_solver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae4da6d2f1de2f5d2f98ef2e769953c12e7bddb",
+      "size": 13329,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/6ae4da6d2f1de2f5d2f98ef2e769953c12e7bddb"
+    },
+    {
+      "path": "drugbank_configs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "811efecee36f1c709e1c6f471ad7932b9be55c86",
+      "size": 1082,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/811efecee36f1c709e1c6f471ad7932b9be55c86"
+    },
+    {
+      "path": "drugbank_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e58783737d3648635b47a1e4d5ac5c288b0b6501",
+      "size": 19330,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/e58783737d3648635b47a1e4d5ac5c288b0b6501"
+    },
+    {
+      "path": "drugbank_solver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed111458baf1c2be8d177f64feb41d29509f6cdb",
+      "size": 12795,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/ed111458baf1c2be8d177f64feb41d29509f6cdb"
+    },
+    {
+      "path": "environment.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce34adff547e01d88eb29b86babbb39adf3c6016",
+      "size": 4719,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/ce34adff547e01d88eb29b86babbb39adf3c6016"
+    },
+    {
+      "path": "extract_drug_2d_emb.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c87ad0b8e672e118afd64c292b2e2ed58f404792",
+      "size": 3980,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/c87ad0b8e672e118afd64c292b2e2ed58f404792"
+    },
+    {
+      "path": "extract_drug_3d_emb.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "591734709aa188509082a9540ed75cf85f14488c",
+      "size": 6562,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/591734709aa188509082a9540ed75cf85f14488c"
+    },
+    {
+      "path": "extract_p_emb.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7068552d5114b6fffd3106588b77ab6ed2694884",
+      "size": 6301,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/7068552d5114b6fffd3106588b77ab6ed2694884"
+    },
+    {
+      "path": "framework.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43ffd62104a78522e0c6cc6d46dffab8abb158f4",
+      "size": 1630243,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/43ffd62104a78522e0c6cc6d46dffab8abb158f4"
+    },
+    {
+      "path": "function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be3e1f3ac989058222e073301b8acde8fbb8a018",
+      "size": 15675,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/be3e1f3ac989058222e073301b8acde8fbb8a018"
+    },
+    {
+      "path": "infernce.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "470a1f9af0df71c885d9fac09a1d5e1c980504f7",
+      "size": 8489,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/470a1f9af0df71c885d9fac09a1d5e1c980504f7"
+    },
+    {
+      "path": "kiba_configs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7834d7244fd67676e186c5b42f1ad0ce6da17484",
+      "size": 1074,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/7834d7244fd67676e186c5b42f1ad0ce6da17484"
+    },
+    {
+      "path": "kiba_solver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "880daa86f59921adc97fcbf3ba31adbc50a7bc67",
+      "size": 14418,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/880daa86f59921adc97fcbf3ba31adbc50a7bc67"
+    },
+    {
+      "path": "ligheattention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b12dcfab75fe01782d5ddb12d523172c8b77cf",
+      "size": 10358,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/27b12dcfab75fe01782d5ddb12d523172c8b77cf"
+    },
+    {
+      "path": "main_KIBA.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0388f46ae42675a44a335a16dbd40cae5f175a1c",
+      "size": 3188,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/0388f46ae42675a44a335a16dbd40cae5f175a1c"
+    },
+    {
+      "path": "main_davis.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df2fcf9c4d86e5170b9ce2160c6dd25ee40d4794",
+      "size": 3728,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/df2fcf9c4d86e5170b9ce2160c6dd25ee40d4794"
+    },
+    {
+      "path": "main_drugbank.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726394f81959ffc4f37b907e9f8da5b6d706cd3b",
+      "size": 3133,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/726394f81959ffc4f37b907e9f8da5b6d706cd3b"
+    },
+    {
+      "path": "models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a030ddc52e6434f1de8e193fb8076311d4dc6887",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/a030ddc52e6434f1de8e193fb8076311d4dc6887"
+    },
+    {
+      "path": "models/bert_weights_encoderMedium_10.h5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00d224ff0bfd781ac036a7979965c3d7a069e053",
+      "size": 12795552,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/00d224ff0bfd781ac036a7979965c3d7a069e053"
+    },
+    {
+      "path": "prediction.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43612a7fa7f979fe0d98e7165ad15c795e64295",
+      "size": 4786,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/c43612a7fa7f979fe0d98e7165ad15c795e64295"
+    },
+    {
+      "path": "preprocess.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf9cd52360f9f011eedb06ab4b65b864b734099b",
+      "size": 5279,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/cf9cd52360f9f011eedb06ab4b65b864b734099b"
+    },
+    {
+      "path": "readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc9b8e9953e9944e64cdf75532996b8fa6a7514f",
+      "size": 2622,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/dc9b8e9953e9944e64cdf75532996b8fa6a7514f"
+    },
+    {
+      "path": "result",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf6462b08bfbb965ea551d51a1c26e00f00ae1a3",
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/trees/bf6462b08bfbb965ea551d51a1c26e00f00ae1a3"
+    },
+    {
+      "path": "result/plot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b25d2a7c5ae17705a305aa87deb861174120087",
+      "size": 19461,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/0b25d2a7c5ae17705a305aa87deb861174120087"
+    },
+    {
+      "path": "utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d534945b7ccf8fd19278d8eb1a17842b3e5e513a",
+      "size": 8965,
+      "url": "https://api.github.com/repos/zhaoyanpeng208/EviDTI/git/blobs/d534945b7ccf8fd19278d8eb1a17842b3e5e513a"
+    }
+  ]
+}

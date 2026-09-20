@@ -1,0 +1,455 @@
+{
+  "status": "PASS",
+  "run_registry_rows": 87,
+  "partition_checks": [
+    {
+      "arm": "A",
+      "view": "scaffold_replay",
+      "status": "PASS",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507
+    },
+    {
+      "arm": "A",
+      "view": "source_purged",
+      "status": "PASS",
+      "train_pairs": 78570,
+      "validation_pairs": 16914,
+      "test_pairs": 39350
+    },
+    {
+      "arm": "A",
+      "view": "cold_target",
+      "status": "PASS",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623
+    },
+    {
+      "arm": "A",
+      "view": "double_cold",
+      "status": "PASS",
+      "train_pairs": 297624,
+      "validation_pairs": 2549,
+      "test_pairs": 2389
+    },
+    {
+      "arm": "A",
+      "view": "temporal_conservative",
+      "status": "PASS",
+      "train_pairs": 376999,
+      "validation_pairs": 12015,
+      "test_pairs": 16110
+    },
+    {
+      "arm": "B",
+      "view": "scaffold_replay",
+      "status": "PASS",
+      "train_pairs": 1116270,
+      "validation_pairs": 135215,
+      "test_pairs": 132331
+    },
+    {
+      "arm": "B",
+      "view": "source_purged",
+      "status": "PASS",
+      "train_pairs": 178653,
+      "validation_pairs": 38749,
+      "test_pairs": 128719
+    },
+    {
+      "arm": "B",
+      "view": "cold_target",
+      "status": "PASS",
+      "train_pairs": 1142452,
+      "validation_pairs": 105612,
+      "test_pairs": 135752
+    },
+    {
+      "arm": "B",
+      "view": "double_cold",
+      "status": "PASS",
+      "train_pairs": 921139,
+      "validation_pairs": 10172,
+      "test_pairs": 12753
+    },
+    {
+      "arm": "B",
+      "view": "temporal_conservative",
+      "status": "PASS",
+      "train_pairs": 1184664,
+      "validation_pairs": 56969,
+      "test_pairs": 92358
+    }
+  ],
+  "batch_checks": [
+    {
+      "run_id": "E1_A_scaffold_replay_drug_only_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_scaffold_replay_protein_only_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_scaffold_replay_additive_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_scaffold_replay_dual_cosine_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_scaffold_replay_bilinear_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_scaffold_replay_global_mlp_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_scaffold_replay_lightgbm_binary_default_s101",
+      "train_pairs": 337570,
+      "validation_pairs": 41806,
+      "test_pairs": 39507,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_drug_only_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_protein_only_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_additive_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_dual_cosine_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_bilinear_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_global_mlp_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E1_A_cold_target_lightgbm_binary_default_s101",
+      "train_pairs": 369213,
+      "validation_pairs": 26047,
+      "test_pairs": 23623,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E2_B_scaffold_replay_global_mlp_binary_default_s101",
+      "train_pairs": 1116270,
+      "validation_pairs": 135215,
+      "test_pairs": 132331,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E3_AB_matched_composition_global_mlp_binary_matched_A_s101",
+      "train_pairs": 337459,
+      "validation_pairs": 41590,
+      "test_pairs": 39304,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E3_AB_matched_composition_global_mlp_binary_matched_B_s101",
+      "train_pairs": 337459,
+      "validation_pairs": 41590,
+      "test_pairs": 39304,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E3_AB_matched_composition_global_mlp_binary_common_s101",
+      "train_pairs": 335580,
+      "validation_pairs": 41590,
+      "test_pairs": 39304,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E3_AB_matched_composition_global_mlp_binary_common_plus_B_s101",
+      "train_pairs": 1059535,
+      "validation_pairs": 41590,
+      "test_pairs": 39304,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E4_A_source_purged_global_mlp_binary_default_s101",
+      "train_pairs": 78570,
+      "validation_pairs": 16914,
+      "test_pairs": 39350,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E4_A_double_cold_global_mlp_binary_default_s101",
+      "train_pairs": 297624,
+      "validation_pairs": 2549,
+      "test_pairs": 2389,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    },
+    {
+      "run_id": "E4_A_temporal_conservative_global_mlp_binary_default_s101",
+      "train_pairs": 376999,
+      "validation_pairs": 12015,
+      "test_pairs": 16110,
+      "features": {
+        "bermol": [
+          128,
+          768
+        ],
+        "esm2_dtiam": [
+          128,
+          1280
+        ]
+      },
+      "status": "MEMBERS_AND_BATCH_PASS"
+    }
+  ],
+  "training_only_auxiliary_check": {
+    "run_id": "E1_A_scaffold_replay_drug_only_binary_default_s101",
+    "exact_rows": 192469,
+    "assay_rows_min5": 149539,
+    "historical_assay_overlap_rows": 119577
+  },
+  "all_data_and_feature_hashes_checked": true,
+  "trainer_invoked": false,
+  "output_contract": "Run registry contains plans, not training outcomes."
+}

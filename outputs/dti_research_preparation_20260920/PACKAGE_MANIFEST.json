@@ -1,0 +1,257 @@
+{
+  "created_utc": "2026-09-20T03:34:33.923088+00:00",
+  "parent_git_commit": "21713e12ebd75c2b2d66990073b195f3fbed6999",
+  "files": {
+    "configs/dti_reliability_20260920/AMENDMENTS.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "configs/dti_reliability_20260920/PREDICTION_ROW.schema.json": {
+      "sha256": "7d1788258271b52f90b7b5d8b87618f97b38c8b42f4afe59b83be4f2f5deea66",
+      "bytes": 1997
+    },
+    "configs/dti_reliability_20260920/PROTOCOL.json": {
+      "sha256": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
+      "bytes": 12740
+    },
+    "configs/dti_reliability_20260920/WETLAB_CONTRACT.json": {
+      "sha256": "a2e3b5c1fabde2584399fc8b503d1d790a6d1225eee824993b2db3b0ff32f1c8",
+      "bytes": 711
+    },
+    "outputs/dti_research_preparation_20260920/ASSET_SUMMARY.json": {
+      "sha256": "51ac7a55295af75a5e82401d9ee125b39293045ec371acedb2b18685b0bc6536",
+      "bytes": 704
+    },
+    "outputs/dti_research_preparation_20260920/AUXILIARY_SUPPORT_COUNTS.csv": {
+      "sha256": "19c28912b77257cfb8194eb0989f9c40e0e4cc09f29b6f5b12ca1aecedb6b2d0",
+      "bytes": 4480
+    },
+    "outputs/dti_research_preparation_20260920/CONTRACT_CHECKS.json": {
+      "sha256": "355e17e203016c0a1db4d7ed01cc07cbe4d61be8ce0b83b89f08222bd1f1db3b",
+      "bytes": 225
+    },
+    "outputs/dti_research_preparation_20260920/DATASET_COUNTS.csv": {
+      "sha256": "825bcbae751cbe96f659eb10cd2a468393a5682d161e0a0196c308e774ad014c",
+      "bytes": 2806
+    },
+    "outputs/dti_research_preparation_20260920/DATA_ACCESS_LOG.csv": {
+      "sha256": "f874d9a2af8833a844695f5a8494c39e0bc88c79746cb1f20b9a399c9bd6953b",
+      "bytes": 518
+    },
+    "outputs/dti_research_preparation_20260920/DATA_CONTRAST_COUNTS.csv": {
+      "sha256": "36f1afffc925d27f738a283db25e947d728027a3892287657395b97633a98db5",
+      "bytes": 223
+    },
+    "outputs/dti_research_preparation_20260920/DATA_MANIFEST.json": {
+      "sha256": "6f7cc1ba52960cd8a5457bfb4c7c5e3167c6ed623749d607a3c86be6711d5c9a",
+      "bytes": 10890
+    },
+    "outputs/dti_research_preparation_20260920/DATA_PREPARATION_SUMMARY.json": {
+      "sha256": "d6f1a2f0dd3e5da4c59f0f22266609febe2f14ffcb89dec1b2e8659253cdad06",
+      "bytes": 2447
+    },
+    "outputs/dti_research_preparation_20260920/ENVIRONMENT.json": {
+      "sha256": "790f27dc2d3b255ff16f249ef9704488ed6a7562766cee0c03b37bd12eb07071",
+      "bytes": 21596
+    },
+    "outputs/dti_research_preparation_20260920/EXISTING_EXPERIMENTS.csv": {
+      "sha256": "eb460790e41f6249aed4ed59a9a2f4f3c62195a299ee54d6d5d18540ada19b4f",
+      "bytes": 43431
+    },
+    "outputs/dti_research_preparation_20260920/EXPERIMENT_MATRIX.csv": {
+      "sha256": "714602dd04476ef8bd2d5215418db6e2308961586058e6167a0aff7627b2d05c",
+      "bytes": 50562
+    },
+    "outputs/dti_research_preparation_20260920/EXTERNAL_PANEL_PLAN.csv": {
+      "sha256": "98d2cacf2b14968b8fff19f78feaed632ced12a65bc929cd4aadbcb97aa6997a",
+      "bytes": 1308
+    },
+    "outputs/dti_research_preparation_20260920/EXTERNAL_SOURCE_FILES.csv": {
+      "sha256": "e655fabaf953471fe760f48c7d4f9012fcae720c89c0b4c3fb28c03f1bcf8e01",
+      "bytes": 6022
+    },
+    "outputs/dti_research_preparation_20260920/FEATURE_REGISTRY.json": {
+      "sha256": "c93f5351e9edb8dd472d33d039747a0f2a4acf3acec7b151c44be97e93461ba4",
+      "bytes": 3068
+    },
+    "outputs/dti_research_preparation_20260920/HOMOLOGY_SEARCH.json": {
+      "sha256": "4b588152d0e944ce0e66c3de38e4345d40fdff159e25fb4d9dbb486bd55e26c2",
+      "bytes": 1003
+    },
+    "outputs/dti_research_preparation_20260920/MISSING_ASSETS.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "outputs/dti_research_preparation_20260920/PREFLIGHT_FULL.json": {
+      "sha256": "f14528fa4943d59621928a3d68118b3d60f6661a046df84969e5317d9ed9bac5",
+      "bytes": 10039
+    },
+    "outputs/dti_research_preparation_20260920/PREPARATION_STATUS.json": {
+      "sha256": "196368aa19423e73bf07233bc31af01ccd645d867672c4e8fc7c212c61d44d54",
+      "bytes": 617
+    },
+    "outputs/dti_research_preparation_20260920/PROTEIN_CLUSTER_COUNTS.csv": {
+      "sha256": "66bc2b2a5f88b3dcbdc3f92d3c4b8e79870b9f67dfa9d66d1e3bddd48ae33004",
+      "bytes": 273152
+    },
+    "outputs/dti_research_preparation_20260920/PUBLIC_MODEL_REGISTRY.csv": {
+      "sha256": "8dcf4119172be4bd6a4cd9e46f249f62d61bc14714690e016a8818780df51a27",
+      "bytes": 4536
+    },
+    "outputs/dti_research_preparation_20260920/PUBLIC_MODEL_REGISTRY.json": {
+      "sha256": "583fcd54226ca1c9baf6cdf421fb288a764244cd052d4303864343f1c3756b01",
+      "bytes": 8115
+    },
+    "outputs/dti_research_preparation_20260920/QUERY_SUPPORT_COUNTS.csv": {
+      "sha256": "d8f3655ca5bc536121f90f63832a9bbfae7930ef0b9325fadf57149d8b3b4265",
+      "bytes": 3901
+    },
+    "outputs/dti_research_preparation_20260920/WEIGHT_FILES.csv": {
+      "sha256": "ac49dfab49cd267d7fd9677909bafdab8a27254d1b3009339d3632710c54ff12",
+      "bytes": 53741
+    },
+    "outputs/dti_research_preparation_20260920/WEIGHT_REGISTRY.csv": {
+      "sha256": "c803066a57f8461c6fc2ccca2f70f406f7d6ea0b43cee0d84a82767add53c008",
+      "bytes": 54625
+    },
+    "outputs/dti_research_preparation_20260920/WETLAB_RESULTS_TEMPLATE.csv": {
+      "sha256": "cb0fc9e36e51f1731ea5c9b6298374a4f9aa3387b62cd00675760281db5f7405",
+      "bytes": 490
+    },
+    "scripts/prepare_dti_reliability_data_20260920.py": {
+      "sha256": "4cecbc0db1ce0a47e849427c8e8e9e709a8bae50e871de13e90ecbee17f64e19",
+      "bytes": 23585
+    },
+    "scripts/collect_dti_research_assets_20260920.py": {
+      "sha256": "48b6d1125b3cbac1d93adce7d3b2d64f77769e01b73a7ace457523798be190fd",
+      "bytes": 15355
+    },
+    "scripts/build_dti_reliability_protocol_20260920.py": {
+      "sha256": "f9ab15694c39145a5de75b9e015b398446b4cf765e7421b2b163d4f23d94d474",
+      "bytes": 20005
+    },
+    "scripts/preflight_dti_reliability_20260920.py": {
+      "sha256": "7558fadee1123ca9b6eac43bf8f98e3650db73fe9430d2bc51adf2bda6e7105d",
+      "bytes": 10526
+    },
+    "scripts/freeze_dti_reliability_preparation_20260920.py": {
+      "sha256": "4ce1f309f249f8e5207aa23e74c27825d7d32ca638acb6000940984248329ac6",
+      "bytes": 5460
+    },
+    "docs/protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md": {
+      "sha256": "7758cf124fa87d83e6c9f69908f109ea611c9f4576b87ed63f47a36aff027254",
+      "bytes": 16362
+    },
+    "docs/BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md": {
+      "sha256": "37db33da37e468850d207afbbcf21dc34202ede7c6e37c7c2b60f6ff00f718e1",
+      "bytes": 10306
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/ConPLex_REPO.json": {
+      "sha256": "464f5c1fb6b4534c65327a3883d549cd693b418ee62c8ca86aa3dc9d4a710001",
+      "bytes": 376
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/ConPLex_TREE.json": {
+      "sha256": "56b8f78ecfff29caa1599a4f1d398f2f9f0a57eb0ae680a2c7aad1d063941997",
+      "bytes": 19654
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DTBIND_ZENODO.json": {
+      "sha256": "1d05b5e273cea4bd7fc970d4c83d7811034f982ecf6861b9f4c423a42ece7633",
+      "bytes": 4013
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DTBind_REPO.json": {
+      "sha256": "400e25665cb2779152f3761e9b5537d44f84bb227fe4740ed3f5b306ef08e6d8",
+      "bytes": 631
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DTBind_TREE.json": {
+      "sha256": "914f20937135b6ad7f958ec8ed836e9c89a6e1cc66c65388e16ad0efa5baebe1",
+      "bytes": 27262
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DTIAM_REPO.json": {
+      "sha256": "a920ed3d597257b9aeea1a4ace5ab35e3541e68114e0ddeeac1b7e200355ea67",
+      "bytes": 402
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DTIAM_TREE.json": {
+      "sha256": "6f61c4ff5c6ebd5c4f557751c918212cacf62ec2aec4c164bcfffaad3d64f17c",
+      "bytes": 21930
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DeepDTA_REPO.json": {
+      "sha256": "e7014ce9c9ab4287d35f89aa6e96ecb9d528aee0eff64ebdf14eebd430b38193",
+      "bytes": 224
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DeepDTA_TREE.json": {
+      "sha256": "c8a06f053ceab22e10362e976370d8966be210f8f348884563c461fa09f929a5",
+      "bytes": 15778
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DrugBAN_REPO.json": {
+      "sha256": "d16a8015ceeb3a01bd75f381122aa87e122f8452186e7b8f880774cc492fdfef",
+      "bytes": 377
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DrugBAN_TREE.json": {
+      "sha256": "53a7f1b1ab69b5d4d752fc33384d38207edc752a097b7a155962fa61bf275df0",
+      "bytes": 15926
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DrugCLIP_REPO.json": {
+      "sha256": "06a6f57a6b1450ae5cab16f8b40002f153223ba48a92ee2e86153d08151ebb5d",
+      "bytes": 361
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/DrugCLIP_TREE.json": {
+      "sha256": "181e79785dc0204f5e4bae817f14940c2a9dc0941f8c713c49b0d9d0f8d507b5",
+      "bytes": 22570
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/EVIDTI_ZENODO.json": {
+      "sha256": "50e5dce9cbcfcbc80068a9f5691ad5c2fe16bca82da1dedfb061a0d144006e9e",
+      "bytes": 7215
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/EviDTI_REPO.json": {
+      "sha256": "302d23156ab3230ec32171ea5405bda55a768cf969ca6d03d986dda62b91a205",
+      "bytes": 381
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/EviDTI_TREE.json": {
+      "sha256": "e897a03477d8e178b20c46dcb7de44021ca15503daa44a295c993e5a64b0db8b",
+      "bytes": 18124
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/NESSO_HF_MODEL.json": {
+      "sha256": "d8e340aaf62caad42bbbb6e5749b772504e8b0b93f435a4557e4d295e7f1098c",
+      "bytes": 1385
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/NESSO_HF_WEIGHTS.json": {
+      "sha256": "faf07091f35873bd4f8430ba0a2b2c357baa9d78db25e24bb73ab700374494cb",
+      "bytes": 518
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/ProbeMatchDTI_REPO.json": {
+      "sha256": "f3c8cfe919ef5b94ced1213851ca95af878050f45abc857bfdaaaf4f0d4d68ea",
+      "bytes": 366
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/ProbeMatchDTI_TREE.json": {
+      "sha256": "2787a6791b46f5b85e7434bcb3c42fbd4e6ef72897738a78b23af7356ab64267",
+      "bytes": 14541
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/ScopeDTI_light_REPO.json": {
+      "sha256": "cb4f4fc21117f3a78f485017911eb92f1719b9f3c5447deeaa219baf3fcc557f",
+      "bytes": 5123
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/ScopeDTI_light_TREE.json": {
+      "sha256": "194559b67adff90f32186a3df1c4f48ba4acd44eff1c18e91d2ba7f364f61311",
+      "bytes": 21262
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/TAPB_REPO.json": {
+      "sha256": "c1aa7de15a1fc58dbcf9291fbbf5b7578fa6c3bd72be7fd1f0347f79a68344a8",
+      "bytes": 371
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/TAPB_TREE.json": {
+      "sha256": "38c51e2507c5fee61c6b016595a746a00d78261f846740c124947966cd581c31",
+      "bytes": 17763
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/nesso_REPO.json": {
+      "sha256": "c0a6c720bbd7db2ab345ad856d1a1a727d11cde38420c288bbda15e8f36ba50d",
+      "bytes": 406
+    },
+    "outputs/dti_research_preparation_20260920/source_metadata/nesso_TREE.json": {
+      "sha256": "18f844c9444a1b5db71ec2c3e78c0df9e0481d40050efddce9b60814384d6604",
+      "bytes": 25564
+    }
+  },
+  "excluded_from_git": "Large local model/data/feature bytes, logs and upstream README copies; retrieve by pinned sources and hashes.",
+  "status": "PREPARATION_FROZEN_NO_NEW_TRAINING",
+  "external_registered": false
+}

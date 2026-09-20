@@ -1,0 +1,15 @@
+{
+  "model": "ConPLex",
+  "repo": "samsledje/ConPLex",
+  "default_branch": "main",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "pushed_at": "2025-05-21T16:22:37Z",
+  "commit": "ccd8c804a76dff41649e58f692293b55c8907129",
+  "weight_candidates": []
+}

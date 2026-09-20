@@ -1,0 +1,22 @@
+{
+  "status": "PREPARATION_COMPLETE_TRAINING_NOT_STARTED",
+  "planned_new_controlled_fits": 87,
+  "planned_by_stage": {
+    "E1": 42,
+    "E2": 21,
+    "E3": 12,
+    "E4": 9,
+    "E5": 3
+  },
+  "registered_existing_fit_directories": 67,
+  "existing_result_rows": 73,
+  "materialized_data_views": 30,
+  "asset_entries": 115,
+  "blockers_for_confirmatory_paper": [
+    "Unseen external panel not yet qualified",
+    "SPR result-access status unknown",
+    "Additional public adapters need parity validation",
+    "Controlled training implementation and runs remain"
+  ],
+  "current_inference_workers_unchanged": true
+}

@@ -1,0 +1,732 @@
+{
+  "commit": "08983e476760fbe5b5dc62be06fd2e087b31ac0c",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "DTBind_predict.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91dcd5c68c5f944c3f94ea300c9fa16158c84dbe",
+      "size": 2575,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/91dcd5c68c5f944c3f94ea300c9fa16158c84dbe"
+    },
+    {
+      "path": "DTBind_train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5d0c90b6b15afe0fcff441f01f5fc045121ee1",
+      "size": 2584,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/4e5d0c90b6b15afe0fcff441f01f5fc045121ee1"
+    },
+    {
+      "path": "Data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "577e82cf4ce2515053c669ad9a633f92b10476e6",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/577e82cf4ce2515053c669ad9a633f92b10476e6"
+    },
+    {
+      "path": "Data/affinity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "416aa73dcedba711179538445cd0427270c94a63",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/416aa73dcedba711179538445cd0427270c94a63"
+    },
+    {
+      "path": "Data/affinity/pdbbind_pocket_seq.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bca3de66b74c36ad9beece254c5ef69a21c3a1ed",
+      "size": 1106856,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/bca3de66b74c36ad9beece254c5ef69a21c3a1ed"
+    },
+    {
+      "path": "Data/affinity/pdbbind_wget_complex.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17cd194aee14cf78f8dd954a622e412eedb94cec",
+      "size": 797163,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/17cd194aee14cf78f8dd954a622e412eedb94cec"
+    },
+    {
+      "path": "Data/affinity/pdbbind_wget_ligand.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9422a39e6d2a4b3321c35e22c9703edea5a477f",
+      "size": 903204,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/f9422a39e6d2a4b3321c35e22c9703edea5a477f"
+    },
+    {
+      "path": "Data/affinity/pocket_residue_chain_info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c48193a266c799dc8a55bf730b464e323d20419a",
+      "size": 64898,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/c48193a266c799dc8a55bf730b464e323d20419a"
+    },
+    {
+      "path": "Data/dti",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9aecc7b471f82f1949520d0b66d4504aecf04b0",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/b9aecc7b471f82f1949520d0b66d4504aecf04b0"
+    },
+    {
+      "path": "Data/dti/biosnap_protein_seq.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3726fff0fe30fd0ba011d898ce1c1a7bed163a4f",
+      "size": 1212790,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/3726fff0fe30fd0ba011d898ce1c1a7bed163a4f"
+    },
+    {
+      "path": "Data/dti/biosnap_uniprotid.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffc475de164aaee92dfe604b18f71ec16aa128b9",
+      "size": 15274,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/ffc475de164aaee92dfe604b18f71ec16aa128b9"
+    },
+    {
+      "path": "Data/dti/drug_smiles.tsv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "838dd506bf14128d18f382b4f91d489f49afb2fa",
+      "size": 312924,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/838dd506bf14128d18f382b4f91d489f49afb2fa"
+    },
+    {
+      "path": "Data/dti/wget_biosnap.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe21fe928223a6bf32e07c60c473884c77e19df8",
+      "size": 130920,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/fe21fe928223a6bf32e07c60c473884c77e19df8"
+    },
+    {
+      "path": "Data/site",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f259afbf46fca5be5735a875c175eb5cdbb061b",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/0f259afbf46fca5be5735a875c175eb5cdbb061b"
+    },
+    {
+      "path": "Data/site/pdbbind_site.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc851a738ebb8d29889ccb4ba02ee0e1d7eb050b",
+      "size": 9045224,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/bc851a738ebb8d29889ccb4ba02ee0e1d7eb050b"
+    },
+    {
+      "path": "IMG",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26802d2606c3ca49a69ea7e689488c189baca064",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/26802d2606c3ca49a69ea7e689488c189baca064"
+    },
+    {
+      "path": "IMG/DTBind_framework.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "defc52bf57a29c1cc9d378ce1d09bc7494d30c42",
+      "size": 438979,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/defc52bf57a29c1cc9d378ce1d09bc7494d30c42"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f63f8044f26645078f1af0aa7a36787e31cfb0dd",
+      "size": 7438,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/f63f8044f26645078f1af0aa7a36787e31cfb0dd"
+    },
+    {
+      "path": "data_process",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a62ef72f27b855e5d16a4b80c893bc4891fd945e",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/a62ef72f27b855e5d16a4b80c893bc4891fd945e"
+    },
+    {
+      "path": "data_process/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d99f1757036eacb2a20497af319f00e37d34a15",
+      "size": 6252,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/6d99f1757036eacb2a20497af319f00e37d34a15"
+    },
+    {
+      "path": "data_process/graph_construction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be1519dea9cec4b4875ec5527f6b38197ef58014",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/be1519dea9cec4b4875ec5527f6b38197ef58014"
+    },
+    {
+      "path": "data_process/graph_construction/construct_graph_hetero.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b3675a5dc8fdd9073f35de8c2fd931349c4a87",
+      "size": 30396,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/c3b3675a5dc8fdd9073f35de8c2fd931349c4a87"
+    },
+    {
+      "path": "data_process/graph_construction/drug_gra.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65c423d64c72acc3206a11cd83aff6ea978377cb",
+      "size": 4863,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/65c423d64c72acc3206a11cd83aff6ea978377cb"
+    },
+    {
+      "path": "data_process/graph_construction/drug_graph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "269b09d90540daf67eedccabbfae4e183a53ece3",
+      "size": 5596,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/269b09d90540daf67eedccabbfae4e183a53ece3"
+    },
+    {
+      "path": "data_process/graph_construction/protein_graph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f849b7bf67560305bf797ec239a0150984ebdc02",
+      "size": 11219,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/f849b7bf67560305bf797ec239a0150984ebdc02"
+    },
+    {
+      "path": "data_process/graph_construction/protein_graph_no_label.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b95889444009404d6c9016a9b5d98fb824ce42b",
+      "size": 9254,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/2b95889444009404d6c9016a9b5d98fb824ce42b"
+    },
+    {
+      "path": "data_process/surface_feature_extraction",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9181018c687b3a08bbcd358b55df2c09c3b1c97f",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/9181018c687b3a08bbcd358b55df2c09c3b1c97f"
+    },
+    {
+      "path": "data_process/surface_feature_extraction/1_extract_msms.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42fc44b7565fe104bb32c41a22bc2e8020b93486",
+      "size": 7926,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/42fc44b7565fe104bb32c41a22bc2e8020b93486"
+    },
+    {
+      "path": "data_process/surface_feature_extraction/2_compute.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bd0883561270d581e04dc290b318f4c18596ff7",
+      "size": 7814,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/2bd0883561270d581e04dc290b318f4c18596ff7"
+    },
+    {
+      "path": "data_process/surface_feature_extraction/3_all_pocket_surface_feature.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8428a310a54b04255abb2a26415afde6d1fe31c3",
+      "size": 13887,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/8428a310a54b04255abb2a26415afde6d1fe31c3"
+    },
+    {
+      "path": "data_process/surface_feature_extraction/3_all_protein_surface_feature.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2a58be7e5ad6f5d6311d682d2d2d5cb892f1d48",
+      "size": 11213,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/c2a58be7e5ad6f5d6311d682d2d2d5cb892f1d48"
+    },
+    {
+      "path": "logs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa29633bcf3a9ce320481f775fe12ef74d270de9",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/fa29633bcf3a9ce320481f775fe12ef74d270de9"
+    },
+    {
+      "path": "logs/affinity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ea307c707c8c2836414ae039267ae16939ab589",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/6ea307c707c8c2836414ae039267ae16939ab589"
+    },
+    {
+      "path": "logs/affinity/sample_results.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "410855bfff2f7bd59be42387f4f758353a01d28a",
+      "size": 342,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/410855bfff2f7bd59be42387f4f758353a01d28a"
+    },
+    {
+      "path": "logs/occurrence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "831b96719132321ded3c87065acc4a211e2c6240",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/831b96719132321ded3c87065acc4a211e2c6240"
+    },
+    {
+      "path": "logs/occurrence/prediction_results_2025-10-07_21-06-21.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "656024a12d7ed0dc33b9b1a6a5c7bbb265b83583",
+      "size": 253,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/656024a12d7ed0dc33b9b1a6a5c7bbb265b83583"
+    },
+    {
+      "path": "logs/occurrence/prediction_results_2025-10-08_10-22-37.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "656024a12d7ed0dc33b9b1a6a5c7bbb265b83583",
+      "size": 253,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/656024a12d7ed0dc33b9b1a6a5c7bbb265b83583"
+    },
+    {
+      "path": "logs/site",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63be9cca608990e3b09dd804ec86ffb8e281db39",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/63be9cca608990e3b09dd804ec86ffb8e281db39"
+    },
+    {
+      "path": "logs/site/sample_predictions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8212e3b1c05aa6620cdb80b0c31fe8f950f88a56",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/8212e3b1c05aa6620cdb80b0c31fe8f950f88a56"
+    },
+    {
+      "path": "logs/site/sample_predictions/1p1n_KAI.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2deceb7dd9ca8dfeff90d97f46a6dd8046154ad7",
+      "size": 7070,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/2deceb7dd9ca8dfeff90d97f46a6dd8046154ad7"
+    },
+    {
+      "path": "logs/site/testing_2025-10-07_21-05-31.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "954ba9fe146c80df219310f86b61ebc0739a40f5",
+      "size": 576,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/954ba9fe146c80df219310f86b61ebc0739a40f5"
+    },
+    {
+      "path": "models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6ea83d7c8960388adeafc34c5f8dcb8ad70f737",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/d6ea83d7c8960388adeafc34c5f8dcb8ad70f737"
+    },
+    {
+      "path": "models/affinity_model.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58b4980c18f700eadcaae33355d685ea52a1b0e9",
+      "size": 10793387,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/58b4980c18f700eadcaae33355d685ea52a1b0e9"
+    },
+    {
+      "path": "models/occurrence_model.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c11507667d21ff60ef2f8da9d976347eb1df821",
+      "size": 4306239,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/4c11507667d21ff60ef2f8da9d976347eb1df821"
+    },
+    {
+      "path": "models/site_model.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c868998cd59044abe30d011f236f171fbd8fa70e",
+      "size": 3622684,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/c868998cd59044abe30d011f236f171fbd8fa70e"
+    },
+    {
+      "path": "sample_test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca2ee786c62832e527a4bf17e98b15e6e0343e92",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/ca2ee786c62832e527a4bf17e98b15e6e0343e92"
+    },
+    {
+      "path": "sample_test/affinity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df45867a1cfc64b7512bcea7ba4317e2a7ac7bbd",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/df45867a1cfc64b7512bcea7ba4317e2a7ac7bbd"
+    },
+    {
+      "path": "sample_test/affinity/3n76.pkl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8757c32b39ac15326d7a89617e954601d014fc8",
+      "size": 798121,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/d8757c32b39ac15326d7a89617e954601d014fc8"
+    },
+    {
+      "path": "sample_test/affinity/3syr.pkl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "739b3b68db6f7b9531a2b5968d09b59ad1dc147c",
+      "size": 762850,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/739b3b68db6f7b9531a2b5968d09b59ad1dc147c"
+    },
+    {
+      "path": "sample_test/affinity/4j3l.pkl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f3b0464e841a53a1472f6bc0ad81ef6647cf8cb",
+      "size": 597340,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/6f3b0464e841a53a1472f6bc0ad81ef6647cf8cb"
+    },
+    {
+      "path": "sample_test/affinity/4mgd.pkl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae03ec194090a26a34ce5a50b978f9b768ce2e14",
+      "size": 607722,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/ae03ec194090a26a34ce5a50b978f9b768ce2e14"
+    },
+    {
+      "path": "sample_test/affinity/5dwr.pkl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92b2d4356beb6e04df04f555900b94fc8bf486b8",
+      "size": 657609,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/92b2d4356beb6e04df04f555900b94fc8bf486b8"
+    },
+    {
+      "path": "sample_test/occurrence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcb9f0af594678772f928cd320ea7565f0007fed",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/dcb9f0af594678772f928cd320ea7565f0007fed"
+    },
+    {
+      "path": "sample_test/occurrence/ligand_graph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "effbcfc09fb9c71501ad34e42ecd6b3d545074f5",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/effbcfc09fb9c71501ad34e42ecd6b3d545074f5"
+    },
+    {
+      "path": "sample_test/occurrence/ligand_graph/DB00321.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99a2e4d601ac882bea0d8e3d13b1ca87e11ec41a",
+      "size": 10083,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/99a2e4d601ac882bea0d8e3d13b1ca87e11ec41a"
+    },
+    {
+      "path": "sample_test/occurrence/ligand_graph/DB00572.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37cb47d5999387014d2c3056a26e6a20613ab533",
+      "size": 10083,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/37cb47d5999387014d2c3056a26e6a20613ab533"
+    },
+    {
+      "path": "sample_test/occurrence/ligand_graph/DB00679.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af759d56d2a6ad87b07b11f652b0b456840d6f48",
+      "size": 11875,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/af759d56d2a6ad87b07b11f652b0b456840d6f48"
+    },
+    {
+      "path": "sample_test/occurrence/ligand_graph/DB00745.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "118469dc65997220d66d1439e06f302f7fbfd6e2",
+      "size": 9251,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/118469dc65997220d66d1439e06f302f7fbfd6e2"
+    },
+    {
+      "path": "sample_test/occurrence/ligand_graph/DB01337.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64e1317ada435d12aab108554e6b886176a97266",
+      "size": 18531,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/64e1317ada435d12aab108554e6b886176a97266"
+    },
+    {
+      "path": "sample_test/occurrence/protein_graph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cbe4eafb4a99145b30d5d7f6b6b10e9962564f0",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/8cbe4eafb4a99145b30d5d7f6b6b10e9962564f0"
+    },
+    {
+      "path": "sample_test/occurrence/protein_graph/P05177.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165e2207496d7ee009fa436d34e5c6b0a2a395c0",
+      "size": 2870233,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/165e2207496d7ee009fa436d34e5c6b0a2a395c0"
+    },
+    {
+      "path": "sample_test/occurrence/protein_graph/P10632.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "293a01a1d6df4d6ef34dc5c04f4a7df80fca99df",
+      "size": 2721049,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/293a01a1d6df4d6ef34dc5c04f4a7df80fca99df"
+    },
+    {
+      "path": "sample_test/occurrence/protein_graph/P20309.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe19c613b6dd23b95a22c3428ec9e0bc028a7eec",
+      "size": 2955289,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/fe19c613b6dd23b95a22c3428ec9e0bc028a7eec"
+    },
+    {
+      "path": "sample_test/occurrence/sample_data.tsv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6878c8e3a9cdd3021b35de681f1c1532508514a0",
+      "size": 104,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/6878c8e3a9cdd3021b35de681f1c1532508514a0"
+    },
+    {
+      "path": "sample_test/site",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8ed7d0aee01833f7ee0b08947ec4a78d6630610",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/d8ed7d0aee01833f7ee0b08947ec4a78d6630610"
+    },
+    {
+      "path": "sample_test/site/ligand_graph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3333b1e0b2cd0f152d07d8a24c793a8ff2a17704",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/3333b1e0b2cd0f152d07d8a24c793a8ff2a17704"
+    },
+    {
+      "path": "sample_test/site/ligand_graph/DM5.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1a3207d344723a39f9f18d5832b5fb73815c3ce",
+      "size": 16399,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/e1a3207d344723a39f9f18d5832b5fb73815c3ce"
+    },
+    {
+      "path": "sample_test/site/ligand_graph/IQB.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d6d47b88cfc22972064b3679feaa0108678430b",
+      "size": 12495,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/0d6d47b88cfc22972064b3679feaa0108678430b"
+    },
+    {
+      "path": "sample_test/site/ligand_graph/KAI.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90391f61c21cf704bbc87549d29468560cba7381",
+      "size": 7439,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/90391f61c21cf704bbc87549d29468560cba7381"
+    },
+    {
+      "path": "sample_test/site/ligand_graph/LWG.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c255bf42a878087fdfd718f712ee749083b513a",
+      "size": 8015,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/7c255bf42a878087fdfd718f712ee749083b513a"
+    },
+    {
+      "path": "sample_test/site/protein_graph",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73d578d3a8ffe5c0dd26891ef2ff32b22e320b48",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/73d578d3a8ffe5c0dd26891ef2ff32b22e320b48"
+    },
+    {
+      "path": "sample_test/site/protein_graph/1p1n.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4b7b64f64cdcd88f0014de6cd0774a0aade69b7",
+      "size": 2891085,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/e4b7b64f64cdcd88f0014de6cd0774a0aade69b7"
+    },
+    {
+      "path": "sample_test/site/protein_graph/1ydt.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "982403c6fe51c9c3058c16bd15e88764a1719bdd",
+      "size": 1954189,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/982403c6fe51c9c3058c16bd15e88764a1719bdd"
+    },
+    {
+      "path": "sample_test/site/protein_graph/3arq.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa0ba0bd3c776a711560edde1f8f91eae947dcf1",
+      "size": 3257741,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/fa0ba0bd3c776a711560edde1f8f91eae947dcf1"
+    },
+    {
+      "path": "sample_test/site/protein_graph/3jya.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaef9f6fd1515630c3d9924df52c205374dc3fcb",
+      "size": 1514765,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/aaef9f6fd1515630c3d9924df52c205374dc3fcb"
+    },
+    {
+      "path": "sample_test/site/sample_id.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3edbce9c02655775690090c8e5bfdb866c87ddcc",
+      "size": 22,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/3edbce9c02655775690090c8e5bfdb866c87ddcc"
+    },
+    {
+      "path": "sample_test/site/sample_map.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77b9c4d399620c3b7981c3b0cdbcafe5f8baac5f",
+      "size": 36,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/77b9c4d399620c3b7981c3b0cdbcafe5f8baac5f"
+    },
+    {
+      "path": "script",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e80650adf7b6ee30ec3ce261259ff63ae86d6d08",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/e80650adf7b6ee30ec3ce261259ff63ae86d6d08"
+    },
+    {
+      "path": "script/affinity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afd70df043625f1871105983336edd0b6a3d87c0",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/afd70df043625f1871105983336edd0b6a3d87c0"
+    },
+    {
+      "path": "script/affinity/aff_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2739c0890ae829be29c97e36adca0956876350",
+      "size": 30157,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/6a2739c0890ae829be29c97e36adca0956876350"
+    },
+    {
+      "path": "script/affinity/aff_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2d1655202aaa992a3aac5ed3cf0de3ed904c7ea",
+      "size": 5102,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/c2d1655202aaa992a3aac5ed3cf0de3ed904c7ea"
+    },
+    {
+      "path": "script/affinity/aff_train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45fb7fd225bfaf63b3f57eb1b5ae83048fdbe4f9",
+      "size": 13196,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/45fb7fd225bfaf63b3f57eb1b5ae83048fdbe4f9"
+    },
+    {
+      "path": "script/affinity/aff_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46ae0957e934c2771ca3851351803e59140a7be9",
+      "size": 10082,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/46ae0957e934c2771ca3851351803e59140a7be9"
+    },
+    {
+      "path": "script/occurrence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4786e9c80d7c2881fa697736e5d0c7a2fbcb5456",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/4786e9c80d7c2881fa697736e5d0c7a2fbcb5456"
+    },
+    {
+      "path": "script/occurrence/dti_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07c107ff209756eddef2c15e3ccc97816ae1cc95",
+      "size": 14115,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/07c107ff209756eddef2c15e3ccc97816ae1cc95"
+    },
+    {
+      "path": "script/occurrence/dti_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0e10710ac9ab34bcdd49ae4a6972666756a2103",
+      "size": 6822,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/b0e10710ac9ab34bcdd49ae4a6972666756a2103"
+    },
+    {
+      "path": "script/occurrence/dti_train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d6617d7afbb35002eb3c6bd025ca49ae4f3fdf",
+      "size": 13714,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/83d6617d7afbb35002eb3c6bd025ca49ae4f3fdf"
+    },
+    {
+      "path": "script/occurrence/dti_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1579f5f2dc760ba1a5ac74b9660cc5af47df079",
+      "size": 6783,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/f1579f5f2dc760ba1a5ac74b9660cc5af47df079"
+    },
+    {
+      "path": "script/site",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a6c7eb930d7e2fd0f410d791c48a7189e8692da8",
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/trees/a6c7eb930d7e2fd0f410d791c48a7189e8692da8"
+    },
+    {
+      "path": "script/site/site_metric.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ae5a0dcc7c5fbf67e3bd9d456e5f988a23f2e40",
+      "size": 5662,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/5ae5a0dcc7c5fbf67e3bd9d456e5f988a23f2e40"
+    },
+    {
+      "path": "script/site/site_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f2d7e3b62cd2ded5ebc8b554310daf6bc5e84d2",
+      "size": 12551,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/9f2d7e3b62cd2ded5ebc8b554310daf6bc5e84d2"
+    },
+    {
+      "path": "script/site/site_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c46b2ca8801dc2d97658a331c9fe2330f0a0c93",
+      "size": 5316,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/4c46b2ca8801dc2d97658a331c9fe2330f0a0c93"
+    },
+    {
+      "path": "script/site/site_train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55a5123785d044b58aac5f701794d6aa4ac7c13f",
+      "size": 13041,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/55a5123785d044b58aac5f701794d6aa4ac7c13f"
+    },
+    {
+      "path": "script/site/site_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8043625f73a2792ee0943eb553391259b475519e",
+      "size": 2617,
+      "url": "https://api.github.com/repos/liqy09/DTBind/git/blobs/8043625f73a2792ee0943eb553391259b475519e"
+    }
+  ]
+}

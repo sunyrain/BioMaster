@@ -1,0 +1,25 @@
+{
+  "model": "DTBind",
+  "repo": "liqy09/DTBind",
+  "default_branch": "main",
+  "license": null,
+  "pushed_at": "2025-10-08T14:02:53Z",
+  "commit": "08983e476760fbe5b5dc62be06fd2e087b31ac0c",
+  "weight_candidates": [
+    {
+      "path": "models/affinity_model.pth",
+      "bytes": 10793387,
+      "blob": "58b4980c18f700eadcaae33355d685ea52a1b0e9"
+    },
+    {
+      "path": "models/occurrence_model.pth",
+      "bytes": 4306239,
+      "blob": "4c11507667d21ff60ef2f8da9d976347eb1df821"
+    },
+    {
+      "path": "models/site_model.pth",
+      "bytes": 3622684,
+      "blob": "c868998cd59044abe30d011f236f171fbd8fa70e"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "COLLECTED_AND_LOCAL_HASH_VERIFIED",
+  "registered_asset_entries": 115,
+  "missing_asset_entries": 0,
+  "public_code_repositories": 11,
+  "verified_file_references": 223,
+  "unique_files": 222,
+  "referenced_GiB": 31.800724079832435,
+  "newly_duplicated_weight_bytes": 0,
+  "storage": "Relative symlinks to existing weights; check hashes before every run.",
+  "public_task_checkpoint_search_gaps": [
+    "TAPB",
+    "DrugBAN",
+    "DeepDTA"
+  ],
+  "source_metadata_utc": "2026-09-20T03:18:16.336503+00:00",
+  "no_models_loaded_for_hash_audit": true,
+  "licensing": "Publicly downloadable weights are not automatically permissively open-source. Code and weight terms are separate fields."
+}

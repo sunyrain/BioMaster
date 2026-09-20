@@ -1,0 +1,596 @@
+{
+  "commit": "61d68b8148a86b2aea657a3e9d707a491de70ad8",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8135c00a8a8d1aa2616cfa9f8cd5e3384afdb3d3",
+      "size": 406,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/8135c00a8a8d1aa2616cfa9f8cd5e3384afdb3d3"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "681a71f1d64ed9cce53597cc948d5a9e78122490",
+      "size": 11344,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/681a71f1d64ed9cce53597cc948d5a9e78122490"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c57503a559324dd67ccd092f9acb8d88ec214b9",
+      "size": 2367,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/6c57503a559324dd67ccd092f9acb8d88ec214b9"
+    },
+    {
+      "path": "code",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8111b7fa96c6559959d71c3045b23193e2335937",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/8111b7fa96c6559959d71c3045b23193e2335937"
+    },
+    {
+      "path": "code/BerMol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cf932036780c6e28c877e4e33a096bed1ae0362",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/8cf932036780c6e28c877e4e33a096bed1ae0362"
+    },
+    {
+      "path": "code/BerMol/bermol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cfdc86b39d38437da331b23676ac0c2a3b7a0789",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/cfdc86b39d38437da331b23676ac0c2a3b7a0789"
+    },
+    {
+      "path": "code/BerMol/bermol/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "020ed73d7a09b032ea1b3291090cbbdeee5a181a",
+      "size": 22,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/020ed73d7a09b032ea1b3291090cbbdeee5a181a"
+    },
+    {
+      "path": "code/BerMol/bermol/dataloading.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f2365ece3309fae418ca96c7cedbab9b49341b4",
+      "size": 4601,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/0f2365ece3309fae418ca96c7cedbab9b49341b4"
+    },
+    {
+      "path": "code/BerMol/bermol/model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "243c657571020316af0b8ac19598f6843732270e",
+      "size": 10685,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/243c657571020316af0b8ac19598f6843732270e"
+    },
+    {
+      "path": "code/BerMol/bermol/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66fd14a5501872c75f4187b98f59f39a8ac7911a",
+      "size": 250,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/66fd14a5501872c75f4187b98f59f39a8ac7911a"
+    },
+    {
+      "path": "code/BerMol/bermol/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b74398dafce918a735f183c25def191d75cb4c34",
+      "size": 887,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/b74398dafce918a735f183c25def191d75cb4c34"
+    },
+    {
+      "path": "code/BerMol/bermol/trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb19c89dab9ec96b0c1b0a5b86962166f0809848",
+      "size": 9860,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/eb19c89dab9ec96b0c1b0a5b86962166f0809848"
+    },
+    {
+      "path": "code/BerMol/bermol/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6717465c5f7238e664132030b5bbca07a037a803",
+      "size": 7445,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/6717465c5f7238e664132030b5bbca07a037a803"
+    },
+    {
+      "path": "code/BerMol/bermol/vocab.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6f55b65a0303a03521ed3a3b07a6936d039011c",
+      "size": 4300,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/f6f55b65a0303a03521ed3a3b07a6936d039011c"
+    },
+    {
+      "path": "code/BerMol/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "538239a1b91e9e7ef12661eebac9d94bf8e18ede",
+      "size": 81,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/538239a1b91e9e7ef12661eebac9d94bf8e18ede"
+    },
+    {
+      "path": "code/BerMol/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02b908754d41866415d497d5a1b50a3176490bbb",
+      "size": 651,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/02b908754d41866415d497d5a1b50a3176490bbb"
+    },
+    {
+      "path": "code/BerMol/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22338b1cf0dba3d19fa1a93ac8161465e0c3d07c",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/22338b1cf0dba3d19fa1a93ac8161465e0c3d07c"
+    },
+    {
+      "path": "code/BerMol/scripts/featurize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4aecf63575991c0768ff9b2252f5108fc7d44f4",
+      "size": 390,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/b4aecf63575991c0768ff9b2252f5108fc7d44f4"
+    },
+    {
+      "path": "code/BerMol/setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c03ba1cfdecf153ac7525a1aceafc5a57da950d",
+      "size": 1420,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/4c03ba1cfdecf153ac7525a1aceafc5a57da950d"
+    },
+    {
+      "path": "code/data_prepare.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bba5e3fa7781d1a440244557f03b8d62da995de",
+      "size": 166,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/1bba5e3fa7781d1a440244557f03b8d62da995de"
+    },
+    {
+      "path": "code/data_process",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "539101980c36adc413091879fc6597fae05cc303",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/539101980c36adc413091879fc6597fae05cc303"
+    },
+    {
+      "path": "code/data_process/data_split_dta.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e489328c23b9fe357bfb8949eaac35d8fdd72fc5",
+      "size": 3772,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/e489328c23b9fe357bfb8949eaac35d8fdd72fc5"
+    },
+    {
+      "path": "code/data_process/data_split_dti.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1ee7e74a002255393dcdfe26230823e07ba0d24",
+      "size": 3271,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/a1ee7e74a002255393dcdfe26230823e07ba0d24"
+    },
+    {
+      "path": "code/data_process/data_split_moa.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78e6ead458593ab7ca1304a5f90701c777ebc8b5",
+      "size": 3363,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/78e6ead458593ab7ca1304a5f90701c777ebc8b5"
+    },
+    {
+      "path": "code/data_process/extract_feature.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a021af31dea79940fc48b69a4e2656c2e5aa77f2",
+      "size": 5421,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/a021af31dea79940fc48b69a4e2656c2e5aa77f2"
+    },
+    {
+      "path": "code/test.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10630d2157f4e0c11cd914ee3644135e5c25788e",
+      "size": 178,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/10630d2157f4e0c11cd914ee3644135e5c25788e"
+    },
+    {
+      "path": "code/training_validation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab82df0e0eba6b3c17725ccf1a934bb74baa4bba",
+      "size": 3591,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/ab82df0e0eba6b3c17725ccf1a934bb74baa4bba"
+    },
+    {
+      "path": "code/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4ff4610635ebf3c0088311cf5d67e223ef35492",
+      "size": 2583,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/c4ff4610635ebf3c0088311cf5d67e223ef35492"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a826aca69ae4270fd34db63a47e824399f5feba1",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/a826aca69ae4270fd34db63a47e824399f5feba1"
+    },
+    {
+      "path": "data/docking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff412cdda10e3f55406cbe1196ed5799a19a03b8",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/ff412cdda10e3f55406cbe1196ed5799a19a03b8"
+    },
+    {
+      "path": "data/docking/cdk6",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0da8a22aa72bf21c94a07745a4ed2f17d319a169",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/0da8a22aa72bf21c94a07745a4ed2f17d319a169"
+    },
+    {
+      "path": "data/docking/cdk6/5l2i_Palbociclib.pdb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba46fde6f8f05a78b12ed8fac0c254a87911a32d",
+      "size": 213921,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/ba46fde6f8f05a78b12ed8fac0c254a87911a32d"
+    },
+    {
+      "path": "data/docking/cdk6/Axitinib_out.pdbqt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a01c72f055db0d47cfb36250870abddf3ddf776d",
+      "size": 64211,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/a01c72f055db0d47cfb36250870abddf3ddf776d"
+    },
+    {
+      "path": "data/docking/cdk6/Canertinib_dihydrochloride_out.pdbqt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09e064ab3c18c8b10324759d1a14c8ced2d67c47",
+      "size": 77711,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/09e064ab3c18c8b10324759d1a14c8ced2d67c47"
+    },
+    {
+      "path": "data/docking/cdk6/Doramapimod_out.pdbqt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09b895cc65cf996d694e94575fe1f9882750add9",
+      "size": 89551,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/09b895cc65cf996d694e94575fe1f9882750add9"
+    },
+    {
+      "path": "data/docking/cdk6/Granisetron_out.pdbqt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65d465112fb82870176eb1105ae09ea7fc990e30",
+      "size": 43086,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/65d465112fb82870176eb1105ae09ea7fc990e30"
+    },
+    {
+      "path": "data/docking/cdk6/Mubritinib_out.pdbqt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ebab3c53d7a77d2b4aa9b51189563085c63a8ba",
+      "size": 79531,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/1ebab3c53d7a77d2b4aa9b51189563085c63a8ba"
+    },
+    {
+      "path": "data/dta",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64fe101aa9ad02165c5eb5545f89cee6841c34fc",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/64fe101aa9ad02165c5eb5545f89cee6841c34fc"
+    },
+    {
+      "path": "data/dta/davis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47f14df3bebd27ef6fed26a055d55f982240a84c",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/47f14df3bebd27ef6fed26a055d55f982240a84c"
+    },
+    {
+      "path": "data/dta/davis/Y",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c51994801a96c9e808bd897cd93849e6876de0",
+      "size": 240605,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/54c51994801a96c9e808bd897cd93849e6876de0"
+    },
+    {
+      "path": "data/dta/davis/ligands_can.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d252572cc00a6d249edbe5f5175605adc5c6fed",
+      "size": 5306,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/5d252572cc00a6d249edbe5f5175605adc5c6fed"
+    },
+    {
+      "path": "data/dta/davis/proteins.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89dea0221c693005aba2f01d18e530542f2a96c7",
+      "size": 355211,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/89dea0221c693005aba2f01d18e530542f2a96c7"
+    },
+    {
+      "path": "data/dta/kiba",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac6f9937cd40f16c54e5d38c3e2e84d870b2ab68",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/ac6f9937cd40f16c54e5d38c3e2e84d870b2ab68"
+    },
+    {
+      "path": "data/dta/kiba/Y",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c942af67be84496bf225c119fcc4981c1f4a6915",
+      "size": 3867510,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/c942af67be84496bf225c119fcc4981c1f4a6915"
+    },
+    {
+      "path": "data/dta/kiba/ligands_can.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a88e2ef7f983cf1cda54d43cfc04de8135f118c",
+      "size": 165908,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/9a88e2ef7f983cf1cda54d43cfc04de8135f118c"
+    },
+    {
+      "path": "data/dta/kiba/proteins.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd19a19f106ea2c30a20dfdbe8db369c82c3d27b",
+      "size": 170137,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/bd19a19f106ea2c30a20dfdbe8db369c82c3d27b"
+    },
+    {
+      "path": "data/dti",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ed183dca6c6215ddf730ddce7420036acadd0e1",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/3ed183dca6c6215ddf730ddce7420036acadd0e1"
+    },
+    {
+      "path": "data/dti/hetionet",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71aa71a91c4eb1fab56b44621030018efa331b5f",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/71aa71a91c4eb1fab56b44621030018efa331b5f"
+    },
+    {
+      "path": "data/dti/hetionet/drug_smiles.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75462f308f4375613e1155ee35f166c2b0716e75",
+      "size": 112895,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/75462f308f4375613e1155ee35f166c2b0716e75"
+    },
+    {
+      "path": "data/dti/hetionet/dti.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d16c2f40de0d3c7bc9b756511138185df6de9f0",
+      "size": 2162524,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/7d16c2f40de0d3c7bc9b756511138185df6de9f0"
+    },
+    {
+      "path": "data/dti/hetionet/fp.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a83ec71a860d6ae7f60025fef391001a7037b71c",
+      "size": 36864000,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/a83ec71a860d6ae7f60025fef391001a7037b71c"
+    },
+    {
+      "path": "data/dti/hetionet/kg.csv.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d668e236d942eea24aa5925e2ebcdbea04cfa99f",
+      "size": 14081137,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/d668e236d942eea24aa5925e2ebcdbea04cfa99f"
+    },
+    {
+      "path": "data/dti/hetionet/pro_ctd.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1d0f2b199a026fae53678932e73e685fda52f3",
+      "size": 69586125,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/5e1d0f2b199a026fae53678932e73e685fda52f3"
+    },
+    {
+      "path": "data/dti/hetionet/protein_seq.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e1facede57c1aec768de471080cf9eb16d3dbbc",
+      "size": 11238384,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/8e1facede57c1aec768de471080cf9eb16d3dbbc"
+    },
+    {
+      "path": "data/dti/yamanishi_08",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "947cc2de18dc82e60dba2f1516cdd7f304240a5a",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/947cc2de18dc82e60dba2f1516cdd7f304240a5a"
+    },
+    {
+      "path": "data/dti/yamanishi_08/drug_smiles.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "254144519149f3edc52ee51bebfcbb4338699796",
+      "size": 50148,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/254144519149f3edc52ee51bebfcbb4338699796"
+    },
+    {
+      "path": "data/dti/yamanishi_08/dti.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3597580e616f31f10f4b2927aa31a2ee356c0b",
+      "size": 143470,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/ec3597580e616f31f10f4b2927aa31a2ee356c0b"
+    },
+    {
+      "path": "data/dti/yamanishi_08/fp.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a83ec71a860d6ae7f60025fef391001a7037b71c",
+      "size": 36864000,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/a83ec71a860d6ae7f60025fef391001a7037b71c"
+    },
+    {
+      "path": "data/dti/yamanishi_08/kg.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f98c59435d3ccb8c6bfabda09cec604cc8ae450",
+      "size": 3127873,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/3f98c59435d3ccb8c6bfabda09cec604cc8ae450"
+    },
+    {
+      "path": "data/dti/yamanishi_08/pro_ctd.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1d0f2b199a026fae53678932e73e685fda52f3",
+      "size": 69586125,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/5e1d0f2b199a026fae53678932e73e685fda52f3"
+    },
+    {
+      "path": "data/dti/yamanishi_08/protein_seq.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e54b2fdcc986bba162b8510f70deb7161cde7d92",
+      "size": 628803,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/e54b2fdcc986bba162b8510f70deb7161cde7d92"
+    },
+    {
+      "path": "data/moa",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2daf72a7b50e7fe9faff0ee9701dc76b28c0e8f7",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/2daf72a7b50e7fe9faff0ee9701dc76b28c0e8f7"
+    },
+    {
+      "path": "data/moa/activation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0deaf8675ca05264e1ee34a46d913d074dc1a830",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/0deaf8675ca05264e1ee34a46d913d074dc1a830"
+    },
+    {
+      "path": "data/moa/activation/drug_smi.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6490be92ce886a36aee7d8aa38332817cbf8266",
+      "size": 99978,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/e6490be92ce886a36aee7d8aa38332817cbf8266"
+    },
+    {
+      "path": "data/moa/activation/dti.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46fd3650bf46693a26d6fa32a198f70fe866a108",
+      "size": 26798,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/46fd3650bf46693a26d6fa32a198f70fe866a108"
+    },
+    {
+      "path": "data/moa/activation/tar_gene.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef1cb77680b49593aab9e91c2b3961cdd66c964a",
+      "size": 3643,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/ef1cb77680b49593aab9e91c2b3961cdd66c964a"
+    },
+    {
+      "path": "data/moa/activation/tar_seq.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bdc4800e8982903c0a451ad5bf3237c98b94ad6",
+      "size": 155950,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/8bdc4800e8982903c0a451ad5bf3237c98b94ad6"
+    },
+    {
+      "path": "data/moa/inhibition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c2d0110b18d15aec12f7a1f72bd31c51deb0f03",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/1c2d0110b18d15aec12f7a1f72bd31c51deb0f03"
+    },
+    {
+      "path": "data/moa/inhibition/drug_smi.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09f9d62d3ce0abf836da7ad85587537a9e37a1c2",
+      "size": 927758,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/09f9d62d3ce0abf836da7ad85587537a9e37a1c2"
+    },
+    {
+      "path": "data/moa/inhibition/dti.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f67da4ac8c1b4f4aad9c4f962f5b21f3832c9fc",
+      "size": 294787,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/0f67da4ac8c1b4f4aad9c4f962f5b21f3832c9fc"
+    },
+    {
+      "path": "data/moa/inhibition/tar_gene.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdaf93cb7e8a6b5cc8939f7810fc1714fb901be9",
+      "size": 13915,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/cdaf93cb7e8a6b5cc8939f7810fc1714fb901be9"
+    },
+    {
+      "path": "data/moa/inhibition/tar_seq.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b9c7f3cc0edd1a06b092ea9910a361ee2672565",
+      "size": 719650,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/5b9c7f3cc0edd1a06b092ea9910a361ee2672565"
+    },
+    {
+      "path": "img",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08719b95a5d901f91c176baf4611ef9fc3308b8d",
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/08719b95a5d901f91c176baf4611ef9fc3308b8d"
+    },
+    {
+      "path": "img/flowchart.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "393ce7821b2266527aed9d62640c6b3dbd689e71",
+      "size": 211230,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/393ce7821b2266527aed9d62640c6b3dbd689e71"
+    },
+    {
+      "path": "img/flowchart.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7227c2553776d05e1e387c51dcbe0a639c68ef5",
+      "size": 80131,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/d7227c2553776d05e1e387c51dcbe0a639c68ef5"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60a80006688b52215970646402bc86dafb431478",
+      "size": 207,
+      "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/blobs/60a80006688b52215970646402bc86dafb431478"
+    }
+  ]
+}

@@ -1,0 +1,596 @@
+{
+  "commit": "9d0db73915219763b5bcc3b7de86d7c4edb5ed03",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "654c3968378d2bd0c58d6558be1560eb6a14a6c4",
+      "size": 66,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/654c3968378d2bd0c58d6558be1560eb6a14a6c4"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2832dd28d6a281beaf9ce07872c5f0351de21ba",
+      "size": 1495,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/d2832dd28d6a281beaf9ce07872c5f0351de21ba"
+    },
+    {
+      "path": "MODEL_WEIGHTS_LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2fd597ccaf3022be48f97ba915bec9178a83d2",
+      "size": 2388,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/6a2fd597ccaf3022be48f97ba915bec9178a83d2"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb39ce720af2979ace1ef59e61aee0d42c9ddfb6",
+      "size": 3362,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/eb39ce720af2979ace1ef59e61aee0d42c9ddfb6"
+    },
+    {
+      "path": "dict",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1dde81132a3c30e0f5ab0358e6b3ebf615931e7b",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/1dde81132a3c30e0f5ab0358e6b3ebf615931e7b"
+    },
+    {
+      "path": "dict/dict_mol.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4130c254b4da592338b43298b49120a561dfae60",
+      "size": 91,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/4130c254b4da592338b43298b49120a561dfae60"
+    },
+    {
+      "path": "dict/dict_pkt.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80a86ba2af965d082878bbf96fd035eea2f9e746",
+      "size": 33,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/80a86ba2af965d082878bbf96fd035eea2f9e746"
+    },
+    {
+      "path": "docker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3df130e30480f0eacee81cdf70a60a46f051f5f0",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/3df130e30480f0eacee81cdf70a60a46f051f5f0"
+    },
+    {
+      "path": "docker/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b43f4fb8fd13bfe69a3773b129fdb18ec65a9a29",
+      "size": 6677,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/b43f4fb8fd13bfe69a3773b129fdb18ec65a9a29"
+    },
+    {
+      "path": "docker/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "090bfe2265b9016ec467ca07207bbe75c5d3cfd7",
+      "size": 2184,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/090bfe2265b9016ec467ca07207bbe75c5d3cfd7"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63d5e21fc3430c65e6d37633e9f4bf9ab9f2fb14",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/63d5e21fc3430c65e6d37633e9f4bf9ab9f2fb14"
+    },
+    {
+      "path": "docs/LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78246e3188a14db9910c34357cc80ab0ac750759",
+      "size": 2592,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/78246e3188a14db9910c34357cc80ab0ac750759"
+    },
+    {
+      "path": "docs/MODEL_WEIGHTS_LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "004a54e620e7ce23fa72ec64e5a17f0df39cd3ab",
+      "size": 2661,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/004a54e620e7ce23fa72ec64e5a17f0df39cd3ab"
+    },
+    {
+      "path": "drugclip.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "15323dd8d9d8102e103a905d6428ba3be9a9ab2d",
+      "size": 2129,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/15323dd8d9d8102e103a905d6428ba3be9a9ab2d"
+    },
+    {
+      "path": "encode_mols.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92e94ed7a92e05dca9272339351e0a73fb8decf2",
+      "size": 697,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/92e94ed7a92e05dca9272339351e0a73fb8decf2"
+    },
+    {
+      "path": "encode_pocket.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ea31f7ae9d0050c036288e13f6cf0238787080a",
+      "size": 487,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/6ea31f7ae9d0050c036288e13f6cf0238787080a"
+    },
+    {
+      "path": "framework.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3447cebe21ffc5401707baa83c4556e3243c63c2",
+      "size": 98505,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/3447cebe21ffc5401707baa83c4556e3243c63c2"
+    },
+    {
+      "path": "retrieval.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5c65fd242f773e3c8e9fcbb0e633cfd74bd9b29",
+      "size": 984,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/e5c65fd242f773e3c8e9fcbb0e633cfd74bd9b29"
+    },
+    {
+      "path": "test.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ab39a74881892156da384fa07d82cb04b4c75a7",
+      "size": 679,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/4ab39a74881892156da384fa07d82cb04b4c75a7"
+    },
+    {
+      "path": "unimol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa105adf1753030409df4368080715501d647482",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/fa105adf1753030409df4368080715501d647482"
+    },
+    {
+      "path": "unimol/LICENSE",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1781bf281af9c1bef9beeb0a0c12072f741b3381",
+      "size": 1070,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/1781bf281af9c1bef9beeb0a0c12072f741b3381"
+    },
+    {
+      "path": "unimol/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cfc743d2a73aa528942d619a7fc8f863856cc500",
+      "size": 117,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/cfc743d2a73aa528942d619a7fc8f863856cc500"
+    },
+    {
+      "path": "unimol/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b109fb7e20ec13bb73630fe2c711135d3e96e5c",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/1b109fb7e20ec13bb73630fe2c711135d3e96e5c"
+    },
+    {
+      "path": "unimol/data/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ad97962a30b18764042a80a5bd6d4e40564ffd1d",
+      "size": 1829,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/ad97962a30b18764042a80a5bd6d4e40564ffd1d"
+    },
+    {
+      "path": "unimol/data/add_2d_conformer_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "af9e1e5f09099662fa6dc49b93a8dd35f8cb7737",
+      "size": 1526,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/af9e1e5f09099662fa6dc49b93a8dd35f8cb7737"
+    },
+    {
+      "path": "unimol/data/affinity_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5366c2d19dc21799f1bc1009dc2ef1a7effea334",
+      "size": 18056,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/5366c2d19dc21799f1bc1009dc2ef1a7effea334"
+    },
+    {
+      "path": "unimol/data/atom_type_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ee3c5d86a5a5b3fb945836f2aeedad4f89502a96",
+      "size": 1094,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/ee3c5d86a5a5b3fb945836f2aeedad4f89502a96"
+    },
+    {
+      "path": "unimol/data/conformer_sample_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a21b37082a8895e879357e9d4a572f8659b32072",
+      "size": 11530,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/a21b37082a8895e879357e9d4a572f8659b32072"
+    },
+    {
+      "path": "unimol/data/coord_pad_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d3b2a793004c4597df868df15dfcc1c06ed0acae",
+      "size": 2621,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/d3b2a793004c4597df868df15dfcc1c06ed0acae"
+    },
+    {
+      "path": "unimol/data/cropping_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "933a475c68bac527637226651f160349a549fe35",
+      "size": 9522,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/933a475c68bac527637226651f160349a549fe35"
+    },
+    {
+      "path": "unimol/data/data_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "53111b654c91785e5fa1e6e682f8020aef0aed5c",
+      "size": 631,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/53111b654c91785e5fa1e6e682f8020aef0aed5c"
+    },
+    {
+      "path": "unimol/data/dictionary.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ab39a6b44a3064a3c9be79fa314b4d1f48572214",
+      "size": 4886,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/ab39a6b44a3064a3c9be79fa314b4d1f48572214"
+    },
+    {
+      "path": "unimol/data/distance_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6a521614512f6892e5886a206a92b7059eb16598",
+      "size": 2322,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/6a521614512f6892e5886a206a92b7059eb16598"
+    },
+    {
+      "path": "unimol/data/from_str_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bc72deb41a7dbeb52ea6e47f18fa35d305f12da5",
+      "size": 459,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/bc72deb41a7dbeb52ea6e47f18fa35d305f12da5"
+    },
+    {
+      "path": "unimol/data/key_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2a0bd381b46a8e54bbce084d63b5be174f7a930c",
+      "size": 910,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/2a0bd381b46a8e54bbce084d63b5be174f7a930c"
+    },
+    {
+      "path": "unimol/data/lmdb_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "68a4ddcf5def48cd1bbe0aa2fc3b57b4ff0b51ec",
+      "size": 11387,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/68a4ddcf5def48cd1bbe0aa2fc3b57b4ff0b51ec"
+    },
+    {
+      "path": "unimol/data/mask_points_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c2399a80f5b54f9bc5bb939a264335c60e7c2694",
+      "size": 9941,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/c2399a80f5b54f9bc5bb939a264335c60e7c2694"
+    },
+    {
+      "path": "unimol/data/normalize_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "836f77daf53ea8e061f61d67dfabae2ecda02165",
+      "size": 2454,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/836f77daf53ea8e061f61d67dfabae2ecda02165"
+    },
+    {
+      "path": "unimol/data/plasma_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8ddd836d9218d5a6f8b358fe3afdcfc9d746d70",
+      "size": 6047,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/c8ddd836d9218d5a6f8b358fe3afdcfc9d746d70"
+    },
+    {
+      "path": "unimol/data/pocket2mol_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "850b0f491fea6ff2a402c1ca8e45b133a71a5cb5",
+      "size": 18464,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/850b0f491fea6ff2a402c1ca8e45b133a71a5cb5"
+    },
+    {
+      "path": "unimol/data/prepend_and_append_2d_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0fda0688ba7e623790ff4db0eed7726bd8e2d6f0",
+      "size": 746,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/0fda0688ba7e623790ff4db0eed7726bd8e2d6f0"
+    },
+    {
+      "path": "unimol/data/remove_hydrogen_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d0d95626cb9c15a4c79eb6467d0fb704b8835569",
+      "size": 4668,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/d0d95626cb9c15a4c79eb6467d0fb704b8835569"
+    },
+    {
+      "path": "unimol/data/resampling_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036a50bdad36d6fe5db8197fbf0209d8173727d2",
+      "size": 3490,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/036a50bdad36d6fe5db8197fbf0209d8173727d2"
+    },
+    {
+      "path": "unimol/data/tta_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "38cf19800807037bbcfeae7acb538348bc605d21",
+      "size": 5064,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/38cf19800807037bbcfeae7acb538348bc605d21"
+    },
+    {
+      "path": "unimol/data/vae_binding_dataset.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cc056e0db6779074a7fee2d1ffefe619ee008ca1",
+      "size": 5608,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/cc056e0db6779074a7fee2d1ffefe619ee008ca1"
+    },
+    {
+      "path": "unimol/encode_mols.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "186e86f8c5209b7c7252c3b72abb92ebf586bae8",
+      "size": 2598,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/186e86f8c5209b7c7252c3b72abb92ebf586bae8"
+    },
+    {
+      "path": "unimol/encode_pockets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0f3e500baefea9182435512683fe80f38c2062a",
+      "size": 6534,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/e0f3e500baefea9182435512683fe80f38c2062a"
+    },
+    {
+      "path": "unimol/encode_pockets_new.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81f94a2423b386b803446ab91bf7ad250586a2c2",
+      "size": 6478,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/81f94a2423b386b803446ab91bf7ad250586a2c2"
+    },
+    {
+      "path": "unimol/losses",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2ccfb8e71c95d79ed04d69eb9ce474881012287",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/c2ccfb8e71c95d79ed04d69eb9ce474881012287"
+    },
+    {
+      "path": "unimol/losses/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dcf6c62a83aedf027719b8930ca2cacff858f802",
+      "size": 273,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/dcf6c62a83aedf027719b8930ca2cacff858f802"
+    },
+    {
+      "path": "unimol/losses/cross_entropy.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "67d32b6bae3517d799cf1dcbe521fd84bdd9515e",
+      "size": 37016,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/67d32b6bae3517d799cf1dcbe521fd84bdd9515e"
+    },
+    {
+      "path": "unimol/losses/unimol.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "717adafba5019d7df5c79872d9634737835f1456",
+      "size": 8326,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/717adafba5019d7df5c79872d9634737835f1456"
+    },
+    {
+      "path": "unimol/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea7be5e08034c52faedc1f5434c50975bf61126e",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/ea7be5e08034c52faedc1f5434c50975bf61126e"
+    },
+    {
+      "path": "unimol/models/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b1d01721e1eaef65079adbf65aa5d8f4d4084cd9",
+      "size": 145,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/b1d01721e1eaef65079adbf65aa5d8f4d4084cd9"
+    },
+    {
+      "path": "unimol/models/drugclip.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b56b3770e36177e2214dd5ee481909318cfab322",
+      "size": 10648,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/b56b3770e36177e2214dd5ee481909318cfab322"
+    },
+    {
+      "path": "unimol/models/transformer_encoder_with_pair.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "78f3852a068085941a3429fbe5d050a9dde5716c",
+      "size": 5129,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/78f3852a068085941a3429fbe5d050a9dde5716c"
+    },
+    {
+      "path": "unimol/models/unimol.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "658c6ec2c21a3cabbe6d5c3ecf0a89845fd14ea5",
+      "size": 15625,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/658c6ec2c21a3cabbe6d5c3ecf0a89845fd14ea5"
+    },
+    {
+      "path": "unimol/retrieval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a8622a87e1e265df1dda40b3d12e295301e357a",
+      "size": 2861,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/9a8622a87e1e265df1dda40b3d12e295301e357a"
+    },
+    {
+      "path": "unimol/tasks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "669abe8dee68e95d246b031dc85ed19839c6bb58",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/669abe8dee68e95d246b031dc85ed19839c6bb58"
+    },
+    {
+      "path": "unimol/tasks/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "646cddbea500fc206c103455a419886dcbc50014",
+      "size": 272,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/646cddbea500fc206c103455a419886dcbc50014"
+    },
+    {
+      "path": "unimol/tasks/drugclip.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c54f2a0661f818227baa3b46366fb20dafd6ce92",
+      "size": 72065,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/c54f2a0661f818227baa3b46366fb20dafd6ce92"
+    },
+    {
+      "path": "unimol/tasks/unimol.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f6b5242078ac29abd01d7858c90d67577ce6116a",
+      "size": 8422,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/f6b5242078ac29abd01d7858c90d67577ce6116a"
+    },
+    {
+      "path": "unimol/test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7b81b5e03bc2cb49e6ad63f251d1551fa2397057",
+      "size": 2103,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/7b81b5e03bc2cb49e6ad63f251d1551fa2397057"
+    },
+    {
+      "path": "unimol/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbcbc5340d83d7f2eb1845c498c218874190c155",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/dbcbc5340d83d7f2eb1845c498c218874190c155"
+    },
+    {
+      "path": "unimol/utils/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "unimol/utils/conf_gen_cal_metrics.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c56348ecd6f06c932020a9f06a0a6cd44910a440",
+      "size": 13424,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/c56348ecd6f06c932020a9f06a0a6cd44910a440"
+    },
+    {
+      "path": "unimol/utils/coordinate_model.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a0c7726930208d0661238b73f2393fd36d1fe670",
+      "size": 6568,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/a0c7726930208d0661238b73f2393fd36d1fe670"
+    },
+    {
+      "path": "unimol/utils/decode_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "066c44fe32286a3356ae4eebdcd1a23bc177e7c9",
+      "size": 2817,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/066c44fe32286a3356ae4eebdcd1a23bc177e7c9"
+    },
+    {
+      "path": "unimol/utils/docking.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a645591ebaf8741a3c61edf21505316268c64eb5",
+      "size": 4124,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/a645591ebaf8741a3c61edf21505316268c64eb5"
+    },
+    {
+      "path": "unimol/utils/docking_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "69c3c112033e191a868cafc507ab9b4144416acb",
+      "size": 7342,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/69c3c112033e191a868cafc507ab9b4144416acb"
+    },
+    {
+      "path": "unimol/utils/geom.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e24a6b4b552ca93a9082ffd1a520f580faf826e7",
+      "size": 2020,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/e24a6b4b552ca93a9082ffd1a520f580faf826e7"
+    },
+    {
+      "path": "utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d9893076ce274e3c2d7d4632ca0d71e3ea459cd",
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/trees/0d9893076ce274e3c2d7d4632ca0d71e3ea459cd"
+    },
+    {
+      "path": "utils/retrieve_chunk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2462ff58134d88652de90938380125bc139e15",
+      "size": 2582,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/ad2462ff58134d88652de90938380125bc139e15"
+    },
+    {
+      "path": "utils/screening_chunk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91235ddff401f28131e36a03a15cc890d451d524",
+      "size": 4734,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/91235ddff401f28131e36a03a15cc890d451d524"
+    },
+    {
+      "path": "utils/screening_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b267c196919ba19ea0f7bb77e532d53e13995d55",
+      "size": 2730,
+      "url": "https://api.github.com/repos/THU-ATOM/Drug-The-Whole-Genome/git/blobs/b267c196919ba19ea0f7bb77e532d53e13995d55"
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+{
+  "commit": "6c72f66720d9d3447fd73c515cda963e39128b1f",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea1e48dc43b481d8ffe4277643a8b2cdb1595d12",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/ea1e48dc43b481d8ffe4277643a8b2cdb1595d12"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1a65cb29c5d7bcf3c795d61ac8236cc9fe09a59",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/d1a65cb29c5d7bcf3c795d61ac8236cc9fe09a59"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbabfd967b759b7616f99402c72d9148d5db43b7",
+      "size": 2192,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/bbabfd967b759b7616f99402c72d9148d5db43b7"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6065e486ce74ee245b9e5b2f8f4a743259c7ae3f",
+      "size": 448,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/6065e486ce74ee245b9e5b2f8f4a743259c7ae3f"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d14b33c69c2a9325559bc71dc9ef63ad21ec55b",
+      "size": 279,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/9d14b33c69c2a9325559bc71dc9ef63ad21ec55b"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e68e6c5456b87bde3994fda5cb558fea6bde960",
+      "size": 5628,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/8e68e6c5456b87bde3994fda5cb558fea6bde960"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5500103c4bfb4c3b85b453daf31d4c86c342e6d3",
+      "size": 11355,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/5500103c4bfb4c3b85b453daf31d4c86c342e6d3"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4144ab6c5ff27ce8efd824edc0b59bcb2cf7ad5",
+      "size": 4629,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/c4144ab6c5ff27ce8efd824edc0b59bcb2cf7ad5"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35027aea430418c1fee4dbf31ad34cbb7217339a",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/35027aea430418c1fee4dbf31ad34cbb7217339a"
+    },
+    {
+      "path": "assets/imgs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c73ac7d9845b5cf810604df643a35a688678ecab",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/c73ac7d9845b5cf810604df643a35a688678ecab"
+    },
+    {
+      "path": "assets/imgs/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f02056346663905bd6c2eda8989cb1489ee2ca83",
+      "size": 2176550,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/f02056346663905bd6c2eda8989cb1489ee2ca83"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4cf717c68d500430ff7fa8e1332f409440d006f5",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/4cf717c68d500430ff7fa8e1332f409440d006f5"
+    },
+    {
+      "path": "docs/model_card.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c74cda2e2ce8529e85006546755c6a4daadc58",
+      "size": 1604,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/99c74cda2e2ce8529e85006546755c6a4daadc58"
+    },
+    {
+      "path": "docs/prediction.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ef352ba4f03fc6d97810b465ca5c86603aa66d3",
+      "size": 10068,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/8ef352ba4f03fc6d97810b465ca5c86603aa66d3"
+    },
+    {
+      "path": "hub",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5fdbd200fbbf96d9001a0e92b93aa757b461c278",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/5fdbd200fbbf96d9001a0e92b93aa757b461c278"
+    },
+    {
+      "path": "hub/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7cd4edc8be4dc636752c5c0a5de4e7ccb932d77",
+      "size": 225,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/c7cd4edc8be4dc636752c5c0a5de4e7ccb932d77"
+    },
+    {
+      "path": "licenses",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fbbd46089c948346bbb360ee6cfef3bff4f9e49",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/9fbbd46089c948346bbb360ee6cfef3bff4f9e49"
+    },
+    {
+      "path": "licenses/THIRD_PARTY_NOTICES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48024579d403dbc551f1de737c5846db6a1482ea",
+      "size": 1273,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/48024579d403dbc551f1de737c5846db6a1482ea"
+    },
+    {
+      "path": "licenses/alphafold3-pytorch.LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d99e42273f76b14e0cdc6bdd66ac3803f9c58dc",
+      "size": 1065,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/9d99e42273f76b14e0cdc6bdd66ac3803f9c58dc"
+    },
+    {
+      "path": "licenses/boltz.LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2421734a4097eb219ff8053ff80a089ae8da70b6",
+      "size": 1101,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/2421734a4097eb219ff8053ff80a089ae8da70b6"
+    },
+    {
+      "path": "licenses/cuequivariance.LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0c19733006685b4c59ac02aadc6ffe99ef9d85b",
+      "size": 11362,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/f0c19733006685b4c59ac02aadc6ffe99ef9d85b"
+    },
+    {
+      "path": "licenses/openfold.LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9153803f7ac370e4dbb89a180d286e215aed27a",
+      "size": 11352,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/c9153803f7ac370e4dbb89a180d286e215aed27a"
+    },
+    {
+      "path": "licenses/pytorch3d.LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa9f39c53b2935e5d6eaf6a8fff44fd264a4d20",
+      "size": 1533,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/ffa9f39c53b2935e5d6eaf6a8fff44fd264a4d20"
+    },
+    {
+      "path": "nesso",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52715098cb6a68f059e7fd73724b39b943cd41e2",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/52715098cb6a68f059e7fd73724b39b943cd41e2"
+    },
+    {
+      "path": "nesso/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d17f1e1b2f9d49697331c5a9f93048a764886de",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/4d17f1e1b2f9d49697331c5a9f93048a764886de"
+    },
+    {
+      "path": "nesso/data/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/data/const.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86c36416891f657e4d47916a3e4e543736f56d45",
+      "size": 6545,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/86c36416891f657e4d47916a3e4e543736f56d45"
+    },
+    {
+      "path": "nesso/data/crop.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f34b8fad156440bb17253cb38848e8ac73a705",
+      "size": 6170,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/56f34b8fad156440bb17253cb38848e8ac73a705"
+    },
+    {
+      "path": "nesso/data/esm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5760aa5a1530bb08098a3d01421d43660d782e",
+      "size": 1386,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/9c5760aa5a1530bb08098a3d01421d43660d782e"
+    },
+    {
+      "path": "nesso/data/featurizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3948b44ffbeafcee0778025c1e747d3344ec8da",
+      "size": 22969,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/c3948b44ffbeafcee0778025c1e747d3344ec8da"
+    },
+    {
+      "path": "nesso/data/inference.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a5e2ab8dcc51aaf102017702db3383c552e3c16",
+      "size": 10542,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/4a5e2ab8dcc51aaf102017702db3383c552e3c16"
+    },
+    {
+      "path": "nesso/data/io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51cae75f8bfc532549996a752cc03ede36fc3061",
+      "size": 709,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/51cae75f8bfc532549996a752cc03ede36fc3061"
+    },
+    {
+      "path": "nesso/data/pad.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce1a168781fa14ffe61424ef447c99a9220c91af",
+      "size": 2489,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/ce1a168781fa14ffe61424ef447c99a9220c91af"
+    },
+    {
+      "path": "nesso/data/tokenize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d1832b9565c2547214fc9b9196538f04f9684f1",
+      "size": 9805,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/3d1832b9565c2547214fc9b9196538f04f9684f1"
+    },
+    {
+      "path": "nesso/data/types.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4795ac10283a4e71df3e8cb997389950930967d6",
+      "size": 10246,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/4795ac10283a4e71df3e8cb997389950930967d6"
+    },
+    {
+      "path": "nesso/data/writer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6883ae283110d0b23aee63b8a9f995f69153db2",
+      "size": 3592,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/d6883ae283110d0b23aee63b8a9f995f69153db2"
+    },
+    {
+      "path": "nesso/data/yaml_input.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de9fe512ac545d117065399944b6c609e9457e9c",
+      "size": 22659,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/de9fe512ac545d117065399944b6c609e9457e9c"
+    },
+    {
+      "path": "nesso/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c29a46ec0a75a67a26e7a462a483ee2bd8b70f6f",
+      "size": 20839,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/c29a46ec0a75a67a26e7a462a483ee2bd8b70f6f"
+    },
+    {
+      "path": "nesso/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50ec381c4859e846af927b561f1306b1f7e2591f",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/50ec381c4859e846af927b561f1306b1f7e2591f"
+    },
+    {
+      "path": "nesso/model/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/model/inference",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a718d83c75c367ad1922e00bdf6113816f6a54e",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/8a718d83c75c367ad1922e00bdf6113816f6a54e"
+    },
+    {
+      "path": "nesso/model/inference/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/model/inference/distogram.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bdde27c604d7f299b77af8b6a77c2c2f6d8a1f5",
+      "size": 3564,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/0bdde27c604d7f299b77af8b6a77c2c2f6d8a1f5"
+    },
+    {
+      "path": "nesso/model/layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "04608963220182361f9d03abc398b5bf1ac466a3",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/04608963220182361f9d03abc398b5bf1ac466a3"
+    },
+    {
+      "path": "nesso/model/layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/model/layers/attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77f72b04a08cfeac17dc0c20a2fe67ff6c16489",
+      "size": 3341,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/b77f72b04a08cfeac17dc0c20a2fe67ff6c16489"
+    },
+    {
+      "path": "nesso/model/layers/dropout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f417c8633377a3cf9c2f1e653a3e1916d8abeb17",
+      "size": 723,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/f417c8633377a3cf9c2f1e653a3e1916d8abeb17"
+    },
+    {
+      "path": "nesso/model/layers/initialize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e12f7921edce3b5dc8c280c1c1262abe1250b8b4",
+      "size": 2308,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e12f7921edce3b5dc8c280c1c1262abe1250b8b4"
+    },
+    {
+      "path": "nesso/model/layers/pairformer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7932c62bee03c451328a55a80466510ecf9b542f",
+      "size": 4524,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/7932c62bee03c451328a55a80466510ecf9b542f"
+    },
+    {
+      "path": "nesso/model/layers/transition.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e62aa08c325d6fd1d9bd5e022c06ab4e64f9ddb7",
+      "size": 2390,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e62aa08c325d6fd1d9bd5e022c06ab4e64f9ddb7"
+    },
+    {
+      "path": "nesso/model/layers/triangular_attention",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "90376c2051175b75a25480d2c1b31bb18db46d6a",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/90376c2051175b75a25480d2c1b31bb18db46d6a"
+    },
+    {
+      "path": "nesso/model/layers/triangular_attention/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/model/layers/triangular_attention/attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347c4ee09a9ba6108debdf8c5a8986a92d540dad",
+      "size": 4977,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/347c4ee09a9ba6108debdf8c5a8986a92d540dad"
+    },
+    {
+      "path": "nesso/model/layers/triangular_attention/primitives.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "698268d25c4dd2c9f2bba7187bc96f202898f825",
+      "size": 10886,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/698268d25c4dd2c9f2bba7187bc96f202898f825"
+    },
+    {
+      "path": "nesso/model/layers/triangular_attention/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d24763d77742d838740a605e6efa742c57440ce0",
+      "size": 11948,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/d24763d77742d838740a605e6efa742c57440ce0"
+    },
+    {
+      "path": "nesso/model/layers/triangular_mult.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1618f51e396c9611db090d42a634bb1e55db35a5",
+      "size": 6254,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/1618f51e396c9611db090d42a634bb1e55db35a5"
+    },
+    {
+      "path": "nesso/model/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01e1919e8b19793b738d60f124a37fe18018a749",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/01e1919e8b19793b738d60f124a37fe18018a749"
+    },
+    {
+      "path": "nesso/model/models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/model/models/nesso1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c52a4419adc3d1e1cf7a2e5c6bd425eee64fe4ff",
+      "size": 21418,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/c52a4419adc3d1e1cf7a2e5c6bd425eee64fe4ff"
+    },
+    {
+      "path": "nesso/model/modules",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b8cdd566164728f5aeca3482833a76ca9de8729",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/2b8cdd566164728f5aeca3482833a76ca9de8729"
+    },
+    {
+      "path": "nesso/model/modules/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "nesso/model/modules/affinity.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04baa4b91de29d72488d6059ea903f5efff98943",
+      "size": 5467,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/04baa4b91de29d72488d6059ea903f5efff98943"
+    },
+    {
+      "path": "nesso/model/modules/encoders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58e94b754c4f264d96b255b1319b87f9ea96a424",
+      "size": 13899,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/58e94b754c4f264d96b255b1319b87f9ea96a424"
+    },
+    {
+      "path": "nesso/model/modules/esm_module.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "469f4a9d6938307e06e23a79a1e4963ba2763677",
+      "size": 2282,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/469f4a9d6938307e06e23a79a1e4963ba2763677"
+    },
+    {
+      "path": "nesso/model/modules/transformers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "838d953088f8f7012e601653c2326c4c6425ecb6",
+      "size": 7202,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/838d953088f8f7012e601653c2326c4c6425ecb6"
+    },
+    {
+      "path": "nesso/model/modules/trunk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed04880d0e0992a040ef3c72638b88fd462604e",
+      "size": 3888,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/3ed04880d0e0992a040ef3c72638b88fd462604e"
+    },
+    {
+      "path": "nesso/model/modules/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a9db9ab072142f7df252384551d52e6b6870102",
+      "size": 5148,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/5a9db9ab072142f7df252384551d52e6b6870102"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9fb85b9c36b79a9f6a9ebf9acd16bd3aabab493",
+      "size": 1197,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/b9fb85b9c36b79a9f6a9ebf9acd16bd3aabab493"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4aed5e1fa3bad6112f28682d99c9cc0bd470d60c",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/4aed5e1fa3bad6112f28682d99c9cc0bd470d60c"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c3a982f3237f63c229ec15323e0c66cb7f1065c",
+      "size": 2769,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/5c3a982f3237f63c229ec15323e0c66cb7f1065c"
+    },
+    {
+      "path": "tests/test_cli_failures.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfd54e9914655d0f2d85c29ec6ec1c8fb1aac643",
+      "size": 4270,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/cfd54e9914655d0f2d85c29ec6ec1c8fb1aac643"
+    },
+    {
+      "path": "tests/test_crop.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5642e99388b203f842c87c4fe100d28fb3ee1c20",
+      "size": 1694,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/5642e99388b203f842c87c4fe100d28fb3ee1c20"
+    },
+    {
+      "path": "tests/test_extract_features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6c8a0a6483e2ff45ac30f60248aa4801d1832a1",
+      "size": 1384,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/b6c8a0a6483e2ff45ac30f60248aa4801d1832a1"
+    },
+    {
+      "path": "tests/test_forward.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b621856d0151684a9ff0d7864f6b85cd6a8c46b",
+      "size": 2920,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/5b621856d0151684a9ff0d7864f6b85cd6a8c46b"
+    },
+    {
+      "path": "tests/test_inference_features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5438dc95b4e349584a32cf9ad77901a0b89d5619",
+      "size": 3720,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/5438dc95b4e349584a32cf9ad77901a0b89d5619"
+    },
+    {
+      "path": "tests/test_io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "087a79dfb66ce312589d99ead2ce5d05b7e618c1",
+      "size": 785,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/087a79dfb66ce312589d99ead2ce5d05b7e618c1"
+    },
+    {
+      "path": "tests/test_pad.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d1fc47e93bf84ec85f6f3df801e40c4ff53a7f9",
+      "size": 1109,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/2d1fc47e93bf84ec85f6f3df801e40c4ff53a7f9"
+    },
+    {
+      "path": "tests/test_yaml_input.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2de33df98e38e39ae9b98e931100c01fee7ac228",
+      "size": 4355,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/2de33df98e38e39ae9b98e931100c01fee7ac228"
+    },
+    {
+      "path": "tutorial",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b45ba666aad48a079477631537e8834caf93a240",
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/trees/b45ba666aad48a079477631537e8834caf93a240"
+    },
+    {
+      "path": "tutorial/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccaaf2cf1a5a15143c241f4ed7ae413f22e64854",
+      "size": 1192,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/ccaaf2cf1a5a15143c241f4ed7ae413f22e64854"
+    },
+    {
+      "path": "tutorial/ccd.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "091d4b36049737acad3c9d55a1051df86c9ce79d",
+      "size": 518,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/091d4b36049737acad3c9d55a1051df86c9ce79d"
+    },
+    {
+      "path": "tutorial/example.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b1de4aec5102e9a791d7fdde52f2621d06d071b",
+      "size": 547,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/6b1de4aec5102e9a791d7fdde52f2621d06d071b"
+    },
+    {
+      "path": "tutorial/extract_features.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6c39247db3f73d64a836be7e777f7733798c8d5",
+      "size": 2628,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/d6c39247db3f73d64a836be7e777f7733798c8d5"
+    },
+    {
+      "path": "tutorial/multi_ligand.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bd812bbac2b099e9b4d9e4e91fcc79c30089654",
+      "size": 591,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/3bd812bbac2b099e9b4d9e4e91fcc79c30089654"
+    },
+    {
+      "path": "tutorial/sdf.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6517844a602e48518ada6804bb2dbf7ac423baa9",
+      "size": 536,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/6517844a602e48518ada6804bb2dbf7ac423baa9"
+    },
+    {
+      "path": "tutorial/smiles.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b1de4aec5102e9a791d7fdde52f2621d06d071b",
+      "size": 547,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/6b1de4aec5102e9a791d7fdde52f2621d06d071b"
+    },
+    {
+      "path": "tutorial/tyrosine.sdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4644cd21ccba4b3fea90300a0e636c80e1651afd",
+      "size": 2069,
+      "url": "https://api.github.com/repos/recursionpharma/nesso/git/blobs/4644cd21ccba4b3fea90300a0e636c80e1651afd"
+    }
+  ]
+}

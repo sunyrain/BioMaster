@@ -1,0 +1,20 @@
+[
+  {
+    "type": "file",
+    "oid": "bba17f20b1c75b8ac60ec697d7063defedd1780a",
+    "size": 1732,
+    "path": "v1.0.0/hparams.json"
+  },
+  {
+    "type": "file",
+    "oid": "6cdbc17ac3a83600e9469c287c96f878d595bbd3",
+    "size": 165426752,
+    "lfs": {
+      "oid": "9928a8a824d147d665e76656804af1cd91c86731516d0b561f9fd1c91ee45622",
+      "size": 165426752,
+      "pointerSize": 134
+    },
+    "xetHash": "824b66dadac9085d0ccc0d8288fdab8ddf7c82229b0b680f78599c8db95ce7c8",
+    "path": "v1.0.0/model.safetensors"
+  }
+]

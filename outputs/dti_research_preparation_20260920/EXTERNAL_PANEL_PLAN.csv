@@ -1,0 +1,6 @@
+source,priority,local_glob,endpoint,role,remaining
+CACHE3,1,data/external/affinity_refresh_20260910/CACHE_*CACHE3*.xlsx,"SPR binding, censored/failed fits separate",Same-target measured ordering and artifact sensitivity,"Construct/identity mapping, author QC, repeated-measure aggregation, training overlap; few targets"
+OpenBind,1,data/external/affinity_refresh_20260910/OpenBind_*.csv,"GCI Kd, author accepted subset",External assay/source and viral-target distribution shift,Viral construct differs from human training; native model applicability and exposure audit
+CACHE1,2,data/external/affinity_refresh_20260910/CACHE_all*.xlsx,Dose fit plus single-concentration and counter-screen,Assay validity and experimental selection utility,Separate response from quantitative affinity; assay/construct and selectivity audit
+BindingDB_202609,2,data/external/affinity_refresh_20260910/BindingDB_*,Kd/Ki/IC50/EC50 separate,Training and source-purged retrospective test panels,Already used in training; release month is not first-experiment date; curate dense measured panels
+HiQBind/Supercharge/RAF_MEK,3,See existing affinity import manifest,Reused structure labels / apparent Kd / response,Structural or assay-context sensitivity only,Not automatically independent new labels or interchangeable pure-protein Kd

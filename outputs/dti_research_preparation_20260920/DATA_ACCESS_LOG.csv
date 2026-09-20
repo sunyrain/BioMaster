@@ -1,0 +1,6 @@
+dataset,status,allowed_use
+Historical endpoint/scaffold tests,VIEWED_REPEATEDLY,Exploration and fresh-fit retrospective comparison
+Existing 378-pair / 141-pair panels,VIEWED_REPEATEDLY,Exploratory diagnostics only
+New cold/source/time members,RETROSPECTIVE_REPARTITION,Fresh supervised fits; public pretraining overlap unknown
+SPR384,UNKNOWN_PENDING_USER,Preserve all measurements; no claim of unblinded independence
+New external measured panel,NOT_YET_QUALIFIED,"Needs provenance, coverage, label and exposure audit"

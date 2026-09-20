@@ -1,0 +1,32 @@
+{
+  "command": [
+    "mmseqs",
+    "easy-search",
+    "/root/autodl-tmp/BioMaster/data/research/dti_reliability_20260920_v1/TARGETS.fasta",
+    "/root/autodl-tmp/BioMaster/data/research/dti_reliability_20260920_v1/TARGETS.fasta",
+    "/root/autodl-tmp/BioMaster/data/research/dti_reliability_20260920_v1/PROTEIN_HOMOLOGY_HITS.tsv",
+    "/root/autodl-tmp/BioMaster/data/research/dti_reliability_20260920_v1/mmseqs_tmp",
+    "--threads",
+    "4",
+    "--min-seq-id",
+    "0.3",
+    "-c",
+    "0.8",
+    "--cov-mode",
+    "0",
+    "-s",
+    "7.5",
+    "--max-seqs",
+    "10000",
+    "-e",
+    "0.001",
+    "--format-output",
+    "query,target,pident,qcov,tcov,evalue",
+    "--remove-tmp-files",
+    "1"
+  ],
+  "fasta_sha256": "2e280e86ef5210fd3ee637a9d833fe01a470cc9e8a17d6ea75b48a9becd28096",
+  "hits_sha256": "47be63dc314c8060ef88659c44b83821195004d1b15f4c1fe992bc81c602afe4",
+  "target_registry_sha256": "c29d500904f24e8dac4398037a39de301dc4b18cd938cc40cc260577f5d00233",
+  "version": "13-45111+ds-2"
+}

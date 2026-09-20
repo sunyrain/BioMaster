@@ -1,0 +1,15 @@
+{
+  "model": "TAPB",
+  "repo": "GaomingL1n/TAPB",
+  "default_branch": "main",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "pushed_at": "2025-10-14T14:04:31Z",
+  "commit": "ac846b1463ecf4a031b84bd6caacb57b25d50d4f",
+  "weight_candidates": []
+}

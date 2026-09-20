@@ -1,0 +1,15 @@
+{
+  "model": "EviDTI",
+  "repo": "zhaoyanpeng208/EviDTI",
+  "default_branch": "main",
+  "license": null,
+  "pushed_at": "2025-06-29T07:38:02Z",
+  "commit": "8734bd7278edb2453c76d3072f292fa19f152802",
+  "weight_candidates": [
+    {
+      "path": "models/bert_weights_encoderMedium_10.h5",
+      "bytes": 12795552,
+      "blob": "00d224ff0bfd781ac036a7979965c3d7a069e053"
+    }
+  ]
+}

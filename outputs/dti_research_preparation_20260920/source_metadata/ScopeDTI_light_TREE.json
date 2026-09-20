@@ -1,0 +1,494 @@
+{
+  "commit": "af8a55345f9e6b2bb325c959cd6b43a5413ca652",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bc5b3cbd141c37f5994f2ef1ad9acf9ab10c51d",
+      "size": 3838,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/9bc5b3cbd141c37f5994f2ef1ad9acf9ab10c51d"
+    },
+    {
+      "path": "__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bab0f9ac17abd8728db5a0359e0ea7b567f8c28b",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/bab0f9ac17abd8728db5a0359e0ea7b567f8c28b"
+    },
+    {
+      "path": "__pycache__/ban.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9970bec7a678d0f0ce42adb571d089fe48b9b79a",
+      "size": 3174,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/9970bec7a678d0f0ce42adb571d089fe48b9b79a"
+    },
+    {
+      "path": "__pycache__/compound_sdf_generator.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07cf29a804f9abd0a9ba81a4a7b0b940050dd0c8",
+      "size": 3619,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/07cf29a804f9abd0a9ba81a4a7b0b940050dd0c8"
+    },
+    {
+      "path": "__pycache__/configs.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b0651374192d0b548996be8a6d0a1e6f428dbb3",
+      "size": 1031,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/5b0651374192d0b548996be8a6d0a1e6f428dbb3"
+    },
+    {
+      "path": "__pycache__/dataloader_new.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae6f04b6c91f2604347a5d26ee6bbc6992a0d8e2",
+      "size": 1246,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/ae6f04b6c91f2604347a5d26ee6bbc6992a0d8e2"
+    },
+    {
+      "path": "__pycache__/gvp.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18183087e4b43baae12ba40707a34d14c259742a",
+      "size": 14181,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/18183087e4b43baae12ba40707a34d14c259742a"
+    },
+    {
+      "path": "__pycache__/models.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ea244230b59d29b97d9514f7387fb62cfa8f45f",
+      "size": 6099,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/6ea244230b59d29b97d9514f7387fb62cfa8f45f"
+    },
+    {
+      "path": "__pycache__/models_lw.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6313dfd810e30a20a3b5a3cd906019a8a71a59df",
+      "size": 6083,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/6313dfd810e30a20a3b5a3cd906019a8a71a59df"
+    },
+    {
+      "path": "__pycache__/models_new.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a15ce08076bc3db6fa7f7ec3732445c24b2fc10",
+      "size": 6128,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/0a15ce08076bc3db6fa7f7ec3732445c24b2fc10"
+    },
+    {
+      "path": "__pycache__/mol_graph.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9934989e7d2902fe7b96b5b3e1c14f05e902d63e",
+      "size": 3945,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/9934989e7d2902fe7b96b5b3e1c14f05e902d63e"
+    },
+    {
+      "path": "__pycache__/predict_file_generator.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "950fe7bd922367432b2a31fc4d40335c82618bc5",
+      "size": 2089,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/950fe7bd922367432b2a31fc4d40335c82618bc5"
+    },
+    {
+      "path": "__pycache__/predictor.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aae8f452f8a949e9cfb5414178f21986fbde8719",
+      "size": 1870,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/aae8f452f8a949e9cfb5414178f21986fbde8719"
+    },
+    {
+      "path": "__pycache__/test_network.cpython-39-pytest-7.2.0.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "698b4acb60d96bb375c626cc3eb3ce5ac903e0c4",
+      "size": 2095,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/698b4acb60d96bb375c626cc3eb3ce5ac903e0c4"
+    },
+    {
+      "path": "__pycache__/utils.cpython-39.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e25d1e1b952cf9cd4d0453127ad710cfbb38e794",
+      "size": 7028,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/e25d1e1b952cf9cd4d0453127ad710cfbb38e794"
+    },
+    {
+      "path": "ban.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f85531f58a7a1790f79609fbda80b0dd87a4426",
+      "size": 3432,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/6f85531f58a7a1790f79609fbda80b0dd87a4426"
+    },
+    {
+      "path": "configs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067cc892e36c040420a7e9b0b392a181328d1e6e",
+      "size": 874,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/067cc892e36c040420a7e9b0b392a181328d1e6e"
+    },
+    {
+      "path": "dataloader_new.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df8c786114f91460de759860ed3f58dd44d8c690",
+      "size": 838,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/df8c786114f91460de759860ed3f58dd44d8c690"
+    },
+    {
+      "path": "gvp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7142042e36d22fb0214b060be80da8852aebfb5b",
+      "size": 14902,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/7142042e36d22fb0214b060be80da8852aebfb5b"
+    },
+    {
+      "path": "inference_new.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3194aa4465c96d4328feb77e1505fd394b6d2f95",
+      "size": 10293,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/3194aa4465c96d4328feb77e1505fd394b6d2f95"
+    },
+    {
+      "path": "models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fa90c2d6c83d2b652c3915d3f2e603e6fbfb55b",
+      "size": 6504,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/0fa90c2d6c83d2b652c3915d3f2e603e6fbfb55b"
+    },
+    {
+      "path": "models_path",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7dd09aa11299088048662de03f9d6d08eec6708b",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/7dd09aa11299088048662de03f9d6d08eec6708b"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08f9a5025e2a8be29f4bed581dc710138ed2d909",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/08f9a5025e2a8be29f4bed581dc710138ed2d909"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_80_20241006_131415.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3894d8a37417ab864884e0ca48ed5b94f416f06f",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/3894d8a37417ab864884e0ca48ed5b94f416f06f"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_81_20241006_130750.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e91c750457ac097b94dc13817dc2927f3411167",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/8e91c750457ac097b94dc13817dc2927f3411167"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_82_20241006_132201.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a11d5a836a50333c6c4c34791dc85a32f51625a9",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/a11d5a836a50333c6c4c34791dc85a32f51625a9"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_88_20241006_130303.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e2d8c07e4241f06f728b4cee34bb9671a8ed2d6",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/8e2d8c07e4241f06f728b4cee34bb9671a8ed2d6"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_89_20241006_132052.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47525b01363681586b410904f0d92a1e19119fca",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/47525b01363681586b410904f0d92a1e19119fca"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08e76aa59829dd089422bdab8db353e7f6be6fee",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/08e76aa59829dd089422bdab8db353e7f6be6fee"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_86_20241006_132201.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5d4748c928a3758642c8d7f6e3368f6a36bb363",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/b5d4748c928a3758642c8d7f6e3368f6a36bb363"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_87_20241006_130303.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cabaee38f922cd5bb2060ae8c847b74d375c11df",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/cabaee38f922cd5bb2060ae8c847b74d375c11df"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_87_20241006_130750.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c43f9cf26e8738db260ca386a0edaede7d5587f",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/2c43f9cf26e8738db260ca386a0edaede7d5587f"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_88_20241006_132052.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "948084db3bcaee215edcefc2217d2af0c0fe1733",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/948084db3bcaee215edcefc2217d2af0c0fe1733"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_89_20241006_131415.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1283ad73f799e510fe0a7d6102061a0e9b7b01f",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/c1283ad73f799e510fe0a7d6102061a0e9b7b01f"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24b83538d4952710c0a8683b028de1fb2bc545f9",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/24b83538d4952710c0a8683b028de1fb2bc545f9"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_49_20241006_132052.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6798d3ebdcb24b74fe697e0134760f1411892ccc",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/6798d3ebdcb24b74fe697e0134760f1411892ccc"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_55_20241006_130303.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd9618746b7e2750f9176056da1406b50c6c4510",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/dd9618746b7e2750f9176056da1406b50c6c4510"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_71_20241006_132201.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "758d454a88f8801a46079aa3601cc9cd3721ebc7",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/758d454a88f8801a46079aa3601cc9cd3721ebc7"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_79_20241006_131415.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a50976f7dad864b3e24da265f62a80e4a62453c5",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/a50976f7dad864b3e24da265f62a80e4a62453c5"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_86_20241006_130750.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce5acdff24274217eb0b0dc97d978f384632fbc",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/7ce5acdff24274217eb0b0dc97d978f384632fbc"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9362dd3c878b222de7b9c3b1a9a422d7926b1187",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/9362dd3c878b222de7b9c3b1a9a422d7926b1187"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_79_20241006_131415.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dab02f70f26fa983f06fe7818fb3c61d3d4749c",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/3dab02f70f26fa983f06fe7818fb3c61d3d4749c"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_81_20241006_132052.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b1fc790a9e740dab23696c0e5aeed0833fa1b91",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/1b1fc790a9e740dab23696c0e5aeed0833fa1b91"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_82_20241006_130303.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "079354a1d0cb935d4eb6ede4de086a63e70ea6db",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/079354a1d0cb935d4eb6ede4de086a63e70ea6db"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_84_20241006_130750.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c72494730251ce6adfcb895956b7c6fead3b75e",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/3c72494730251ce6adfcb895956b7c6fead3b75e"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_90_20241006_132201.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ae6c1733657e819c5e839c907ae34e12ab864b",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/57ae6c1733657e819c5e839c907ae34e12ab864b"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "542b61f098732d5d36a43add658c71c7114bbdf7",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/542b61f098732d5d36a43add658c71c7114bbdf7"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_65.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3580d931591f372db31619e4fabcbe01e8d0454f",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/3580d931591f372db31619e4fabcbe01e8d0454f"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_72.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dfcec065dc2ebc313fe918017481d135ff7fb28",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/2dfcec065dc2ebc313fe918017481d135ff7fb28"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_86.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "492ea36db9c211600a8aca2d2ab2b9a31afe56d4",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/492ea36db9c211600a8aca2d2ab2b9a31afe56d4"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_87.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ae526843b2e3333acb92f09d444a4430d0ba71c",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/1ae526843b2e3333acb92f09d444a4430d0ba71c"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_95.pth",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0056e4a060cde8b30a982c61699d7bff4bfff7a",
+      "size": 9020433,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/d0056e4a060cde8b30a982c61699d7bff4bfff7a"
+    },
+    {
+      "path": "mol_graph.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8766aa10b3d53dbec1ff24848a586b0a5b50ea6d",
+      "size": 4372,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/8766aa10b3d53dbec1ff24848a586b0a5b50ea6d"
+    },
+    {
+      "path": "predictor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1ffcff06ce747368cbae124049bdbcb6c05871b",
+      "size": 2231,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/e1ffcff06ce747368cbae124049bdbcb6c05871b"
+    },
+    {
+      "path": "protein_targets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7adac9ad31789b920b1e1718976aa40a3f62f086",
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/trees/7adac9ad31789b920b1e1718976aa40a3f62f086"
+    },
+    {
+      "path": "protein_targets/GPCR_predict.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d06719752dd321ecf60c07e9b9884a4c04b7ecf4",
+      "size": 121153,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/d06719752dd321ecf60c07e9b9884a4c04b7ecf4"
+    },
+    {
+      "path": "protein_targets/IC_predict.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c2c519394ef0a8ef45dbc205f343fff62fdeedd",
+      "size": 179973,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/0c2c519394ef0a8ef45dbc205f343fff62fdeedd"
+    },
+    {
+      "path": "protein_targets/Kinase_predict.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1043abffca7f9f01ec9fca75b7312a6188fddf01",
+      "size": 381714,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/1043abffca7f9f01ec9fca75b7312a6188fddf01"
+    },
+    {
+      "path": "protein_targets/NHR_predict.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4829cb521bb7f9a0d0a7177f861d4e05eb956e88",
+      "size": 21756,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/4829cb521bb7f9a0d0a7177f861d4e05eb956e88"
+    },
+    {
+      "path": "protein_targets/Total_predict.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf90ff7e27195ba67ef41218518bb7f33edd9ebe",
+      "size": 2888099,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/cf90ff7e27195ba67ef41218518bb7f33edd9ebe"
+    },
+    {
+      "path": "utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2af5527aac82164ecfba4ae80196aef911d6a1c3",
+      "size": 9820,
+      "url": "https://api.github.com/repos/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference/git/blobs/2af5527aac82164ecfba4ae80196aef911d6a1c3"
+    }
+  ]
+}

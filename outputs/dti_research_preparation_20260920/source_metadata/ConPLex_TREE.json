@@ -1,0 +1,544 @@
+{
+  "commit": "ccd8c804a76dff41649e58f692293b55c8907129",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".editorconfig",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f578f157bd16ba08eb2361b68b7764ccfdde654",
+      "size": 424,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/7f578f157bd16ba08eb2361b68b7764ccfdde654"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "909037988aa43b9b689c71332ece50b72ecec921",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/909037988aa43b9b689c71332ece50b72ecec921"
+    },
+    {
+      "path": ".github/.stale.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc90e5a1c3aad4818a813606b52fdecd2fdf6782",
+      "size": 684,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/dc90e5a1c3aad4818a813606b52fdecd2fdf6782"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c31480f1dc22166d300242209b0ae18ac3b872a",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/7c31480f1dc22166d300242209b0ae18ac3b872a"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdd7677911670b9aaf903e35074441a007392911",
+      "size": 744,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/bdd7677911670b9aaf903e35074441a007392911"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f2da5489e290e6e55426eaeac2234c61f21f638",
+      "size": 156,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/8f2da5489e290e6e55426eaeac2234c61f21f638"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c387120fb0d7f5af81c9f008310d9b9101aa0c03",
+      "size": 524,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/c387120fb0d7f5af81c9f008310d9b9101aa0c03"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/question.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "217de8970232c8c964fd12c2c864848becff10a4",
+      "size": 504,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/217de8970232c8c964fd12c2c864848becff10a4"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0f24f872c47b9c318398321e720af1b1655312a",
+      "size": 1198,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/b0f24f872c47b9c318398321e720af1b1655312a"
+    },
+    {
+      "path": ".github/release-drafter.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ce0984f5b69d655f3ea4b362d3db2e061e659af",
+      "size": 791,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/0ce0984f5b69d655f3ea4b362d3db2e061e659af"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1081c6bde84ce93abaf83370b7d49ccba980ada8",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/1081c6bde84ce93abaf83370b7d49ccba980ada8"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f92ce43a37b06b819e8fc6a4d1ab6ec780068ccc",
+      "size": 916,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/f92ce43a37b06b819e8fc6a4d1ab6ec780068ccc"
+    },
+    {
+      "path": ".github/workflows/release-drafter.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c557e7a632ea3cb3c5b50494756b7b14a316f2a4",
+      "size": 396,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/c557e7a632ea3cb3c5b50494756b7b14a316f2a4"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da8fecfd7bcb2aadac740485b3d285fff2203bea",
+      "size": 5255,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/da8fecfd7bcb2aadac740485b3d285fff2203bea"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5445efb72b41cc4af1c6571fbdd8a2625352809e",
+      "size": 768,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/5445efb72b41cc4af1c6571fbdd8a2625352809e"
+    },
+    {
+      "path": ".readthedocs.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e307963fcd2cca1169c7a02cedcd830f37c3ae9",
+      "size": 543,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/5e307963fcd2cca1169c7a02cedcd830f37c3ae9"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "611f0fcc388069cd2a354383555e805ac7acd5d5",
+      "size": 3345,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/611f0fcc388069cd2a354383555e805ac7acd5d5"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16e880e26994bb735b15a26fd9053d1efdb6aca8",
+      "size": 1311,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/16e880e26994bb735b15a26fd9053d1efdb6aca8"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29c46e483c9b94a453e1c0ff75d2db4f83a7aaed",
+      "size": 1074,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/29c46e483c9b94a453e1c0ff75d2db4f83a7aaed"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a9e8857920db6f761917d51932f622f65db5586",
+      "size": 3242,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/2a9e8857920db6f761917d51932f622f65db5586"
+    },
+    {
+      "path": "README.md",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "418a4e819d73c93c678034d87a0dda96e7c2ca43",
+      "size": 4913,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/418a4e819d73c93c678034d87a0dda96e7c2ca43"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3221867cdac1113990941aa6d743ba6742fb081e",
+      "size": 1159,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/3221867cdac1113990941aa6d743ba6742fb081e"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "abe3844aa2a295baaa648c0418293e497837ec58",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/abe3844aa2a295baaa648c0418293e497837ec58"
+    },
+    {
+      "path": "assets/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c0cee34eb1dcd22dbe0d2f90478068e68ef35ad",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/2c0cee34eb1dcd22dbe0d2f90478068e68ef35ad"
+    },
+    {
+      "path": "assets/images/Fig2_Schematic.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05462df6a05cb2c8a12633599094a81f438180c1",
+      "size": 1387817,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/05462df6a05cb2c8a12633599094a81f438180c1"
+    },
+    {
+      "path": "assets/images/coverage.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3954c918e8f1471a697a78ea7269acf64ac856b3",
+      "size": 902,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/3954c918e8f1471a697a78ea7269acf64ac856b3"
+    },
+    {
+      "path": "config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41ecf2dc8030914b022e37f615a38262f62d03d0",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/41ecf2dc8030914b022e37f615a38262f62d03d0"
+    },
+    {
+      "path": "config/default_config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be935913ec5055ea4ba1627b596ddf5f1c722496",
+      "size": 2293,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/be935913ec5055ea4ba1627b596ddf5f1c722496"
+    },
+    {
+      "path": "config/toy_config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d4d5c3f8dd995b7dedb97d1b5f68acb4f2c1875",
+      "size": 750,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/6d4d5c3f8dd995b7dedb97d1b5f68acb4f2c1875"
+    },
+    {
+      "path": "conplex_dti",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c292341d698150547421ad8765950dfa6db383e",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/2c292341d698150547421ad8765950dfa6db383e"
+    },
+    {
+      "path": "conplex_dti/MAIN_OLD.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e59b45c060ddcb1856e2dcb5b7affc9fddfdc582",
+      "size": 3510,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/e59b45c060ddcb1856e2dcb5b7affc9fddfdc582"
+    },
+    {
+      "path": "conplex_dti/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "921fc44c5a559a53dddc16bdf1f2d80226ac8bee",
+      "size": 399,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/921fc44c5a559a53dddc16bdf1f2d80226ac8bee"
+    },
+    {
+      "path": "conplex_dti/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e81fcbe097314707e600c53f3cadf96ad33dad9",
+      "size": 1094,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/4e81fcbe097314707e600c53f3cadf96ad33dad9"
+    },
+    {
+      "path": "conplex_dti/architectures.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eebbfba290cb1726445662daaf4c2351cbf7ef7e",
+      "size": 23714,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/eebbfba290cb1726445662daaf4c2351cbf7ef7e"
+    },
+    {
+      "path": "conplex_dti/cli",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75a6504b26b5cc4b67c2aed49578385770ca6b78",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/75a6504b26b5cc4b67c2aed49578385770ca6b78"
+    },
+    {
+      "path": "conplex_dti/cli/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e270792de187927a7b0cc3d6e028ddc1ccc09e38",
+      "size": 251,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/e270792de187927a7b0cc3d6e028ddc1ccc09e38"
+    },
+    {
+      "path": "conplex_dti/cli/download.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eee14da09aba87e961e03a29f4c7bf44ed98eff7",
+      "size": 3932,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/eee14da09aba87e961e03a29f4c7bf44ed98eff7"
+    },
+    {
+      "path": "conplex_dti/cli/predict.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8acab73f09e20f6d2b21662320354cd76679b6a",
+      "size": 4676,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/f8acab73f09e20f6d2b21662320354cd76679b6a"
+    },
+    {
+      "path": "conplex_dti/cli/train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99f955ee82d447ae7547df824330861b71cd09d6",
+      "size": 19932,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/99f955ee82d447ae7547df824330861b71cd09d6"
+    },
+    {
+      "path": "conplex_dti/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b99de6aeb169826581bd7d835e02088e0b5a016",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/9b99de6aeb169826581bd7d835e02088e0b5a016"
+    },
+    {
+      "path": "conplex_dti/dataset/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d4e080d9796f6cd3e1a0a538db2e209cf3084f2",
+      "size": 171,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/7d4e080d9796f6cd3e1a0a538db2e209cf3084f2"
+    },
+    {
+      "path": "conplex_dti/dataset/datamodules.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28c827c1bbfbf172cb22fc0b6824aafe0359178e",
+      "size": 24300,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/28c827c1bbfbf172cb22fc0b6824aafe0359178e"
+    },
+    {
+      "path": "conplex_dti/featurizer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "405dbbd2451f8cdd2a8cb0acaa343e2a7e16f010",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/405dbbd2451f8cdd2a8cb0acaa343e2a7e16f010"
+    },
+    {
+      "path": "conplex_dti/featurizer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07ea49b82654e23dc99b624eaf9c32fba3d216f3",
+      "size": 421,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/07ea49b82654e23dc99b624eaf9c32fba3d216f3"
+    },
+    {
+      "path": "conplex_dti/featurizer/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f087fe09e74703f9f311768be7397be410a9e116",
+      "size": 7858,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/f087fe09e74703f9f311768be7397be410a9e116"
+    },
+    {
+      "path": "conplex_dti/featurizer/molecule.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5dc7fc85ac751d13af8c42373720fbdb1ef2c7c",
+      "size": 11422,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/f5dc7fc85ac751d13af8c42373720fbdb1ef2c7c"
+    },
+    {
+      "path": "conplex_dti/featurizer/protein.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b20bc609bbc85d588a88175ff3094fc141a89dac",
+      "size": 11493,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/b20bc609bbc85d588a88175ff3094fc141a89dac"
+    },
+    {
+      "path": "conplex_dti/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9d622b31a53593ee2d3c511ad0f3bd7153ece9f",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/f9d622b31a53593ee2d3c511ad0f3bd7153ece9f"
+    },
+    {
+      "path": "conplex_dti/model/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "conplex_dti/model/architectures.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9252827a12897b1ea6affd52cf1dd4fd51dddd77",
+      "size": 23789,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/9252827a12897b1ea6affd52cf1dd4fd51dddd77"
+    },
+    {
+      "path": "conplex_dti/model/margin.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb19ff81e846b4cf4f81a9b3a84496c788bfce8f",
+      "size": 2444,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/fb19ff81e846b4cf4f81a9b3a84496c788bfce8f"
+    },
+    {
+      "path": "conplex_dti/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f5801b102350d25d94e441fa475e7e1d3bb738",
+      "size": 4022,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/56f5801b102350d25d94e441fa475e7e1d3bb738"
+    },
+    {
+      "path": "cookiecutter-config-file.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e8ef2d7627debf2a6ae522feda957069d223ae0",
+      "size": 396,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/5e8ef2d7627debf2a6ae522feda957069d223ae0"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "138760d1c3ebdd410ae54f7e3b7b976b0a4cedf9",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/138760d1c3ebdd410ae54f7e3b7b976b0a4cedf9"
+    },
+    {
+      "path": "docs/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4bb2cbb9eddb1bb1b4f366623044af8e4830919",
+      "size": 634,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/d4bb2cbb9eddb1bb1b4f366623044af8e4830919"
+    },
+    {
+      "path": "docs/api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11c341b96443fcbe2b488fdcb8cc66ddae742daa",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/11c341b96443fcbe2b488fdcb8cc66ddae742daa"
+    },
+    {
+      "path": "docs/api/index.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d3df7bfd0cebcdfccd91b9f7581bf4d2d40d3cf",
+      "size": 1163,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/5d3df7bfd0cebcdfccd91b9f7581bf4d2d40d3cf"
+    },
+    {
+      "path": "docs/conf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "711d83093b656ad4a7ab423b2d327e016b3aa452",
+      "size": 1201,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/711d83093b656ad4a7ab423b2d327e016b3aa452"
+    },
+    {
+      "path": "docs/configuring.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "239a198a64e3d6c720a54f85767a4251e72391bc",
+      "size": 2603,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/239a198a64e3d6c720a54f85767a4251e72391bc"
+    },
+    {
+      "path": "docs/index.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c76489dd3f225f129e0b72b784794a165dc165c",
+      "size": 2591,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/8c76489dd3f225f129e0b72b784794a165dc165c"
+    },
+    {
+      "path": "docs/installation.rst",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce73eceac6ff1e39082f02e381268e8a369f1bd1",
+      "size": 338,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/ce73eceac6ff1e39082f02e381268e8a369f1bd1"
+    },
+    {
+      "path": "docs/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32bb24529f92346af26219baed295b7488b77534",
+      "size": 800,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/32bb24529f92346af26219baed295b7488b77534"
+    },
+    {
+      "path": "poetry.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e05c07052f23380b3448ebe151546a324919ffb1",
+      "size": 312164,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/e05c07052f23380b3448ebe151546a324919ffb1"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30b1ea10d355034cfcbd9bf6c89970cb746eb5db",
+      "size": 4196,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/30b1ea10d355034cfcbd9bf6c89970cb746eb5db"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc0477f4f95a6433c6d647723175508e5b41a152",
+      "size": 5624,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/fc0477f4f95a6433c6d647723175508e5b41a152"
+    },
+    {
+      "path": "setup.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c46a08cc586b2766265ecb33f45b7f280fca8ba",
+      "size": 100,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/3c46a08cc586b2766265ecb33f45b7f280fca8ba"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7769ec361cf1032553b69809260156525a5583db",
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/trees/7769ec361cf1032553b69809260156525a5583db"
+    },
+    {
+      "path": "tests/test_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c9a0fc564efb4375339cc8858fba7a1c9d11fa5",
+      "size": 899,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/9c9a0fc564efb4375339cc8858fba7a1c9d11fa5"
+    },
+    {
+      "path": "tests/toy_predict.tsv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb859eb53ff95546912f1d9c808bcb84953bdb4e",
+      "size": 714,
+      "url": "https://api.github.com/repos/samsledje/ConPLex/git/blobs/bb859eb53ff95546912f1d9c808bcb84953bdb4e"
+    }
+  ]
+}

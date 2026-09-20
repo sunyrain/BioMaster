@@ -1,0 +1,433 @@
+{
+  "commit": "9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+  "truncated": false,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5338640d58031c5a046e8a8a1d834c4f62af901",
+      "size": 38,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/f5338640d58031c5a046e8a8a1d834c4f62af901"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1efee83cf0acf5041d1a00d59cd336a3d65fba1",
+      "size": 1067,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/b1efee83cf0acf5041d1a00d59cd336a3d65fba1"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec055f9379fc96e5ff0806ecfd7c08f72e812120",
+      "size": 7333,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/ec055f9379fc96e5ff0806ecfd7c08f72e812120"
+    },
+    {
+      "path": "ban.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba983bb087454e2c80915311a66f44d8be24b196",
+      "size": 5788,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/ba983bb087454e2c80915311a66f44d8be24b196"
+    },
+    {
+      "path": "configs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d56b26646c8052772e83fd9dd05e956070d39c3c",
+      "size": 1387,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/d56b26646c8052772e83fd9dd05e956070d39c3c"
+    },
+    {
+      "path": "configs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc8747b9f64e820f4eabaf15142d12382cbd18d1",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/cc8747b9f64e820f4eabaf15142d12382cbd18d1"
+    },
+    {
+      "path": "configs/DrugBAN.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7044dc5c0afdfb4815accf2a218da0b1b656035",
+      "size": 216,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/b7044dc5c0afdfb4815accf2a218da0b1b656035"
+    },
+    {
+      "path": "configs/DrugBAN_DA.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da42a0c6d474008cd35aa7e2a39095f7ef2aee74",
+      "size": 339,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/da42a0c6d474008cd35aa7e2a39095f7ef2aee74"
+    },
+    {
+      "path": "configs/DrugBAN_Demo.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "643d050de0232094249ba24ca598d7e837d3cc9d",
+      "size": 99,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/643d050de0232094249ba24ca598d7e837d3cc9d"
+    },
+    {
+      "path": "configs/DrugBAN_Non_DA.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b7bd1dda1fcff3abba03c1f315ad895c5c67a3a",
+      "size": 215,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/5b7bd1dda1fcff3abba03c1f315ad895c5c67a3a"
+    },
+    {
+      "path": "dataloader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dd6a76ca5134e14cfe7c5acf5a061eaba820806",
+      "size": 2635,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/4dd6a76ca5134e14cfe7c5acf5a061eaba820806"
+    },
+    {
+      "path": "datasets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "619a12bc555c0d4a2e76c10c79fa5aeb3b56205a",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/619a12bc555c0d4a2e76c10c79fa5aeb3b56205a"
+    },
+    {
+      "path": "datasets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5c1259ac1189724aa837fbc6c285152963d7d98",
+      "size": 976,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/c5c1259ac1189724aa837fbc6c285152963d7d98"
+    },
+    {
+      "path": "datasets/bindingdb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d9c24c54d6b1e278aa5abfa4ad0abcbcd9671828",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/d9c24c54d6b1e278aa5abfa4ad0abcbcd9671828"
+    },
+    {
+      "path": "datasets/bindingdb/cluster",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a8c97a604ea362b2fc497de4f9e50dcd287de17",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/3a8c97a604ea362b2fc497de4f9e50dcd287de17"
+    },
+    {
+      "path": "datasets/bindingdb/cluster/source_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fac94431ad3bd0206e1dd6f005bc43d48209672",
+      "size": 11344158,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/5fac94431ad3bd0206e1dd6f005bc43d48209672"
+    },
+    {
+      "path": "datasets/bindingdb/cluster/target_test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "263b58896c182dc800657fd023d8d05bf3f77b9c",
+      "size": 1395251,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/263b58896c182dc800657fd023d8d05bf3f77b9c"
+    },
+    {
+      "path": "datasets/bindingdb/cluster/target_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c4a3a705c9c1eefa3b226606ee22e9dccb1b75a",
+      "size": 5545244,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/7c4a3a705c9c1eefa3b226606ee22e9dccb1b75a"
+    },
+    {
+      "path": "datasets/bindingdb/full.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9aad592e945505bf22c5bd606e700b189181ba1",
+      "size": 37552074,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/a9aad592e945505bf22c5bd606e700b189181ba1"
+    },
+    {
+      "path": "datasets/bindingdb/random",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "448b963a12d2d1a35da30f7cf992fe9fac591b2c",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/448b963a12d2d1a35da30f7cf992fe9fac591b2c"
+    },
+    {
+      "path": "datasets/bindingdb/random/test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8db463509c3e702231c97a7dcec9291c496950e",
+      "size": 7448096,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/a8db463509c3e702231c97a7dcec9291c496950e"
+    },
+    {
+      "path": "datasets/bindingdb/random/train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07d1907f7aada58311126b776381491aabe4f388",
+      "size": 25969893,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/07d1907f7aada58311126b776381491aabe4f388"
+    },
+    {
+      "path": "datasets/bindingdb/random/val.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f099397a181c5ffb68d6c737079355bed1cfe403",
+      "size": 3703661,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/f099397a181c5ffb68d6c737079355bed1cfe403"
+    },
+    {
+      "path": "datasets/bindingdb_sample",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26352fed09c1f3a782d5b9f8bff727f66f491cf0",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/26352fed09c1f3a782d5b9f8bff727f66f491cf0"
+    },
+    {
+      "path": "datasets/bindingdb_sample/test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae0e87665948c49574736d8415e68e1166984ad",
+      "size": 34780,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/6ae0e87665948c49574736d8415e68e1166984ad"
+    },
+    {
+      "path": "datasets/bindingdb_sample/train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b14819fdcd3cc81a931a8157e01270a665871b",
+      "size": 137447,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/e3b14819fdcd3cc81a931a8157e01270a665871b"
+    },
+    {
+      "path": "datasets/bindingdb_sample/val.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b268f4c1455fa22bdf69bca3b42bfd229b5bd88b",
+      "size": 16799,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/b268f4c1455fa22bdf69bca3b42bfd229b5bd88b"
+    },
+    {
+      "path": "datasets/biosnap",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "940d6d6adb52779fe9f3ae9b871beeb9a927207b",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/940d6d6adb52779fe9f3ae9b871beeb9a927207b"
+    },
+    {
+      "path": "datasets/biosnap/cluster",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b4dcaf8ed541cee7bb7377060ce5b53a0fee72a",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/3b4dcaf8ed541cee7bb7377060ce5b53a0fee72a"
+    },
+    {
+      "path": "datasets/biosnap/cluster/source_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9834a45173098dc8f18c69cbf69893e2c2c92ebd",
+      "size": 5891326,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/9834a45173098dc8f18c69cbf69893e2c2c92ebd"
+    },
+    {
+      "path": "datasets/biosnap/cluster/target_test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eeb322cd676fe24a13d238be324f857cc4fc55a",
+      "size": 613135,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/9eeb322cd676fe24a13d238be324f857cc4fc55a"
+    },
+    {
+      "path": "datasets/biosnap/cluster/target_train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da8126316ad5dc77126adacb40b9a1acb80be8b9",
+      "size": 2361215,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/da8126316ad5dc77126adacb40b9a1acb80be8b9"
+    },
+    {
+      "path": "datasets/biosnap/full.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8075689605257768b88eacb361b8ee7c2e7c3be5",
+      "size": 17069326,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/8075689605257768b88eacb361b8ee7c2e7c3be5"
+    },
+    {
+      "path": "datasets/biosnap/random",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf199a88d58f472ec9e025b9410953998ad0ff84",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/cf199a88d58f472ec9e025b9410953998ad0ff84"
+    },
+    {
+      "path": "datasets/biosnap/random/test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "400da44953cea23aba69b8a455e7cefa8dc3ab1d",
+      "size": 3403151,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/400da44953cea23aba69b8a455e7cefa8dc3ab1d"
+    },
+    {
+      "path": "datasets/biosnap/random/train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88fafe1f53bffee9203176be01c300b2aa5411ed",
+      "size": 11733253,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/88fafe1f53bffee9203176be01c300b2aa5411ed"
+    },
+    {
+      "path": "datasets/biosnap/random/val.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f8ac50a201c3487ad01cd398371afcb4804963a",
+      "size": 1689864,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/5f8ac50a201c3487ad01cd398371afcb4804963a"
+    },
+    {
+      "path": "datasets/human",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bec14868e3de7f576a2ef83ef328a43b38c298b0",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/bec14868e3de7f576a2ef83ef328a43b38c298b0"
+    },
+    {
+      "path": "datasets/human/cold",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b25c4bd72869f8513b325772df6a08b4566f87d",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/3b25c4bd72869f8513b325772df6a08b4566f87d"
+    },
+    {
+      "path": "datasets/human/cold/test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ef408541710afd8c6555bf826dc4af996146cdd",
+      "size": 187797,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/6ef408541710afd8c6555bf826dc4af996146cdd"
+    },
+    {
+      "path": "datasets/human/cold/train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74a03e5f923a137ec8bea986759dfa0f36294693",
+      "size": 2424350,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/74a03e5f923a137ec8bea986759dfa0f36294693"
+    },
+    {
+      "path": "datasets/human/cold/val.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf3d0780828b7be57041015d6da011db70fb160f",
+      "size": 96178,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/bf3d0780828b7be57041015d6da011db70fb160f"
+    },
+    {
+      "path": "datasets/human/full.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "711273c6f6da565ade72ad9ef615521f6743f293",
+      "size": 4536574,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/711273c6f6da565ade72ad9ef615521f6743f293"
+    },
+    {
+      "path": "datasets/human/random",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c9d180adf7938c82c8784c8f1c087715038a5f5",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/9c9d180adf7938c82c8784c8f1c087715038a5f5"
+    },
+    {
+      "path": "datasets/human/random/test.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7b8a4af9679102063ba29c8c796a896d4120eda",
+      "size": 807229,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/e7b8a4af9679102063ba29c8c796a896d4120eda"
+    },
+    {
+      "path": "datasets/human/random/train.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c918378f6118665d44342065c6c80f99f82072cf",
+      "size": 2792699,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/c918378f6118665d44342065c6c80f99f82072cf"
+    },
+    {
+      "path": "datasets/human/random/val.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "859d764d0f04cd5ca59308617d04cda3716f1653",
+      "size": 408477,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/859d764d0f04cd5ca59308617d04cda3716f1653"
+    },
+    {
+      "path": "domain_adaptator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85b69af698d8de40124c923523eda4320f8efd2f",
+      "size": 1527,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/85b69af698d8de40124c923523eda4320f8efd2f"
+    },
+    {
+      "path": "drugban_demo.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a29c25ed4b86f06dd408921ce79b699a68ffedeb",
+      "size": 8479,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/a29c25ed4b86f06dd408921ce79b699a68ffedeb"
+    },
+    {
+      "path": "image",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a8bfba98e3a8a0f93897768606d1472a4db48be",
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/trees/9a8bfba98e3a8a0f93897768606d1472a4db48be"
+    },
+    {
+      "path": "image/DrugBAN.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad5e1ff939459d0435f5d0d9e38ca9af2a4b0e2b",
+      "size": 239643,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/ad5e1ff939459d0435f5d0d9e38ca9af2a4b0e2b"
+    },
+    {
+      "path": "main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f8e72769992246d9ee6fe75ecaf0e718b3f0a6",
+      "size": 6724,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/68f8e72769992246d9ee6fe75ecaf0e718b3f0a6"
+    },
+    {
+      "path": "models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71d7104df0ef95aa41bc81e15fe8641d40007849",
+      "size": 6847,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/71d7104df0ef95aa41bc81e15fe8641d40007849"
+    },
+    {
+      "path": "trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82c9b4ac32768b67e3251a178ed0771350a7e9a2",
+      "size": 19400,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/82c9b4ac32768b67e3251a178ed0771350a7e9a2"
+    },
+    {
+      "path": "utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a8cab8e4ef47fde0ed2432f394ad615c5387c6e",
+      "size": 1643,
+      "url": "https://api.github.com/repos/peizhenbai/DrugBAN/git/blobs/1a8cab8e4ef47fde0ed2432f394ad615c5387c6e"
+    }
+  ]
+}

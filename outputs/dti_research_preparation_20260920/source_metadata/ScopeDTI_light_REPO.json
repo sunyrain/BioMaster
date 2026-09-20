@@ -1,0 +1,142 @@
+{
+  "model": "ScopeDTI_light",
+  "repo": "Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference",
+  "default_branch": "main",
+  "license": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "pushed_at": "2025-03-05T02:29:23Z",
+  "commit": "af8a55345f9e6b2bb325c959cd6b43a5413ca652",
+  "retrieved_utc": "2026-09-20T03:12:23.284759+00:00",
+  "weight_candidates": [
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_80_20241006_131415.pth",
+      "bytes": 9020433,
+      "blob": "3894d8a37417ab864884e0ca48ed5b94f416f06f"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_81_20241006_130750.pth",
+      "bytes": 9020433,
+      "blob": "8e91c750457ac097b94dc13817dc2927f3411167"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_82_20241006_132201.pth",
+      "bytes": 9020433,
+      "blob": "a11d5a836a50333c6c4c34791dc85a32f51625a9"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_88_20241006_130303.pth",
+      "bytes": 9020433,
+      "blob": "8e2d8c07e4241f06f728b4cee34bb9671a8ed2d6"
+    },
+    {
+      "path": "models_path/Filtered_GPCR_DrugBAN_3D/best_model_epoch_89_20241006_132052.pth",
+      "bytes": 9020433,
+      "blob": "47525b01363681586b410904f0d92a1e19119fca"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_86_20241006_132201.pth",
+      "bytes": 9020433,
+      "blob": "b5d4748c928a3758642c8d7f6e3368f6a36bb363"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_87_20241006_130303.pth",
+      "bytes": 9020433,
+      "blob": "cabaee38f922cd5bb2060ae8c847b74d375c11df"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_87_20241006_130750.pth",
+      "bytes": 9020433,
+      "blob": "2c43f9cf26e8738db260ca386a0edaede7d5587f"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_88_20241006_132052.pth",
+      "bytes": 9020433,
+      "blob": "948084db3bcaee215edcefc2217d2af0c0fe1733"
+    },
+    {
+      "path": "models_path/Filtered_IC_DrugBAN_3D/best_model_epoch_89_20241006_131415.pth",
+      "bytes": 9020433,
+      "blob": "c1283ad73f799e510fe0a7d6102061a0e9b7b01f"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_49_20241006_132052.pth",
+      "bytes": 9020433,
+      "blob": "6798d3ebdcb24b74fe697e0134760f1411892ccc"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_55_20241006_130303.pth",
+      "bytes": 9020433,
+      "blob": "dd9618746b7e2750f9176056da1406b50c6c4510"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_71_20241006_132201.pth",
+      "bytes": 9020433,
+      "blob": "758d454a88f8801a46079aa3601cc9cd3721ebc7"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_79_20241006_131415.pth",
+      "bytes": 9020433,
+      "blob": "a50976f7dad864b3e24da265f62a80e4a62453c5"
+    },
+    {
+      "path": "models_path/Filtered_Kinase_DrugBAN_3D/best_model_epoch_86_20241006_130750.pth",
+      "bytes": 9020433,
+      "blob": "7ce5acdff24274217eb0b0dc97d978f384632fbc"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_79_20241006_131415.pth",
+      "bytes": 9020433,
+      "blob": "3dab02f70f26fa983f06fe7818fb3c61d3d4749c"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_81_20241006_132052.pth",
+      "bytes": 9020433,
+      "blob": "1b1fc790a9e740dab23696c0e5aeed0833fa1b91"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_82_20241006_130303.pth",
+      "bytes": 9020433,
+      "blob": "079354a1d0cb935d4eb6ede4de086a63e70ea6db"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_84_20241006_130750.pth",
+      "bytes": 9020433,
+      "blob": "3c72494730251ce6adfcb895956b7c6fead3b75e"
+    },
+    {
+      "path": "models_path/Filtered_NHR_DrugBAN_3D/best_model_epoch_90_20241006_132201.pth",
+      "bytes": 9020433,
+      "blob": "57ae6c1733657e819c5e839c907ae34e12ab864b"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_65.pth",
+      "bytes": 9020433,
+      "blob": "3580d931591f372db31619e4fabcbe01e8d0454f"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_72.pth",
+      "bytes": 9020433,
+      "blob": "2dfcec065dc2ebc313fe918017481d135ff7fb28"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_86.pth",
+      "bytes": 9020433,
+      "blob": "492ea36db9c211600a8aca2d2ab2b9a31afe56d4"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_87.pth",
+      "bytes": 9020433,
+      "blob": "1ae526843b2e3333acb92f09d444a4430d0ba71c"
+    },
+    {
+      "path": "models_path/Filtered_Total_DrugBAN_3D/best_model_epoch_95.pth",
+      "bytes": 9020433,
+      "blob": "d0056e4a060cde8b30a982c61699d7bff4bfff7a"
+    }
+  ]
+}

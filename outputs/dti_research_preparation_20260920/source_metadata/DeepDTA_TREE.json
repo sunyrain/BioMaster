@@ -1,0 +1,433 @@
+{
+  "commit": "a546a8433a6822e958f36171c4356ad6f414d623",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdcc28c2c6b9b2d6a88c9409bc8d267a38bd9664",
+      "size": 1801,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/bdcc28c2c6b9b2d6a88c9409bc8d267a38bd9664"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82adfe516968c0c7941f656ed73260cbe5cc0b4f",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/82adfe516968c0c7941f656ed73260cbe5cc0b4f"
+    },
+    {
+      "path": "data/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cedfbc7046c945829f4685885cbea7bb71730c24",
+      "size": 3454,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/cedfbc7046c945829f4685885cbea7bb71730c24"
+    },
+    {
+      "path": "data/davis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb9b99f736c85fb87b5bab16e16b0a7186e2f776",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/eb9b99f736c85fb87b5bab16e16b0a7186e2f776"
+    },
+    {
+      "path": "data/davis/Y",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c51994801a96c9e808bd897cd93849e6876de0",
+      "size": 240605,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/54c51994801a96c9e808bd897cd93849e6876de0"
+    },
+    {
+      "path": "data/davis/drug-drug_similarities_2D.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fac5c96fe49c052f2155a05248a2b303aabe3930",
+      "size": 26892,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/fac5c96fe49c052f2155a05248a2b303aabe3930"
+    },
+    {
+      "path": "data/davis/drug-target_interaction_affinities_Kd__Davis_et_al.2011v1.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c28d096a9e8b57402d91759558cacb236f38dc4",
+      "size": 164306,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/3c28d096a9e8b57402d91759558cacb236f38dc4"
+    },
+    {
+      "path": "data/davis/folds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4eb2f8a2a8a9d5aafd20cde405439e3f3cb394e",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/c4eb2f8a2a8a9d5aafd20cde405439e3f3cb394e"
+    },
+    {
+      "path": "data/davis/folds/test_fold_setting1.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59e42dd65ff3c626f2b323cf64925359196311d4",
+      "size": 33252,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/59e42dd65ff3c626f2b323cf64925359196311d4"
+    },
+    {
+      "path": "data/davis/folds/train_fold_setting1.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f49c4891ba1cc703ebd031a36bd4fe839d4c20",
+      "size": 166040,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/74f49c4891ba1cc703ebd031a36bd4fe839d4c20"
+    },
+    {
+      "path": "data/davis/ligands_can.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d252572cc00a6d249edbe5f5175605adc5c6fed",
+      "size": 5306,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/5d252572cc00a6d249edbe5f5175605adc5c6fed"
+    },
+    {
+      "path": "data/davis/ligands_iso.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07c406fc7f7b625a347365755aad3a27c50928e7",
+      "size": 5452,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/07c406fc7f7b625a347365755aad3a27c50928e7"
+    },
+    {
+      "path": "data/davis/proteins.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89dea0221c693005aba2f01d18e530542f2a96c7",
+      "size": 355211,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/89dea0221c693005aba2f01d18e530542f2a96c7"
+    },
+    {
+      "path": "data/davis/target-target_similarities_WS.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98f0ae0c52a13ea50b0813ac386fbfc8accc860b",
+      "size": 980218,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/98f0ae0c52a13ea50b0813ac386fbfc8accc860b"
+    },
+    {
+      "path": "data/kiba",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bac0f92cad82b58cc5ebb1a423920ef8c2e854df",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/bac0f92cad82b58cc5ebb1a423920ef8c2e854df"
+    },
+    {
+      "path": "data/kiba/Y",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c942af67be84496bf225c119fcc4981c1f4a6915",
+      "size": 3867510,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/c942af67be84496bf225c119fcc4981c1f4a6915"
+    },
+    {
+      "path": "data/kiba/folds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4dcc195805a6259f30c6959daca967830f7a78a1",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/4dcc195805a6259f30c6959daca967830f7a78a1"
+    },
+    {
+      "path": "data/kiba/folds/test_fold_setting1.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a015f4443a6caf4edf82102225b4c98b8262a0",
+      "size": 139047,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/d6a015f4443a6caf4edf82102225b4c98b8262a0"
+    },
+    {
+      "path": "data/kiba/folds/train_fold_setting1.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c8616f4ccd278b753fb4ccb0d51681d05821543",
+      "size": 695885,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/0c8616f4ccd278b753fb4ccb0d51681d05821543"
+    },
+    {
+      "path": "data/kiba/kiba_binding_affinity_v2.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8215cca856a88d652179b1ac408ea6637636102e",
+      "size": 2864308,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/8215cca856a88d652179b1ac408ea6637636102e"
+    },
+    {
+      "path": "data/kiba/kiba_drug_sim.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6e87ef20b48bdd1b7fa6e68583727ad7ec8ac5e",
+      "size": 26214860,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/f6e87ef20b48bdd1b7fa6e68583727ad7ec8ac5e"
+    },
+    {
+      "path": "data/kiba/kiba_target_sim.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e9f7a636c9b68c2eacac3a115e145f3a4158bd5",
+      "size": 621325,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/1e9f7a636c9b68c2eacac3a115e145f3a4158bd5"
+    },
+    {
+      "path": "data/kiba/ligands_can.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a88e2ef7f983cf1cda54d43cfc04de8135f118c",
+      "size": 165908,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/9a88e2ef7f983cf1cda54d43cfc04de8135f118c"
+    },
+    {
+      "path": "data/kiba/ligands_iso.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b47d0c412163df152d83a9a2e66caba6d1b61ba8",
+      "size": 169771,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/b47d0c412163df152d83a9a2e66caba6d1b61ba8"
+    },
+    {
+      "path": "data/kiba/proteins.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd19a19f106ea2c30a20dfdbe8db369c82c3d27b",
+      "size": 170137,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/bd19a19f106ea2c30a20dfdbe8db369c82c3d27b"
+    },
+    {
+      "path": "deepdta-toy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfa5540bcb101281c84bebe113faf17156965a26",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/bfa5540bcb101281c84bebe113faf17156965a26"
+    },
+    {
+      "path": "deepdta-toy/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f9ff6dc1f78f1c2158ff742ca1a20b9b43d9ac5",
+      "size": 3061,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/4f9ff6dc1f78f1c2158ff742ca1a20b9b43d9ac5"
+    },
+    {
+      "path": "deepdta-toy/arguments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f57fdec6d806697990e68eefa413e8dfeda84e9",
+      "size": 2923,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/0f57fdec6d806697990e68eefa413e8dfeda84e9"
+    },
+    {
+      "path": "deepdta-toy/auc.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2914e398ffc18ba0274a3c136758fa5cdc71ebf4",
+      "size": 10869,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/2914e398ffc18ba0274a3c136758fa5cdc71ebf4"
+    },
+    {
+      "path": "deepdta-toy/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59ab462779f9278eae82a1f82f0aeaf3e90b1459",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/59ab462779f9278eae82a1f82f0aeaf3e90b1459"
+    },
+    {
+      "path": "deepdta-toy/data/DTC",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d4051255a6323e8b0af40eafa295a864942bf5d",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/4d4051255a6323e8b0af40eafa295a864942bf5d"
+    },
+    {
+      "path": "deepdta-toy/data/DTC/folds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f3ad558be6304228b15f1f3f64c13ca2e24dcb40",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/f3ad558be6304228b15f1f3f64c13ca2e24dcb40"
+    },
+    {
+      "path": "deepdta-toy/data/DTC/folds/train_fold.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2507a6a0c8ecc418c42a63593142eaadfe08ff80",
+      "size": 340157,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/2507a6a0c8ecc418c42a63593142eaadfe08ff80"
+    },
+    {
+      "path": "deepdta-toy/data/DTC/ligands_iso.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b6d7935560f96cefd7ee15e45586cbc49e1d9a6",
+      "size": 1194263,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/5b6d7935560f96cefd7ee15e45586cbc49e1d9a6"
+    },
+    {
+      "path": "deepdta-toy/data/DTC/proteins.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f21d46b56c0c50eb25c18e087f13ed8c43fe2b54",
+      "size": 865006,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/f21d46b56c0c50eb25c18e087f13ed8c43fe2b54"
+    },
+    {
+      "path": "deepdta-toy/data/mytest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdd6c6421df937f4e451a367b90631ea4228547f",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/cdd6c6421df937f4e451a367b90631ea4228547f"
+    },
+    {
+      "path": "deepdta-toy/data/mytest/Y.tab",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f39c41d02c265085541d0567f6818415d2b3ddcf",
+      "size": 8,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/f39c41d02c265085541d0567f6818415d2b3ddcf"
+    },
+    {
+      "path": "deepdta-toy/data/mytest/ligands.tab",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3220571c0141967ab1c414af9092b057df34b8a0",
+      "size": 100,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/3220571c0141967ab1c414af9092b057df34b8a0"
+    },
+    {
+      "path": "deepdta-toy/data/mytest/proteins.fasta",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf0ec56c1476be8cc02dd8cef3faf63a8e5e9d6c",
+      "size": 3270,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/cf0ec56c1476be8cc02dd8cef3faf63a8e5e9d6c"
+    },
+    {
+      "path": "deepdta-toy/datahelper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e35e2a5c310fea167ebcdbbd83a42cb437ed3068",
+      "size": 6340,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/e35e2a5c310fea167ebcdbbd83a42cb437ed3068"
+    },
+    {
+      "path": "deepdta-toy/emetrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f491d70d65004ce1a7f095c4b2fe45c9cd5bf24",
+      "size": 2099,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/3f491d70d65004ce1a7f095c4b2fe45c9cd5bf24"
+    },
+    {
+      "path": "deepdta-toy/run_experiments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6e6b1d583037fcc998d886794742f1381a0aa28",
+      "size": 21272,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/f6e6b1d583037fcc998d886794742f1381a0aa28"
+    },
+    {
+      "path": "deepdta-toy/testdatahelper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f0e0e4a3145c83182cf979956ce433efa4c193b",
+      "size": 2304,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/4f0e0e4a3145c83182cf979956ce433efa4c193b"
+    },
+    {
+      "path": "deepdta.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c26bc5816d931707ae8d8b7243d27280812a7059",
+      "size": 134,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/c26bc5816d931707ae8d8b7243d27280812a7059"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cfd5e80830a1b732e5ee70029f119c203472e8f",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/3cfd5e80830a1b732e5ee70029f119c203472e8f"
+    },
+    {
+      "path": "docs/figures",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1676b12f90fd59ca32456fa96a4d519a53e21202",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/1676b12f90fd59ca32456fa96a4d519a53e21202"
+    },
+    {
+      "path": "docs/figures/deepdta.PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7186f40170570d69beb915d53d3b081ba21f8b24",
+      "size": 149445,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/7186f40170570d69beb915d53d3b081ba21f8b24"
+    },
+    {
+      "path": "docs/figures/screenshot1.PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e7e4c8adeb8e804ae55668f81108019a1f50c38",
+      "size": 36464,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/1e7e4c8adeb8e804ae55668f81108019a1f50c38"
+    },
+    {
+      "path": "source",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8367d176cc2f4682b1aef446d8129e4fafb56915",
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/trees/8367d176cc2f4682b1aef446d8129e4fafb56915"
+    },
+    {
+      "path": "source/arguments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b12430532a1730736c4526f626f34cb24ff28baa",
+      "size": 2797,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/b12430532a1730736c4526f626f34cb24ff28baa"
+    },
+    {
+      "path": "source/auc.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2914e398ffc18ba0274a3c136758fa5cdc71ebf4",
+      "size": 10869,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/2914e398ffc18ba0274a3c136758fa5cdc71ebf4"
+    },
+    {
+      "path": "source/datahelper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83671add5a9b875f9df00ac17fb8da09d1820f96",
+      "size": 5356,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/83671add5a9b875f9df00ac17fb8da09d1820f96"
+    },
+    {
+      "path": "source/emetrics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f491d70d65004ce1a7f095c4b2fe45c9cd5bf24",
+      "size": 2099,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/3f491d70d65004ce1a7f095c4b2fe45c9cd5bf24"
+    },
+    {
+      "path": "source/go.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a749c6a13b9c30adbcc980deaf92e598d8f3aae",
+      "size": 518,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/4a749c6a13b9c30adbcc980deaf92e598d8f3aae"
+    },
+    {
+      "path": "source/run_experiments.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af07a87fc1282fe18c4f4d733d236456223173d0",
+      "size": 21520,
+      "url": "https://api.github.com/repos/hkmztrk/DeepDTA/git/blobs/af07a87fc1282fe18c4f4d733d236456223173d0"
+    }
+  ]
+}

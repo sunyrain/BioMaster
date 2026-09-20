@@ -1,0 +1,70 @@
+{
+  "_id": "6a52664db5cb12e193e1e605",
+  "id": "recursionpharma/nesso",
+  "private": false,
+  "pipeline_tag": "other",
+  "library_name": "nesso",
+  "tags": [
+    "nesso",
+    "safetensors",
+    "nesso1",
+    "structure-based-drug-design",
+    "binding-affinity",
+    "protein-ligand",
+    "drug-discovery",
+    "other",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "downloads": 241284,
+  "likes": 9,
+  "modelId": "recursionpharma/nesso",
+  "author": "recursionpharma",
+  "sha": "499ed12b0343918ab01b2519226390cf8eca038a",
+  "lastModified": "2026-08-06T17:13:07.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "model_type": "nesso1",
+    "architectures": [
+      "Nesso1"
+    ]
+  },
+  "cardData": {
+    "license": "apache-2.0",
+    "library_name": "nesso",
+    "tags": [
+      "structure-based-drug-design",
+      "binding-affinity",
+      "protein-ligand",
+      "drug-discovery"
+    ],
+    "pipeline_tag": "other"
+  },
+  "siblings": [
+    {
+      "rfilename": "LICENSE"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "ccd.pkl"
+    },
+    {
+      "rfilename": "config.json"
+    },
+    {
+      "rfilename": "v1.0.0/hparams.json"
+    },
+    {
+      "rfilename": "v1.0.0/model.safetensors"
+    }
+  ],
+  "spaces": [
+    "hugging-apps/nesso"
+  ],
+  "createdAt": "2026-07-11T15:50:37.000Z",
+  "usedStorage": 578350285
+}

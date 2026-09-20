@@ -1,0 +1,9 @@
+{
+  "model": "DeepDTA",
+  "repo": "hkmztrk/DeepDTA",
+  "default_branch": "master",
+  "license": null,
+  "pushed_at": "2023-09-22T19:19:45Z",
+  "commit": "a546a8433a6822e958f36171c4356ad6f414d623",
+  "weight_candidates": []
+}

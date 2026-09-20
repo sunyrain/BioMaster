@@ -1,0 +1,15 @@
+{
+  "model": "DrugBAN",
+  "repo": "peizhenbai/DrugBAN",
+  "default_branch": "main",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "pushed_at": "2023-02-19T20:16:42Z",
+  "commit": "9923f8c99959e00263103ff9ac61ba0eaccc8e02",
+  "weight_candidates": []
+}

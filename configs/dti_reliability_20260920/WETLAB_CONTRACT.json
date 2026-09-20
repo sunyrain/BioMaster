@@ -1,0 +1,15 @@
+{
+  "result_status": [
+    "QUANTIFIABLE",
+    "MEASURED_NO_BINDING_WITHIN_LIMIT",
+    "INDETERMINATE",
+    "TECHNICAL_FAILURE",
+    "NOT_MEASURED"
+  ],
+  "numeric_binding_endpoint": "Kd in nM only after acceptable reference/blank/construct/curve checks; preserve relation and censoring.",
+  "failure_policy": "TECHNICAL_FAILURE, INDETERMINATE and NOT_MEASURED never become binary negatives.",
+  "threshold_policy": "Lab detection and binding-decision thresholds must be specified from assay conditions before outcome-based selection.",
+  "selection_scope": "The frozen SPR384 selection pool; controls separate, raw failures retained.",
+  "result_access": "UNKNOWN_PENDING_USER",
+  "candidate_changes": false
+}
