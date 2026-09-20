@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "score_independent_selection": true,
+  "application_unique_pairs": 69120,
+  "target_sequence_mapping_exact": true,
+  "original_A_data_not_changed": true,
+  "no_experimental_labels_read": true,
+  "davis_not_read": true,
+  "hash_manifest_sha256": "b78bc883f6a68d629ec292e90aaaea477b57475a6de1e09f6b8bbbd1f3d97872",
+  "producer_sha256": "c5968ac58904dbb0d7a38b32594822b20db567f6a640e13e2f212ed8278d2791",
+  "producer_note": "Docstring-only clarification after the preparation run; output identities unchanged and independently checked."
+}

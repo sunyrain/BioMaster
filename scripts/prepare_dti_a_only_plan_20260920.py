@@ -142,6 +142,8 @@ def build():
     if inference_addendum.exists():
         active_pointer['inference_comparison_addendum']=str(inference_addendum.relative_to(ROOT))
         active_pointer['inference_comparison_addendum_sha256']=sha(inference_addendum)
+    for key in ['ranking_study_scope','ranking_study_scope_sha256','current_execution_phase']:
+        if key in previous_pointer:active_pointer[key]=previous_pointer[key]
     save(ROOT/'configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json',active_pointer)
     save(OUT/'SUMMARY.json',dict(status='A_ONLY_PLAN_PREPARED_NOT_TRAINING',parent_protocol_sha256=sha(BASE),
         main_fits=len(main),first_phase_fits=30,conditional_fits=len(cond),new_B_fits=0,

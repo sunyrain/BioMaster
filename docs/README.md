@@ -1,13 +1,16 @@
 # BioMaster 当前文档入口
 
-更新：2026-09-20。项目分为已交付湿实验、现成模型比较、A受控重训三条线。历史报告中的“当前”“唯一”“下一步”和ETA只代表其日期，不覆盖本页指向的有效协议。
+更新：2026-09-21。项目保留湿实验交付、现成模型比较和后续A受控重训三条线；当前执行第一阶段无标签排序分析。历史报告中的“当前”“唯一”“下一步”和ETA只代表其日期，不覆盖本页指向的有效协议。
 
 ## 当前研究与执行
 
 | 内容 | 入口 | 当前状态 |
 |---|---|---|
+| 当前第一阶段 | [双向排序一致性与推荐分歧](BIOMASTER_DTI_RANKING_SCOPE_20260921_ZH.md) | 不使用Davis；720×96固定子矩阵，720×384作敏感性；谁对谁错留到第二阶段 |
+| 第一阶段初步结果 | [六通道双向排序分析](BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md) | 相关性、Top10重合、覆盖及家族汇总已生成；新增模型尚未计入，不评价正确性 |
+| 官方权重收集 | [下载与校验状态](BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md) | 已有权重复用；新增主模型与条件扩展模型统一收集，模型可加载状态单列 |
 | 架构、数据、权重 | [资源总表](BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md) | 保留A/B及官方资产；资产存在不等于完成独立验证 |
-| 新增训练 | [A主线重训方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md) | A训练337,570、验证41,806、测试39,507对；主线45项、先30项；新增B训练0；尚未启动 |
+| 后续受控训练 | [A主线重训方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md) | 保留A训练337,570、验证41,806、测试39,507对和45项计划；当前第一阶段不启动训练；新增B为0 |
 | 现成模型比较 | [用户价值与公平比较](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md) | 五个官方通道＋授权复用的本地DTIAM A；ReTargetMap不参加；完整训练暴露审计待做 |
 | 最终模型矩阵 | [DTIAM用法与近两年模型](BIOMASTER_DTI_FINAL_MODEL_MATRIX_20260920_ZH.md) | 六个已有通道＋四个优先新增模型；23项资源/处置登记；720×384分数快照另含覆盖状态 |
 | 有效机器协议 | [ACTIVE_PROTOCOL.json](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json) | A协议及现成系统比较补充规则的路径与哈希 |

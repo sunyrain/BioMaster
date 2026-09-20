@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-20T17:20:33.753347+00:00",
+  "frozen_v1_files_unchanged": 62,
+  "previous_A_protocol_and_runs_unchanged": true,
+  "active_hashes_match": true,
+  "full_score_rows": 276480,
+  "primary_matrix_pairs": 69120,
+  "independent_rank_checks": 24,
+  "finite_observed_scores": true,
+  "scope_and_analysis_manifests_match": true,
+  "score_independent_scope": true,
+  "no_truth_labels": true,
+  "davis_evaluation_used": false,
+  "official_weight_download_audited_separately": true,
+  "producer_sha256": "eb278fb16bd8907a6ac29ab866d17b4cd01f0dca688da51eb27065bd2f6a3547"
+}

@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-09-20T16:54:23.992755+00:00",
+  "status": "PASS",
+  "families": [
+    "ConPLex",
+    "DTBind",
+    "DrugCLIP",
+    "EviDTI",
+    "ProbeMatchDTI",
+    "ScopeDTI_light",
+    "nesso"
+  ],
+  "asset_files": 44,
+  "bytes_reused": 12301321641,
+  "duplicated_weight_bytes": 0
+}

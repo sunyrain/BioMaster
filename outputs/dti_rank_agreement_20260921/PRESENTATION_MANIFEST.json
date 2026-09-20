@@ -1,0 +1,10 @@
+{
+  "source_manifest_sha256": "35e12506c6dc679c27ed67e644331672c367f79e94ee2b034d8d933ab8b9a8b9",
+  "producer_sha256": "7725b3f3045d4bd93826114410291dab3a3bc1dfac678cd1f8f0bbdba63bf6db",
+  "outputs": {
+    "outputs/dti_rank_agreement_20260921/COMMON_COVERAGE_RANK_AGREEMENT.png": "acca3dc67c107dfe92576a8ea0cabc8dbd18ef7035b205bc1457bf2b545b7ef1",
+    "outputs/dti_rank_agreement_20260921/COMMON_COVERAGE_RANK_AGREEMENT.pdf": "eda623fb1e85187a2a862401335dfeb118c719c435d52f63f2a4abb4501e88c0",
+    "outputs/dti_rank_agreement_20260921/CHANCE_ADJUSTED_TOPK_SUMMARY.csv": "21ebac90c60a70fb90d833d0fb190f0880fa229d7bd1ae5051c3c52cbd7bb518",
+    "docs/BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md": "b0c9b2c8b93a70a488e919bbb978317701f35df6e42630fd6b4273ee402ab049"
+  }
+}

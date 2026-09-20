@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-20T10:19:56.921729+00:00",
+  "created_utc": "2026-09-20T17:17:24.421727+00:00",
   "architecture_rows": 24,
   "data_resource_rows": 48,
   "weight_rows": 117,
@@ -14,16 +14,17 @@
     "outputs/dti_research_preparation_20260920/DATASET_COUNTS.csv": "825bcbae751cbe96f659eb10cd2a468393a5682d161e0a0196c308e774ad014c",
     "outputs/dti_research_preparation_20260920/FEATURE_REGISTRY.json": "c93f5351e9edb8dd472d33d039747a0f2a4acf3acec7b151c44be97e93461ba4",
     "configs/dti_reliability_20260920/PROTOCOL.json": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
-    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "657046b1bcdcd3c6c50f28e6686b01bdc6d216107a0bd11ad7519188be242859",
+    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "40aa1ff42dac4bdf1719f5f8b572d77d3851a2a9480c98ab9164a5e4de7c03a2",
     "configs/dti_reliability_A_20260920_v2/PROTOCOL.json": "ae368bf6d3ce9b3ee9a77186712a76ccc2c84fd732f9e11a63a37793606611d5",
-    "configs/dti_official_weights_20260920/PROTOCOL_v3.json": "d4e7c77db7ee9ffd920d2ca6d6670bcc4f9b5d53ddc1a4570830bb00d9e38a5e"
+    "configs/dti_official_weights_20260920/PROTOCOL_v3.json": "d4e7c77db7ee9ffd920d2ca6d6670bcc4f9b5d53ddc1a4570830bb00d9e38a5e",
+    "configs/dti_ranking_scope_20260921/PROTOCOL.json": "d936b6b8da2e9ca0621204d79ae07b35409d75b396085bed2ba92838e90cfdee"
   },
   "outputs": {
     "outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv": "2b07188ff80d5de03e980dd08887f2b74ce10d6a792e7649b1ac50625181f869",
     "outputs/dti_resource_catalog_20260920/DATA_RESOURCE_LIST.csv": "1ff3a8b7168aab53e2b2004da5db944dc26a3b12499d22c9f89efe686d5370f1",
     "outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv": "773654742f3c323efd15c83919cec9b4d4c9fc9a8ee5dae61f65fdaff73b377b",
     "outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv": "83c6952632230ea55d2eff829100469bb2239c12f39dd16f3256aa293386cda7",
-    "docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md": "785293fdcaa065d427c23fd6e24391914b81aa24bc495f9f65db786ee28de3ee"
+    "docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md": "29c4b1c5b0e83706995108be16086acaad13d5d7673eb24ae54444d3affba3b6"
   },
-  "producer_sha256": "5b545ac8ec52f1b6b9701ae23972c68975d080ca5d6f136c05a2871f6d2b81ad"
+  "producer_sha256": "931e0453928722382b8ee41a15411b3c4f9e4e51a2488bf0d3b4e6010ad971dd"
 }

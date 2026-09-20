@@ -1,0 +1,38 @@
+{
+  "snapshot_utc": "2026-09-20T17:06:19.812919+00:00",
+  "current_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "DTIAM_A",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence"
+  ],
+  "planned_additions_not_in_current_statistics": [
+    "MAMMAL_pKd",
+    "BALM",
+    "EviDTI",
+    "GraphBAN"
+  ],
+  "primary_requested_pairs": 69120,
+  "parent_requested_pairs": 276480,
+  "no_experimental_labels_read": true,
+  "davis_used": false,
+  "new_training": false,
+  "truth_or_accuracy_claim": false,
+  "common_coverage_not_complete_matrix": true,
+  "uncertainty": "Descriptive point summaries only. No significance or population-wide stability claim from this snapshot.",
+  "query_gate": "At least20 jointly scored candidates; disclose coverage and candidate ranges.",
+  "selection_manifest_sha256": "b78bc883f6a68d629ec292e90aaaea477b57475a6de1e09f6b8bbbd1f3d97872",
+  "native_score_sources": {
+    "outputs/model_agreement_20260917/SCORE_SNAPSHOT.csv.gz": "003e9ab8c60686194d98ac7091948a2d1ae70a5e6b7100206d4260e103e8bb9e",
+    "outputs/dtiam_a_catalog_20260917/DTIAM_A_720X384_SCORES.csv.gz": "f2b0c550890941e8c8c445afb3ff4812a3a9f04eecf6cc9e277b1111119d4e96"
+  },
+  "artifacts": {
+    "SIX_CURRENT_SCORE_SNAPSHOT.csv.gz": "8d925ceef3779ca66eca23daecf584dff02f49d533a4abd915cf95c5ddb22faf",
+    "PER_QUERY_RANK_AGREEMENT.csv.gz": "d64ff4349077a585c0f4d360ea71cea6f2bb3e90a4ac04fe8f46f8f6fed4113e",
+    "RANK_AGREEMENT_SUMMARY.csv": "a80cc6df42907ba326d31d820c4644acd16775ef31d13e6716bcdca6caeb0456",
+    "FAMILY_RANK_AGREEMENT_SUMMARY.csv": "c923895967609d6015078b3483b5c6c0d5c63ad450058a195d1447c1d07004d7",
+    "COVERAGE.csv": "e8e5fdc26c0b75adb424d7d46ab727ff499bf85c618fb4c91f9010d30c80c329"
+  }
+}

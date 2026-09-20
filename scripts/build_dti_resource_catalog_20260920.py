@@ -245,6 +245,8 @@ def main():
     current_note=''
     if active.exists():
         current_note='当前训练范围已按用户决定改为A主线：先30项共同输入/目标实验，主线含局部模型与冷靶点共45项，新增B为0。详见[A-only重训决策](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)及[当前协议指针](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json)。下列资产清单保留B历史资源，不表示继续安排B训练。'
+        if json.loads(active.read_text()).get('ranking_study_scope'):
+            current_note='2026-09-21当前先做[双向排序一致性与推荐分歧](BIOMASTER_DTI_RANKING_SCOPE_20260921_ZH.md)，不使用Davis、不判断正确性、不启动训练。A主线45项保留作后续受控解释，新增B为0。新增官方任务包见[权重下载报告](BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md)；下方保留此前本地资产。'
     text=['# DTI研究架构、数据资源与已有权重清单','',
         '整理日期：2026-09-20。以已冻结的研究准备材料及本轮本地代码/文件核对为依据。新增训练状态仍为未开始；本清单不改动原冻结数据与协议。',
         '',current_note,
@@ -253,7 +255,7 @@ def main():
         '- [数据资源列表](../outputs/dti_resource_catalog_20260920/DATA_RESOURCE_LIST.csv)：来源、成员、辅助监督、特征、结构/细胞/图谱、实验清单。',
         '- [已有权重列表](../outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv)：逐资产路径、大小、SHA256、来源与当前状态。',
         '- [权重分类汇总](../outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv)：按模型系列和资产类型统计。',
-        '', '研究名单修订v3：ReTargetMap不参加；官方DTIAM任务权重未确认，按用户授权复用本地A版。已有六个分数通道，优先补入四个模型，形成十模型计划。[最终模型矩阵](BIOMASTER_DTI_FINAL_MODEL_MATRIX_20260920_ZH.md)。下方为本地部署/历史资产，新发现但未下载的权重见最终矩阵。',
+        '', '研究名单修订v3：ReTargetMap不参加；官方DTIAM任务权重未确认，按用户授权复用本地A版。已有六个分数通道，优先补入四个模型，形成十模型计划。[最终模型矩阵](BIOMASTER_DTI_FINAL_MODEL_MATRIX_20260920_ZH.md)。下方为此前本地部署/历史资产；新增权重的下载及校验状态以2026-09-21收集报告为准。',
         '', '## 1. 架构列表', '']
     for category in a['类别'].unique():
         text += ['### '+category,'',table(a[a['类别'].eq(category)],['名称','输入','配对计算','输出','当前状态']),'']
@@ -278,7 +280,7 @@ def main():
         '本表延续原公开来源/许可记录；文件存在和哈希登记不等于官方示例复现、独立测试成立或允许再分发。',
         '', '## 4. 使用顺序','',
         current_note or '先用BerMol＋统一ESM2和A原骨架成员完成21次受控架构对照，复用历史A/B及DTIAM结果；后续按有效协议推进。',
-        '当前执行范围见[A主线方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)，现成模型按[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。[v1准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[v1协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)保留冻结历史；其中87项旧队列已由A主线替代。',
+        '当前执行范围见[第一阶段排序研究](BIOMASTER_DTI_RANKING_SCOPE_20260921_ZH.md)；[A主线方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)保留作后续解释，现成模型按[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。[v1准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[v1协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)保留冻结历史；其中87项旧队列已由A主线替代。',
         '', '重建本清单：`OPENBLAS_NUM_THREADS=1 .venvs/frontier_dti/bin/python scripts/build_dti_resource_catalog_20260920.py`。该命令整理清单、复核路径，不训练或部署模型。','']
     DOC.write_text('\n'.join(text))
     result={'created_utc':datetime.now(timezone.utc).isoformat(),'architecture_rows':len(a),'data_resource_rows':len(d),
@@ -291,7 +293,7 @@ def main():
     if active.exists():
         result['inputs'][str(active.relative_to(ROOT))]=sha(active)
         active_config=json.loads(active.read_text())
-        for key in ['active_protocol','inference_comparison_addendum']:
+        for key in ['active_protocol','inference_comparison_addendum','ranking_study_scope']:
             if key in active_config:
                 result['inputs'][active_config[key]]=sha(ROOT/active_config[key])
     (OUT/'SUMMARY.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

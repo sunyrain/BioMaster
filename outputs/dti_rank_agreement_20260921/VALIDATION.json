@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "finite_input_scores": true,
+  "unique_pair_keys": true,
+  "tie_boundary_checks": true,
+  "no_truth_labels": true,
+  "producer_sha256": "9e86816c81ec3d1263cdf2fe6e7ca1385bd71763686ef9581472387ce5a2c03d"
+}

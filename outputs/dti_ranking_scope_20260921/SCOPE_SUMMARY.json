@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-09-20T17:06:19.003582+00:00",
+  "study_scope": "Phase1 bidirectional ranking agreement and recommendation divergence only; correctness deferred to phase2; Davis excluded.",
+  "application": {
+    "drugs": 720,
+    "targets": 96,
+    "pairs": 69120,
+    "parent_targets": 384,
+    "parent_pairs": 276480,
+    "sampling": "Round-robin molecular-function families, deterministic SHA256 seed20260921, prefer distinct known homology clusters. No scores, labels, SPR384 membership or runtime coverage used.",
+    "selected_known_homology_clusters": 91,
+    "selected_unmapped_homology_targets": 5,
+    "inherited_bias": "Parent720x384 was selected by the project; this subset is not an independent external dataset.",
+    "full_parent_matrix_role": "Supplementary candidate-pool sensitivity; never compare ranks across different denominators."
+  },
+  "phase1_labels_used": false,
+  "davis_used": false,
+  "new_phase1_training_fits": 0,
+  "interpretation": "Disagreement is not evidence of incorrectness; agreement is not evidence of correctness.",
+  "no_predictions_read": true,
+  "new_training_started": false,
+  "performance_metrics_computed": false,
+  "new_independent_external_correctness_claim_ready": false,
+  "inputs": {
+    "data/processed/biomaster_training_full_20260910_v1/TARGETS.parquet": "c29d500904f24e8dac4398037a39de301dc4b18cd938cc40cc260577f5d00233",
+    "data/research/dti_reliability_20260920_v1/TARGET_CLUSTERS.parquet": "771acf2ed36de4aaef6a99d3207a998fe4346eb9338d1af67efbb5f4685d989a",
+    "outputs/catalog_seven_models_20260916/DRUGS.csv": "43fbe86cb18665c697e520d3c5b856551a12aa54331963eeab3d47abfbdcbf61",
+    "outputs/catalog_seven_models_20260916/TARGETS.csv": "87aaa47324f9da8674d26794e0db7433bf82295463954282e16c9d2d4e5f19b6",
+    "outputs/biomaster_matrix_720x890_20260910/TARGET_INDEX.csv.gz": "48b557ebd0a7b054a3abc5eaf4475045bfd25b5293c964bfe1ddf04d5378eeda"
+  },
+  "artifacts": {
+    "data/research/dti_ranking_scope_20260921_v1/APPLICATION_720X96_PAIRS.csv.gz": "4935a4644988bb7dcaf90dbbead356560a83aff8cc09f49b529f0f1c87ea4e79",
+    "data/research/dti_ranking_scope_20260921_v1/APPLICATION_TARGET_INPUTS.parquet": "7cd69eee7b58a923629698b916f1a311a9c52193c65070cf9319eac17ed0ee5a",
+    "outputs/dti_ranking_scope_20260921/APPLICATION_720_DRUGS.csv": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+    "outputs/dti_ranking_scope_20260921/APPLICATION_96_TARGETS.csv": "e1749ce7d77b45d5c1de42dc0b53ec577c1cdec9c5e0a2eb9dcb87793f69ad5a",
+    "outputs/dti_ranking_scope_20260921/APPLICATION_FAMILY_COUNTS.csv": "e21b58c1446e620b1173613ec07e2ec4eda79cec1420dc73907523533abffab2",
+    "outputs/dti_ranking_scope_20260921/APPLICATION_TARGET_SELECTION_384.csv": "b68fd2740f5d81ab19e5f7de11283249394acf778897ea2e83b686f57c4a831f"
+  }
+}
