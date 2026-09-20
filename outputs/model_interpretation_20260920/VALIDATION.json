@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "local_links": 16,
+  "script_syntax": true,
+  "top10_matches_independent_snapshot": true,
+  "labeled_order_fractions_sum_to_one": true,
+  "matched_query_scope": true,
+  "figure_visually_checked": true,
+  "limitations": "Exploratory descriptive audit, not new independent performance evidence."
+}

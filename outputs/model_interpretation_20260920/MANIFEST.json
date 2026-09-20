@@ -1,0 +1,160 @@
+{
+  "snapshot_utc": "2026-09-20T01:47:20.991593+00:00",
+  "files": {
+    "docs/BIOMASTER_MODEL_RESULT_INTERPRETATION_20260920_ZH.md": {
+      "bytes": 12086,
+      "sha256": "3fb1d64a90ffa66f139a0b2d01c2053be32c76b93c0df6545273a2b51a2889fc"
+    },
+    "outputs/model_interpretation_20260920/CONPLEX_NONZERO_SENSITIVITY.csv": {
+      "bytes": 419,
+      "sha256": "34d4ef53324299f02ae393c64679485aa0e8cea94fc9e172c7eadfd15a99c032"
+    },
+    "outputs/model_interpretation_20260920/CONPLEX_ZERO_AND_TOP10.csv": {
+      "bytes": 27734,
+      "sha256": "80c8022e20db9ebd0cf8b4704c78c7fd2af05a3e4bbc69e2d0957246533f096d"
+    },
+    "outputs/model_interpretation_20260920/DRUG_TOP10_FREQUENCY.csv": {
+      "bytes": 70811,
+      "sha256": "aa1a5bc27eccc95287a6c0473201c805ad099f4e86a96c61280e7372613e9878"
+    },
+    "outputs/model_interpretation_20260920/FIXED_378_LABELS_AND_SCORES.csv": {
+      "bytes": 481190,
+      "sha256": "196711c0b15e25956baad5ede817c45b8013c696c033ddfef4e247851511ba8b"
+    },
+    "outputs/model_interpretation_20260920/FIXED_LABEL_METRICS.csv": {
+      "bytes": 1097,
+      "sha256": "87ca3fe66c84c11f8f00f581837d3178f6e0438c3b7965c8a4c50304ef28159e"
+    },
+    "outputs/model_interpretation_20260920/LABELED_ORDER_AGREEMENT_SUMMARY.csv": {
+      "bytes": 14964,
+      "sha256": "a8cf79dae7f36db11c248135a2e878994979c5ba86fb0dfb7c22abf9bb450ca3"
+    },
+    "outputs/model_interpretation_20260920/MATCHED_QUERY_CATALOG_VS_LABELS.csv": {
+      "bytes": 7145,
+      "sha256": "5c9b5bc759c3d1e02cef9d43ad08fae02cf54b05544d258f4e4d4c9dd356dc1f"
+    },
+    "outputs/model_interpretation_20260920/MATCHED_QUERY_SUMMARY.csv": {
+      "bytes": 673,
+      "sha256": "efa59a5002f68777a1b4a09503dd53c9abc3b63d7e4a6c7950c700da62992425"
+    },
+    "outputs/model_interpretation_20260920/NESSO_CATALOG_HEADS.csv.gz": {
+      "bytes": 1156022,
+      "sha256": "67e31267c77be77c80481bbda970ccb1ddf2bf98c34a02f0454c3b7fea7e2a02"
+    },
+    "outputs/model_interpretation_20260920/NESSO_HEAD_STRATA.csv": {
+      "bytes": 16472,
+      "sha256": "108a29b97dfbf5f8fb3272fd9ed8bb10d3ec1d1e226c02a1a37615ba2b1b5ad6"
+    },
+    "outputs/model_interpretation_20260920/NESSO_HEAD_STRATA_SUMMARY.csv": {
+      "bytes": 400,
+      "sha256": "f4095914b61d2a65d043e5d89a0ce7aab2f17f2c79409aef33cb91f2b66a81c3"
+    },
+    "outputs/model_interpretation_20260920/NESSO_LABELED_HEAD_CORRELATION.csv": {
+      "bytes": 302,
+      "sha256": "7369ca404a80bacda975d1f4bfc6e1068d5f29af0e57331fc7858d034ed0dc9b"
+    },
+    "outputs/model_interpretation_20260920/PER_QUERY_LABELED_ORDER_AGREEMENT.csv": {
+      "bytes": 199200,
+      "sha256": "ccbddcf2775eae300cccfd9dc3e07efe87495b63e65f011e464bf0a0be8c7d87"
+    },
+    "outputs/model_interpretation_20260920/PER_QUERY_LABEL_METRICS.csv": {
+      "bytes": 48469,
+      "sha256": "b6434992902ed7f7ad0289c81700cbf76a39ebf94cc2d69e386abb88626d44a9"
+    },
+    "outputs/model_interpretation_20260920/PER_TARGET_TOP10_LANDING.csv": {
+      "bytes": 89010,
+      "sha256": "0b289e21b3e5f3c1903bc75ed984f28bac949dbc640b07309e32617b58883c80"
+    },
+    "outputs/model_interpretation_20260920/PER_TARGET_TOPK_OVERLAP.csv": {
+      "bytes": 252183,
+      "sha256": "2a13481167f5639513a43405d594614420b859f31aa331c4ad879a23fcc7694c"
+    },
+    "outputs/model_interpretation_20260920/QUERY_LABEL_METRICS.csv": {
+      "bytes": 3386,
+      "sha256": "0bb09e8ce84cbb905e0e98ece61cb559791bca2fbdc06fa09be6b97e0b3d7d61"
+    },
+    "outputs/model_interpretation_20260920/SUMMARY.json": {
+      "bytes": 2528,
+      "sha256": "0ffe0c39d896543bc16a4bd66cafdf52b28187688509947d70a9c23578f9873d"
+    },
+    "outputs/model_interpretation_20260920/TOP10_LANDING_SUMMARY.csv": {
+      "bytes": 2384,
+      "sha256": "90332cc0f5f81cb7d5af05e5ee5dc8bbb7479cb4e484367c952f8ded4e339c70"
+    },
+    "outputs/model_interpretation_20260920/TOPK_OVERLAP.png": {
+      "bytes": 166169,
+      "sha256": "24da37b07ec9fbd5fcbfd473d5fef4d70bede6d62906f6b92e2ec4197668238e"
+    },
+    "outputs/model_interpretation_20260920/TOPK_OVERLAP.svg": {
+      "bytes": 53135,
+      "sha256": "d76e69557d244f82015c93c2f66ccaf86d5b523d2fef7413d25a036f7ac4e381"
+    },
+    "outputs/model_interpretation_20260920/TOPK_OVERLAP_SUMMARY.csv": {
+      "bytes": 5218,
+      "sha256": "bac7e7c93c7aab938c27456d04be4be7441773c88b33250528a9a9ceafc5719f"
+    },
+    "outputs/model_interpretation_20260920/VALIDATION.json": {
+      "bytes": 320,
+      "sha256": "98651d8576c16a639c1acb59b1076152d47f89a4fc400d51f1a76ad86a25e884"
+    },
+    "outputs/model_interpretation_20260920/latest_results/AGREEMENT_SUMMARY.csv": {
+      "bytes": 5015,
+      "sha256": "2a0f6ad728c4b92e89a96e42b805588bd0e8e24a26f51d8ae50eccf5ce67a502"
+    },
+    "outputs/model_interpretation_20260920/latest_results/CONPLEX_CONSTANT_QUERY_AUDIT.csv": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "outputs/model_interpretation_20260920/latest_results/COVERAGE.csv": {
+      "bytes": 347,
+      "sha256": "e945f72ca33424a95d559509879ad0aa4444f596f3dfaad87c96953177166ca6"
+    },
+    "outputs/model_interpretation_20260920/latest_results/DTBIND_INPUT_AVAILABILITY.csv": {
+      "bytes": 11126,
+      "sha256": "5992ae69c36a444d5dc58315d69478410f117034d10efb0708b56bccac597812"
+    },
+    "outputs/model_interpretation_20260920/latest_results/FAILED_PREDICTIONS.csv": {
+      "bytes": 12188,
+      "sha256": "76650328fa77f4d07d35f4ba9f9bfa6f84aef43144dca3c1787553fc966a03b8"
+    },
+    "outputs/model_interpretation_20260920/latest_results/NESSO_TARGET_TIMINGS.csv": {
+      "bytes": 3559,
+      "sha256": "52dc5fd4acef3c2766d444d755ee1e0f60c184c7c98d0fc5ed9966ce7c3c829f"
+    },
+    "outputs/model_interpretation_20260920/latest_results/PER_QUERY_AGREEMENT.csv": {
+      "bytes": 1383925,
+      "sha256": "f41506c703a04949b5019ac5bef1d117bc63a39ec3f184c3e29f9b9d89a4c1e3"
+    },
+    "outputs/model_interpretation_20260920/latest_results/SCORE_SNAPSHOT.csv.gz": {
+      "bytes": 14441604,
+      "sha256": "4675953f10410584d7e09578668424f29998c6d3b434b63ae664e6002374bc9d"
+    },
+    "outputs/model_interpretation_20260920/latest_results/SEVEN_SHARED_COMPLETE_TARGETS.csv.gz": {
+      "bytes": 2218061,
+      "sha256": "770abfdbeb8245e0f12150a1f093defe10c812556e91a382cf4cbafb5e21abda"
+    },
+    "outputs/model_interpretation_20260920/latest_results/SHARED_TARGETS.csv": {
+      "bytes": 22861,
+      "sha256": "c8c5f15108e9f929d8f07cd1f6889135fb31e6399ae618c24462c31fcb37843d"
+    },
+    "outputs/model_interpretation_20260920/latest_results/SUMMARY.json": {
+      "bytes": 4303,
+      "sha256": "5a458e59f31901b42419ba380a0de975bfb3ebc2bdcd0c701fc08d7eb71db460"
+    },
+    "outputs/model_interpretation_20260920/latest_results/TARGET_STATUS_SNAPSHOT.csv": {
+      "bytes": 28550,
+      "sha256": "e55d7783159536c9833e25afd10a42f5c538f3cb5d9b553521f4a176d95d4b00"
+    },
+    "outputs/model_interpretation_20260920/latest_results/VALIDATION.json": {
+      "bytes": 404,
+      "sha256": "29439148878237149bfb9bf7d78a34b9dd9d722abeee0d8c024b9b5b78ed73f6"
+    },
+    "scripts/interpret_model_results_20260920.py": {
+      "bytes": 16623,
+      "sha256": "f731e8462a75bb48e55fe2e3ec88f6cb064631b6c7b9562e690aa98d810482f0"
+    }
+  },
+  "large_local_only": "latest_results/SCORE_SNAPSHOT.csv.gz",
+  "production_changes": false,
+  "new_training": false
+}

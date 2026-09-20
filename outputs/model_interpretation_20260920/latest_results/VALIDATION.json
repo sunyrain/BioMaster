@@ -1,0 +1,10 @@
+{
+  "checks": "PASS",
+  "scipy_rank_checks": "PASS",
+  "old_score_max_abs_delta": 1.1102230246251565e-16,
+  "old_score_comparison_atol": 1e-12,
+  "old_top10_max_abs_delta": 0.0,
+  "old_spearman_max_abs_delta": 2.7311535491143096e-05,
+  "precision_note": "Live database scores retain original precision; prior CSV round trips can alter near-ties.",
+  "conplex_constant_drug_queries_in_shared_subset": 0
+}

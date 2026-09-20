@@ -1,0 +1,85 @@
+{
+  "checks": "PASS",
+  "shared_targets": 50,
+  "shared_drugs": 719,
+  "shared_pairs": 35950,
+  "conplex": {
+    "zero_pairs": 11200,
+    "zero_fraction": 0.31154381084840055,
+    "targets_with_zero_in_top10": 0,
+    "minimum_top10_cutoff": 0.13849744,
+    "constant_drug_queries": 0
+  },
+  "nesso_head_strata": [
+    {
+      "stratum": "all",
+      "targets": 50,
+      "valid_targets": 50,
+      "pairs": 35950,
+      "correlation_pairs": 35950,
+      "mean_spearman": -0.09577598738035739,
+      "negative_queries": 39
+    },
+    {
+      "stratum": "binder_ge_0.5",
+      "targets": 50,
+      "valid_targets": 50,
+      "pairs": 3333,
+      "correlation_pairs": 3333,
+      "mean_spearman": 0.3199241661566951,
+      "negative_queries": 3
+    },
+    {
+      "stratum": "binder_ge_0.8",
+      "targets": 50,
+      "valid_targets": 16,
+      "pairs": 595,
+      "correlation_pairs": 424,
+      "mean_spearman": 0.47055484073814247,
+      "negative_queries": 0
+    },
+    {
+      "stratum": "binder_lt_0.5",
+      "targets": 50,
+      "valid_targets": 50,
+      "pairs": 32617,
+      "correlation_pairs": 32617,
+      "mean_spearman": -0.17886083776556902,
+      "negative_queries": 41
+    },
+    {
+      "stratum": "binder_top50",
+      "targets": 50,
+      "valid_targets": 50,
+      "pairs": 2500,
+      "correlation_pairs": 2500,
+      "mean_spearman": 0.344368787515006,
+      "negative_queries": 0
+    },
+    {
+      "stratum": "nonzero_crop_entropy",
+      "targets": 50,
+      "valid_targets": 50,
+      "pairs": 35887,
+      "correlation_pairs": 35887,
+      "mean_spearman": -0.09640797006369448,
+      "negative_queries": 39
+    }
+  ],
+  "label_checks": {
+    "fixed_labels": 378,
+    "positive": 103,
+    "ab_unseen_labels": 141,
+    "ab_unseen_positive": 33,
+    "prior_ap_reproduced": true,
+    "scope": "Repeatedly examined historical panel; unknown public-model training overlap. Binary label ordering is not affinity ordering."
+  },
+  "limitations": [
+    "Exploratory post-hoc diagnostics; no additional training, no model selection or production changes.",
+    "Fifty early-completed targets are not a representative random sample.",
+    "Conditioning on a model output changes the distribution and cannot establish causality.",
+    "Unknown labels remain unknown; candidate overlap is not precision.",
+    "Positive-negative ordering contrasts share entities and observations; they are not independent experiments."
+  ],
+  "input_sha256": "770abfdbeb8245e0f12150a1f093defe10c812556e91a382cf4cbafb5e21abda"
+}
