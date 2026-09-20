@@ -1,0 +1,24 @@
+﻿名称,类别,输入,配对计算,输出,当前状态,主要用途,代码或方案位置,官方来源
+ReTargetMap 当前生产版,现用七模型,DrugCLIP512＋Morgan2048＋图均值40；ESM2全局1280,"两侧投影；[d,p,d×p,abs(d−p)]与残差MLP；当前global分支",双向排序logit,有生产权重,保留原生产基线,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,
+DTIAM 加强版A,现用七模型,BerMol768＋ESM21280,拼接后AutoGluon树/神经网络集成,Kd/Ki＋明确失活二分类分数,A/B各3套；网站选A seed20260923,强表征＋学习器对照,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/CSUBioGroup/DTIAM
+ConPLex,现用七模型,Morgan2048＋ProtBERT1024,Linear→ReLU双塔＋余弦,相似度,1个官方任务检查点,双塔和并列秩诊断,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/samsledje/ConPLex
+DrugCLIP,现用七模型,分子3D构象＋指定口袋3D原子,双UniMol式编码器＋归一化内积；六折均值,检索相似度,6折权重已登记,结构口袋检索对照,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/THU-ATOM/Drug-The-Whole-Genome
+ProbeMatchDTI,现用七模型,蛋白/SMILES token＋分子2D图,迭代探针、跨模态注意力、多路融合,二分类分数,All_Model及编码器已登记,局部交互对照,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/developer-hq/ProbeMatchDTI
+DTBind,现用七模型,ProtT5残基＋蛋白结构图/表面＋分子2D图,GNN＋双向交叉注意力＋门控,当前occurrence二分类；affinity/site另分支,3种任务权重；当前启用occurrence,结构图交互对照,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/liqy09/DTBind
+Nesso-1,现用七模型,ESM2残基＋分子3D构象,Pairformer、距离关系及口袋裁剪、分类与回归头,binder；log10(IC50/μM)，连续头越低越强,权重及配置已登记；目录补算中,同主干不同头与适用区域,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/recursionpharma/nesso
+Palinova A/B 历史重训,已有自训,DrugCLIP/Morgan/图均值＋ESM2全局,原全局配对MLP；按变体增加排序与端点回归辅助,二分类及分端点回归,6固定步数＋24多任务＋30 assay-aware拟合,复用目标函数、采样与种子证据,biomaster/endpoint_multitask.py,
+EviDTI,扩展模型,蛋白序列表征＋分子2D/3D特征,蛋白LightAttention、分子CNN/几何图网络与融合,证据式分类；Davis/KIBA任务头分别解释,3套任务权重；目录适配待核验,不确定性方法对照,third_party/sota_dti_2026/EviDTI/drugbank_model.py,https://github.com/zhaoyanpeng208/EviDTI
+SCOPE 轻量版,扩展模型,分子3D图＋蛋白序列,分子GVP＋蛋白CNN＋双线性注意力,DTI分类,25个检查点；现有入口使用固定目标库,几何编码/注意力对照；任意新靶点适配未认证,.external/scope_dti_lightweight/models.py,https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference
+TAPB,扩展模型,MolFormer tokenizer的SMILES token＋ESM2蛋白表征,分子Transformer＋交叉注意力解码器＋靶点先验干预,DTI分类,代码/编码器资源在；合格任务权重未确认,靶点先验偏差对照；不把缓存MolFormer等同已训练TAPB,third_party/sota_dti_2026/TAPB/models/tapb.py,https://github.com/GaomingL1n/TAPB
+DrugBAN,扩展模型,分子2D图＋蛋白序列,分子GCN＋蛋白CNN＋双线性注意力,DTI分类,有代码；本地一轮演示模型不列合格基线,可重训的局部交互基线,third_party/DrugBAN/models.py,https://github.com/peizhenbai/DrugBAN
+DeepDTA,扩展模型,SMILES与蛋白序列字符,两侧1D-CNN＋池化拼接＋全连接,连续任务回归,有代码；现成合格任务权重未确认,经典序列回归参照,third_party/DeepDTA/source/run_experiments.py,https://github.com/hkmztrk/DeepDTA
+药物单侧,待训受控架构,bermol,g(d),二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,实体偏好,configs/dti_reliability_20260920/PROTOCOL.json,
+蛋白单侧,待训受控架构,esm2_dtiam,h(p),二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,实体偏好,configs/dti_reliability_20260920/PROTOCOL.json,
+两侧加性,待训受控架构,bermol＋esm2_dtiam,g(d)+h(p)+b,二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,无配对交互参照,configs/dti_reliability_20260920/PROTOCOL.json,
+双塔余弦,待训受控架构,bermol＋esm2_dtiam,"a*cos(phi(d),psi(p))+b",二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,低成本匹配,configs/dti_reliability_20260920/PROTOCOL.json,
+低秩双线性,待训受控架构,bermol＋esm2_dtiam,sum(u(d)*v(p))+g(d)+h(p),二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,显式乘性交互,configs/dti_reliability_20260920/PROTOCOL.json,
+全局交互MLP,待训受控架构,bermol＋esm2_dtiam,"MLP([u,v,u*v,abs(u-v)])",二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,受控配对主干,configs/dti_reliability_20260920/PROTOCOL.json,
+LightGBM,待训受控架构,bermol＋esm2_dtiam,"GBDT(concat(d,p))",二分类；目标干预组另加辅助,协议已登记；新受控权重尚未训练,强树学习器,configs/dti_reliability_20260920/PROTOCOL.json,
+旧结构交互预训练教师,辅助路线,实验复合物原子/残基与接触/距离,局部结构交互编码＋几何读出,接触与距离表征,结构预训练权重在；部分大编码缓存需重建,为JEPA准备教师；未证实提升亲和,docs/BIOMASTER_PM_JEPA_MODALITIES_AND_RESOURCES_20260914_ZH.md,
+蛋白—分子组合JEPA,辅助路线,便宜的蛋白/分子嵌入；训练时部分昂贵教师视图,预测组合潜在表示z，再预测性质,潜在表示及性质,设计阶段；无本方案已训练学生权重,后续表示学习实验,docs/BIOMASTER_PM_JEPA_DESIGN_20260914_ZH.md,
+TxGNN,辅助路线,药物—疾病等异构知识图谱,异构图编码及关系解码,药物—疾病适应证logit,官方模型本地存在；已做多方向推理,疾病假设支持，不作直接亲和真值,scripts/run_txgnn_all_diseases_720_20260909.py,
