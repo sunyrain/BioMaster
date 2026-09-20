@@ -234,8 +234,13 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     a=architectures();d=data_resources();w=weights()
     assert len(w)==117 and w['资产编号'].is_unique
+    active=ROOT/'configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json'
+    current_note=''
+    if active.exists():
+        current_note='当前训练范围已按用户决定改为A主线：先30项共同输入/目标实验，主线含局部模型与冷靶点共45项，新增B为0。详见[A-only重训决策](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)及[当前协议指针](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json)。下列资产清单保留B历史资源，不表示继续安排B训练。'
     text=['# DTI研究架构、数据资源与已有权重清单','',
         '整理日期：2026-09-20。以已冻结的研究准备材料及本轮本地代码/文件核对为依据。新增训练状态仍为未开始；本清单不改动原冻结数据与协议。',
+        '',current_note,
         '', '三个主表均为UTF-8 BOM CSV，可用Excel打开：', '',
         '- [架构列表](../outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv)：输入、配对计算、输出、用途与实现状态。',
         '- [数据资源列表](../outputs/dti_resource_catalog_20260920/DATA_RESOURCE_LIST.csv)：来源、成员、辅助监督、特征、结构/细胞/图谱、实验清单。',
@@ -263,7 +268,7 @@ def main():
         'SCOPE的25个检查点按GPCR、IC、Kinase、NHR及Total五组各5个组织，任务适用范围仍需验证。TAPB、DrugBAN、DeepDTA未确认的合格任务权重不虚构为已有；新受控架构和JEPA学生当前也没有新权重。',
         '本表延续原公开来源/许可记录；文件存在和哈希登记不等于官方示例复现、独立测试成立或允许再分发。',
         '', '## 4. 使用顺序','',
-        '先用BerMol＋统一ESM2和A原骨架成员完成21次受控架构对照，复用历史A/B及DTIAM结果；再做冷靶点、目标函数与数据组成干预。EviDTI/SCOPE先适配复现，TAPB等另行重训；结构JEPA与图谱保持各自的监督定义。',
+        current_note or '先用BerMol＋统一ESM2和A原骨架成员完成21次受控架构对照，复用历史A/B及DTIAM结果；后续按有效协议推进。',
         '完整实验和评估规则见[研究准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[执行协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)。',
         '', '重建本清单：`OPENBLAS_NUM_THREADS=1 .venvs/frontier_dti/bin/python scripts/build_dti_resource_catalog_20260920.py`。该命令整理清单、复核路径，不训练或部署模型。','']
     DOC.write_text('\n'.join(text))
@@ -274,6 +279,7 @@ def main():
         'inputs':{str(p.relative_to(ROOT)):sha(p) for p in [PREP/'WEIGHT_REGISTRY.csv',PREP/'DATASET_COUNTS.csv',PREP/'FEATURE_REGISTRY.json',ROOT/'configs/dti_reliability_20260920/PROTOCOL.json']},
         'outputs':{str(p.relative_to(ROOT)):sha(p) for p in [*OUT.glob('*.csv'),DOC]},
         'producer_sha256':sha(Path(__file__))}
+    if active.exists():result['inputs'][str(active.relative_to(ROOT))]=sha(active)
     (OUT/'SUMMARY.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({k:result[k] for k in ['architecture_rows','data_resource_rows','weight_rows','core_weight_path_aliases','path_checks']},indent=2))
 

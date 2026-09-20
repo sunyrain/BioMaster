@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "main_fits": 45,
+  "first_phase_fits": 30,
+  "conditional_fits": 15,
+  "new_B_fits": 0,
+  "active_pointer_hashes_match": true,
+  "previous_frozen_package_unchanged": true,
+  "A_exact_regression_rows": 192469,
+  "A_exact_regression_unique_pairs": 191189,
+  "local_document_links_valid": true
+}

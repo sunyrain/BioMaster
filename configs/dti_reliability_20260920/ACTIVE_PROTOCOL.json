@@ -1,0 +1,10 @@
+{
+  "active_protocol": "configs/dti_reliability_A_20260920_v2/PROTOCOL.json",
+  "active_protocol_sha256": "ae368bf6d3ce9b3ee9a77186712a76ccc2c84fd732f9e11a63a37793606611d5",
+  "active_main_runs": "outputs/dti_reliability_A_plan_20260920/EXPERIMENT_MATRIX_A.csv",
+  "main_runs_sha256": "def03e6b0c74a72855cd543ed800481564c995f9850011cec1a82aeeb478b74b",
+  "conditional_runs": "outputs/dti_reliability_A_plan_20260920/CONDITIONAL_EXPERIMENTS_A.csv",
+  "superseded_run_registry": "outputs/dti_research_preparation_20260920/EXPERIMENT_MATRIX.csv",
+  "scope": "A only; default excludes conditional experiments",
+  "new_training_started": false
+}

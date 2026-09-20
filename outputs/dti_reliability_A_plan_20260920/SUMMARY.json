@@ -1,0 +1,30 @@
+{
+  "status": "A_ONLY_PLAN_PREPARED_NOT_TRAINING",
+  "parent_protocol_sha256": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
+  "main_fits": 45,
+  "first_phase_fits": 30,
+  "conditional_fits": 15,
+  "new_B_fits": 0,
+  "deferred_previous_B_AB_fits": 24,
+  "main_by_stage": {
+    "A1": 21,
+    "A2": 9,
+    "A3": 3,
+    "A4": 12
+  },
+  "all_members_in_existing_frozen_manifest": true,
+  "training_runner_still_required": true,
+  "native_adapter_still_required": true,
+  "existing_dtiam_A_fits": 3,
+  "source_implementation_checks": [
+    "third_party/DrugBAN/models.py",
+    "third_party/sota_dti_2026/TAPB/models/tapb.py"
+  ],
+  "limitations": [
+    "Retrospective labels previously viewed",
+    "A does not represent all functional endpoints",
+    "Measured drug-query coverage remains sparse",
+    "Native DrugBAN changes representation as well as architecture"
+  ],
+  "producer_sha256": "2b473bc8e61b3fb817a37ce9e1c4cf646797d906eec03c343e64347855f62d28"
+}

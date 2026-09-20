@@ -2,6 +2,8 @@
 
 整理日期：2026-09-20。以已冻结的研究准备材料及本轮本地代码/文件核对为依据。新增训练状态仍为未开始；本清单不改动原冻结数据与协议。
 
+当前训练范围已按用户决定改为A主线：先30项共同输入/目标实验，主线含局部模型与冷靶点共45项，新增B为0。详见[A-only重训决策](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)及[当前协议指针](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json)。下列资产清单保留B历史资源，不表示继续安排B训练。
+
 三个主表均为UTF-8 BOM CSV，可用Excel打开：
 
 - [架构列表](../outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv)：输入、配对计算、输出、用途与实现状态。
@@ -197,7 +199,7 @@ SCOPE的25个检查点按GPCR、IC、Kinase、NHR及Total五组各5个组织，�
 
 ## 4. 使用顺序
 
-先用BerMol＋统一ESM2和A原骨架成员完成21次受控架构对照，复用历史A/B及DTIAM结果；再做冷靶点、目标函数与数据组成干预。EviDTI/SCOPE先适配复现，TAPB等另行重训；结构JEPA与图谱保持各自的监督定义。
+当前训练范围已按用户决定改为A主线：先30项共同输入/目标实验，主线含局部模型与冷靶点共45项，新增B为0。详见[A-only重训决策](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)及[当前协议指针](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json)。下列资产清单保留B历史资源，不表示继续安排B训练。
 完整实验和评估规则见[研究准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[执行协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)。
 
 重建本清单：`OPENBLAS_NUM_THREADS=1 .venvs/frontier_dti/bin/python scripts/build_dti_resource_catalog_20260920.py`。该命令整理清单、复核路径，不训练或部署模型。

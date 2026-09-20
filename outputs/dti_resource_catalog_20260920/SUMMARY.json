@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-20T03:59:44.102428+00:00",
+  "created_utc": "2026-09-20T06:46:52.524678+00:00",
   "architecture_rows": 23,
   "data_resource_rows": 48,
   "weight_rows": 117,
@@ -13,14 +13,15 @@
     "outputs/dti_research_preparation_20260920/WEIGHT_REGISTRY.csv": "c803066a57f8461c6fc2ccca2f70f406f7d6ea0b43cee0d84a82767add53c008",
     "outputs/dti_research_preparation_20260920/DATASET_COUNTS.csv": "825bcbae751cbe96f659eb10cd2a468393a5682d161e0a0196c308e774ad014c",
     "outputs/dti_research_preparation_20260920/FEATURE_REGISTRY.json": "c93f5351e9edb8dd472d33d039747a0f2a4acf3acec7b151c44be97e93461ba4",
-    "configs/dti_reliability_20260920/PROTOCOL.json": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b"
+    "configs/dti_reliability_20260920/PROTOCOL.json": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
+    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "15fc19eacbe55a6795553a68d5c3c84bfde7b7c2f31e66035e589e8b015717cb"
   },
   "outputs": {
     "outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv": "406cedffb4ff12eec49493e1d8f70f52718a57bff9f96d4b83a2fcb1eaa0fcc5",
     "outputs/dti_resource_catalog_20260920/DATA_RESOURCE_LIST.csv": "1ff3a8b7168aab53e2b2004da5db944dc26a3b12499d22c9f89efe686d5370f1",
     "outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv": "773654742f3c323efd15c83919cec9b4d4c9fc9a8ee5dae61f65fdaff73b377b",
     "outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv": "83c6952632230ea55d2eff829100469bb2239c12f39dd16f3256aa293386cda7",
-    "docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md": "4de8a47a8fd770e43cbec2b3d51a43877b33ae950197128829680093c75049bc"
+    "docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md": "8559a79ddcbcb8f959ceb2419bcbeda870699ac8effbba27e3d6b624e49c7fef"
   },
-  "producer_sha256": "faa7940201ecc7cbd7855852c5b4a771d6c6c47508a1344f18900631036fb0c0"
+  "producer_sha256": "72f7f4869b898a36f5d3ddaf9b281de3790396b8fcc04500cbe1827c85d07307"
 }

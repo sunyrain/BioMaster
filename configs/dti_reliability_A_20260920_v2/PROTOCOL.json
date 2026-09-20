@@ -1,0 +1,283 @@
+{
+  "protocol_id": "dti_reliability_A_20260920_v2",
+  "status": "A_ONLY_RECOMMENDED_PLAN_NOT_STARTED_NOT_EXTERNALLY_PREREGISTERED",
+  "created_utc": "2026-09-20T06:44:48.448275+00:00",
+  "objective": "Explain pair selectivity and objective-induced disagreement on A, with targeted cold-target checks and existing public models.",
+  "evidence_status": {
+    "existing_computational_tests": "REPEATEDLY_VIEWED_EXPLORATORY",
+    "new_repartitions": "RETROSPECTIVE_FRESH_SUPERVISED_FITS_REQUIRED",
+    "public_pretraining_overlap": "UNKNOWN_UNLESS_EXPLICITLY_AUDITED",
+    "wetlab_384": "UNKNOWN_PENDING_USER",
+    "new_external_confirmatory_panel": "NOT_YET_QUALIFIED"
+  },
+  "frozen_artifacts": {
+    "outputs/dti_research_preparation_20260920/DATA_MANIFEST.json": "6f7cc1ba52960cd8a5457bfb4c7c5e3167c6ed623749d607a3c86be6711d5c9a",
+    "outputs/dti_research_preparation_20260920/FEATURE_REGISTRY.json": "c93f5351e9edb8dd472d33d039747a0f2a4acf3acec7b151c44be97e93461ba4",
+    "outputs/dti_research_preparation_20260920/WEIGHT_REGISTRY.csv": "c803066a57f8461c6fc2ccca2f70f406f7d6ea0b43cee0d84a82767add53c008"
+  },
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "split_seed": 20260920,
+  "architectures": {
+    "drug_only": {
+      "inputs": [
+        "bermol"
+      ],
+      "formula": "g(d)",
+      "control": "No target information; constant within a drug-to-target query."
+    },
+    "protein_only": {
+      "inputs": [
+        "esm2_dtiam"
+      ],
+      "formula": "h(p)",
+      "control": "No drug information; constant within a target-to-drug query."
+    },
+    "additive": {
+      "inputs": [
+        "bermol",
+        "esm2_dtiam"
+      ],
+      "formula": "g(d)+h(p)+b",
+      "control": "No pair-dependent interaction term."
+    },
+    "dual_cosine": {
+      "inputs": [
+        "bermol",
+        "esm2_dtiam"
+      ],
+      "formula": "a*cos(phi(d),psi(p))+b",
+      "activation": "GELU",
+      "learnable_positive_scale": true
+    },
+    "bilinear": {
+      "inputs": [
+        "bermol",
+        "esm2_dtiam"
+      ],
+      "formula": "sum(u(d)*v(p))+g(d)+h(p)",
+      "rank": 64
+    },
+    "global_mlp": {
+      "inputs": [
+        "bermol",
+        "esm2_dtiam"
+      ],
+      "formula": "MLP([u,v,u*v,abs(u-v)])",
+      "pair_width": 256,
+      "pair_layers": 2
+    },
+    "lightgbm": {
+      "inputs": [
+        "bermol",
+        "esm2_dtiam"
+      ],
+      "formula": "GBDT(concat(d,p))",
+      "num_leaves": 63,
+      "learning_rate": 0.05,
+      "max_estimators": 3000,
+      "min_data_in_leaf": 50,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "early_stopping_rounds": 150,
+      "early_stopping_metric": "validation_binary_logloss",
+      "reporting_checkpoint": "Best bidirectional query-macro AP among saved 25-tree checkpoints; test never selects."
+    },
+    "drugban_native": {
+      "inputs": [
+        "molecular_2d_graph",
+        "protein_sequence_tokens"
+      ],
+      "implementation": "third_party/DrugBAN/models.py",
+      "model": "MolecularGCN + ProteinCNN + BANLayer + MLPDecoder",
+      "training": "Fresh full task model; vanilla supervised DrugBAN, no domain adaptation.",
+      "domain_adaptation": false,
+      "use_test_inputs_for_training": false,
+      "claim": "Native-input system comparison. Cannot isolate local attention from encoder, input and training differences.",
+      "preflight_required": [
+        "Map exact A molecule/sequence identities",
+        "Audit graph/token coverage and truncation",
+        "Native forward/gradient smoke test",
+        "Profile 200 updates and full validation",
+        "Freeze model-specific implementation settings before fitting"
+      ],
+      "hyperparameter_status": "Adapter and exact model-specific training settings pending; not execution-ready."
+    }
+  },
+  "inputs": {
+    "primary": [
+      "bermol",
+      "esm2_dtiam"
+    ],
+    "normalize": "Per-feature training-only mean/std; persist and reuse on validation/test.",
+    "esm2_window": "Original DTIAM-compatible first 1022 residues with its documented pooling, unchanged across controls.",
+    "optional_drugclip": "14,533 required drug embeddings unavailable; mask explicitly or use a separately declared common-coverage comparison.",
+    "structure_increment": "Token/atom/structure models require an additional input-control experiment; pooled features are not local geometry.",
+    "scope": "The seven common-input controls share BerMol/ESM2. Native DrugBAN is a separately labeled input-and-architecture comparison."
+  },
+  "labels": {
+    "positive_nM_max": 1000,
+    "negative_nM_min": 10000,
+    "grey_interval": "1000 < value_nM < 10000 excluded from binary labels",
+    "inequalities": "Inherit audited bounds; a censored interval that crosses a boundary does not establish that label.",
+    "explicit_inactive": "Audited experimental inactivity retained as binary negative; never fabricated numeric Kd.",
+    "unmeasured": "UNKNOWN, never negative",
+    "arm_A": "Kd/Ki binary evidence plus explicit inactivity",
+    "regression": "Separate exact Kd and Ki heads only. Inactivity has no fabricated numeric affinity."
+  },
+  "neural_training": {
+    "initialization": "Fresh trainable layers, frozen common encoders",
+    "projection_width": 256,
+    "projection": "Linear -> LayerNorm -> GELU, identical corresponding towers",
+    "dropout": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size": 1024,
+    "gradient_clip_norm": 5,
+    "sampling": "Uniform observed pairs with no permanent per-target cap and no invented decoys.",
+    "validation_every": "One complete epoch",
+    "minimum_epochs": 10,
+    "maximum_epochs": 100,
+    "patience": 12,
+    "min_delta": 0.0001,
+    "checkpoint": "Max validation bidirectional query-macro AP; missing direction is not imputed.",
+    "time_cap_hours_per_run": 8,
+    "time_cap_status": "BUDGET_CENSORED_NOT_CONVERGED",
+    "convergence": "No validation improvement for patience after minimum epochs; never assert mathematical convergence.",
+    "mixed_precision": "Disabled for initial parity pilot; optional later amendment must be logged.",
+    "train_repeats": "Three prespecified seeds; retain all outcomes including failure.",
+    "hyperparameters": "Initial controlled settings fixed here; further tuning is a separately logged sensitivity study, never test-selected."
+  },
+  "losses": {
+    "binary": "BCEWithLogits on eligible observed binary labels, unweighted in primary architecture study.",
+    "ranking": "Equal query weighting, half target-to-drug and half drug-to-target where measured positive/negative comparisons exist; softplus(-(s_pos-s_neg)).",
+    "ranking_context": "Binary label-order regularization across queried measurements; not claimed to be within-assay continuous affinity ordering.",
+    "ranking_weight": 0.1,
+    "regression": "Huber loss per exact endpoint; average within endpoint then over available endpoints.",
+    "regression_scaling": "p-activity centered/scaled using training rows for that endpoint only; save scales.",
+    "regression_weight": 0.1,
+    "total": "L_binary + 0.1*L_rank (if enabled) + 0.1*L_reg (if enabled)",
+    "unlabelled_auxiliary": "Unavailable endpoint/loss masked, not zero-filled as a label.",
+    "assay_sensitivity": "Optional within-assay ranking only for same target/endpoint/source, >=5 distinct training members after filtering, delta p-activity >=0.3.",
+    "assay_scope": "Use only A membership and Kd/Ki rows. Original A scaffold train has 192469 exact endpoint rows; current min5 filtered assay rows are reported in counts."
+  },
+  "metrics": {
+    "primary": [
+      "target_query_macro_AP_on_mixed_queries",
+      "drug_query_macro_AP_on_mixed_queries"
+    ],
+    "checkpoint_summary": "Arithmetic mean of the two directions; both direction scores and query counts always reported.",
+    "secondary": [
+      "pooled_AP",
+      "AUROC",
+      "explicit_inactive_FPR",
+      "exact_endpoint_Spearman",
+      "exact_endpoint_RMSE",
+      "risk_coverage",
+      "coverage_failure_rate",
+      "Spearman_query",
+      "Kendall_tau_b",
+      "TopK_overlap",
+      "shared_errors"
+    ],
+    "topk": {
+      "primary_k": 10,
+      "sensitivity_k": [
+        5,
+        20,
+        50,
+        100
+      ],
+      "minimum_query_size": 10,
+      "labels": "Measured-panel P@10 only when all compared predictions in that panel have usable measurements. Never call this full-catalog P@10.",
+      "ties": "Exact expected boundary membership for overlap and P@K; average ranks for correlations.",
+      "constant": "Undefined correlation reported with count; constant-score ranking AP equals that query prevalence."
+    },
+    "random_baseline": "AUROC=0.5; independent TopK overlap=K^2/N; uninformative constant-score AP=prevalence. Finite random-order AP reference computed by permutations.",
+    "inactive_fpr": "Choose score threshold on validation positives at >=90% recall, then freeze; report achieved test recall and FPR on explicit-inactive subset.",
+    "regression_comparison": "Same endpoint and comparable assay; report label spread and censoring separately.",
+    "single_class": "Report counts and applicable false-positive or recall summaries; exclude from mixed-query AP with explicit denominator.",
+    "classification_vs_affinity": "Do not interpret similarity/logit as Kd or calibrated probability."
+  },
+  "inference_track": {
+    "model_families": [
+      "ReTargetMap",
+      "DTIAM_A",
+      "DrugCLIP",
+      "ConPLex",
+      "ProbeMatchDTI",
+      "DTBind_occurrence",
+      "Nesso_binder"
+    ],
+    "source_snapshot": "outputs/model_interpretation_20260920/latest_results",
+    "scope": "Reuse frozen public/production checkpoints and historical A/B fits for exploratory references; no new B fits.",
+    "heads": "Nesso binder and pIC50=6-log10(IC50/uM) analyzed separately; DTBind occurrence/affinity/site are separate tasks.",
+    "nesso_gates": "0.5 and per-query Top50 are already viewed exploratory diagnostics; no retrospectively invented primary threshold.",
+    "missing": "Retain missing/unsupported/error distinctions and report coverage; no zero imputation.",
+    "extra_models": "EviDTI and Scope only after native example replay, feature parity and applicable target-universe checks."
+  },
+  "statistical_plan": {
+    "unit": "Query-level paired contrasts; targets grouped by homology, drugs by scaffold; documents audited separately.",
+    "bootstrap_replicates": 2000,
+    "confidence_level": 0.95,
+    "dependence": "For pooled or cross-query metrics use crossed scaffold x target-cluster resampling; add document-cluster sensitivity and disclose independent units.",
+    "seeds": "Three seed-level values plus mean/range; pair bootstrap does not convert three fits into thousands of independent fits.",
+    "primary_comparisons": [
+      "global_mlp vs additive",
+      "global_mlp vs dual_cosine",
+      "global_mlp vs lightgbm"
+    ],
+    "primary_family": "Scaffold: global_mlp vs additive/dual_cosine/lightgbm, two directions (6); cold-target: global_mlp vs additive/lightgbm, two directions (4). Holm correction across 10 primary tests.",
+    "secondary": "Benjamini-Hochberg FDR for prespecified secondary families; post-hoc diagnostics labeled exploratory.",
+    "effect_size": "Report paired absolute AP difference and uncertainty, not significance alone.",
+    "causal_scope": "Only controlled fresh training supports attribution to the changed factor; public deployed architecture comparisons are observational.",
+    "local_model": "DrugBAN native comparison is secondary, with matched evaluation members and explicit input/truncation differences."
+  },
+  "selection_protocol": {
+    "keep_tests_sealed_for_new_fits": "No early stopping, weights, gates or feature normalization from test.",
+    "interpretation": "Historical label access is disclosed despite prospective run rules.",
+    "equal_compute": "Save common update-step checkpoints and unique-pair exposure; compare both convergence-selected and equal-update budgets.",
+    "data_contrasts": "Large A/B matched/nested retraining deferred. Existing B results retained as historical supplementation, not proof of an endpoint-noise cause.",
+    "no_150_deletion": "Reuse existing rotating-150/balanced results as exploratory. Any new sampler comparison rotates examples and logs exposure, never silently discards all later records.",
+    "fusion": "Weights selected on validation. Compare best single, training-only chemical nearest neighbor, rank-mean fusion, and disagreement risk at equal retained budget.",
+    "existing_dtiam_A": "Reuse three historical fits for common-member re-evaluation. Training protocol differs, so exclude them from strict same-budget architecture attribution.",
+    "cold_target": "Fresh supervised fits on A_cold_target; no reuse of original scaffold-trained task checkpoints as unseen-target models."
+  },
+  "execution": {
+    "new_training_started": false,
+    "training_runner_status": "Planning amendment only; common trainer and DrugBAN adapter still need implementation.",
+    "stages": [
+      "A1 common-input architecture controls:21",
+      "A2 A-only objectives:9",
+      "A3 native DrugBAN scaffold:3 after adapter qualification",
+      "A4 prespecified cold-target representatives:12"
+    ],
+    "resources": "Existing Nesso/DTBind production jobs retained; no new GPU allocation by this preparation.",
+    "scheduling": "One GPU job at a time after resource availability; CPU-heavy tasks <=4 threads during current inference.",
+    "disk_floor_GiB": 15,
+    "new_training_eta": "Not profiled. Counts are runs, not a claim of equal compute or duration.",
+    "amendment": "Append versioned deviations with reason and whether validation/test outcomes were known; never rewrite a completed protocol version silently.",
+    "first_stage_fit_count": 30,
+    "main_fit_count": 45,
+    "conditional_fit_count": 15,
+    "conditional_rule": "Source-purged, ReLU and TAPB hypotheses must be activated/frozen before examining their corresponding test results; they do not enter the default run queue."
+  },
+  "release": {
+    "weights": "Publish retrieval manifests and hashes; redistribute bytes only when the specific weight terms allow it.",
+    "raw_data": "Retain original source/assay/identity references and license metadata; publish derived members or rebuild scripts as permitted.",
+    "heldout": "No test labels or SPR results exposed to training loader by default.",
+    "external_registration": "Not performed."
+  },
+  "parent_protocol": "configs/dti_reliability_20260920/PROTOCOL.json",
+  "parent_sha256": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
+  "user_direction": "Use A for the main training/validation/test study. No large-scale new B training.",
+  "allowed_new_training_arms": [
+    "A"
+  ],
+  "new_B_training_runs": 0
+}

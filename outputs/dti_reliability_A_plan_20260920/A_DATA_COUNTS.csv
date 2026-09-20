@@ -1,0 +1,10 @@
+﻿arm,view,split,pairs,positive,negative,explicit_inactive,molecules,targets,homology_clusters,scaffold_groups
+A,scaffold_replay,train,337570,188799,148771,105368,140064,2290,1447,54811
+A,scaffold_replay,validation,41806,24419,17387,11719,17649,2124,1453,6705
+A,scaffold_replay,test,39507,23190,16317,10649,16596,2619,1901,6848
+A,source_purged,train,78570,29548,49022,41232,24371,1723,1060,8387
+A,source_purged,validation,16914,8264,8650,6604,5850,1115,622,2055
+A,source_purged,test,39350,23128,16222,10632,16513,2613,1897,6803
+A,cold_target,train,369213,208576,160637,113525,151882,2923,2064,59842
+A,cold_target,validation,26047,12572,13475,9258,15058,328,254,6561
+A,cold_target,test,23623,15260,8363,4953,14244,407,284,6249
