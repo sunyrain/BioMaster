@@ -1,0 +1,95 @@
+{
+  "snapshot_utc": "2026-09-20T10:16:00.467016+00:00",
+  "rows": 276480,
+  "drugs": 720,
+  "targets": 384,
+  "requested_model_columns": [
+    "ConPLex",
+    "DrugCLIP",
+    "DTIAM_A",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence",
+    "MAMMAL_pKd",
+    "BALM",
+    "EviDTI",
+    "GraphBAN"
+  ],
+  "current_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "DTIAM_A",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence"
+  ],
+  "pending_models": [
+    "MAMMAL_pKd",
+    "BALM",
+    "EviDTI",
+    "GraphBAN"
+  ],
+  "excluded_models": [
+    "ReTargetMap",
+    "DTIAM_B"
+  ],
+  "model_inventory_rows": 23,
+  "current_six_common_scored_pairs": 75625,
+  "current_six_targets_with_all_720": 0,
+  "new_training_started": false,
+  "new_matrix_inference_started": false,
+  "dtiam_existing_predictor_smoke_test": true,
+  "comparison_metrics_computed": false,
+  "existing_background_workers_changed": false,
+  "missing_policy": "Missing scores remain empty, never zero/negative. Pending additions excluded from current intersections.",
+  "source_snapshots": {
+    "outputs/model_agreement_20260917/SCORE_SNAPSHOT.csv.gz": "003e9ab8c60686194d98ac7091948a2d1ae70a5e6b7100206d4260e103e8bb9e",
+    "outputs/dtiam_a_catalog_20260917/DTIAM_A_720X384_SCORES.csv.gz": "f2b0c550890941e8c8c445afb3ff4812a3a9f04eecf6cc9e277b1111119d4e96",
+    "configs/dti_official_weights_20260920/MODEL_MATRIX_v3.json": "d5d25096f5500b680d1e9834115927d1a2990d4ecc91b3b5842e59e9b4f9ca92"
+  },
+  "live_sqlite": "Read-only transactional snapshot; file hash intentionally not used for an actively written WAL database.",
+  "artifacts": {
+    "CATALOG_720X384_SCORE_SNAPSHOT.csv.gz": {
+      "sha256": "aec7ffd9f40637a83019b53777c62b6c19a0d903eed0075d5109935fe4903143",
+      "bytes": 12135610
+    },
+    "MODEL_COVERAGE.csv": {
+      "sha256": "a3ae5e689c0587c0870ac8ae92569b90626a92efc4a3f4da6c5a136d32d75ac7",
+      "bytes": 1069
+    },
+    "TARGET_STATUS_SNAPSHOT.csv": {
+      "sha256": "f3511e042697f1914bf6c0a6bc72785f9e9bf767e1e4aa42b4d2b6cf271a62b6",
+      "bytes": 27475
+    },
+    "NONCOMPLETED_RECORDED_PAIRS.csv": {
+      "sha256": "cf1dfed71cf0211b9e28cb03e2a3347ea7d0da4d8cf1d32687e6a3324723204c",
+      "bytes": 13256
+    },
+    "FINAL_MODEL_MATRIX.csv": {
+      "sha256": "a9548e5f1ba6d6caf5ca2ac7f428842403533ae8e5e3bc241e4ab73cae90ab05",
+      "bytes": 9509
+    },
+    "PRIMARY_TEN_MODEL_MATRIX.csv": {
+      "sha256": "df1be13116e8e3fc6f03238f2e0265a2a16fcdc90e9f56101241d74a3eeae878",
+      "bytes": 4659
+    },
+    "DTIAM_USAGE_AUDIT.json": {
+      "sha256": "40d0e3f5362ed5bff6a4263d0456c012d2d1c2e44b1c2b0762732dd4039ef44b",
+      "bytes": 1692
+    },
+    "NEW_MODEL_SOURCE_AUDIT.json": {
+      "sha256": "318ee13a344995e9a08581032cd4d86d2487e40d354d3b4252e2fe603ad04922",
+      "bytes": 43484
+    },
+    "TASK_WEIGHT_REMOTE_METADATA.json": {
+      "sha256": "ffacce1ca5c4dae196e381e7c53c348fa0ca49c59ea97155b98bf4a35e8000c1",
+      "bytes": 9672
+    }
+  },
+  "limits": [
+    "Unlabelled catalogue is not a performance test.",
+    "Native scores differ in endpoints and units; rank within matched candidates.",
+    "Six current channels do not imply complete coverage.",
+    "Task checkpoint availability does not imply qualified inference."
+  ]
+}

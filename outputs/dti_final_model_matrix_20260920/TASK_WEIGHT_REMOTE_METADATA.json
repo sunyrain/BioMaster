@@ -1,0 +1,296 @@
+{
+  "MAMMAL": {
+    "url": "https://huggingface.co/api/models/ibm-research/biomed.omics.bl.sm.ma-ted-458m.dti_bindingdb_pkd?blobs=true",
+    "checked_utc": "2026-09-20T10:09:40.199744+00:00",
+    "revision": "67164e29cdfb1a5cb8b8479b817f11b73c899ba7",
+    "files": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "size": 1519
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "92af24e17c43bbcaaf2e28b2827e4454fa0bdf62",
+        "size": 3952
+      },
+      {
+        "rfilename": "config.json",
+        "blobId": "50b1160c6ef1cc0098dc79cea78cf86e17c2fdcb",
+        "size": 2890
+      },
+      {
+        "rfilename": "model.safetensors",
+        "blobId": "3a94432ab8c791d2ba265d722a97ebe49f790a9d",
+        "size": 1832066472,
+        "lfs": {
+          "sha256": "8e4407357c97feac40d63336401c1b49d97666547a0c98779e2d1b54e3ea7c87",
+          "size": 1832066472,
+          "pointerSize": 135
+        }
+      },
+      {
+        "rfilename": "tokenizer/bpe_tokenizer_trained_on_chembl_zinc_with_aug_4272372_samples_balanced_1_1.json",
+        "blobId": "08207102e760191bcc8437c2be7bd8d35ce8ffca",
+        "size": 190676
+      },
+      {
+        "rfilename": "tokenizer/cell_attributes_tokenizer.json",
+        "blobId": "92a9fba70b25a8e4f17e5ad5eeef2996b3731b75",
+        "size": 92658
+      },
+      {
+        "rfilename": "tokenizer/config.yaml",
+        "blobId": "ab0f395766cfbbe4ff4762fdf28c8e8e9bea8cb6",
+        "size": 967
+      },
+      {
+        "rfilename": "tokenizer/gene_tokenizer.json",
+        "blobId": "060356ca0a02263c18c754159e19026150ba007a",
+        "size": 2761797
+      },
+      {
+        "rfilename": "tokenizer/t5_tokenizer_AA_special.json",
+        "blobId": "433cdc6d2a5cac50ff5631ffba3770769041589e",
+        "size": 70136
+      }
+    ],
+    "error": null
+  },
+  "BALM": {
+    "url": "https://huggingface.co/api/models/BALM/bdb-cleaned-r-esm-lokr-chemberta-loha-cosinemse?blobs=true",
+    "checked_utc": "2026-09-20T10:09:40.140894+00:00",
+    "revision": "3909a3f47743cb57e2181ba38cef9004001fee39",
+    "files": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "size": 1519
+      },
+      {
+        "rfilename": "optimizer.bin",
+        "blobId": "dcf65fa137236d2d5566bd0b75f90ba385417b39",
+        "size": 9547962,
+        "lfs": {
+          "sha256": "bec7280f1e957de7834e27e819751f3a0cc06ced30a3728a8e5bb6016808319c",
+          "size": 9547962,
+          "pointerSize": 132
+        }
+      },
+      {
+        "rfilename": "pytorch_model.bin",
+        "blobId": "2ab937015c95efa65717717c73551a55f26faaf1",
+        "size": 611758190,
+        "lfs": {
+          "sha256": "df587b3ca18a5d7d5cc80c933a99095352cc6cb2e1743783e49d01d40378638c",
+          "size": 611758190,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "random_states_0.pkl",
+        "blobId": "2ef084772d325cde4225847bf4314d3468d2daa3",
+        "size": 14344,
+        "lfs": {
+          "sha256": "beba220a3a3e9ce56a1b2435c37e82a97344da5ce18ff5f52c4268b9217c7474",
+          "size": 14344,
+          "pointerSize": 130
+        }
+      },
+      {
+        "rfilename": "scheduler.bin",
+        "blobId": "f84661c613c1b5dc0faf7f57d55d3e13c6ec7b6b",
+        "size": 1000,
+        "lfs": {
+          "sha256": "5771a36319490914e8885d1f3a45c4a2e004dfeeb0a23581cd6b85a86e106b42",
+          "size": 1000,
+          "pointerSize": 129
+        }
+      }
+    ],
+    "error": null
+  },
+  "CheMLT-F": {
+    "url": "https://huggingface.co/api/models/BoulderyBoulder/CheMLT-F?blobs=true",
+    "checked_utc": "2026-09-20T10:09:40.256447+00:00",
+    "revision": "48be0f32a6efb8d6ca4b7479051f8122c61f850e",
+    "files": [
+      {
+        "rfilename": ".gitattributes",
+        "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+        "size": 1519
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/config.json",
+        "blobId": "bc38d2009aa7a46ba0ec905755c7eaea83bc53a5",
+        "size": 816
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/merges.txt",
+        "blobId": "bd3afaced41ff69800381dae35c8997004bd5668",
+        "size": 23687
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/model.safetensors",
+        "blobId": "6b676ef626d1cc9b0ec77bdd3f4b3b813c296615",
+        "size": 385184836,
+        "lfs": {
+          "sha256": "626ea8e04c0d69ed3d67411e762409b76a0beb8cb33113837cd2856731cbd52e",
+          "size": 385184836,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/special_tokens_map.json",
+        "blobId": "405649b8e6f9fb753a11321f7776729a64bccd14",
+        "size": 1020
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/tokenizer.json",
+        "blobId": "b6b381a858b328b0dc29204a096665243c2979a8",
+        "size": 180292
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/tokenizer_config.json",
+        "blobId": "a00b4eef60501c5b9b3481c5833e0a0c2bb2febb",
+        "size": 1311
+      },
+      {
+        "rfilename": "Models/Scaffold_CheMLT-F/vocab.json",
+        "blobId": "d377b641835f71e56664526e5bdf6e9b8c5d707d",
+        "size": 39710
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/config.json",
+        "blobId": "bc38d2009aa7a46ba0ec905755c7eaea83bc53a5",
+        "size": 816
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/merges.txt",
+        "blobId": "bd3afaced41ff69800381dae35c8997004bd5668",
+        "size": 23687
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/model.safetensors",
+        "blobId": "03a6767006a793ff49e00443fce3b50bc0a1d153",
+        "size": 385184836,
+        "lfs": {
+          "sha256": "40dcb64277c2208974cb59ce9dff39b6d6212ae23b5d7432d6b2fb769872e9db",
+          "size": 385184836,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/special_tokens_map.json",
+        "blobId": "405649b8e6f9fb753a11321f7776729a64bccd14",
+        "size": 1020
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/tokenizer.json",
+        "blobId": "2f29d160eee676d83ba2e11dbbf21dfe4b5ad56c",
+        "size": 180027
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/tokenizer_config.json",
+        "blobId": "a00b4eef60501c5b9b3481c5833e0a0c2bb2febb",
+        "size": 1311
+      },
+      {
+        "rfilename": "Models/Stratified_CheMLT-F/vocab.json",
+        "blobId": "d377b641835f71e56664526e5bdf6e9b8c5d707d",
+        "size": 39710
+      },
+      {
+        "rfilename": "Pre-Training/ProteinModelDeb/config.json",
+        "blobId": "1570078161a06d60bce489c0f4be39a9e250088a",
+        "size": 727
+      },
+      {
+        "rfilename": "Pre-Training/ProteinModelDeb/merges.txt",
+        "blobId": "84705bd9cf1c3a95754ad9af3e5e8f386f5a4610",
+        "size": 15081
+      },
+      {
+        "rfilename": "Pre-Training/ProteinModelDeb/model.safetensors",
+        "blobId": "5236708880532073bc8268e08c7ebbe23711a3b9",
+        "size": 184102984,
+        "lfs": {
+          "sha256": "1a41e2bca796ef6ec01c1c7057d1953f57d813fb7ff1dbb41f95f10859a7c49b",
+          "size": 184102984,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "Pre-Training/ProteinModelDeb/vocab.json",
+        "blobId": "dece408f9db73052f165b1602595b12fcebc6389",
+        "size": 34500
+      },
+      {
+        "rfilename": "Pre-Training/PubchemModelDeberta/config.json",
+        "blobId": "8d7b3ce0c1719a3082b61ae5f4d475d755f9f8ad",
+        "size": 727
+      },
+      {
+        "rfilename": "Pre-Training/PubchemModelDeberta/merges.txt",
+        "blobId": "bd3afaced41ff69800381dae35c8997004bd5668",
+        "size": 23687
+      },
+      {
+        "rfilename": "Pre-Training/PubchemModelDeberta/model.safetensors",
+        "blobId": "259423b232502f661892b45819aeba7ccc4c164d",
+        "size": 182349656,
+        "lfs": {
+          "sha256": "52fa73d0111c5ac767780ba81299c0655e9c7a390fbc6e69a4b1fa5d84e42c99",
+          "size": 182349656,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "Pre-Training/PubchemModelDeberta/vocab.json",
+        "blobId": "d377b641835f71e56664526e5bdf6e9b8c5d707d",
+        "size": 39710
+      },
+      {
+        "rfilename": "README.md",
+        "blobId": "466b90a3bf1cab5c8c4be03b489ef10b08bd1ac5",
+        "size": 1405
+      }
+    ],
+    "error": null
+  },
+  "GraphBAN": {
+    "url": "https://zenodo.org/api/records/14813233",
+    "checked_utc": "2026-09-20T10:09:40.725452+00:00",
+    "revision": null,
+    "files": [
+      {
+        "id": "ef05d3a6-2921-453d-b9f5-bf8ed7d6eb4b",
+        "key": "biosnap_trained_models.zip",
+        "size": 9528692984,
+        "checksum": "md5:d6e8d35f9fe6b56c15b608c198782e83",
+        "links": {
+          "self": "https://zenodo.org/api/records/14813233/files/biosnap_trained_models.zip/content"
+        }
+      },
+      {
+        "id": "8bc56cca-983a-4f86-ba16-779b5f1b3924",
+        "key": "bindingdb_trained_models.zip",
+        "size": 9537536783,
+        "checksum": "md5:b57759a1de4a95792499205175db3df2",
+        "links": {
+          "self": "https://zenodo.org/api/records/14813233/files/bindingdb_trained_models.zip/content"
+        }
+      },
+      {
+        "id": "ecac7f1d-26a3-4c8b-b2fc-5b59364d41f7",
+        "key": "KIBA_trained_models.zip",
+        "size": 9529016284,
+        "checksum": "md5:003c63842121a0185c1bcce6de44e094",
+        "links": {
+          "self": "https://zenodo.org/api/records/14813233/files/KIBA_trained_models.zip/content"
+        }
+      }
+    ],
+    "error": null
+  }
+}

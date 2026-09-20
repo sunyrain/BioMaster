@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope_version": 2,
+  "requested_model_count": 6,
+  "official_task_weights_registered": 5,
+  "pending_official_task_weights": 1,
+  "local_task_fit_channels": 0,
+  "excluded_not_in_registry": true,
+  "DTIAM_pending_excluded_from_current_intersection": true,
+  "A_training_and_run_matrix_unchanged": true,
+  "previous_frozen_package_unchanged": true,
+  "v1_comparison_protocol_unchanged": true,
+  "v1_registry_summary_validation_preserved": true,
+  "current_document_links": "PASS",
+  "active_pointer_hashes": "PASS",
+  "new_inference_started": false,
+  "new_training_started": false,
+  "new_comparison_metrics_computed": false
+}

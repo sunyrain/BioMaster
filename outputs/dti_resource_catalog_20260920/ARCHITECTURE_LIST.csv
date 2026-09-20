@@ -7,7 +7,7 @@ ProbeMatchDTI,现用七模型,蛋白/SMILES token＋分子2D图,迭代探针、�
 DTBind,现用七模型,ProtT5残基＋蛋白结构图/表面＋分子2D图,GNN＋双向交叉注意力＋门控,当前occurrence二分类；affinity/site另分支,3种任务权重；当前启用occurrence,结构图交互对照,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/liqy09/DTBind
 Nesso-1,现用七模型,ESM2残基＋分子3D构象,Pairformer、距离关系及口袋裁剪、分类与回归头,binder；log10(IC50/μM)，连续头越低越强,权重及配置已登记；目录补算中,同主干不同头与适用区域,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,https://github.com/recursionpharma/nesso
 Palinova A/B 历史重训,已有自训,DrugCLIP/Morgan/图均值＋ESM2全局,原全局配对MLP；按变体增加排序与端点回归辅助,二分类及分端点回归,6固定步数＋24多任务＋30 assay-aware拟合,复用目标函数、采样与种子证据,biomaster/endpoint_multitask.py,
-DTIAM 官方任务模型,扩展模型,官方BerMol＋ESM2,拼接后AutoGluon任务预测器,依具体官方检查点的DTI/DTA/MoA任务确定,官方下游任务权重未确认；BerMol编码器不等于任务预测器,官方权重比较的待确认项；不以本地DTIAM A/B替代,docs/BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md,https://github.com/CSUBioGroup/DTIAM
+DTIAM 官方任务模型,扩展模型,官方BerMol＋ESM2,拼接后AutoGluon任务预测器,依具体官方检查点的DTI/DTA/MoA任务确定,官方下游任务权重未确认；BerMol编码器不等于任务预测器,官方任务权重未确认；按用户最新授权复用本地DTIAM A并单列来源,docs/BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md,https://github.com/CSUBioGroup/DTIAM
 EviDTI,扩展模型,蛋白序列表征＋分子2D/3D特征,蛋白LightAttention、分子CNN/几何图网络与融合,证据式分类；Davis/KIBA任务头分别解释,3套任务权重；目录适配待核验,不确定性方法对照,third_party/sota_dti_2026/EviDTI/drugbank_model.py,https://github.com/zhaoyanpeng208/EviDTI
 SCOPE 轻量版,扩展模型,分子3D图＋蛋白序列,分子GVP＋蛋白CNN＋双线性注意力,DTI分类,25个检查点；现有入口使用固定目标库,几何编码/注意力对照；任意新靶点适配未认证,.external/scope_dti_lightweight/models.py,https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference
 TAPB,扩展模型,MolFormer tokenizer的SMILES token＋ESM2蛋白表征,分子Transformer＋交叉注意力解码器＋靶点先验干预,DTI分类,代码/编码器资源在；合格任务权重未确认,靶点先验偏差对照；不把缓存MolFormer等同已训练TAPB,third_party/sota_dti_2026/TAPB/models/tapb.py,https://github.com/GaomingL1n/TAPB

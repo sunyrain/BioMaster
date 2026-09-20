@@ -34,9 +34,10 @@ def csv(name,rows):
 def build():
     OUT.mkdir(parents=True,exist_ok=True);CONFIG.mkdir(parents=True,exist_ok=True)
     old=json.loads(BASE.read_text());protocol=copy.deepcopy(old)
+    previous_config=json.loads((CONFIG/'PROTOCOL.json').read_text()) if (CONFIG/'PROTOCOL.json').exists() else {}
     protocol.update(protocol_id='dti_reliability_A_20260920_v2',
         status='A_ONLY_RECOMMENDED_PLAN_NOT_STARTED_NOT_EXTERNALLY_PREREGISTERED',
-        created_utc=datetime.now(timezone.utc).isoformat(),parent_protocol=str(BASE.relative_to(ROOT)),parent_sha256=sha(BASE),
+        created_utc=previous_config.get('created_utc',datetime.now(timezone.utc).isoformat()),parent_protocol=str(BASE.relative_to(ROOT)),parent_sha256=sha(BASE),
         user_direction='Use A for the main training/validation/test study. No large-scale new B training.',
         objective='Explain pair selectivity and objective-induced disagreement on A, with targeted cold-target checks and existing public models.',
         allowed_new_training_arms=['A'],new_B_training_runs=0)
@@ -112,7 +113,7 @@ def build():
     choice('LightGBM（共同输入）','新训','强树学习器；原骨架和冷靶点各3seed',6,notes='单一树模型，不冒充完整DTIAM集成')
     choice('DrugBAN','适配后新训','局部交互代表；原骨架和冷靶点各3seed',6,
         notes='保留原2D图/序列路线，不启用使用测试数据的域适配；输入差异单列')
-    choice('DTIAM A','仅历史归档','保留已有3套及结果溯源，不参加本轮现成模型比较',notes='DTIAM参赛只接受官方下游任务权重；本地A/B不得替代')
+    choice('DTIAM A','复用现成A版','官方任务权重未确认，按用户授权复用验证选出的A版；无需新增拟合',notes='标为本地A训练而非官方权重；当前仅适用原骨架历史划分，不冒充冷靶点重训')
     choice('旧ReTargetMap / Palinova A','仅历史归档','保留生产及已完成A消融证据，ReTargetMap不参赛',notes='共同输入MLP为新训架构对照，不是旧生产权重参赛')
     choice('ConPLex官方权重','复用推理','与新共享输入双塔共同构成诊断',notes='原Morgan/ProtBERT与共同输入是不同系统')
     choice('DrugCLIP / Nesso','复用推理','保留口袋检索及原生双头；本轮不全量训练结构模型',notes='A标签不会自动补齐其训练所需结构/预处理')

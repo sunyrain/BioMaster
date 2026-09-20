@@ -11,7 +11,7 @@
 - [已有权重列表](../outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv)：逐资产路径、大小、SHA256、来源与当前状态。
 - [权重分类汇总](../outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv)：按模型系列和资产类型统计。
 
-研究参赛名单已修订：ReTargetMap不参加，DTIAM仅用官方下游任务权重；目前为五个已有官方模型＋DTIAM待确认。[名单与限制](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。下方仍保留完整部署/历史资产，不表示全部参赛。
+研究名单修订v3：ReTargetMap不参加；官方DTIAM任务权重未确认，按用户授权复用本地A版。已有六个分数通道，优先补入四个模型，形成十模型计划。[最终模型矩阵](BIOMASTER_DTI_FINAL_MODEL_MATRIX_20260920_ZH.md)。下方为本地部署/历史资产，新发现但未下载的权重见最终矩阵。
 
 ## 1. 架构列表
 
@@ -65,7 +65,7 @@
 | TxGNN | 药物—疾病等异构知识图谱 | 异构图编码及关系解码 | 药物—疾病适应证logit | 官方模型本地存在；已做多方向推理 |
 
 七模型实际启用分支依据[本地架构审计](BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md)。
-上表现用七通道是部署资产清单，不是本轮研究参赛名单。本轮官方权重比较排除ReTargetMap和本地DTIAM A/B，改用官方DTIAM；其下游任务权重尚未确认，因此目前为五个已有官方模型＋DTIAM待确认。详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。
+上表现用七通道是部署资产清单。本轮研究排除ReTargetMap，保留五个官方通道，并按最新授权复用DTIAM本地A版；四个优先新增模型尚待推理适配，不能视为已经算完十模型。详见[比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。
 扩展模型依据本地作者代码和官方说明：[TAPB](https://github.com/GaomingL1n/TAPB)、[SCOPE轻量版](https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference)、[DrugBAN](https://github.com/peizhenbai/DrugBAN)。
 TAPB本地代码使用MolFormer tokenizer、独立分子Transformer和ESM2输入；已缓存MolFormer权重不表示已经训练出TAPB任务模型。
 

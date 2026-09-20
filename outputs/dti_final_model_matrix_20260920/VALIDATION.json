@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "frozen_v1_package_unchanged": true,
+  "unique_complete_catalogue_keys": true,
+  "excluded_model_columns_absent": true,
+  "pending_addition_scores_all_missing": true,
+  "finite_observed_scores": true,
+  "a_main_fits": 45,
+  "new_b_fits": 0,
+  "dtiam_replay_max_abs_difference": 5.960464477539063e-08,
+  "manifest_sha256": "ba2b9398ca4cad1c9a401b3d811183b679206c89e3a51a332f98d594422fa24c",
+  "producer_sha256": "685de55e863b4030b813187bf350f844f168837b2c62a745446e206d82df6437",
+  "a_base_protocol_and_run_matrices_unchanged": true,
+  "active_protocol_pointer_valid": true
+}

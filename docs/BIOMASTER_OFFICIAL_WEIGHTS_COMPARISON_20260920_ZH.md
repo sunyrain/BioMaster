@@ -1,6 +1,6 @@
-# 官方权重比较：用户价值与方法归因
+# 现成模型比较：官方权重优先、用户价值与方法归因
 
-日期：2026-09-20，范围修订v2。按用户决定，ReTargetMap不参加本条比较，DTIAM仅接受官方发布的下游任务权重。本轮修订名单，不产生新的性能结论。与[A主线重训方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)并行，机器规则见[官方权重比较配置v2](../configs/dti_official_weights_20260920/PROTOCOL_v2.json)。
+日期：2026-09-20，范围修订v3。ReTargetMap仍不参加；按用户最新授权，在未确认官方下游权重后复用本地DTIAM A，明确单列本地训练来源。已有六个分数通道，新增四个模型待原生适配。[完整模型矩阵与实际覆盖](BIOMASTER_DTI_FINAL_MODEL_MATRIX_20260920_ZH.md)。与[A主线重训方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)并行，机器规则见[比较配置v3](../configs/dti_official_weights_20260920/PROTOCOL_v3.json)。本轮完成DTIAM复算及资源核对，不产生新的性能结论。
 
 **训练集不同不构成取消比较的理由。用户选择的是包含训练数据、编码器、学习目标和推理流程的完整系统，因此直接比较现成权重具有实际价值；但这种结果不能单独说明架构优劣，也不能自动证明对未见关系的泛化。**
 
@@ -19,7 +19,7 @@
 
 ## 现有模型的身份与使用条件
 
-研究名单调整为**ConPLex、DrugCLIP、Nesso-1、ProbeMatchDTI、DTBind，以及官方DTIAM**。前五个已有任务权重登记；官方DTIAM的下游任务检查点尚未确认，暂不进入已就绪模型交集。ReTargetMap和本地重训DTIAM A/B均不参加这条比较。历史七通道数据保留溯源，但不能继续以原七模型汇总充当本轮结果。
+当前比较使用**ConPLex、DrugCLIP、Nesso-1、ProbeMatchDTI、DTBind occurrence，以及DTIAM本地A版**。前五个采用官方任务权重；DTIAM采用已冻结且复算通过的本地预测器。优先补入MAMMAL pKd、BALM、EviDTI、GraphBAN，形成十模型计划，后四个尚不进入共同交集。ReTargetMap和DTIAM B排除。历史七通道数据仅供溯源，本轮已重新导出排除ReTargetMap的分数快照。
 
 | 通道 | 本次使用对象 | 比较时必须说明的条件 |
 |---|---|---|
@@ -28,9 +28,9 @@
 | Nesso-1 | 冻结官方权重的binder头；连续头另列 | 连续输出为log10(IC50/μM)，与Kd/Ki不是同一终点；作者结构置信告警单列，保留原始分数和告警后的覆盖 |
 | ProbeMatchDTI | All_Model的模型输出 | 官方流程还可接入文献/数据库/Agent；主比较只用DTI原始预测，不把检索已知答案后的重排混进去 |
 | DTBind | occurrence分支 | affinity分支需要蛋白–配体复合物结构，不能替换成普通序列/分子输入后声称测过该能力 |
-| DTIAM 官方版 | 待确认作者发布的下游任务检查点 | 官方BerMol预训练编码器不等于已训练DTI/DTA预测器；不得用本地A/B或按官方代码重训的模型冒充官方任务权重 |
+| DTIAM 本地A版 | seed20260923的WeightedEnsemble_L2；沿用冻结验证选模 | 本地337570对训练，含105368明确失活；非官方任务权重。BerMol/ESM2＋AutoGluon1.4.0，版本/监督与论文不同；仅对应原骨架划分 |
 
-DTIAM官方README的预训练下载指向BerMol，另提供下游任务训练命令。[官方说明](https://github.com/CSUBioGroup/DTIAM#pre-trained-models)。本轮进一步核对GitHub文件树、Release及论文关联的Zenodo/Figshare资源，结果见[来源核对记录](../outputs/dti_official_weights_comparison_20260920/DTIAM_OFFICIAL_SOURCE_AUDIT.json)。截至本次核对仍未确认可直接加载的官方下游预测器；这是“未找到合格任务权重”，不声称作者绝对没有此权重。取得后需登记来源、任务/训练集、完整AutoGluon依赖包及哈希并完成原生加载检查，再纳入比较。现在不自动启动复现训练，也不在统计中把待确认DTIAM当失败或阴性。
+DTIAM官方README的预训练下载指向BerMol，另提供下游任务训练命令。[官方说明](https://github.com/CSUBioGroup/DTIAM#pre-trained-models)。本轮进一步核对GitHub文件树、Release及论文关联的Zenodo/Figshare资源，结果见[来源核对记录](../outputs/dti_official_weights_comparison_20260920/DTIAM_OFFICIAL_SOURCE_AUDIT.json)。截至本次核对仍未确认可直接加载的官方下游预测器；这是“未找到合格任务权重”，不声称作者绝对没有此权重。源码显示作者入口先执行AutoGluon `fit`，再预测；BerMol不是下游任务预测器。按本轮授权，复用我们已有的A版并标为本地训练，不必再训练一次。16对实际复算最大差异5.96×10⁻⁸，见[使用审计](../outputs/dti_final_model_matrix_20260920/DTIAM_USAGE_AUDIT.json)。未来若取得作者任务权重，作为新版本重新登记；不把本地A冒充作者权重。
 
 上述使用条件有官方依据：[ConPLex预测入口](https://github.com/samsledje/ConPLex#usage)、[DrugCLIP官方实现](https://github.com/THU-ATOM/Drug-The-Whole-Genome)、[Nesso输出与告警](https://github.com/recursionpharma/nesso/blob/main/docs/prediction.md)、[ProbeMatchDTI工作流](https://github.com/developer-hq/ProbeMatchDTI)、[DTBind分任务推理](https://github.com/liqy09/DTBind#3-usage)。提供下载和推理接口并不等于作者承诺适用于任意蛋白、终点、候选目录。
 
@@ -56,8 +56,8 @@ SPR384由原流程选择，后续可以比较各模型在这批配对上的分�
 
 - **相同信息预算**：主部署任务允许SMILES、蛋白序列及冻结规则产生的预测结构/口袋；不得给某模型提供测试配对的实测复合物或根据活性选口袋。需要真实复合物的任务独立评估。模型保留适用的原生输入，不强行统一成同一嵌入后冒充官方模型。
 - **使用范围分层**：作者支持范围内的表现与超出范围的迁移压力测试分别报告。结构缺失、序列截断、映射失败、运行错误、作者告警和主动弃权分别编码。
-- **原版与适配版分列**：无需本地标签的冻结权重排序是主部署比较；用本地验证标签选阈值、校准或融合，属于另一个“验证适配”版本。测试不选头、不选口袋、不挑最优seed/检查点。FPR@验证90%召回属于适配结果，不冒充零校准表现。
-- **精度与覆盖同时看**：固定全目录，报告逐模型有效请求覆盖、完成耗时、GPU/CPU时间、峰值内存、缓存/预处理开销；在当前纳入模型的共同交集和两两交集上比较排名与实测正确性，各自列明模型名单、N及查询数。官方DTIAM取得合格任务权重前只列待确认，不进入共同交集分母。共同交集可能偏向容易样本，不作为唯一表。
+- **原版与适配版分列**：官方冻结权重无需本地标签的排序是一组；DTIAM A作为明确使用本地监督及验证选模的比较对象单列，另报去掉它的官方权重子集；用本地验证标签选阈值、校准或融合，属于另一个“验证适配”版本。测试不选头、不选口袋、不挑最优seed/检查点。FPR@验证90%召回属于适配结果，不冒充零校准表现。
+- **精度与覆盖同时看**：固定全目录，报告逐模型有效请求覆盖、完成耗时、GPU/CPU时间、峰值内存、缓存/预处理开销；在当前纳入模型的共同交集和两两交集上比较排名与实测正确性，各自列明模型名单、N及查询数。四个新增模型完成原生加载与评分前不进入共同交集分母。共同交集可能偏向容易样本，不作为唯一表。
 - **固定预算**：实测面板内报P@10等，另报每10个预定推荐名额实际返回多少有效结果、确认阳性多少及未测多少；弃权/失败不补0分、不当实测阴性，不静默用未声明系统补位。全目录未测候选不能当负例或据此计算全目录准确率。
 - **终点匹配**：Kd、Ki、IC50、功能效应分层。相似度、分类分数可比较各自排序，但没有物理单位就不计算所谓Kd回归RMSE。不同终点的迁移评价可以做，需明确叫迁移；模型的数值校准不默认可迁移。
 - **分歧与正确性并列**：双向查询Spearman/Kendall、TopK交集、并列率、跨seed/推理重复稳定性与AP、失活误报、共同错误一起报告。分数单调变换通常不改变秩；低相关本身不能证明谁错或架构失败。检查共同靶点偏好、实体先验和近邻层后，仍不作未受控因果归因。

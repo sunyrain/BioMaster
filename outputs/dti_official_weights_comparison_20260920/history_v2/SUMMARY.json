@@ -1,0 +1,27 @@
+{
+  "status": "OFFICIAL_ONLY_SCOPE_V2",
+  "requested_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence",
+    "DTIAM_official"
+  ],
+  "registered_official_task_weight_channels": 5,
+  "pending_official_task_weight_channels": 1,
+  "local_task_fit_channels": 0,
+  "excluded_models": [
+    "ReTargetMap",
+    "DTIAM_A",
+    "DTIAM_B"
+  ],
+  "full_public_training_overlap_audit_completed": false,
+  "new_inference_started": false,
+  "new_training_started": false,
+  "new_comparison_metrics_computed": false,
+  "protocol": "configs/dti_official_weights_20260920/PROTOCOL_v2.json",
+  "protocol_sha256": "ccb6b6a32c47ac13fe3a243aa41121e46a073db963cb6e5c481de96501d2c449",
+  "register_sha256": "6b21aa3e8edba5d186eee08c98fe00e4757e01dbcc743f7947b7e63995c5869f",
+  "source_audit_sha256": "0ad0de7d0c78aa900b495b299e13c95ae9d42394ac6c6f5a1bd2487d6bdb0e14"
+}

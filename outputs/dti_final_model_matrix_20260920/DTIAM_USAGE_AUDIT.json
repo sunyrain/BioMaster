@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-20T10:04:55.371507+00:00",
+  "author_test_sh_calls_training": true,
+  "author_task_predictor_calls_fit": true,
+  "features": "BerMol CLS768 + ESM2 t33 650M mean1280; first1022 residues, EOS included as in author code",
+  "predictor": "outputs/biomaster_dtiam_ab_20260912/kdki_inactive__seed_20260923/predictor",
+  "selected": {
+    "seed": 20260923,
+    "model": "WeightedEnsemble_L2",
+    "validation_selection_score": 0.7248591659759506,
+    "selection_sha256": "caf53557cb1000d19645c37482604de288ea16a9ebea8bb17a1cbdb906d4b026"
+  },
+  "positive_class": 1,
+  "feature_count": 2048,
+  "replayed_pairs": 16,
+  "max_abs_difference": 5.960464477539063e-08,
+  "autogluon_version": "1.4.0",
+  "author_documented_autogluon_version": "0.5.2",
+  "classification_not_numeric_affinity": true,
+  "new_training_started": false,
+  "local_task_training_pairs": 337570,
+  "catalog_rows_previously_scored": 276480,
+  "source_sha256": {
+    "third_party/sota_dti_2026/DTIAM/code/training_validation.py": "6a2859706ba160380a77578d8387f7cba0520cdcb0bf113ca43759a458619cb7",
+    "third_party/sota_dti_2026/DTIAM/code/test.sh": "28467916f48bbfff1f4d7092e31ee12891e931c9d09fd6d6829013109c7e068e",
+    "third_party/sota_dti_2026/DTIAM/code/utils.py": "ae1eb438635446c51160514173bb844a5690bdbbe2b7f9c983e29bf40274b963",
+    "third_party/sota_dti_2026/DTIAM/code/data_process/extract_feature.py": "a43cd188b6fc7ceb63e82afbe678f584f7f6a9d40ef6f751fb842b25dc3d4a91"
+  },
+  "selection_sha256": "9ffe29af0ce8e737909b969e171a98118f20f19da93860738a451a9082188aab",
+  "limitation": "Locally fitted A task head, not author-released task weights or exact paper replication."
+}

@@ -1,27 +1,38 @@
 {
-  "status": "OFFICIAL_ONLY_SCOPE_V2",
+  "status": "OFFICIAL_PREFERRED_DTIAM_LOCAL_FALLBACK_V3",
   "requested_models": [
     "ConPLex",
     "DrugCLIP",
+    "DTIAM_A",
     "Nesso-1",
     "ProbeMatchDTI",
     "DTBind_occurrence",
-    "DTIAM_official"
+    "MAMMAL_pKd",
+    "BALM",
+    "EviDTI",
+    "GraphBAN"
   ],
-  "registered_official_task_weight_channels": 5,
-  "pending_official_task_weight_channels": 1,
-  "local_task_fit_channels": 0,
+  "current_scored_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "DTIAM_A",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence"
+  ],
+  "registered_current_official_channels": 5,
+  "local_task_fit_channels": 1,
+  "priority_pending_qualification_channels": 4,
   "excluded_models": [
     "ReTargetMap",
-    "DTIAM_A",
     "DTIAM_B"
   ],
-  "full_public_training_overlap_audit_completed": false,
-  "new_inference_started": false,
   "new_training_started": false,
+  "new_matrix_inference_started": false,
+  "dtiam_replay_completed": true,
   "new_comparison_metrics_computed": false,
-  "protocol": "configs/dti_official_weights_20260920/PROTOCOL_v2.json",
-  "protocol_sha256": "ccb6b6a32c47ac13fe3a243aa41121e46a073db963cb6e5c481de96501d2c449",
-  "register_sha256": "6b21aa3e8edba5d186eee08c98fe00e4757e01dbcc743f7947b7e63995c5869f",
-  "source_audit_sha256": "0ad0de7d0c78aa900b495b299e13c95ae9d42394ac6c6f5a1bd2487d6bdb0e14"
+  "full_public_training_overlap_audit_completed": false,
+  "protocol": "configs/dti_official_weights_20260920/PROTOCOL_v3.json",
+  "protocol_sha256": "d4e7c77db7ee9ffd920d2ca6d6670bcc4f9b5d53ddc1a4570830bb00d9e38a5e",
+  "register_sha256": "2a1a017eaee1abb6b6f9e80a705162f974b86468bce9a1874978ccc96ab77c08"
 }

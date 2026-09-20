@@ -8,7 +8,8 @@
 |---|---|---|
 | 架构、数据、权重 | [资源总表](BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md) | 保留A/B及官方资产；资产存在不等于完成独立验证 |
 | 新增训练 | [A主线重训方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md) | A训练337,570、验证41,806、测试39,507对；主线45项、先30项；新增B训练0；尚未启动 |
-| 官方权重比较 | [用户价值与公平比较](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md) | 五个已登记官方模型＋待确认官方任务权重的DTIAM；ReTargetMap及本地DTIAM A/B不参加；完整训练暴露审计待做 |
+| 现成模型比较 | [用户价值与公平比较](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md) | 五个官方通道＋授权复用的本地DTIAM A；ReTargetMap不参加；完整训练暴露审计待做 |
+| 最终模型矩阵 | [DTIAM用法与近两年模型](BIOMASTER_DTI_FINAL_MODEL_MATRIX_20260920_ZH.md) | 六个已有通道＋四个优先新增模型；23项资源/处置登记；720×384分数快照另含覆盖状态 |
 | 有效机器协议 | [ACTIVE_PROTOCOL.json](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json) | A协议及现成系统比较补充规则的路径与哈希 |
 | 研究问题与证据 | [问题设计](BIOMASTER_DTI_RELIABILITY_RESEARCH_PLAN_20260918_ZH.md)、[结果解释](BIOMASTER_MODEL_RESULT_INTERPRETATION_20260920_ZH.md)、[架构审计](BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md)、[分歧文献](BIOMASTER_MODEL_DISAGREEMENT_LITERATURE_20260918_ZH.md) | 既有标签已被查看；低相关不能直接说明错误或架构因果 |
 
