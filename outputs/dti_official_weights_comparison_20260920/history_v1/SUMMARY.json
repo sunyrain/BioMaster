@@ -1,0 +1,10 @@
+{
+  "status": "RULES_AND_REGISTER_PREPARED",
+  "official_weight_channels": 5,
+  "local_task_fit_channels": 2,
+  "full_public_training_overlap_audit_completed": false,
+  "new_inference_started": false,
+  "new_training_started": false,
+  "protocol_sha256": "ef72173a5bd86456badc56e42730cb6756af3f271431773c178098e0c9e91e2e",
+  "register_sha256": "9bc70be34f5737c2f8f3186b2ecd2de749988da6936d6a7f353969bb0fbace38"
+}

@@ -62,6 +62,10 @@ def architectures():
     add('Palinova A/B 历史重训','已有自训','DrugCLIP/Morgan/图均值＋ESM2全局',
         '原全局配对MLP；按变体增加排序与端点回归辅助','二分类及分端点回归',
         '6固定步数＋24多任务＋30 assay-aware拟合','biomaster/endpoint_multitask.py','复用目标函数、采样与种子证据')
+    add('DTIAM 官方任务模型','扩展模型','官方BerMol＋ESM2','拼接后AutoGluon任务预测器',
+        '依具体官方检查点的DTI/DTA/MoA任务确定','官方下游任务权重未确认；BerMol编码器不等于任务预测器',
+        'docs/BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md',
+        '官方权重比较的待确认项；不以本地DTIAM A/B替代','https://github.com/CSUBioGroup/DTIAM')
     add('EviDTI','扩展模型','蛋白序列表征＋分子2D/3D特征','蛋白LightAttention、分子CNN/几何图网络与融合',
         '证据式分类；Davis/KIBA任务头分别解释','3套任务权重；目录适配待核验',
         'third_party/sota_dti_2026/EviDTI/drugbank_model.py','不确定性方法对照','https://github.com/zhaoyanpeng208/EviDTI')
@@ -249,11 +253,12 @@ def main():
         '- [数据资源列表](../outputs/dti_resource_catalog_20260920/DATA_RESOURCE_LIST.csv)：来源、成员、辅助监督、特征、结构/细胞/图谱、实验清单。',
         '- [已有权重列表](../outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv)：逐资产路径、大小、SHA256、来源与当前状态。',
         '- [权重分类汇总](../outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv)：按模型系列和资产类型统计。',
+        '', '研究参赛名单已修订：ReTargetMap不参加，DTIAM仅用官方下游任务权重；目前为五个已有官方模型＋DTIAM待确认。[名单与限制](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。下方仍保留完整部署/历史资产，不表示全部参赛。',
         '', '## 1. 架构列表', '']
     for category in a['类别'].unique():
         text += ['### '+category,'',table(a[a['类别'].eq(category)],['名称','输入','配对计算','输出','当前状态']),'']
     text += ['七模型实际启用分支依据[本地架构审计](BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md)。',
-        '现用七通道包括五个官方任务权重，以及本地ReTargetMap和DTIAM A；不能统称七个官方模型。训练集不同不妨碍用户场景比较，但限制架构归因及未见关系结论，详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。',
+        '上表现用七通道是部署资产清单，不是本轮研究参赛名单。本轮官方权重比较排除ReTargetMap和本地DTIAM A/B，改用官方DTIAM；其下游任务权重尚未确认，因此目前为五个已有官方模型＋DTIAM待确认。详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。',
         '扩展模型依据本地作者代码和官方说明：[TAPB](https://github.com/GaomingL1n/TAPB)、[SCOPE轻量版](https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference)、[DrugBAN](https://github.com/peizhenbai/DrugBAN)。',
         'TAPB本地代码使用MolFormer tokenizer、独立分子Transformer和ESM2输入；已缓存MolFormer权重不表示已经训练出TAPB任务模型。',
         '', '## 2. 数据资源列表','',

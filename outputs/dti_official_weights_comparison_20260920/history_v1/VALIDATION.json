@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "moved_obsolete_documents": 13,
+  "historical_documents_retained_in_place": 6,
+  "preserved_existing_links_checked": 86,
+  "current_document_links": "PASS",
+  "old_frozen_package_unchanged": true,
+  "active_protocol_hashes_match": true,
+  "A_main_runs": 45,
+  "new_B_runs": 0,
+  "official_weight_channels": 5,
+  "local_fit_channels": 2,
+  "training_overlap_audit": "NOT_COMPLETED",
+  "resource_catalog_regeneration": "PASS",
+  "changed_python_scripts_compile": "PASS",
+  "new_training_started": false,
+  "new_performance_results": false
+}

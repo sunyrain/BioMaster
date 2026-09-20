@@ -1,0 +1,158 @@
+{
+  "github_tree": {
+    "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/git/trees/main?recursive=1",
+    "result": {
+      "sha": "61d68b8148a86b2aea657a3e9d707a491de70ad8",
+      "truncated": false,
+      "files": [
+        "code/BerMol/bermol/model.py",
+        "data/dti/hetionet/kg.csv.zip"
+      ]
+    }
+  },
+  "github_releases": {
+    "url": "https://api.github.com/repos/CSUBioGroup/DTIAM/releases",
+    "result": [
+      {
+        "tag": "v1.0.0",
+        "url": "https://github.com/CSUBioGroup/DTIAM/releases/tag/v1.0.0",
+        "assets": []
+      }
+    ]
+  },
+  "zenodo": {
+    "url": "https://zenodo.org/api/records/14847966",
+    "result": [
+      {
+        "key": "CSUBioGroup/DTIAM-v1.0.0.zip",
+        "bytes": 45036067,
+        "links": {
+          "self": "https://zenodo.org/api/records/14847966/files/CSUBioGroup/DTIAM-v1.0.0.zip/content"
+        }
+      }
+    ]
+  },
+  "figshare": {
+    "url": "https://api.figshare.com/v2/articles/27896790",
+    "result": [
+      {
+        "name": "Source data.zip",
+        "bytes": 35044852,
+        "url": "https://ndownloader.figshare.com/files/51785909"
+      }
+    ]
+  },
+  "zenodo_archive": {
+    "url": "https://zenodo.org/api/records/14847966/files/CSUBioGroup/DTIAM-v1.0.0.zip/content",
+    "http_status": 206,
+    "bytes_read": 262144,
+    "entries": 77,
+    "task_checkpoint_candidates": [],
+    "entry_names": [
+      "CSUBioGroup-DTIAM-2b72b2d/",
+      "CSUBioGroup-DTIAM-2b72b2d/.gitignore",
+      "CSUBioGroup-DTIAM-2b72b2d/LICENSE",
+      "CSUBioGroup-DTIAM-2b72b2d/README.md",
+      "CSUBioGroup-DTIAM-2b72b2d/code/",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/__init__.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/dataloading.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/model.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/run.sh",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/tokenizer.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/trainer.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/utils.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/bermol/vocab.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/requirements.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/run.sh",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/scripts/",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/scripts/featurize.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/BerMol/setup.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/data_prepare.sh",
+      "CSUBioGroup-DTIAM-2b72b2d/code/data_process/",
+      "CSUBioGroup-DTIAM-2b72b2d/code/data_process/data_split_dta.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/data_process/data_split_dti.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/data_process/data_split_moa.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/data_process/extract_feature.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/test.sh",
+      "CSUBioGroup-DTIAM-2b72b2d/code/training_validation.py",
+      "CSUBioGroup-DTIAM-2b72b2d/code/utils.py",
+      "CSUBioGroup-DTIAM-2b72b2d/data/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/5l2i_Palbociclib.pdb",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/Axitinib_out.pdbqt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/Canertinib_dihydrochloride_out.pdbqt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/Doramapimod_out.pdbqt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/Granisetron_out.pdbqt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/docking/cdk6/Mubritinib_out.pdbqt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/davis/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/davis/Y",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/davis/ligands_can.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/davis/proteins.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/kiba/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/kiba/Y",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/kiba/ligands_can.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dta/kiba/proteins.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/drug_smiles.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/dti.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/fp.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/kg.csv.zip",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/pro_ctd.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/hetionet/protein_seq.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/drug_smiles.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/dti.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/fp.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/kg.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/pro_ctd.txt",
+      "CSUBioGroup-DTIAM-2b72b2d/data/dti/yamanishi_08/protein_seq.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/activation/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/activation/drug_smi.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/activation/dti.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/activation/tar_gene.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/activation/tar_seq.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/inhibition/",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/inhibition/drug_smi.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/inhibition/dti.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/inhibition/tar_gene.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/data/moa/inhibition/tar_seq.csv",
+      "CSUBioGroup-DTIAM-2b72b2d/img/",
+      "CSUBioGroup-DTIAM-2b72b2d/img/flowchart.pdf",
+      "CSUBioGroup-DTIAM-2b72b2d/img/flowchart.png",
+      "CSUBioGroup-DTIAM-2b72b2d/requirements.txt"
+    ]
+  },
+  "figshare_archive": {
+    "url": "https://ndownloader.figshare.com/files/51785909",
+    "http_status": 206,
+    "bytes_read": 262144,
+    "entries": 16,
+    "task_checkpoint_candidates": [],
+    "entry_names": [
+      "Source data/",
+      "__MACOSX/._Source data",
+      "Source data/.DS_Store",
+      "__MACOSX/Source data/._.DS_Store",
+      "Source data/Source data for Fig.6.xlsx",
+      "__MACOSX/Source data/._Source data for Fig.6.xlsx",
+      "Source data/Source data for Fig.5.xlsx",
+      "__MACOSX/Source data/._Source data for Fig.5.xlsx",
+      "Source data/Source data for supplementary material Fig.1.xlsx",
+      "__MACOSX/Source data/._Source data for supplementary material Fig.1.xlsx",
+      "Source data/Source data for Fig.4.xlsx",
+      "__MACOSX/Source data/._Source data for Fig.4.xlsx",
+      "Source data/Source data for Fig.3.xlsx",
+      "__MACOSX/Source data/._Source data for Fig.3.xlsx",
+      "Source data/Source data for Fig.2.xlsx",
+      "__MACOSX/Source data/._Source data for Fig.2.xlsx"
+    ]
+  },
+  "checked_utc": "2026-09-20T07:35:07.848795+00:00",
+  "conclusion": "Official BerMol encoder is documented; no downstream task checkpoint confirmed in checked sources. Local DTIAM A/B is excluded from official-weight comparison."
+}

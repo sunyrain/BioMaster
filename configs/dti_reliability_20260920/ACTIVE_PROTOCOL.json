@@ -7,6 +7,6 @@
   "superseded_run_registry": "outputs/dti_research_preparation_20260920/EXPERIMENT_MATRIX.csv",
   "scope": "A only; default excludes conditional experiments",
   "new_training_started": false,
-  "inference_comparison_addendum": "configs/dti_official_weights_20260920/PROTOCOL.json",
-  "inference_comparison_addendum_sha256": "ef72173a5bd86456badc56e42730cb6756af3f271431773c178098e0c9e91e2e"
+  "inference_comparison_addendum": "configs/dti_official_weights_20260920/PROTOCOL_v2.json",
+  "inference_comparison_addendum_sha256": "ccb6b6a32c47ac13fe3a243aa41121e46a073db963cb6e5c481de96501d2c449"
 }

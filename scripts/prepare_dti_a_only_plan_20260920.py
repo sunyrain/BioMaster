@@ -112,8 +112,8 @@ def build():
     choice('LightGBM（共同输入）','新训','强树学习器；原骨架和冷靶点各3seed',6,notes='单一树模型，不冒充完整DTIAM集成')
     choice('DrugBAN','适配后新训','局部交互代表；原骨架和冷靶点各3seed',6,
         notes='保留原2D图/序列路线，不启用使用测试数据的域适配；输入差异单列')
-    choice('DTIAM A','复用已有3套','A原骨架3seed已完成；统一成员/指标重评',notes='历史选模/预算不同；若要报告DTIAM独立冷靶点成绩则需另行重训')
-    choice('旧ReTargetMap / Palinova A','复用历史权重','保留生产及已完成A消融证据',notes='不将旧native输入和新共享输入的差别全归因于架构')
+    choice('DTIAM A','仅历史归档','保留已有3套及结果溯源，不参加本轮现成模型比较',notes='DTIAM参赛只接受官方下游任务权重；本地A/B不得替代')
+    choice('旧ReTargetMap / Palinova A','仅历史归档','保留生产及已完成A消融证据，ReTargetMap不参赛',notes='共同输入MLP为新训架构对照，不是旧生产权重参赛')
     choice('ConPLex官方权重','复用推理','与新共享输入双塔共同构成诊断',notes='原Morgan/ProtBERT与共同输入是不同系统')
     choice('DrugCLIP / Nesso','复用推理','保留口袋检索及原生双头；本轮不全量训练结构模型',notes='A标签不会自动补齐其训练所需结构/预处理')
     choice('ProbeMatchDTI / DTBind','复用推理；暂缓原版重训','首轮局部交互由DrugBAN承担；若要具体归因这两者还需单独训练',notes='不根据DrugBAN结果概括所有注意力/GNN模型')
@@ -135,7 +135,9 @@ def build():
         conditional_runs=str((OUT/'CONDITIONAL_EXPERIMENTS_A.csv').relative_to(ROOT)),
         superseded_run_registry='outputs/dti_research_preparation_20260920/EXPERIMENT_MATRIX.csv',
         scope='A only; default excludes conditional experiments',new_training_started=False)
-    inference_addendum=ROOT/'configs/dti_official_weights_20260920/PROTOCOL.json'
+    pointer_path=ROOT/'configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json'
+    previous_pointer=json.loads(pointer_path.read_text()) if pointer_path.exists() else {}
+    inference_addendum=ROOT/previous_pointer.get('inference_comparison_addendum','configs/dti_official_weights_20260920/PROTOCOL.json')
     if inference_addendum.exists():
         active_pointer['inference_comparison_addendum']=str(inference_addendum.relative_to(ROOT))
         active_pointer['inference_comparison_addendum_sha256']=sha(inference_addendum)

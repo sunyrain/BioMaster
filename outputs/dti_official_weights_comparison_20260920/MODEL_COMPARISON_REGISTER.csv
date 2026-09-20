@@ -1,8 +1,7 @@
-﻿model,task_weight_origin,checkpoint_scope,training_provenance_status,pair_exposure_audit,source,native_input_contract,output_contract,comparison_limit
-ReTargetMap,LOCAL_TASK_FIT,冻结生产权重,自有历史监督与生产流程；成员可追溯但本轮未重算暴露,LOCAL_MEMBERS_AVAILABLE_AUDIT_PENDING,docs/BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md,药物/蛋白固定特征；区分神经分数与组合排名,双向排序/部署分数,官方权重组外的本地生产参照
-DTIAM_A,LOCAL_TASK_FIT,A三种子；网站选seed20260923,337570个A训练配对；任务权重为本地重训,LOCAL_MEMBERS_AVAILABLE_AUDIT_PENDING,https://github.com/CSUBioGroup/DTIAM,BerMol与DTIAM兼容ESM2,Kd/Ki及明确失活分类,不是DTIAM作者原始任务检查点
-ConPLex,OFFICIAL_TASK_WEIGHT,已登记BindingDB任务检查点,作者提供BindingDB模型；具体权重成员逐对核验待做,UNKNOWN,https://github.com/samsledje/ConPLex,SMILES、序列、作者编码/前处理,余弦相似度,并列秩和检查点版本必须保留
-DrugCLIP,OFFICIAL_TASK_WEIGHT,已登记六折组合,检查点训练关系、口袋及复合物重叠待做,UNKNOWN,https://github.com/THU-ATOM/Drug-The-Whole-Genome,分子3D构象和目标口袋；无标签选口袋,检索相似度,口袋/构象准备成本及聚合策略单列
-Nesso-1,OFFICIAL_TASK_WEIGHT,已登记官方权重及配置,检查点监督成员及时间边界待做,UNKNOWN,https://github.com/recursionpharma/nesso/blob/main/docs/prediction.md,蛋白序列及分子构象；作者置信告警记录,binder主列；log10(IC50/uM)另列,不把连续头当Kd/Ki；告警保留原始结果及覆盖
-ProbeMatchDTI,OFFICIAL_TASK_WEIGHT,All_Model,仓库说明All合并四来源；处理后成员未随仓库发布，不能据此确认检查点完整训练集,UNKNOWN,https://github.com/developer-hq/ProbeMatchDTI,原始模型输入和fused分数；不混入Agent文献重排,DTI分类,检查点训练范围、负例语义需进一步证据
-DTBind_occurrence,OFFICIAL_TASK_WEIGHT,occurrence_model.pth,训练数据下载入口存在；检查点对应成员与重叠待核验,UNKNOWN,https://github.com/liqy09/DTBind,occurrence原生特征；affinity需要复合物结构另评,结合发生分类,不同任务头不能按测试表现互换
+﻿model,task_weight_origin,checkpoint_scope,training_provenance_status,pair_exposure_audit,source,native_input_contract,output_contract,comparison_limit,participation_status
+ConPLex,OFFICIAL_TASK_WEIGHT,已登记BindingDB任务检查点,作者提供BindingDB模型；具体权重成员逐对核验待做,UNKNOWN,https://github.com/samsledje/ConPLex,SMILES、序列、作者编码/前处理,余弦相似度,并列秩和检查点版本必须保留,OFFICIAL_TASK_WEIGHTS_REGISTERED
+DrugCLIP,OFFICIAL_TASK_WEIGHT,已登记六折组合,检查点训练关系、口袋及复合物重叠待做,UNKNOWN,https://github.com/THU-ATOM/Drug-The-Whole-Genome,分子3D构象和目标口袋；无标签选口袋,检索相似度,口袋/构象准备成本及聚合策略单列,OFFICIAL_TASK_WEIGHTS_REGISTERED
+Nesso-1,OFFICIAL_TASK_WEIGHT,已登记官方权重及配置,检查点监督成员及时间边界待做,UNKNOWN,https://github.com/recursionpharma/nesso/blob/main/docs/prediction.md,蛋白序列及分子构象；作者置信告警记录,binder主列；log10(IC50/uM)另列,不把连续头当Kd/Ki；告警保留原始结果及覆盖,OFFICIAL_TASK_WEIGHTS_REGISTERED
+ProbeMatchDTI,OFFICIAL_TASK_WEIGHT,All_Model,仓库说明All合并四来源；处理后成员未随仓库发布，不能据此确认检查点完整训练集,UNKNOWN,https://github.com/developer-hq/ProbeMatchDTI,原始模型输入和fused分数；不混入Agent文献重排,DTI分类,检查点训练范围、负例语义需进一步证据,OFFICIAL_TASK_WEIGHTS_REGISTERED
+DTBind_occurrence,OFFICIAL_TASK_WEIGHT,occurrence_model.pth,训练数据下载入口存在；检查点对应成员与重叠待核验,UNKNOWN,https://github.com/liqy09/DTBind,occurrence原生特征；affinity需要复合物结构另评,结合发生分类,不同任务头不能按测试表现互换,OFFICIAL_TASK_WEIGHTS_REGISTERED
+DTIAM_official,OFFICIAL_TASK_WEIGHT_REQUIRED_NOT_CONFIRMED,尚未确认作者发布的下游任务预测器,README公开BerMol编码器及下游训练代码；所查发布包未发现下游检查点,PENDING_TASK_CHECKPOINT,https://github.com/CSUBioGroup/DTIAM,BerMol/ESM2；具体依官方任务检查点确定,待官方DTI/DTA任务检查点确认,不以本地A/B或自行复现权重替代；不进入当前共同交集,PENDING_OFFICIAL_DOWNSTREAM_WEIGHTS

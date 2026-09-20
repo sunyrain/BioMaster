@@ -1,0 +1,167 @@
+{
+  "protocol_id": "dti_official_weights_comparison_20260920_v2",
+  "status": "COMPARISON_RULES_DOCUMENTED_NOT_NEW_PERFORMANCE_RESULTS",
+  "relationship_to_A": "Inference addendum; A main fits remain 45, first phase 30, new B fits 0.",
+  "documentation": "docs/BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md",
+  "registry": "outputs/dti_official_weights_comparison_20260920/MODEL_COMPARISON_REGISTER.csv",
+  "tracks": {
+    "frozen_deployed_system": {
+      "estimand": "Utility of the available complete system on a fixed user task.",
+      "training_data": "Native training retained, provenance and exposure disclosed.",
+      "inputs": "Native preprocessing from the same allowed information. No test-pair experimental complex in the sequence/SMILES discovery task.",
+      "test_tuning": false,
+      "local_label_adaptation": false,
+      "claim_limit": "Not an architecture causal contrast; unknown training overlap precludes unqualified unseen-pair generalization."
+    },
+    "validation_adapted_system": {
+      "estimand": "Utility after prespecified local validation calibration or fusion.",
+      "separate_from_frozen": true,
+      "test_tuning": false,
+      "FPR_threshold": "Threshold selected on validation at >=90% positive recall; disclose validation exposure and achieved test recall."
+    },
+    "A_controlled_training": {
+      "protocol": "configs/dti_reliability_A_20260920_v2/PROTOCOL.json",
+      "claim_limit": "Attribution only to controlled changed factors. Native DrugBAN changes inputs and architecture."
+    }
+  },
+  "channel_origins": {
+    "official_task_weights": [
+      "ConPLex",
+      "DrugCLIP",
+      "Nesso-1",
+      "ProbeMatchDTI",
+      "DTBind_occurrence"
+    ],
+    "local_task_fits": [],
+    "pending_official_task_weights": [
+      "DTIAM_official"
+    ]
+  },
+  "freeze_fields": [
+    "checkpoint_sha256",
+    "code_revision",
+    "adapter_hash",
+    "native_preprocessing",
+    "structure_and_pocket_policy",
+    "target_construct",
+    "score_head",
+    "score_direction",
+    "random_seed",
+    "precision",
+    "hardware",
+    "input_manifest_hash",
+    "label_manifest_hash",
+    "label_access_status"
+  ],
+  "training_exposure": {
+    "unit": "checkpoint x evaluation pair",
+    "states": [
+      "CONFIRMED_EXPOSED",
+      "AUDITED_EXCLUDED",
+      "UNKNOWN"
+    ],
+    "excluded_requires": "Complete checkpoint-specific supervised and selection members plus successful identity mapping. Incomplete membership or unmapped identities remain UNKNOWN.",
+    "axes": [
+      "exact_pair",
+      "drug_identity",
+      "drug_scaffold_similarity",
+      "protein_identity",
+      "protein_homology",
+      "assay_document_patent",
+      "complex_structure_template",
+      "evidence_date"
+    ],
+    "encoder_pretraining": "Separate unsupervised entity exposure from pair supervision and complex information.",
+    "common_unseen": "Use identical audited-excluded members for the reported contrast. Model-specific excluded subsets are not comparable leaderboards.",
+    "current_public_pair_audit": "NOT_COMPLETED",
+    "existing_141": "Unseen only relative to local A/B train+validation, not all public weights.",
+    "date_rule": "Database release date is not experiment publication date."
+  },
+  "evaluation_views": [
+    "All fixed requests: applicability, coverage, failure, abstention and cost.",
+    "All-model common coverage: matched identities and candidates, N and query counts.",
+    "Pairwise common coverage: independent explicit denominators; not a transitive global leaderboard.",
+    "Measured labels on identical members: endpoint-stratified correctness.",
+    "Audited common-unseen relations if qualified; otherwise no clean-generalization champion."
+  ],
+  "unsupported_policy": "Keep UNSUPPORTED, IDENTITY_UNRESOLVED, INPUT_MISSING, TRUNCATED, RUNTIME_ERROR, NOT_YET_COMPUTED, AUTHOR_WARNING, ABSTAINED separate; never impute zero or negative.",
+  "ranking": "Both query directions, average ranks and tie-aware TopK; counts and missingness included. Unknown pairs have no truth labels.",
+  "budget": "Report native default cost and any prespecified common resource-cap sensitivity separately. At K=10 report filled slots, confirmed positives and unmeasured slots separately; no silent fallback.",
+  "metrics": [
+    "query_macro_AP",
+    "measured_panel_P_at_10",
+    "validation_adapted_explicit_inactive_FPR",
+    "Spearman",
+    "Kendall_tau_b",
+    "tie_aware_TopK_overlap",
+    "shared_errors",
+    "coverage",
+    "abstention",
+    "latency",
+    "GPU_and_CPU_time",
+    "peak_memory",
+    "feature_preparation_cost"
+  ],
+  "endpoints": "Kd, Ki, IC50 and functional evidence separated. Nesso binder versus IC50 head and DTBind occurrence versus complex-affinity are distinct.",
+  "statistics": "Paired query comparisons; scaffold/target homology cluster uncertainty; both overall and query counts. Low rank correlation is not evidence of error.",
+  "publication": "Deployment observations plus A controlled explanation; never substitute public-system differences for architecture causality.",
+  "historical_test_status": "Repeatedly viewed, retrospective",
+  "wetlab_384_access": "UNKNOWN_PENDING_USER",
+  "new_training_started": false,
+  "parent_protocol": "configs/dti_official_weights_20260920/PROTOCOL.json",
+  "parent_protocol_sha256": "ef72173a5bd86456badc56e42730cb6756af3f271431773c178098e0c9e91e2e",
+  "user_scope": "Exclude ReTargetMap. DTIAM must use official downstream task weights; never substitute local A/B fits.",
+  "excluded_models": [
+    "ReTargetMap",
+    "DTIAM_A",
+    "DTIAM_B"
+  ],
+  "requested_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence",
+    "DTIAM_official"
+  ],
+  "currently_registered_official_task_weight_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence"
+  ],
+  "dtiam_official": {
+    "status": "DOWNSTREAM_TASK_CHECKPOINT_NOT_CONFIRMED",
+    "encoder_available": "Official BerMol encoder only is documented; it is not a trained DTIAM task predictor.",
+    "source_audit": "outputs/dti_official_weights_comparison_20260920/DTIAM_OFFICIAL_SOURCE_AUDIT.json",
+    "checked_sources": [
+      "official GitHub README and complete tree",
+      "GitHub releases",
+      "Zenodo 14847966 ZIP directory",
+      "Figshare 27896790 source-data ZIP directory"
+    ],
+    "substitution_allowed": false,
+    "self_training_started": false,
+    "entry_requirements": [
+      "Author-released downstream predictor and complete dependency bundle",
+      "Source URL and checkpoint hashes",
+      "Training task and scope documented",
+      "Native loading and inference qualification"
+    ]
+  },
+  "analysis_membership": {
+    "ready_model_count": 5,
+    "pending_model_count": 1,
+    "local_fit_count": 0,
+    "pending_policy": "Do not include pending DTIAM in an all-model intersection or count its lack of a checkpoint as a failed pair prediction.",
+    "historical_matrices": "Keep seven-channel raw snapshots only for provenance. Recompute current-member intersections and summaries before reporting a new comparison.",
+    "readiness_limit": "Registered task weights do not imply complete matrix or completed benchmark qualification."
+  },
+  "history_v1": {
+    "MODEL_COMPARISON_REGISTER.csv": "9bc70be34f5737c2f8f3186b2ecd2de749988da6936d6a7f353969bb0fbace38",
+    "SUMMARY.json": "f924cba15f6fdb45232c03832277216fb7b7dbc6fc160a9472a39ad4871dae21",
+    "VALIDATION.json": "3601028867f35a24b5aa9a3c77b941ae711f59a83233615c519941100a9b64bb"
+  },
+  "supersedes_scope": "Overrides the public/reference inference membership in the A v2 base protocol. Does not change A training members or its 45 planned fits."
+}

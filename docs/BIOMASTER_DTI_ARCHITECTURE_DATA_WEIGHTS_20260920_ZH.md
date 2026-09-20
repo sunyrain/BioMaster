@@ -11,6 +11,8 @@
 - [已有权重列表](../outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv)：逐资产路径、大小、SHA256、来源与当前状态。
 - [权重分类汇总](../outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv)：按模型系列和资产类型统计。
 
+研究参赛名单已修订：ReTargetMap不参加，DTIAM仅用官方下游任务权重；目前为五个已有官方模型＋DTIAM待确认。[名单与限制](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。下方仍保留完整部署/历史资产，不表示全部参赛。
+
 ## 1. 架构列表
 
 ### 现用七模型
@@ -35,6 +37,7 @@
 
 | 名称 | 输入 | 配对计算 | 输出 | 当前状态 |
 | --- | --- | --- | --- | --- |
+| DTIAM 官方任务模型 | 官方BerMol＋ESM2 | 拼接后AutoGluon任务预测器 | 依具体官方检查点的DTI/DTA/MoA任务确定 | 官方下游任务权重未确认；BerMol编码器不等于任务预测器 |
 | EviDTI | 蛋白序列表征＋分子2D/3D特征 | 蛋白LightAttention、分子CNN/几何图网络与融合 | 证据式分类；Davis/KIBA任务头分别解释 | 3套任务权重；目录适配待核验 |
 | SCOPE 轻量版 | 分子3D图＋蛋白序列 | 分子GVP＋蛋白CNN＋双线性注意力 | DTI分类 | 25个检查点；现有入口使用固定目标库 |
 | TAPB | MolFormer tokenizer的SMILES token＋ESM2蛋白表征 | 分子Transformer＋交叉注意力解码器＋靶点先验干预 | DTI分类 | 代码/编码器资源在；合格任务权重未确认 |
@@ -62,7 +65,7 @@
 | TxGNN | 药物—疾病等异构知识图谱 | 异构图编码及关系解码 | 药物—疾病适应证logit | 官方模型本地存在；已做多方向推理 |
 
 七模型实际启用分支依据[本地架构审计](BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md)。
-现用七通道包括五个官方任务权重，以及本地ReTargetMap和DTIAM A；不能统称七个官方模型。训练集不同不妨碍用户场景比较，但限制架构归因及未见关系结论，详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。
+上表现用七通道是部署资产清单，不是本轮研究参赛名单。本轮官方权重比较排除ReTargetMap和本地DTIAM A/B，改用官方DTIAM；其下游任务权重尚未确认，因此目前为五个已有官方模型＋DTIAM待确认。详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。
 扩展模型依据本地作者代码和官方说明：[TAPB](https://github.com/GaomingL1n/TAPB)、[SCOPE轻量版](https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference)、[DrugBAN](https://github.com/peizhenbai/DrugBAN)。
 TAPB本地代码使用MolFormer tokenizer、独立分子Transformer和ESM2输入；已缓存MolFormer权重不表示已经训练出TAPB任务模型。
 
