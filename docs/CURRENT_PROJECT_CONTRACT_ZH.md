@@ -1,4 +1,6 @@
-# ReTargetMap 当前项目唯一口径
+# ReTargetMap 2026-09-01冻结生产合同
+
+> 2026-09-20状态：下文是9月1日历史生产合同，其中“当前/唯一”仅指该版本。新研究入口为[文档索引](README.md)，训练按[A主线](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)，现成模型按[比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。原机器合同保留复现用途，本文旧数字不代表新研究范围。
 
 > 生效日期：2026-09-01。若其他文档、PPT 或旧产物与本页冲突，以本页和 `configs/biomaster_current_contract_v1.json` 为准。内部版本号只用于复现，不进入项目汇报。
 

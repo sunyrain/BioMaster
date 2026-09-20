@@ -1,5 +1,7 @@
 # 顶层历史快照状态
 
+> 本页也是2026-09-01历史索引。2026-09-20已完成部分物理归档，详见[迁移清单](superseded_20260920/README.md)；当前入口为[文档索引](../README.md)。下方关于“当前唯一”和“暂不移动”的说明仅代表当时。
+
 自2026-09-01起，当前任务、数据量、模型角色和指标分母只从`docs/CURRENT_PROJECT_CONTRACT_ZH.md`与`configs/biomaster_current_contract_v1.json`读取。以下仍位于`docs/`顶层的文件保留原路径以避免破坏引用，但其“当前”“下一步”等措辞只代表文件日期当时的状态：
 
 - `BIOMASTER_ACTIVE_EXECUTION_QUEUE_20260817_ZH.md`

@@ -1,6 +1,8 @@
 # DTIAM 进度与阶段评价（2026-09-15）
 
-**已于08:03 UTC／北京时间16:03全部完成：六套训练、六套统一TEST和自动报告均成功。** DTIAM A排序优选的TEST三种子平均AP为0.9753、双向排序AP为0.6866、失活FPR为13.60%、召回92.50%；这是正式测试结果。与Palinova的比较和无阳性参照层的限制见[最终测试与评价](BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md)。下文保留历史进度及ETA，已由完成状态替代。
+> 历史归档（2026-09-20）：保留当时设计/进度及结果，不作为当前执行队列。当前入口见[文档索引](../../README.md)。
+
+**已于08:03 UTC／北京时间16:03全部完成：六套训练、六套统一TEST和自动报告均成功。** DTIAM A排序优选的TEST三种子平均AP为0.9753、双向排序AP为0.6866、失活FPR为13.60%、召回92.50%；这是正式测试结果。与Palinova的比较和无阳性参照层的限制见[最终测试与评价](../../BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md)。下文保留历史进度及ETA，已由完成状态替代。
 
 **最新核对：07:08 UTC，北京时间15:08。完成数仍为5/6，但最后一套B的Torch已经完成，当前基础学习器完成9/11，正在第10个LightGBMLarge，日志到6,100轮。** Torch于北京时间14:28完成，实际跑到562轮、1,212,796次更新，保留第362轮最佳权重。之后还需完成LightGBMLarge、FastAI、集成及公共验证，再自动进入六套统一TEST和报告。本次没有新增整套公共验证或TEST成绩，五套已完成模型的选择、校准及拟合文件哈希未变；TEST门仍关闭，TEST预测文件为0。
 
@@ -8,7 +10,7 @@
 
 从北京时间15:08起，预计全轮含统一测试、报告还需 **1—2.5小时**，中心1.36小时，约在今天北京时间 **16:30** 完成，规划窗口为16:08—17:38。依据是LightGBMLarge已运行0.68小时，前两套均值1.00小时；随后FastAI／集成约0.48小时，另预留公共验证0.05小时、统一TEST及报告0.50小时。测试／报告预留尚未实测，后续早停和运行耗时会影响完成时间。
 
-当前子进程RSS约17.85 GiB，容器内存45.55/90 GiB；无当前ERROR，OOM与OOM kill均为0，memory.high累计计数较上次未增加。系统盘可用10.32 GiB、数据盘56.61 GiB。最新状态及ETA计算依据见[07:08进度快照](../outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS_LIVE_0708.json)，上次记录见[03:41快照](../outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS_LIVE_0341.json)。STATUS按套件阶段更新，不是逐轮心跳；当前是否推进应结合子进程和训练日志。下文保留09:28详细结果，进度及ETA以上述更新为准。
+当前子进程RSS约17.85 GiB，容器内存45.55/90 GiB；无当前ERROR，OOM与OOM kill均为0，memory.high累计计数较上次未增加。系统盘可用10.32 GiB、数据盘56.61 GiB。最新状态及ETA计算依据见[07:08进度快照](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS_LIVE_0708.json)，上次记录见[03:41快照](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS_LIVE_0341.json)。STATUS按套件阶段更新，不是逐轮心跳；当前是否推进应结合子进程和训练日志。下文保留09:28详细结果，进度及ETA以上述更新为准。
 
 核对时间：2026-09-15 01:28 UTC，北京时间 09:28。**完整拟合与公共验证已完成 5/6 套：A 三个种子全部完成，B 完成两个，最后一套 B 正在训练。统一 TEST 尚未启动。**
 
@@ -46,7 +48,7 @@ B 第二种子的原生集成 IC50 AP 为 **0.9859**，EC50 AP 为 **0.9723**，
 
 A 三个种子都完成后，较好的公共验证表现已有重复支持；它比只看到一个种子时更值得期待。B 的第二个种子也重复了活性任务较强、亲和表现低于 A 的趋势。不过公共验证参与了子模型选择，当前不能据它宣布统一测试胜出，也不能据此重排原 SPR384 或推算实验命中率。
 
-前一轮已完成的[新 A＋训练内近邻／靶点先验](BIOMASTER_PALINOVA_A_TRAIN_ONLY_BLEND_20260914_ZH.md)属于 Palinova 评分层实验，其 4.71% 失活误报来自 TEST，并伴随无训练阳性参照层的零召回。不能把该数字与本页 DTIAM 的验证误报直接排名。本页未增加融合或回退规则，也未改后台训练协议。
+前一轮已完成的[新 A＋训练内近邻／靶点先验](../../BIOMASTER_PALINOVA_A_TRAIN_ONLY_BLEND_20260914_ZH.md)属于 Palinova 评分层实验，其 4.71% 失活误报来自 TEST，并伴随无训练阳性参照层的零召回。不能把该数字与本页 DTIAM 的验证误报直接排名。本页未增加融合或回退规则，也未改后台训练协议。
 
 **ETA 与运行状态。**
 
@@ -60,9 +62,9 @@ A 三个种子都完成后，较好的公共验证表现已有重复支持；它
 
 本次从已完成的五套保存预测重新计算公共验证指标，核对配对、面板、标签行序一致；检查冻结选择、拟合与校准文件哈希；校准预测复现一致，选择指标精确复现。未读取统一 TEST 预测，未重新拟合模型或阈值。脚本与结果如下：
 
-- [验证成绩 CSV](../outputs/biomaster_dtiam_ab_20260912/interim_20260915/COMPLETED_VALIDATION_METRICS.csv)：五套、两种预定视图；同一套的两个视图不算独立种子。
-- [种子均值 CSV](../outputs/biomaster_dtiam_ab_20260912/interim_20260915/SEED_MEAN_VALIDATION_METRICS.csv)：A 三种子、B 两种子，包含标准差与实际数量。
-- [进度快照、来源哈希与 ETA](../outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS.json)。
-- [只读验证与进度脚本](../scripts/snapshot_dtiam_progress_20260915.py)：不启动推理或拟合，不打开 TEST；ETA 公式限定当前最后一套 B 的 Torch 阶段。
+- [验证成绩 CSV](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260915/COMPLETED_VALIDATION_METRICS.csv)：五套、两种预定视图；同一套的两个视图不算独立种子。
+- [种子均值 CSV](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260915/SEED_MEAN_VALIDATION_METRICS.csv)：A 三种子、B 两种子，包含标准差与实际数量。
+- [进度快照、来源哈希与 ETA](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS.json)。
+- [只读验证与进度脚本](../../../scripts/snapshot_dtiam_progress_20260915.py)：不启动推理或拟合，不打开 TEST；ETA 公式限定当前最后一套 B 的 Torch 阶段。
 
-原训练实时状态仍以 [STATUS.json](../outputs/biomaster_dtiam_ab_20260912/STATUS.json) 和 [CURRENT_CHILD.json](../outputs/biomaster_dtiam_ab_20260912/CURRENT_CHILD.json) 为准。
+原训练实时状态仍以 [STATUS.json](../../../outputs/biomaster_dtiam_ab_20260912/STATUS.json) 和 [CURRENT_CHILD.json](../../../outputs/biomaster_dtiam_ab_20260912/CURRENT_CHILD.json) 为准。

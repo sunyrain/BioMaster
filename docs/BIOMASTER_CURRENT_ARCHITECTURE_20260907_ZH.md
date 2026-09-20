@@ -1,4 +1,6 @@
-# 当前模型架构：PocketPrecision
+# 2026-09-07历史模型架构：PocketPrecision
+
+> 历史架构记录。当前七模型和待训架构见[资源总表](BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md)，不要用下文已停止分支描述现用生产模型。
 
 > **最新阶段核对（2026-09-08）：** 本文PocketPrecision已停止；后继ContextPocket全量数据准备完成，但正式训练已在第25步触发结构保持门停止，未替换9月6日交付的全局模型。完整演进、各轮成绩与待完成路线见[各阶段路线与结果总梳理](BIOMASTER_PHASE_ROADMAP_AND_RESULTS_20260908_ZH.md)。
 

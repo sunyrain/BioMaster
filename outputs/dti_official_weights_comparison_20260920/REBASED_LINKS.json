@@ -1,0 +1,432 @@
+[
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_AB_MULTITASK_RESULTS_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_S5_ORIGIN_AND_AB_AUXILIARY_OBJECTIVES_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_EXPERIMENT_CHANGE_AND_MODEL_LINEAGE_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_MODEL_DECISION_AUDIT_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_AB_MULTITASK_RESULTS_20260911_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_ARCHITECTURE_ALGORITHM_UPGRADE_20260905_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_PRETRAINED_REPRESENTATION_SCREEN_20260819_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_EXPERIMENT_CONSOLIDATION_AND_BEST_MODELS_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_FRONTIER_ASSAY_AWARE_TRAINING_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_ASSAY_AWARE_RESULTS_20260911_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "outputs/biomaster_assay_aware_20260911/STATUS.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "outputs/biomaster_assay_aware_20260911/RUN.log",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_PALINOVA_DTIAM_GAP_DIAGNOSIS_20260915_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_PALINOVA_A_TRAIN_ONLY_BLEND_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_PALINOVA_AB_SPR_SAME_TASK_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_DTIAM_AB_RETRAIN_20260912_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/STATUS.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_DTIAM_INTERIM_REVIEW_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_INACTIVE_FPR_AND_JEPA_ASSESSMENT_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_PM_JEPA_DESIGN_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_ASSAY_AWARE_RETRAIN_20260911_ZH.md",
+    "target": "docs/BIOMASTER_PM_JEPA_MODALITIES_AND_RESOURCES_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_DTIAM_AB_RETRAIN_20260912_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_DTIAM_AB_RETRAIN_20260912_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_DTIAM_AB_RETRAIN_20260912_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_DTIAM_INTERIM_REVIEW_20260913_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_DTIAM_INTERIM_REVIEW_20260913_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/ENV_RESTART_RECOVERY_20260913/RECOVERY.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/RESTORE_ETA_20260913.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/system_disk_cleanup_20260913/SUMMARY.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/system_disk_cleanup_20260913/CACHE_CLEANUP_RESULT.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/system_disk_cleanup_20260913/ENV_RELOCATION.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "docs/BIOMASTER_DTIAM_INTERIM_REVIEW_20260913_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/STATUS.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/PROGRESS_20260913.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "docs/BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/PROGRESS_LIVE_20260914.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260914/COMMON_VALIDATION_COMPARISON.csv",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260914/ENDPOINT_VALIDATION_METRICS.csv",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260914/MATCHED_A_B_FIRST_SEED_DELTAS.csv",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260914/SUMMARY.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/PROGRESS_20260914.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/STATUS.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/CURRENT_CHILD.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "docs/BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS_LIVE_0708.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS_LIVE_0341.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "docs/BIOMASTER_PALINOVA_A_TRAIN_ONLY_BLEND_20260914_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260915/COMPLETED_VALIDATION_METRICS.csv",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260915/SEED_MEAN_VALIDATION_METRICS.csv",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/interim_20260915/PROGRESS.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "scripts/snapshot_dtiam_progress_20260915.py",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/STATUS.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md",
+    "target": "outputs/biomaster_dtiam_ab_20260912/CURRENT_CHILD.json",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_PHASE_ROADMAP_AND_RESULTS_20260908_ZH.md",
+    "target": "docs/archive/superseded_20260920/FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/BIOMASTER_PHASE_ROADMAP_AND_RESULTS_20260908_ZH.md",
+    "target": "docs/archive/superseded_20260920/FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/biomaster-strengthening-briefing-20260817-zh.html",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_ODTI_V2_DESIGN_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/biomaster-strengthening-briefing-20260817-zh.html",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_STRENGTHENING_SPEAKER_NOTES_20260817_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/biomaster-strengthening-briefing-20260817-zh.html",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_NEXT_MODEL_DATA_ROADMAP_20260817_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/biomaster-strengthening-briefing-20260817-zh.html",
+    "target": "docs/archive/superseded_20260920/BIOMASTER_ACTIVE_EXECUTION_QUEUE_20260817_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_SPR384_FINAL_FDA_CONTROLS_20260910_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_SPR384_BINDINGDB_QUALITY_REVIEW_20260910_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_SPR_RESULTS_UPLOAD_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_DISK_CLEANUP_COMPLETED_20260910_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_TXGNN_BIOPATHNET_COMPARISON_20260909_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_SPR64_512_DESIGN_20260909_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_PHASE_ROADMAP_AND_RESULTS_20260908_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_SELECTED_MODEL_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_UNIFIED_INTERACTION_FIRST_ROUND_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_CURRENT_ARCHITECTURE_TESTS_AND_STRENGTHENING_20260905_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_UNIFIED_INTERACTION_REVISION_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_UNIFIED_INTERACTION_FIRST_ROUND_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_V3_KIRHUB_TEMPORAL_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_V3_INCREMENTAL_ABLATION_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_OLD_DRUG_BIDIRECTIONAL_TEST_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_ODTI_V4_TESTSET_AUDIT_20260906_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_ODTI_V4_R1_TRAIN_TEST_20260905_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_ODTI_V4_ARCHITECTURE_AND_DATA_20260905_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_V3_RESULTS_AND_NEXT_DIRECTION_20260905_ZH.md",
+    "was_existing": true
+  },
+  {
+    "from": "docs/archive/superseded_20260920/DOCS_INDEX_BEFORE_20260920.md",
+    "target": "docs/BIOMASTER_V3_BUILD_TRAIN_TEST_20260905_ZH.md",
+    "was_existing": true
+  }
+]

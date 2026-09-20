@@ -2,7 +2,7 @@
 
 日期：2026-09-18。状态：**研究设计草案，尚未预注册；未启动本方案中的新增训练或湿实验。**
 
-2026-09-20实施更新：模型权重登记、五种训练划分、87项分阶段受控拟合清单及评估协议已落地，见[准备交付报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)和[执行协议v1](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)。新增训练尚未启动，下文保留原探索方案及其证据时间点。
+2026-09-20范围更新：当前采用[A主线45项、先30项的方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)，新增B训练为0；现成系统的用户价值按[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)研究。此前[v1准备交付](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)中的87项队列已被替代，原数据/权重登记继续使用。新增训练尚未启动，下文保留问题设计及其证据时间点，执行范围以新方案为准。
 
 本方案承接[七模型分歧调研及复核](BIOMASTER_MODEL_DISAGREEMENT_LITERATURE_20260918_ZH.md)。既有计算测试已被多次查看，属于探索证据。SPR384实验结果是否已被查看、用于调整模型，尚待确认；在确认前不称其为未揭盲验证集。
 

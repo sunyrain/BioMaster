@@ -77,14 +77,17 @@ def architectures():
     add('DeepDTA','扩展模型','SMILES与蛋白序列字符','两侧1D-CNN＋池化拼接＋全连接',
         '连续任务回归','有代码；现成合格任务权重未确认','third_party/DeepDTA/source/run_experiments.py',
         '经典序列回归参照','https://github.com/hkmztrk/DeepDTA')
-    protocol=json.loads((ROOT/'configs/dti_reliability_20260920/PROTOCOL.json').read_text())
+    active=ROOT/'configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json'
+    protocol_path=json.loads(active.read_text())['active_protocol'] if active.exists() else 'configs/dti_reliability_20260920/PROTOCOL.json'
+    protocol=json.loads((ROOT/protocol_path).read_text())
     labels={'drug_only':('药物单侧','实体偏好'), 'protein_only':('蛋白单侧','实体偏好'), 'additive':('两侧加性','无配对交互参照'),
         'dual_cosine':('双塔余弦','低成本匹配'), 'bilinear':('低秩双线性','显式乘性交互'),
         'global_mlp':('全局交互MLP','受控配对主干'), 'lightgbm':('LightGBM','强树学习器')}
-    for key,cfg in protocol['architectures'].items():
+    for key in labels:
+        cfg=protocol['architectures'][key]
         name,role=labels[key]
         add(name,'待训受控架构','＋'.join(cfg['inputs']),cfg['formula'],'二分类；目标干预组另加辅助',
-            '协议已登记；新受控权重尚未训练','configs/dti_reliability_20260920/PROTOCOL.json',role)
+            '协议已登记；新受控权重尚未训练',protocol_path,role)
     add('旧结构交互预训练教师','辅助路线','实验复合物原子/残基与接触/距离','局部结构交互编码＋几何读出',
         '接触与距离表征','结构预训练权重在；部分大编码缓存需重建',
         'docs/BIOMASTER_PM_JEPA_MODALITIES_AND_RESOURCES_20260914_ZH.md','为JEPA准备教师；未证实提升亲和')
@@ -250,6 +253,7 @@ def main():
     for category in a['类别'].unique():
         text += ['### '+category,'',table(a[a['类别'].eq(category)],['名称','输入','配对计算','输出','当前状态']),'']
     text += ['七模型实际启用分支依据[本地架构审计](BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md)。',
+        '现用七通道包括五个官方任务权重，以及本地ReTargetMap和DTIAM A；不能统称七个官方模型。训练集不同不妨碍用户场景比较，但限制架构归因及未见关系结论，详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。',
         '扩展模型依据本地作者代码和官方说明：[TAPB](https://github.com/GaomingL1n/TAPB)、[SCOPE轻量版](https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference)、[DrugBAN](https://github.com/peizhenbai/DrugBAN)。',
         'TAPB本地代码使用MolFormer tokenizer、独立分子Transformer和ESM2输入；已缓存MolFormer权重不表示已经训练出TAPB任务模型。',
         '', '## 2. 数据资源列表','',
@@ -269,7 +273,7 @@ def main():
         '本表延续原公开来源/许可记录；文件存在和哈希登记不等于官方示例复现、独立测试成立或允许再分发。',
         '', '## 4. 使用顺序','',
         current_note or '先用BerMol＋统一ESM2和A原骨架成员完成21次受控架构对照，复用历史A/B及DTIAM结果；后续按有效协议推进。',
-        '完整实验和评估规则见[研究准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[执行协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)。',
+        '当前执行范围见[A主线方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)，现成模型按[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。[v1准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[v1协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)保留冻结历史；其中87项旧队列已由A主线替代。',
         '', '重建本清单：`OPENBLAS_NUM_THREADS=1 .venvs/frontier_dti/bin/python scripts/build_dti_resource_catalog_20260920.py`。该命令整理清单、复核路径，不训练或部署模型。','']
     DOC.write_text('\n'.join(text))
     result={'created_utc':datetime.now(timezone.utc).isoformat(),'architecture_rows':len(a),'data_resource_rows':len(d),
@@ -279,7 +283,12 @@ def main():
         'inputs':{str(p.relative_to(ROOT)):sha(p) for p in [PREP/'WEIGHT_REGISTRY.csv',PREP/'DATASET_COUNTS.csv',PREP/'FEATURE_REGISTRY.json',ROOT/'configs/dti_reliability_20260920/PROTOCOL.json']},
         'outputs':{str(p.relative_to(ROOT)):sha(p) for p in [*OUT.glob('*.csv'),DOC]},
         'producer_sha256':sha(Path(__file__))}
-    if active.exists():result['inputs'][str(active.relative_to(ROOT))]=sha(active)
+    if active.exists():
+        result['inputs'][str(active.relative_to(ROOT))]=sha(active)
+        active_config=json.loads(active.read_text())
+        for key in ['active_protocol','inference_comparison_addendum']:
+            if key in active_config:
+                result['inputs'][active_config[key]]=sha(ROOT/active_config[key])
     (OUT/'SUMMARY.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({k:result[k] for k in ['architecture_rows','data_resource_rows','weight_rows','core_weight_path_aliases','path_checks']},indent=2))
 

@@ -129,12 +129,17 @@ def build():
     old_runs=pd.read_csv(PREP/'EXPERIMENT_MATRIX.csv')
     csv('DEFERRED_B_AND_AB_RUNS.csv',old_runs[old_runs.arm.isin(['B','AB'])].assign(disposition='DEFERRED_BY_A_ONLY_USER_SCOPE'))
     # An additive pointer chooses the effective version without rewriting the frozen v1 package.
-    save(ROOT/'configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json',dict(
+    active_pointer=dict(
         active_protocol=str((CONFIG/'PROTOCOL.json').relative_to(ROOT)),active_protocol_sha256=sha(CONFIG/'PROTOCOL.json'),
         active_main_runs=str((OUT/'EXPERIMENT_MATRIX_A.csv').relative_to(ROOT)),main_runs_sha256=sha(OUT/'EXPERIMENT_MATRIX_A.csv'),
         conditional_runs=str((OUT/'CONDITIONAL_EXPERIMENTS_A.csv').relative_to(ROOT)),
         superseded_run_registry='outputs/dti_research_preparation_20260920/EXPERIMENT_MATRIX.csv',
-        scope='A only; default excludes conditional experiments',new_training_started=False))
+        scope='A only; default excludes conditional experiments',new_training_started=False)
+    inference_addendum=ROOT/'configs/dti_official_weights_20260920/PROTOCOL.json'
+    if inference_addendum.exists():
+        active_pointer['inference_comparison_addendum']=str(inference_addendum.relative_to(ROOT))
+        active_pointer['inference_comparison_addendum_sha256']=sha(inference_addendum)
+    save(ROOT/'configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json',active_pointer)
     save(OUT/'SUMMARY.json',dict(status='A_ONLY_PLAN_PREPARED_NOT_TRAINING',parent_protocol_sha256=sha(BASE),
         main_fits=len(main),first_phase_fits=30,conditional_fits=len(cond),new_B_fits=0,
         deferred_previous_B_AB_fits=int(old_runs.arm.isin(['B','AB']).sum()),

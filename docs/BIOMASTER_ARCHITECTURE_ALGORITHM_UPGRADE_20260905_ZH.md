@@ -33,7 +33,7 @@ V3A 是当前投入胜率更有本项目证据支持的第一步；V3B 面向表
 | query-balanced 训练屏幕 | 文档记录 S3 drug-macro AP 0.6790 → 0.6130 / 0.6048 | 不能原样重复“提高药物排序权重 + 查询采样” |
 | 更换/叠加预训练表示 | MoLFormer 未晋级；ESMC 部分协议有增益，但组合没有普遍协同 | 预训练模型更大、模态更多，都应是独立变量 |
 
-证据：[局部图配对结果](../outputs/biomaster_odti_local_graph_formal_v1/formal_audit_v1/LOCAL_GRAPH_PAIRED_METRICS_V1.csv)、[interaction 结果](../outputs/biomaster_bidirectional_joint_interaction_screen_v1/seed_20260816/STAGE_A_SUMMARY_V6.json)、[对应 heads-only 结果](../outputs/biomaster_bidirectional_v6_stage_a_dense/seed_20260816/STAGE_A_SUMMARY_V6.json)、[已有差距审计](BIOMASTER_DTIAM_GAP_AND_OPTIMIZATION_AUDIT_20260827_ZH.md)、[预训练表示实验](BIOMASTER_PRETRAINED_REPRESENTATION_SCREEN_20260819_ZH.md)。这些表的基线和协议不同，不能把不同表的绝对数值拼成模型进步曲线。
+证据：[局部图配对结果](../outputs/biomaster_odti_local_graph_formal_v1/formal_audit_v1/LOCAL_GRAPH_PAIRED_METRICS_V1.csv)、[interaction 结果](../outputs/biomaster_bidirectional_joint_interaction_screen_v1/seed_20260816/STAGE_A_SUMMARY_V6.json)、[对应 heads-only 结果](../outputs/biomaster_bidirectional_v6_stage_a_dense/seed_20260816/STAGE_A_SUMMARY_V6.json)、[已有差距审计](BIOMASTER_DTIAM_GAP_AND_OPTIMIZATION_AUDIT_20260827_ZH.md)、[预训练表示实验](archive/superseded_20260920/BIOMASTER_PRETRAINED_REPRESENTATION_SCREEN_20260819_ZH.md)。这些表的基线和协议不同，不能把不同表的绝对数值拼成模型进步曲线。
 
 局部图正式实验训练 15 epoch、前 4 epoch 冻结 base，并非只有一次短烟雾训练。S5 平均局部门控约 0.0104，是需要解释的现象；它既可能反映优化受抑制，也可能反映输入确实没有增量，不能直接当成失败原因。
 

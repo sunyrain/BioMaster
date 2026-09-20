@@ -4,13 +4,13 @@
 
 实时状态以 [STATUS.json](../outputs/biomaster_dtiam_ab_20260912/STATUS.json) 为准；目录日期沿用本轮任务标签，实际启动、结束时间均写入 UTC 时间戳。完成后自动生成 `SUMMARY.json`、`ALL_MODEL_COMPARISON.csv` 和 `docs/BIOMASTER_DTIAM_AB_RESULTS_20260912_ZH.md`。
 
-最新更新（2026-09-14 00:03 UTC）：B 首组已完成 10/11 个基础学习器，正在运行最后的 FastAI；XGBoost、NeuralNetTorch 和 LightGBMLarge 均已保存完成。完整拟合及公共验证仍为 1/6，TEST 门控关闭。首组 B 预计还需 0.5—1.5 小时，全六组及测试约 24—40 小时，中心约 31 小时。运行核验、停止轮数和 ETA 依据见 [9 月 14 日进度与评价](BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md)。
+最新更新（2026-09-14 00:03 UTC）：B 首组已完成 10/11 个基础学习器，正在运行最后的 FastAI；XGBoost、NeuralNetTorch 和 LightGBMLarge 均已保存完成。完整拟合及公共验证仍为 1/6，TEST 门控关闭。首组 B 预计还需 0.5—1.5 小时，全六组及测试约 24—40 小时，中心约 31 小时。运行核验、停止轮数和 ETA 依据见 [9 月 14 日进度与评价](archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md)。
 
-2026-09-13 15:53 UTC 历史更新：环境重启后已恢复队列，复用完整 A 和七个 B 子模型；上次运行到约 5,600 轮的 XGBoost 未保存中间权重，本次从第 0 轮重跑。系统盘实际释放约 9.78 GiB，可用约 10.68 GiB。恢复及清理结果见 [9 月 13 日进度记录](BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md)。
+2026-09-13 15:53 UTC 历史更新：环境重启后已恢复队列，复用完整 A 和七个 B 子模型；上次运行到约 5,600 轮的 XGBoost 未保存中间权重，本次从第 0 轮重跑。系统盘实际释放约 9.78 GiB，可用约 10.68 GiB。恢复及清理结果见 [9 月 13 日进度记录](archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md)。
 
 2026-09-13 14:09 UTC 历史更新：B 首组已完成七个基础学习器。XGBoost 此前实际内存超过 78 GiB 而停止；已完成真实样本一致性和完整 B 两轮资源检查，改用保持原 CSR 零值语义的数值输入适配器，恢复原预算的 XGBoost。资源检查峰值 30.44 GiB；其余模型、训练成员与公共评估规则保持原定义。全套完成数仍为 1/6，尚无 B 公共验证结果。
 
-2026-09-13 09:48 UTC 进度：B 第一组的 LightGBMXT 已完成 10,000 轮原定预算，耗时 40.23 分钟；第二个 LightGBM 曾于 09:03 UTC 因模型切换后的内存预检查中止。现已保留首个模型及原内部划分，将 B 核心阶段改为每个原生学习器独立进程，用 `fit_extra` 读取同一缓存继续。完整完成数仍为 1/6；没有新增公共验证或 TEST 结果。最新状态和恢复证据见 [进度记录](BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md)。
+2026-09-13 09:48 UTC 进度：B 第一组的 LightGBMXT 已完成 10,000 轮原定预算，耗时 40.23 分钟；第二个 LightGBM 曾于 09:03 UTC 因模型切换后的内存预检查中止。现已保留首个模型及原内部划分，将 B 核心阶段改为每个原生学习器独立进程，用 `fit_extra` 读取同一缓存继续。完整完成数仍为 1/6；没有新增公共验证或 TEST 结果。最新状态和恢复证据见 [进度记录](archive/superseded_20260920/BIOMASTER_DTIAM_PROGRESS_20260913_ZH.md)。
 
 启动核验已通过：完整 B 的 1,116,270 行、2,048 维原生预处理和数据加载器峰值为 69.03 GiB。首套 A / 20260921 于 2026-09-11 17:48 UTC 进入正式拟合；这是启动记录，尚无本轮最终测试成绩。
 

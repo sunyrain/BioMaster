@@ -54,7 +54,7 @@ flowchart TD
 
 **得到的结论：** 受体状态、口袋和逐靶点正负校准决定结构分数能否使用。ConPLEx、DrugCLIP召回、Boltz姿势、GNINA和疾病证据分别回答不同问题，不能直接相加解释成真实结合概率。旧结构、文献、活性物种和实验可行性注释仍可按精确pair复用。
 
-证据：[历史v4交付状态](RESULTS_STATUS_ZH.md)、[后续物理线审计与决策](FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md)。这两份是不同历史快照，数值不作为当前模型目录分母。
+证据：[历史v4交付状态](RESULTS_STATUS_ZH.md)、[后续物理线审计与决策](archive/superseded_20260920/FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md)。这两份是不同历史快照，数值不作为当前模型目录分母。
 
 ### 3.1 单独的TxGNN＋Open Targets疾病与机制路线
 
@@ -94,7 +94,7 @@ Open Targets子疾病补全将261个候选疾病名称中的207个映射成功�
 
 后续方法收束将TxGNN和疾病关联从结合发现主排序转为疾病/机制语境：先检验药靶结合假说，再据疾病、作用方向、组织和表达选择功能实验与新用途；Open Targets的靶点tractability与空间审计仍在发现前使用。现有疾病和路径资产可以复用，但不能用疾病关联反向证明药物结合该靶点，也不能让历史疾病加权总分替代当前老药→靶点模型。
 
-证据：[215靶点全疾病补全摘要](../outputs/current_production_package_v2/full_untruncated_universe_v4/opentargets_top3000_target_completion_v4/opentargets_final1000_full_disease_completion_summary.json)、[方法组合与角色调整](FDA_OLD_DRUG_METHOD_COMBINATION_AND_PORTFOLIO_V5_ZH.md)、[后续物理线决策](FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md)。
+证据：[215靶点全疾病补全摘要](../outputs/current_production_package_v2/full_untruncated_universe_v4/opentargets_top3000_target_completion_v4/opentargets_final1000_full_disease_completion_summary.json)、[方法组合与角色调整](FDA_OLD_DRUG_METHOD_COMBINATION_AND_PORTFOLIO_V5_ZH.md)、[后续物理线决策](archive/superseded_20260920/FDA_OLD_DRUG_PROJECT_CURRENT_STATUS_AND_NEXT_DECISION_V7_ZH.md)。
 
 ## 4. 阶段二：从筛选工具组合到自研ODTI与正式基准
 

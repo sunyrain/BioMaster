@@ -1,12 +1,14 @@
 # DTIAM 进度与阶段评价（2026-09-14）
 
-本页保留9月14日历史快照。六套训练和统一TEST已于9月15日北京时间16:03全部完成，见[最终测试与评价](BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md)；阶段记录见[9月15日进度](BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md)。
+> 历史归档（2026-09-20）：保留当时设计/进度及结果，不作为当前执行队列。当前入口见[文档索引](../../README.md)。
+
+本页保留9月14日历史快照。六套训练和统一TEST已于9月15日北京时间16:03全部完成，见[最终测试与评价](../../BIOMASTER_DTIAM_FINAL_REVIEW_20260915_ZH.md)；阶段记录见[9月15日进度](BIOMASTER_DTIAM_PROGRESS_20260915_ZH.md)。
 
 **最新核对：14:01 UTC（北京时间 22:01）。队列正常，完整拟合及公共验证完成 3/6；第二套 B 已完成 9/11 个基础学习器，正在第 10 个 LightGBMLarge。** NeuralNetTorch 于 13:50 UTC 完成，实际训练 420 轮、906,360 次更新，保留第 267 轮最佳权重，用时 5.82 小时。随后还需 FastAI、集成及公共验证，再执行第三种子的 A/B。完成套件数暂未变化，但第二套 B 比上次多完成一个基础学习器。
 
 当前子进程 RSS 约 17.86 GiB，容器总内存约 43.63/90 GiB，OOM 计数为 0，无当前错误文件；系统盘约 10.65 GiB、数据盘约 62.55 GiB 可用。此 DTIAM 阶段按冻结方案使用 CPU，GPU 空闲正常。JEPA 尚未启动训练。
 
-本次没有新增公共验证成绩，统一 TEST 门仍关闭。刚完成 Torch 的最佳 AUROC 0.9749 来自 B 内部训练留出集，不能与下表公共 Kd/Ki 指标直接比较。第二套 B 的 Torch 比首套 4.13 小时多用了约 1.69 小时；按当前剩余阶段及已完成种子的实测耗时更新，第二套 B 预计还需约 **1—3 小时**，全六套、统一测试与报告还需约 **14—24 小时**，中心约 16.8 小时，约在 **9 月 15 日 06:52 UTC / 北京时间 14:52** 完成。下一套 B 采用两次 Torch 耗时的均值修正首套总耗时，其余阶段沿用已完成记录；后续停止时点和资源情况会改变 ETA，最终测试及报告耗时尚为预留值。快照和计算依据见 [实时进度快照](../outputs/biomaster_dtiam_ab_20260912/PROGRESS_LIVE_20260914.json)。以下保留 02:54 UTC 的详细验证结果及历史运行快照，旧进度及 ETA 由上述更新替代。
+本次没有新增公共验证成绩，统一 TEST 门仍关闭。刚完成 Torch 的最佳 AUROC 0.9749 来自 B 内部训练留出集，不能与下表公共 Kd/Ki 指标直接比较。第二套 B 的 Torch 比首套 4.13 小时多用了约 1.69 小时；按当前剩余阶段及已完成种子的实测耗时更新，第二套 B 预计还需约 **1—3 小时**，全六套、统一测试与报告还需约 **14—24 小时**，中心约 16.8 小时，约在 **9 月 15 日 06:52 UTC / 北京时间 14:52** 完成。下一套 B 采用两次 Torch 耗时的均值修正首套总耗时，其余阶段沿用已完成记录；后续停止时点和资源情况会改变 ETA，最终测试及报告耗时尚为预留值。快照和计算依据见 [实时进度快照](../../../outputs/biomaster_dtiam_ab_20260912/PROGRESS_LIVE_20260914.json)。以下保留 02:54 UTC 的详细验证结果及历史运行快照，旧进度及 ETA 由上述更新替代。
 
 核对时间：2026-09-14 02:54 UTC（北京时间 10:54）。**已完成完整拟合及公共验证 3/6 组：两套 A、一套 B。正在训练第二套 B；尚未进入统一 TEST。新增结果支持 A、B 按亲和与活性任务分别评价，DTIAM A 已有两个种子的较强亲和验证表现。**
 
@@ -64,4 +66,4 @@ IC50 验证面板 85,805 对（64,470 阳性），EC50 面板 12,994 对（9,173
 
 下一步继续完成后三组，统一测试后按亲和、活性、双向 Top-K、失活误报和严格来源子集决定模型角色；目前继续以 A 作为亲和挑战、B 作为活性挑战，不用这一轮验证直接变更已交付 SPR 清单。
 
-完整视图、各端点结果和同名学习器差异见 [公共验证对照表](../outputs/biomaster_dtiam_ab_20260912/interim_20260914/COMMON_VALIDATION_COMPARISON.csv)、[端点指标](../outputs/biomaster_dtiam_ab_20260912/interim_20260914/ENDPOINT_VALIDATION_METRICS.csv)、[A/B 同名学习器差异](../outputs/biomaster_dtiam_ab_20260912/interim_20260914/MATCHED_A_B_FIRST_SEED_DELTAS.csv)。来源与核验见 [阶段汇总](../outputs/biomaster_dtiam_ab_20260912/interim_20260914/SUMMARY.json)，进度及 ETA 公式见 [PROGRESS_20260914.json](../outputs/biomaster_dtiam_ab_20260912/PROGRESS_20260914.json)。实时运行以 [STATUS.json](../outputs/biomaster_dtiam_ab_20260912/STATUS.json) 和 [CURRENT_CHILD.json](../outputs/biomaster_dtiam_ab_20260912/CURRENT_CHILD.json) 为准。
+完整视图、各端点结果和同名学习器差异见 [公共验证对照表](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260914/COMMON_VALIDATION_COMPARISON.csv)、[端点指标](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260914/ENDPOINT_VALIDATION_METRICS.csv)、[A/B 同名学习器差异](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260914/MATCHED_A_B_FIRST_SEED_DELTAS.csv)。来源与核验见 [阶段汇总](../../../outputs/biomaster_dtiam_ab_20260912/interim_20260914/SUMMARY.json)，进度及 ETA 公式见 [PROGRESS_20260914.json](../../../outputs/biomaster_dtiam_ab_20260912/PROGRESS_20260914.json)。实时运行以 [STATUS.json](../../../outputs/biomaster_dtiam_ab_20260912/STATUS.json) 和 [CURRENT_CHILD.json](../../../outputs/biomaster_dtiam_ab_20260912/CURRENT_CHILD.json) 为准。

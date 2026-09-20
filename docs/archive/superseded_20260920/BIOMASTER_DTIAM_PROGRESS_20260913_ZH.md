@@ -1,5 +1,7 @@
 # DTIAM 进度记录（2026-09-13）
 
+> 历史归档（2026-09-20）：保留当时设计/进度及结果，不作为当前执行队列。当前入口见[文档索引](../../README.md)。
+
 最新状态见 [2026-09-14 进度与评价](BIOMASTER_DTIAM_PROGRESS_20260914_ZH.md)；以下保留 9 月 13 日恢复和系统盘清理记录。
 
 核对时间：2026-09-13 15:53 UTC。**环境重启后训练已恢复；完整拟合及公共验证仍为 1/6 组，B 首组已完成 7/11 个基础学习器。系统盘已释放约 9.78 GiB，可用约 10.68 GiB。统一 TEST 尚未启动。**
@@ -23,7 +25,7 @@ B 已完成 LightGBMXT、LightGBM、RandomForestGini、RandomForestEntr、CatBoo
 
 15:39 UTC 左右环境重启，原队列和训练子进程已退出，状态文件仍停在 TRAINING。上次 XGBoost 日志停在 15:38:51 UTC、约 5,600 轮，运行约 89.05 分钟；未完成学习器没有保存中间权重，因此本次从第 0 轮重跑 XGBoost，不能称从 5,600 轮续训。已完成 A 和七个 B 学习器继续复用。15:43 UTC 恢复队列，15:44:44 UTC 启动当前 XGBoost；队列 PID 2015、子进程 PID 2593，核查时子进程 RSS 约 30.1 GiB，迭代日志持续增加。冻结数据、协议、代码及七个 B 模型文件哈希再次通过检查。
 
-恢复现场记录见 [RECOVERY.json](../outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/ENV_RESTART_RECOVERY_20260913/RECOVERY.json)。训练临时目录已指向数据盘 `/root/autodl-tmp/BioMaster/.runtime_tmp/dtiam`。
+恢复现场记录见 [RECOVERY.json](../../../outputs/biomaster_dtiam_ab_20260912/all_inactive__seed_20260921/ENV_RESTART_RECOVERY_20260913/RECOVERY.json)。训练临时目录已指向数据盘 `/root/autodl-tmp/BioMaster/.runtime_tmp/dtiam`。
 
 从本次 15:44 UTC 重启 XGBoost 起，按以下范围安排：
 
@@ -32,7 +34,7 @@ B 已完成 LightGBMXT、LightGBM、RandomForestGini、RandomForestEntr、CatBoo
 | 首组 B 完整拟合及公共验证 | 6—12 小时 | 约 8.8 小时 |
 | 全部六组、统一 TEST 及报告 | 30—50 小时 | 约 38.2 小时 |
 
-全轮中心完成时间约为 **9 月 15 日 06:00 UTC（北京时间 14:00）**。这是工作安排范围，不是置信区间或保证时限；前提是没有再次中断。依据是首组 A 实测 3.00 小时、B 已完成七阶段实测 2.71 小时、先前 XGBoost 5,600 轮耗时。后续 B 神经和大树模型按 A 分项耗时乘训练行数比 3.307 外推；神经模型实际早停轮数是主要不确定项。没有按完成模型个数线性估算。明细和公式见 [RESTORE_ETA_20260913.json](../outputs/biomaster_dtiam_ab_20260912/RESTORE_ETA_20260913.json)，首套 B 完成后需重新估计。没有新增 B 公共验证或 TEST 成绩。
+全轮中心完成时间约为 **9 月 15 日 06:00 UTC（北京时间 14:00）**。这是工作安排范围，不是置信区间或保证时限；前提是没有再次中断。依据是首组 A 实测 3.00 小时、B 已完成七阶段实测 2.71 小时、先前 XGBoost 5,600 轮耗时。后续 B 神经和大树模型按 A 分项耗时乘训练行数比 3.307 外推；神经模型实际早停轮数是主要不确定项。没有按完成模型个数线性估算。明细和公式见 [RESTORE_ETA_20260913.json](../../../outputs/biomaster_dtiam_ab_20260912/RESTORE_ETA_20260913.json)，首套 B 完成后需重新估计。没有新增 B 公共验证或 TEST 成绩。
 
 系统盘清理已完成：
 
@@ -44,6 +46,6 @@ B 已完成 LightGBMXT、LightGBM、RandomForestGini、RandomForestEntr、CatBoo
 | 迁移校验 | rsync 全文件内容校验无差异，原路径 Python 可运行，JAX/JAXLIB/ColabFold 包版本一致；未执行完整 BioEmu 推理 |
 | 数据盘可用空间 | 迁移后约 68.5 GiB；迁移释放系统盘空间，同时占用数据盘空间 |
 
-当前 VSCode 服务、活动 Python/CUDA 环境、训练输入与权重、SPR 交付文件、Codex 会话历史和安全日志均保留。清理清单、实测磁盘变化和迁移记录见 [清理汇总](../outputs/system_disk_cleanup_20260913/SUMMARY.json)、[缓存清理明细](../outputs/system_disk_cleanup_20260913/CACHE_CLEANUP_RESULT.json)、[环境迁移校验](../outputs/system_disk_cleanup_20260913/ENV_RELOCATION.json)。
+当前 VSCode 服务、活动 Python/CUDA 环境、训练输入与权重、SPR 交付文件、Codex 会话历史和安全日志均保留。清理清单、实测磁盘变化和迁移记录见 [清理汇总](../../../outputs/system_disk_cleanup_20260913/SUMMARY.json)、[缓存清理明细](../../../outputs/system_disk_cleanup_20260913/CACHE_CLEANUP_RESULT.json)、[环境迁移校验](../../../outputs/system_disk_cleanup_20260913/ENV_RELOCATION.json)。
 
-阶段性能见 [A 阶段评价](BIOMASTER_DTIAM_INTERIM_REVIEW_20260913_ZH.md)，实时状态见 [STATUS.json](../outputs/biomaster_dtiam_ab_20260912/STATUS.json)，本次快照见 [PROGRESS_20260913.json](../outputs/biomaster_dtiam_ab_20260912/PROGRESS_20260913.json)。
+阶段性能见 [A 阶段评价](../../BIOMASTER_DTIAM_INTERIM_REVIEW_20260913_ZH.md)，实时状态见 [STATUS.json](../../../outputs/biomaster_dtiam_ab_20260912/STATUS.json)，本次快照见 [PROGRESS_20260913.json](../../../outputs/biomaster_dtiam_ab_20260912/PROGRESS_20260913.json)。

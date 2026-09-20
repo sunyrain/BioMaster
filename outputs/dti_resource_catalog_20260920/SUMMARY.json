@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-20T06:46:52.524678+00:00",
+  "created_utc": "2026-09-20T07:15:12.217990+00:00",
   "architecture_rows": 23,
   "data_resource_rows": 48,
   "weight_rows": 117,
@@ -14,14 +14,16 @@
     "outputs/dti_research_preparation_20260920/DATASET_COUNTS.csv": "825bcbae751cbe96f659eb10cd2a468393a5682d161e0a0196c308e774ad014c",
     "outputs/dti_research_preparation_20260920/FEATURE_REGISTRY.json": "c93f5351e9edb8dd472d33d039747a0f2a4acf3acec7b151c44be97e93461ba4",
     "configs/dti_reliability_20260920/PROTOCOL.json": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
-    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "15fc19eacbe55a6795553a68d5c3c84bfde7b7c2f31e66035e589e8b015717cb"
+    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "a89ef019e27db4eb9a01cc1f298938c3bb41f11ed0231f461acce2bc4ec9ff42",
+    "configs/dti_reliability_A_20260920_v2/PROTOCOL.json": "ae368bf6d3ce9b3ee9a77186712a76ccc2c84fd732f9e11a63a37793606611d5",
+    "configs/dti_official_weights_20260920/PROTOCOL.json": "ef72173a5bd86456badc56e42730cb6756af3f271431773c178098e0c9e91e2e"
   },
   "outputs": {
-    "outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv": "406cedffb4ff12eec49493e1d8f70f52718a57bff9f96d4b83a2fcb1eaa0fcc5",
+    "outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv": "86ca7837e3c81d0d3b49ed50d9bd83fada32b604a3e4fcd3b70fa929bab808e3",
     "outputs/dti_resource_catalog_20260920/DATA_RESOURCE_LIST.csv": "1ff3a8b7168aab53e2b2004da5db944dc26a3b12499d22c9f89efe686d5370f1",
     "outputs/dti_resource_catalog_20260920/WEIGHT_LIST.csv": "773654742f3c323efd15c83919cec9b4d4c9fc9a8ee5dae61f65fdaff73b377b",
     "outputs/dti_resource_catalog_20260920/WEIGHT_SUMMARY.csv": "83c6952632230ea55d2eff829100469bb2239c12f39dd16f3256aa293386cda7",
-    "docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md": "8559a79ddcbcb8f959ceb2419bcbeda870699ac8effbba27e3d6b624e49c7fef"
+    "docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md": "40fa3113c7beb644c1f8d66e627e5569ed64065f467625ac81b76f83a0513255"
   },
-  "producer_sha256": "72f7f4869b898a36f5d3ddaf9b281de3790396b8fcc04500cbe1827c85d07307"
+  "producer_sha256": "53cf7fbf6f17952a6849f029a5bb46b64d58f48314de956b38239660e3b2b508"
 }

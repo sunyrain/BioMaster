@@ -57,4 +57,4 @@ A/B各四种变体，每种三个种子，全部满足预先定义的验证平�
 
 训练与固定测试比较已完成。原384、参考对照、网站生产评分和生产模型未被替换；这24个新检查点尚未用于重新评分完整候选矩阵或统计原384保留数量。已确认两个有不同优势的A方案可作为后续复评分支：纯二分类与联合辅助。该建议基于当前均值，仍需检查相关靶点覆盖、种子稳定性与实际候选，而非直接宣布一个通用赢家。
 
-协议与运行入口见[训练记录](BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md)。研究目录为`outputs/biomaster_endpoint_multitask_20260911/`，包含全部检查点、曲线、分类/排序/回归指标和测试预测。
+协议与运行入口见[训练记录](archive/superseded_20260920/BIOMASTER_AB_MULTITASK_CONVERGENCE_RUN_20260911_ZH.md)。研究目录为`outputs/biomaster_endpoint_multitask_20260911/`，包含全部检查点、曲线、分类/排序/回归指标和测试预测。

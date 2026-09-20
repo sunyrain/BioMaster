@@ -62,6 +62,7 @@
 | TxGNN | 药物—疾病等异构知识图谱 | 异构图编码及关系解码 | 药物—疾病适应证logit | 官方模型本地存在；已做多方向推理 |
 
 七模型实际启用分支依据[本地架构审计](BIOMASTER_SEVEN_MODEL_ARCHITECTURE_AUDIT_20260919_ZH.md)。
+现用七通道包括五个官方任务权重，以及本地ReTargetMap和DTIAM A；不能统称七个官方模型。训练集不同不妨碍用户场景比较，但限制架构归因及未见关系结论，详见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。
 扩展模型依据本地作者代码和官方说明：[TAPB](https://github.com/GaomingL1n/TAPB)、[SCOPE轻量版](https://github.com/Yigang-Chen/Lightweight-SCOPE-DTI-for-Inference)、[DrugBAN](https://github.com/peizhenbai/DrugBAN)。
 TAPB本地代码使用MolFormer tokenizer、独立分子Transformer和ESM2输入；已缓存MolFormer权重不表示已经训练出TAPB任务模型。
 
@@ -200,6 +201,6 @@ SCOPE的25个检查点按GPCR、IC、Kinase、NHR及Total五组各5个组织，�
 ## 4. 使用顺序
 
 当前训练范围已按用户决定改为A主线：先30项共同输入/目标实验，主线含局部模型与冷靶点共45项，新增B为0。详见[A-only重训决策](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)及[当前协议指针](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json)。下列资产清单保留B历史资源，不表示继续安排B训练。
-完整实验和评估规则见[研究准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[执行协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)。
+当前执行范围见[A主线方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)，现成模型按[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。[v1准备报告](BIOMASTER_DTI_RESEARCH_PREPARATION_20260920_ZH.md)及[v1协议](protocols/DTI_RELIABILITY_PROTOCOL_20260920_ZH.md)保留冻结历史；其中87项旧队列已由A主线替代。
 
 重建本清单：`OPENBLAS_NUM_THREADS=1 .venvs/frontier_dti/bin/python scripts/build_dti_resource_catalog_20260920.py`。该命令整理清单、复核路径，不训练或部署模型。

@@ -1,8 +1,10 @@
 # A/B四种目标的收敛训练：解释、协议与启动记录
 
+> 历史归档（2026-09-20）：保留当时设计/进度及结果，不作为当前执行队列。当前入口见[文档索引](../../README.md)。
+
 2026-09-11。用户授权比较A/B的“仅二分类、加排序、加回归、两者都加”，训练到验证平台期，先启动并报告ETA。
 
-**完成更新：24/24次拟合及统一测试已于2026-09-11 04:39 UTC（北京时间12:39）完成，总耗时91分钟。下文保留启动协议与当时ETA；实际结果见[完成报告](BIOMASTER_AB_MULTITASK_RESULTS_20260911_ZH.md)。**
+**完成更新：24/24次拟合及统一测试已于2026-09-11 04:39 UTC（北京时间12:39）完成，总耗时91分钟。下文保留启动协议与当时ETA；实际结果见[完成报告](../../BIOMASTER_AB_MULTITASK_RESULTS_20260911_ZH.md)。**
 
 ## 1. 150对上限有道理，为什么现在又显得不理想
 
@@ -20,7 +22,7 @@
 
 因此，本轮保留完整A/B训练成员，在排序辅助中采用查询均衡采样，延续防止热门靶点主导的考虑；不同时加入新的150对截断或改变二分类采样规则，以便解释目标变化。将来若比较“截断、每靶点加权、全量”，应另设消融。
 
-相关事实与边界见[来源及目标设计](BIOMASTER_S5_ORIGIN_AND_AB_AUXILIARY_OBJECTIVES_20260911_ZH.md)、[历史评分与收敛审计](BIOMASTER_EXPERIMENT_CHANGE_AND_MODEL_LINEAGE_20260911_ZH.md)、[模型决策诊断](BIOMASTER_MODEL_DECISION_AUDIT_20260911_ZH.md)。
+相关事实与边界见[来源及目标设计](../../BIOMASTER_S5_ORIGIN_AND_AB_AUXILIARY_OBJECTIVES_20260911_ZH.md)、[历史评分与收敛审计](../../BIOMASTER_EXPERIMENT_CHANGE_AND_MODEL_LINEAGE_20260911_ZH.md)、[模型决策诊断](../../BIOMASTER_MODEL_DECISION_AUDIT_20260911_ZH.md)。
 
 ## 2. 已启动的24次拟合
 

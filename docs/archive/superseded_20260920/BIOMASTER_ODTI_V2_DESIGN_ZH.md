@@ -1,5 +1,7 @@
 # BioMaster-ODTI V2 强化算法设计与实现
 
+> 历史归档（2026-09-20）：保留当时设计/进度及结果，不作为当前执行队列。当前入口见[文档索引](../../README.md)。
+
 更新时间：2026-08-16
 状态：V2.1 训练修正版已实现；V2.2 的 pooled ESM2 auxiliary、target-wise listwise loss 和 residue-token cross-attention 已实现并通过单测。药物侧 gated auxiliary residual 已完成训练/评估入口、train-only normalization、provenance 和 BERMOL768 smoke，但尚未正式晋级。ESM2 auxiliary 已完成 S2 五种子 × 五折正式套件；residue-token 分支已完成 2 seed × 5 fold 筛选但未晋级。BindingDB positive-only pair-heldout retrieval 已跑通，但更广泛 source/entity-cold external 和 prospective W1 仍未完成。
 

@@ -2,6 +2,8 @@
 
 日期：2026-09-20。承接用户决定：用A的训练/验证/测试规模开展主研究，取消大规模新增B训练。**本轮调整计划及登记，不启动训练。**
 
+官方权重同时保留为用户场景比较：训练数据不同是现成系统的一部分，但不能据此单独归因架构或宣称未见关系泛化。两条线的条件、训练暴露及覆盖规则见[官方权重比较协议](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)。
+
 当前执行入口是 [ACTIVE_PROTOCOL.json](../configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json)，指向[A-only v2协议](../configs/dti_reliability_A_20260920_v2/PROTOCOL.json)。原87项计划留作历史快照；主线调整为45项A拟合，先做其中30项，条件实验另列。原B/AB的24项新拟合延期，已有B数据、权重和结果保留。
 
 ## 1. A能支撑什么结论

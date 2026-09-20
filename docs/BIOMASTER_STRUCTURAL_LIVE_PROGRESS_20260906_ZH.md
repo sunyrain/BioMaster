@@ -1,5 +1,7 @@
 # 结构交互训练：已停止，进度归档
 
+> 历史记录（2026-09-20归档）：旧生成脚本仍引用此路径，故原位保留；其中进度、ETA与推荐仅代表当时。当前入口见[文档索引](README.md)。
+
 [当前架构图与说明](BIOMASTER_CURRENT_ARCHITECTURE_20260907_ZH.md) · [本页浏览器预览](previews/pocket_precision_20260907/BIOMASTER_STRUCTURAL_LIVE_PROGRESS_20260906_ZH.html) · [架构纯文本说明](BIOMASTER_CURRENT_ARCHITECTURE_PLAIN_20260907_ZH.txt)
 
 **2026-09-07 05:08:47 UTC／北京时间13:08:47，按用户要求停止。** 训练、自动调度及实时报告进程均已退出，GPU计算进程查询为空。本文件已冻结，不再每30秒刷新。

@@ -1,5 +1,7 @@
 # BioMaster
 
+**2026-09-20研究入口**：当前新增训练采用[A主线方案](docs/BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)：训练337,570、验证41,806、测试39,507对；主线45项、先30项，新增B训练为0，尚未启动。另用现成模型研究部署中的推荐差异，规则见[官方权重比较](docs/BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)；资产见[架构、数据和权重清单](docs/BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md)。全部当前入口见[文档索引](docs/README.md)。
+
 **2026-09-10 实验交付**：当前湿实验基线为 **384 个候选配对＋112 个另计对照**。[最终实验表](outputs/spr384_final_experiment_table_20260910/SPR384_FINAL_EXPERIMENT_TABLE.csv)包含药物、旧靶点、新靶点及指定参考化合物；[FDA 对照修订记录](docs/BIOMASTER_SPR384_FINAL_FDA_CONTROLS_20260910_ZH.md)与[实验回填说明](docs/BIOMASTER_SPR_RESULTS_UPLOAD_ZH.md)用于保持身份和版本一致。候选交付不代表已测得结合。
 
 仓库发布代码、文档和明确列出的实验/审计快照；模型权重、完整评分缓存、原始数据库和账号文件留在本地。新检出仓库需要按[数据访问说明](docs/DATA_ACCESS.md)准备运行资产。已清理历史大文件约101.6GB，[执行记录](docs/BIOMASTER_DISK_CLEANUP_COMPLETED_20260910_ZH.md)标明哪些研究分支需重建特征。
@@ -8,9 +10,9 @@
 
 **2026-09-06独立模型交付**：[本轮选定模型、实际架构及完整回归结论](docs/BIOMASTER_SELECTED_MODEL_20260906_ZH.md)。完成54次全局比较与24次局部消融，交付一个DrugCLIP＋Morgan＋ESM2共享网络；[模型包与推理用法](outputs/biomaster_best_model_20260906/retargetmap_selected_v1/README.md)。范围为720药×384靶点，明确区分≤2022回归权重和≤2025部署拟合；以下冻结生产合同保留原用途。
 
-BioMaster 是一个面向老药新靶点发现的可复现研究仓库。当前主任务是：给定一种已上市/老药，在候选靶点中排序潜在作用靶点；反向的“给定靶点排序老药”仅作为辅助证据。项目唯一口径见 [当前项目合同](docs/CURRENT_PROJECT_CONTRACT_ZH.md)，机器可检验版本见 [biomaster_current_contract_v1.json](configs/biomaster_current_contract_v1.json)。
+BioMaster 是一个面向老药新靶点发现的可复现研究仓库。湿实验交付、部署模型比较和A受控重训分别维护；DTI研究同时评价药物→靶点、靶点→药物两个方向。[9月1日生产合同](docs/CURRENT_PROJECT_CONTRACT_ZH.md)及[对应机器配置](configs/biomaster_current_contract_v1.json)保留用于历史复现，不代表9月20日研究的数据量、队列或比较范围。
 
-## 当前研究边界
+## 历史生产合同范围（2026-09-01）
 
 - 当前已评分比较核心：720 种老药 × 384 个靶点，共 276,480 个 pair；下一版主生产空间为450个靶点，其中66个尚待统一评分。
 - 完整745靶点只是非GPCR登记与分路空间，不是全局排序分母。
@@ -20,7 +22,7 @@ BioMaster 是一个面向老药新靶点发现的可复现研究仓库。当前�
 - target-cold 与 double-cold 仍是研究边界，不能作为已经解决的问题对外宣称。
 - target-level pocket 上下文与候选药物无关；pair-specific pose/contact 特征只用于候选后的结构复核，尚未晋级主模型。
 
-完整口径以 [当前项目合同](docs/CURRENT_PROJECT_CONTRACT_ZH.md) 为准；汇报结构另见 [完整汇报大纲](docs/BIOMASTER_COMPLETE_PPT_OUTLINE_20260825_ZH.md)。
+以上数字仅说明该历史合同；新的训练范围以[A方案](docs/BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)为准，现成模型比较必须明确实际完成范围、缺失与共同分母。[旧汇报大纲](docs/BIOMASTER_COMPLETE_PPT_OUTLINE_20260825_ZH.md)保留历史用途。
 
 ## 仓库结构
 
@@ -59,7 +61,7 @@ python -m pip install -e '.[odti,dev]'
 - `reports`：PDF/HTML 报告生成。
 - `production`：上述生产与训练依赖的完整集合。
 
-## 当前可复现入口
+## 历史生产复现入口
 
 通用训练与方向头复现链按以下顺序组织：
 
@@ -102,8 +104,10 @@ python scripts/validate_current_project_contract.py
 ## 文档与汇报
 
 - [文档入口](docs/README.md)
-- [当前项目唯一口径](docs/CURRENT_PROJECT_CONTRACT_ZH.md)
-- [完整汇报大纲](docs/BIOMASTER_COMPLETE_PPT_OUTLINE_20260825_ZH.md)
+- [A主线重训与评价](docs/BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md)
+- [现成官方权重的公平比较](docs/BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md)
+- [9月1日冻结生产合同](docs/CURRENT_PROJECT_CONTRACT_ZH.md)
+- [8月25日汇报大纲](docs/BIOMASTER_COMPLETE_PPT_OUTLINE_20260825_ZH.md)
 - [正式候选筛选流程](docs/PRODUCTION_PIPELINE_V4_ZH.md)
 - [当前结果状态](docs/RESULTS_STATUS_ZH.md)
 - [汇报图片与源文件](docs/presentations/README.md)
