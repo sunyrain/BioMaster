@@ -1,0 +1,105 @@
+{
+  "rule": "Before scoring: BindingDB case bundle zinc21 (first numerical shard), author mean epochs 31-50; other shards are adapted to different ZINC test chunks, not 25 independent generic models.",
+  "checkpoints": [
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_31.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_31.pth",
+      "sha256": "66e56aae0b1b0a19728aadb22b9e14abe04d216323a4e33e51ea46eb173ba4c4"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_32.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_32.pth",
+      "sha256": "c765bbce18779fa1fe1435b96525defed012cbfb1481992cccecba216873ea83"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_33.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_33.pth",
+      "sha256": "e58dd418dbf30f58580a8b6053e7a6f85e820550a91797a502f88db8e2a541f3"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_34.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_34.pth",
+      "sha256": "039a54611eeeb230c42d9000536a560fa0866b45c32a4bb70995aca8dbe54913"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_35.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_35.pth",
+      "sha256": "3569b8dc1c5e034846666fc990c483be5f7452145bb9e02d6c0a43288061ccef"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_36.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_36.pth",
+      "sha256": "a2b38e72afcdd7320fb60003787e0a0e29dd9d6c339848e7bde400a3c34f383a"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_37.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_37.pth",
+      "sha256": "24109a47f3d4b6bae1f4126e466c2a98cb35628902ad558323e135b47f81b676"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_38.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_38.pth",
+      "sha256": "04dcb46a89d5ede56abd30291c0f95895a8b098c161e650b4b08dbfe92536868"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_39.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_39.pth",
+      "sha256": "97298f0d44cf412b65eed587ac9f82835904aa30baab845e05c919a80b7a9b42"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_40.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_40.pth",
+      "sha256": "5cb2b8e2999e867b6356ed37529f38347a811db4c072b5d441794b96f72017e0"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_41.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_41.pth",
+      "sha256": "9046fb10e84ca4004f0e76ca13bd43a4cbcd78b70d96cba9bc7f41d5e17df8d1"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_42.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_42.pth",
+      "sha256": "d4e0e9d271b1cacb4bdd507d7ad9c76b7ab90f5d74b4288fbd311eaf939e7a88"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_43.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_43.pth",
+      "sha256": "7ba5a6ae5801b01234716396e0ddbdca5c49421d8e9f662df29dfbc899386c67"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_44.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_44.pth",
+      "sha256": "340b6bb018f7a13207c1e16b1b462cebdf40fa66646c688197a43e4b61929c12"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_45.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_45.pth",
+      "sha256": "0da3131572cf5bbee02dae2a56491597b81657e609deaa2a988857155a418e20"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_46.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_46.pth",
+      "sha256": "37a94a1251e899321b070fa28e315f6403922f91f846d70998488d2a25518a75"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_47.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_47.pth",
+      "sha256": "3ff812cfcf45c1105ca8dab750a469ff49b34b9957e9d2feb3f614fd4999707f"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_48.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_48.pth",
+      "sha256": "55567f76436adeb4b954e3448a25df840a774345c3d358cddc69e78988a80ef3"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_49.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_49.pth",
+      "sha256": "7d8bbdfbcfe16f5a7646fa81fe22508a14fd67b4393da795eaa71204f3d3fb51"
+    },
+    {
+      "member": "case_study/result_bindingdb12_zinc21/model_epoch_50.pth",
+      "path": "/root/autodl-tmp/BioMaster/outputs/dti_official_720x745_20260921/GraphBAN/model_epoch_50.pth",
+      "sha256": "e11c39995e3474994cb5dfa0200b74215a8e3ee140a54a4de0821cfac3567cc7"
+    }
+  ]
+}

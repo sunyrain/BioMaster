@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "native_single_vs_batch_max_abs_delta": 4.76837158203125e-07,
+  "native_example_scores": [
+    5.927646160125732,
+    5.468163013458252,
+    5.4239888191223145,
+    5.00248384475708
+  ]
+}

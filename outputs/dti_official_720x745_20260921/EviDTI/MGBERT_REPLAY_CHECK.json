@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "max_abs_delta": 2.86102294921875e-06,
+  "tolerance": 0.001,
+  "published_drugs": [
+    {
+      "drug_id": "DB15031",
+      "max_abs_delta": 1.5497207641601562e-06,
+      "cosine": 1.0000001192092896
+    },
+    {
+      "drug_id": "DB14973",
+      "max_abs_delta": 2.7865171432495117e-06,
+      "cosine": 1.0
+    },
+    {
+      "drug_id": "DB16236",
+      "max_abs_delta": 1.9669532775878906e-06,
+      "cosine": 1.0
+    },
+    {
+      "drug_id": "DB11697",
+      "max_abs_delta": 2.6226043701171875e-06,
+      "cosine": 0.9999997615814209
+    },
+    {
+      "drug_id": "DB16778",
+      "max_abs_delta": 1.7583370208740234e-06,
+      "cosine": 0.9999998807907104
+    },
+    {
+      "drug_id": "DB13055",
+      "max_abs_delta": 2.086162567138672e-06,
+      "cosine": 1.0000001192092896
+    },
+    {
+      "drug_id": "DB14921",
+      "max_abs_delta": 2.2649765014648438e-06,
+      "cosine": 1.0000001192092896
+    },
+    {
+      "drug_id": "DB11739",
+      "max_abs_delta": 2.5033950805664062e-06,
+      "cosine": 1.0000001192092896
+    },
+    {
+      "drug_id": "DB16650",
+      "max_abs_delta": 2.7418136596679688e-06,
+      "cosine": 0.9999998807907104
+    },
+    {
+      "drug_id": "DB15071",
+      "max_abs_delta": 2.086162567138672e-06,
+      "cosine": 0.9999998807907104
+    },
+    {
+      "drug_id": "DB15149",
+      "max_abs_delta": 2.86102294921875e-06,
+      "cosine": 1.0
+    },
+    {
+      "drug_id": "DB16267",
+      "max_abs_delta": 2.6226043701171875e-06,
+      "cosine": 1.0
+    },
+    {
+      "drug_id": "DB15673",
+      "max_abs_delta": 2.205371856689453e-06,
+      "cosine": 0.9999998807907104
+    }
+  ],
+  "encoder_sha256": "50e866714b92d90fb0d8da70f61aea175fcd33d41ed9a441afc83be4e3b3068d",
+  "upstream_source": "zhang-xuan1314/Molecular-graph-BERT@cf801e1875dfeef77a90247d505687f0c292761a",
+  "restored_missing_readout": "global node before classifier; qualification depends on published feature replay"
+}

@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-09-21T08:01:07.571123+00:00",
+  "models": [
+    "ConPLex",
+    "DrugCLIP",
+    "BALM",
+    "ScopeDTI_light",
+    "CheMLT-F",
+    "ADME-DTI"
+  ],
+  "score_sha256": {
+    "ConPLex": "0a0dbad99d8879ef43ea7d9f671850eec238a936a6a379951ca883e7b32b23c9",
+    "DrugCLIP": "569e42931852a5ac101f7d3fd450fe1935296306ce0cc9468250441d67af89be",
+    "BALM": "f16911befe361d47f77c44d1b2f10533c832899133825ef6dcab4426fc11b7a1",
+    "ScopeDTI_light": "92b64a53e18d988d500f4c553a93e4411a74a5bd4826a6dc4f70f4559672b4e2",
+    "CheMLT-F": "cf83226c2fe8c4153fe539c2ead57bae31a710068d415370a0f9c370eec0dbc9",
+    "ADME-DTI": "20880573e9450d0d45e77e7331f1374b277a0afbbbd679e7ff8f49a03111df2f"
+  },
+  "coverage": "Only finished model families, not the final12-family comparison",
+  "no_labels": true,
+  "no_correctness_claim": true,
+  "statistics": "Descriptive per-query macro summaries; dependence-aware confidence intervals and nested-pool experiments deferred until complete frozen inference",
+  "tie_rule": "average ranks, tau-b, fractional TopK; all cutoff ties retained in exports",
+  "source_matrix_shape": [
+    720,
+    745
+  ],
+  "files": {
+    "QUERY_AGREEMENT.parquet": "bb7e9a24245562716c9a6c1184dcf177612a15d97ed5a8f3f721a6e4e928f53f",
+    "RANK_AGREEMENT_SUMMARY.csv": "e1af4641b6cc21387565efa7ed17fb4ac2d1440c7e785aa7f1a281bc42d92546",
+    "BIDIRECTIONAL_TOP20_WITH_TIES.parquet": "c5702fe4a364f670c22e159eea8c8b22d284f27cf67acd2c9912e4dc7c8e8a34",
+    "TARGET_TO_DRUG_TOP20.csv.gz": "740f5c7acef47e4e2826d8944c517bedccf8ae967a5d9cb3ac847eef39da31b4",
+    "DRUG_TO_TARGET_TOP20.csv.gz": "1a7be0974787a27582e073b8c8d8146a5851d825b84ca28e02d02f80a1274dad",
+    "QUERY_CANDIDATE_COUNTS.csv": "38f1a250dc6f5c8ad6fad163330bf51e66273571acb8ab940852729b221a6f6c",
+    "FAMILY_AGREEMENT.csv": "0803beeb179a2a8214f6ab8ec5068ae5d49722a2b74a95b15d3618d514376062"
+  }
+}

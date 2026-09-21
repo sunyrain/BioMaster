@@ -1,0 +1,40 @@
+{
+  "before": {
+    "total": 590558003200,
+    "used": 569098813440,
+    "free": 21459189760
+  },
+  "files": [
+    {
+      "path": "outputs/biomaster_dtiam_ab_20260912/core_memory_repair_20260913/all_inactive__seed_20260921_attempt68/predictor/utils/data/X.pkl",
+      "bytes": 9061904204,
+      "sha256": "5ca18f7e09a1dd35880b6634e53d277cf85523c43e690be1bf0899d7e7f7ef57",
+      "reason": "Reconstructible feature cache of failed historical DTIAM attempt; successful predictors and canonical feature arrays retained"
+    },
+    {
+      "path": "outputs/biomaster_dtiam_ab_20260912/core_memory_repair_20260913/all_inactive__seed_20260921_attempt68/predictor/utils/data/X_val.pkl",
+      "bytes": 91563396,
+      "sha256": "f10e88afe304a7a89ed60e5ce8a59f3168df0a21faf0a75e810428be4bf8c1ec",
+      "reason": "Reconstructible feature cache of failed historical DTIAM attempt; successful predictors and canonical feature arrays retained"
+    },
+    {
+      "path": ".tmp/bindingdb_202608_full/BindingDB_All_202608_tsv.zip",
+      "bytes": 592986963,
+      "sha256": "8dc30541d668e5e403ba1fe9a682b76c42a50e1711aac44329c62ba24ccd57db",
+      "reason": "Temporary older BindingDB download; normalized datasets and provenance retained"
+    },
+    {
+      "path": "outputs/boltz2_structure_affinity_v1/boltz_cache/mols.tar",
+      "bytes": 1855662080,
+      "sha256": "39e076d96dbec6b4e86982bbda16f3a53a2a60c9bdc17828d88f6f9a0c7d1fd7",
+      "reason": "All 45227 tar members SHA256-identical to retained extracted files"
+    }
+  ],
+  "total_bytes": 11602116643,
+  "status": "COMPLETE",
+  "after": {
+    "total": 590558003200,
+    "used": 559352348672,
+    "free": 31205654528
+  }
+}

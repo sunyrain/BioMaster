@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "pairs": [
+    {
+      "target_id": "CHEMBL1075126",
+      "drug_id": "AAOVKJBEBIDNHE-UHFFFAOYSA-N",
+      "delta": 3.447762908503904e-17
+    },
+    {
+      "target_id": "CHEMBL1075319",
+      "drug_id": "AAOVKJBEBIDNHE-UHFFFAOYSA-N",
+      "delta": 0.0
+    },
+    {
+      "target_id": "CHEMBL1169596",
+      "drug_id": "AAOVKJBEBIDNHE-UHFFFAOYSA-N",
+      "delta": 6.984920040368353e-10
+    },
+    {
+      "target_id": "CHEMBL1628478",
+      "drug_id": "AAOVKJBEBIDNHE-UHFFFAOYSA-N",
+      "delta": 2.9103831289400972e-09
+    },
+    {
+      "target_id": "CHEMBL1641347",
+      "drug_id": "AAOVKJBEBIDNHE-UHFFFAOYSA-N",
+      "delta": 1.22514845490862e-17
+    }
+  ]
+}

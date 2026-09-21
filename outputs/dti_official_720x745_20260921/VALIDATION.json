@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "scope": "Identity, finite scores, unique pairs, actual denominators, tie-aware TopK and completed-model interim summaries",
+  "real_score_checks": [
+    {
+      "model": "ConPLex",
+      "pairs": 536400
+    },
+    {
+      "model": "DTBind_occurrence",
+      "pairs": 221760
+    },
+    {
+      "model": "ProbeMatchDTI",
+      "pairs": 293760
+    },
+    {
+      "model": "BALM",
+      "pairs": 446400
+    },
+    {
+      "model": "MAMMAL_pKd",
+      "pairs": 43920
+    },
+    {
+      "model": "CheMLT-F",
+      "pairs": 536400
+    },
+    {
+      "model": "ScopeDTI_light",
+      "pairs": 536400
+    },
+    {
+      "model": "Nesso-1",
+      "pairs": 103065
+    },
+    {
+      "model": "DrugCLIP",
+      "pairs": 486720
+    },
+    {
+      "model": "EviDTI",
+      "pairs": 720
+    },
+    {
+      "model": "ADME-DTI",
+      "pairs": 530440
+    }
+  ],
+  "analysis_snapshot": "outputs/dti_official_720x745_20260921/rank_snapshots/86c2d9d93665663b",
+  "incomplete_inference_not_tested_as_complete": true,
+  "analysis_models": [
+    "ConPLex",
+    "DrugCLIP",
+    "BALM",
+    "ScopeDTI_light",
+    "CheMLT-F",
+    "ADME-DTI"
+  ],
+  "frozen_preparation_files_verified": 62,
+  "native_output_replays_passed": {
+    "ADME-DTI": {
+      "native_single_vs_batch_max_delta": 5.960464477539063e-08,
+      "passed": true,
+      "all_17_checkpoints_loaded_strictly": true,
+      "combined_checkpoint_sha256": "1f30621f20955ef55be26c653f973cd3e905fcc3d9d66d706a6d4db8a7f9cc51"
+    },
+    "EviDTI": {
+      "passed": true,
+      "restored_encoders_native_score_max_delta": 2.396106719970703e-05,
+      "native_single_vs_batch_max_delta": 7.450580596923828e-09,
+      "comparison": "Public 3D held fixed; test encoder restoration separately from allowed conformer regeneration"
+    }
+  }
+}

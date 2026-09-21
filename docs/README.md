@@ -7,6 +7,7 @@
 | 内容 | 入口 | 当前状态 |
 |---|---|---|
 | 当前第一阶段 | [双向排序一致性与推荐分歧](BIOMASTER_DTI_RANKING_SCOPE_20260921_ZH.md) | 888按既有GPCR规则得到745；720×745＝536,400对双向主矩阵；384/96仅作补充，不使用Davis |
+| 官方模型全量运行 | [720×745执行、空间清理与首版结果](BIOMASTER_DTI_PHASE1_OFFICIAL_RUN_20260921_ZH.md) | 12个官方家族；6个已完成，其余正在推理或排队；[实时覆盖](../outputs/dti_official_720x745_20260921/MODEL_COVERAGE.csv) |
 | 第一阶段初步结果 | [六通道双向排序分析](BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md) | 旧96/384范围相关性与Top10统计保留原分母；不能视为745全量结果 |
 | 官方权重收集 | [下载与校验状态](BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md) | 570个新增文件已全部校验，复用44个既有文件；新增模型适配与评分另计 |
 | 745输入与补算 | [来源、实体和矩阵清单](../outputs/dti_ranking_720x745_20260921/MANIFEST.json)、[模型覆盖](../outputs/dti_ranking_720x745_20260921/MODEL_COVERAGE.csv) | 745条序列齐全；复用身份完全匹配的旧分数，新增361靶点未冒充已算完 |

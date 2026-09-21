@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "max_abs_delta": 0.00244140625,
+  "tolerance": 0.01,
+  "records": [
+    {
+      "uniprot": "O43613",
+      "max_abs_delta": 0.00146484375
+    },
+    {
+      "uniprot": "O43614",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P23458",
+      "max_abs_delta": 0.00244140625
+    },
+    {
+      "uniprot": "O60674",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P52333",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P29597",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P30613",
+      "max_abs_delta": 0.00146484375
+    },
+    {
+      "uniprot": "P11511",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P36888",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P07288",
+      "max_abs_delta": 0.00146484375
+    },
+    {
+      "uniprot": "P10613",
+      "max_abs_delta": 0.00244140625
+    },
+    {
+      "uniprot": "P12883",
+      "max_abs_delta": 0.00146484375
+    },
+    {
+      "uniprot": "P20648",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P51164",
+      "max_abs_delta": 0.00146484375
+    },
+    {
+      "uniprot": "P43116",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P34995",
+      "max_abs_delta": 0.00146484375
+    },
+    {
+      "uniprot": "P11362",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P21802",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P22607",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "P22455",
+      "max_abs_delta": 0.001953125
+    },
+    {
+      "uniprot": "O75874",
+      "max_abs_delta": 0.001708984375
+    },
+    {
+      "uniprot": "P04585",
+      "max_abs_delta": 0.00244140625
+    }
+  ],
+  "weights_sha256": "7f51ba885541c7dc569d46b796af57cc7a2ba7945107dced4f19d1b5ec091157",
+  "encoder_variant": "Rostlab official encoder-only half-precision conversion of ProtT5 XL UniRef50; public-feature replay required"
+}

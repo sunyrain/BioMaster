@@ -1,0 +1,30 @@
+{
+  "files": {
+    "scripts/dti_official_runtime_20260921.py": "6cc9b4a7ef466ebd9fa66a9c46d95767e14bc57c650e59cebdc219e8ae6773d1",
+    "scripts/fetch_dti_evidti_encoder_20260921.py": "18d3a3652638a3f03fe20a15455aae0039104af5b63f863a556d56fed74fd65b",
+    "scripts/fetch_dti_fair_encoders_20260921.py": "03b6e63a6fe02f526537a7bf607d65305a59da1a712944f6f59a9b26f4a640c5",
+    "scripts/fetch_dti_native_encoders_20260921.py": "32e0bf1d210288d4e034efa19efa524082183f213da2faaefbac0699ffe53fe6",
+    "scripts/fetch_dti_native_sources_20260921.py": "92e53b3041c8c4f98ae28b2b32f89b6fb3fc67de97ee42537bdbb17a9dbf2060",
+    "scripts/finish_dti_gpu_front_queue_20260921.py": "b74a32f2dd70ae453c2fcb08d931f392d00b159608c0cddc00884c1b74e21bb9",
+    "scripts/prepare_dti_adme_drugs_20260921.py": "33849fda2cb4f8377172cc27b806e64c97d23df2b2dd68c1a90e78a2342ec208",
+    "scripts/prepare_dti_adme_esmc_20260921.py": "dbe19f851c77558891d5f0c7e338af53a28e1a41d8e5b7777d1724bb4ad27e58",
+    "scripts/prepare_dti_evidti_inputs_20260921.py": "936717456809745e91c031de2d6371cb26aa37a10a6b92343e8277efb6440e41",
+    "scripts/prepare_dti_evidti_mgbert_20260921.py": "88f116e57a6477a8d8221e75bdf2e08fca40c0a4f732e050c249fa6062d39fa1",
+    "scripts/prepare_dti_fair_esm_20260921.py": "8092a55cb9285c6d80841e3f52d84fc8a3f4710912a71b54f22229acc252c8fc",
+    "scripts/prepare_dti_graphban_chem_20260921.py": "fd0113520892d7bdd2c5ac15648834c2df6ba2f3f624555ad7ac1c5de30120d0",
+    "scripts/report_dti_official_matrix_20260921.py": "a404baea00086e89c8af0b56a6449ada45fa0ec53a1f0fc7abee130148b3cce6",
+    "scripts/run_dti_official_adme_20260921.py": "ab02e7ddd36518408e41238c80e8883271a3504356b52028e14b83593deac95f",
+    "scripts/run_dti_official_balm_20260921.py": "3626c6f493e29de00a287ce08384fc9042f5c72dc9063fe743431aaa5b1ee2cf",
+    "scripts/run_dti_official_chemltf_20260921.py": "a9dcb383ebf2ecdc5bb493f7e847b49c473c50406acfd8404381a03ca43d3e6a",
+    "scripts/run_dti_official_conplex_20260921.py": "f34fdc14453f7d18f1ad900a5da4516e1c5bcd8681e1698efdebfea66f79d731",
+    "scripts/run_dti_official_drugclip_20260921.py": "d3e4eea5f6a61a9c69f59c62dcaa5f616ead12888023cf76fc070d588186b378",
+    "scripts/run_dti_official_evidti_20260921.py": "4a56806b24c79a76094449c09fd5cc5b0598d35e6cb9eb1845e100134648582b",
+    "scripts/run_dti_official_graphban_20260921.py": "e346ab0ed0bb9b1e670bdbeb4ef46d4fb3dde63699a420388276616565c347c8",
+    "scripts/run_dti_official_mammal_20260921.py": "37d72beda790e3d6b6dfc9f2e37e3f62c26be05b2e19de857d46a01c2be42154",
+    "scripts/run_dti_official_nesso_20260921.py": "905efdfec0266e444e190346f74bca15acda0e48007835847081aa7abfbc6563",
+    "scripts/run_dti_official_pairwise_20260921.py": "f2e462e053f13bd6f2603cfcafa43de07094421099abcb2ba8d8019baf34f29f",
+    "scripts/run_dti_official_scope_20260921.py": "8c3a21912a80186420e9d8aa5ab67511eb60fb4a4328c34d3053b365bd047bd3"
+  },
+  "superseded_executed_sources": "ADAPTER_SOURCE_REVISIONS",
+  "note": "Feature/score arrays and environments are local; exact published task checkpoint contracts and native replay reports accompany each family"
+}

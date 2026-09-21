@@ -1,0 +1,14 @@
+{
+  "model": "CheMLT-F",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint_sha256": "626ea8e04c0d69ed3d67411e762409b76a0beb8cb33113837cd2856731cbd52e",
+  "adapter_sha256": "a9dcb383ebf2ecdc5bb493f7e847b49c473c50406acfd8404381a03ca43d3e6a",
+  "native_notebook_sha256": "e4d4359413a9cdfc94b30b0ddd647288b4412ce0e17b663febc9ebfc325e27ff",
+  "head": "KIBA regression head index12, scaffold multitask checkpoint; higher KIBA convention",
+  "precision": "float32_cuda_tf32_off",
+  "preprocessing": "Author canonical isomeric SMILES + tokenization3, 512 drug tokens / two512 protein token chunks",
+  "note": "KIBA composite activity score, not calibrated Kd; no DAVIS evaluation or fitting"
+}

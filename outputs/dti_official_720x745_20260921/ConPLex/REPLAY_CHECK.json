@@ -1,0 +1,7 @@
+{
+  "native_forward_pairs": 128,
+  "native_forward_max_abs_delta": 5.960464477539062e-07,
+  "historical_pairs": 276480,
+  "historical_max_abs_delta": 8.176895671847817e-06,
+  "status": "PASS"
+}

@@ -1,0 +1,58 @@
+{
+  "protocol_id": "official_720x745_execution_20260921_v1",
+  "parent_scope": "configs/dti_ranking_scope_20260921/PROTOCOL_v4.json",
+  "parent_scope_sha256": "0d362833c33a8b7b048337afd88cb96f59ab43bc7011582f9cbdddc39a4b60e0",
+  "user_authorization": "Clean safe storage and run all collected official-weight families; no new fits",
+  "requested_pairs": 536400,
+  "official_model_families": [
+    "ConPLex",
+    "DrugCLIP",
+    "Nesso-1",
+    "ProbeMatchDTI",
+    "DTBind_occurrence",
+    "MAMMAL_pKd",
+    "BALM",
+    "EviDTI",
+    "GraphBAN",
+    "ScopeDTI_light",
+    "CheMLT-F",
+    "ADME-DTI"
+  ],
+  "local_fallback_not_in_official_run": "DTIAM_A remains separately registered; no qualified official downstream predictor; no new DTIAM training",
+  "excluded": [
+    "ReTargetMap",
+    "Davis evaluation",
+    "new task training",
+    "wetlab candidate changes"
+  ],
+  "additions_to_prior_priority_nine": [
+    "ScopeDTI_light",
+    "CheMLT-F",
+    "ADME-DTI"
+  ],
+  "bundle_selection": {
+    "GraphBAN": "BindingDB case result_bindingdb12_zinc21, author mean epochs31-50; selected before scoring, no choice based on current rankings",
+    "CheMLT-F": "Scaffold task checkpoint, KIBA head12, no DAVIS test used",
+    "ADME-DTI": "BindingDB classification Combined plus16 published submodels",
+    "EviDTI": "DrugBank published task checkpoint",
+    "MAMMAL_pKd": "Official BindingDB Kd model",
+    "BALM": "Official published BALM PEFT checkpoint",
+    "ScopeDTI_light": "Official Filtered_Total_DrugBAN_3D five-checkpoint ensemble"
+  },
+  "preprocessing": "Per-model CONTRACT.json and replay reports; native input failures remain missing; no substitute encoders or local refit",
+  "numerics": "Exact-weight load and native forward checks; cross-runtime tolerances recorded; original raw native scores retained",
+  "native_information": "No pair-specific test complex introduced; DrugCLIP original target pockets plus exact-sequence AF/P2Rank extension, report sources separately",
+  "rank_protocol": "Per-query Spearman, tau-b, fractional Top5/10/20, random k²/N and chance-adjusted overlap; query minimum20; both directions",
+  "interim_comparison": "Only completed families enter interim common coverage; each frozen snapshot names every member and exact score hashes; unfinished jobs are excluded from common-set denominators",
+  "publication_limit": "Descriptive ranking differences, not correctness or architecture causality; no significance claims until dependence-aware uncertainty analysis",
+  "output_root": "outputs/dti_official_720x745_20260921",
+  "mutations": "No production scoring DB or website edits; old frozen preparation, scores and SPR list retained",
+  "resource_schedule": "Entity encoder GPU queue serialized by lock; Nesso waits for completed MAMMAL, GraphBAN, EviDTI plus a retry of native protein features that failed due to shared GPU memory; no silent length truncation",
+  "analysis_followup": [
+    "Complete frozen inference snapshot",
+    "Within-family versus broad target ranking sensitivity",
+    "Truncation and pocket-source stratification",
+    "Nested candidate-pool and batch sensitivity",
+    "Homology/scaffold-aware uncertainty if inferential claims made"
+  ]
+}

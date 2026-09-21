@@ -1,0 +1,20 @@
+{
+  "model": "ScopeDTI_light",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoints": {
+    "best_model_epoch_65.pth": "8eff8afdbabf65e30530ade80f4e3e65643b92bb9043767f8aa6ce6e276ed085",
+    "best_model_epoch_72.pth": "14f1ae31b582794560ad7ed1a71841624fd78f63e285d0a571695656ded22005",
+    "best_model_epoch_86.pth": "9f8a4e7191d45ff23e3c29b436c9c0404813b9ad2c1bbae6555a002514035b0f",
+    "best_model_epoch_87.pth": "5fca2923b311824cf5d76af9685f9edc0426c6b0948d6bf2ab69ee67fdd68576",
+    "best_model_epoch_95.pth": "66fa69f0c9e6ccfe0edcd50401268a1297711e6fc4020b1fd79cf98ec2f09772"
+  },
+  "adapter_sha256": "8c3a21912a80186420e9d8aa5ab67511eb60fb4a4328c34d3053b365bd047bd3",
+  "head": "Mean sigmoid probability of five official Total checkpoints",
+  "precision": "float32_cuda",
+  "preprocessing": "Native 3D conformer graph and integer_label_protein(first1200); arbitrary sequence extension beyond author GUI catalogue disclosed",
+  "native_source": "run_scope_dti_old_drug_entity_cold_v1.py",
+  "author_vocabulary_members": 614
+}

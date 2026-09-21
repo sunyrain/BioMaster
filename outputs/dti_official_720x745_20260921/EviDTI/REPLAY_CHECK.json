@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "restored_encoders_native_score_max_delta": 2.396106719970703e-05,
+  "native_single_vs_batch_max_delta": 7.450580596923828e-09,
+  "comparison": "Public 3D held fixed; test encoder restoration separately from allowed conformer regeneration"
+}

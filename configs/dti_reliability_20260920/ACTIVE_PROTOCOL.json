@@ -11,5 +11,7 @@
   "inference_comparison_addendum_sha256": "d4e7c77db7ee9ffd920d2ca6d6670bcc4f9b5d53ddc1a4570830bb00d9e38a5e",
   "ranking_study_scope": "configs/dti_ranking_scope_20260921/PROTOCOL_v4.json",
   "ranking_study_scope_sha256": "0d362833c33a8b7b048337afd88cb96f59ab43bc7011582f9cbdddc39a4b60e0",
-  "current_execution_phase": "PHASE1_RANK_AGREEMENT_ONLY_NO_NEW_TRAINING"
+  "current_execution_phase": "PHASE1_RANK_AGREEMENT_ONLY_NO_NEW_TRAINING",
+  "official_phase1_execution": "configs/dti_ranking_scope_20260921/OFFICIAL_EXECUTION_v1.json",
+  "official_phase1_execution_sha256": "a1693c3ed1d202cc8cb39d967531421108e3b5ef957e0988610fe0aaf5adfae9"
 }

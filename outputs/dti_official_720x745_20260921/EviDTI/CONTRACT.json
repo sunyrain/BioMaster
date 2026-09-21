@@ -1,0 +1,14 @@
+{
+  "model": "EviDTI",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint_sha256": "28018417207df416c67296642172303a4ee998b124fcde582c91927f3cc9e71e",
+  "adapter_sha256": "990f1ceb2f8132416898c2220e25661a2d0c9cef6860487d56c167d780b1ecf1",
+  "head": "DrugBank evidential alpha1/(alpha0+alpha1)",
+  "inputs": "Replayed MG-BERT global node; author MMFF10 geometry; full ProtT5 per residue FP16",
+  "precision": "FP32 task model, native FP16 ProtT5; checkpoint compatibility uses existing validated PyG adapter",
+  "native_source": "Local EviDTI official repo and public reference features",
+  "new_geometry": "Native stochastic conformer generation; cached exact inputs and RDKit seed retained"
+}

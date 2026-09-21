@@ -93,6 +93,8 @@ GPCR规则在代码中是“或”；本次冻结版本两来源对全部888条�
 
 官方权重收集已完成：570个新增文件通过校验，44个既有文件复核复用，见[收集报告](BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md)。下载完成、原生加载通过、矩阵评分完成是三个不同状态。
 
-**720×745请求和精确输入已准备；745范围的十模型评分尚未完成。** 本轮将旧384范围中身份与序列完全匹配的六通道分数复用到[部分评分矩阵](../data/research/dti_ranking_scope_20260921_v4/PARTIAL_720X745_SCORE_SNAPSHOT.parquet)，新增361靶点保留空值。现状见[逐模型覆盖](../outputs/dti_ranking_720x745_20260921/MODEL_COVERAGE.csv)及[逐靶点模型补算清单](../outputs/dti_ranking_720x745_20260921/TARGET_MODEL_QUEUE.csv)。结构/口袋/原生图输入不足只标注模型覆盖缺口，不删除主目录靶点。
+**2026-09-21已启动官方权重全矩阵运行。** 依用户“有官方权重的全部跑一遍”指令，本轮覆盖12个官方模型家族，增加SCOPE、CheMLT-F和ADME-DTI；已有本地DTIAM A仍另列，不混入官方集合。新增训练仍为0。
 
-原六通道[96靶点补充结果](BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md)及384范围结果保留其真实分母，不改称745范围完整排名。新增四个主模型尚待原生推理适配。当前优先完成输入核验、分批补算及两套双向筛选表，第一阶段仍不新训练。
+已完成ConPLex、CheMLT-F、SCOPE的536,400对全覆盖，DrugCLIP的486,720对、BALM的446,400对和ADME-DTI的530,440对；其余任务推理或排队中。详情见[本轮运行、清理与首版结果](BIOMASTER_DTI_PHASE1_OFFICIAL_RUN_20260921_ZH.md)，实时进展见[覆盖表](../outputs/dti_official_720x745_20260921/MODEL_COVERAGE.csv)。新增模型缺输入或尚未完成均保留明确状态，不改变745主目录。
+
+旧六通道[96/384补充结果](BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md)及原准备快照保留原分母。新分析只把本轮已完成模型纳入阶段交集，记录成员与分数哈希；正式12模型结论须等待计算与复核完成。

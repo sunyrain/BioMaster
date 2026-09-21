@@ -1,0 +1,17 @@
+{
+  "model": "BALM",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint_sha256": "df587b3ca18a5d7d5cc80c933a99095352cc6cb2e1743783e49d01d40378638c",
+  "adapter_sha256": "3626c6f493e29de00a287ce08384fc9042f5c72dc9063fe743431aaa5b1ee2cf",
+  "native_source_revision": "c0a4ecb828c44ba1633e06e885da12c5a6ababd6",
+  "config_sha256": "744a40cb9cddd4b96e0a70d0111ee9e8a131cd0798f798c54e4554e6074d5aaf",
+  "head": "cosine transformed to author pKd scale [2,10]",
+  "precision": "float32_cuda_tf32_off",
+  "preprocessing": "Native tokenizers; author trainer filters >1024 protein / >512 drug tokens, no invented truncation",
+  "length_policy_source": ".external/BALM/balm/trainer.py:193",
+  "actual_drugs": 720,
+  "actual_targets": 620
+}

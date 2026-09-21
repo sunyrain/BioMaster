@@ -1,0 +1,6 @@
+{
+  "native_single_vs_batch_max_delta": 5.960464477539063e-08,
+  "passed": true,
+  "all_17_checkpoints_loaded_strictly": true,
+  "combined_checkpoint_sha256": "1f30621f20955ef55be26c653f973cd3e905fcc3d9d66d706a6d4db8a7f9cc51"
+}

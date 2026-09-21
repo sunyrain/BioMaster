@@ -1,0 +1,3731 @@
+{
+  "ready_targets": 410,
+  "max_pairs_before_drug_failures": 295200,
+  "rows": [
+    {
+      "target_id": "CHEMBL1075094",
+      "uniprot_id": "Q16236",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1075113",
+      "uniprot_id": "O15455",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1075126",
+      "uniprot_id": "P30613",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1075153",
+      "uniprot_id": "O14763",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1075319",
+      "uniprot_id": "Q7Z2W7",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1163124",
+      "uniprot_id": "O43283",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1169596",
+      "uniprot_id": "P10398",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1169600",
+      "uniprot_id": "P05113",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1250358",
+      "uniprot_id": "P25942",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1250360",
+      "uniprot_id": "P36941",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1250375",
+      "uniprot_id": "Q9NPH5",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1250417",
+      "uniprot_id": "Q9Y3Q4",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1255163",
+      "uniprot_id": "Q9H237",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1275223",
+      "uniprot_id": "P11142",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1287628",
+      "uniprot_id": "Q9Y5S8",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1293224",
+      "uniprot_id": "P10636",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1293232",
+      "uniprot_id": "Q16637",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1293266",
+      "uniprot_id": "Q9HC29",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1615381",
+      "uniprot_id": "O00255",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1628478",
+      "uniprot_id": "P51788",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1641347",
+      "uniprot_id": "Q4U2R8",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1641348",
+      "uniprot_id": "Q8TCC7",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1641353",
+      "uniprot_id": "P24928",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1649052",
+      "uniprot_id": "P13500",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1649058",
+      "uniprot_id": "P01138",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1697671",
+      "uniprot_id": "P49763",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1697674",
+      "uniprot_id": "Q9NP99",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1741186",
+      "uniprot_id": "P51449",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1741208",
+      "uniprot_id": "Q96P20",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1741305",
+      "uniprot_id": "Q14116",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1741309",
+      "uniprot_id": "P10451",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1744522",
+      "uniprot_id": "Q99814",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1744525",
+      "uniprot_id": "P43490",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1778",
+      "uniprot_id": "P01589",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1781",
+      "uniprot_id": "P11387",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1781870",
+      "uniprot_id": "Q92835",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1782",
+      "uniprot_id": "P14324",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1783",
+      "uniprot_id": "P15692",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL1786",
+      "uniprot_id": "P29218",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1795",
+      "uniprot_id": "P20594",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1795108",
+      "uniprot_id": "P13639",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1795116",
+      "uniprot_id": "O14744",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1795122",
+      "uniprot_id": "Q05639",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1795129",
+      "uniprot_id": "P05231",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1795178",
+      "uniprot_id": "P01137",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1795197",
+      "uniprot_id": "P25092",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1796",
+      "uniprot_id": "P07098",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1801",
+      "uniprot_id": "P00747",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1803",
+      "uniprot_id": "P20701",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1806",
+      "uniprot_id": "P11388",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1808",
+      "uniprot_id": "P12821",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1812",
+      "uniprot_id": "P16233",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1817",
+      "uniprot_id": "P19235",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1822",
+      "uniprot_id": "P20839",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1824",
+      "uniprot_id": "P04626",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1825",
+      "uniprot_id": "P01375",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1827",
+      "uniprot_id": "O76074",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1829",
+      "uniprot_id": "O15379",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1834",
+      "uniprot_id": "P01854",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1835",
+      "uniprot_id": "P24557",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1839",
+      "uniprot_id": "P07202",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1841",
+      "uniprot_id": "P06241",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1842",
+      "uniprot_id": "P20138",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1843",
+      "uniprot_id": "P20711",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1844",
+      "uniprot_id": "P07333",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1846",
+      "uniprot_id": "P21817",
+      "status": "PUBLISHER_GRAPH_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1847",
+      "uniprot_id": "P28472",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1856",
+      "uniprot_id": "P31213",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL1859",
+      "uniprot_id": "O95180",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1861",
+      "uniprot_id": "P32754",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL1862",
+      "uniprot_id": "P00519",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1864",
+      "uniprot_id": "P40238",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1865",
+      "uniprot_id": "Q9UBN7",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1868",
+      "uniprot_id": "P17948",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1869",
+      "uniprot_id": "P11926",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1871",
+      "uniprot_id": "P10275",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1873",
+      "uniprot_id": "P00750",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1874",
+      "uniprot_id": "Q13621",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1876",
+      "uniprot_id": "P55017",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1886",
+      "uniprot_id": "Q14654",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL1887",
+      "uniprot_id": "P17181",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1892",
+      "uniprot_id": "Q04609",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1893",
+      "uniprot_id": "Q05940",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1899",
+      "uniprot_id": "P46098",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1900",
+      "uniprot_id": "P15121",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1902",
+      "uniprot_id": "P62942",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1903",
+      "uniprot_id": "P30531",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1906",
+      "uniprot_id": "P04049",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1908",
+      "uniprot_id": "P15538",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1908389",
+      "uniprot_id": "Q12852",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1909490",
+      "uniprot_id": "P01584",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1910",
+      "uniprot_id": "P00813",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1911",
+      "uniprot_id": "P51649",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1912",
+      "uniprot_id": "P31358",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1913",
+      "uniprot_id": "P09619",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1914",
+      "uniprot_id": "P06276",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1914276",
+      "uniprot_id": "P63252",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1918",
+      "uniprot_id": "P39086",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1919",
+      "uniprot_id": "P54289",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1927",
+      "uniprot_id": "Q16881",
+      "status": "PUBLISHER_GRAPH_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1929",
+      "uniprot_id": "P47989",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1930",
+      "uniprot_id": "Q9BQB6",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1935",
+      "uniprot_id": "P05091",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1936",
+      "uniprot_id": "P10721",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1937",
+      "uniprot_id": "Q92769",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1938222",
+      "uniprot_id": "Q9Y2I7",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1944",
+      "uniprot_id": "P08473",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1947",
+      "uniprot_id": "P10828",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1949",
+      "uniprot_id": "P62937",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1950",
+      "uniprot_id": "P01008",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1951",
+      "uniprot_id": "P21397",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1952",
+      "uniprot_id": "P04818",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1955",
+      "uniprot_id": "P35916",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1957",
+      "uniprot_id": "P08069",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1959",
+      "uniprot_id": "P14778",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1962",
+      "uniprot_id": "P14867",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1964",
+      "uniprot_id": "Q9UK17",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1966",
+      "uniprot_id": "Q02127",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1969",
+      "uniprot_id": "P07101",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1972",
+      "uniprot_id": "Q12879",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1973",
+      "uniprot_id": "P14679",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1974",
+      "uniprot_id": "P36888",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1975",
+      "uniprot_id": "P07766",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1976",
+      "uniprot_id": "P10912",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1977",
+      "uniprot_id": "P11473",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1978",
+      "uniprot_id": "P11511",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1980",
+      "uniprot_id": "Q14524",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1981",
+      "uniprot_id": "P06213",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1988",
+      "uniprot_id": "P16066",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1989",
+      "uniprot_id": "P16444",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1991",
+      "uniprot_id": "O14920",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1992",
+      "uniprot_id": "Q9Y6K1",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL1993",
+      "uniprot_id": "P26358",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1994",
+      "uniprot_id": "P08235",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1996",
+      "uniprot_id": "Q99062",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1997",
+      "uniprot_id": "Q99808",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL1998",
+      "uniprot_id": "Q7L0J3",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2000",
+      "uniprot_id": "P03952",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2003",
+      "uniprot_id": "P13631",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2007",
+      "uniprot_id": "P16234",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2007625",
+      "uniprot_id": "O75874",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2008",
+      "uniprot_id": "P10826",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2009",
+      "uniprot_id": "P42261",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2010624",
+      "uniprot_id": "P10599",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2012",
+      "uniprot_id": "P38435",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2016",
+      "uniprot_id": "P00740",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2019",
+      "uniprot_id": "P49895",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL202",
+      "uniprot_id": "P00374",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2021748",
+      "uniprot_id": "P04275",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2023",
+      "uniprot_id": "P21964",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2027",
+      "uniprot_id": "Q9UHC9",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL203",
+      "uniprot_id": "P00533",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2033",
+      "uniprot_id": "P05108",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2034",
+      "uniprot_id": "P04150",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2039",
+      "uniprot_id": "P27338",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL204",
+      "uniprot_id": "P00734",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2040",
+      "uniprot_id": "P06729",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2041",
+      "uniprot_id": "P07949",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2044",
+      "uniprot_id": "P80404",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2045",
+      "uniprot_id": "P04746",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2046267",
+      "uniprot_id": "Q5XXA6",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2047",
+      "uniprot_id": "Q96RI1",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2048",
+      "uniprot_id": "P02675",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL205",
+      "uniprot_id": "P00918",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2050",
+      "uniprot_id": "Q14626",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2055",
+      "uniprot_id": "P10276",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2058",
+      "uniprot_id": "P11836",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2059",
+      "uniprot_id": "P01374",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL206",
+      "uniprot_id": "P03372",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2061",
+      "uniprot_id": "P19793",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2062",
+      "uniprot_id": "Q15413",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2062356",
+      "uniprot_id": "P35318",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2063",
+      "uniprot_id": "Q16739",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2068",
+      "uniprot_id": "P29317",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2069156",
+      "uniprot_id": "Q14145",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2072",
+      "uniprot_id": "P35499",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2073",
+      "uniprot_id": "P07947",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2073677",
+      "uniprot_id": "Q9NSA0",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2074",
+      "uniprot_id": "O43451",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL208",
+      "uniprot_id": "P06401",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2084",
+      "uniprot_id": "P07306",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2085",
+      "uniprot_id": "P14174",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2099",
+      "uniprot_id": "P07288",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2118",
+      "uniprot_id": "P19801",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2120",
+      "uniprot_id": "P05230",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2121",
+      "uniprot_id": "P15328",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2146302",
+      "uniprot_id": "O94925",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2146346",
+      "uniprot_id": "P46531",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2148",
+      "uniprot_id": "P52333",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL215",
+      "uniprot_id": "P09917",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2157",
+      "uniprot_id": "P10145",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2176771",
+      "uniprot_id": "P00746",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2176839",
+      "uniprot_id": "O60602",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2176846",
+      "uniprot_id": "Q15109",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2176855",
+      "uniprot_id": "Q8WTT0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2179",
+      "uniprot_id": "P04062",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2185",
+      "uniprot_id": "Q96GD4",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2189110",
+      "uniprot_id": "Q15910",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2189121",
+      "uniprot_id": "P01116",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL220",
+      "uniprot_id": "P22303",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2208",
+      "uniprot_id": "P49137",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL221",
+      "uniprot_id": "P23219",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2216739",
+      "uniprot_id": "Q92523",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL222",
+      "uniprot_id": "P23975",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2243",
+      "uniprot_id": "O00519",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2252",
+      "uniprot_id": "P53634",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2273",
+      "uniprot_id": "P55211",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2276",
+      "uniprot_id": "P45983",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL228",
+      "uniprot_id": "P31645",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2285",
+      "uniprot_id": "Q9UNA0",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2292",
+      "uniprot_id": "Q13627",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL230",
+      "uniprot_id": "P35354",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2311236",
+      "uniprot_id": "P09429",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2321613",
+      "uniprot_id": "O14649",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2321614",
+      "uniprot_id": "Q9NPC2",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2321615",
+      "uniprot_id": "O95069",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2326",
+      "uniprot_id": "P43166",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2331041",
+      "uniprot_id": "P57789",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2331042",
+      "uniprot_id": "Q7Z418",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2331059",
+      "uniprot_id": "Q15392",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2331065",
+      "uniprot_id": "Q9C0B1",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2337",
+      "uniprot_id": "P48067",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2346492",
+      "uniprot_id": "Q76LX8",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL235",
+      "uniprot_id": "P37231",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2362986",
+      "uniprot_id": "O95477",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2362990",
+      "uniprot_id": "P31327",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2362992",
+      "uniprot_id": "Q06203",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2364155",
+      "uniprot_id": "P08887",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364156",
+      "uniprot_id": "P42081",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364157",
+      "uniprot_id": "P33681",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364158",
+      "uniprot_id": "Q9Y275",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2364159",
+      "uniprot_id": "P60880",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364160",
+      "uniprot_id": "P63027",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364161",
+      "uniprot_id": "P28908",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364162",
+      "uniprot_id": "O14788",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2364163",
+      "uniprot_id": "P01031",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2364164",
+      "uniprot_id": "P16410",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL238",
+      "uniprot_id": "Q01959",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2384897",
+      "uniprot_id": "P08571",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL239",
+      "uniprot_id": "Q07869",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL240",
+      "uniprot_id": "Q12809",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2409",
+      "uniprot_id": "P34913",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL241",
+      "uniprot_id": "Q14432",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL242",
+      "uniprot_id": "Q92731",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2431",
+      "uniprot_id": "P31751",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2435",
+      "uniprot_id": "P62714",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2439",
+      "uniprot_id": "P05164",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL244",
+      "uniprot_id": "P00742",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2476",
+      "uniprot_id": "O43526",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL248",
+      "uniprot_id": "P08246",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2487",
+      "uniprot_id": "P05067",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2492",
+      "uniprot_id": "P36544",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2508",
+      "uniprot_id": "Q00534",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2524",
+      "uniprot_id": "P06280",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2527",
+      "uniprot_id": "O96017",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2534",
+      "uniprot_id": "O15530",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL258",
+      "uniprot_id": "P06239",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2599",
+      "uniprot_id": "P43405",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL260",
+      "uniprot_id": "Q16539",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2608",
+      "uniprot_id": "P10253",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL261",
+      "uniprot_id": "P00915",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL262",
+      "uniprot_id": "P49841",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2633",
+      "uniprot_id": "P15309",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2637",
+      "uniprot_id": "P53779",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL267",
+      "uniprot_id": "P12931",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL268",
+      "uniprot_id": "P43235",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2689",
+      "uniprot_id": "Q04912",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2695",
+      "uniprot_id": "Q05397",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2706",
+      "uniprot_id": "P23467",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2708",
+      "uniprot_id": "Q16584",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2722",
+      "uniprot_id": "P19099",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2742",
+      "uniprot_id": "P22607",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2754",
+      "uniprot_id": "P01730",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2755",
+      "uniprot_id": "P00390",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2778",
+      "uniprot_id": "Q12908",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL278",
+      "uniprot_id": "P13612",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2782",
+      "uniprot_id": "P35610",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL279",
+      "uniprot_id": "P35968",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL280",
+      "uniprot_id": "P45452",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2808",
+      "uniprot_id": "Q13133",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2815",
+      "uniprot_id": "P04629",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2820",
+      "uniprot_id": "P03951",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2821",
+      "uniprot_id": "P00748",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL283",
+      "uniprot_id": "P08254",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2835",
+      "uniprot_id": "P23458",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL284",
+      "uniprot_id": "P27487",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2842",
+      "uniprot_id": "P42345",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2850",
+      "uniprot_id": "P49840",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL286",
+      "uniprot_id": "P00797",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL287",
+      "uniprot_id": "Q99720",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2872",
+      "uniprot_id": "P80192",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2873",
+      "uniprot_id": "Q02779",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL288",
+      "uniprot_id": "Q08499",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2916",
+      "uniprot_id": "O14746",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2925",
+      "uniprot_id": "Q9NR82",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2929",
+      "uniprot_id": "Q8NBP7",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2940",
+      "uniprot_id": "P06734",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL2954",
+      "uniprot_id": "P25774",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2959",
+      "uniprot_id": "Q08881",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2964",
+      "uniprot_id": "P36507",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2971",
+      "uniprot_id": "O60674",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2973",
+      "uniprot_id": "O75116",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2979",
+      "uniprot_id": "P26010",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2996",
+      "uniprot_id": "Q05655",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL2998",
+      "uniprot_id": "P56373",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3004",
+      "uniprot_id": "P33527",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3009",
+      "uniprot_id": "Q15303",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL301",
+      "uniprot_id": "P24941",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3023",
+      "uniprot_id": "Q9NRA0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3024",
+      "uniprot_id": "P53350",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3026",
+      "uniprot_id": "P34903",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3028",
+      "uniprot_id": "Q96KS0",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3045",
+      "uniprot_id": "P05771",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3055",
+      "uniprot_id": "P50613",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3070",
+      "uniprot_id": "P05362",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3076",
+      "uniprot_id": "P00439",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL308",
+      "uniprot_id": "P06493",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3094",
+      "uniprot_id": "Q8IW41",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3102",
+      "uniprot_id": "P09172",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3105",
+      "uniprot_id": "P09874",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3106",
+      "uniprot_id": "P19971",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3107",
+      "uniprot_id": "P09038",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3108633",
+      "uniprot_id": "P01127",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3116",
+      "uniprot_id": "P50750",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3117",
+      "uniprot_id": "P35790",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3119",
+      "uniprot_id": "Q9HBA0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3130",
+      "uniprot_id": "O00329",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3142",
+      "uniprot_id": "P78527",
+      "status": "PUBLISHER_GRAPH_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3143",
+      "uniprot_id": "P00451",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3145",
+      "uniprot_id": "P42338",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3161",
+      "uniprot_id": "P14151",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3172",
+      "uniprot_id": "Q12882",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3192",
+      "uniprot_id": "Q9BY41",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3194",
+      "uniprot_id": "P02766",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3201",
+      "uniprot_id": "P35869",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL321",
+      "uniprot_id": "P14780",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3217393",
+      "uniprot_id": "P61812",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3217394",
+      "uniprot_id": "P05019",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3217395",
+      "uniprot_id": "Q15389",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3218",
+      "uniprot_id": "P20273",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3232692",
+      "uniprot_id": "P16070",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3234",
+      "uniprot_id": "P08631",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3238",
+      "uniprot_id": "P23786",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3242",
+      "uniprot_id": "O43570",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3243",
+      "uniprot_id": "P08575",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL325",
+      "uniprot_id": "Q13547",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3267",
+      "uniprot_id": "P48736",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3273",
+      "uniprot_id": "P48764",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3276",
+      "uniprot_id": "P14784",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3286",
+      "uniprot_id": "P00749",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL3286067",
+      "uniprot_id": "O95602",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3286070",
+      "uniprot_id": "Q99075",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3286073",
+      "uniprot_id": "P01579",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3286074",
+      "uniprot_id": "P48061",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3286077",
+      "uniprot_id": "P51671",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3295",
+      "uniprot_id": "P0DJD9",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3307223",
+      "uniprot_id": "Q15116",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3308912",
+      "uniprot_id": "Q9HCN6",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL331",
+      "uniprot_id": "P11802",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3310",
+      "uniprot_id": "Q96DB2",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL332",
+      "uniprot_id": "P03956",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL333",
+      "uniprot_id": "P08253",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3338",
+      "uniprot_id": "P37268",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3357",
+      "uniprot_id": "P51617",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3378",
+      "uniprot_id": "P19438",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3385",
+      "uniprot_id": "P27361",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3390821",
+      "uniprot_id": "P15391",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3390822",
+      "uniprot_id": "Q16552",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3391681",
+      "uniprot_id": "P43304",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL340",
+      "uniprot_id": "P08684",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3407319",
+      "uniprot_id": "Q9UM47",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3407320",
+      "uniprot_id": "Q04721",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3407325",
+      "uniprot_id": "O14793",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3425389",
+      "uniprot_id": "P53041",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3430865",
+      "uniprot_id": "P41222",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3437",
+      "uniprot_id": "Q16853",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3439",
+      "uniprot_id": "Q07075",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3474",
+      "uniprot_id": "P14555",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3475",
+      "uniprot_id": "P05121",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3514",
+      "uniprot_id": "Q13093",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3522",
+      "uniprot_id": "P05093",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3535",
+      "uniprot_id": "O76083",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3551",
+      "uniprot_id": "O00220",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3553",
+      "uniprot_id": "P29597",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3559",
+      "uniprot_id": "P08842",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3559386",
+      "uniprot_id": "Q9NQ25",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3572",
+      "uniprot_id": "P11597",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3576",
+      "uniprot_id": "P56696",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3580482",
+      "uniprot_id": "Q8WXI7",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580483",
+      "uniprot_id": "Q01344",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580485",
+      "uniprot_id": "Q96F46",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580486",
+      "uniprot_id": "P35225",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580487",
+      "uniprot_id": "Q9BQB4",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580488",
+      "uniprot_id": "P49765",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580489",
+      "uniprot_id": "O15123",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580490",
+      "uniprot_id": "P24394",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3580491",
+      "uniprot_id": "P29965",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580492",
+      "uniprot_id": "P35613",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580493",
+      "uniprot_id": "P16422",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580494",
+      "uniprot_id": "P15941",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580496",
+      "uniprot_id": "P01583",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3580522",
+      "uniprot_id": "Q9NZQ7",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3582",
+      "uniprot_id": "Q02156",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3587",
+      "uniprot_id": "Q02750",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3588735",
+      "uniprot_id": "P08476",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3594",
+      "uniprot_id": "Q16790",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3596085",
+      "uniprot_id": "P01019",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3610",
+      "uniprot_id": "P24385",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3616355",
+      "uniprot_id": "P18146",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3618",
+      "uniprot_id": "P12259",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3623",
+      "uniprot_id": "P15559",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3629",
+      "uniprot_id": "P68400",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3631",
+      "uniprot_id": "P05107",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL3632452",
+      "uniprot_id": "Q9UDY8",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3650",
+      "uniprot_id": "P11362",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3660",
+      "uniprot_id": "P06756",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3670",
+      "uniprot_id": "P26439",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3687",
+      "uniprot_id": "P18054",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3691",
+      "uniprot_id": "Q13822",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3706",
+      "uniprot_id": "P78536",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3710485",
+      "uniprot_id": "Q9Y5C1",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712850",
+      "uniprot_id": "Q9NP84",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712852",
+      "uniprot_id": "P40259",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712853",
+      "uniprot_id": "P30203",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712854",
+      "uniprot_id": "P08670",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712856",
+      "uniprot_id": "P24821",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712857",
+      "uniprot_id": "Q07011",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712859",
+      "uniprot_id": "P56856",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712860",
+      "uniprot_id": "P02786",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712862",
+      "uniprot_id": "P32942",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712863",
+      "uniprot_id": "P43121",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712864",
+      "uniprot_id": "P02771",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712869",
+      "uniprot_id": "P12272",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712870",
+      "uniprot_id": "P41217",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712878",
+      "uniprot_id": "Q13421",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712879",
+      "uniprot_id": "Q5ZPR3",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712880",
+      "uniprot_id": "P11049",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712881",
+      "uniprot_id": "P06731",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL3712885",
+      "uniprot_id": "P17813",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712886",
+      "uniprot_id": "P17643",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712888",
+      "uniprot_id": "P06127",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712894",
+      "uniprot_id": "P05112",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712895",
+      "uniprot_id": "Q9NQC3",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712898",
+      "uniprot_id": "P18827",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712900",
+      "uniprot_id": "P23510",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712901",
+      "uniprot_id": "P29279",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712903",
+      "uniprot_id": "P10600",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3712912",
+      "uniprot_id": "P43626",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712913",
+      "uniprot_id": "P32970",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712914",
+      "uniprot_id": "O43557",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712915",
+      "uniprot_id": "Q9GZX6",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712916",
+      "uniprot_id": "Q9NR61",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712919",
+      "uniprot_id": "Q14956",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712920",
+      "uniprot_id": "P22301",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3712927",
+      "uniprot_id": "Q99795",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712928",
+      "uniprot_id": "Q96NY8",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712931",
+      "uniprot_id": "Q969D9",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712932",
+      "uniprot_id": "P15248",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712934",
+      "uniprot_id": "Q13641",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712938",
+      "uniprot_id": "P13591",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712949",
+      "uniprot_id": "O75144",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712953",
+      "uniprot_id": "Q9Y6W8",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712954",
+      "uniprot_id": "P40933",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712955",
+      "uniprot_id": "P04141",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3712956",
+      "uniprot_id": "Q9UHE8",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712957",
+      "uniprot_id": "P01344",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712961",
+      "uniprot_id": "O43653",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712964",
+      "uniprot_id": "P02778",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3712965",
+      "uniprot_id": "Q96FE5",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712972",
+      "uniprot_id": "Q9UHF1",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712975",
+      "uniprot_id": "Q9HCU0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712987",
+      "uniprot_id": "P26951",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712988",
+      "uniprot_id": "P40967",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712995",
+      "uniprot_id": "Q9Y5U5",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3712996",
+      "uniprot_id": "Q02161",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713000",
+      "uniprot_id": "P01563",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713006",
+      "uniprot_id": "Q9BQ51",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713007",
+      "uniprot_id": "P01562",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713014",
+      "uniprot_id": "Q53GD3",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713020",
+      "uniprot_id": "P98088",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713023",
+      "uniprot_id": "O43508",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713025",
+      "uniprot_id": "P13385",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713026",
+      "uniprot_id": "P43628",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713062",
+      "uniprot_id": "P10646",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3713333",
+      "uniprot_id": "P26842",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713343",
+      "uniprot_id": "Q08431",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713436",
+      "uniprot_id": "O75888",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713449",
+      "uniprot_id": "Q9NYY1",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713453",
+      "uniprot_id": "O95393",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713643",
+      "uniprot_id": "P17927",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713712",
+      "uniprot_id": "P15502",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3713913",
+      "uniprot_id": "Q9GZV9",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3713941",
+      "uniprot_id": "Q14627",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3714029",
+      "uniprot_id": "Q9Y4K0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3714157",
+      "uniprot_id": "P49767",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3714583",
+      "uniprot_id": "Q08722",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3717",
+      "uniprot_id": "P08581",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3720",
+      "uniprot_id": "P53396",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3729",
+      "uniprot_id": "P22748",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3776",
+      "uniprot_id": "Q14790",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3778",
+      "uniprot_id": "Q9NWZ3",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3788",
+      "uniprot_id": "O00444",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3810",
+      "uniprot_id": "P02751",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3816",
+      "uniprot_id": "P47712",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3820",
+      "uniprot_id": "P35557",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3831181",
+      "uniprot_id": "Q9UK05",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3831182",
+      "uniprot_id": "Q16518",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3831291",
+      "uniprot_id": "P01911",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3833441",
+      "uniprot_id": "P43627",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3833481",
+      "uniprot_id": "P56159",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3856162",
+      "uniprot_id": "P08637",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3856163",
+      "uniprot_id": "P09758",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3864",
+      "uniprot_id": "Q06124",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL3869",
+      "uniprot_id": "P50281",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3884",
+      "uniprot_id": "P31639",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3890",
+      "uniprot_id": "P16581",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3896",
+      "uniprot_id": "Q9NY47",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3901",
+      "uniprot_id": "P16615",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3902",
+      "uniprot_id": "P09211",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3905",
+      "uniprot_id": "P07948",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3913",
+      "uniprot_id": "P09871",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3921",
+      "uniprot_id": "Q9Y251",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3922",
+      "uniprot_id": "P50579",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3923",
+      "uniprot_id": "Q9Y2I1",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3935",
+      "uniprot_id": "Q9UQB9",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3955",
+      "uniprot_id": "P08648",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3956",
+      "uniprot_id": "Q13233",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3961",
+      "uniprot_id": "Q15759",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3972",
+      "uniprot_id": "P22102",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3973",
+      "uniprot_id": "P22455",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3979",
+      "uniprot_id": "Q03181",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3983",
+      "uniprot_id": "P33981",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3988505",
+      "uniprot_id": "P53420",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3989381",
+      "uniprot_id": "P81172",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3989382",
+      "uniprot_id": "P09603",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3989383",
+      "uniprot_id": "P43489",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3989384",
+      "uniprot_id": "P22223",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL3991",
+      "uniprot_id": "P08709",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL3991501",
+      "uniprot_id": "P48735",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4005",
+      "uniprot_id": "P42336",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4016",
+      "uniprot_id": "P42262",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL402",
+      "uniprot_id": "P04035",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4036",
+      "uniprot_id": "Q00535",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4040",
+      "uniprot_id": "P28482",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4051",
+      "uniprot_id": "P13569",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4068",
+      "uniprot_id": "P23946",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4073",
+      "uniprot_id": "P09237",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4081",
+      "uniprot_id": "P13726",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4093",
+      "uniprot_id": "P55055",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4096",
+      "uniprot_id": "P04637",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4116",
+      "uniprot_id": "P11766",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4128",
+      "uniprot_id": "Q02763",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4142",
+      "uniprot_id": "P21802",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4163",
+      "uniprot_id": "O60603",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4179",
+      "uniprot_id": "P45984",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4183",
+      "uniprot_id": "Q14242",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4187",
+      "uniprot_id": "Q99250",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4191",
+      "uniprot_id": "Q99685",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4223",
+      "uniprot_id": "P42685",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4225",
+      "uniprot_id": "P49760",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4235",
+      "uniprot_id": "P28845",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4245",
+      "uniprot_id": "P62508",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4247",
+      "uniprot_id": "Q9UM73",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4266",
+      "uniprot_id": "O00555",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4282",
+      "uniprot_id": "P31749",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4295646",
+      "uniprot_id": "O00187",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4295685",
+      "uniprot_id": "O95436",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4295690",
+      "uniprot_id": "P01023",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4296",
+      "uniprot_id": "Q15858",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4296022",
+      "uniprot_id": "P43358",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4302",
+      "uniprot_id": "P08183",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4303061",
+      "uniprot_id": "Q96LC7",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4304",
+      "uniprot_id": "Q12791",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4305",
+      "uniprot_id": "O15554",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4306",
+      "uniprot_id": "P22460",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4323",
+      "uniprot_id": "P39877",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4331",
+      "uniprot_id": "P68871",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4338",
+      "uniprot_id": "P00491",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4342",
+      "uniprot_id": "O15496",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4361",
+      "uniprot_id": "Q07820",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4393",
+      "uniprot_id": "P39900",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4409",
+      "uniprot_id": "Q9Y233",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL4439",
+      "uniprot_id": "P36897",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4444",
+      "uniprot_id": "P04070",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4445",
+      "uniprot_id": "Q08209",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4465",
+      "uniprot_id": "O75908",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4467",
+      "uniprot_id": "Q13477",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4478",
+      "uniprot_id": "Q00975",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4481",
+      "uniprot_id": "P35228",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4482",
+      "uniprot_id": "O96013",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4501",
+      "uniprot_id": "P23443",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4502",
+      "uniprot_id": "P32320",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4506",
+      "uniprot_id": "Q96EB6",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4523230",
+      "uniprot_id": "P46939",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523374",
+      "uniprot_id": "Q86V67",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523377",
+      "uniprot_id": "Q86WV6",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523510",
+      "uniprot_id": "Q9Y6A2",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523581",
+      "uniprot_id": "Q13433",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523584",
+      "uniprot_id": "Q16553",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523586",
+      "uniprot_id": "O43734",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4523587",
+      "uniprot_id": "Q02223",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4530",
+      "uniprot_id": "P00488",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL4531",
+      "uniprot_id": "P17931",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4550",
+      "uniprot_id": "P20292",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4581",
+      "uniprot_id": "P52732",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4588",
+      "uniprot_id": "P22894",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4601",
+      "uniprot_id": "Q13882",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4618",
+      "uniprot_id": "P09960",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4625",
+      "uniprot_id": "Q07817",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4630",
+      "uniprot_id": "O14757",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4630876",
+      "uniprot_id": "P01574",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4630877",
+      "uniprot_id": "Q9NYZ4",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630878",
+      "uniprot_id": "Q495A1",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630879",
+      "uniprot_id": "Q8TDQ0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630880",
+      "uniprot_id": "Q96PD4",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630881",
+      "uniprot_id": "P18627",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630882",
+      "uniprot_id": "Q96RJ3",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630883",
+      "uniprot_id": "P78423",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630884",
+      "uniprot_id": "Q07954",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630885",
+      "uniprot_id": "Q99650",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630886",
+      "uniprot_id": "Q96B86",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630887",
+      "uniprot_id": "Q92854",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630888",
+      "uniprot_id": "Q9NYJ7",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630889",
+      "uniprot_id": "P51654",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630890",
+      "uniprot_id": "O95760",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630891",
+      "uniprot_id": "P07359",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4630892",
+      "uniprot_id": "P26715",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630894",
+      "uniprot_id": "Q8NI17",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4630895",
+      "uniprot_id": "P43630",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4660",
+      "uniprot_id": "P28907",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4662938",
+      "uniprot_id": "P01135",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4662939",
+      "uniprot_id": "O14944",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4662940",
+      "uniprot_id": "P31994",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4662941",
+      "uniprot_id": "P43357",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4662942",
+      "uniprot_id": "P19544",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4662944",
+      "uniprot_id": "Q9UQF0",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4665582",
+      "uniprot_id": "O14802",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4665584",
+      "uniprot_id": "Q13740",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4665585",
+      "uniprot_id": "Q01973",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4665586",
+      "uniprot_id": "Q9HBE4",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4677",
+      "uniprot_id": "Q92843",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4683",
+      "uniprot_id": "Q12884",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4685",
+      "uniprot_id": "P14902",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4692",
+      "uniprot_id": "P04233",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4703",
+      "uniprot_id": "P67775",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4722",
+      "uniprot_id": "O14965",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL4770",
+      "uniprot_id": "Q15842",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4791",
+      "uniprot_id": "P42892",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4794",
+      "uniprot_id": "Q8NER1",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4801",
+      "uniprot_id": "P29466",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4804243",
+      "uniprot_id": "P21333",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4804244",
+      "uniprot_id": "P29966",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4804245",
+      "uniprot_id": "P52799",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4804246",
+      "uniprot_id": "P59901",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4804247",
+      "uniprot_id": "Q14393",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4804257",
+      "uniprot_id": "P78358",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4804258",
+      "uniprot_id": "O60449",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4805",
+      "uniprot_id": "Q99572",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4816",
+      "uniprot_id": "Q9Y243",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4822",
+      "uniprot_id": "P56817",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4860",
+      "uniprot_id": "P10415",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4876",
+      "uniprot_id": "P18564",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4895",
+      "uniprot_id": "P30530",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4898",
+      "uniprot_id": "Q16620",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4899",
+      "uniprot_id": "P41279",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4915",
+      "uniprot_id": "P09382",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4917",
+      "uniprot_id": "P01024",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4929",
+      "uniprot_id": "P02743",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4937",
+      "uniprot_id": "P49674",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4954",
+      "uniprot_id": "P29320",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL4956",
+      "uniprot_id": "P47869",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4979",
+      "uniprot_id": "P13866",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL4998",
+      "uniprot_id": "P17301",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5024",
+      "uniprot_id": "Q13535",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5122",
+      "uniprot_id": "Q16832",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5141",
+      "uniprot_id": "O43174",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5145",
+      "uniprot_id": "P15056",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5147",
+      "uniprot_id": "P54760",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5163",
+      "uniprot_id": "Q9NY46",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5167",
+      "uniprot_id": "Q9UI33",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5174",
+      "uniprot_id": "O14786",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5191",
+      "uniprot_id": "P10747",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5202",
+      "uniprot_id": "Q9UQD0",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5216",
+      "uniprot_id": "P11172",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5251",
+      "uniprot_id": "Q06187",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5255",
+      "uniprot_id": "O00206",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5274",
+      "uniprot_id": "P35590",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5275",
+      "uniprot_id": "P36894",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5285",
+      "uniprot_id": "Q99683",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5287",
+      "uniprot_id": "Q14973",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5305024",
+      "uniprot_id": "P05155",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5311",
+      "uniprot_id": "P37023",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5331",
+      "uniprot_id": "Q12866",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5349",
+      "uniprot_id": "P12314",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5366",
+      "uniprot_id": "Q9UGN5",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5378",
+      "uniprot_id": "P16109",
+      "status": "PUBLISHER_SEQUENCE_MISMATCH"
+    },
+    {
+      "target_id": "CHEMBL5398",
+      "uniprot_id": "P41235",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5443",
+      "uniprot_id": "O00311",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5451",
+      "uniprot_id": "Q9Y5Y9",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5464",
+      "uniprot_id": "Q13546",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5466",
+      "uniprot_id": "Q13705",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5467",
+      "uniprot_id": "Q13873",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5469",
+      "uniprot_id": "Q14289",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5476",
+      "uniprot_id": "O00238",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5479",
+      "uniprot_id": "P14210",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5491",
+      "uniprot_id": "P30291",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5498501",
+      "uniprot_id": "P07225",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5498502",
+      "uniprot_id": "Q9H165",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5498504",
+      "uniprot_id": "P11532",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5498505",
+      "uniprot_id": "Q02388",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5522",
+      "uniprot_id": "Q8NET8",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5568",
+      "uniprot_id": "P08922",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5580",
+      "uniprot_id": "O14638",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5608",
+      "uniprot_id": "Q16288",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5616",
+      "uniprot_id": "P27037",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5619",
+      "uniprot_id": "P27695",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5661",
+      "uniprot_id": "O14980",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5689",
+      "uniprot_id": "P17752",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5697",
+      "uniprot_id": "Q9GZT9",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5705",
+      "uniprot_id": "Q9H6Z9",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5714",
+      "uniprot_id": "P48023",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5721",
+      "uniprot_id": "P49915",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5731",
+      "uniprot_id": "P00751",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5742",
+      "uniprot_id": "P30536",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5804",
+      "uniprot_id": "Q9NR96",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5805",
+      "uniprot_id": "Q9NR97",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5807",
+      "uniprot_id": "P20916",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5838",
+      "uniprot_id": "P21860",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5903",
+      "uniprot_id": "Q04771",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5913",
+      "uniprot_id": "P48357",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5936",
+      "uniprot_id": "Q9NYK1",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5957",
+      "uniprot_id": "P21589",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL5966",
+      "uniprot_id": "P55899",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5988",
+      "uniprot_id": "Q9HD36",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL5989",
+      "uniprot_id": "O15392",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL6007",
+      "uniprot_id": "O75762",
+      "status": "READY"
+    },
+    {
+      "target_id": "CHEMBL6009",
+      "uniprot_id": "O75907",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6024",
+      "uniprot_id": "O94907",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6044",
+      "uniprot_id": "Q16548",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6066101",
+      "uniprot_id": "Q96RD9",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6093",
+      "uniprot_id": "P0DP23",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6120",
+      "uniprot_id": "Q96S37",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6136",
+      "uniprot_id": "O60341",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6152",
+      "uniprot_id": "P37840",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    },
+    {
+      "target_id": "CHEMBL6157",
+      "uniprot_id": "Q99816",
+      "status": "PUBLISHER_SEQUENCE_MISSING"
+    }
+  ]
+}

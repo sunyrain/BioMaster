@@ -1,0 +1,14 @@
+{
+  "model": "ProbeMatchDTI",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint_sha256": "bd7de877c1198f62b1b2038c25b2b96c588c9b49f565e713b0d14c3f4e6b84eb",
+  "adapter_sha256": "f2e462e053f13bd6f2603cfcafa43de07094421099abcb2ba8d8019baf34f29f",
+  "native_adapter_sha256": "74a798ffec774b131e4ac096a957651f4ff97ae278705ae34a80bccb88da8cc9",
+  "precision": "float32_cpu",
+  "head": "output6_softmax_class1",
+  "historical_reuse": "exact frozen drug and protein identities, replay checked",
+  "random_seed": "sha256(pair_id) first8 hex"
+}

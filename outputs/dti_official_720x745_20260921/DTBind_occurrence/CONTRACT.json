@@ -1,0 +1,14 @@
+{
+  "model": "DTBind_occurrence",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint_sha256": "99a82b9dba312bd8316509723b095d8206af5bb45c5488a5911c56ba720be85d",
+  "adapter_sha256": "f2e462e053f13bd6f2603cfcafa43de07094421099abcb2ba8d8019baf34f29f",
+  "native_adapter_sha256": "74a798ffec774b131e4ac096a957651f4ff97ae278705ae34a80bccb88da8cc9",
+  "precision": "float32_cpu",
+  "head": "occurrence_probability",
+  "historical_reuse": "exact frozen drug and protein identities, replay checked",
+  "random_seed": 20260916
+}

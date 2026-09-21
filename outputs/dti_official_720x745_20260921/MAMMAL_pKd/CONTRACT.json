@@ -1,0 +1,13 @@
+{
+  "model": "MAMMAL_pKd",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint_sha256": "8e4407357c97feac40d63336401c1b49d97666547a0c98779e2d1b54e3ea7c87",
+  "adapter_sha256": "37d72beda790e3d6b6dfc9f2e37e3f62c26be05b2e19de857d46a01c2be42154",
+  "native_source_revision": "ebca44f32db6faf85101de87dfde32034fe4e701",
+  "precision": "float32_cuda_tf32_off",
+  "head": "native scalar head at first token, inverse author BindingDB pKd normalization",
+  "preprocessing": "Author DtiBindingdbKdTask defaults: protein1250, drug256, encoder1512 tokens"
+}

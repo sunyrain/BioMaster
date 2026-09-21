@@ -1,0 +1,1677 @@
+[
+  {
+    "path": ".external/MAMMAL/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "https://github.com/BiomedSciAI/biomed-multi-alignment",
+      "revision": "ebca44f32db6faf85101de87dfde32034fe4e701",
+      "files": [
+        {
+          "path": ".github/ISSUE_TEMPLATE/---bug-report.md",
+          "git_blob_sha1": "a198988ebd84515462197479acbb4ed9ee548535"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/---feature-request.md",
+          "git_blob_sha1": "7b07af48dc1c57a08f83e7985164f3e8dfa9bf49"
+        },
+        {
+          "path": ".github/ISSUE_TEMPLATE/---question.md",
+          "git_blob_sha1": "7e44f74f63cfccedadf87155be0293dc242da944"
+        },
+        {
+          "path": ".github/workflows/clone.yml",
+          "git_blob_sha1": "91555ad7a1f8705fa84b2a264b466ad244aa943a"
+        },
+        {
+          "path": ".github/workflows/github-actions.yml",
+          "git_blob_sha1": "39d17e39bac1fad82f6532c321b1b29773599ad0"
+        },
+        {
+          "path": ".github/workflows/python-publish.yml",
+          "git_blob_sha1": "3bfabfc125e7c4dbd79d0cf5516a1346275c1fd5"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "git_blob_sha1": "ad26602c662c6c345fa4cbab6e016286c772f1b3"
+        },
+        {
+          "path": "CLONE.md",
+          "git_blob_sha1": "0a39a3034ea0c4a9bc056b2b9e95a8da8e70113c"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "git_blob_sha1": "3cf60ad10d03b013a490ff72b1938f9315773f2a"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "05c52d57271616e2a9236f9d419d16bd5ac98b4a"
+        },
+        {
+          "path": "mammal/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/carcinogenicity/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/carcinogenicity/config.yaml",
+          "git_blob_sha1": "18a5c58af5d3197d45ec2b924038de75d9f842e3"
+        },
+        {
+          "path": "mammal/examples/carcinogenicity/main_infer.py",
+          "git_blob_sha1": "71c9bd2c24df7ffb054e2637c8bff9915c8221c0"
+        },
+        {
+          "path": "mammal/examples/carcinogenicity/pl_data_module.py",
+          "git_blob_sha1": "b297ed47d8b85b1722e102e825d4341dd9fee3b7"
+        },
+        {
+          "path": "mammal/examples/carcinogenicity/task.py",
+          "git_blob_sha1": "70415b3aed9193b04f59a1cf4775dcc787e7303b"
+        },
+        {
+          "path": "mammal/examples/cell_line_drug_response/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/cell_line_drug_response/config.yaml",
+          "git_blob_sha1": "46018daa1e6be2f312855f61edc85ae2f9889bfb"
+        },
+        {
+          "path": "mammal/examples/cell_line_drug_response/dataset.py",
+          "git_blob_sha1": "50985a1a46d4e1e77e0b7f8f256873e25ca9fdc2"
+        },
+        {
+          "path": "mammal/examples/cell_line_drug_response/main_infer.py",
+          "git_blob_sha1": "464588200b40eecc5e3dbe02b5ac5bdecceb6f4b"
+        },
+        {
+          "path": "mammal/examples/cell_line_drug_response/pl_data_module.py",
+          "git_blob_sha1": "f33bed6f32e9ac89e47226af0e98d525bea2565e"
+        },
+        {
+          "path": "mammal/examples/cell_line_drug_response/task.py",
+          "git_blob_sha1": "3e87f96cf8f022bd81aca48734203fbb9ed36081"
+        },
+        {
+          "path": "mammal/examples/dti_bindingdb_kd/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/dti_bindingdb_kd/config.yaml",
+          "git_blob_sha1": "3c5b502026e073812c854cff25a6d9d3acb2e100"
+        },
+        {
+          "path": "mammal/examples/dti_bindingdb_kd/main_infer.py",
+          "git_blob_sha1": "894e24dc10490bd680e97dfc993f97d114d5caef"
+        },
+        {
+          "path": "mammal/examples/dti_bindingdb_kd/pl_data_module.py",
+          "git_blob_sha1": "07d304a6446932f9e3870938a7238557151c9c15"
+        },
+        {
+          "path": "mammal/examples/dti_bindingdb_kd/task.py",
+          "git_blob_sha1": "350ba782d4c3f415513cfe5a84e88f0a012d1a81"
+        },
+        {
+          "path": "mammal/examples/molnet/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/molnet/molnet_infer.py",
+          "git_blob_sha1": "6ea7b692280a54f24454127a2933f146f87453d4"
+        },
+        {
+          "path": "mammal/examples/protein_solubility/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/protein_solubility/config.yaml",
+          "git_blob_sha1": "2976bfc8e1ebc9ae4bf1a006bcba015b93812b95"
+        },
+        {
+          "path": "mammal/examples/protein_solubility/main_infer.py",
+          "git_blob_sha1": "fd63b37565bd7eb2af44b11ff3d739ac652e05d9"
+        },
+        {
+          "path": "mammal/examples/protein_solubility/pl_data_module.py",
+          "git_blob_sha1": "40784351c208b16a93f72321c20ec79eac895079"
+        },
+        {
+          "path": "mammal/examples/protein_solubility/task.py",
+          "git_blob_sha1": "f2671da146b899b05b10635c6bc5727f84b29a86"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/README.md",
+          "git_blob_sha1": "9eb5c6e237715d5b8ed6ef44f0017db094b69ae9"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/anndata_op.py",
+          "git_blob_sha1": "0d156892a0b9298a3c3d0cc779b620d3912017c8"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/config.yaml",
+          "git_blob_sha1": "313a69f86c85df769c996c7b56f924b9416c28f9"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/data/Zheng68k_to_anndata.py",
+          "git_blob_sha1": "99e9f9b29e912bec94007f3fbc9f9016b673e513"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/data/process_h5ad_data.py",
+          "git_blob_sha1": "835a51b48f87dd40af70113aa8b8e3e2b89a2f5b"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/pl_data_module.py",
+          "git_blob_sha1": "36760bec727baf68210ed2d26a780b5d6241249c"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/scRNA_infer.py",
+          "git_blob_sha1": "69498dab8a304060895de042d5a56e7a29eb8119"
+        },
+        {
+          "path": "mammal/examples/scrna_cell_type/task.py",
+          "git_blob_sha1": "96962c1ec4727a2368a2509de3f6619e5f452270"
+        },
+        {
+          "path": "mammal/examples/tcr_epitope_binding/main_infer.py",
+          "git_blob_sha1": "33b759de82949e31574b010d9344bdbc6e632a61"
+        },
+        {
+          "path": "mammal/examples/tests/test_drug_carcinogenicity_classification.py",
+          "git_blob_sha1": "1720e6dee0ee066802c69ea066031be98180d643"
+        },
+        {
+          "path": "mammal/examples/tests/test_dti_bindingdb_kd.py",
+          "git_blob_sha1": "f4d9fd1f75278ecd919e2027dc32b9bb5803e4e8"
+        },
+        {
+          "path": "mammal/examples/tests/test_main_finetune.py",
+          "git_blob_sha1": "75965f6ffee422fc742a4fd45794335f31950da5"
+        },
+        {
+          "path": "mammal/examples/tests/test_molnet.py",
+          "git_blob_sha1": "c3508eca04f70cc1c1abf7779994b8230d9de64f"
+        },
+        {
+          "path": "mammal/examples/tests/test_protein_solubility_prediction.py",
+          "git_blob_sha1": "0d77f43c6783d39b6f4b76ef9cec32459f2389f8"
+        },
+        {
+          "path": "mammal/examples/tests/test_simple_inference.py",
+          "git_blob_sha1": "d5c53ff09881e9ee61117f357a8bddf3fdf412a2"
+        },
+        {
+          "path": "mammal/examples/tests/test_tcr_epitope_binding_inference.py",
+          "git_blob_sha1": "2e917a2e8e956e9d9921ea0ad75f616067603434"
+        },
+        {
+          "path": "mammal/keys.py",
+          "git_blob_sha1": "3df505079feb0984d4e1ab3b9104d71d97e65aae"
+        },
+        {
+          "path": "mammal/lora.py",
+          "git_blob_sha1": "296e47090383ffa15239775d11c786a7355b1f1e"
+        },
+        {
+          "path": "mammal/losses.py",
+          "git_blob_sha1": "feb9f33749cb9a7b125bb8aafd9a2f52f21b025c"
+        },
+        {
+          "path": "mammal/lr_schedulers.py",
+          "git_blob_sha1": "302a6602459fd3470798a47b43f51b3cbc553f99"
+        },
+        {
+          "path": "mammal/main_finetune.py",
+          "git_blob_sha1": "671c5b56579eb15695b72d5da6f7600ef0760626"
+        },
+        {
+          "path": "mammal/metrics.py",
+          "git_blob_sha1": "c782c57a15c633777e7f18701dab31a13a6a96f2"
+        },
+        {
+          "path": "mammal/model.py",
+          "git_blob_sha1": "e0433883f4856cf161db58e78058cc4bf1916c16"
+        },
+        {
+          "path": "mammal/task.py",
+          "git_blob_sha1": "e999baf57a8987c5cde0744850e9f7e284a72faa"
+        },
+        {
+          "path": "mammal/tests/test_transformers5_config_compat.py",
+          "git_blob_sha1": "200670e8122eb3db70fb0fc2fecd5899df40b29c"
+        },
+        {
+          "path": "mammal_mcp/README.md",
+          "git_blob_sha1": "37e0cd7ed7e41a7dfefa7ce9c822552e4456989c"
+        },
+        {
+          "path": "mammal_mcp/dependencies.py",
+          "git_blob_sha1": "d15a254c1fb2a277ccddc977b43c6aa0207d6e58"
+        },
+        {
+          "path": "mammal_mcp/pyproject.toml",
+          "git_blob_sha1": "fc825bdeef74ea7092f4fbc9369e443cb12c0a87"
+        },
+        {
+          "path": "mammal_mcp/server.py",
+          "git_blob_sha1": "b90e54f2ca1cb2a449c078470337f9c08c1f64fe"
+        },
+        {
+          "path": "mammal_mcp/util.py",
+          "git_blob_sha1": "ffe5db5dc88c69be33bf9e1e0e1f88d1a521b489"
+        },
+        {
+          "path": "mammal_vllm/README.md",
+          "git_blob_sha1": "c406606e7470e489b70fe5cc8fbf4280da31a3f8"
+        },
+        {
+          "path": "mammal_vllm/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal_vllm/examples/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal_vllm/examples/example_prompts.py",
+          "git_blob_sha1": "a7f0185b8c09291add4c06166ab0a446bbb16300"
+        },
+        {
+          "path": "mammal_vllm/examples/offline_mammal_usage.py",
+          "git_blob_sha1": "ee076837070fc617ee6777c1505bc7a283b5c477"
+        },
+        {
+          "path": "mammal_vllm/examples/online_mammal_usage.py",
+          "git_blob_sha1": "b4f55ae2b457a39c2d5a91fd4d148c7026276c78"
+        },
+        {
+          "path": "mammal_vllm/tests/__init__.py",
+          "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "mammal_vllm/tests/compare_embeddings.py",
+          "git_blob_sha1": "f2ef521fffaa657b30e7c3651b3265b8052e0d9b"
+        },
+        {
+          "path": "mammal_vllm/tests/conftest.py",
+          "git_blob_sha1": "c7d1c80d1fdc720d566d2f4e7d9201d5072ece56"
+        },
+        {
+          "path": "mammal_vllm/tests/test_compare_embeddings.py",
+          "git_blob_sha1": "777be211fc12cea10be8ba6dc90bff0b6e695ea1"
+        },
+        {
+          "path": "mammal_vllm/tests/test_embeddings.py",
+          "git_blob_sha1": "3661d58c6358e69a6c4c8749f92d8a0fbe541057"
+        },
+        {
+          "path": "mammal_vllm/tests/test_example_prompts.py",
+          "git_blob_sha1": "6ec6c9239abef64921d2b83f43df62f658e1c84e"
+        },
+        {
+          "path": "mammal_vllm/tests/test_registration.py",
+          "git_blob_sha1": "87bd36ba887bdbb56ddce96442fa4fe273365a50"
+        },
+        {
+          "path": "mammal_vllm/tests/test_tokenization.py",
+          "git_blob_sha1": "531800aacf34151775f3d9377791c47d49598c4e"
+        },
+        {
+          "path": "mammal_vllm/vllm_mammal_plugin/__init__.py",
+          "git_blob_sha1": "aaba79241e5170febf783d6c715da6d07cbd1b9d"
+        },
+        {
+          "path": "mammal_vllm/vllm_mammal_plugin/mammal.py",
+          "git_blob_sha1": "6bd3ee56daa4dbd61b25b1efabe767ccc7617c00"
+        },
+        {
+          "path": "mammal_vllm/vllm_mammal_plugin/tokenization.py",
+          "git_blob_sha1": "e3f86d930f535b1a71aecd01fc9cb6a8b5652773"
+        },
+        {
+          "path": "pyproject.toml",
+          "git_blob_sha1": "32a6dde944967383b2fb5f03bac318df5c5cd2a4"
+        },
+        {
+          "path": "tutorials/MAINFRAME_2026/MAMMAL_finetune.ipynb",
+          "git_blob_sha1": "d86b039d91c9537d0e4d0eec5685476bae97083f"
+        },
+        {
+          "path": "tutorials/MAINFRAME_2026/MAMMAL_inference.ipynb",
+          "git_blob_sha1": "0eda474a8bf1fbd18ac95a499f77aa2db45fc993"
+        },
+        {
+          "path": "tutorials/MAINFRAME_2026/MMELON_finetuning.ipynb",
+          "git_blob_sha1": "228160902e29116c66af053de7f0637a2cc4025d"
+        },
+        {
+          "path": "tutorials/MAINFRAME_2026/MMELON_inference.ipynb",
+          "git_blob_sha1": "b8c05e85415f2eba69829998db45f658d52aa4b7"
+        },
+        {
+          "path": "tutorials/MAINFRAME_2026/README.md",
+          "git_blob_sha1": "5f412cb8de59bc65208d7b28d4614adf97158da0"
+        },
+        {
+          "path": "tutorials/MAINFRAME_2026/data_and_predictions_analysis.ipynb",
+          "git_blob_sha1": "1017cac95808f2532c7d7c3c6340255fc789fb3f"
+        },
+        {
+          "path": "tutorials/advanced_create_new_task.ipynb",
+          "git_blob_sha1": "ff9fcdc3f2a366501eccc9ad10448862e186a7f4"
+        },
+        {
+          "path": "tutorials/begginer_inference.ipynb",
+          "git_blob_sha1": "ed035b957f227f18f121021a0928d36386009d54"
+        }
+      ]
+    }
+  },
+  {
+    "path": ".external/BALM/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "https://github.com/meyresearch/BALM",
+      "revision": "c0a4ecb828c44ba1633e06e885da12c5a6ababd6",
+      "files": [
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "bba3d8f0528f08de190b74061cbaa87b452a3bf7"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "f5636cacb86209354dde3babe9dcf89d9b4e2606"
+        },
+        {
+          "path": "balm/common_utils.py",
+          "git_blob_sha1": "90f08f73419a1dac66199515bfd8e8fd630df3df"
+        },
+        {
+          "path": "balm/configs.py",
+          "git_blob_sha1": "622037ed3fe4a72681060f670af4e3327144eebf"
+        },
+        {
+          "path": "balm/datasets/__init__.py",
+          "git_blob_sha1": "6b74ef4f71f6d6eb453eea07f5a428313e1a0e67"
+        },
+        {
+          "path": "balm/datasets/base_few_shot_dataset.py",
+          "git_blob_sha1": "44c0e66ebdc5f69c4214fab91c5c3b7e8b4808cf"
+        },
+        {
+          "path": "balm/datasets/bindingdb_filtered.py",
+          "git_blob_sha1": "6eef8ed911470a3fc1b6dfea0960f65411fe0b3f"
+        },
+        {
+          "path": "balm/datasets/hif2a.py",
+          "git_blob_sha1": "bb482fb63b05f8451c8d4ac3f3eeb4448961557a"
+        },
+        {
+          "path": "balm/datasets/leaky_pdb.py",
+          "git_blob_sha1": "7ff2542ea42445dfcf8bf08cc89305b0a0bd88af"
+        },
+        {
+          "path": "balm/datasets/mcl1.py",
+          "git_blob_sha1": "f5c9f13659fa095dcc4b0f8ecd3c4e9bd5e313b1"
+        },
+        {
+          "path": "balm/datasets/mpro.py",
+          "git_blob_sha1": "494ed1ddd6b5f4bb91be01fc0ec5a6659d917e15"
+        },
+        {
+          "path": "balm/datasets/syk.py",
+          "git_blob_sha1": "0c4e64c3eae4b0a10a4aae1a8e83c9bee835db47"
+        },
+        {
+          "path": "balm/datasets/usp7.py",
+          "git_blob_sha1": "912e177462469d8dddd9b86467a5711d3fe4e0e4"
+        },
+        {
+          "path": "balm/datasets/utils.py",
+          "git_blob_sha1": "07a39f987b7eff9d9cc0e37083039fd9a3351e7a"
+        },
+        {
+          "path": "balm/factories.py",
+          "git_blob_sha1": "d95e0dd4fa632f4816185c8746a040d6f83bb2eb"
+        },
+        {
+          "path": "balm/metrics.py",
+          "git_blob_sha1": "7cc14a788db27c5d05a75d1e3ebe8ebf28342d7c"
+        },
+        {
+          "path": "balm/models/__init__.py",
+          "git_blob_sha1": "5448faedb285215c644afa8ee75eb82a284f6178"
+        },
+        {
+          "path": "balm/models/balm.py",
+          "git_blob_sha1": "e9a91b959cc9c69557d71b6eb721b270c5407df7"
+        },
+        {
+          "path": "balm/models/base_model.py",
+          "git_blob_sha1": "7d6796962e2fa929567687a1b7ac867f74186397"
+        },
+        {
+          "path": "balm/models/baseline.py",
+          "git_blob_sha1": "07691f25125abc13482356a98cb40f48e08f0cad"
+        },
+        {
+          "path": "balm/models/constants.py",
+          "git_blob_sha1": "39df1244b3a3f88fded48abffaaf1c6ec6ed8ad2"
+        },
+        {
+          "path": "balm/models/utils.py",
+          "git_blob_sha1": "345e8b7c4b94a38e7ec0a6dea520fb4a5095ffb2"
+        },
+        {
+          "path": "balm/tokenization.py",
+          "git_blob_sha1": "373fdd35d00b14288741128c628ec1c2e8f6cf22"
+        },
+        {
+          "path": "balm/trainer.py",
+          "git_blob_sha1": "b8a5a3c8cb55afb21a2f6132dda355d6353e858b"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "effb43f41694e0a9640c63b07c8a177a798b3948"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "05cd1402ba632974a08e19fa77b2eec3be96e7e9"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "6185777e864e80a95cd777b57fdc428cf9ae47b2"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "eec8c9a11d74f703bb9499605c824d46b5ce6d50"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "d000b8a8a43aa93d45caef45c58a13ef8feb2495"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "dbbd34dab61bc0e91f66549853c0e700275690ec"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "f268b1d97e89ffffca381c631860accf5f528514"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "d0e52a2cb49372ede9ed880740adb4cd97f0d80c"
+        },
+        {
+          "path": "configs/bindingdb_cold_drug/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "a6774af1889304a22013d5df7f87b561f5cd1dde"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "92f4a0ee1a50cd8bf6e56b89ce45ff9ff98ba147"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "92e4db5662b6bc4c52a8f6050a3840be9612bb21"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "809ca28d42755fb3335426364abeb45eb46c1839"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "cacdb987d2ae049c086d64874f6f25ce91ef2de1"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "488e05529d32501c2af1ddc4b70248b52699286f"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "c453e8a0ab1fec26d0f769b91d4d4c95b0ae3418"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "b3d8e54196352cb610295e8f4da2bb31828202ee"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "9fd589a8f1197f817c9afa6d67062a1d44fb5952"
+        },
+        {
+          "path": "configs/bindingdb_cold_target/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "00952e59ad925852e1718f82c04ae001fdce6dba"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "3c7a657a83366cd3d44d35a716257d1adeaf70e1"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "6eb499a28b9734ef1fefc6f66b108598788d20c7"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "ccb2746474a06bcbe7439fb618e3cf17f9b18116"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "d23c2a901ebf39879f3ad0f7bf1dd5cef9d2fc3c"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "fba3d49279de5779352caacbc45b7cde1672c87e"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "56d00bcf1abdf74a4a4080df9a3b2dcf8f9c1327"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "063a17a9d77401e8e76a17fc2a8820f8cfe984de"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "7359fedfe1db4fefcdaddc3d89b8804b7450fe7e"
+        },
+        {
+          "path": "configs/bindingdb_random/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "47a1ed2c97dbf9eb1f831ac983121d7eb795369d"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "fb1b251ef9cd57c214168c1ea65bca0d0c28656b"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "0e2b0e263958f3bc85cbf025ea03c22c8a1e1cee"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "2821df94d22b879c32474e15b599bfdef4b617ed"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "be50da6d6b005cde8855bcc8283355c9ef4401f5"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "81ff0c5ded624ef738dfed2ed6b17e4a890933f7"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "5bdd1bf949cbe121e781ea218a6dabfaa6bf75ea"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "9ee3f6c807f5237542070296348b50982d2e2a05"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "facc8acbcc0cfb45973db776856bb118dcafa183"
+        },
+        {
+          "path": "configs/bindingdb_scaffold/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "d9097a667fca8bf5855601bd6967449f63361651"
+        },
+        {
+          "path": "configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "25f7e5c94bdfd361745d15bf9bbfdee948e46eb6"
+        },
+        {
+          "path": "configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "b25c8ca65c0af6fca3d0c8d0465d0a2a6b50cff2"
+        },
+        {
+          "path": "configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "1feb9f89076fde1a2a2af6a65748175894d9ab97"
+        },
+        {
+          "path": "configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "bd61603133de1411e8216536152a4412f550850b"
+        },
+        {
+          "path": "configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "2c1de7960954326cb2a87d3599393d8492676bf6"
+        },
+        {
+          "path": "configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "3a19b6976d5ac5904a705de2969c2c3600e71d51"
+        },
+        {
+          "path": "configs/leakypdb/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "9083d3273ef8e2ff4a14365965db8eae155882db"
+        },
+        {
+          "path": "configs/leakypdb/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "eeb4bd847fc1417acab81190db6493a21e68e1a2"
+        },
+        {
+          "path": "configs/leakypdb/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "83f3a0c3b4fdd80bafb3a0a3f0004904b1d4d3b6"
+        },
+        {
+          "path": "configs/leakypdb/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "f8ad7571b04cd60f588662e01d0ef789fd64acf0"
+        },
+        {
+          "path": "configs/leakypdb/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "5816ab0092c1a2f29ef2dcde8d057247d52da5f6"
+        },
+        {
+          "path": "configs/leakypdb/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "20dfd19977ec78eb02912a227bf71f2f3173d316"
+        },
+        {
+          "path": "configs/leakypdb/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "cf5fd4c399576d18016f7fde895c77d7c0f92dcb"
+        },
+        {
+          "path": "configs/leakypdb/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "eee7d1c653a83646d1a9ebc8ae67ebd7152c87be"
+        },
+        {
+          "path": "configs/leakypdb/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "5742572b78926d0208ac73832d0a329dc57510a2"
+        },
+        {
+          "path": "configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "78850ac42a573c98f6f46d6898860f4c5c1ffbd8"
+        },
+        {
+          "path": "configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "ffe0bfad67dbb833bf55233eb26aeb7ab5f0a899"
+        },
+        {
+          "path": "configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "a3df157ee6dae1465d5118821f49fc96cbb617dd"
+        },
+        {
+          "path": "configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "63266366ec4e21cc5dcbd23ed64c341286917c4f"
+        },
+        {
+          "path": "configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "43db3834a46a27e041302baba69b0a674bea63d6"
+        },
+        {
+          "path": "configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "150c082a7ef27a54d1b366c18bfae3e1b54bfa53"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "cf3e90e65bf62d52e6670910b293af2303537e26"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "68418ac1b65f88a555dd7ead8762382ceb5ce6be"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "4316f48526ca936b8dccfde182a827aa4cc0f51c"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train10_1.yaml",
+          "git_blob_sha1": "dcdfa18f4cb30b9514a39a2159ed25ef2b9584fd"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train10_2.yaml",
+          "git_blob_sha1": "10766dc6c4c9a8edaf6af12b51bd2082595bbd30"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train10_3.yaml",
+          "git_blob_sha1": "02bbbeda9a73ab4821c58ab1ca9e3fc0b4a97195"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "d04cb57b43f610cb6f121929b4b1a4223489b51b"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "a8e0eb009e7cd924d546cc01755340ef0373614e"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "f4ac767787eab1d92c2c14aa5225fb5bffa9e7d3"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train30_1.yaml",
+          "git_blob_sha1": "f56f0d53a2371e7270cd7a521d5987e9eb72e864"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train30_2.yaml",
+          "git_blob_sha1": "ed0fbb52fe277a028964e09afad77fb21f3e236a"
+        },
+        {
+          "path": "configs/mpro/esm_lokr_chemberta_loha_cosinemse_train30_3.yaml",
+          "git_blob_sha1": "cfee83c5ff7987c94a57eecb88ce5f8214c87e99"
+        },
+        {
+          "path": "configs/syk/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "647319f1c4198b16f385b36b0dfa90747cf2fa29"
+        },
+        {
+          "path": "configs/syk/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "8783731481e8c044413331ca85d8c49b3f39c1eb"
+        },
+        {
+          "path": "configs/syk/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "7de08f8ce2aecc152cc4fc67c424a7b7b1b4fc76"
+        },
+        {
+          "path": "configs/syk/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "01dcd97b2eed29aa4bf64033afaeeeeaae9bc0be"
+        },
+        {
+          "path": "configs/syk/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "7aefd7bf6369f9feac4c31c59a4400d39d149ff7"
+        },
+        {
+          "path": "configs/syk/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "932cb11ca209d07604ce9dd117c0faf8f1c5ec9b"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "c6871ce0514ebfcddd96b73325db06816a019740"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "65173e8c8c3499a5a758dae21fb4e12cd6564397"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "fa6051a75029ce5d1c44ddf56e918269e7ef182f"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train10_1.yaml",
+          "git_blob_sha1": "a3c393443dbd0e9c83f701c408776e9df4380b51"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train10_2.yaml",
+          "git_blob_sha1": "c926c40efbd1aa5b2d5b91b5a394c63ddcc3c7f4"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train10_3.yaml",
+          "git_blob_sha1": "8a3fc45108eb79748f2b07fadd716b1af0d00109"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "f1975cc0a18105d0023468585232fce6b15797f4"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "58dbb228941f58c349e81a1cef23d02c40bf1531"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "11fb843d93354ce9208cd894e56a500c7c6ae53a"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train30_1.yaml",
+          "git_blob_sha1": "c3889fd8a91291c6f090d880a66b5cd7f689d7fe"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train30_2.yaml",
+          "git_blob_sha1": "ee9a7c4210158fc904cbca6a100c2c9edfed47a3"
+        },
+        {
+          "path": "configs/usp7/esm_lokr_chemberta_loha_cosinemse_train30_3.yaml",
+          "git_blob_sha1": "a42bdbf23d244c1a11bdbfbd9ae18e9301b77603"
+        },
+        {
+          "path": "default_configs/balm_peft.yaml",
+          "git_blob_sha1": "846705e2a7d7ef978edaebec927e8304a47a53d3"
+        },
+        {
+          "path": "environment.yaml",
+          "git_blob_sha1": "0c0f0b2b603c39c868fd5611f957f240c906d4aa"
+        },
+        {
+          "path": "figures/BindingDB/Fig2.ipynb",
+          "git_blob_sha1": "7aa9de0048d4c47cd84d15519f44677128a235d7"
+        },
+        {
+          "path": "figures/BindingDB/FigA1.ipynb",
+          "git_blob_sha1": "003026a1e112f4b57e8b94b624d796a093aecb5b"
+        },
+        {
+          "path": "figures/LeakyPDB/BALM_Docking_Comparision.ipynb",
+          "git_blob_sha1": "898cea0dda95772d826d10e6b4612d0d36e56e93"
+        },
+        {
+          "path": "figures/LeakyPDB/LeakyPDB_data.ipynb",
+          "git_blob_sha1": "e438ca3d33ccc2bf51bd12d315f6af729dae23da"
+        },
+        {
+          "path": "figures/Target_expts/Fig3 - USP7 + MPro.ipynb",
+          "git_blob_sha1": "913837f3fc81a60273ecc19ff8fb217bf122dd20"
+        },
+        {
+          "path": "figures/Target_expts/HIF2A/HIF2A_Comparision.ipynb",
+          "git_blob_sha1": "7a0e82d9e50b7566adfd5d7cfc5126dfe952860d"
+        },
+        {
+          "path": "figures/Target_expts/MCL1/MCL1_Comparision.ipynb",
+          "git_blob_sha1": "fb692cc1bdf210310d4022814500174b05bebced"
+        },
+        {
+          "path": "figures/Target_expts/SYK/SYK_Comparision.ipynb",
+          "git_blob_sha1": "7f40bb05cd22099dd12d128623dfa0e925c8cda4"
+        },
+        {
+          "path": "scripts/notebooks/custom_data_demo.ipynb",
+          "git_blob_sha1": "f2e44eda7cc44efe6500418e63b873785cd264c1"
+        },
+        {
+          "path": "scripts/notebooks/few_shot_demo.ipynb",
+          "git_blob_sha1": "bd8db3ac9e36c101432662c5454b447e121a3070"
+        },
+        {
+          "path": "scripts/test.py",
+          "git_blob_sha1": "c4649deb4fc49cd7eebe79a1cf2359a281fc246e"
+        },
+        {
+          "path": "scripts/train.py",
+          "git_blob_sha1": "3a3b87593ccf506d1901307b5b798379351105b5"
+        },
+        {
+          "path": "scripts/train_gp.py",
+          "git_blob_sha1": "3be8863cc4351d95ad338a6820414beb96a956a0"
+        }
+      ]
+    }
+  },
+  {
+    "path": ".external/GraphBAN/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "https://github.com/HamidHadipour/GraphBAN",
+      "revision": "2dded31a46edfb18d685fb1bb361a95e99eaae49",
+      "files": [
+        {
+          "path": "GraphBAN_DEMO.ipynb",
+          "git_blob_sha1": "594a0ce858902ffe84baeaff18cbcf831bc4e94d"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "56b2fc009b623a0e8dfd98cb454d90ae4e04b325"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "297d1da8f93d26c8d3560a3b242dd8af27c63236"
+        },
+        {
+          "path": "case_study/BindingDB_predict.py",
+          "git_blob_sha1": "775ef739404103e1583d7c3b39eaae79240cca88"
+        },
+        {
+          "path": "case_study/BindingDB_run.py",
+          "git_blob_sha1": "2dea3ac9af9e2bf6c708595a49d07620d7f73849"
+        },
+        {
+          "path": "case_study/BioSNAP_predict.py",
+          "git_blob_sha1": "e7d0fd01d15b155e8a4b2d60b4ca4189bf180f3c"
+        },
+        {
+          "path": "case_study/BioSNAP_run.py",
+          "git_blob_sha1": "afb76306218cab180dbd78677529f9340dd0e836"
+        },
+        {
+          "path": "case_study/GraphBAN_DA.yaml",
+          "git_blob_sha1": "88f5d23ee00265abab262f6b6d5a4d6be127737a"
+        },
+        {
+          "path": "case_study/KIBA_predict.py",
+          "git_blob_sha1": "3b9f1617cc509a029d5015ee42c8b611cb83a094"
+        },
+        {
+          "path": "case_study/KIBA_run.py",
+          "git_blob_sha1": "ab7daf0f7b1ee10ffa1a24aa65f7f3122aaf5af5"
+        },
+        {
+          "path": "case_study/README.md",
+          "git_blob_sha1": "31d6305aae6f8b53bf7418eef7037daad88b4fb6"
+        },
+        {
+          "path": "case_study/ban.py",
+          "git_blob_sha1": "ba983bb087454e2c80915311a66f44d8be24b196"
+        },
+        {
+          "path": "case_study/configs.py",
+          "git_blob_sha1": "24cd422c41076dc5e253c3f039deaeb0aeedbfc7"
+        },
+        {
+          "path": "case_study/dataloader.py",
+          "git_blob_sha1": "5bebb756e1a1206c1a22b92c61da78100c66d918"
+        },
+        {
+          "path": "case_study/domain_adaptator.py",
+          "git_blob_sha1": "85b69af698d8de40124c923523eda4320f8efd2f"
+        },
+        {
+          "path": "case_study/models.py",
+          "git_blob_sha1": "497bc003eb998722610a4a2fc1d07bf44847e9f6"
+        },
+        {
+          "path": "case_study/predict.py",
+          "git_blob_sha1": "e46089c065d76ed18a6b14fc9fdafcd42f82ff15"
+        },
+        {
+          "path": "case_study/run_model.py",
+          "git_blob_sha1": "322db63313affe5b3e3a90140c1af03803685712"
+        },
+        {
+          "path": "case_study/trainer.py",
+          "git_blob_sha1": "32fe1a6bb615f378edbf803f96c7a72371153fe0"
+        },
+        {
+          "path": "case_study/trainer_pred.py",
+          "git_blob_sha1": "416cba8b2897bb36bb952a2e15d100977ba73a1a"
+        },
+        {
+          "path": "case_study/utils.py",
+          "git_blob_sha1": "4a83ea8f5f71ef8117fb9ce9302b370a6d663ea4"
+        },
+        {
+          "path": "data_distribution/README.md",
+          "git_blob_sha1": "61457b4496d564a1ac76f13e8e5717aff13da752"
+        },
+        {
+          "path": "data_distribution/RF_extractFeatures.py",
+          "git_blob_sha1": "f81bd7f54261e9cc07370b66ceda74215289c499"
+        },
+        {
+          "path": "data_distribution/plot_tsnes.py",
+          "git_blob_sha1": "4797e8bf4048b355b43b8bf2efb17454fb7a23f7"
+        },
+        {
+          "path": "inductive_mode/GraphBAN.yaml",
+          "git_blob_sha1": "b1a813ed647da585ffc80a5916eea680fc3e95e0"
+        },
+        {
+          "path": "inductive_mode/GraphBAN_DA.yaml",
+          "git_blob_sha1": "8f9ed0d981826c2333d6997a8515b5ede6978c93"
+        },
+        {
+          "path": "inductive_mode/ban.py",
+          "git_blob_sha1": "ba983bb087454e2c80915311a66f44d8be24b196"
+        },
+        {
+          "path": "inductive_mode/configs.py",
+          "git_blob_sha1": "6e19642d6f3eebb7ffdf29fbc01aefe9e5e4e4de"
+        },
+        {
+          "path": "inductive_mode/dataloader.py",
+          "git_blob_sha1": "a770c3e6ed346c57f7feded994bc77d8e830a053"
+        },
+        {
+          "path": "inductive_mode/domain_adaptator.py",
+          "git_blob_sha1": "85b69af698d8de40124c923523eda4320f8efd2f"
+        },
+        {
+          "path": "inductive_mode/models.py",
+          "git_blob_sha1": "ffcd2ade17cfa9ccb0dea94da34c0283829689d3"
+        },
+        {
+          "path": "inductive_mode/predict.py",
+          "git_blob_sha1": "76508b1cf17ec084f563108facc91067723d0fd2"
+        },
+        {
+          "path": "inductive_mode/run_model.py",
+          "git_blob_sha1": "e1ce7fb33da74989d77d4bee08d8a778dedee4f0"
+        },
+        {
+          "path": "inductive_mode/teacher_gae.py",
+          "git_blob_sha1": "a6d2e382617291b6c494eb98797a352bc16550ff"
+        },
+        {
+          "path": "inductive_mode/trainer.py",
+          "git_blob_sha1": "e492f367111ee3d00dfd9681399467ae5e09a786"
+        },
+        {
+          "path": "inductive_mode/trainer_pred.py",
+          "git_blob_sha1": "782319abc2a8df4b70cad8c925c2de96fac9e835"
+        },
+        {
+          "path": "inductive_mode/utils.py",
+          "git_blob_sha1": "f16ab1d0080c6e9e6908367a2f882a49f778c3fb"
+        },
+        {
+          "path": "preprocessing/clustering/inductive_split.py",
+          "git_blob_sha1": "48fd9514330da8b72d32d504e2e44c77fe7401ec"
+        },
+        {
+          "path": "preprocessing/clustering/transductive_split.py",
+          "git_blob_sha1": "4cf69332d3d5cf6705d5af13bbf274181897963a"
+        },
+        {
+          "path": "preprocessing/just_extractFeatures.py",
+          "git_blob_sha1": "6c164e5e2a344889714982ac4a8cd1ab6ac73e29"
+        },
+        {
+          "path": "requirements.txt",
+          "git_blob_sha1": "3239fdc428213e9721bd053ba6789974243bfb21"
+        },
+        {
+          "path": "transductive_mode/predict_transductive.py",
+          "git_blob_sha1": "c8397bb11a6841562ab89bc3b5704cc57e1b0a97"
+        },
+        {
+          "path": "transductive_mode/train_transductive_mode.py",
+          "git_blob_sha1": "b9d2e4a80de0ed40b9dd2f3387da0e1761a2746f"
+        }
+      ]
+    }
+  },
+  {
+    "path": ".external/CheMLT-F/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "https://github.com/vmun/CheMLT-F",
+      "revision": "daf73cb6cd211646c856b110e22354a2e8cd2d95",
+      "files": [
+        {
+          "path": "Additional_experiments/BALM_tune/.ipynb_checkpoints/finetune_and_evaluate-checkpoint.py",
+          "git_blob_sha1": "091831701b140ddb1beb692858711a366cab31af"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "effb43f41694e0a9640c63b07c8a177a798b3948"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "05cd1402ba632974a08e19fa77b2eec3be96e7e9"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "6185777e864e80a95cd777b57fdc428cf9ae47b2"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "eec8c9a11d74f703bb9499605c824d46b5ce6d50"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "d000b8a8a43aa93d45caef45c58a13ef8feb2495"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "dbbd34dab61bc0e91f66549853c0e700275690ec"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "f268b1d97e89ffffca381c631860accf5f528514"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "d0e52a2cb49372ede9ed880740adb4cd97f0d80c"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_drug/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "a6774af1889304a22013d5df7f87b561f5cd1dde"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "92f4a0ee1a50cd8bf6e56b89ce45ff9ff98ba147"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "92e4db5662b6bc4c52a8f6050a3840be9612bb21"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "809ca28d42755fb3335426364abeb45eb46c1839"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "cacdb987d2ae049c086d64874f6f25ce91ef2de1"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "488e05529d32501c2af1ddc4b70248b52699286f"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "c453e8a0ab1fec26d0f769b91d4d4c95b0ae3418"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "b3d8e54196352cb610295e8f4da2bb31828202ee"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "9fd589a8f1197f817c9afa6d67062a1d44fb5952"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_cold_target/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "00952e59ad925852e1718f82c04ae001fdce6dba"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "3c7a657a83366cd3d44d35a716257d1adeaf70e1"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "6eb499a28b9734ef1fefc6f66b108598788d20c7"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "ccb2746474a06bcbe7439fb618e3cf17f9b18116"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "d23c2a901ebf39879f3ad0f7bf1dd5cef9d2fc3c"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "fba3d49279de5779352caacbc45b7cde1672c87e"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "56d00bcf1abdf74a4a4080df9a3b2dcf8f9c1327"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "06f5acd664f6ebc4af9110e172cafaffcbbaeb47"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "7359fedfe1db4fefcdaddc3d89b8804b7450fe7e"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_random/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "47a1ed2c97dbf9eb1f831ac983121d7eb795369d"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "fb1b251ef9cd57c214168c1ea65bca0d0c28656b"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "0e2b0e263958f3bc85cbf025ea03c22c8a1e1cee"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "2821df94d22b879c32474e15b599bfdef4b617ed"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "be50da6d6b005cde8855bcc8283355c9ef4401f5"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "81ff0c5ded624ef738dfed2ed6b17e4a890933f7"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "5bdd1bf949cbe121e781ea218a6dabfaa6bf75ea"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "9ee3f6c807f5237542070296348b50982d2e2a05"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "facc8acbcc0cfb45973db776856bb118dcafa183"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/bindingdb_scaffold/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "d9097a667fca8bf5855601bd6967449f63361651"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/davis/esm_lokr_chemberta_loha_cosinemse.yaml",
+          "git_blob_sha1": "f89701d88dfa78535c8381256af8559197fab94a"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "25f7e5c94bdfd361745d15bf9bbfdee948e46eb6"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "b25c8ca65c0af6fca3d0c8d0465d0a2a6b50cff2"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "1feb9f89076fde1a2a2af6a65748175894d9ab97"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "bd61603133de1411e8216536152a4412f550850b"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "2c1de7960954326cb2a87d3599393d8492676bf6"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/hif2a/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "3a19b6976d5ac5904a705de2969c2c3600e71d51"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/kiba/esm_lokr_chemberta_loha_cosinemse.yaml",
+          "git_blob_sha1": "fdcdc709691c007cb7505e2f95085c58e1f3023e"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_chemberta_baseline_1.yaml",
+          "git_blob_sha1": "9083d3273ef8e2ff4a14365965db8eae155882db"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_chemberta_baseline_2.yaml",
+          "git_blob_sha1": "eeb4bd847fc1417acab81190db6493a21e68e1a2"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_chemberta_baseline_3.yaml",
+          "git_blob_sha1": "83f3a0c3b4fdd80bafb3a0a3f0004904b1d4d3b6"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_chemberta_proj_tuning_cosinemse_1.yaml",
+          "git_blob_sha1": "f8ad7571b04cd60f588662e01d0ef789fd64acf0"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_chemberta_proj_tuning_cosinemse_2.yaml",
+          "git_blob_sha1": "5816ab0092c1a2f29ef2dcde8d057247d52da5f6"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_chemberta_proj_tuning_cosinemse_3.yaml",
+          "git_blob_sha1": "20dfd19977ec78eb02912a227bf71f2f3173d316"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_lokr_chemberta_loha_cosinemse_1.yaml",
+          "git_blob_sha1": "cf5fd4c399576d18016f7fde895c77d7c0f92dcb"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_lokr_chemberta_loha_cosinemse_2.yaml",
+          "git_blob_sha1": "eee7d1c653a83646d1a9ebc8ae67ebd7152c87be"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/leakypdb/esm_lokr_chemberta_loha_cosinemse_3.yaml",
+          "git_blob_sha1": "5742572b78926d0208ac73832d0a329dc57510a2"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "78850ac42a573c98f6f46d6898860f4c5c1ffbd8"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "ffe0bfad67dbb833bf55233eb26aeb7ab5f0a899"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "a3df157ee6dae1465d5118821f49fc96cbb617dd"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "63266366ec4e21cc5dcbd23ed64c341286917c4f"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "43db3834a46a27e041302baba69b0a674bea63d6"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mcl1/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "150c082a7ef27a54d1b366c18bfae3e1b54bfa53"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "cf3e90e65bf62d52e6670910b293af2303537e26"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "68418ac1b65f88a555dd7ead8762382ceb5ce6be"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "4316f48526ca936b8dccfde182a827aa4cc0f51c"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train10_1.yaml",
+          "git_blob_sha1": "dcdfa18f4cb30b9514a39a2159ed25ef2b9584fd"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train10_2.yaml",
+          "git_blob_sha1": "10766dc6c4c9a8edaf6af12b51bd2082595bbd30"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train10_3.yaml",
+          "git_blob_sha1": "02bbbeda9a73ab4821c58ab1ca9e3fc0b4a97195"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "d04cb57b43f610cb6f121929b4b1a4223489b51b"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "a8e0eb009e7cd924d546cc01755340ef0373614e"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "f4ac767787eab1d92c2c14aa5225fb5bffa9e7d3"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train30_1.yaml",
+          "git_blob_sha1": "f56f0d53a2371e7270cd7a521d5987e9eb72e864"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train30_2.yaml",
+          "git_blob_sha1": "ed0fbb52fe277a028964e09afad77fb21f3e236a"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/mpro/esm_lokr_chemberta_loha_cosinemse_train30_3.yaml",
+          "git_blob_sha1": "cfee83c5ff7987c94a57eecb88ce5f8214c87e99"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/syk/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "647319f1c4198b16f385b36b0dfa90747cf2fa29"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/syk/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "8783731481e8c044413331ca85d8c49b3f39c1eb"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/syk/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "7de08f8ce2aecc152cc4fc67c424a7b7b1b4fc76"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/syk/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "01dcd97b2eed29aa4bf64033afaeeeeaae9bc0be"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/syk/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "7aefd7bf6369f9feac4c31c59a4400d39d149ff7"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/syk/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "932cb11ca209d07604ce9dd117c0faf8f1c5ec9b"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train0_1.yaml",
+          "git_blob_sha1": "c6871ce0514ebfcddd96b73325db06816a019740"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train0_2.yaml",
+          "git_blob_sha1": "65173e8c8c3499a5a758dae21fb4e12cd6564397"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train0_3.yaml",
+          "git_blob_sha1": "fa6051a75029ce5d1c44ddf56e918269e7ef182f"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train10_1.yaml",
+          "git_blob_sha1": "a3c393443dbd0e9c83f701c408776e9df4380b51"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train10_2.yaml",
+          "git_blob_sha1": "c926c40efbd1aa5b2d5b91b5a394c63ddcc3c7f4"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train10_3.yaml",
+          "git_blob_sha1": "8a3fc45108eb79748f2b07fadd716b1af0d00109"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train20_1.yaml",
+          "git_blob_sha1": "f1975cc0a18105d0023468585232fce6b15797f4"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train20_2.yaml",
+          "git_blob_sha1": "58dbb228941f58c349e81a1cef23d02c40bf1531"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train20_3.yaml",
+          "git_blob_sha1": "11fb843d93354ce9208cd894e56a500c7c6ae53a"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train30_1.yaml",
+          "git_blob_sha1": "c3889fd8a91291c6f090d880a66b5cd7f689d7fe"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train30_2.yaml",
+          "git_blob_sha1": "ee9a7c4210158fc904cbca6a100c2c9edfed47a3"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/configs/usp7/esm_lokr_chemberta_loha_cosinemse_train30_3.yaml",
+          "git_blob_sha1": "a42bdbf23d244c1a11bdbfbd9ae18e9301b77603"
+        },
+        {
+          "path": "Additional_experiments/BALM_tune/finetune_and_evaluate.py",
+          "git_blob_sha1": "091831701b140ddb1beb692858711a366cab31af"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob_sha1": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+        },
+        {
+          "path": "Pre-Training/ProteinModelDeb/Pre-Training.ipynb",
+          "git_blob_sha1": "602eb998532eb19d47070c2337980e3e7d854cb4"
+        },
+        {
+          "path": "Pre-Training/Protein_Prepare.ipynb",
+          "git_blob_sha1": "79b368d305dbe928515f1371348fd2b6c221ab47"
+        },
+        {
+          "path": "Pre-Training/Pubchem-ExtraSplit.ipynb",
+          "git_blob_sha1": "d3060ac39b69444d4fe192cdf1552de59a1c41e7"
+        },
+        {
+          "path": "Pre-Training/PubchemModelDeberta/.ipynb_checkpoints/Pre-Training-checkpoint.ipynb",
+          "git_blob_sha1": "1a6c17025331ffc4a3b67064e79506555d8d296d"
+        },
+        {
+          "path": "Pre-Training/PubchemModelDeberta/Pre-Training.ipynb",
+          "git_blob_sha1": "1a6c17025331ffc4a3b67064e79506555d8d296d"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/AbsoluteMMATPrepare-checkpoint.ipynb",
+          "git_blob_sha1": "6bb4cf047d552e1135f61c20ba2acc2e6223cfe1"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/GPU_MLT-checkpoint.ipynb",
+          "git_blob_sha1": "e54a06f694cab57d2740e5833f41cb61d1b695af"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/GPU_SLT-checkpoint.ipynb",
+          "git_blob_sha1": "43b1ca04e093553089ddf863f4c1c1a4d5a2951a"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/Head_Tune_SLT-checkpoint.ipynb",
+          "git_blob_sha1": "0c128a4b01124d48e93f66fa8348c686c34cd0ea"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/MMAT-Prepare-checkpoint.ipynb",
+          "git_blob_sha1": "d0252f4c9034dbadb4220c67a1b4b26417b63ae7"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/Stratified_CheMLT-F_december-checkpoint.ipynb",
+          "git_blob_sha1": "7e1f1b6ac0994bdf3eea1aabf6f4cdedd147f818"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/convert_uniprot_to_sequence-checkpoint.py",
+          "git_blob_sha1": "e198b6957ab192133e9a1470494e64c43d612ca9"
+        },
+        {
+          "path": "Protein_superfamily/.ipynb_checkpoints/train_single_task-checkpoint.py",
+          "git_blob_sha1": "6a40ee8244f80f7221ddbafce6a6c7425018f0b2"
+        },
+        {
+          "path": "Protein_superfamily/GPU_MLT.ipynb",
+          "git_blob_sha1": "e54a06f694cab57d2740e5833f41cb61d1b695af"
+        },
+        {
+          "path": "Protein_superfamily/GPU_SLT.ipynb",
+          "git_blob_sha1": "43b1ca04e093553089ddf863f4c1c1a4d5a2951a"
+        },
+        {
+          "path": "Protein_superfamily/Head_Tune_SLT.ipynb",
+          "git_blob_sha1": "0c128a4b01124d48e93f66fa8348c686c34cd0ea"
+        },
+        {
+          "path": "Protein_superfamily/MMAT-Prepare.ipynb",
+          "git_blob_sha1": "d0252f4c9034dbadb4220c67a1b4b26417b63ae7"
+        },
+        {
+          "path": "Protein_superfamily/convert_uniprot_to_sequence.py",
+          "git_blob_sha1": "e198b6957ab192133e9a1470494e64c43d612ca9"
+        },
+        {
+          "path": "Protein_superfamily/train_single_task.py",
+          "git_blob_sha1": "6a40ee8244f80f7221ddbafce6a6c7425018f0b2"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha1": "541125d75e73ce9548193826d35227cf114a555f"
+        },
+        {
+          "path": "environment.yml",
+          "git_blob_sha1": "0c6526b1ad607a638229eedbef7646eba36dac10"
+        },
+        {
+          "path": "requirements.txt",
+          "git_blob_sha1": "99bd38d2ed6b804fa29ea468b6d4f106868a2d52"
+        }
+      ]
+    }
+  },
+  {
+    "path": ".external/ADME-DTI/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "https://github.com/tariqshaban/adme-dti",
+      "revision": "0ffc3393f93ee2f8efc68108aafd33f6c17d6b7d",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha1": "d8d88633ee49ed16c0aad9beea9a7a0faea6a2ce"
+        },
+        {
+          "path": "config/config.py",
+          "git_blob_sha1": "082a06aa14b71f56137897f302a3b81699da561b"
+        },
+        {
+          "path": "entry_inference.py",
+          "git_blob_sha1": "b9492212b88e614f762ee6698abfed52dc22f54d"
+        },
+        {
+          "path": "entry_train.py",
+          "git_blob_sha1": "8d09731a00ecd080b5bfda3c492606d4ce779f13"
+        },
+        {
+          "path": "requirements.txt",
+          "git_blob_sha1": "f73a36f87a328893f20133f2b400c12666140f62"
+        },
+        {
+          "path": "src/dti_dataset.py",
+          "git_blob_sha1": "9a66a5e0146679006c6d948ced5d6a825b682c6b"
+        },
+        {
+          "path": "src/dti_dataset_combined.py",
+          "git_blob_sha1": "42a66b9b02fd1d340e8cf434e298ca784e666f2e"
+        },
+        {
+          "path": "src/dti_model.py",
+          "git_blob_sha1": "b486ce278ea100ef63f6b42428f6cee3aaaaf2db"
+        },
+        {
+          "path": "src/dti_model_combined.py",
+          "git_blob_sha1": "43cd3b4b7417257d6c6a9ec6be2250b2f360c906"
+        },
+        {
+          "path": "src/evaluate.py",
+          "git_blob_sha1": "761e333d27d1e29e95e351f6aa8a60d3bcbe8ed4"
+        },
+        {
+          "path": "src/metadata.py",
+          "git_blob_sha1": "f4d26f7ba46287f8af2a16aa2f271b9847940930"
+        },
+        {
+          "path": "src/predict.py",
+          "git_blob_sha1": "7a1d3bc27acd49c37fa33dacb4f73be20290ac83"
+        },
+        {
+          "path": "src/test.py",
+          "git_blob_sha1": "8d41ef5015accf577e7ded4b3c4a344babe8ae9a"
+        },
+        {
+          "path": "src/train.py",
+          "git_blob_sha1": "1a8af6d35e5d9c050150b614639129ae14255d5f"
+        },
+        {
+          "path": "train_all.py",
+          "git_blob_sha1": "3880f95222c4d13fcccb731ca6443df81f1fd1ad"
+        },
+        {
+          "path": "utils/eda.py",
+          "git_blob_sha1": "59ee2844f5f494909c4c0857be1220a62d3a6f91"
+        },
+        {
+          "path": "utils/embedding/extractor/drug_extractor.py",
+          "git_blob_sha1": "bd0c3671b93cc4159de70c010e04591d065ebe7f"
+        },
+        {
+          "path": "utils/embedding/extractor/target_extractor.py",
+          "git_blob_sha1": "d3dcc59c1c362a9883f581bf0c84ab886159de8c"
+        },
+        {
+          "path": "utils/embedding/loader/drug_loader.py",
+          "git_blob_sha1": "585acd29ab242a64b70b74efe6efd30e85884d11"
+        },
+        {
+          "path": "utils/embedding/loader/target_loader.py",
+          "git_blob_sha1": "547f966190d0c962d7c126db8259e12050b1f18d"
+        },
+        {
+          "path": "utils/results_plotter.py",
+          "git_blob_sha1": "7b50e93fa72cafacb9485720337c8e5908b55bd4"
+        },
+        {
+          "path": "utils/terminal_command_runner.py",
+          "git_blob_sha1": "2d1d6c61a87c7844ba5b5e4dd95572764f2d2eee"
+        }
+      ]
+    }
+  },
+  {
+    "path": ".external/Molecular-graph-BERT/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "zhang-xuan1314/Molecular-graph-BERT",
+      "revision": "cf801e1875dfeef77a90247d505687f0c292761a",
+      "files": [
+        {
+          "file": "model.py",
+          "sha256": "2c294bea0567d0a912a3916dc7da38adb3620b107857c0aef3e6b5ba35fc66ef"
+        },
+        {
+          "file": "dataset.py",
+          "sha256": "912cc28ea0b60b096fc0ca244b71c4ac5648b409934a7ea6282e320cbfd2fd2c"
+        },
+        {
+          "file": "utils.py",
+          "sha256": "7e13b2728f547b1309fbfa73809ed22ddc9356cb7565fcbd6ef247bc6036258c"
+        },
+        {
+          "file": "README.md",
+          "sha256": "9b9a192ce754bdc3dcbd0056914ffe59604108989ac07eaab36a4f45b4a49d3c"
+        }
+      ]
+    }
+  },
+  {
+    "path": ".external/PaddleHelix/SOURCE_PROVENANCE.json",
+    "provenance": {
+      "repo": "PaddlePaddle/PaddleHelix",
+      "revision": "8e3991ab1209134b148b05d44e784a43eaa4484d",
+      "path": "pahelix/utils/compound_constants.py",
+      "sha256": "44d564a4d9b8b8cfd49e222ddb825d3447d905338ae885362883724cb782bc36"
+    }
+  },
+  {
+    "path": ".external/CheMLT-F/Training/Scaffold_CheMLT-F.ipynb",
+    "sha256": "e4d4359413a9cdfc94b30b0ddd647288b4412ce0e17b663febc9ebfc325e27ff",
+    "repo": "https://github.com/vmun/CheMLT-F",
+    "revision": "daf73cb6cd211646c856b110e22354a2e8cd2d95"
+  },
+  {
+    "path": ".external/CheMLT-F/Training/Stratified_CheMLT-F.ipynb",
+    "sha256": "ce0fd2d7b33ae0b18182627fec300bd6c757c5f0a94b5aea75575d4edf468453",
+    "repo": "https://github.com/vmun/CheMLT-F",
+    "revision": "daf73cb6cd211646c856b110e22354a2e8cd2d95"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "model": "ConPLex",
+  "drug_input_sha256": "50454d7742cd6710cdbbc81a5ead6a31c3aabb243d3713455a5e943ced38a848",
+  "target_input_sha256": "26562c6eae103203685f2abdd17eb25ca2ad148442328db57ae80084f295db9a",
+  "new_training": false,
+  "native_higher_is_better": true,
+  "checkpoint": "third_party/ConPLex/models/BindingDB_ExperimentalValidModel.pt",
+  "checkpoint_sha256": "c28f0e64907e2cec786f2fdefd0ee75ac991b971671a49f896611dc192e6d39c",
+  "source": "third_party/ConPLex/conplex_dti/cli/predict.py",
+  "adapter_sha256": "f34fdc14453f7d18f1ad900a5da4516e1c5bcd8681e1698efdebfea66f79d731",
+  "head": "official cosine of ReLU coembeddings",
+  "precision": "float32_cpu",
+  "preprocessing": "Native Morgan radius2 2048 + exact sequence cached ProtBert residue mean, first1022 residues",
+  "target_features_sha256": "4622ff1ccbf84a94ef8ab7a198ccd8b4a3962a6b4ad8ae1c935226889f57e29a",
+  "scores_are_binding_probability": false
+}
