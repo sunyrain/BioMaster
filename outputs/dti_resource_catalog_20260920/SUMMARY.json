@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-20T17:17:24.421727+00:00",
+  "created_utc": "2026-09-21T04:34:34.082221+00:00",
   "architecture_rows": 24,
   "data_resource_rows": 48,
   "weight_rows": 117,
@@ -14,10 +14,10 @@
     "outputs/dti_research_preparation_20260920/DATASET_COUNTS.csv": "825bcbae751cbe96f659eb10cd2a468393a5682d161e0a0196c308e774ad014c",
     "outputs/dti_research_preparation_20260920/FEATURE_REGISTRY.json": "c93f5351e9edb8dd472d33d039747a0f2a4acf3acec7b151c44be97e93461ba4",
     "configs/dti_reliability_20260920/PROTOCOL.json": "8a724fe48946ff7fa450316b2c4d1de59c69626abaa935d9a291c4be2286c12b",
-    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "40aa1ff42dac4bdf1719f5f8b572d77d3851a2a9480c98ab9164a5e4de7c03a2",
+    "configs/dti_reliability_20260920/ACTIVE_PROTOCOL.json": "047eaa3da5e6bd540aaf99db286fc218161786808823bdf6594bb10a2554d78d",
     "configs/dti_reliability_A_20260920_v2/PROTOCOL.json": "ae368bf6d3ce9b3ee9a77186712a76ccc2c84fd732f9e11a63a37793606611d5",
     "configs/dti_official_weights_20260920/PROTOCOL_v3.json": "d4e7c77db7ee9ffd920d2ca6d6670bcc4f9b5d53ddc1a4570830bb00d9e38a5e",
-    "configs/dti_ranking_scope_20260921/PROTOCOL.json": "d936b6b8da2e9ca0621204d79ae07b35409d75b396085bed2ba92838e90cfdee"
+    "configs/dti_ranking_scope_20260921/PROTOCOL_v4.json": "0d362833c33a8b7b048337afd88cb96f59ab43bc7011582f9cbdddc39a4b60e0"
   },
   "outputs": {
     "outputs/dti_resource_catalog_20260920/ARCHITECTURE_LIST.csv": "2b07188ff80d5de03e980dd08887f2b74ce10d6a792e7649b1ac50625181f869",

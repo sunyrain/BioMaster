@@ -69,7 +69,8 @@ def main():
             np.testing.assert_allclose(spearmanr(scores.iloc[:,0],scores.iloc[:,1]).statistic, row.spearman, atol=1e-12)
     result = dict(status='PASS', checked_utc=datetime.now(timezone.utc).isoformat(),
         frozen_v1_files_unchanged=len(frozen['files']), previous_A_protocol_and_runs_unchanged=True,
-        active_hashes_match=True, full_score_rows=len(snapshot), primary_matrix_pairs=len(pairs),
+        active_hashes_match=True, full_score_rows=len(snapshot), legacy_96_matrix_pairs=len(pairs),
+        validation_scope='Frozen96/384 score artifacts only; current745 input validation is in outputs/dti_ranking_720x745_20260921/VALIDATION.json.',
         independent_rank_checks=len(sampled), finite_observed_scores=True,
         scope_and_analysis_manifests_match=True, score_independent_scope=True, no_truth_labels=True,
         davis_evaluation_used=False, official_weight_download_audited_separately=True,

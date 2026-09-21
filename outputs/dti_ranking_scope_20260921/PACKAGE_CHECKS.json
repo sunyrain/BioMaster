@@ -1,11 +1,10 @@
 {
   "status": "PASS",
-  "checked_utc": "2026-09-20T17:20:33.753347+00:00",
+  "checked_utc": "2026-09-21T04:35:31.969581+00:00",
   "frozen_v1_files_unchanged": 62,
   "previous_A_protocol_and_runs_unchanged": true,
   "active_hashes_match": true,
   "full_score_rows": 276480,
-  "primary_matrix_pairs": 69120,
   "independent_rank_checks": 24,
   "finite_observed_scores": true,
   "scope_and_analysis_manifests_match": true,
@@ -13,5 +12,7 @@
   "no_truth_labels": true,
   "davis_evaluation_used": false,
   "official_weight_download_audited_separately": true,
-  "producer_sha256": "eb278fb16bd8907a6ac29ab866d17b4cd01f0dca688da51eb27065bd2f6a3547"
+  "producer_sha256": "1a1c7f6d310cd62277ed877c4356fb82eb1d30638bed977b3f21710a0133306b",
+  "legacy_96_matrix_pairs": 69120,
+  "validation_scope": "Frozen96/384 score artifacts only; current745 input validation is in outputs/dti_ranking_720x745_20260921/VALIDATION.json."
 }

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "requested_pairs": 536400,
+  "drugs": 720,
+  "targets": 745,
+  "source_rule_checks": {
+    "sql888_exact_sequences": true,
+    "sql_gpcr_classification": true,
+    "gpcr_sources_agree": true,
+    "745_frozen_members_identical": true,
+    "legacy384_funnel_reproduced": true,
+    "drug_inchikeys_match": true,
+    "no_scores_or_binding_labels_used_for_target_selection": true,
+    "legacy_prediction_identities_exact": true,
+    "unique_complete_request_matrix": true
+  },
+  "exact_legacy_scores_unchanged": true,
+  "new_target_scores_are_missing_not_zero": true,
+  "both_directions_complete_requests": true,
+  "all_artifact_hashes_match": true,
+  "active_protocol_hash_matches": true
+}

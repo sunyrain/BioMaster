@@ -1,0 +1,78 @@
+{
+  "protocol_id": "dti_bidirectional_rank_agreement_20260921_v4_720x745",
+  "status": "USER_CONFIRMED_PHASE1_RANK_AGREEMENT_ONLY_RETROSPECTIVE",
+  "user_direction": "Use the pre-existing700-plus cohort filtered from888, with explicit provenance; both screening directions. Exact audited cohort is745 non-GPCR targets.",
+  "primary_question": "How strongly do publicly available DTI systems agree in their drug-for-target and target-for-drug rankings on fixed candidate matrices?",
+  "model_membership_protocol": "configs/dti_official_weights_20260920/PROTOCOL_v3.json",
+  "exclusions": [
+    "ReTargetMap",
+    "Davis in active study",
+    "experimental correctness judgments",
+    "model accuracy winner",
+    "clinical efficacy claims"
+  ],
+  "matrix": {
+    "primary": "720 fixed project molecular structures x745 ChEMBL37 human non-GPCR single-protein MoA targets =536400 pairs",
+    "primary_file": "data/research/dti_ranking_scope_20260921_v4/PRIMARY_720X745_PAIRS.parquet",
+    "source_universe": "ChEMBL37 human SINGLE PROTEIN with at least one drug_mechanism record, any molecular modality:888 targets.",
+    "primary_target_file": "outputs/dti_ranking_720x745_20260921/TARGETS_745.csv",
+    "exclusion": "GPCR per ChEMBL classification OR Open Targets26.06 GPCR flag:143 excluded from primary, retained in audit. Two sources agree on all888 in this frozen release.",
+    "no_other_target_gate": [
+      "No small-molecule MoA requirement",
+      "No structure/pocket requirement",
+      "No historical activity-label count requirement",
+      "No model coverage, rank or SPR selection requirement"
+    ],
+    "both_directions": {
+      "target_to_drug_queries": 745,
+      "target_to_drug_candidates": 720,
+      "drug_to_target_queries": 720,
+      "drug_to_target_candidates": 745
+    },
+    "supplementary": "The old384-target historical scoring core and its96-target metadata-balanced slice remain descriptive supplements only; neither defines primary membership.",
+    "scope_limit": "Mechanism-annotated human non-GPCR catalogue; not whole human proteome or all druggable proteins. GPCR exclusion is a chosen scope, not a biological impossibility claim.",
+    "drug_identity": "Preserve720 full InChIKeys and exact SMILES from the existing catalogue. Source chain and current identity verification recorded. No new FDA-status audit.",
+    "no_known_pair_filter_in_primary": true
+  },
+  "phase1_analyses": [
+    "Per-query Spearman and Kendall tau-b, reported separately in both directions.",
+    "Tie-aware Top5/10/20 overlap and random-set references with candidate counts.",
+    "All-current-model common coverage primary view and pairwise common coverage sensitivity; expose denominators and missingness.",
+    "Rank association by target family and input/truncation status; descriptive association, not architectural causality.",
+    "Direction asymmetry, broad versus near-family rankings and model relationship clusters where matched coverage supports them.",
+    "Nested candidate-pool sensitivity; distinguish normal TopK competition from changes in pair scores or pairwise order."
+  ],
+  "phase1_query_gate": "At least20 jointly scored candidates, irrespective of labels. Report excluded queries and constant-score undefined correlations.",
+  "native_score_contract": "Use prespecified native head/direction; do not compare raw units or call all models Kd regressors.",
+  "ties": "Average ranks; Kendall tau-b; fractional membership at TopK boundary; constant-score ties do not establish meaningful concordance.",
+  "random_reference": "For two independent untied K-subsets from the sameN candidates, expected overlap is K^2/N. Shuffle scores/ranks within queries for correlation nulls when testing, with dependence-aware query uncertainty.",
+  "interpretation": [
+    "Low rank agreement is a descriptive finding, not proof either model is wrong.",
+    "High rank agreement does not prove experimental correctness.",
+    "Pairwise subsets with different denominators do not define a transitive performance ranking.",
+    "For pairwise independent deterministic scorers, enlarging the candidate set can change ranks and TopK while preserving the relative order of shared candidates; do not mislabel this as model instability."
+  ],
+  "phase2_deferred": [
+    "Measured-label AP/P@K and false-positive analysis",
+    "Checkpoint-specific supervised exposure audit for generalization claims",
+    "Wetlab correctness and utility",
+    "A controlled45-fit architecture/objective explanation"
+  ],
+  "training": {
+    "new_phase1_fits": 0,
+    "new_B_fits": 0,
+    "previous_A_plan": "Preserved, not activated in phase1."
+  },
+  "historical_preparation": "Initial Davis/measured-label preparation retained under phase2_not_active for provenance; not read by active phase1 builder or analysis.",
+  "prepared_members": "outputs/dti_ranking_720x745_20260921/MANIFEST.json",
+  "supersedes": "configs/dti_ranking_scope_20260921/PROTOCOL.json",
+  "screening_exports": {
+    "target_to_drug": "Rank up to720 fixed molecular structures per target.",
+    "drug_to_target": "Rank up to745 fixed targets per molecule.",
+    "coverage": "Report observed candidates and requested candidates per model/query; missing is not zero or negative; a384-only score snapshot is not rank/745.",
+    "comparison": "Calculate correlations and TopK on identical joint candidate sets; publish coverage restrictions and family strata.",
+    "partial_score_reuse": "Reuse exact identity and exact sequence matches, retain source snapshot hashes and native model version; do not infer missing scores.",
+    "ties": "Average ranks, tau-b and fractional TopK; retain all ties at cutoff in screening exports."
+  },
+  "full_proteome_proposal": "Inactive after latest user steering; only metadata queried, no whole-proteome inference launched."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE_HASH_VERIFIED",
+  "updated_utc": "2026-09-20T17:47:48.973324+00:00",
+  "new_files": 570,
+  "reused_files": 44,
+  "new_bytes": 36107416263,
+  "manifest_sha256": "835b68243c61b671cc6ca40f6907277f1b22a9a5690cc24e2c9fbbc9464d9495",
+  "report": "docs/BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md",
+  "native_forward_qualification": false,
+  "new_training_started": false
+}

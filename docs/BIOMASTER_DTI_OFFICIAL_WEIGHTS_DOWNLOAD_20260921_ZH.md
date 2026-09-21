@@ -1,17 +1,17 @@
 # 官方DTI权重收集与校验
 
-工作日期：2026-09-21。当前状态：**DOWNLOADING**。
+工作日期：2026-09-21。当前状态：**COMPLETE_HASH_VERIFIED**。
 
-本轮覆盖12个有明确官方任务包的模型系列。新增文件237/570个已完成校验；复用并重新哈希核验已有44个模型/配置/编码器文件。文件数量包含作者附属文件，不是模型数量。
+本轮覆盖12个有明确官方任务包的模型系列。新增文件570/570个已完成校验；复用并重新哈希核验已有44个模型/配置/编码器文件。文件数量包含作者附属文件，不是模型数量。
 
 DTIAM仍使用已授权的本地A版，它不计入官方任务权重系列。未找到公开下游任务权重的研究储备项保留来源缺口，不用编码器冒充任务模型。
 
 | 模型 | 本地状态 | 文件 | 校验体积GiB |
 |---|---|---:|---:|
-| ADME-DTI | IN_PROGRESS | 202/532 | 1.115 |
+| ADME-DTI | DOWNLOADED_HASH_VERIFIED | 532/532 | 3.649 |
 | BALM | DOWNLOADED_HASH_VERIFIED | 4/4 | 0.579 |
 | CheMLT-F | DOWNLOADED_HASH_VERIFIED | 23/23 | 1.059 |
-| GraphBAN | IN_PROGRESS | 0/3 | 0.000 |
+| GraphBAN | DOWNLOADED_HASH_VERIFIED | 3/3 | 26.631 |
 | MAMMAL | DOWNLOADED_HASH_VERIFIED | 8/8 | 1.709 |
 | ConPLex | EXISTING_HASH_REVERIFIED | 2/2 | 1.580 |
 | DTBind | EXISTING_HASH_REVERIFIED | 3/3 | 0.017 |

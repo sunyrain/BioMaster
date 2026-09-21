@@ -1,10 +1,10 @@
 {
-  "updated_utc": "2026-09-20T17:23:00.849568+00:00",
-  "status": "DOWNLOADING",
+  "updated_utc": "2026-09-20T17:47:48.965940+00:00",
+  "status": "COMPLETE_HASH_VERIFIED",
   "official_model_families": 12,
-  "new_verified_files": 237,
+  "new_verified_files": 570,
   "new_planned_files": 570,
-  "new_verified_bytes": 4791092399,
+  "new_verified_bytes": 36107416263,
   "reused_files": 44,
   "reused_bytes": 12301321641,
   "known_official_task_checkpoint_gaps": [
@@ -19,6 +19,31 @@
   ],
   "gap_note": "Previously surveyed task-checkpoint gaps, not download failures. DTIAM localA is separate.",
   "complete_download_not_native_inference_qualification": true,
-  "graphban_archives": [],
+  "graphban_archives": [
+    {
+      "archive": "KIBA_trained_models.zip",
+      "zip_directory_readable": true,
+      "members": 1401,
+      "pth_checkpoints": 1250,
+      "uncompressed_bytes": 10401283328,
+      "author_md5_matched": true
+    },
+    {
+      "archive": "bindingdb_trained_models.zip",
+      "zip_directory_readable": true,
+      "members": 1403,
+      "pth_checkpoints": 1250,
+      "uncompressed_bytes": 10458776006,
+      "author_md5_matched": true
+    },
+    {
+      "archive": "biosnap_trained_models.zip",
+      "zip_directory_readable": true,
+      "members": 1406,
+      "pth_checkpoints": 1250,
+      "uncompressed_bytes": 10412480862,
+      "author_md5_matched": true
+    }
+  ],
   "manifest_sha256": "835b68243c61b671cc6ca40f6907277f1b22a9a5690cc24e2c9fbbc9464d9495"
 }

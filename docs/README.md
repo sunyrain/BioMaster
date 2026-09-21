@@ -6,9 +6,10 @@
 
 | 内容 | 入口 | 当前状态 |
 |---|---|---|
-| 当前第一阶段 | [双向排序一致性与推荐分歧](BIOMASTER_DTI_RANKING_SCOPE_20260921_ZH.md) | 不使用Davis；720×96固定子矩阵，720×384作敏感性；谁对谁错留到第二阶段 |
-| 第一阶段初步结果 | [六通道双向排序分析](BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md) | 相关性、Top10重合、覆盖及家族汇总已生成；新增模型尚未计入，不评价正确性 |
-| 官方权重收集 | [下载与校验状态](BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md) | 已有权重复用；新增主模型与条件扩展模型统一收集，模型可加载状态单列 |
+| 当前第一阶段 | [双向排序一致性与推荐分歧](BIOMASTER_DTI_RANKING_SCOPE_20260921_ZH.md) | 888按既有GPCR规则得到745；720×745＝536,400对双向主矩阵；384/96仅作补充，不使用Davis |
+| 第一阶段初步结果 | [六通道双向排序分析](BIOMASTER_DTI_RANK_AGREEMENT_PRELIMINARY_20260921_ZH.md) | 旧96/384范围相关性与Top10统计保留原分母；不能视为745全量结果 |
+| 官方权重收集 | [下载与校验状态](BIOMASTER_DTI_OFFICIAL_WEIGHTS_DOWNLOAD_20260921_ZH.md) | 570个新增文件已全部校验，复用44个既有文件；新增模型适配与评分另计 |
+| 745输入与补算 | [来源、实体和矩阵清单](../outputs/dti_ranking_720x745_20260921/MANIFEST.json)、[模型覆盖](../outputs/dti_ranking_720x745_20260921/MODEL_COVERAGE.csv) | 745条序列齐全；复用身份完全匹配的旧分数，新增361靶点未冒充已算完 |
 | 架构、数据、权重 | [资源总表](BIOMASTER_DTI_ARCHITECTURE_DATA_WEIGHTS_20260920_ZH.md) | 保留A/B及官方资产；资产存在不等于完成独立验证 |
 | 后续受控训练 | [A主线重训方案](BIOMASTER_DTI_A_ONLY_RETRAIN_PLAN_20260920_ZH.md) | 保留A训练337,570、验证41,806、测试39,507对和45项计划；当前第一阶段不启动训练；新增B为0 |
 | 现成模型比较 | [用户价值与公平比较](BIOMASTER_OFFICIAL_WEIGHTS_COMPARISON_20260920_ZH.md) | 五个官方通道＋授权复用的本地DTIAM A；ReTargetMap不参加；完整训练暴露审计待做 |
